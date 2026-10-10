@@ -127,7 +127,7 @@ public static class PrimaveraP6ExportService
     var endDate = DateTime.Now.AddMonths(6).ToString("yyyy-MM-dd 17:00");
 
     var sb = new StringBuilder();
-    sb.AppendLine($"ERMHDR\t8.3\t{nowStr}\tPROJECT\tPROJECT MANAGER\tADMIN\tkaka.Structure");
+    sb.AppendLine($"ERMHDR\t23.12\t{nowStr}\tPROJECT\tPROJECT MANAGER\tADMIN\tkaka.Structure");
 
     // Table: PROJECT
     sb.AppendLine("%T\tPROJECT");
@@ -179,6 +179,7 @@ public static class PrimaveraP6ExportService
       }
     }
 
-    File.WriteAllText(xerPath, sb.ToString(), Encoding.UTF8);
+    var utf8WithoutBom = new UTF8Encoding(false);
+    File.WriteAllText(xerPath, sb.ToString(), utf8WithoutBom);
   }
 }
