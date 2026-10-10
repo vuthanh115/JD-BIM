@@ -122,23 +122,35 @@ public static class PrimaveraP6ExportService
 
   public static void ExportToXer(string xerPath, string projectName, List<P6WbsSummaryItem> summaries)
   {
-    var nowStr = DateTime.Now.ToString("yyyy-MM-dd");
-    var startDate = DateTime.Now.ToString("yyyy-MM-dd 08:00");
-    var endDate = DateTime.Now.AddMonths(6).ToString("yyyy-MM-dd 17:00");
+    var now = DateTime.Now;
+    var nowStr = now.ToString("yyyy-MM-dd HH:mm");
+    var dateOnly = now.ToString("yyyy-MM-dd");
+    var finishStr = now.AddMonths(6).ToString("yyyy-MM-dd HH:mm");
 
     var sb = new StringBuilder();
-    sb.AppendLine($"ERMHDR\t23.12\t{nowStr}\tPROJECT\tPROJECT MANAGER\tADMIN\tkaka.Structure");
+    // 1. Header (ERMHDR)
+    sb.AppendLine($"ERMHDR\t23.12\t{dateOnly}\tPROJECT\tPROJECT MANAGER\tadmin\tkaka.Structure\t1\tUSD");
 
-    // Table: PROJECT
+    // 2. Table CALENDAR (bắt buộc cho P6 và project scheduling)
+    sb.AppendLine("%T\tCALENDAR");
+    sb.AppendLine("%F\tclndr_id\tdefault_flag\tclndr_name\tclndr_type\tproj_id\tday_hr_cnt\tweek_hr_cnt\tmonth_hr_cnt\tyear_hr_cnt\tbase_clndr_id\tlast_chng_date\tclndr_data");
+    sb.AppendLine($"%R\t1\tY\tStandard 5 Day Workweek\tCA_Base\t\t8.0\t40.0\t160.0\t2000.0\t\t{nowStr}\t");
+
+    // 3. Table SCHEDOPTIONS
+    sb.AppendLine("%T\tSCHEDOPTIONS");
+    sb.AppendLine("%F\tschedoptions_id\tproj_id\tsched_outer_depend_type\tsched_open_critical_flag\tsched_lag_early_start_flag\tsched_retained_logic\tsched_setplantoforecast\tsched_float_type\tsched_progress_override\tsched_use_expect_end_flag");
+    sb.AppendLine("%R\t1\t1\tSO_Earliest\tY\tY\tY\tN\tSF_Start\tN\tY");
+
+    // 4. Table PROJECT (có export_flag=Y và clndr_id=1 để P6 nhận diện trong danh sách Import)
     sb.AppendLine("%T\tPROJECT");
-    sb.AppendLine("%F\tproj_id\tacct_id\torig_proj_id\tplan_start_date\tplan_end_date\tproj_short_name\tproj_title");
-    sb.AppendLine($"%R\t1\t1\t1\t{startDate}\t{endDate}\tPRJ-KAKA-BIM\t{projectName} (Kaka BIM-P6 Integration)");
+    sb.AppendLine("%F\tproj_id\tacct_id\torig_proj_id\tclndr_id\tplan_start_date\tplan_end_date\tlast_recalc_date\tscd_end_date\tadd_date\texport_flag\tproj_short_name\tproj_title");
+    sb.AppendLine($"%R\t1\t1\t1\t1\t{nowStr}\t{finishStr}\t{nowStr}\t{finishStr}\t{nowStr}\tY\tPRJ-KAKA-BIM\t{projectName} (Kaka BIM-P6 Integration)");
 
-    // Table: PROJWBS
+    // 5. Table PROJWBS (với Root WBS có proj_node_flag=Y và trùng mã proj_short_name)
     sb.AppendLine("%T\tPROJWBS");
-    sb.AppendLine("%F\twbs_id\tproj_id\tparent_wbs_id\twbs_short_name\twbs_name\tseq_num");
-    sb.AppendLine("%R\t100\t1\t\tPROJ-ROOT\tToàn Bộ Dự Án (Project Root)\t1");
-    sb.AppendLine("%R\t110\t1\t100\tWBS-KC\tPhân Hệ Kết Cấu Kaka (Structural Works)\t2");
+    sb.AppendLine("%F\twbs_id\tproj_id\tparent_wbs_id\tproj_node_flag\tstatus_code\twbs_short_name\twbs_name\tseq_num");
+    sb.AppendLine("%R\t100\t1\t\tY\tWS_Open\tPRJ-KAKA-BIM\tToàn Bộ Dự Án (Project Root)\t1");
+    sb.AppendLine("%R\t110\t1\t100\tN\tWS_Open\tWBS-KC\tPhân Hệ Kết Cấu Kaka (Structural Works)\t2");
 
     int wbsIdCounter = 120;
     var wbsMap = new Dictionary<string, int>();
@@ -147,12 +159,12 @@ public static class PrimaveraP6ExportService
     {
       wbsIdCounter++;
       wbsMap[item.ComponentCode] = wbsIdCounter;
-      sb.AppendLine($"%R\t{wbsIdCounter}\t1\t110\t{item.WbsCode}\t{item.ComponentCode} - {item.ComponentName}\t{wbsIdCounter - 100}");
+      sb.AppendLine($"%R\t{wbsIdCounter}\t1\t110\tN\tWS_Open\t{item.WbsCode}\t{item.ComponentCode} - {item.ComponentName}\t{wbsIdCounter - 100}");
     }
 
-    // Table: TASK
+    // 6. Table TASK (đầy đủ các trường thời gian, quan hệ và trạng thái theo P6 schema)
     sb.AppendLine("%T\tTASK");
-    sb.AppendLine("%F\ttask_id\tproj_id\twbs_id\ttask_code\ttask_name\ttarget_drtn_hr_cnt\ttask_type\tstatus_code");
+    sb.AppendLine("%F\ttask_id\tproj_id\twbs_id\tclndr_id\ttask_code\ttask_name\ttask_type\tstatus_code\tduration_type\tphys_complete_pct\tcomplete_pct_type\ttarget_drtn_hr_cnt\tremain_drtn_hr_cnt\ttarget_start_date\ttarget_end_date\tact_start_date\tact_end_date\tearly_start_date\tearly_end_date\tlate_start_date\tlate_end_date\texpect_end_date\trem_late_start_date\trem_late_end_date\trestart_date\treend_date\tsuspend_date\tresume_date\tcreate_date\tupdate_date\tcstr_date\tcstr_type\tcstr_date2\tcstr_type2\ttarget_work_qty\tact_work_qty\ttarget_equip_qty\tact_equip_qty\tdriving_path_flag\ttotal_float_hr_cnt\tfree_float_hr_cnt\tfloat_path\tfloat_path_order");
 
     int actIdCounter = 1000;
     foreach (var item in summaries)
@@ -175,7 +187,7 @@ public static class PrimaveraP6ExportService
         var actName = $"{item.ComponentName} - {t.NameSuffix}";
         var durationHours = t.DurationDays * 8;
 
-        sb.AppendLine($"%R\t{actIdCounter}\t1\t{currentWbsId}\t{actCode}\t{actName}\t{durationHours}\tTT_Task\tTK_NotStart");
+        sb.AppendLine($"%R\t{actIdCounter}\t1\t{currentWbsId}\t1\t{actCode}\t{actName}\tTT_Task\tTK_NotStart\tDT_FixedUnits\t0.0\tCP_Drtn\t{durationHours}.0\t{durationHours}.0\t{nowStr}\t{finishStr}\t\t\t{nowStr}\t{finishStr}\t\t\t\t\t\t\t\t\t\t{nowStr}\t{nowStr}\t\t\t\t\t0\t0\t0\t0\tN\t0\t0\t\t");
       }
     }
 
