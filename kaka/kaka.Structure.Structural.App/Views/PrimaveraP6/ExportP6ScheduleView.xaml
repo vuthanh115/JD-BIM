@@ -303,7 +303,6 @@
       <Button Grid.Column="1"
               Content="Xuất sang Primavera P6"
               Command="{Binding ExportCommand}"
-              IsEnabled="{Binding IsBusy, Converter={x:Null}}"
               Background="#0284C7"
               Foreground="#FFFFFF"
               FontWeight="Bold"
