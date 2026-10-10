@@ -951,68 +951,41 @@
         </div>
       </div>
 
-      <!-- QUY TẮC CẮT GIAO HÌNH HỌC TỰ ĐỘNG AUTO-JOIN XML -->
+      <!-- QUY CHUẨN KIỂM SOÁT CHẤT LƯỢNG MÔ HÌNH & QUẢN TRỊ HÌNH HỌC TỰ ĐỘNG -->
       <div class="box box-blue">
         <div class="box-title">
-          <span>🏆 Quy Tắc Cắt Giao Hình Học Cấu Kiện Tự Động (BSV_QuyTacJoin.xml)</span>
-          <span class="badge badge-blue">Anti-Double Counting</span>
+          <span>🏆 Quy Chuẩn Kiểm Soát Chất Lượng Mô Hình &amp; Quản Trị Hình Học Tự Động</span>
+          <span class="badge badge-blue">Model QA/QC Standards</span>
         </div>
-        <p style="font-size: 7.8pt; color: #334155; margin-bottom: 6px;">
-          Thuật toán thiết lập thứ tự ưu tiên giao cắt hình học giữa các cấu kiện; đảm bảo <strong>không bao giờ bị trùng lặp đôi khối lượng</strong> bê tông và ván khuôn khi bóc tách sang BOQ:
+        <p style="font-size: 7.8pt; color: #334155; margin-bottom: 8px;">
+          Xây dựng khung tiêu chuẩn kỹ thuật tự động hóa ở cấp độ quản lý, đảm bảo mô hình chuẩn xác, dữ liệu toàn vẹn và phục vụ trực tiếp cho công tác thi công và kiểm soát chi phí:
         </p>
 
-        <!-- THANH ƯU TIÊN -->
-        <div style="background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 4px; padding: 6px 10px; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; font-size: 7.6pt; font-weight: 700;">
-          <span style="color: #0369a1;">THỨ TỰ ƯU TIÊN:</span>
-          <span style="background: #0284c7; color: #fff; padding: 2px 6px; border-radius: 3px;">1. SÀN (Floors)</span>
-          <span>➔</span>
-          <span style="background: #059669; color: #fff; padding: 2px 6px; border-radius: 3px;">2. MÓNG (Foundations)</span>
-          <span>➔</span>
-          <span style="background: #d97706; color: #fff; padding: 2px 6px; border-radius: 3px;">3. CỘT (Columns)</span>
-          <span>➔</span>
-          <span style="background: #7c3aed; color: #fff; padding: 2px 6px; border-radius: 3px;">4. DẦM (Framing)</span>
-          <span>➔</span>
-          <span style="background: #dc2626; color: #fff; padding: 2px 6px; border-radius: 3px;">5. VÁCH (Walls)</span>
-          <span>➔</span>
-          <span style="background: #64748b; color: #fff; padding: 2px 6px; border-radius: 3px;">6. CẦU THANG</span>
-        </div>
+        <div class="grid-3" style="margin-bottom: 0;">
+          <div class="box" style="padding: 7px; background: #fff;">
+            <strong style="color: var(--primary-dark); font-size: 8.2pt;">1. CHUẨN HÓA CẮT GIAO HÌNH HỌC</strong>
+            <p style="font-size: 7.5pt; color: #475569; margin-top: 3px; line-height: 1.4;">
+              • Thiết lập thứ tự ưu tiên giao cắt cấu kiện tự động bằng phần mềm: <code>Sàn ➔ Móng ➔ Cột ➔ Dầm ➔ Vách ➔ Cầu thang</code>.<br>
+              • <strong>Mục tiêu cốt lõi:</strong> Loại bỏ hoàn toàn sai số trùng lặp đôi thể tích bê tông và ván khuôn khi bóc tách khối lượng BOQ (5D).
+            </p>
+          </div>
 
-        <table class="table-report" style="margin-bottom: 0;">
-          <thead>
-            <tr>
-              <th style="width: 25%;">Cặp Cấu Kiện Giao Cắt</th>
-              <th style="width: 20%;">Cấu Kiện Ưu Tiên</th>
-              <th style="width: 55%;">Nguyên Tắc Kỹ Thuật &amp; Hệ Quả Khối Lượng BOQ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Sàn (Floor) ⚔️ Dầm (Framing)</td>
-              <td><strong style="color: #0284c7;">Sàn giữ nguyên</strong></td>
-              <td>Dầm chỉ tính chiều cao hữu dụng từ đáy dầm lên đến đáy sàn (h - hs). Không bao giờ tính trùng sàn vào dầm.</td>
-            </tr>
-            <tr>
-              <td>Sàn (Floor) ⚔️ Cột (Column)</td>
-              <td><strong style="color: #0284c7;">Sàn giữ nguyên</strong></td>
-              <td>Sàn bê tông đổ liên tục qua đỉnh cột. Chiều cao cột tính đến mặt dưới của bản sàn hoặc dầm sàn.</td>
-            </tr>
-            <tr>
-              <td>Móng (Foundation) ⚔️ Dầm giằng</td>
-              <td><strong style="color: #059669;">Móng giữ nguyên</strong></td>
-              <td>Đài móng giữ nguyên khối tích. Dầm móng / đà kiềng bị cắt tại mép đài móng.</td>
-            </tr>
-            <tr>
-              <td>Cột (Column) ⚔️ Dầm (Framing)</td>
-              <td><strong style="color: #d97706;">Cột giữ nguyên</strong></td>
-              <td>Cột bê tông cốt thép giữ nguyên vẹn tiết diện chịu lực. Dầm ngắt tại mép ngoài thân cột.</td>
-            </tr>
-            <tr>
-              <td>Dầm (Framing) ⚔️ Vách (Wall)</td>
-              <td><strong style="color: #7c3aed;">Dầm giữ nguyên</strong></td>
-              <td>Dầm giữ nguyên vẹn chiều cao tiết diện. Vách bê tông / vách xây chèn bị khấu trừ tại phần giao với đáy dầm.</td>
-            </tr>
-          </tbody>
-        </table>
+          <div class="box" style="padding: 7px; background: #fff;">
+            <strong style="color: var(--green); font-size: 8.2pt;">2. QUY CHUẨN SHOP DRAWING CỐT THÉP</strong>
+            <p style="font-size: 7.5pt; color: #475569; margin-top: 3px; line-height: 1.4;">
+              • Chuẩn hóa quy trình mô hình hóa cốt thép chi tiết theo phân vùng cấu kiện (<code>Partition</code>).<br>
+              • <strong>Mục tiêu cốt lõi:</strong> Tự động xuất bảng thống kê cắt uốn (BBS) phục vụ gia công cơ giới tại xưởng và kiểm soát hao hụt vật tư thi công.
+            </p>
+          </div>
+
+          <div class="box" style="padding: 7px; background: #fff;">
+            <strong style="color: var(--amber); font-size: 8.2pt;">3. KIỂM SOÁT XUNG ĐỘT ĐA BỘ MÔN</strong>
+            <p style="font-size: 7.5pt; color: #475569; margin-top: 3px; line-height: 1.4;">
+              • Thiết lập ma trận xung đột (Clash Matrix) giữa Kết cấu, Kiến trúc và MEPF trên Navisworks.<br>
+              • <strong>Mục tiêu cốt lõi:</strong> Phát hành RFI điện tử và xử lý dứt điểm các điểm giao cắt ống gió/dầm trước khi ra hiện trường.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div class="page-footer">
@@ -1235,8 +1208,8 @@
         <div class="timeline-step">
           <div class="step-num">G1</div>
           <div class="step-content">
-            <div class="step-title">Mô Hình Hóa Đồng Bộ &amp; Chạy Auto-Join XML (Ngày 4 - 15)</div>
-            <div class="step-desc">Dựng hình Kiến trúc - Kết cấu - MEPF theo chuẩn LOD 350; kích hoạt Tool Auto-Join tự động giải quyết xung đột bê tông/ván khuôn.</div>
+            <div class="step-title">Mô Hình Hóa Đồng Bộ &amp; Chuẩn Hóa Cắt Giao Hình Học (Ngày 4 - 15)</div>
+            <div class="step-desc">Dựng hình Kiến trúc - Kết cấu - MEPF theo chuẩn LOD 350; kích hoạt công cụ chuẩn hóa cắt giao tự động loại bỏ triệt để sai số thể tích và diện tích ván khuôn.</div>
           </div>
         </div>
 
@@ -1285,14 +1258,14 @@
             <p style="font-size: 7.6pt; color: #475569; margin-top: 3px;">
               • Ban hành cây thư mục Server dự án chuẩn.<br>
               • Cấu hình Revit Templates (Arch/Struct).<br>
-              • Nạp Shared Parameters &amp; Auto-Join XML vào toàn bộ máy trạm của phòng.
+              • Nạp hệ thống Shared Parameters và thiết lập quy chuẩn cắt giao cấu kiện đồng bộ cho toàn bộ máy trạm.
             </p>
           </div>
           <div class="box" style="padding: 7px; background: #fff;">
             <strong style="color: var(--green); font-size: 8.2pt;">TUẦN 2: ĐÀO TẠO BẰNG MINDMAP</strong>
             <p style="font-size: 7.6pt; color: #475569; margin-top: 3px;">
               • Sử dụng bộ 4 sơ đồ Mindmap số hóa để training trực quan cho đội ngũ Modeler và Outsource.<br>
-              • Thống nhất chuẩn đặt tên Partition, quy cách bẻ neo thép và View Templates.
+              • Thống nhất chuẩn phân vùng cấu kiện (Partition), tiêu chuẩn Shop Drawing cốt thép và hệ thống View Templates.
             </p>
           </div>
           <div class="box" style="padding: 7px; background: #fff;">

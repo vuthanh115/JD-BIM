@@ -487,7 +487,7 @@ flowchart LR
 
     subgraph G["4. NĂNG LỰC THỰC CHIẾN (GLC BIM)"]
         G1["Dự án lớn: Mega Textile 67.5ha, APF, Kim Tín"]
-        G2["Hạ tầng Dữ liệu: Shared Parameters & XML Join"]
+        G2["Hạ tầng Dữ liệu: Shared Parameters & Chuẩn Hóa Cắt Giao"]
         G3["BIM 4D Tiến độ & 5D Bóc tách Chi phí"]
         G4["Digital Handover: As-built & CDE Vận hành"]
     end
@@ -752,17 +752,17 @@ flowchart TD
 
         <div class="card">
           <div class="card-header">
-            <span class="card-title">⚙️ Quy Tắc Cắt Giao Hình Học Cấu Kiện (Revit Auto-Join System)</span>
-            <span class="pill pill-purple">BSV_QuyTacJoin.xml</span>
+            <span class="card-title">⚙️ Chuẩn Hóa Cắt Giao Hình Học &amp; Kiểm Soát Khối Lượng Tự Động</span>
+            <span class="pill pill-purple">Geometry QA &amp; 5D Control</span>
           </div>
           <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 14px;">
-            Hệ thống quy chuẩn thứ tự ưu tiên cắt giao cấu kiện tự động bằng phần mềm. Đảm bảo <strong>không bao giờ bị trùng lặp đôi khối lượng</strong> bê tông và ván khuôn khi bóc tách sang BOQ:
+            Hệ thống quy chuẩn thứ tự ưu tiên cắt giao cấu kiện tự động bằng phần mềm. Đảm bảo <strong>không bao giờ bị trùng lặp đôi khối lượng</strong> bê tông và ván khuôn khi bóc tách sang dự toán BOQ:
           </p>
 
           <!-- THANH PHÂN CẤP ƯU TIÊN TRỰC QUAN -->
           <div style="background: rgba(15, 23, 42, 0.9); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 18px;">
             <div style="font-size: 0.82rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; margin-bottom: 10px;">
-              🏆 Thứ Tự Ưu Tiên Cắt Giao (Từ Cao Đến Thấp):
+              🏆 Thứ Tự Ưu Tiên Cắt Giao Hình Học (Từ Cao Đến Thấp):
             </div>
             <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 0.88rem; font-weight: 600;">
               <span style="background: #0284c7; color: #fff; padding: 6px 14px; border-radius: 6px; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.4);">
@@ -797,7 +797,7 @@ flowchart TD
               <tr>
                 <th>Cấu Kiện Ưu Tiên (Cắt)</th>
                 <th>Cấu Kiện Bị Cắt (Trừ Khối Lượng)</th>
-                <th>Ý Nghĩa Kỹ Thuật & Quy Ước Bóc Tách Khối Lượng BOQ</th>
+                <th>Ý Nghĩa Kỹ Thuật &amp; Quy Ước Bóc Tách Khối Lượng BOQ</th>
               </tr>
             </thead>
             <tbody>
@@ -829,23 +829,15 @@ flowchart TD
             </tbody>
           </table>
 
-          <!-- KHUNG MÃ NGUỒN XML GỐC -->
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-            <span style="font-size: 0.8rem; color: #94a3b8;">Mã cấu hình nạp vào Tool AutoJoin Revit (<code>BSV_QuyTacJoin.xml</code>):</span>
-            <span class="pill pill-blue" style="font-size: 0.7rem;">XML Config</span>
+          <!-- GIÁ TRỊ QUẢN TRỊ CỐT LÕI -->
+          <div style="background: rgba(2, 6, 23, 0.6); border: 1px solid var(--border); border-radius: 8px; padding: 14px;">
+            <div style="font-weight: 600; color: #38bdf8; font-size: 0.9rem; margin-bottom: 6px;">
+              🛡️ Giá Trị Quản Trị Cốt Lõi (Management Value):
+            </div>
+            <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.6;">
+              Thay vì để từng Modeler tự xử lý giao cắt thủ công dẫn tới sai lệch khối lượng giữa các thành viên, BIM Manager thiết lập và đồng bộ tự động quy chuẩn ưu tiên hình học trên toàn bộ hệ thống máy trạm. Kết quả là mô hình luôn đạt độ chuẩn xác 100% khi bóc tách khối lượng BOQ (BIM 5D) và sẵn sàng xuất hồ sơ hoàn công As-Built.
+            </p>
           </div>
-          <pre class="code-box">&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;!-- AutoJoin Setting - Lập trình thứ tự cắt giao hình học tự động --&gt;
-&lt;AllRules&gt;
-  &lt;Rule CategoryUuTien="Structural Floors"       CategoryBiCat="Structural Foundations" /&gt;
-  &lt;Rule CategoryUuTien="Structural Floors"       CategoryBiCat="Structural Framing" /&gt;
-  &lt;Rule CategoryUuTien="Structural Floors"       CategoryBiCat="Structural Columns" /&gt;
-  &lt;Rule CategoryUuTien="Structural Floors"       CategoryBiCat="Structural Walls" /&gt;
-  &lt;Rule CategoryUuTien="Structural Foundations"  CategoryBiCat="Structural Framing" /&gt;
-  &lt;Rule CategoryUuTien="Structural Columns"      CategoryBiCat="Structural Framing" /&gt;
-  &lt;Rule CategoryUuTien="Structural Columns"      CategoryBiCat="Structural Walls" /&gt;
-  &lt;Rule CategoryUuTien="Structural Framing"      CategoryBiCat="Structural Walls" /&gt;
-&lt;/AllRules&gt;</pre>
         </div>
       </section>
 
@@ -966,7 +958,7 @@ PARAM	752a4b36-f055-486d-9375-05418d09da10	BSV_BeTongLot			MATERIAL</pre>
               <p style="font-size: 0.85rem; color: #cbd5e1;">
                 • Ban hành ngay <strong>Bộ BEP (BIM Execution Plan)</strong> chuẩn.<br>
                 • Thiết lập hệ thống Shared Parameters (<code>BSV_KC_ShareParameter</code>) và Naming Convention cho toàn dự án.<br>
-                • Áp dụng bộ quy tắc Join tự động bằng file XML để mọi thành viên dựng hình đều đồng nhất.
+                • Áp dụng quy chuẩn cắt giao cấu kiện tự động bằng phần mềm để toàn bộ thành viên dựng hình đều đồng nhất.
               </p>
             </div>
 
@@ -1138,7 +1130,7 @@ PARAM	752a4b36-f055-486d-9375-05418d09da10	BSV_BeTongLot			MATERIAL</pre>
                 <td>&nbsp; ↳ <strong>02-ENG</strong></td>
                 <td>Thiết Kế & Mô Hình Hóa BIM (LOD 300 - 400)</td>
                 <td>ARC, STR, MEPF Models</td>
-                <td><code>BSV_QuyTacJoin.xml</code></td>
+                <td>Quy chuẩn Cắt giao Hình học &amp; LOD 350-400</td>
                 <td>BIM Manager</td>
               </tr>
               <tr style="background: rgba(15, 23, 42, 0.4);">
@@ -1433,7 +1425,7 @@ PARAM	752a4b36-f055-486d-9375-05418d09da10	BSV_BeTongLot			MATERIAL</pre>
           <div class="diagram-container">
             <pre class="mermaid">
 flowchart LR
-    G0["G0: Setup Hạ tầng & CDE<br>(Ngày 1 - 3)"] --> G1["G1: Dựng hình & Join XML<br>(Ngày 4 - 15)"]
+    G0["G0: Setup Hạ tầng & CDE<br>(Ngày 1 - 3)"] --> G1["G1: Dựng hình & Chuẩn hóa Giao cắt<br>(Ngày 4 - 15)"]
     G1 --> G2["G2: Phối hợp & Xung đột<br>(Ngày 16 - 20)"]
     G2 --> G3["G3: Bóc 5D & Khối lượng BOQ<br>(Ngày 21 - 25)"]
     G3 --> G4["G4: Xuất Shop Drawing Thép<br>(Ngày 26 - 40)"]
@@ -1468,7 +1460,7 @@ flowchart LR
               <tr>
                 <td><strong>G1: Dựng hình & Tự động</strong></td>
                 <td>BIM Modeler</td>
-                <td><code>BSV_QuyTacJoin.xml</code>, <code>AutoPile Tool</code>, <code>Bimspeed</code></td>
+                <td>Công cụ Chuẩn hóa Cắt giao, <code>AutoPile Tool</code>, <code>Bimspeed</code></td>
                 <td>Mô hình 3D thô (LOD 300) đã tự động cắt giao hình học, sạch lỗi giao cắt.</td>
               </tr>
               <tr>
@@ -1528,7 +1520,7 @@ flowchart LR
             <ul class="check-list">
               <li><strong>Tự động hóa cọc móng:</strong> Chạy tool <code>BSV_AutoPile_ByCenterPointCircle</code> rải cọc theo CAD, chạy <code>BSV_AutoSetElevationPile</code> hạ cos cọc về đáy móng. Gán tham số <code>BSV_CocThiNghiem</code>.</li>
               <li><strong>Quy chuẩn đặt tên cấu kiện:</strong> Móng đặt theo <code>Rộng x Dài x Cao</code> (vd: <code>1200x1500x1000</code>).</li>
-              <li><strong>Kích hoạt Auto-Join bằng XML:</strong> Nạp file <code>BSV_QuyTacJoin.xml</code> để hệ thống tự động cắt: <em>Sàn cắt Móng/Cột/Dầm/Vách; Móng cắt Dầm; Cột cắt Dầm</em> mà không cần thao tác tay.</li>
+              <li><strong>Chuẩn hóa Cắt giao Tự động:</strong> Kích hoạt bộ quy chuẩn ưu tiên hình học tự động (Sàn ➔ Móng ➔ Cột ➔ Dầm ➔ Vách) bằng công cụ chuyên dụng, loại bỏ hoàn toàn sai số đúp khối lượng bê tông và ván khuôn.</li>
             </ul>
           </div>
 
@@ -1604,7 +1596,7 @@ flowchart LR
                 </tr>
                 <tr>
                   <td>Chỉ biết dựng hình nhanh trên Revit theo yêu cầu.</td>
-                  <td><strong>Làm chủ toàn diện quy trình:</strong> Có sẵn bộ tiêu chuẩn (BEP, Shared Parameter, XML Join).</td>
+                  <td><strong>Làm chủ toàn diện quy trình:</strong> Có sẵn bộ tiêu chuẩn (BEP, Shared Parameter, Chuẩn hóa Cắt giao Hình học).</td>
                 </tr>
                 <tr>
                   <td>Lúng túng khi file nặng, lỗi tọa độ, va chạm nhiều.</td>
@@ -1626,7 +1618,7 @@ flowchart LR
               <div class="card" style="background: #090e17; font-size: 0.88rem; line-height: 1.7; color: #cbd5e1;">
                 <em>"Kính thưa Ban Giám đốc,</em><br><br>
                 Ở vị trí BIM Manager của ONEBIM, sự khác biệt lớn nhất tôi mang lại không chỉ là kỹ năng dựng hình phần mềm, mà là **một hệ thống quản trị dự án số đã được tôi đóng gói và kiểm chứng trên hơn 1.5 triệu m² sàn công nghiệp**.<br><br>
-                1. <strong>Vào việc ngay ngày đầu tiên:</strong> Tôi đã có sẵn toàn bộ quy trình Kiến trúc, Kết cấu, Shop Drawing được sơ đồ hóa thành Mindmap trực quan, cùng bộ thư viện tham số <code>Shared Parameters</code> và quy tắc <code>Auto-Join XML</code>. Đội ngũ nội bộ hay đối tác Outsource chỉ cần tuân thủ là mô hình chuẩn xác tuyệt đối.<br><br>
+                1. <strong>Vào việc ngay ngày đầu tiên:</strong> Tôi đã có sẵn toàn bộ quy trình Kiến trúc, Kết cấu, Shop Drawing được sơ đồ hóa thành Mindmap trực quan, cùng bộ thư viện tham số <code>Shared Parameters</code> và quy chuẩn cắt giao hình học tự động. Đội ngũ nội bộ hay đối tác Outsource chỉ cần tuân thủ là mô hình chuẩn xác tuyệt đối.<br><br>
                 2. <strong>Bảo vệ dòng tiền dự án:</strong> Tôi kết hợp tư duy QLDA chuẩn Bắc Mỹ (AIA/MnSCU) với BIM 5D, giải quyết xung đột bằng RFI số ngay từ khâu thiết kế để triệt tiêu mọi phát sinh chi phí ngoài công trường.<br><br>
                 Do đó, việc đầu tư đồng bộ cho vị trí <strong>BIM Manager chuyên trách</strong> là quyết định mang lại giá trị sinh lời trực tiếp cho chất lượng, tiến độ và uy tín của công ty đối với các Chủ đầu tư lớn."
               </div>
@@ -1643,13 +1635,13 @@ flowchart LR
             <div class="card" style="background: #0f172a;">
               <h5 style="color: #38bdf8;">Tuần 1: Chuẩn Hóa Hạ Tầng</h5>
               <p style="font-size: 0.82rem; color: #94a3b8; margin-top: 6px;">
-                Ban hành cây thư mục Server, cấu hình Revit Templates (Arch/Struct), nạp bộ Shared Parameters và quy tắc Join XML vào toàn bộ máy trạm.
+                Ban hành cây thư mục Server, cấu hình Revit Templates (Arch/Struct), nạp bộ Shared Parameters và quy chuẩn cắt giao hình học đồng bộ vào toàn bộ máy trạm.
               </p>
             </div>
             <div class="card" style="background: #0f172a;">
               <h5 style="color: #10b981;">Tuần 2: Đào Tạo Bằng Mindmap</h5>
               <p style="font-size: 0.82rem; color: #94a3b8; margin-top: 6px;">
-                Dùng trực tiếp file Mindmap quy trình để training cho đội ngũ Modeler và đối tác thuê ngoài; thống nhất quy cách bẻ thép, đặt tên Partition và View Template.
+                Dùng trực tiếp file Mindmap quy trình để training cho đội ngũ Modeler và đối tác thuê ngoài; thống nhất quy chuẩn Shop Drawing cốt thép, phân vùng Partition và hệ thống View Template.
               </p>
             </div>
             <div class="card" style="background: #0f172a;">
