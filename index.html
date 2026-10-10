@@ -986,6 +986,207 @@ PARAM	752a4b36-f055-486d-9375-05418d09da10	BSV_BeTongLot			MATERIAL</pre>
             </p>
           </div>
         </div>
+
+        <!-- BẢNG QUY CHUẨN ÁNH XẠ DỮ LIỆU BIM ↔ PRIMAVERA P6 -->
+        <div class="card" style="margin-bottom: 24px;">
+          <div class="card-header">
+            <span class="card-title">⏱️ Ma Trận Quy Chuẩn Ánh Xạ Dữ Liệu BIM ↔ Primavera P6 (BIM 4D & 5D)</span>
+            <span class="pill pill-green">P6 Encore Group Standard</span>
+          </div>
+          <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 14px;">
+            Hệ thống liên kết dữ liệu giữa cấu trúc quản lý tiến độ <strong>Primavera P6</strong> (theo chuẩn cẩm nang Encore Group) và các tham số mô hình trong bộ <strong>BIM / Mindmap</strong> của bạn:
+          </p>
+          <table class="table-custom">
+            <thead>
+              <tr>
+                <th>Cấp Dữ Liệu Primavera P6</th>
+                <th>Dữ Liệu & Tham Số Tương Ứng Trong Mô Hình BIM</th>
+                <th>Phương Thức Tích Hợp (Tool)</th>
+                <th>Mục Đích Quản Trị Dự Án</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>EPS & Project Level</strong></td>
+                <td>Thông tin dự án CDE (Project Name, Project Number, Mốc tọa độ)</td>
+                <td>Autodesk Construction Cloud / Revit Project Info</td>
+                <td>Xác định danh mục dự án toàn công ty và quản lý phân quyền tổng thể.</td>
+              </tr>
+              <tr>
+                <td><strong>OBS (Org Structure)</strong></td>
+                <td>Phân quyền Worksets trong file Central và trách nhiệm bộ môn (ARC/STR/MEP)</td>
+                <td>Revit Worksharing / BIM Collab</td>
+                <td>Gán đúng người chịu trách nhiệm (Responsible Manager) cho từng gói việc WBS.</td>
+              </tr>
+              <tr>
+                <td><strong>WBS (Cấp 1 - 4)</strong></td>
+                <td>Phân rã hình học theo Category và Level: <code>Foundations</code>, <code>Columns</code>, <code>Framing</code>, <code>Floors</code></td>
+                <td>Navisworks Timeliner / Synchro 4D</td>
+                <td>Cấu trúc cây công việc đồng bộ 100% giữa tiến độ và hình học 3D.</td>
+              </tr>
+              <tr>
+                <td><strong>Activity Codes</strong></td>
+                <td>Tham số phân khu trong biến <code>Comments</code> (vd: <code>02.Mong-Xuong</code>, <code>05.1.CoCot-VP</code>)</td>
+                <td>Add-in phân loại / Dynamo Filter</td>
+                <td>Nhóm, lọc và theo dõi tiến độ theo từng khu vực, nhà thầu phụ hoặc tầng thi công.</td>
+              </tr>
+              <tr>
+                <td><strong>Activity Steps</strong></td>
+                <td>Phân đoạn thi công và mã thép <code>Partition</code> (vd: <code>F1</code>, <code>C1</code>) từ Shop Rebar</td>
+                <td>Revit Rebar Partition / BBS</td>
+                <td>Tính % hoàn thành vật lý (Physical % Complete) theo từng bước nghiệm thu cốt thép.</td>
+              </tr>
+              <tr>
+                <td><strong>Material Resources</strong></td>
+                <td>Khối lượng thực xuất từ Shared Parameters: <code>BSV_BeTongLot</code>, <code>BSV_ChieuDaiThepShop</code></td>
+                <td>Revit Schedules / Excel QTO Link</td>
+                <td>Gán định mức vật tư và kiểm soát chi phí thực tế tiêu hao (Actual Material Units).</td>
+              </tr>
+              <tr>
+                <td><strong>Non-labor / Equipment</strong></td>
+                <td>Khối lượng đào đất <code>BSV_DaoDat</code>, cọc <code>BSV_CocThiNghiem</code></td>
+                <td>Tool AutoPile / Máy đào đất</td>
+                <td>Cân bằng tài nguyên máy móc (Resource Leveling) như xe ép cọc, cần trục tháp.</td>
+              </tr>
+              <tr>
+                <td><strong>Cost Accounts & Expenses</strong></td>
+                <td>Đơn giá BOQ và khối lượng trám lỗ ti ván khuôn <code>BSV_LoTi</code></td>
+                <td>BOQ Master Link / P6 Expenses</td>
+                <td>Tính toán đường cong giá trị thu được Earned Value (EV), chỉ số $CPI, SPI$.</td>
+              </tr>
+              <tr>
+                <td><strong>Baseline & Data Date</strong></td>
+                <td>Cập nhật tiến độ 4D thực tế so sánh với kế hoạch cơ sở (Baseline B1)</td>
+                <td>Mô phỏng 4D / Pay Application</td>
+                <td>Phục vụ chứng chỉ thanh toán hàng tháng và giải trình giãn tiến độ khi có RFI/Change Order.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- MẪU CẤU TRÚC WBS PRIMAVERA P6 CHO DỰ ÁN NHÀ MÁY CÔNG NGHIỆP -->
+        <div class="card" style="margin-bottom: 24px;">
+          <div class="card-header">
+            <span class="card-title">📁 Mẫu Cấu Trúc WBS Chuẩn Primavera P6 (Dự Án Nhà Máy 30.000 m²)</span>
+            <span class="pill pill-blue">Ready-to-Import P6 Template</span>
+          </div>
+          <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 14px;">
+            Mẫu cấu trúc WBS và danh mục công tác đã được đóng gói chuẩn hóa theo format Primavera P6. Bạn có thể <strong>tải trực tiếp file về máy</strong> để import vào phần mềm Primavera P6 Professional:
+          </p>
+
+          <!-- THANH CÔNG CỤ TẢI VỀ -->
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border); border-radius: 8px; padding: 14px; align-items: center;">
+            <span style="font-size: 0.88rem; font-weight: 600; color: #fff;">Tải File Mẫu Import P6:</span>
+            <a href="Primavera_P6_WBS_Template_Factory.xer" download class="btn btn-primary" style="text-decoration: none; font-size: 0.82rem;">
+              📥 Tải File Dự Án P6 (.xer)
+            </a>
+            <a href="Primavera_P6_WBS_Template_Factory.csv" download class="btn" style="text-decoration: none; font-size: 0.82rem; background: #1e293b;">
+              📊 Tải File Bảng Tính WBS (.csv)
+            </a>
+            <span style="font-size: 0.78rem; color: #94a3b8; margin-left: auto;">
+              💡 <em>Cách dùng: Vào P6 ➔ File ➔ Import ➔ Chọn file .xer hoặc .csv để tạo dự án ngay</em>
+            </span>
+          </div>
+
+          <!-- BẢNG XEM TRƯỚC CÂY WBS -->
+          <table class="table-custom" style="font-size: 0.84rem;">
+            <thead>
+              <tr>
+                <th>Mã WBS (P6 Code)</th>
+                <th>Tên Hạng Mục Công Việc (WBS Name)</th>
+                <th>Cấu Kiện BIM Liên Kết</th>
+                <th>Tham Số Mô Hình</th>
+                <th>Người Phụ Trách (OBS)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background: rgba(2, 132, 199, 0.15);">
+                <td><strong>PRJ-FACTORY</strong></td>
+                <td><strong>Dự án Nhà máy Công nghiệp 30.000m²</strong></td>
+                <td>Toàn bộ dự án</td>
+                <td>Project Information</td>
+                <td>Project Director</td>
+              </tr>
+              <tr style="background: rgba(15, 23, 42, 0.4);">
+                <td>&nbsp; ↳ <strong>01-MILE</strong></td>
+                <td>Mốc Tiến Độ Trọng Yếu (Milestones)</td>
+                <td>Milestone Markers</td>
+                <td>NTP, Substantial Date</td>
+                <td>BIM Manager</td>
+              </tr>
+              <tr style="background: rgba(15, 23, 42, 0.4);">
+                <td>&nbsp; ↳ <strong>02-ENG</strong></td>
+                <td>Thiết Kế & Mô Hình Hóa BIM (LOD 300 - 400)</td>
+                <td>ARC, STR, MEPF Models</td>
+                <td><code>BSV_QuyTacJoin.xml</code></td>
+                <td>BIM Manager</td>
+              </tr>
+              <tr style="background: rgba(15, 23, 42, 0.4);">
+                <td>&nbsp; ↳ <strong>03-PROC</strong></td>
+                <td>Mua Sắm & Đệ Trình Vật Tư (Submittals)</td>
+                <td>Shop Drawings & Fabrication</td>
+                <td><code>BSV_ChieuDaiThepShop</code></td>
+                <td>Procurement Mgr</td>
+              </tr>
+              <tr style="background: rgba(16, 185, 129, 0.1);">
+                <td>&nbsp; ↳ <strong>04-CONST</strong></td>
+                <td><strong>Thi Công Xây Lắp Hiện Trường</strong></td>
+                <td>Toàn bộ mô hình thi công</td>
+                <td>GLCONS / Tiến độ 4D</td>
+                <td>Site Director</td>
+              </tr>
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; ↳ <strong>04.01-SUB</strong></td>
+                <td>Phần Ngầm & Móng (Substructure)</td>
+                <td>Cọc, Móng, Bê tông lót</td>
+                <td><code>Comments: 02.Mong-Xuong</code></td>
+                <td>Civil Superintendent</td>
+              </tr>
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; ↳ <strong>04.02-STR</strong></td>
+                <td>Phần Thân & Kết Cấu Thép (Superstructure)</td>
+                <td>Cột thép, Vì kèo, Sàn nền</td>
+                <td><code>Comments: 05.Cot / 04.Nen</code></td>
+                <td>Steel Superintendent</td>
+              </tr>
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; ↳ <strong>04.03-ENV</strong></td>
+                <td>Vỏ Bao Che & Mái Tole (Building Envelope)</td>
+                <td>Mái tole, Vách panel, Cửa sổ</td>
+                <td>Wall / Roof Schedules</td>
+                <td>Facade Foreman</td>
+              </tr>
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; ↳ <strong>04.04-MEP</strong></td>
+                <td>Cơ Điện & Tiện Ích (MEPF Systems)</td>
+                <td>Đường ống PCCC, Máng cáp, HVAC</td>
+                <td>Clash Free MEP Models</td>
+                <td>MEP Superintendent</td>
+              </tr>
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; ↳ <strong>04.05-FIN</strong></td>
+                <td>Hoàn Thiện & Nội Thất (Finishes & FF&E)</td>
+                <td>Sơn epoxy, Trần thạch cao, Nội thất</td>
+                <td>Room Finish Schedule</td>
+                <td>Finishing Foreman</td>
+              </tr>
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; ↳ <strong>04.06-INFRA</strong></td>
+                <td>Hạ Tầng Ngoài Nhà (Site Infrastructure)</td>
+                <td>Thoát nước mưa, Đường giao thông</td>
+                <td>Site & Topography Models</td>
+                <td>Infra Superintendent</td>
+              </tr>
+              <tr style="background: rgba(168, 85, 247, 0.15);">
+                <td>&nbsp; ↳ <strong>05-CLOSE</strong></td>
+                <td>Nghiệm Thu Bàn Giao & Digital Handover</td>
+                <td>Mô hình As-built BIM & COBie</td>
+                <td>Asset Data 50 Years</td>
+                <td>BIM Manager</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <!-- TAB 7: PLAYBOOK TRIỂN KHAI DỰ ÁN CỤ THỂ -->

@@ -1,0 +1,46 @@
+ERMHDR	8.1	2026-10-10	ENCORE-GROUP-P6-TRAINING-MANUAL	DATABASE
+%T	OBS
+%F	obs_id	parent_obs_id	obs_name	obs_descr
+%R	1		Board of Directors	Ban Giam Doc
+%R	2	1	Project Management	Phong Quan Ly Du An
+%R	3	2	BIM Department	Phong Quan Ly BIM
+%T	PROJECT
+%F	proj_id	proj_short_name	proj_name	status_code	plan_start_date
+%R	1001	PRJ-FACTORY	Du An Nha May Cong Nghiep 30000m2	Active	2026-10-15 08:00
+%T	PROJWBS
+%F	wbs_id	proj_id	parent_wbs_id	seq_num	wbs_short_name	wbs_name	status_code
+%R	101	1001		1	PRJ-FACTORY	Du An Nha May Cong Nghiep 30000m2	Active
+%R	102	1001	101	1	01-MILE	Moc Tien Do Trong Yeu (Milestones)	Active
+%R	103	1001	101	2	02-ENG	Thiet Ke va Mo Hinh Hoa BIM (LOD 300-400)	Active
+%R	104	1001	101	3	03-PROC	Mua Sam va De Trinh Vat Tu (Procurement)	Active
+%R	105	1001	101	4	04-CONST	Thi Cong Xay Lap Hien Truong (Construction)	Active
+%R	106	1001	105	1	04.01-SUB	Phan Ngam va Mong (Substructure)	Active
+%R	107	1001	105	2	04.02-STR	Phan Than va Ket Cau Thep (Superstructure)	Active
+%R	108	1001	105	3	04.03-ENV	Vo Bao Che va Mai Tole (Building Envelope)	Active
+%R	109	1001	105	4	04.04-MEP	Co Dien va Tien Ich (MEPF Systems)	Active
+%R	110	1001	105	5	04.05-FIN	Hoan Thien va Noi That (Finishes and FF&E)	Active
+%R	111	1001	105	6	04.06-INFRA	Ha Tang Ngoai Nha (Site Infrastructure)	Active
+%R	112	1001	101	5	05-CLOSE	Nghiem Thu Ban Giao va Digital Handover (Closeout)	Active
+%T	TASK
+%F	task_id	proj_id	wbs_id	task_code	task_name	task_type	target_drtn_hr_cnt	status_code
+%R	1001	1001	102	M100	Khoi cong du an (Notice to Proceed)	TT_Mile	0	Active
+%R	1002	1001	102	M110	Hoan thanh phan ngam	TT_Mile	0	Active
+%R	1003	1001	102	M120	Hoan thanh khung thep	TT_Mile	0	Active
+%R	1004	1001	102	M130	Dong vo bao che Closed-in	TT_Mile	0	Active
+%R	1005	1001	102	M140	Nghiem thu co ban Substantial Completion	TT_Mile	0	Active
+%R	2001	1001	103	E200	Khoi tao CDE va Revit Template	TT_Task	24	Active
+%R	2002	1001	103	E210	Dung mo hinh Kien truc va Ket cau	TT_Task	80	Active
+%R	2003	1001	103	E220	Dung mo hinh MEPF va chay Clash Matrix	TT_Task	64	Active
+%R	2004	1001	103	E230	Boc tach khoi luong 5D doi chieu BOQ	TT_Task	40	Active
+%R	2005	1001	103	E240	Xuat ban ve Shop Drawing Rebar LOD 400	TT_Task	80	Active
+%R	4001	1001	106	C400	Dao dat ho mong va ep am coc	TT_Task	56	Active
+%R	4002	1001	106	C410	Ep coc ly tam D400 va D500	TT_Task	96	Active
+%R	4003	1001	106	C420	Be tong lot va lap dat thep dai mong	TT_Task	64	Active
+%R	4004	1001	106	C430	Lap dung van khuon va do be tong mong B25	TT_Task	48	Active
+%R	4005	1001	107	C440	Lap dung bu long neo va cot thep xuong	TT_Task	80	Active
+%R	4006	1001	107	C450	Lap dung vi keo thep va xa go mai	TT_Task	96	Active
+%R	4007	1001	107	C460	Do be tong nen xuong Slab on Grade	TT_Task	72	Active
+%R	4008	1001	108	C470	Lap ton mai va vach panel cach nhiet	TT_Task	88	Active
+%R	4009	1001	109	C480	Lap duong ong PCCC va mang cap dien	TT_Task	120	Active
+%R	5001	1001	112	C500	Kiem dinh PCCC va Chay thu Commissioning	TT_Task	40	Active
+%R	5002	1001	112	C510	Ban giao mo hinh As-built va COBie 7D	TT_Task	32	Active

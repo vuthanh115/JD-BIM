@@ -1,0 +1,55 @@
+WBS Code,WBS Name,Parent WBS Code,Status,BIM Category,Revit Parameters,Responsible Manager (OBS)
+PRJ-FACTORY,Dự án Nhà máy Công nghiệp 30.000m2,,Active,Project Master,Project Info,Project Director
+PRJ-FACTORY.01-MILE,Mốc Tiến Độ Trọng Yếu (Milestones),PRJ-FACTORY,Active,Project Information,Milestone Date,BIM Manager
+PRJ-FACTORY.01.01,Khởi công dự án (NTP),PRJ-FACTORY.01-MILE,Active,Milestone,Start Date,BIM Manager
+PRJ-FACTORY.01.02,Hoàn thành phần ngầm (Substructure Complete),PRJ-FACTORY.01-MILE,Active,Structural Foundations,Target Date,Site Manager
+PRJ-FACTORY.01.03,Hoàn thành kết cấu khung thép (Structure Complete),PRJ-FACTORY.01-MILE,Active,Structural Framing,Target Date,Site Manager
+PRJ-FACTORY.01.04,Hoàn thành đóng vỏ bao che (Closed-in),PRJ-FACTORY.01-MILE,Active,Walls / Roofs,Target Date,Site Manager
+PRJ-FACTORY.01.05,Nghiệm thu hoàn thành cơ bản (Substantial Completion),PRJ-FACTORY.01-MILE,Active,Project Master,Closeout Date,C/U Project Manager
+PRJ-FACTORY.02-ENG,Thiết Kế & Mô Hình Hóa BIM (Engineering & BIM),PRJ-FACTORY,Active,BIM Models,Model Version,BIM Manager
+PRJ-FACTORY.02.01,Khởi tạo CDE & Template (BEP),PRJ-FACTORY.02-ENG,Active,Project Setup,BSV_Template_Rvt,BIM Manager
+PRJ-FACTORY.02.02,Mô hình BIM Kiến trúc & Kết cấu (LOD 300),PRJ-FACTORY.02-ENG,Active,ARC / STR Models,BSV_QuyTacJoin.xml,BIM Modeler
+PRJ-FACTORY.02.03,Mô hình BIM Cơ điện MEPF (LOD 300),PRJ-FACTORY.02-ENG,Active,MEP Models,Clash Matrix,MEP Coordinator
+PRJ-FACTORY.02.04,Điều phối xung đột 3D & Xử lý RFI,PRJ-FACTORY.02-ENG,Active,Navisworks,Clash Report,BIM Coordinator
+PRJ-FACTORY.02.05,Bóc tách khối lượng 5D đối soát BOQ,PRJ-FACTORY.02-ENG,Active,Schedules,BSV_KC_ShareParameter,QS Engineer
+PRJ-FACTORY.02.06,Xuất bản vẽ Shop Drawing Cốt thép (LOD 400),PRJ-FACTORY.02-ENG,Active,Structural Rebar,Partition / BBS,Senior Modeler
+PRJ-FACTORY.03-PROC,Mua Sắm & Đệ Trình (Procurement & Submittals),PRJ-FACTORY,Active,Submittals,Product Data,Procurement Manager
+PRJ-FACTORY.03.01,Đệ trình bản vẽ Shop Drawing & Mẫu vật liệu,PRJ-FACTORY.03-PROC,Active,Shop Drawings,Approval Status,BIM Coordinator
+PRJ-FACTORY.03.02,Gia công kết cấu thép tại nhà máy,PRJ-FACTORY.03-PROC,Active,Steel Fabrication,BSV_ChieuDaiThepShop,Factory Manager
+PRJ-FACTORY.03.03,Đặt hàng thiết bị cơ điện chính (Chiller Bơm Trạm điện),PRJ-FACTORY.03-PROC,Active,Mechanical Equipment,PWP-01 / AHU-01,MEP Manager
+PRJ-FACTORY.04-CONST,Thi Công Xây Lắp Hiện Trường (Construction),PRJ-FACTORY,Active,All Disciplines,GLCONS / 4D,Construction Director
+PRJ-FACTORY.04.01-SUB,Phần Ngầm & Móng (Substructure),PRJ-FACTORY.04-CONST,Active,Foundations,Comments:02.Mong-Xuong,Civil Superintendent
+PRJ-FACTORY.04.01.01,Đào đất hố móng & xử lý nền,PRJ-FACTORY.04.01-SUB,Active,Topography,BSV_DaoDat,Civil Engineer
+PRJ-FACTORY.04.01.02,Thi công ép cọc ly tâm D400/D500,PRJ-FACTORY.04.01-SUB,Active,Structural Foundations,BSV_CocThiNghiem,Pile Engineer
+PRJ-FACTORY.04.01.03,Bê tông lót móng & đà kiềng (B7.5),PRJ-FACTORY.04.01-SUB,Active,Structural Foundations,BSV_BeTongLot,Site Engineer
+PRJ-FACTORY.04.01.04,Lắp đặt cốt thép đài móng & đà kiềng,PRJ-FACTORY.04.01-SUB,Active,Structural Rebar,Partition: F1 / D1,Rebar Foreman
+PRJ-FACTORY.04.01.05,Lắp dựng ván khuôn móng,PRJ-FACTORY.04.01-SUB,Active,Generic Models,BSV_PhanLoai:VK_Mong,Formwork Foreman
+PRJ-FACTORY.04.01.06,Đổ bê tông đài móng & đà kiềng (B25),PRJ-FACTORY.04.01-SUB,Active,Structural Foundations,BSV_BeTongChinh,Concrete Foreman
+PRJ-FACTORY.04.01.07,Trám lỗ ti ren ván khuôn & lấp đất móng,PRJ-FACTORY.04.01-SUB,Active,Structural Foundations,BSV_LoTi,Site Engineer
+PRJ-FACTORY.04.02-STR,Phần Thân & Kết Cấu (Superstructure),PRJ-FACTORY.04-CONST,Active,Columns / Framing / Floors,Comments:05.Cot / 07.Dam,Civil Superintendent
+PRJ-FACTORY.04.02.01,Lắp dựng bu lông neo & cột thép xưởng,PRJ-FACTORY.04.02-STR,Active,Structural Columns,GLC_Steel_Columns,Steel Erect Foreman
+PRJ-FACTORY.04.02.02,Lắp dựng vì kèo thép & xà gồ mái,PRJ-FACTORY.04.02-STR,Active,Structural Framing,GLC_Roof_Truss,Steel Erect Foreman
+PRJ-FACTORY.04.02.03,Đổ bê tông cột dầm sàn nhà văn phòng,PRJ-FACTORY.04.02-STR,Active,Floors / Framing,Auto-Join XML Rule,Concrete Foreman
+PRJ-FACTORY.04.02.04,Đổ bê tông nền xưởng (Slab on Grade) & xoa hardener,PRJ-FACTORY.04.02-STR,Active,Structural Floors,Comments:04.Nen-Xuong,Floor Foreman
+PRJ-FACTORY.04.03-ENV,Vỏ Bao Che (Building Envelope),PRJ-FACTORY.04-CONST,Active,Walls / Roofs,Comments:Panel / Tole,Envelope Superintendent
+PRJ-FACTORY.04.03.01,Lắp đặt tôn mái & tôn vách xưởng,PRJ-FACTORY.04.03-ENV,Active,Roofs,GLC_Wall_Tole,Roofing Foreman
+PRJ-FACTORY.04.03.02,Xây tường bao & lắp vách panel cách nhiệt,PRJ-FACTORY.04.03-ENV,Active,Walls,GLC_Panel_Wall,Masonry Foreman
+PRJ-FACTORY.04.03.03,Lắp dựng cửa nhôm kính & vách kính mặt dựng,PRJ-FACTORY.04.03-ENV,Active,Windows / Curtain Walls,Curtain Wall Schedule,Facade Foreman
+PRJ-FACTORY.04.04-MEP,Cơ Điện & Tiện Ích (MEPF Systems),PRJ-FACTORY.04-CONST,Active,MEP Systems,Clash Free Models,MEP Superintendent
+PRJ-FACTORY.04.04.01,Lắp đặt đường ống PCCC ngầm & nổi,PRJ-FACTORY.04.04-MEP,Active,Pipes,Fire Protection System,Fire Engineer
+PRJ-FACTORY.04.04.02,Hệ thống máng cáp & dây dẫn điện chiếu sáng/động lực,PRJ-FACTORY.04.04-MEP,Active,Cable Trays,Electrical System,Electrical Engineer
+PRJ-FACTORY.04.04.03,Hệ thống thông gió làm mát xưởng & điều hòa VP,PRJ-FACTORY.04.04-MEP,Active,Ducts / Equipment,HVAC System,HVAC Engineer
+PRJ-FACTORY.04.04.04,Lắp đặt thiết bị trạm biến áp & máy phát điện,PRJ-FACTORY.04.04-MEP,Active,Electrical Equipment,Transformer Unit,Substation Engineer
+PRJ-FACTORY.04.05-FIN,Hoàn Thiện & Nội Thất (Finishes & FF&E),PRJ-FACTORY.04-CONST,Active,Finishes / Furniture,Room Finish Schedule,Interior Superintendent
+PRJ-FACTORY.04.05.01,Sơn epoxy nền xưởng & sơn tường văn phòng,PRJ-FACTORY.04.05-FIN,Active,Floors / Walls,Epoxy Coating,Finishing Foreman
+PRJ-FACTORY.04.05.02,Lắp đặt trần thạch cao gạch ốp lát vệ sinh,PRJ-FACTORY.04.05-FIN,Active,Ceilings / Floors,Tile Schedule,Finishing Foreman
+PRJ-FACTORY.04.05.03,Lắp đặt thiết bị nội thất văn phòng (FF&E),PRJ-FACTORY.04.05-FIN,Active,Furniture,FF&E Matrix,FF&E Coordinator
+PRJ-FACTORY.04.06-INFRA,Hạ Tầng Ngoài Nhà (Site Infrastructure),PRJ-FACTORY.04-CONST,Active,Site / Topography,GLC_Infra_Model,Infra Superintendent
+PRJ-FACTORY.04.06.01,Hệ thống thoát nước mưa nước thải & trạm xử lý nước,PRJ-FACTORY.04.06-INFRA,Active,Pipes / Drainage,Drainage Schedule,Plumbing Engineer
+PRJ-FACTORY.04.06.02,Đường giao thông nội bộ & bãi đỗ xe bê tông,PRJ-FACTORY.04.06-INFRA,Active,Floors / Roads,Paving Area,Road Engineer
+PRJ-FACTORY.04.06.03,Hàng rào nhà bảo vệ & cảnh quan cây xanh,PRJ-FACTORY.04.06-INFRA,Active,Site Works,Landscape Schedule,Civil Engineer
+PRJ-FACTORY.05-CLOSE,Nghiệm Thu Bàn Giao & Digital Handover,PRJ-FACTORY,Active,As-built Model,7D Handover Package,BIM Manager
+PRJ-FACTORY.05.01,Kiểm định nghiệm thu PCCC & Giấy phép sử dụng,PRJ-FACTORY.05-CLOSE,Active,Regulatory,Certificate of Occupancy,Authority Coordinator
+PRJ-FACTORY.05.02,Chạy thử liên động toàn hệ thống (Commissioning),PRJ-FACTORY.05-CLOSE,Active,All Systems,Commissioning Report,Cx Specialist
+PRJ-FACTORY.05.03,Nghiệm thu hoàn thành cơ bản & xử lý Punchlist,PRJ-FACTORY.05-CLOSE,Active,Punchlist Tracker,Substantial Completion,C/U Project Manager
+PRJ-FACTORY.05.04,Bàn giao mô hình As-built BIM O&M Manuals COBie,PRJ-FACTORY.05-CLOSE,Active,Digital Handover,Asset Data 50 Years,BIM Manager
