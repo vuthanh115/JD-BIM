@@ -1,0 +1,1144 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib">
+	<system1:String xmlns:system1="clr-namespace:System;assembly=System.Private.CoreLib"
+		x:Key="CARACKERVM_PICKOBJECT">Chọn hướng ưu tiên</system1:String>
+	<String
+		x:Key="CEILINGDRAWINGSERVICE_PICKOBJECT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select column/windows to dims...</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_BOQUATRANGIA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">間違っている天井モデルを無視してください</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_DIMENSIONTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ディメンジョンタイプ</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_DIMTOBONGDEN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">K/C Dim=&gt;Light</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_DIMTOCANHCT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">K/C Dim=&gt; Edge of building</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_DISTANCEFROMDIMTODIM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">DimとDimの距離</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_ELEVATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">立面図</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_LEVELNAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">レベル名</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_LEVELS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">レベル</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_SETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">設定</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_TAGCEILINGTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">タグ天井タイプ</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">天井作図</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_TITLEBLOCK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">タイトルブロック</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_VIEWTEMPLATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ビューテンプレート</String>
+	<String
+		x:Key="CHANGEPATTERNINLISTIFHAVESAMEPATTERNCHANGED" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Change pattern in list if have same pattern changed</String>
+	<String
+		x:Key="COLLISIONCHECKVIEWOPEN_FILE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Open file</String>
+	<String
+		x:Key="COLUMNPLANDIM_CONTROLLER_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">平面図または構造平面図にて実行してください</String>
+	<String
+		x:Key="COLUMNPLANDIM_CONTROLLER_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">既に削除しました</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_ALLCOLUMNSWALLS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全ての柱/壁</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_BOT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">下部</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_DIMOFFSET" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dimオフセット</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_DIMOVERALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全体Dim</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_DIMTYPES" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dimタイプ</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_LEFT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">左</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_ONLYDIM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">柱/壁のセンターのみのDim</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_POSITIONS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">位置</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_RANGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">範囲</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_RIGHT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">右</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_SELECTCOLUMNSWALLS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">柱/壁を選択</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">柱平面Dim</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_TOP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">上</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_VIEWSCALE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ビュースケール</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_VIEWTEMPLATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ビューテンプレート</String>
+	<String
+		x:Key="COLUMNPLANDIMCONTROLLER_PICKOBJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select elements to dimension</String>
+	<String
+		x:Key="COLUMNREBAR_MODEL_EXCUTEDETAILS_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">シートを開きますか？</String>
+	<String
+		x:Key="COLUMNREBAR_MODEL_EXTENSIONWAITINGF_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">この機能はまもなく更新されます。</String>
+	<String
+		x:Key="COLUMNREBAR_MODEL_SAVESTIRRUPTIDEDATA_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">配筋図作図の前にまずファミリをロードしてください</String>
+	<String
+		x:Key="COLUMNREBAR_VIEW_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">1点目と2点目は同じです。 もう一度お試しください。</String>
+	<String
+		x:Key="COLUMNREBAR_VIEW_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">同じ方向の2点を選択する必要があります。 もう一度お試しください。</String>
+	<String
+		x:Key="COLUMNREBAR_VIEWMODEL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ID = null の場合、値 {0} はデフォルト値です。</String>
+	<String
+		x:Key="COLUMNREBAR_VIEWMODEL_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Id がnullのときにエラーが発生します。</String>
+	<String
+		x:Key="COLUMNREBAR_VIEWMODEL_MESS3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Single-Columnモードになっているため、この機能を実行できません。</String>
+	<String
+		x:Key="COLUMNREBAR_VIEWMODEL_MESS4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">あばら筋を描くための L1は定義されていません。</String>
+	<String
+		x:Key="COLUMNSREBAR_CONVERTERUTIL_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">立面図における柱の情報</String>
+	<String
+		x:Key="COLUMNSREBARVM_PICKPOINT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select Beam As Floor...</String>
+	<String
+		x:Key="COLUMREBAR_BUTTON_CHECKALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全チェック</String>
+	<String
+		x:Key="COLUMREBAR_BUTTON_DONE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">完成</String>
+	<String
+		x:Key="COLUMREBAR_BUTTON_UNCHECKALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全解除</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_APPLYFORLEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">その他のレベルに適用</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_BEAMORFLOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">梁、または、床</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_BREAKLINE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">破断線：</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_CLOSETIE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">あばら筋</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_COLUMNSHEETGENERS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">柱シート生成の設定：</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_CREATEDETAILITEMFROM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋から詳細項目を作成：</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_CROSSSECTIONSETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">断面設定：</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_CROSSTIE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">あばら筋のフック</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DETAILITEMSHOWTAG" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">詳細項目 (タグを表示)</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DETAILITEMSHOWVALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">詳細項目 (値を表示)</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DETAILITEMSIRRUPTAG" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">詳細項目 (あばら筋のタグ) :</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DETAILITEMTEXTS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">詳細項目 (文字サイズ) :</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DIAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">直径</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DIMENSIONTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ディメンジョンタイプ：</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DISA1A2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">両端で密に配筋</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DRAWING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">作図</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_FIXEDLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">定着長 (mm)</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_FLOORFRAMINGH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">床フレームの高さ (mm)</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_FLORRFRAMINGT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">床フレームの種類</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_FOUNDATIONREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">基礎の鉄筋</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_LONGDITUSECTIONSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">縦断面設定：</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_OTHERCOVERTHICK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">その他のかぶりの厚み（mm）</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_QUANTITES" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">数量：</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_REBARBYLEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">レベルごとの鉄筋</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_SECTIONSTIRRUPTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">あばら筋の断面のタイプ</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_SETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">設定</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_SHEETNAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">シート名：</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_SHEETNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">シート番号：</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_SPREADIS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">緊密配置</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_STIRRUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">あばら筋</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">柱の鉄筋</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_TITLEBLOCK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">タイトルブロック：</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_TOPCOVERTHICKNESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">上面のかぶりの厚み（mm）</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_TYPETAG" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">タイプタグ：</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_UNIFORM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">均等に配筋</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_UNIFORMDISTRIREBARSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">均等配置</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_VIEWFAMILYTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ビューファミリタイプ：</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_VIEWSCALE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ビュー スケール :</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_VIEWTEMPLATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ビューテンプレート：</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_ELEVETION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">立面図</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_ELEVETIONAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">立面図の名前</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_NO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">番号</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_SECTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">断面</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_SELECTCOL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">柱選択</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全てのレベルに適用</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_YESNO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">はい・いいえ</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_ADDELEFORREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋にレベルを追加</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_ADDMORE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋にさらなる情報を追加：</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_ADDPARTIFORREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋にパーティションを追加</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_AUTOMESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">柱に関連付けられたレベルと厚みで梁を自動的に検索します。</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_AUTOMESSFLOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">柱に関連付けられたレベルと厚みで床を自動的に検索します。</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_BARBENDINGSPLICING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋の曲げ・接合の条件：</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_BENBARIFE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">e ≤ (mm) の場合の鉄筋曲げ</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_BENDBARCONFLICT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">コンフリクトを避けるために重ね継手のところで鉄筋を曲げます。</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_DISTANCEBEETWEN2LAP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">重ね継手間の間隔（xD）</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_DISTANCECOLLUMBOTL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">柱底からの距離 L = (mm)</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_FLOORBEAMSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">床梁の設定</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_GROUPBARNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">同じ鉄筋番号の鉄筋をグループ化します。</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_HOOKBENDING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">フック曲げ：</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_HOOKLAP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">フック付き重ね継手の長さ：</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_HOOKLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">フック長：</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_LAP1POSITION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">１位置の重ね継手</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_LAP2POSITION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">２位置の重ね継手</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_LAPLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">重ね継手の長さ</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_LAPPINGPOSI" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">重ね継手の位置：</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_MIDDLEOFCOLS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">柱の中央</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_RATIOHD" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">比率Hd/e ≥</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_SELECTFLOORBEAMMANUA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">手動による床梁の選択</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_STARTERBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">最初の鉄筋：</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_TOPCOLUMNBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">上の柱の鉄筋：</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_DISTRIBUTIONBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">配置する鉄筋の直径</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_INERLAYERREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">内層の鉄筋の本数</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_MAINBARDIAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">主筋の直径</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_MAINSTIRRUPDIAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">メインあばら筋の直径</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_OUTERLAYERBARNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">外層の鉄筋の本数</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_REBARNUMBERCX" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cx鉄筋の本数</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_REBARNUMBERCY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cy鉄筋の本数</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_REINFORCEAREA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">補強面積 (cm2)：</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_REINFORCERATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋率：</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_SPREADSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">個別配置の設定</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_TOTALBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋の合計</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_UNIFORMREBARSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">均等配置の設定</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_USEDISTRIBUTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">配置する鉄筋を使用</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_A1DISL1COUNT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">躯体側から L1にあるA1で均等配置します。</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_CLEARANGEHDB" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">クリアランスの高さ</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_COLSECHEIGHT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">柱の断面の高さ</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_DIAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">直径</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_DISTANCEFIRSTS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">最初のあばら筋までの距離</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_GETSAMESPC" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">メインあばら筋と同じピッチに</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_HOOKTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">フックのタイプ</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_L1TAKEGVT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">L1 は、次の値の最大値に従って取得されます。</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_MAINSTIRRUPSPREADING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">メインあばら筋</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_MINMM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">最小 (mm)</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_REINFORCESTIRRUPBF" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">梁・床に対しあばら筋を配置します。</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_RULEADDSITRRUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">補強筋のルール</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_SPREADSTIRRUPBOTBF" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">梁・床の下にあばら筋を配置します。</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_SPREADSTIRRUPTOPBF" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">梁・床の上にあばら筋を配置します。</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_STIRRUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">PACING"&gt;あばら筋間のピッチ</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_STIRRUPNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">あばら筋の本数</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_STIRRUPSPACING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">あばら筋のピッチ(mm)</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_STIRRUPSPREADING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">あばら筋の配置</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_DISTRUTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">配置する鉄筋の直径</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_MAINBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">主筋</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_MAINSTIRUPDIAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">あばら筋の直径：</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_REBARNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">本数</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_REINFOCREAREA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">補強面積 (cm2)：</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_REINFORCERATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋率：</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_ROUNDSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">丸柱の設定</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_TOTALBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋の合計</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW2_DIRECTIONOFBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋の方向</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW2_MAINBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">主筋とあばら筋のピッチ</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW2_SEPARATE2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">最初の鉄筋を２分割</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW2_STARTBARSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">最初の鉄筋の設定</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW2_STIRRUPSPACING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">あばら筋のピッチ</String>
+	<String
+		x:Key="COLUMREBAR_VIEWWARNINGS_DESCRIPTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">説明</String>
+	<String
+		x:Key="COLUMREBAR_VIEWWARNINGS_ID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ID</String>
+	<String
+		x:Key="COLUMREBAR_VIEWWARNINGS_NO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">番号</String>
+	<String
+		x:Key="COLUMREBAR_VIEWWARNINGS_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">警告</String>
+	<String
+		x:Key="COMMON_BUTTON_ABORT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">中止</String>
+	<String
+		x:Key="COMMON_BUTTON_ADD" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">追加</String>
+	<String
+		x:Key="COMMON_BUTTON_ADDRULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ルール追加</String>
+	<String
+		x:Key="COMMON_BUTTON_APPLY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">適用</String>
+	<String
+		x:Key="COMMON_BUTTON_CHANGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">変更</String>
+	<String
+		x:Key="COMMON_BUTTON_CLEARALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全てをクリア</String>
+	<String
+		x:Key="COMMON_BUTTON_CLEARFILTER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">フィルターをクリア</String>
+	<String
+		x:Key="COMMON_BUTTON_CLICK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">クリック</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_INBEAM_SEISMIC" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">閉じる</String>
+	<String
+		x:Key="COMMON_BUTTON_COMBINE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">結合</String>
+	<String
+		x:Key="COMMON_BUTTON_COPPYRESULT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">コピーの結果</String>
+	<String
+		x:Key="COMMON_BUTTON_CREATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">作成</String>
+	<String
+		x:Key="COMMON_BUTTON_CREATELEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">作成レベル</String>
+	<String
+		x:Key="COMMON_BUTTON_CUT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">カット</String>
+	<String
+		x:Key="COMMON_BUTTON_CUTBYVOID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ボイド要素でカット</String>
+	<String
+		x:Key="COMMON_BUTTON_DELETE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">削除</String>
+	<String
+		x:Key="COMMON_BUTTON_DELETEALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全てを削除</String>
+	<String
+		x:Key="COMMON_BUTTON_DELETESELECTEDRULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">選択されたルールを削除</String>
+	<String
+		x:Key="COMMON_BUTTON_DELETEVIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ビューを削除</String>
+	<String
+		x:Key="COMMON_BUTTON_DIMOFFSET" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dimオフセット</String>
+	<String
+		x:Key="COMMON_BUTTON_DOWN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">下へ</String>
+	<String
+		x:Key="COMMON_BUTTON_DRAW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">作図</String>
+	<String
+		x:Key="COMMON_BUTTON_DUPLICATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">コピー</String>
+	<String
+		x:Key="COMMON_BUTTON_EDIT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">編集</String>
+	<String
+		x:Key="COMMON_BUTTON_END" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">終了</String>
+	<String
+		x:Key="COMMON_BUTTON_ENTRIEPROJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">プロジェクト全体</String>
+	<String
+		x:Key="COMMON_BUTTON_EXPORT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">エクスポート</String>
+	<String
+		x:Key="COMMON_BUTTON_FILTER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">フィルター</String>
+	<String
+		x:Key="COMMON_BUTTON_HELP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ヘルプ</String>
+	<String
+		x:Key="COMMON_BUTTON_HIDE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">非表示</String>
+	<String
+		x:Key="COMMON_BUTTON_HIDEUNSELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">選択されていない要素を非表示</String>
+	<String
+		x:Key="COMMON_BUTTON_IMPORT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">インポート</String>
+	<String
+		x:Key="COMMON_BUTTON_INSERT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">挿入</String>
+	<String
+		x:Key="COMMON_BUTTON_ISOLATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">隔離</String>
+	<String
+		x:Key="COMMON_BUTTON_JOIN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ジョイン（結合）</String>
+	<String
+		x:Key="COMMON_BUTTON_LOADEXCEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Excelをロード</String>
+	<String
+		x:Key="COMMON_BUTTON_NUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">本数</String>
+	<String
+		x:Key="COMMON_BUTTON_CLOSE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Close</String>
+	<String
+		x:Key="COMMON_BUTTON_OK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ok</String>
+	<String
+		x:Key="COMMON_BUTTON_OPEN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">開く</String>
+	<String
+		x:Key="COMMON_BUTTON_OPENFOLDER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Openフォルダー</String>
+	<String
+		x:Key="COMMON_BUTTON_OPENRULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Openルール</String>
+	<String
+		x:Key="COMMON_BUTTON_REFESH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">更新</String>
+	<String
+		x:Key="COMMON_BUTTON_RELOADDATA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">データをリロード</String>
+	<String
+		x:Key="COMMON_BUTTON_REMOVE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">削除</String>
+	<String
+		x:Key="COMMON_BUTTON_RENAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">名称を変更</String>
+	<String
+		x:Key="COMMON_BUTTON_REPLACEALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全てを置き換える</String>
+	<String
+		x:Key="COMMON_BUTTON_REPLACESELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">選択された要素を置き換える</String>
+	<String
+		x:Key="COMMON_BUTTON_RESELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">再選択</String>
+	<String
+		x:Key="COMMON_BUTTON_RESET" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">リセット</String>
+	<String
+		x:Key="COMMON_BUTTON_RESTORE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">IMENSION"&gt;ディメンジョンを元に戻す</String>
+	<String
+		x:Key="COMMON_BUTTON_RESTORE DIMENSION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ディメンジョンを元に戻す</String>
+	<String
+		x:Key="COMMON_BUTTON_RUN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">実行</String>
+	<String
+		x:Key="COMMON_BUTTON_SAVE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">保存</String>
+	<String
+		x:Key="COMMON_BUTTON_SAVERULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">保存ルール</String>
+	<String
+		x:Key="COMMON_BUTTON_SELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">選択</String>
+	<String
+		x:Key="COMMON_BUTTON_SELECTALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全てを選択</String>
+	<String
+		x:Key="COMMON_BUTTON_SELECTFROMCAD" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select From Cad</String>
+	<String
+		x:Key="COMMON_BUTTON_SELECTVIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ビューを選択</String>
+	<String
+		x:Key="COMMON_BUTTON_SETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">設定</String>
+	<String
+		x:Key="COMMON_BUTTON_SHEETSCOUNT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">シートカウント</String>
+	<String
+		x:Key="COMMON_BUTTON_SHOW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">表示</String>
+	<String
+		x:Key="COMMON_BUTTON_SHOWHIDE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">表示/非表示</String>
+	<String
+		x:Key="COMMON_BUTTON_START" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">スタート</String>
+	<String
+		x:Key="COMMON_BUTTON_SWITCHJOIN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">スイッチジョイン</String>
+	<String
+		x:Key="COMMON_BUTTON_TOLEGEND" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">凡例へ</String>
+	<String
+		x:Key="COMMON_BUTTON_TUTORIAL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">チュートリアル</String>
+	<String
+		x:Key="COMMON_BUTTON_UNCUT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">カット解除（元に戻す）</String>
+	<String
+		x:Key="COMMON_BUTTON_UNDO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">取り消す</String>
+	<String
+		x:Key="COMMON_BUTTON_UNJOIN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">結合解除（元に戻す）</String>
+	<String
+		x:Key="COMMON_BUTTON_UNSELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">上へ</String>
+	<String
+		x:Key="COMMON_BUTTON_UP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">上下</String>
+	<String
+		x:Key="COMMON_BUTTON_UPDATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">更新</String>
+	<String
+		x:Key="COMMON_BUTTON_UPLOAD" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Upload</String>
+	<String
+		x:Key="COMMON_BUTTON_VIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ビュー</String>
+	<String
+		x:Key="COMMON_GROUPBOX_DETAIL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Details</String>
+	<String
+		x:Key="COMMON_TEXT_DESCRIPTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">説明</String>
+	<String
+		x:Key="COMMON_TEXT_DETAIL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">詳細</String>
+	<String
+		x:Key="COMMON_TEXT_GROUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">グループ</String>
+	<String
+		x:Key="COMMON_TEXT_IMAGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">イメージ</String>
+	<String
+		x:Key="COMMON_TEXT_NOTIFY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Notify</String>
+	<String
+		x:Key="COMMON_TEXT_OPTIONS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">オプション</String>
+	<String
+		x:Key="COMMON_TEXT_PRECENT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">パーセント</String>
+	<String
+		x:Key="COMMON_TEXT_SEARCH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">検索</String>
+	<String
+		x:Key="COMMON_TEXT_SELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">選択</String>
+	<String
+		x:Key="COMMON_TEXT_SETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">設定</String>
+	<String
+		x:Key="COMMON_TEXT_WARNING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ウオーニング</String>
+	<String
+		x:Key="CONNECTBEAM_CONTROLLER_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">既に削除しました</String>
+	<String
+		x:Key="CONNECTBEAMCONTROLLER_PICKOBJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select First Beams</String>
+	<String
+		x:Key="COPPYINCREMENT_COPPYXAML_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">TextBoxに番号を付けてください</String>
+	<String
+		x:Key="COPYINCREMENTCONTROLLER_PICKPOINT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select Text to Copy!</String>
+	<String
+		x:Key="COPYINCREMENTCONTROLLER_PICKPOINT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Pick the first Point to copy</String>
+	<String
+		x:Key="COPYINCREMENTCONTROLLER_PICKPOINT3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Pick the second point to place Text</String>
+	<String
+		x:Key="COPYREBARVM_PICKOBJECT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mời Bạn Chọn Đối Tượng Muốn Copy Thép</String>
+	<String
+		x:Key="COPYREBARVM_PICKOBJECT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mời Bạn Chọn Đối Tượng Đặt Thép Vào</String>
+	<String
+		x:Key="COUNTOFSELECTEDITEMS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">COUNT OF SELECTED ITEMS</String>
+	<String
+		x:Key="COUPLERVIEWMODEL_PICKPOINT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select point to Split</String>
+	<String
+		x:Key="COUPLERVM_PICKOBJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn hướng ưu tiên</String>
+	<String
+		x:Key="CRACKERBARVM_PICKPOINT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select point to Split</String>
+	<String
+		x:Key="CREATECEILLINGVIEWACTIVE_VIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Active View</String>
+	<String
+		x:Key="CREATECEILLINGVIEWHEIGHT_OFFSET_FROM_LEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Height offset from level :</String>
+	<String
+		x:Key="CREATECEILLINGVIEWPICK_OBJECTS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Pick Objects</String>
+	<String
+		x:Key="CREATEFLOOR_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">作成完成していない床があります</String>
+	<String
+		x:Key="CREATEGRID_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">このツールは今のビューでは動作しません。Engineeringplanに移動してください。</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_ALLDOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全てのドア</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_ALLLEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全てのレベル</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_LEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">レベル</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">リンクからまぐさを作成</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_TYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">タイプ</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_WINDOW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">窓</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_WINDOWANDDOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">窓とドア</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_ALLDOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全てのドア</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_ALLWINDOW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全ての窓</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_EXTENDFROMBOTHENDLINTEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">まぐさ両端から延長</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_FROMFILELINKREVIT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ファイルによってRevitをリンク</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_FROMTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">タイプから</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_HEIGHTLINTEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">まぐさ高さ</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_SELECTWINDOWORDOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">窓またはドアを選択</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_SETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">設定</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">まぐさを作成</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_WINDOWANDDOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">窓とドア</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_ZOFFSETLINTEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">まぐさのZ-オフセット(mm)</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">プロジェクトにまぐさがありません</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">値が間違っています</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">幅がbで高さがｈの新しい梁タイプを作成してから再度このツールを実行してください</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">プロジェクトにドアを窓がありません</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ピック機能を廃止しました</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS6" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">リンクファイルを選択してください</String>
+	<String
+		x:Key="CreateLanhToModel_Message1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Create a successful family</String>
+	<String
+		x:Key="CreateLanhToModel_Message2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Family existed in the project</String>
+	<String
+		x:Key="CREATELANTOMODEL_PICKOBJECT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select Doors, Windows</String>
+	<String
+		x:Key="CREATELANTOMODEL_PICKOBJECT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select Link File Revit</String>
+	<String
+		x:Key="CREATELEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Create Level</String>
+	<String
+		x:Key="CREATELEVEL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">このツールは今のビューでは動作しません。立面図に移動してください。</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_CREATEBOTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">両方を作成</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_CREATEHORIZONTALGRID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">水平グリッドを作成</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_CREATEVERTICALGRID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">垂直グリッドを作成</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_DEFAULT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">デフォルト</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_DISTANCEGRIDBOTTOM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">底面から上面まで","で区切られているグリッド間の距離</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_DISTANCEGRIDSEPARATORBY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">左から右まで","で区切られているグリッド間の距離</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_GRIDNAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">グリッド名</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_HORIZONTAL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">水平</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_NAMESTARTWITH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">整数から始まる名称</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_NAMEWITHALPHA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">アルファベットから始まる名称</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_PHUONGTHUCDATTENGRID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">値がありません</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_SAMEDISTANCE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tips:同じ距離のものは"*"を使ってください</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_STARTNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">スタート番号</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_TIP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">値がありません</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">グリッドを作成</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_VERTICAL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">垂直</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_DEFAULT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">デフォルト</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_EXHEIGHT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ex Height:</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_INPUT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">レベル距離を入力（","で区切る)</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_LEVELNAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">レベル名</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_STARTNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">スタート番号</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_TAB1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">一つのレベルを選択してレベルを作成</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_TAB2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">高さを入力してレベルを作成</String>
+	<String
+		x:Key="CREATETAGBEAM_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ビデオチュートリアルを更新していないので、BimSpeedにて最新のビデオをご覧ください。</String>
+	<String
+		x:Key="CREATETAGBEAM_MM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">mm</String>
+	<String
+		x:Key="CREATETAGBEAM_VIEW_DISTANCETOTAG" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">タグまでの距離</String>
+	<String
+		x:Key="CREATETAGBEAM_VIEW_FAMILYTAG" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ファミリタグ</String>
+	<String
+		x:Key="CREATETAGBEAM_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">梁タグを作成</String>
+	<String
+		x:Key="CREATETAGVIEWMODEL_PICKOBJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select beams</String>
+	<String
+		x:Key="CREATETAGVIEWMODEL_PICKPOINT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Pick first point</String>
+	<String
+		x:Key="CREATETAGVIEWMODEL_PICKPOINT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Pick end point</String>
+	<String
+		x:Key="CREATETAGVM_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Revitにファミリタグがありません</String>
+	<String
+		x:Key="CREATETAGVM_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">有効な長さを入力してください</String>
+	<String
+		x:Key="CREATEWALL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">作成完成していない壁があります</String>
+	<String
+		x:Key="CUTFRAMINGVIEW_BXH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">BxH =</String>
+	<String
+		x:Key="CUTREBARATPOINT_COUPLERUSERCONTROL_COUPLER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">カプラー</String>
+	<String
+		x:Key="CUTREBARATPOINT_COUPLERUSERCONTROL_LAPLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">重ね継手の長さ</String>
+	<String
+		x:Key="CUTREBARATPOINT_COUPLERUSERCONTROL_TYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">タイプ</String>
+	<String
+		x:Key="CUTREBARATPOINT_CRACKEDBAR_LAPLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">重ね継手の長さ</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_COUPLER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">カプラー</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_CRACKEDBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">割れたバー</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_DISTANCE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">2つの線分の距離</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_LAPPEDBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">重ね継手のバー</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_OPTIONCUT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">切断のオプション</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_ROUNDING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">四捨五入</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_ROUNDINGTHELENGTHOFREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋の長さを四捨五入</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_STAGGERED" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">千鳥配置</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ポイントで鉄筋を切断</String>
+	<String
+		x:Key="REBARDETAIL_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋形状２D設定</String>
+	<String
+		x:Key="REBARDETAIL_VIEW_VALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">長さの値あり</String>
+	<String
+		x:Key="REBARDETAILING_REBARSHAPEDETAIL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">プロジェクトにファミリタグがないため、タグを作成できません。</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_REBARLOCATIONVM_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">プロジェクトには少なくとも 1つの床がある必要です。</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_REBARLOCATIONVM_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">キャンセルしました。</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_ACTIVEVIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">現在のビュー</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_BOTPARAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">下端のパラメータ</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_BOTVALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">下端の値</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_FILTERSLAB" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">上端・下端のスラブ鉄筋のフィルタ</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_FILTERSLABXY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">X・Yのスラブ鉄筋のフィルタ</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_PARALLELOXPARAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">パラレル Ox パラメータ:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_PARALLELOYPARAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">パラレル Oy パラメータ:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_PROJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">プロジェクト</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_RANGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">範囲</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_RANGEOFOPERATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">動作範囲</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_SELECTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">選択</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">スラブ鉄筋の位置</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_TOPPARAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">上端のパラメータ</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_TOPVALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">上端の値</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_XVALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">X 値:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_YVALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Y 値:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_AUTO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">自動</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_BARLOCATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋の位置</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_CHECKALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全チェック</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_CHECKSELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">選択をチェック</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_GETACTUAL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">実際の鉄筋の長さを取得します (曲げ直径を考慮します)。</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_GETBARLENGTHFOLLOWING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">次の鉄筋の長さを取得します。</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_LAPLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">重ね継手の長さ</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_MANUAL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">手動</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_PARAMETERSETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">パラメータ設定</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_QUANTITIES" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">量:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_REBARSETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋設定</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_SEARCH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">検索</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_SELECTIONTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">タイプ選択</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_SELECTREBARS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋選択</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_SUMOF" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全ての線分の合計 (A + B + C + ...)</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">エクスポート設定</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_UNCHECKALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全解除</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_UNCHECKSELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">選択済みのチェックを解除</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_CDAI" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">長さ（ｍ）</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_CDAI2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">長さ（ｍｍ）</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_L" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">重ね継手</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_NOITHEP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋をつなげる</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_NUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">本数</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_SELECTLEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">レベル選択</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_SHAPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">形状</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_SOCK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">靴下</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_SOHIEU" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋本数</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋の集計表</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_TONGCAUKIEN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">要素の合計</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_TRONG1CAUKIEN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">1つの要素向け</String>
+	<String
+		x:Key="REBARSHAPE2DCMD_CHONDIEMDAT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select point</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_MODELS_FOLDERMOELS_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ファイルの ID を取得できません。</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_MODELS_FOLDERMOELS_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ファイルパスに問題があります。</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_ANGLEDISPLAY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">角度表示（度）</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_CURRENTVIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">現在のビュー</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_FONTDISPLAY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">フォントは画像に表示されます。</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_FONTSIZE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">フォントサイズは画像に示されています。</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_FREEDOM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">フリーフォーム</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_HEIGHTIMAGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">画像にある高さ</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_NAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">名前</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_NO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">番号</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_PIXELS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ピクセル</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_PROJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">プロジェクト</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_REBARPARTITION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">パーティション</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_REMOVESTOREIMAGES" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">画像を削除</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SCHEDULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">集計表</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SEARCHPARTITIONNAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">パーティション名検索：</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">選択</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SELECTREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋選択</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SETTINGDISPLAYED" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">表示設定</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SHOWHOOKLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">フックの長さを表示</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_THICKNESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋の厚みが画像に示されています。</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋形状のイメージ</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_WIDTHIMAGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">画像にある幅</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_YESNO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">はい・いいえ</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW2_DESCRIPTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">説明</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW2_ID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ID</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW2_MARK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">マーク</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW2_NO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">番号</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW2_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">警告</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VM_REBARSHAPECONTROLLER_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">フォルダディレクトリにエラーが発生しています。 BIM Speed にお問い合わせください。</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VM_REBARSHAPECONTROLLER_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">プロジェクトに鉄筋がありません。</String>
+	<String
+		x:Key="REBARSHCEDULE_VMEXPORTSETTING_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋を選択してください。</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_BEAM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">梁</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_COE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">係数 (HSDN)</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_COLUMN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">柱</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_FILTER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">パーティションでフィルタ</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_FLOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">床</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_FOUNDATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">基礎</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_LINTEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">まぐさ</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_NAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">名前</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_PAPERSIZE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">用紙サイズ：</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_SCHEDULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">集計表</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_STAIR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">階段</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋集計表</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_WALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">壁</String>
+	<String
+		x:Key="REBARTOOL_SPLITREBAR_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">キャンセルしました。</String>
+	<String
+		x:Key="REBARTOOLS_GROUPREBAR_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">選択した鉄筋の一部は別のグループにあります。新しいグループに移動しますか?</String>
+	<String
+		x:Key="REBARTOOLS_GROUPREBAR_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">キャンセルしました。</String>
+	<String
+		x:Key="REBARTOOLS_REBARCOLUMNCMD_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">選択した柱は同じレベルです。 異なるレベルの柱を選択するか、BIM Speedにお問い合わせください。</String>
+	<String
+		x:Key="REBARTOOLS_REBARCOLUMNCMD_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">全ての鉄筋ファミリをロードしてください。</String>
+	<String
+		x:Key="REBARTOOLS_REBARCOLUMNCMD_MESS4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">カラムスタイルが無効です！</String>
+	<String
+		x:Key="REBARTOOLS_REBARCOLUMNCMD_MESS3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">あなたのライセンスは無効です。</String>
+	<String
+		x:Key="REBARTOOLS_REBARSEGEMENTLENGTH_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">鉄筋の長さが更新されました。</String>
+	<String
+		x:Key="REMOVEEXCESSVOLUME_VIEW_AREA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">面積</String>
+	<String
+		x:Key="REMOVEEXCESSVOLUME_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">体積超過分を削除</String>
+	<String
+		x:Key="REMOVEEXCESSVOLUME_VIEWMODEL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">カーブ形状の梁をサポートしていません</String>
+	<String
+		x:Key="REMOVEEXCESSVOLUME_VIEWMODEL_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">作成された{0}構造開口部</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">一つの設定を選択して保存してください</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">完了しました</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">選択できるビューがありません</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">名称変更中にエラーが発生しました</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">他のシートと同名になっているからかもしれません。サポートに連絡してください</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS6" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">エラーが発生し、ビューを保存できません</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS7" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">サポートに連絡してください</String>
+	<String
+		x:Key="RENAMESHEETVM2_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">挿入したい値を入力してください</String>
+	<String
+		x:Key="RENAMESHEETVM2_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">十分な検索フィールドを入力してください</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_ALPHABET" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">アルファベット</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_NUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">番号</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_OPTIONS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">オプション</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_PREFIX" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">接頭辞：</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_START" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">始り：</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_STEP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ステップ</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_SURFFIX" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">接尾辞：</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">シートのビューの番号付け</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_TYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">タイプ：</String>
+	<String
+		x:Key="ColumnRebarViewModel_Message1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Non-aligned columns</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Please do not use detail type to create a vertical section. Use section type and try again</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Please do not use the section type to create cross section .Use detail type and try again</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Invalid cross-section.There are no columns is this drawing</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Invalid cross-section. There is more than 1 column in this drawing</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select the section to update, finish by clicking Finish</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message6" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Running cross-section update. Please do not select a vertical section</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message7" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">This feature only works in vertical or cross-section sections</String>
+	<String
+		x:Key="ColumnDrawingModel_Message1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Non-vertical column</String>
+	<String
+		x:Key="ColumnDrawingModel_Message2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">There is no edge parallel to the main direction</String>
+	<String
+		x:Key="ColumnDrawingModel_Message3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Column of unknown cross-section</String>
+	<String
+		x:Key="ColumnDrawingViewModel_Message1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Update Longitudinal Section completed</String>
+	<String
+		x:Key="ColumnDrawingViewModel_Message2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Update Cross Section completed</String>
+	<String
+		x:Key="ColumnDrawingViewModel_Message3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sheet Name cannot be empty</String>
+	<String
+		x:Key="ColumnDrawingViewModel_Message4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sheet Number cannot be empty</String>
+	<String
+		x:Key="ColumnDrawingViewModel_Message5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Scale must be greater than 0</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Column Rebar v2.0</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TITLE1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Geometry &amp; Rebar arrangement</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_HEADER1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">All Columns</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_HEADER2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Adjust rebar</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_NUMBERREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Quantity of rebar:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_CX" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Quantity of rebar on edge Cx:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_CY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Quantity of rebar on edge Cy:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_MAINREBAR_D" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diameter of main rebar:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_D" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diameter of main stirrup rebar:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_HOOK_D" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diameter of hook stirrup rebar:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_INFO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">General information</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TOTAL_REBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Summary of rebar quantity:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_AREA_REBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Rebar area (cm²):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_CONTENT_REBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Rebar ratio (%):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_APPLYALLFLOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Apply to the remaining floors</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TITLE2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cross-section &amp; Stirrup type</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_DISTRIBUTE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Stirrup rebar arrangement:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_MOC" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hooked Stir</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_LONGKINH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Closed-loop Stir</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_DELETEALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Delete all</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_INFORCOLUMN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Column information</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_HEIGHTBEAM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Slab beam height (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TOPCOVER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Top concrete cover (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_OTHERCOVER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Type of slab beam component:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TYPEBEAM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Other concrete cover (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_SPACEDIS_STIRRUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Stirrups distribution section</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_DIS_BOTTOM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distribute stirrup rebar to the bottom of the beam or slab</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_DIS_TOP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distribute to the highest elevation of the beam or slab column top</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_DIS_SPACE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Arrangement by spacing (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_DIS_NUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Arrangement by quantity</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_START_SPACE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Start stirrup distribution at a distance from the edges (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEADER1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Main stirrup distribution rule</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEADER2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">A1 is arranged in the section L1 from the frame joint edge</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEADER3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">L1 is taken as the largest value from the following:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_MIN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Minimum value (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEIGHTDIV" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Column clear height divided by:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEIGHTSEC" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Column cross-section height</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_TYPEHOOK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hook type:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEADER4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Additional stirrup distribution rule</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_ADDSTIRRUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Arrange all additional stirrup spacing according to the main stirrups</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_ADDSTIRRUP_SPACE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Additional stirrup spacing (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_HEADER3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Foundation rebar</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">SET FOUNDATION WAITING REBAR</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Main rebar &amp; stirrup distribution spacing</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Split rebar into 2 sections at foundation waiting rebar position</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Stirrup spacing (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Arrange foundation waiting rebar direction</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">General settings</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Rebar hook bending section</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">By fixed length L (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">By diameter (xD):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Set top roof rebar</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bend hook for top floor rebar</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Continue waiting for top floor rebar</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Assign additional information to rebar</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Assign column elevation to rebar</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT6" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Automatically assign Partition to rebar</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Column rebar anchorage and splice length</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT7" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Overlap splice length (xØ):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT8" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Default anchorage length (xØ):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT9" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Compress rebar at splice locations</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT10" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Group rebar with the same number in the column</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Rebar bending or cutting conditions</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT11" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bend rebar if e ≤ (mm)</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT12" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bend by ratio Hd/e ≥</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER6" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Rebar splice position</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT13" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Splice distance from column base L = (mm)</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT14" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Splice between floors</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT15" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distance between two splices (xD)</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT16" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Splice rebar at one position</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT17" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Splice rebar at two positions</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER7" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Option at slab beam position</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT18" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Manually select slab beam component</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT19" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Scan select</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT20" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Automatically find beam with appropriate elevation and height to connect with column</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT21" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Automatically find slab with appropriate elevation and thickness to connect with column</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT22" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Default height Hd (mm):</String>
+	<String
+		x:Key="APPLYOTHERLEVELVIEW_HEADER1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Main Rebar</String>
+	<String
+		x:Key="APPLYOTHERLEVELVIEW_HEADER2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Stirrup Rebar</String>
+</ResourceDictionary>

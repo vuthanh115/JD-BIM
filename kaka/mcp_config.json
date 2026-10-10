@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "gitnexus": {
+      "command": "C:/Program Files/nodejs/node.exe",
+      "args": [
+        "C:/Program Files/nodejs/node_modules/npm/bin/npx-cli.js",
+        "-y",
+        "gitnexus@latest",
+        "mcp"
+      ],
+      "env": {
+        "GITNEXUS_REPO": "kaka"
+      }
+    },
+    "revit": {
+      "command": "python",
+      "args": [
+        "c:/Working/kaka/mcp_server/revit_mcp_server.py"
+      ],
+      "env": {
+        "REVIT_MCP_URL": "http://localhost:8080"
+      }
+    }
+  }
+}

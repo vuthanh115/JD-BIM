@@ -1,0 +1,85 @@
+<controls:MetroWindow
+    x:Class="kaka.Structure.Structural.App.Views.Column.ApplyOtherLevelView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+    mc:Ignorable="d"
+    Title="Áp dụng cho các tầng còn lại"
+    Width="800"
+    Height="450"
+    WindowStartupLocation="CenterScreen">
+
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <!-- Nếu project bạn đang dùng BimSpeedUtils/BimSpeedUtils thì giữ, không thì đổi pack uri -->
+        <ResourceDictionary Source="pack://application:,,,/BimSpeedUtils;component/WPFUtils/ResourceDictionaries/BSStyles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition />
+      <RowDefinition Height="60" />
+    </Grid.RowDefinitions>
+
+    <!-- Footer buttons -->
+    <Grid Grid.Row="1" Background="{DynamicResource SystemColors.ControlBrushKey}">
+      <StackPanel Margin="10"
+                  HorizontalAlignment="Right"
+                  Orientation="Horizontal">
+        <Button Width="100"
+                Height="30"
+                Margin="0,0,5,0"
+                Content="Apply"
+                Command="{Binding ApplyCommand}" />
+        <Button Width="100"
+                Height="30"
+                Content="Close"
+                IsCancel="True" />
+      </StackPanel>
+    </Grid>
+
+    <!-- Main -->
+    <Grid Margin="10">
+      <DataGrid x:Name="dgvColumn"
+                AutoGenerateColumns="False"
+                CanUserAddRows="False"
+                ItemsSource="{Binding VerticalColumns}">
+        <DataGrid.RowStyle>
+          <Style BasedOn="{StaticResource MahApps.Styles.DataGridRow}"
+                 TargetType="{x:Type DataGridRow}">
+            <Setter Property="IsEnabled" Value="{Binding IsEnabled}" />
+          </Style>
+        </DataGrid.RowStyle>
+
+        <DataGrid.Columns>
+          <DataGridTemplateColumn Header="Main rebar">
+            <DataGridTemplateColumn.CellTemplate>
+              <DataTemplate>
+                <CheckBox HorizontalAlignment="Center"
+                          IsChecked="{Binding IsCheckedMainRebar, UpdateSourceTrigger=PropertyChanged}" />
+              </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+          </DataGridTemplateColumn>
+
+          <DataGridTemplateColumn Header="Stirrup">
+            <DataGridTemplateColumn.CellTemplate>
+              <DataTemplate>
+                <CheckBox HorizontalAlignment="Center"
+                          IsChecked="{Binding IsCheckedStirrup, UpdateSourceTrigger=PropertyChanged}" />
+              </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+          </DataGridTemplateColumn>
+
+          <DataGridTextColumn Width="*" Header="Dimension" IsReadOnly="True" Binding="{Binding SectionSizeText}" />
+          <DataGridTextColumn Width="*" Header="Base Level" IsReadOnly="True" Binding="{Binding BaseLevelText}" />
+          <DataGridTextColumn Width="*" Header="Top Level"  IsReadOnly="True" Binding="{Binding TopLevelText}" />
+        </DataGrid.Columns>
+      </DataGrid>
+    </Grid>
+  </Grid>
+</controls:MetroWindow>

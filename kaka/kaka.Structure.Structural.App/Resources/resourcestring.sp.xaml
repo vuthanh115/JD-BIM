@@ -1,0 +1,1142 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib">
+	<system1:String xmlns:system1="clr-namespace:System;assembly=System.Private.CoreLib"
+		x:Key="CARACKERVM_PICKOBJECT">Seleccionar dirección prioritaria</system1:String>
+	<String
+		x:Key="CEILINGDRAWINGSERVICE_PICKOBJECT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar columna/ventanas para dimensionar...</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_BOQUATRANGIA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Omitir techo falso-modelo:</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_DIMENSIONTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tipo de dimensión:</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_DIMTOBONGDEN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distancia dim-&gt; lámpara:</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_DIMTOCANHCT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distancia dim-&gt; borde de la construcción:</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_DISTANCEFROMDIMTODIM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distancia desde el dim a Dim:</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_ELEVATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Elevación</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_LEVELNAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nombre de nivel</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_LEVELS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nivel</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_SETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ajustes</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_TAGCEILINGTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tipo de techo de etiqueta:</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sorteo</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_TITLEBLOCK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bloque de título:</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_VIEWTEMPLATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vista de la plantilla:</String>
+	<String
+		x:Key="CHANGEPATTERNINLISTIFHAVESAMEPATTERNCHANGED" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cambiar el patrón en la lista si se ha cambiado el mismo patrón</String>
+	<String
+		x:Key="COLLISIONCHECKVIEWOPEN_FILE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Abrir archivo</String>
+	<String
+		x:Key="COLUMNPLANDIM_CONTROLLER_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vaya al plano de planta o al plan estructural para ejecutar la herramienta</String>
+	<String
+		x:Key="COLUMNPLANDIM_CONTROLLER_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Has cancelado</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_ALLCOLUMNSWALLS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Todas las columnas/paredes</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_BOT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bot</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_DIMOFFSET" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Desplazamiento de dim:</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_DIMOVERALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Atenuar sobre todo</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_DIMTYPES" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tipo de tenue:</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_LEFT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Izquierda</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_ONLYDIM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Solo tenuta al centro de la columna/pared</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_POSITIONS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Posición</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_RANGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Rango:</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_RIGHT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Derecho</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_SELECTCOLUMNSWALLS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Columna de selección/paredes</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Plan de columna Dim</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_TOP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Arriba</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_VIEWSCALE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vista de vista:</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_VIEWTEMPLATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vista de la plantilla:</String>
+	<String
+		x:Key="COLUMNPLANDIMCONTROLLER_PICKOBJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select elements to dimension</String>
+	<String
+		x:Key="COLUMNREBAR_MODEL_EXCUTEDETAILS_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">¿Quieres abrir una hoja?</String>
+	<String
+		x:Key="COLUMNREBAR_MODEL_EXTENSIONWAITINGF_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Esta característica será actualizada pronto. Póngase en contacto con BIM Speed ​​para obtener más información</String>
+	<String
+		x:Key="COLUMNREBAR_MODEL_SAVESTIRRUPTIDEDATA_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cargue la familia en las herramientas de administración antes de dibujar refuerzo</String>
+	<String
+		x:Key="COLUMNREBAR_VIEW_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">El primer punto y el segundo punto son idénticos. Inténtalo de nuevo</String>
+	<String
+		x:Key="COLUMNREBAR_VIEW_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Debe elegir 2 puntos en la misma dirección. Inténtalo de nuevo</String>
+	<String
+		x:Key="COLUMNREBAR_VIEWMODEL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">El valor {0} es el valor predeterminado, en caso ID = NULL</String>
+	<String
+		x:Key="COLUMNREBAR_VIEWMODEL_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Se ha producido un error cuando la identificación era nula</String>
+	<String
+		x:Key="COLUMNREBAR_VIEWMODEL_MESS3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Estás en modo de columna de una sola columna, no puedes ejecutar esta función</String>
+	<String
+		x:Key="COLUMNREBAR_VIEWMODEL_MESS4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">No definiste a L1 para dibujar el estribo</String>
+	<String
+		x:Key="COLUMNSREBAR_CONVERTERUTIL_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Información de la columna en la elevación: {0}</String>
+	<String
+		x:Key="COLUMNSREBARVM_PICKPOINT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select Beam As Floor...</String>
+	<String
+		x:Key="COLUMREBAR_BUTTON_CHECKALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Comprobar todo</String>
+	<String
+		x:Key="COLUMREBAR_BUTTON_DONE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hecho</String>
+	<String
+		x:Key="COLUMREBAR_BUTTON_UNCHECKALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Desmarcar todo</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_APPLYFORLEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Solicitar otros niveles</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_BEAMORFLOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Haz o piso</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_BREAKLINE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Linea de quiebre :</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_CLOSETIE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Empate cerrado</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_COLUMNSHEETGENERS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Configuración de generación de hoja de columna:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_CREATEDETAILITEMFROM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Crear elementos detallados a partir de barras de refuerzo:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_CROSSSECTIONSETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Configuración de la sección transversal:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_CROSSTIE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Crosstie</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DETAILITEMSHOWTAG" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Elemento detallado (Etiqueta de espectáculos)</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DETAILITEMSHOWVALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Elemento detallado (valor de mostrar)</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DETAILITEMSIRRUPTAG" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Elemento detallado (etiqueta de estribo):</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DETAILITEMTEXTS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Elemento detallado (tamaño de texto):</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DIAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diámetro</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DIMENSIONTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tipo de dimensión:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DISA1A2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distribución A1 A2</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DRAWING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dibujo</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_FIXEDLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Longitud fija (mm)</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_FLOORFRAMINGH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Altura de marco de piso (mm)</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_FLORRFRAMINGT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tipo de marco de piso</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_FOUNDATIONREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Refugio de la base</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_LONGDITUSECTIONSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Configuración de la sección longitudinal:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_OTHERCOVERTHICK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Otro grosor de la cubierta (mm)</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_QUANTITES" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cantidades:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_REBARBYLEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Reflexión por niveles</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_SECTIONSTIRRUPTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tipo de estribo de sección</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_SETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ajustes</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_SHEETNAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nombre de la hoja:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_SHEETNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Número de página:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_SPREADIS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distribución separada</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_STIRRUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Estribo</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Barra de referencia de columna</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_TITLEBLOCK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bloque de título:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_TOPCOVERTHICKNESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Grosor de la cubierta superior (mm)</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_TYPETAG" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Etiqueta de tipo:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_UNIFORM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distribución uniforme</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_UNIFORMDISTRIREBARSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Configuración de refuerzo de distribución uniforme</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_VIEWFAMILYTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ver tipo de familia:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_VIEWSCALE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Escala de vista:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_VIEWTEMPLATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Plantilla de vista:</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_ELEVETION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Elevación</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_ELEVETIONAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nombre de elevación</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_NO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">No.</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_SECTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sección</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_SELECTCOL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Columnas seleccionadas</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Solicitar otros niveles</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_YESNO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sí No</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_ADDELEFORREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Agregar elevación para barras de refuerzo</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_ADDMORE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Agregue más información para las barras de refuerzo:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_ADDPARTIFORREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Agregar partición para barras de refuerzo</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_AUTOMESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Encuentre automáticamente vigas con elevación y altura asociadas con columnas</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_AUTOMESSFLOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Encuentre automáticamente pisos con elevación y espesor asociados con columnas</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_BARBENDINGSPLICING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Condición de flexión / empalme de la barra:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_BENBARIFE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Barra de curvatura si E ≤ (mm)</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_BENDBARCONFLICT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Barra de curvatura en la zona de lapes para evitar conflictos</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_DISTANCEBEETWEN2LAP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distancia entre 2 vueltas (xd):</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_DISTANCECOLLUMBOTL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distancia desde la columna Bottom L = (mm)</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_FLOORBEAMSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Configuración de la viga del piso</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_GROUPBARNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Barras grupales con el mismo número de barras de refuerzo</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_HOOKBENDING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hooks doblando:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_HOOKLAP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Longitud del gancho Longitud de la vuelta:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_HOOKLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Longitud del gancho de refuerzo:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_LAP1POSITION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lap en 1 posición</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_LAP2POSITION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lap en 2 posiciones</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_LAPLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Longitud de vuelta</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_LAPPINGPOSI" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Posición de lapesa:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_MIDDLEOFCOLS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">En el medio de la columna</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_RATIOHD" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ratio HD/E ≥</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_SELECTFLOORBEAMMANUA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccione el haz de piso manualmente</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_STARTERBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Barra de inicio para continuo:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_TOPCOLUMNBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Reparto de la columna superior:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_DISTRIBUTIONBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diámetro de la barra de distribución:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_INERLAYERREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Números de refuerzo de capa interna</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_MAINBARDIAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diámetro de la barra principal:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_MAINSTIRRUPDIAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Principal diámetro de estribo:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_OUTERLAYERBARNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Números de refuerzo de capa externa:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_REBARNUMBERCX" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Número de parar CX</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_REBARNUMBERCY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Número de parar cy</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_REINFORCEAREA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Área de refuerzo (CM2):</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_REINFORCERATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Relación de refuerzo:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_SPREADSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Configuración de refuerzo de distribución separada</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_TOTALBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bar total:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_UNIFORMREBARSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Configuración de refuerzo de distribución uniforme</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_USEDISTRIBUTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Usar barra de distribución</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_A1DISL1COUNT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">A1 distribuido en el conteo L1 desde el lado del marco</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_CLEARANGEHDB" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">División de altura del espacio libre por</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_COLSECHEIGHT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Altura de la sección de columna</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_DIAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diámetro</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_DISTANCEFIRSTS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distancia al primer estribo</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_GETSAMESPC" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Obtenga el mismo espacio con el estribo principal</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_HOOKTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tipo de gancho:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_L1TAKEGVT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">L1 toma el mayor valor en los valores de los siguientes</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_MAINSTIRRUPSPREADING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">PRISIÓN PRINCIPAL DE ESTADURA:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_MINMM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mínimo (mm)</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_REINFORCESTIRRUPBF" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Reforzando el estribo en la viga / piso</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_RULEADDSITRRUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Regla de estribo de suma:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_SPREADSTIRRUPBOTBF" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Extienda el estribo en la parte inferior del haz / piso</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_SPREADSTIRRUPTOPBF" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Extienda el estribo en la parte superior del rayo / piso</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_STIRRUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">PACING"&gt;Espaciado de Strirrup</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_STIRRUPNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Números de estribo</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_STIRRUPSPACING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Espaciado de estribo (mm)</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_STIRRUPSPREADING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Extensión de estribo:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_DISTRUTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diámetro de la barra de distribución</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_MAINBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diámetro de la barra principal:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_MAINSTIRUPDIAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Principal diámetro de estribo:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_REBARNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Números de refuerzo:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_REINFOCREAREA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Área de refuerzo (CM2):</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_REINFORCERATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Relación de refuerzo:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_ROUNDSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Configuración de columna redonda</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_TOTALBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bar total:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW2_DIRECTIONOFBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dirección de barra</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW2_MAINBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Espaciado de barra principal y estribo</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW2_SEPARATE2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Separan 2 segmentos en Barra de inicio</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW2_STARTBARSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Configuración de la barra de arranque</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW2_STIRRUPSPACING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Espaciado de estribo</String>
+	<String
+		x:Key="COLUMREBAR_VIEWWARNINGS_DESCRIPTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Descripción</String>
+	<String
+		x:Key="COLUMREBAR_VIEWWARNINGS_ID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Identificación</String>
+	<String
+		x:Key="COLUMREBAR_VIEWWARNINGS_NO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">No.</String>
+	<String
+		x:Key="COLUMREBAR_VIEWWARNINGS_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Advertencias</String>
+	<String
+		x:Key="COMMON_BUTTON_ABORT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Abortar</String>
+	<String
+		x:Key="COMMON_BUTTON_ADD" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Agregar</String>
+	<String
+		x:Key="COMMON_BUTTON_ADDRULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Agregar regla</String>
+	<String
+		x:Key="COMMON_BUTTON_APPLY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Aplicar</String>
+	<String
+		x:Key="COMMON_BUTTON_CHANGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cambio</String>
+	<String
+		x:Key="COMMON_BUTTON_CLEARALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Limpiar todo</String>
+	<String
+		x:Key="COMMON_BUTTON_CLEARFILTER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Filtro claro</String>
+	<String
+		x:Key="COMMON_BUTTON_CLICK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hacer clic</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_INBEAM_SEISMIC" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cerca</String>
+	<String
+		x:Key="COMMON_BUTTON_COMBINE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Combinar</String>
+	<String
+		x:Key="COMMON_BUTTON_COPPYRESULT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Resultado copy</String>
+	<String
+		x:Key="COMMON_BUTTON_CREATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Crear</String>
+	<String
+		x:Key="COMMON_BUTTON_CREATELEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Crear nivel</String>
+	<String
+		x:Key="COMMON_BUTTON_CUT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Corte</String>
+	<String
+		x:Key="COMMON_BUTTON_CUTBYVOID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cortar por vacío</String>
+	<String
+		x:Key="COMMON_BUTTON_DELETE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Borrar</String>
+	<String
+		x:Key="COMMON_BUTTON_DELETEALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Eliminar todos</String>
+	<String
+		x:Key="COMMON_BUTTON_DELETESELECTEDRULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Eliminar la regla seleccionada</String>
+	<String
+		x:Key="COMMON_BUTTON_DELETEVIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Eliminar vista</String>
+	<String
+		x:Key="COMMON_BUTTON_DIMOFFSET" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Desplazamiento oscuro</String>
+	<String
+		x:Key="COMMON_BUTTON_DOWN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Abajo</String>
+	<String
+		x:Key="COMMON_BUTTON_DRAW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dibujar</String>
+	<String
+		x:Key="COMMON_BUTTON_DUPLICATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Duplicar</String>
+	<String
+		x:Key="COMMON_BUTTON_EDIT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Editar</String>
+	<String
+		x:Key="COMMON_BUTTON_END" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Fin</String>
+	<String
+		x:Key="COMMON_BUTTON_ENTRIEPROJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Proyecto ETRIE</String>
+	<String
+		x:Key="COMMON_BUTTON_EXPORT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Exportar</String>
+	<String
+		x:Key="COMMON_BUTTON_FILTER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Filtrar</String>
+	<String
+		x:Key="COMMON_BUTTON_HELP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ayuda</String>
+	<String
+		x:Key="COMMON_BUTTON_HIDE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Esconder</String>
+	<String
+		x:Key="COMMON_BUTTON_HIDEUNSELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Esconder la selección de la ONU</String>
+	<String
+		x:Key="COMMON_BUTTON_IMPORT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Importar</String>
+	<String
+		x:Key="COMMON_BUTTON_INSERT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Insertar</String>
+	<String
+		x:Key="COMMON_BUTTON_ISOLATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Aislar</String>
+	<String
+		x:Key="COMMON_BUTTON_JOIN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Unir</String>
+	<String
+		x:Key="COMMON_BUTTON_LOADEXCEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cargar sobresaliente</String>
+	<String
+		x:Key="COMMON_BUTTON_NUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Número</String>
+	<String
+		x:Key="COMMON_BUTTON_CLOSE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Close</String>
+	<String
+		x:Key="COMMON_BUTTON_OK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">De acuerdo</String>
+	<String
+		x:Key="COMMON_BUTTON_OPEN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Abierto</String>
+	<String
+		x:Key="COMMON_BUTTON_OPENFOLDER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Carpeta abierta</String>
+	<String
+		x:Key="COMMON_BUTTON_OPENRULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Regla abierta</String>
+	<String
+		x:Key="COMMON_BUTTON_REFESH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Refrescarse</String>
+	<String
+		x:Key="COMMON_BUTTON_RELOADDATA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Relisado</String>
+	<String
+		x:Key="COMMON_BUTTON_REMOVE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Eliminar</String>
+	<String
+		x:Key="COMMON_BUTTON_RENAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Rebautizar</String>
+	<String
+		x:Key="COMMON_BUTTON_REPLACEALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Reemplaza todo</String>
+	<String
+		x:Key="COMMON_BUTTON_REPLACESELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Reemplazar seleccionado</String>
+	<String
+		x:Key="COMMON_BUTTON_RESELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Volver a seleccionar</String>
+	<String
+		x:Key="COMMON_BUTTON_RESET" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Reiniciar</String>
+	<String
+		x:Key="COMMON_BUTTON_RESTORE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">IMENSION"&gt;Dimensión de restauración</String>
+	<String
+		x:Key="COMMON_BUTTON_RESTORE DIMENSION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dimensión de restauración</String>
+	<String
+		x:Key="COMMON_BUTTON_RUN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Correr</String>
+	<String
+		x:Key="COMMON_BUTTON_SAVE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ahorrar</String>
+	<String
+		x:Key="COMMON_BUTTON_SAVERULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Regla de guardar</String>
+	<String
+		x:Key="COMMON_BUTTON_SELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar</String>
+	<String
+		x:Key="COMMON_BUTTON_SELECTALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar todo</String>
+	<String
+		x:Key="COMMON_BUTTON_SELECTFROMCAD" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar desde Cad</String>
+	<String
+		x:Key="COMMON_BUTTON_SELECTVIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar vistas</String>
+	<String
+		x:Key="COMMON_BUTTON_SETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Entorno</String>
+	<String
+		x:Key="COMMON_BUTTON_SHEETSCOUNT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hojas</String>
+	<String
+		x:Key="COMMON_BUTTON_SHOW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Espectáculo</String>
+	<String
+		x:Key="COMMON_BUTTON_SHOWHIDE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mostrar ocultar</String>
+	<String
+		x:Key="COMMON_BUTTON_START" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Comenzar</String>
+	<String
+		x:Key="COMMON_BUTTON_SWITCHJOIN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cambiar unión</String>
+	<String
+		x:Key="COMMON_BUTTON_TOLEGEND" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">A la leyenda</String>
+	<String
+		x:Key="COMMON_BUTTON_TUTORIAL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tutorial</String>
+	<String
+		x:Key="COMMON_BUTTON_UNCUT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Deshacer corte</String>
+	<String
+		x:Key="COMMON_BUTTON_UNDO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Deshacer</String>
+	<String
+		x:Key="COMMON_BUTTON_UNJOIN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Desunir</String>
+	<String
+		x:Key="COMMON_BUTTON_UNSELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Arriba</String>
+	<String
+		x:Key="COMMON_BUTTON_UP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Arriba abajo</String>
+	<String
+		x:Key="COMMON_BUTTON_UPDATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Actualizar</String>
+	<String
+		x:Key="COMMON_BUTTON_UPLOAD" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Upload</String>
+	<String
+		x:Key="COMMON_BUTTON_VIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vista</String>
+	<String
+		x:Key="COMMON_GROUPBOX_DETAIL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Detalle</String>
+	<String
+		x:Key="COMMON_TEXT_DESCRIPTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Descripción</String>
+	<String
+		x:Key="COMMON_TEXT_DETAIL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Detalle:</String>
+	<String
+		x:Key="COMMON_TEXT_GROUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Grupo</String>
+	<String
+		x:Key="COMMON_TEXT_IMAGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Imagen</String>
+	<String
+		x:Key="COMMON_TEXT_NOTIFY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Notificación</String>
+	<String
+		x:Key="COMMON_TEXT_OPTIONS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Opción</String>
+	<String
+		x:Key="COMMON_TEXT_PRECENT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Por ciento</String>
+	<String
+		x:Key="COMMON_TEXT_SEARCH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Buscar:</String>
+	<String
+		x:Key="COMMON_TEXT_SELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar</String>
+	<String
+		x:Key="COMMON_TEXT_SETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ajustes</String>
+	<String
+		x:Key="COMMON_TEXT_WARNING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Advertencia</String>
+	<String
+		x:Key="CONNECTBEAM_CONTROLLER_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Has cancelado</String>
+	<String
+		x:Key="CONNECTBEAMCONTROLLER_PICKOBJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select First Beams</String>
+	<String
+		x:Key="COPPYINCREMENT_COPPYXAML_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">¡Asigne un número en el cuadro de texto!</String>
+	<String
+		x:Key="COPYINCREMENTCONTROLLER_PICKPOINT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select Text to Copy!</String>
+	<String
+		x:Key="COPYINCREMENTCONTROLLER_PICKPOINT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Pick the first Point to copy</String>
+	<String
+		x:Key="COPYINCREMENTCONTROLLER_PICKPOINT3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Pick the second point to place Text</String>
+	<String
+		x:Key="COPYREBARVM_PICKOBJECT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Por favor, seleccione el objeto que desea copiar el acero</String>
+	<String
+		x:Key="COPYREBARVM_PICKOBJECT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Por favor, seleccione el objeto en el que desea colocar el acero</String>
+	<String
+		x:Key="COUNTOFSELECTEDITEMS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">CONTAR LOS ELEMENTOS SELECCIONADOS</String>
+	<String
+		x:Key="COUPLERVIEWMODEL_PICKPOINT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar punto para dividir</String>
+	<String
+		x:Key="COUPLERVM_PICKOBJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar dirección prioritaria</String>
+	<String
+		x:Key="CRACKERBARVM_PICKPOINT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar punto para dividir</String>
+	<String
+		x:Key="CREATECEILLINGVIEWACTIVE_VIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vista activa</String>
+	<String
+		x:Key="CREATECEILLINGVIEWHEIGHT_OFFSET_FROM_LEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Desplazamiento de altura desde el nivel:</String>
+	<String
+		x:Key="CREATECEILLINGVIEWPICK_OBJECTS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar objetos</String>
+	<String
+		x:Key="CREATEFLOOR_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Some floors are not finished yet</String>
+	<String
+		x:Key="CREATEGRID_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">This tool not working with this view, Please go to EngineeringPlan!</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_ALLDOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Toda la puerta</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_ALLLEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Todo el nivel</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_LEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nivel</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Crear lintel desde el enlace</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_TYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Escribe</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_WINDOW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ventana</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_WINDOWANDDOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ventana y puerta</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_ALLDOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Toda la puerta</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_ALLWINDOW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Toda la ventana</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_EXTENDFROMBOTHENDLINTEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Extender desde ambos lintel final (mm):</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_FROMFILELINKREVIT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Desde el enlace de archivo Revit</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_FROMTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">De tipo</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_HEIGHTLINTEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lintel de altura:</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_SELECTWINDOWORDOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccione ventana o puerta</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_SETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ajustes</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Crear lintel</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_WINDOWANDDOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ventana y puerta</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_ZOFFSETLINTEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lintel de O-Offset (MM):</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Not found any Lintel from project</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Wrong value</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Please create a new type Beam with Parameter width is b and Height is h and run tool again!</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Not found any type door and window in project</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">You have aborted the pick operation</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS6" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select LinkFile</String>
+	<String
+		x:Key="CreateLanhToModel_Message1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Familia creada con éxito</String>
+	<String
+		x:Key="CreateLanhToModel_Message2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">La familia ya existe en el proyecto</String>
+	<String
+		x:Key="CREATELANTOMODEL_PICKOBJECT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select Doors, Windows</String>
+	<String
+		x:Key="CREATELANTOMODEL_PICKOBJECT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select Link File Revit</String>
+	<String
+		x:Key="CREATELEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Crear nivel</String>
+	<String
+		x:Key="CREATELEVEL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">This tool not working with this view, please go to Elevation plan</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_CREATEBOTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Crear ambos</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_CREATEHORIZONTALGRID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Crear cuadrícula horizontal</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_CREATEVERTICALGRID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Crear cuadrícula vertical</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_DEFAULT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Por defecto</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_DISTANCEGRIDBOTTOM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cuadrícula de distancia desde el separador de abajo hacia arriba por ",",</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_DISTANCEGRIDSEPARATORBY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cuadrícula de distancia desde el separador izquierdo a derecho por ",",</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_GRIDNAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nombre de la cuadrícula:</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_HORIZONTAL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Horizontal</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_NAMESTARTWITH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nombre con el número int (1 2 3 4) Comience con:</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_NAMEWITHALPHA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nombre con alfabeto (A B C D) Comience con:</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_PHUONGTHUCDATTENGRID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Not Value</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_SAMEDISTANCE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Consejos: use "*" con la misma distancia</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_STARTNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Número de inicio:</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_TIP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sin valor</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Crear cuadrícula</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_VERTICAL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vertical</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_DEFAULT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Por defecto:</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_EXHEIGHT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ex altura:</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_INPUT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Separador de nivel de distancia de entrada por ",",</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_LEVELNAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nombre de nivel:</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_STARTNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Número de inicio:</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_TAB1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Crear nivel desde seleccionar un nivel</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_TAB2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Crear nivel de entrada HEI</String>
+	<String
+		x:Key="CREATETAGBEAM_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">No hemos actualizado el tutorial en video aún, por favor sigue BimSpeed para ver el tutorial más pronto.</String>
+	<String
+		x:Key="CREATETAGBEAM_MM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">mm</String>
+	<String
+		x:Key="CREATETAGBEAM_VIEW_DISTANCETOTAG" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distancia a la etiqueta:</String>
+	<String
+		x:Key="CREATETAGBEAM_VIEW_FAMILYTAG" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Etiqueta familiar:</String>
+	<String
+		x:Key="CREATETAGBEAM_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Crear haz de etiqueta</String>
+	<String
+		x:Key="CREATETAGVIEWMODEL_PICKOBJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar vigas</String>
+	<String
+		x:Key="CREATETAGVIEWMODEL_PICKPOINT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar primer punto</String>
+	<String
+		x:Key="CREATETAGVIEWMODEL_PICKPOINT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar punto final</String>
+	<String
+		x:Key="CREATETAGVM_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">No tienes una etiqueta de familia en Revit</String>
+	<String
+		x:Key="CREATETAGVM_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Por favor, ingresa una longitud válida</String>
+	<String
+		x:Key="CREATEWALL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Algunas paredes aún no están terminadas</String>
+	<String
+		x:Key="CUTFRAMINGVIEW_BXH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">BxH =</String>
+	<String
+		x:Key="CUTREBARATPOINT_COUPLERUSERCONTROL_COUPLER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Acoplador:</String>
+	<String
+		x:Key="CUTREBARATPOINT_COUPLERUSERCONTROL_LAPLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Longitud de la vuelta:</String>
+	<String
+		x:Key="CUTREBARATPOINT_COUPLERUSERCONTROL_TYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tipo:</String>
+	<String
+		x:Key="CUTREBARATPOINT_CRACKEDBAR_LAPLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Longitud de la vuelta:</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_COUPLER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Acoplador</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_CRACKEDBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Barra agrietada</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_DISTANCE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distancia de 2 segmentos:</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_LAPPEDBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Barra</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_OPTIONCUT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Corte de opción</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_ROUNDING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Redondeo</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_ROUNDINGTHELENGTHOFREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Redondeando la longitud de las barras de refuerzo:</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_STAGGERED" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Escalonado</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cortar barras en el punto</String>
+	<String
+		x:Key="REBARDETAIL_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Configuración 2D de forma de parar</String>
+	<String
+		x:Key="REBARDETAIL_VIEW_VALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tiene longitud de valor</String>
+	<String
+		x:Key="REBARDETAILING_REBARSHAPEDETAIL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">No se puede crear etiqueta porque el proyecto no tiene etiqueta familiar</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_REBARLOCATIONVM_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Debe haber al menos 1 piso en el proyecto</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_REBARLOCATIONVM_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Has cancelado</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_ACTIVEVIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vista activa</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_BOTPARAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Parámetro BOT:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_BOTVALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Valor de bot:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_FILTERSLAB" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Rebarde de losa de filtro arriba / abajo</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_FILTERSLABXY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Barra de refuerzo de losa de filtro x / y</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_PARALLELOXPARAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Parámetro de buey paralelo:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_PARALLELOYPARAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Parámetro OY paralelo:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_PROJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Proyecto</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_RANGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Rango:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_RANGEOFOPERATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Gama de operaciones</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_SELECTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Selección</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ubicación de la ela de las elas de la losa</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_TOPPARAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Parámetro superior:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_TOPVALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Valor superior:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_XVALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">X valor:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_YVALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Y valor:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_AUTO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Auto</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_BARLOCATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ubicación del bar:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_CHECKALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Comprobar todo</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_CHECKSELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Comprobar seleccionado</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_GETACTUAL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Obtenga la longitud de la barra real (considere el diámetro de flexión)</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_GETBARLENGTHFOLLOWING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Obtenga la longitud de la barra siguiendo:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_LAPLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Longitud de la vuelta:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_MANUAL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Manual</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_PARAMETERSETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Configuración de parámetros</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_QUANTITIES" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cuantitas:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_REBARSETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Configuración de refuerzo</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_SEARCH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Buscar:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_SELECTIONTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tipo de selección:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_SELECTREBARS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar barras de referencia</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_SUMOF" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Suma de todos los segmentos (A + B + C + ...)</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Configuración de exportación</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_UNCHECKALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Desmarcar todo</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_UNCHECKSELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Desmarque seleccionado</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_CDAI" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Longitud (m)</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_CDAI2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Longitud (mm)</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_L" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">L (solape)</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_NOITHEP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Solape</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_NUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Número</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_SELECTLEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Selecciona el nivel:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_SHAPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Forma</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_SOCK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Calcetín</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_SOHIEU" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Entonces hieu</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Horario de parar v1.1</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_TONGCAUKIEN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Número total de elementos</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_TRONG1CAUKIEN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Para un elemento</String>
+	<String
+		x:Key="REBARSHAPE2DCMD_CHONDIEMDAT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select point</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_MODELS_FOLDERMOELS_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">No se puede obtener ID de archivo</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_MODELS_FOLDERMOELS_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hay un problema con la ruta del archivo</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_ANGLEDISPLAY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Pantalla de ángulo (grado °)</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_CURRENTVIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vista actual</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_FONTDISPLAY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">La fuente se muestra en las imágenes:</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_FONTSIZE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">El tamaño de la fuente se muestra en la imagen:</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_FREEDOM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Forma libre</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_HEIGHTIMAGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Altura en imagen</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_NAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nombre</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_NO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">No.</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_PIXELS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">(Píxeles)</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_PROJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Proyecto</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_REBARPARTITION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Partición de barras</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_REMOVESTOREIMAGES" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Eliminar imágenes de la tienda</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SCHEDULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cronograma</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SEARCHPARTITIONNAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nombre de la partición de búsqueda:</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SELECTREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar barras de refuerzo</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SETTINGDISPLAYED" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Configuración que se muestra</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SHOWHOOKLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mostrar longitud del gancho</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_THICKNESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">El grosor de la barra de refuerzo se muestra en la imagen:</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Imágenes de forma de parar</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_WIDTHIMAGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ancho en imagen</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_YESNO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sí No</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW2_DESCRIPTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Descripción</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW2_ID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Identificación</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW2_MARK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Marca</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW2_NO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">No.</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW2_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Advertencia</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VM_REBARSHAPECONTROLLER_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">El directorio de carpetas es un error. Póngase en contacto con BIM Speed ​​para obtener ayuda</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VM_REBARSHAPECONTROLLER_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">No hay barras en el proyecto</String>
+	<String
+		x:Key="REBARSHCEDULE_VMEXPORTSETTING_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccione algunos barras de refuerzo</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_BEAM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Haz:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_COE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Coeficiente (HSDN)</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_COLUMN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Columna:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_FILTER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Filtrar por partición</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_FLOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Piso:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_FOUNDATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Base:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_LINTEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dintel:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_NAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nombre:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_PAPERSIZE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tamaño de papel:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_SCHEDULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cronograma:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_STAIR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Escalera:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Horario de barra</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_WALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Muro:</String>
+	<String
+		x:Key="REBARTOOL_SPLITREBAR_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Has cancelado</String>
+	<String
+		x:Key="REBARTOOLS_GROUPREBAR_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Algunas de las barras de referencia seleccionadas están en otro grupo, ¿quieres mudarte a un nuevo grupo?</String>
+	<String
+		x:Key="REBARTOOLS_GROUPREBAR_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Has cancelado</String>
+	<String
+		x:Key="REBARTOOLS_REBARCOLUMNCMD_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Las columnas seleccionadas son el mismo nivel. Seleccione la columna con diferente nivel o comuníquese con la velocidad BIM para obtener más información</String>
+	<String
+		x:Key="REBARTOOLS_REBARCOLUMNCMD_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Por favor cargue todas las familias de barras de refuerzo</String>
+	<String
+		x:Key="REBARTOOLS_REBARCOLUMNCMD_MESS3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Su licencia no es válida</String>
+	<String
+		x:Key="REBARTOOLS_REBARSEGEMENTLENGTH_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">La longitud de la barra se actualiza</String>
+	<String
+		x:Key="REMOVEEXCESSVOLUME_VIEW_AREA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Área</String>
+	<String
+		x:Key="REMOVEEXCESSVOLUME_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Eliminar el exceso de volumen</String>
+	<String
+		x:Key="REMOVEEXCESSVOLUME_VIEWMODEL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Esta herramienta no admite un haz curvo con {0}</String>
+	<String
+		x:Key="REMOVEEXCESSVOLUME_VIEWMODEL_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Creado {0} corte de apertura estructural</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Haga clic para elegir una configuración para guardar</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Completado</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">No se encontró ninguna vista seleccionada</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ocurrió un error al cambiar el nombre a</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Puede deberse a que ya existe otro nombre de hoja o comuníquese con BimSpeed para obtener ayuda</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS6" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ocurrió un error, no se puede cambiar el nombre de la vista de</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS7" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Por favor, comuníquese con BimSpeed para obtener ayuda</String>
+	<String
+		x:Key="RENAMESHEETVM2_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Por favor ingrese el valor que desea insertar</String>
+	<String
+		x:Key="RENAMESHEETVM2_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Por favor ingrese suficientes campos de búsqueda</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_ALPHABET" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Alfabeto</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_NUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Número</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_OPTIONS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Opciones</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_PREFIX" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Prefijo:</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_START" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Inicio:</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_STEP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Paso</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_SURFFIX" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sufijo:</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Numeración de vistas en la hoja</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_TYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tipo:</String>
+	<String
+		x:Key="ColumnRebarViewModel_Message1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Columnas no alineadas</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Por favor, no use el tipo de detalle para crear una sección vertical. Use el tipo de sección e inténtelo de nuevo</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Por favor, no use el tipo de sección para crear una sección transversal. Use el tipo de detalle e inténtelo de nuevo</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sección transversal no válida. No hay columnas en este dibujo</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sección transversal no válida. Hay más de una columna en este dibujo</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccione la sección para actualizar, termine haciendo clic en Finalizar</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message6" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Actualizando la sección transversal. Por favor, no seleccione una sección vertical</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message7" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Esta función solo funciona en secciones verticales o transversales</String>
+	<String
+		x:Key="ColumnDrawingModel_Message1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Columna no vertical</String>
+	<String
+		x:Key="ColumnDrawingModel_Message2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">No hay borde paralelo a la dirección principal</String>
+	<String
+		x:Key="ColumnDrawingModel_Message3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Columna de sección transversal desconocida</String>
+	<String
+		x:Key="ColumnDrawingViewModel_Message1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Actualización de la sección longitudinal completada</String>
+	<String
+		x:Key="ColumnDrawingViewModel_Message2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Actualización de la sección transversal completada</String>
+	<String
+		x:Key="ColumnDrawingViewModel_Message3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">El nombre de la hoja no puede estar vacío</String>
+	<String
+		x:Key="ColumnDrawingViewModel_Message4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">El número de la hoja no puede estar vacío</String>
+	<String
+		x:Key="ColumnDrawingViewModel_Message5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">La escala debe ser mayor que 0</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Column Rebar v2.2</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TITLE1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Geometría y disposición de refuerzo</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_HEADER1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Todas las columnas</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_HEADER2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ajustar refuerzo</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_NUMBERREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cant. refuerzo:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_CX" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cant. ref. en borde Cx:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_CY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cant. ref. en borde Cy:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_MAINREBAR_D" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diám. ref. principal:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_D" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diám. ref. principal estribo:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_HOOK_D" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diám. ref. estribo con gancho:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_INFO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Información general</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TOTAL_REBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Resumen refuerzo:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_AREA_REBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Área de refuerzo (cm²):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_CONTENT_REBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Relación de refuerzo (%):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_APPLYALLFLOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Aplicar a los pisos restantes:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TITLE2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sección transversal y tipo de estribo</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_DISTRIBUTE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Disposición refuerzo estribo:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_MOC" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hooked Stir</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_LONGKINH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Closed-loop Stir</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_DELETEALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Eliminar todo</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_INFORCOLUMN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Información de la columna</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_HEIGHTBEAM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Altura de viga de losa (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TOPCOVER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Recubrimiento de concreto superior (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_OTHERCOVER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tipo de componente de viga de losa:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TYPEBEAM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Otro recubrimiento de concreto (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_SPACEDIS_STIRRUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sección de distribución de estribos</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_DIS_BOTTOM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distribuir el refuerzo del estribo al fondo de la viga o losa</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_DIS_TOP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distribuir a la elevación más alta de la viga o columna de la losa</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_DIS_SPACE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Disposición por espaciamiento (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_DIS_NUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Disposición por cantidad:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_START_SPACE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Comenzar la distribución del estribo a una distancia de los bordes (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEADER1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Regla de distribución de estribo principal</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEADER2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">A1 se dispone en la sección L1 desde el borde de la unión del marco</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEADER3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">L1 se toma como el valor más grande de lo siguiente</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_MIN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Valor mínimo (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEIGHTDIV" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Altura libre de la columna dividida por:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEIGHTSEC" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Altura de la sección transversal de la columna</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_TYPEHOOK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hook type:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEADER4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Regla de distribución de estribos adicionales</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_ADDSTIRRUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Disponer espaciamientos estribos adicionales según principales</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_ADDSTIRRUP_SPACE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Espaciado de estribos adicionales (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_HEADER3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Refuerzo de cimentación</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ESTABLECER REFUERZO DE CIMIENTOS ESPERANDO</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Espaciado de distribución de refuerzo principal y estribos</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dividir refuerzo en 2 secciones en posición cimentación</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Espaciado de estribos (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Disponer dirección refuerzo cimentación</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Configuración general</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sección de doblado de gancho de refuerzo</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Por longitud fija L (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Por diámetro (xD):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Establecer refuerzo de techo superior</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Doblar gancho para refuerzo de piso superior</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Continuar esperando el refuerzo del piso superior</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Asignar información adicional al refuerzo</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Asignar elevación de la columna al refuerzo</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT6" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Asignar automáticamente Partition al refuerzo</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Anclaje y longitud de empalme del refuerzo de la columna</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT7" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Longitud de empalme de solapamiento (xØ):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT8" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Longitud de anclaje predeterminada (xØ):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT9" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Comprimir el refuerzo en los lugares de empalme</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT10" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Agrupar el refuerzo con el mismo número en la columna</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Condiciones de doblado o corte de refuerzo</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT11" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Doblar el refuerzo si e ≤ (mm)</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT12" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Doblar por la relación Hd/e ≥</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER6" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Posición de empalme de refuerzo</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT13" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distancia de empalme desde la base de la columna L = (mm)</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT14" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Empalme entre pisos</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT15" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Distancia entre dos empalmes (xD)</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT16" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Empalmar el refuerzo en una posición</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT17" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Empalmar el refuerzo en dos posiciones</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER7" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Opción en la posición de la viga de losa</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT18" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Seleccionar manualmente el componente de viga de losa</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT19" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Selección de escaneo</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT20" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Encontrar viga con elevación y altura adecuadas para columna</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT21" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Encontrar losa con elevación y grosor adecuados para columna</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT22" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Altura predeterminada Hd (mm)</String>
+	<String
+		x:Key="APPLYOTHERLEVELVIEW_HEADER1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Refuerzo principal</String>
+	<String
+		x:Key="APPLYOTHERLEVELVIEW_HEADER2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Refuerzo de estribo</String>
+</ResourceDictionary>

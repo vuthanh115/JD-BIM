@@ -1,0 +1,193 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <UseWPF>true</UseWPF>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <LangVersion>latest</LangVersion>
+        <OutputType>Library</OutputType>
+
+        <PlatformTarget>x64</PlatformTarget>
+        <Prefer32Bit>false</Prefer32Bit>
+
+        <DebugType>portable</DebugType>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+
+        <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+        <GenerateTargetPlatformAttribute>false</GenerateTargetPlatformAttribute>
+
+        <OutputPath>bin\$(Configuration)\</OutputPath>
+        <Configurations>Release;Debug 2026;Debug 2025;Debug 2027;Release 2024;Debug 2024;Release 2025;Release 2026;Release 2027</Configurations>
+        <Platforms>AnyCPU;x64</Platforms>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="$(Configuration.Contains('2024'))">
+        <TargetFramework>net48</TargetFramework>
+        <RevitVersion>2024</RevitVersion>
+        <DefineConstants>$(DefineConstants);REVIT2024</DefineConstants>
+
+        <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+        <GenerateTargetPlatformAttribute>false</GenerateTargetPlatformAttribute>
+        
+    </PropertyGroup>
+    <PropertyGroup Condition="$(Configuration.Contains('2025'))">
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <RevitVersion>2025</RevitVersion>
+        <DefineConstants>$(DefineConstants);REVIT2025</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="$(Configuration.Contains('2026'))">
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <RevitVersion>2026</RevitVersion>
+        <DefineConstants>$(DefineConstants);REVIT2026</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="$(Configuration.Contains('2027'))">
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <RevitVersion>2027</RevitVersion>
+        <DefineConstants>$(DefineConstants);REVIT2027</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\kaka.Structure.AppBase\kaka.Structure.AppBase.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="kaka.Structure.addin">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="BimSpeedUtils">
+            <HintPath>..\libs\$(RevitVersion)\BimSpeedUtils.dll</HintPath>
+            <Private>true</Private>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Revit_All_Main_Versions_API_x64" Version="$(RevitVersion).*" ExcludeAssets="runtime" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+        <PackageReference Include="System.Text.Json" Version="8.0.5" />
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+        <PackageReference Include="MahApps.Metro.SimpleChildWindow" Version="2.2.1" />
+        <PackageReference Include="Wpf.Controls.PanAndZoom" Version="2.3.4" />
+        
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' != 'net48'">
+        <PackageReference Include="System.Text.Json" Version="8.0.5" />
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+        <PackageReference Include="MahApps.Metro.SimpleChildWindow" Version="2.2.1" />
+        <PackageReference Include="Wpf.Controls.PanAndZoom" Version="2.3.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="Ribbon\ribbon.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <TargetPath>ribbon.json</TargetPath>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Resources\Icons\**\*.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Models\Beam\" />
+        <Folder Include="Resources\Images\Beam\" />
+        <Folder Include="Services\Beam\" />
+        <Folder Include="ViewModels\Beam\" />
+        <Folder Include="Views\Beam\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Page Update="Views\Column\ColumnRebarWindow.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Views\Beam\BeamRebarWindow.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Resources\Images\a1a2a1.png" />
+        <None Remove="Resources\Images\down.png" />
+        <Resource Include="Resources\Images\Column\a1a2a1.png" />
+        <None Remove="Resources\Images\l1.png" />
+        <Resource Include="Resources\Images\Column\down.png" />
+        <None Remove="Resources\Images\l1l2.png" />
+        <Resource Include="Resources\Images\Column\l1.png" />
+        <None Remove="Resources\Images\l1l2l1.png" />
+        <Resource Include="Resources\Images\Column\l1l2.png" />
+        <None Remove="Resources\Images\left.png" />
+        <Resource Include="Resources\Images\Column\l1l2l1.png" />
+        <None Remove="Resources\Images\right.png" />
+        <Resource Include="Resources\Images\Column\left.png" />
+        <None Remove="Resources\Images\starterbarcombine.png" />
+        <Resource Include="Resources\Images\Column\right.png" />
+        <None Remove="Resources\Images\starterbarseparate.png" />
+        <Resource Include="Resources\Images\Column\starterbarcombine.png" />
+        <None Remove="Resources\Images\up.png" />
+        <Resource Include="Resources\Images\Column\starterbarseparate.png" />
+        <Resource Include="Resources\Images\Column\up.png" />
+    </ItemGroup>
+
+    <Target Name="DeployAddin" AfterTargets="Build">
+        <PropertyGroup>
+            <RevitAddinsDir>$(AppData)\Autodesk\Revit\Addins\$(RevitVersion)</RevitAddinsDir>
+            <DeployDir>$(RevitAddinsDir)\kaka.Structure</DeployDir>
+
+            <RibbonJson>$(ProjectDir)Ribbon\ribbon.json</RibbonJson>
+            <AddinFile>$(ProjectDir)kaka.Structure.addin</AddinFile>
+        </PropertyGroup>
+
+        <Message Text="=== DeployAddin RUN ===" Importance="high" />
+        <Message Text="DEPLOY DIR : $(DeployDir)" Importance="high" />
+        <Message Text="TARGET DLL : $(TargetPath)" Importance="high" />
+
+        <MakeDir Directories="$(DeployDir)" />
+
+        <ItemGroup>
+            <DeployDll Include="$(TargetPath)" />
+            <DeployDll Include="@(ReferenceCopyLocalPaths)" />
+
+            <DeployPdb Include="$(TargetDir)$(TargetName).pdb" Condition="Exists('$(TargetDir)$(TargetName).pdb')" />
+            <DeployPdb Include="@(ReferenceCopyLocalPaths->'%(RootDir)%(Directory)%(Filename).pdb')" />
+            <DeployPdb Remove="@(DeployPdb)" Condition="!Exists('%(Identity)')" />
+        </ItemGroup>
+
+        <Copy SourceFiles="@(DeployDll)"
+              DestinationFolder="$(DeployDir)"
+              SkipUnchangedFiles="true"
+              Retries="20"
+              RetryDelayMilliseconds="200" />
+
+        <Copy SourceFiles="@(DeployPdb)"
+              DestinationFolder="$(DeployDir)"
+              SkipUnchangedFiles="true"
+              Retries="20"
+              RetryDelayMilliseconds="200"
+              Condition="@(DeployPdb) != ''" />
+
+        <Copy SourceFiles="$(RibbonJson)"
+              DestinationFiles="$(DeployDir)\ribbon.json"
+              Condition="Exists('$(RibbonJson)')"
+              SkipUnchangedFiles="true"
+              Retries="20"
+              RetryDelayMilliseconds="200" />
+
+        <Copy SourceFiles="$(AddinFile)"
+              DestinationFolder="$(RevitAddinsDir)"
+              Condition="Exists('$(AddinFile)')"
+              SkipUnchangedFiles="true"
+              Retries="20"
+              RetryDelayMilliseconds="200" />
+    </Target>
+
+</Project>

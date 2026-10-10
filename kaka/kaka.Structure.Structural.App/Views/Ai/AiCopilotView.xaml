@@ -1,0 +1,186 @@
+<controls:MetroWindow
+    x:Class="kaka.Structure.Structural.App.Views.Ai.AiCopilotView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+    mc:Ignorable="d"
+    Title="KAKA — AI Copilot for Revit"
+    Width="480"
+    Height="700"
+    MinWidth="380"
+    MinHeight="500"
+    Background="#F1F5F9"
+    Foreground="#0F172A"
+    GlowBrush="#4F46E5"
+    NonActiveGlowBrush="#94A3B8"
+    WindowTitleBrush="#312E81"
+    NonActiveWindowTitleBrush="#374151"
+    Topmost="True"
+    WindowStartupLocation="CenterScreen">
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <!-- 0: Header -->
+      <RowDefinition Height="Auto" />
+      <!-- 1: Chat Messages -->
+      <RowDefinition Height="*" />
+      <!-- 2: Quick Suggestion Chips -->
+      <RowDefinition Height="Auto" />
+      <!-- 3: Input Area -->
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <!-- 0: Header Card -->
+    <Border Grid.Row="0" Background="#312E81" Padding="14,10">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+          <TextBlock Text="🤖 KAKA AI Copilot" FontSize="15" FontWeight="Bold" Foreground="#FFFFFF" />
+          <TextBlock Text="{Binding ModelTitle, StringFormat='Mô hình: {0}'}" FontSize="11" Foreground="#C7D2FE" Margin="0,2,0,0" TextTrimming="CharacterEllipsis" />
+        </StackPanel>
+
+        <Border Grid.Column="1" Background="#10B981" CornerRadius="10" Padding="8,3" VerticalAlignment="Center">
+          <TextBlock Text="● Live API" FontSize="10" FontWeight="Bold" Foreground="#FFFFFF" />
+        </Border>
+      </Grid>
+    </Border>
+
+    <!-- 1: Chat Message List -->
+    <ScrollViewer x:Name="ChatScrollViewer" Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="10,8">
+      <ItemsControl ItemsSource="{Binding Messages}">
+        <ItemsControl.ItemTemplate>
+          <DataTemplate>
+            <Grid Margin="0,4,0,8">
+              <!-- User Message -->
+              <Grid HorizontalAlignment="Right" MaxWidth="360" Visibility="{Binding UserMsgVisibility}">
+                <Border Background="#4F46E5" CornerRadius="12,12,2,12" Padding="12,8">
+                  <TextBlock Text="{Binding Message}" Foreground="#FFFFFF" FontSize="13" TextWrapping="Wrap" />
+                </Border>
+              </Grid>
+
+              <!-- AI Message -->
+              <Grid HorizontalAlignment="Left" MaxWidth="410" Visibility="{Binding AiMsgVisibility}">
+                <Border Background="#FFFFFF" BorderBrush="#E2E8F0" BorderThickness="1" CornerRadius="12,12,12,2" Padding="12,10">
+                  <StackPanel>
+                    <TextBlock Text="{Binding Message}" Foreground="#0F172A" FontSize="12.5" TextWrapping="Wrap" />
+
+                    <!-- Optional Action Button: Zoom & Highlight -->
+                    <Button Margin="0,8,0,0"
+                            Padding="8,4"
+                            Background="#EEF2FF"
+                            Foreground="#4338CA"
+                            BorderBrush="#C7D2FE"
+                            BorderThickness="1"
+                            HorizontalAlignment="Left"
+                            Cursor="Hand"
+                            Visibility="{Binding AffectedVisibility}"
+                            Command="{Binding DataContext.SelectAffectedElementsCommand, RelativeSource={RelativeSource AncestorType=controls:MetroWindow}}"
+                            CommandParameter="{Binding}">
+                      <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="🎯 Chọn &amp; Zoom trên Revit (" FontWeight="SemiBold" FontSize="11" />
+                        <TextBlock Text="{Binding AffectedIds.Count}" FontWeight="Bold" FontSize="11" />
+                        <TextBlock Text=" cấu kiện)" FontWeight="SemiBold" FontSize="11" />
+                      </StackPanel>
+                    </Button>
+                  </StackPanel>
+                </Border>
+              </Grid>
+            </Grid>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+    </ScrollViewer>
+
+    <!-- 2: Quick Suggestion Chips -->
+    <Border Grid.Row="2" Background="#F8FAFC" BorderBrush="#E2E8F0" BorderThickness="0,1,0,0" Padding="8,6">
+      <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+        <StackPanel Orientation="Horizontal">
+          <Button Content="🎯 Chọn tường Tole tầng 0"
+                  Margin="0,0,6,0"
+                  Padding="8,4"
+                  Background="#FFFFFF"
+                  Foreground="#334155"
+                  BorderBrush="#CBD5E1"
+                  BorderThickness="1"
+                  FontSize="11"
+                  Cursor="Hand"
+                  Command="{Binding ExecuteQuickPromptCommand}"
+                  CommandParameter="chọn các tường tole tầng 0" />
+
+          <Button Content="📊 Bóc BoQ dự án"
+                  Margin="0,0,6,0"
+                  Padding="8,4"
+                  Background="#FFFFFF"
+                  Foreground="#334155"
+                  BorderBrush="#CBD5E1"
+                  BorderThickness="1"
+                  FontSize="11"
+                  Cursor="Hand"
+                  Command="{Binding ExecuteQuickPromptCommand}"
+                  CommandParameter="bóc tách khối lượng boq" />
+
+          <Button Content="🏢 Danh sách tầng"
+                  Margin="0,0,6,0"
+                  Padding="8,4"
+                  Background="#FFFFFF"
+                  Foreground="#334155"
+                  BorderBrush="#CBD5E1"
+                  BorderThickness="1"
+                  FontSize="11"
+                  Cursor="Hand"
+                  Command="{Binding ExecuteQuickPromptCommand}"
+                  CommandParameter="thông tin dự án và danh sách tầng" />
+
+          <Button Content="🧱 Lọc cột tầng +4.500"
+                  Padding="8,4"
+                  Background="#FFFFFF"
+                  Foreground="#334155"
+                  BorderBrush="#CBD5E1"
+                  BorderThickness="1"
+                  FontSize="11"
+                  Cursor="Hand"
+                  Command="{Binding ExecuteQuickPromptCommand}"
+                  CommandParameter="lọc các cột ở tầng +4.500" />
+        </StackPanel>
+      </ScrollViewer>
+    </Border>
+
+    <!-- 3: Input Area -->
+    <Border Grid.Row="3" Background="#FFFFFF" BorderBrush="#CBD5E1" BorderThickness="0,1,0,0" Padding="10,8">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="TxtPromptInput"
+                 Grid.Column="0"
+                 Text="{Binding InputPrompt, UpdateSourceTrigger=PropertyChanged}"
+                 Height="36"
+                 FontSize="13"
+                 Padding="8,6"
+                 VerticalContentAlignment="Center"
+                 controls:TextBoxHelper.Watermark="Nhập yêu cầu AI (vd: chọn cột tầng 2, bóc boq)..."
+                 KeyDown="TxtPromptInput_KeyDown" />
+
+        <Button Grid.Column="1"
+                Width="70"
+                Height="36"
+                Margin="8,0,0,0"
+                Content="Gửi"
+                Background="#4F46E5"
+                Foreground="#FFFFFF"
+                FontWeight="Bold"
+                FontSize="13"
+                Cursor="Hand"
+                Command="{Binding SendMessageCommand}" />
+      </Grid>
+    </Border>
+  </Grid>
+</controls:MetroWindow>

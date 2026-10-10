@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework Condition="'$(TargetFramework)' == ''">net8.0-windows</TargetFramework>
+        <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+        <GenerateTargetPlatformAttribute>false</GenerateTargetPlatformAttribute>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <OutputPath>bin\$(Configuration)\</OutputPath>
+        <Configurations>Debug 2026;Debug 2025;Release 2025;Debug 2027;Release 2024;Debug 2024;Release 2026;Release 2027</Configurations>
+        <Platforms>AnyCPU;x64</Platforms>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="$(Configuration.Contains('2024'))">
+        <TargetFramework>net48</TargetFramework>
+        <RevitVersion>2024</RevitVersion>
+        <DefineConstants>$(DefineConstants);REVIT2024</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="$(Configuration.Contains('2025'))">
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <RevitVersion>2025</RevitVersion>
+        <DefineConstants>$(DefineConstants);REVIT2025</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="$(Configuration.Contains('2026'))">
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <RevitVersion>2026</RevitVersion>
+        <DefineConstants>$(DefineConstants);REVIT2026</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="$(Configuration.Contains('2027'))">
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <RevitVersion>2027</RevitVersion>
+        <DefineConstants>$(DefineConstants);REVIT2027</DefineConstants>
+    </PropertyGroup>
+
+</Project>

@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "tabName": "KAKA",
+  "panelName": "⠀",
+  "splits": [
+    {
+      "id": "Column",
+      "text": "Column",
+      "defaultItemId": "ColumnRebar",
+      "items": [
+        {
+          "id": "ColumnRebar",
+          "text": "Column Rebar",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Column.ColumnRebarCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Column.columnbar16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Column.columnbar.png",
+          "tooltip": "Column Rebar"
+        },
+        {
+          "id": "ColumnRebarV2",
+          "text": "Column Rebar v2.0",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Column.ColumnRebarV2Command",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Column.columnbar16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Column.columnbar.png",
+          "tooltip": "Column Rebar v2.0"
+        },
+        {
+          "id": "ColumnDrawing",
+          "text": "Column Drawing",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Column.ColumnDrawingCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Column.columndrawing16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Column.columndrawing.png",
+          "tooltip": "Column Drawing"
+        },
+        {
+          "id": "UpdateColumnDrawing",
+          "text": "Update Column Drawing",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Column.UpdateColumnDrawingCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Column.columndrawing16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Column.columndrawing.png",
+          "tooltip": "Update Column Drawing"
+        }
+      ]
+    },
+    {
+      "id": "Beam",
+      "text": "Beam",
+      "defaultItemId": "BeamRebar",
+      "items": [
+        {
+          "id": "BeamRebar",
+          "text": "Beam Rebar",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Beam.BeamRebarCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Beam.beamrebar16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Beam.beamrebar.png",
+          "tooltip": "Beam Rebar"
+        },
+        {
+          "id": "BeamSection",
+          "text": "Beam Section",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Beam.BeamSectionCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Beam.beamsection16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Beam.beamsection.png",
+          "tooltip": "Beam Section"
+        },
+        {
+          "id": "BeamDrawing",
+          "text": "Beam Drawing",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Beam.BeamDrawingCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Beam.beamdrawing16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Beam.beamdrawing.png",
+          "tooltip": "Beam Drawing"
+        }
+      ]
+    },
+    {
+      "id": "Wall",
+      "text": "Wall",
+      "defaultItemId": "ShearWall",
+      "items": [
+        {
+          "id": "ShearWall",
+          "text": "Shear Wall",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Wall.ShearWallCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Wall.shearwall16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Wall.shearwall.png",
+          "tooltip": "Shear Wall"
+        },
+        {
+          "id": "ShearWallRebar",
+          "text": "Shear Wall Rebar",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Wall.ShearWallRebarCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Wall.shearwallrebar16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Wall.shearwallrebar.png",
+          "tooltip": "Shear Wall Rebar"
+        }
+      ]
+    },
+    {
+      "id": "Slab",
+      "text": "Slab",
+      "defaultItemId": "SlabRebarBottom",
+      "items": [
+        {
+          "id": "SlabRebarBottom",
+          "text": "Slab Rebar Bottom",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Slab.SlabRebarBottomCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Slab.slabrebarbot16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Slab.slabrebarbot.png",
+          "tooltip": "Slab Rebar Bottom"
+        },
+        {
+          "id": "SlabRebarTop",
+          "text": "Slab Rebar Top",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Slab.SlabRebarTopCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Slab.slabrebartop16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Slab.slabrebartop.png",
+          "tooltip": "Slab Rebar Top"
+        }
+      ]
+    },
+    {
+      "id": "Foundation",
+      "text": "Foundation",
+      "defaultItemId": "FoundationRebar",
+      "items": [
+        {
+          "id": "FoundationRebar",
+          "text": "Foundation Rebar",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Foundation.FoundationRebarCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Foundation.foundationrebar16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Foundation.foundationrebar.png",
+          "tooltip": "Foundation Rebar"
+        },
+        {
+          "id": "StripFooting",
+          "text": "Strip Footing",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Foundation.StripFootingCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Foundation.stripfooting16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Foundation.stripfooting.png",
+          "tooltip": "Strip Footing"
+        }
+      ]
+    },
+    {
+      "id": "Stair",
+      "text": "Stair",
+      "defaultItemId": "StairRebar",
+      "items": [
+        {
+          "id": "StairRebar",
+          "text": "Stair Rebar",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Stair.StairRebarCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Stair.stairrebar16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Stair.stairrebar.png",
+          "tooltip": "Stair Rebar"
+        }
+      ]
+    },
+    {
+      "id": "Database",
+      "text": "SQL Data",
+      "defaultItemId": "ExportSqlBoQ",
+      "items": [
+        {
+          "id": "ExportSqlBoQ",
+          "text": "Export BoQ to SQL",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Database.ExportSqlBoQCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Database.sql16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Database.sql.png",
+          "tooltip": "Trích xuất dữ liệu bóc tách khối lượng (BoQ) từ Revit ra SQL & SQLite theo chuẩn Mindmap"
+        }
+      ]
+    },
+    {
+      "id": "AI_MCP",
+      "text": "AI Bridge",
+      "defaultItemId": "RevitMcpStatus",
+      "items": [
+        {
+          "id": "RevitMcpStatus",
+          "text": "MCP Server",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Mcp.McpServerCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Mcp.mcp16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Mcp.mcp.png",
+          "tooltip": "Quản lý kết nối Revit MCP Server với Antigravity AI Agent (localhost:8080)"
+        }
+      ]
+    },
+    {
+      "id": "PrimaveraP6",
+      "text": "Primavera P6",
+      "defaultItemId": "ExportP6Schedule",
+      "items": [
+        {
+          "id": "ExportP6Schedule",
+          "text": "Export to P6 (XER/CSV)",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Database.ExportSqlBoQCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Database.sql16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Database.sql.png",
+          "tooltip": "Xuất tiến độ WBS và công tác (Activities) sang Primavera P6 (.xer / .csv) theo chuẩn Encore Group"
+        }
+      ]
+    }
+  ]
+}

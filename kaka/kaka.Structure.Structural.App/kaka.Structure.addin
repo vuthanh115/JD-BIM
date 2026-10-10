@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>kaka.Structure</Name>
+
+    <Assembly>kaka.Structure\kaka.Structure.Structural.App.dll</Assembly>
+
+    <AddInId>8D83C886-B739-4ACD-A9DB-0E9A73D74C01</AddInId>
+
+    <FullClassName>kaka.Structure.Structural.App.App</FullClassName>
+
+    <VendorId>KAKA</VendorId>
+    <VendorDescription>KAKA Structure Revit Add-in</VendorDescription>
+  </AddIn>
+</RevitAddIns>

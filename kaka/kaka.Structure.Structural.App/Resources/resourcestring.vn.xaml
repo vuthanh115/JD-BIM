@@ -1,0 +1,1144 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib">
+	<system1:String xmlns:system1="clr-namespace:System;assembly=System.Private.CoreLib"
+		x:Key="CARACKERVM_PICKOBJECT">Chọn hướng ưu tiên</system1:String>
+	<String
+		x:Key="CEILINGDRAWINGSERVICE_PICKOBJECT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hãy chọn cột/windows to dims...</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_BOQUATRANGIA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bỏ qua trần giả-Model :</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_DIMENSIONTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Kiểu kích thước:</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_DIMTOBONGDEN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">K/C Dim-&gt;bóng đèn :</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_DIMTOCANHCT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">K/C Dim-&gt;cạnh công trình :</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_DISTANCEFROMDIMTODIM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khoảng cách từ Dim đến Dim</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_ELEVATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cao độ</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_LEVELNAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tên Tầng</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_LEVELS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tầng</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_SETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cài đặt</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_TAGCEILINGTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Loại tag trần :</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vẽ Trần</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_TITLEBLOCK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Title block:</String>
+	<String
+		x:Key="CELINGDRAWING_VIEW_VIEWTEMPLATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">View template:</String>
+	<String
+		x:Key="CHANGEPATTERNINLISTIFHAVESAMEPATTERNCHANGED" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thay đổi mẫu trong danh sách nếu trùng nhau</String>
+	<String
+		x:Key="COLLISIONCHECKVIEWOPEN_FILE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mở tập tin</String>
+	<String
+		x:Key="COLUMNPLANDIM_CONTROLLER_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn hãy vào mặt bằng để chạy nhé</String>
+	<String
+		x:Key="COLUMNPLANDIM_CONTROLLER_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn đã hủy</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_ALLCOLUMNSWALLS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tất cả cột và tường</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_BOT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dưới</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_DIMOFFSET" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khoảng Offset Dim:</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_DIMOVERALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dim Tổng</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_DIMTYPES" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Loại đim :</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_LEFT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Trái</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_ONLYDIM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chỉ đim và tâm cột - tường</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_POSITIONS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vị trí:</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_RANGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Pham vi:</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_RIGHT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Phải</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_SELECTCOLUMNSWALLS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn cột và tường</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dim mặt bằng cột</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_TOP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Trên</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_VIEWSCALE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tỷ lệ View Scale:</String>
+	<String
+		x:Key="COLUMNPLANDIM_VIEW_VIEWTEMPLATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">View template</String>
+	<String
+		x:Key="COLUMNPLANDIMCONTROLLER_PICKOBJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select elements to dimension</String>
+	<String
+		x:Key="COLUMNREBAR_MODEL_EXCUTEDETAILS_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn có muốn mở bản vẽ không?</String>
+	<String
+		x:Key="COLUMNREBAR_MODEL_EXTENSIONWAITINGF_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chưa hoàn thiện chức năng này</String>
+	<String
+		x:Key="COLUMNREBAR_MODEL_SAVESTIRRUPTIDEDATA_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn hãy tải family vào trước nhé.</String>
+	<String
+		x:Key="COLUMNREBAR_VIEW_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cần chọn 2 điểm khác nhau</String>
+	<String
+		x:Key="COLUMNREBAR_VIEW_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn cần chọn 2 điểm cùng 1 hướng. Hãy thử lại nhé</String>
+	<String
+		x:Key="COLUMNREBAR_VIEWMODEL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Value {0} is default value, in case ID = null</String>
+	<String
+		x:Key="COLUMNREBAR_VIEWMODEL_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Có lỗi xảy ra vì Id đối tượng không có giá trị</String>
+	<String
+		x:Key="COLUMNREBAR_VIEWMODEL_MESS3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn đang ở chế độ cột đơn lẻ không thể chạy chức năng này</String>
+	<String
+		x:Key="COLUMNREBAR_VIEWMODEL_MESS4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn chưa định nghĩa L1 để vẽ thép đai</String>
+	<String
+		x:Key="COLUMNSREBAR_CONVERTERUTIL_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cột ở cao độ : {0}</String>
+	<String
+		x:Key="COLUMNSREBARVM_PICKPOINT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select Beam As Floor...</String>
+	<String
+		x:Key="COLUMREBAR_BUTTON_CHECKALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Kiểm tra tất cả</String>
+	<String
+		x:Key="COLUMREBAR_BUTTON_DONE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hoàn thành</String>
+	<String
+		x:Key="COLUMREBAR_BUTTON_UNCHECKALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bỏ chọn tất cả</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_APPLYFORLEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Áp dụng cho các Tầng khác</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_BEAMORFLOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dầm hoặc Sàn</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_BREAKLINE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">BreakLine:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_CLOSETIE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Closed tie</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_COLUMNSHEETGENERS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cài đặt bản vẽ:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_CREATEDETAILITEMFROM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tạo detail item cho thép</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_CROSSSECTIONSETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cài đặt mặt cắt cross section</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_CROSSTIE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Crosstie</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DETAILITEMSHOWTAG" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Detail Item (Hiện Tag)</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DETAILITEMSHOWVALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Detail Item (Hiện Value)</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DETAILITEMSIRRUPTAG" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Detail Item (Stirrup Tag) :</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DETAILITEMTEXTS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Detail Item (Cỡ chữ) :</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DIAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đường kính</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DIMENSIONTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Loại Dim:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DISA1A2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Phân bố A1 A2</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_DRAWING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bản vẽ</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_FIXEDLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cố đinh chiều dài (mm)</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_FLOORFRAMINGH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều cao sàn dầm (mm)</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_FLORRFRAMINGT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Loại Khung Sàn</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_FOUNDATIONREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thép móng</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_LONGDITUSECTIONSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cài đặt mặt cắt dài</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_OTHERCOVERTHICK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lớp bảo vệ khác</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_QUANTITES" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số lượng:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_REBARBYLEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thép theo level</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_SECTIONSTIRRUPTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Loại Mặt cắt cho thép đai</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_SETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cài đặt</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_SHEETNAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tên sheet:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_SHEETNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số Sheet:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_SPREADIS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Phân bố riêng lẻ</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_STIRRUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thép đai</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cốt thép cột</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_TITLEBLOCK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khung tên:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_TOPCOVERTHICKNESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lớp bảo vệ mặt top</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_TYPETAG" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Loại tag:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_UNIFORM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Phân bố đồng đều</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_UNIFORMDISTRIREBARSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Phân bố tập trung</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_VIEWFAMILYTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">View Family Type:</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_VIEWSCALE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">View Scale :</String>
+	<String
+		x:Key="COLUMREBAR_COLUMNREBARVIEW_VIEWTEMPLATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">View Template :</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_ELEVETION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cao độ</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_ELEVETIONAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tên cao độ</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_NO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">STT</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_SECTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mặt ắct</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_SELECTCOL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lựa chọn cột</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Áp dụng cho tất cả level</String>
+	<String
+		x:Key="COLUMREBAR_COPPYONFORMATIONVIEW_YESNO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đồng ý/ Không đồng ý</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_ADDELEFORREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Gán cao độ vào thép</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_ADDMORE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thêm thông tin vào thép</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_ADDPARTIFORREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Gán partition vào thép</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_AUTOMESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tự động tìm dầm với cao độ và bê dày gắn kết với cột</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_AUTOMESSFLOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">tự động tìm sàn với cao độ và bê dày gắn kết với cột</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_BARBENDINGSPLICING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Điều kiện Bar Bending / Splicing :</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_BENBARIFE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Uốn thép nếu e ≤ (mm)</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_BENDBARCONFLICT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Uốn thép tại vùng nối để loại bỏ xung đột</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_DISTANCEBEETWEN2LAP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khoảng cách giữa 2 đoạn nối</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_DISTANCECOLLUMBOTL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khoảng cách từ chân cột L= (mm)</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_FLOORBEAMSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cài đặt dầm sàn</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_GROUPBARNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nhóm thép nếu cùng rebar number</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_HOOKBENDING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hooks bending:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_HOOKLAP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều dài hook lap</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_HOOKLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều dài đoạn móc:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_LAP1POSITION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nối tại 1 vị trí</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_LAP2POSITION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nối tại 2 vị trí</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_LAPLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều dài nối</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_LAPPINGPOSI" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vị trí nối</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_MIDDLEOFCOLS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Giữa cột</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_RATIOHD" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tỷ lệ Hd/e ≥</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_SELECTFLOORBEAMMANUA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn dầm sàn thủ công</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_STARTERBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thép chân cột</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCGENERALVIEW_TOPCOLUMNBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thép cột trên</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_DISTRIBUTIONBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đường kính thép phân bố</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_INERLAYERREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số lượng thép lớp trong</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_MAINBARDIAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đường kính thép chính</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_MAINSTIRRUPDIAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đường kính thép đai chính</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_OUTERLAYERBARNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số lượng thép lớp ngoài</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_REBARNUMBERCX" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số lượng thép Cx</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_REBARNUMBERCY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số lượng thép Cy</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_REINFORCEAREA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diện tích thép (cm2)</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_REINFORCERATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tỷ lệ thép</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_SPREADSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Phân bố riêng lẻ</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_TOTALBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tổng thanh:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_UNIFORMREBARSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cài đặt phân bố tập trung thép</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCRECTANGLEVIEW_USEDISTRIBUTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sử dụng thép phân bố</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_A1DISL1COUNT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Phân bố tập trung A1 trong L1 tính theo mặt dầm</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_CLEARANGEHDB" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều cao thông thủy</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_COLSECHEIGHT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều cao mặt cắt cột</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_DIAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đườn kính</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_DISTANCEFIRSTS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khoảng cách đến thép đai đầu tiên</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_GETSAMESPC" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lấy cùng giá trị khoảng cách với thép đai chính</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_HOOKTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Loại Hook:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_L1TAKEGVT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">L1 lấy theo gia trị lớn nhất của các giá trị sau</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_MAINSTIRRUPSPREADING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thép đai chính:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_MINMM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Minimum (mm)</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_REINFORCESTIRRUPBF" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đặt thép đai cho dầm sàn</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_RULEADDSITRRUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Quy luật cho thép đai gia cường</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_SPREADSTIRRUPBOTBF" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Phân bố thép đai phía dưới dầm hoặc sàn</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_SPREADSTIRRUPTOPBF" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Phân bố thép đai bên trên phía dầm và sàn</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_STIRRUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">PACING"&gt;Khoảng cách thép đai</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_STIRRUPNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số thép đai</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_STIRRUPSPACING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khoảng cách thép đai(mm)</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_UCSTIRRUP_STIRRUPSPREADING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Phân bố thép đai:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_DISTRUTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đường kính thép phan bố</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_MAINBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thép chính</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_MAINSTIRUPDIAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thép đai chính</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_REBARNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sô thép:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_REINFOCREAREA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diện tích</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_REINFORCERATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hệ số thép</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_ROUNDSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cài đặt thép cột tròn</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW1_TOTALBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tổng thép:</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW2_DIRECTIONOFBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hướng của thanh</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW2_MAINBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thép chính và khoảng cách thép đai</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW2_SEPARATE2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chia 2 phần tại thép chân cột</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW2_STARTBARSETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cài đặt thép chân cột</String>
+	<String
+		x:Key="COLUMREBAR_USERCONTROLS_VIEW2_STIRRUPSPACING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khoảng cách thép đai</String>
+	<String
+		x:Key="COLUMREBAR_VIEWWARNINGS_DESCRIPTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diễn giải</String>
+	<String
+		x:Key="COLUMREBAR_VIEWWARNINGS_ID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Id</String>
+	<String
+		x:Key="COLUMREBAR_VIEWWARNINGS_NO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">STT</String>
+	<String
+		x:Key="COLUMREBAR_VIEWWARNINGS_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cảnh báo</String>
+	<String
+		x:Key="COMMON_BUTTON_ABORT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hủy</String>
+	<String
+		x:Key="COMMON_BUTTON_ADD" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thêm</String>
+	<String
+		x:Key="COMMON_BUTTON_ADDRULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thêm Rule</String>
+	<String
+		x:Key="COMMON_BUTTON_APPLY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Áp dụng</String>
+	<String
+		x:Key="COMMON_BUTTON_CHANGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thay đổi</String>
+	<String
+		x:Key="COMMON_BUTTON_CLEARALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Xóa hết</String>
+	<String
+		x:Key="COMMON_BUTTON_CLEARFILTER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Xóa filter</String>
+	<String
+		x:Key="COMMON_BUTTON_CLICK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn cột và tường</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_INBEAM_SEISMIC" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đóng</String>
+	<String
+		x:Key="COMMON_BUTTON_COMBINE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Combine</String>
+	<String
+		x:Key="COMMON_BUTTON_COPPYRESULT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sao chép kết quả</String>
+	<String
+		x:Key="COMMON_BUTTON_CREATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tạo</String>
+	<String
+		x:Key="COMMON_BUTTON_CREATELEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tạo Level</String>
+	<String
+		x:Key="COMMON_BUTTON_CUT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cắt</String>
+	<String
+		x:Key="COMMON_BUTTON_CUTBYVOID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cắt bằng Void</String>
+	<String
+		x:Key="COMMON_BUTTON_DELETE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Xóa</String>
+	<String
+		x:Key="COMMON_BUTTON_DELETEALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Xóa hết</String>
+	<String
+		x:Key="COMMON_BUTTON_DELETESELECTEDRULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Xóa rule đang chọn</String>
+	<String
+		x:Key="COMMON_BUTTON_DELETEVIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Xóa View</String>
+	<String
+		x:Key="COMMON_BUTTON_DIMOFFSET" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Offset dim</String>
+	<String
+		x:Key="COMMON_BUTTON_DOWN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dưới</String>
+	<String
+		x:Key="COMMON_BUTTON_DRAW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vẽ</String>
+	<String
+		x:Key="COMMON_BUTTON_DUPLICATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nhân bản</String>
+	<String
+		x:Key="COMMON_BUTTON_EDIT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sửa</String>
+	<String
+		x:Key="COMMON_BUTTON_END" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đầu cuối</String>
+	<String
+		x:Key="COMMON_BUTTON_ENTRIEPROJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Toàn bộ project</String>
+	<String
+		x:Key="COMMON_BUTTON_EXPORT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Xuất</String>
+	<String
+		x:Key="COMMON_BUTTON_FILTER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lọc</String>
+	<String
+		x:Key="COMMON_BUTTON_HELP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hướng dẫn</String>
+	<String
+		x:Key="COMMON_BUTTON_HIDE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ẩn</String>
+	<String
+		x:Key="COMMON_BUTTON_HIDEUNSELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ẩn không chọn</String>
+	<String
+		x:Key="COMMON_BUTTON_IMPORT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Import</String>
+	<String
+		x:Key="COMMON_BUTTON_INSERT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chèn</String>
+	<String
+		x:Key="COMMON_BUTTON_ISOLATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cô lập</String>
+	<String
+		x:Key="COMMON_BUTTON_JOIN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Join</String>
+	<String
+		x:Key="COMMON_BUTTON_LOADEXCEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Load file Excel</String>
+	<String
+		x:Key="COMMON_BUTTON_NUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số</String>
+	<String
+		x:Key="COMMON_BUTTON_CLOSE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đóng</String>
+	<String
+		x:Key="COMMON_BUTTON_OK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ok</String>
+	<String
+		x:Key="COMMON_BUTTON_OPEN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mở</String>
+	<String
+		x:Key="COMMON_BUTTON_OPENFOLDER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mở folder</String>
+	<String
+		x:Key="COMMON_BUTTON_OPENRULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mở rule</String>
+	<String
+		x:Key="COMMON_BUTTON_REFESH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Làm mới</String>
+	<String
+		x:Key="COMMON_BUTTON_RELOADDATA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tải lại data</String>
+	<String
+		x:Key="COMMON_BUTTON_REMOVE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Xóa</String>
+	<String
+		x:Key="COMMON_BUTTON_RENAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sửa tên</String>
+	<String
+		x:Key="COMMON_BUTTON_REPLACEALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thay thế tất cả</String>
+	<String
+		x:Key="COMMON_BUTTON_REPLACESELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thay thế item đã chọn</String>
+	<String
+		x:Key="COMMON_BUTTON_RESELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn lại</String>
+	<String
+		x:Key="COMMON_BUTTON_RESET" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Reset</String>
+	<String
+		x:Key="COMMON_BUTTON_RESTORE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">IMENSION"&gt;Phục hồi dim</String>
+	<String
+		x:Key="COMMON_BUTTON_RESTORE DIMENSION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Phục hồi dim</String>
+	<String
+		x:Key="COMMON_BUTTON_RUN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chạy</String>
+	<String
+		x:Key="COMMON_BUTTON_SAVE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lưu</String>
+	<String
+		x:Key="COMMON_BUTTON_SAVERULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lưu rule</String>
+	<String
+		x:Key="COMMON_BUTTON_SELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn</String>
+	<String
+		x:Key="COMMON_BUTTON_SELECTALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn tất cả</String>
+	<String
+		x:Key="COMMON_BUTTON_SELECTFROMCAD" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn từ Cad</String>
+	<String
+		x:Key="COMMON_BUTTON_SELECTVIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn views</String>
+	<String
+		x:Key="COMMON_BUTTON_SETTING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cài đặt</String>
+	<String
+		x:Key="COMMON_BUTTON_SHEETSCOUNT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sheet Acount</String>
+	<String
+		x:Key="COMMON_BUTTON_SHOW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hiện</String>
+	<String
+		x:Key="COMMON_BUTTON_SHOWHIDE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hiện / Ẩn</String>
+	<String
+		x:Key="COMMON_BUTTON_START" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bắt Đầu</String>
+	<String
+		x:Key="COMMON_BUTTON_SWITCHJOIN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Switch Join</String>
+	<String
+		x:Key="COMMON_BUTTON_TOLEGEND" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">To Legend</String>
+	<String
+		x:Key="COMMON_BUTTON_TUTORIAL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hướng Dẫn</String>
+	<String
+		x:Key="COMMON_BUTTON_UNCUT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">UnCut</String>
+	<String
+		x:Key="COMMON_BUTTON_UNDO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hoàn Tác</String>
+	<String
+		x:Key="COMMON_BUTTON_UNJOIN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Unjoin</String>
+	<String
+		x:Key="COMMON_BUTTON_UNSELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Up</String>
+	<String
+		x:Key="COMMON_BUTTON_UP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Up Down</String>
+	<String
+		x:Key="COMMON_BUTTON_UPDATE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cập Nhật</String>
+	<String
+		x:Key="COMMON_BUTTON_UPLOAD" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tải lên</String>
+	<String
+		x:Key="COMMON_BUTTON_VIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">View</String>
+	<String
+		x:Key="COMMON_GROUPBOX_DETAIL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chi tiết</String>
+	<String
+		x:Key="COMMON_TEXT_DESCRIPTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mô tả</String>
+	<String
+		x:Key="COMMON_TEXT_DETAIL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chi Tiết:</String>
+	<String
+		x:Key="COMMON_TEXT_GROUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nhóm</String>
+	<String
+		x:Key="COMMON_TEXT_IMAGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ảnh</String>
+	<String
+		x:Key="COMMON_TEXT_NOTIFY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thông báo</String>
+	<String
+		x:Key="COMMON_TEXT_OPTIONS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tuỳ Chọn</String>
+	<String
+		x:Key="COMMON_TEXT_PRECENT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Phần Trăm</String>
+	<String
+		x:Key="COMMON_TEXT_SEARCH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tìm Kiếm</String>
+	<String
+		x:Key="COMMON_TEXT_SELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn</String>
+	<String
+		x:Key="COMMON_TEXT_SETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cài Đặt</String>
+	<String
+		x:Key="COMMON_TEXT_WARNING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cảnh báo</String>
+	<String
+		x:Key="CONNECTBEAM_CONTROLLER_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn Đã Huỷ Bỏ</String>
+	<String
+		x:Key="CONNECTBEAMCONTROLLER_PICKOBJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select First Beams</String>
+	<String
+		x:Key="COPPYINCREMENT_COPPYXAML_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vui lòng nhập một số bên trong TextBox</String>
+	<String
+		x:Key="COPYINCREMENTCONTROLLER_PICKPOINT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn text cần sao chép</String>
+	<String
+		x:Key="COPYINCREMENTCONTROLLER_PICKPOINT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn điểm đầu tiên để sao chép</String>
+	<String
+		x:Key="COPYINCREMENTCONTROLLER_PICKPOINT3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn điểm thứ hai để đặt Văn bản</String>
+	<String
+		x:Key="COPYREBARVM_PICKOBJECT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mời Bạn Chọn Đối Tượng Muốn Copy Thép</String>
+	<String
+		x:Key="COPYREBARVM_PICKOBJECT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mời Bạn Chọn Đối Tượng Đặt Thép Vào</String>
+	<String
+		x:Key="COUNTOFSELECTEDITEMS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đếm</String>
+	<String
+		x:Key="COUPLERVIEWMODEL_PICKPOINT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn điểm để chia</String>
+	<String
+		x:Key="COUPLERVM_PICKOBJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn hướng ưu tiên</String>
+	<String
+		x:Key="CRACKERBARVM_PICKPOINT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select point to Split</String>
+	<String
+		x:Key="CREATECEILLINGVIEWACTIVE_VIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chế độ xem hoạt động</String>
+	<String
+		x:Key="CREATECEILLINGVIEWHEIGHT_OFFSET_FROM_LEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều cao lệch khỏi mức:</String>
+	<String
+		x:Key="CREATECEILLINGVIEWPICK_OBJECTS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn đối tượng</String>
+	<String
+		x:Key="CREATEFLOOR_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Một vài floor chưa finish được</String>
+	<String
+		x:Key="CREATEGRID_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn hãy vào mặt bằng để chạy tool nhé.</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_ALLDOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tất cả cả</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_ALLLEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tất cả Level</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_LEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tầng</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tạo Lanh Tô Từ Link</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_TYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Kiểu</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_WINDOW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cửa sổ</String>
+	<String
+		x:Key="CREATELANHTO_FILELINKVIEW_WINDOWANDDOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cửa sổ và cửa ra vào</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_ALLDOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tất cả cửa</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_ALLWINDOW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tất cả cửa sổ</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_EXTENDFROMBOTHENDLINTEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mở rộng từ cả hai đầu lanh tô (mm):</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_FROMFILELINKREVIT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Từ File liên kết Revit</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_FROMTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">From Type</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_HEIGHTLINTEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều cao Lanh Tô:</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_SELECTWINDOWORDOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn cửa sổ hoặc cửa ra vào</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_SETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cài đặt</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tạo Lanh Tô</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_WINDOWANDDOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">cửa sổ và cửa ra vào</String>
+	<String
+		x:Key="CREATELANHTO_LANHTOVIEW_ZOFFSETLINTEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Z-Offset Lanh tô (Mm):</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Không tìm thấy cửa nào để tạo Lanh Tô</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mời bạn nhâp vào chiều dài hợp lệ..!</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hãy tạo 1 Family Dầm mới với Parameter width là b và Height là h rùi chạy lại tool bạn nhé</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn Không Có Loại Cửa Nào Trong Dự Án</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn đã huỷ chọn đối tượng</String>
+	<String
+		x:Key="CREATELANHTOMODEL_MESS6" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hãy click chọn FileLink bạn muốn tạo Lanh Tô</String>
+	<String
+		x:Key="CreateLanhToModel_Message1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tạo family thành công</String>
+	<String
+		x:Key="CreateLanhToModel_Message2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Family đã tồn tại trong dự án</String>
+	<String
+		x:Key="CREATELANTOMODEL_PICKOBJECT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chon Cua So, Cua di</String>
+	<String
+		x:Key="CREATELANTOMODEL_PICKOBJECT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn Link FileRevit</String>
+	<String
+		x:Key="CREATELEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tạo level</String>
+	<String
+		x:Key="CREATELEVEL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn hãy vào mặt đứng để chạy tool nhé</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_CREATEBOTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tạo cả 2</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_CREATEHORIZONTALGRID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tạo Lưới Ngang</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_CREATEVERTICALGRID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tạo Lưới Dọc</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_DEFAULT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mặc định</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_DISTANCEGRIDBOTTOM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khoảng cách Lưới từ dưới lên trên ngăn cách bằng dấu ","</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_DISTANCEGRIDSEPARATORBY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lưới khoảng cách từ trái sang phải Dấu phân cách bằng ","</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_GRIDNAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tên Lưới:</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_HORIZONTAL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Phương Ngang</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_NAMESTARTWITH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tên bắt đầu với số (1 2 3 4):</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_NAMEWITHALPHA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tên bắt đầu bằng chữ (A B C):</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_PHUONGTHUCDATTENGRID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Giá trị sai</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_SAMEDISTANCE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mẹo: Sử dụng "*" với cùng khoảng cách</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_STARTNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số bắt đầu:</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_TIP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Giá trị sai</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tạo Lưới</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATEGRIDVIEW_VERTICAL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Phương dọc</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_DEFAULT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mặc định</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_EXHEIGHT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Ex Height:</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_INPUT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nhập level ngăn cách bởi ","</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_LEVELNAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tên Tầng</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_STARTNUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số bắt đầu:</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_TAB1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tạo tầng từ cách chọn một tầng</String>
+	<String
+		x:Key="CREATELEVELGRID_CREATELEVELVIEW_TAB2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tạo tầng từ nhập chiều cao</String>
+	<String
+		x:Key="CREATETAGBEAM_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chúng tôi vẫn chưa cập nhật video hướng dẫn, bạn hãy theo dõi BimSpeed để thấy video hướng dẫn sớm nhất nhé</String>
+	<String
+		x:Key="CREATETAGBEAM_MM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">mm</String>
+	<String
+		x:Key="CREATETAGBEAM_VIEW_DISTANCETOTAG" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khoảng cách đến Tag</String>
+	<String
+		x:Key="CREATETAGBEAM_VIEW_FAMILYTAG" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Family Tag:</String>
+	<String
+		x:Key="CREATETAGBEAM_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tạo Beam Tag</String>
+	<String
+		x:Key="CREATETAGVIEWMODEL_PICKOBJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hãy chọn dầm</String>
+	<String
+		x:Key="CREATETAGVIEWMODEL_PICKPOINT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Pick điểm đầu</String>
+	<String
+		x:Key="CREATETAGVIEWMODEL_PICKPOINT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Pick điểm cuối</String>
+	<String
+		x:Key="CREATETAGVM_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn chưa có FamilyTag trong Revit</String>
+	<String
+		x:Key="CREATETAGVM_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mời bạn nhập chiều dài hợp lệ</String>
+	<String
+		x:Key="CREATEWALL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Một vài Wall chưa finish được</String>
+	<String
+		x:Key="CUTFRAMINGVIEW_BXH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">BxH =</String>
+	<String
+		x:Key="CUTREBARATPOINT_COUPLERUSERCONTROL_COUPLER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khớp nối:</String>
+	<String
+		x:Key="CUTREBARATPOINT_COUPLERUSERCONTROL_LAPLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều dài đoạn nối:</String>
+	<String
+		x:Key="CUTREBARATPOINT_COUPLERUSERCONTROL_TYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Type:</String>
+	<String
+		x:Key="CUTREBARATPOINT_CRACKEDBAR_LAPLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều dài đoạn nối:</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_COUPLER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khớp nối</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_CRACKEDBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cracked Bar</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_DISTANCE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khoảng cách 2 đoạn:</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_LAPPEDBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thanh đã nối</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_OPTIONCUT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tuỳ chọn cắt</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_ROUNDING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Làm tròn</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_ROUNDINGTHELENGTHOFREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Làm tròn chiều dài cốt thép:</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_STAGGERED" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">So le</String>
+	<String
+		x:Key="CUTREBARATPOINT_SPLITREBAR_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cắt thép tại điểm</String>
+	<String
+		x:Key="REBARDETAIL_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Rebar Shape 2D Setting</String>
+	<String
+		x:Key="REBARDETAIL_VIEW_VALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Has Value Length</String>
+	<String
+		x:Key="REBARDETAILING_REBARSHAPEDETAIL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cannot create tag because project does not have Family Tag</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_REBARLOCATIONVM_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">There should be at least 1 floor in the project</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_REBARLOCATIONVM_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn đã huỷ</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_ACTIVEVIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Active View</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_BOTPARAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bot Parameter:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_BOTVALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bot Value:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_FILTERSLAB" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Filter Slab Rebar Top / Bottom</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_FILTERSLABXY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Filter Slab Rebar X / Y</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_PARALLELOXPARAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Parallel Ox Parameter:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_PARALLELOYPARAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Parallel Oy Parameter:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_PROJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dự án</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_RANGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Range:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_RANGEOFOPERATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Range Of Operation</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_SELECTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lựa chọn</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Slab Rebar Location</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_TOPPARAMETER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Top Parameter:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_TOPVALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Top Value:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_XVALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Giá trị X:</String>
+	<String
+		x:Key="REBARDIRECTIONANDLAYER_VIEW_YVALUE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Giá trị Y:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_AUTO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tự động</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_BARLOCATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bar Location:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_CHECKALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Kiểm tra tất cả</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_CHECKSELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Kiểm tra đã chọn</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_GETACTUAL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Get actual Bar Length (consider Bending Diameter)</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_GETBARLENGTHFOLLOWING" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Get Bar Length following:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_LAPLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều dài đoạn nối:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_MANUAL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thủ công</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_PARAMETERSETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thiết lập Paramater</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_QUANTITIES" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Quantites:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_REBARSETTINGS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thiết lập cốt thép</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_SEARCH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tìm kiếm:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_SELECTIONTYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Selection Type:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_SELECTREBARS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Select Rebars</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_SUMOF" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tổng tất cả các đoạn (A + B + C + ...)</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Export Settings</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_UNCHECKALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bỏ kiểm tra tất cả</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW1_UNCHECKSELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bỏ kiểm tra đã chọn</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_CDAI" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều dài (m)</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_CDAI2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều dài (mm)</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_L" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">L (nối)</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_NOITHEP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nối Thép</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_NUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_SELECTLEVEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn Tầng:</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_SHAPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Shape</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_SOCK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sock</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_SOHIEU" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số hiệu cốt thép</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Rebar Schedule</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_TONGCAUKIEN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tổng Cấu Kiện</String>
+	<String
+		x:Key="REBARSCHEDULE_VIEW2_TRONG1CAUKIEN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Trong 1 cấu kiện</String>
+	<String
+		x:Key="REBARSHAPE2DCMD_CHONDIEMDAT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn điểm đặt</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_MODELS_FOLDERMOELS_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cannot get Id of file</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_MODELS_FOLDERMOELS_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">There is a problem with the File path</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_ANGLEDISPLAY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Angle Display (Degree°)</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_CURRENTVIEW" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">View hiện tại</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_FONTDISPLAY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Font are displayed in images:</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_FONTSIZE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">The font size is shown in the image:</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_FREEDOM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Free Form</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_HEIGHTIMAGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều cao trong ảnh</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_NAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tên</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_NO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">STT</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_PIXELS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">(Pixels)</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_PROJECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dự án</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_REBARPARTITION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vách ngăn cốt thép</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_REMOVESTOREIMAGES" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Remove Store Images</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SCHEDULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bảng Thống Kê</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SEARCHPARTITIONNAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Search Partition Name:</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SELECT" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lựa chọn</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SELECTREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lựa chọn thép</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SETTINGDISPLAYED" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thiết lập hiển thị</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_SHOWHOOKLENGTH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hiển thị chiều dài móc</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_THICKNESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Độ dày của cốt thép được hiển thị trong hình ảnh:</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hình ảnh thanh cốt thép</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_WIDTHIMAGE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều rộng trong hình ảnh</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW1_YESNO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Có/Không</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW2_DESCRIPTION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mô tả</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW2_ID" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">ID</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW2_MARK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nhãn</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW2_NO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">STT</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VIEW2_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cảnh báo</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VM_REBARSHAPECONTROLLER_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thư mục bị lỗi .Vui lòng liên hệ BimSpeed để được hỗ trợ</String>
+	<String
+		x:Key="REBARSHAPEIMAGE_VM_REBARSHAPECONTROLLER_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">There are no rebars in the project</String>
+	<String
+		x:Key="REBARSHCEDULE_VMEXPORTSETTING_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vui lòng chọn một số thanh thép</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_BEAM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Dầm:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_COE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Coefficient (HSDN)</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_COLUMN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cột:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_FILTER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Filter By Partition</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_FLOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Sàn:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_FOUNDATION" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Móng:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_LINTEL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lanh Tô:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_NAME" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tên:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_PAPERSIZE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khổ giấy:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_SCHEDULE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Schedule:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_STAIR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cầu Thang:</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bar Schedule</String>
+	<String
+		x:Key="REBARTOOL_BARSCHEDULEVIEW_WALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tường</String>
+	<String
+		x:Key="REBARTOOL_SPLITREBAR_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn đã huỷ</String>
+	<String
+		x:Key="REBARTOOLS_GROUPREBAR_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Một số Thanh cốt thép đã chọn nằm trong nhóm khác, bạn có muốn chuyển sang nhóm mới không?</String>
+	<String
+		x:Key="REBARTOOLS_GROUPREBAR_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn đã huỷ</String>
+	<String
+		x:Key="REBARTOOLS_REBARCOLUMNCMD_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Các cột được chọn có cùng level. Vui lòng chọn cột có level khác hoặc liên hệ BIM Speed ​​để biết thêm thông tin</String>
+	<String
+		x:Key="REBARTOOLS_REBARCOLUMNCMD_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vui lòng load tất cả các Rebar Families</String>
+	<String
+		x:Key="REBARTOOLS_REBARCOLUMNCMD_MESS4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Style của cột không hợp lệ</String>
+	<String
+		x:Key="REBARTOOLS_REBARCOLUMNCMD_MESS3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">License của bạn không hợp lệ</String>
+	<String
+		x:Key="REBARTOOLS_REBARSEGEMENTLENGTH_MESS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều dài thanh thép đã được cập nhật</String>
+	<String
+		x:Key="REMOVEEXCESSVOLUME_VIEW_AREA" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diện tích</String>
+	<String
+		x:Key="REMOVEEXCESSVOLUME_VIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Remove Excess Volume</String>
+	<String
+		x:Key="REMOVEEXCESSVOLUME_VIEWMODEL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Công cụ này không hỗ trợ dầm cong với {0}</String>
+	<String
+		x:Key="REMOVEEXCESSVOLUME_VIEWMODEL_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Created {0} Structural Opening Cut</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hãy Click Chọn 1 thiết lập để lưu nhé</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đã Hoàn Thành</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Không tìm thấy View nào được Select</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đã xảy ra lỗi khi đổi tên thành</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">có thể do bị trùng tên với sheet khác hoặc liên hệ BimSpeed để được trợ giúp nhé</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS6" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đã xảy ra lỗi, Không thể đổi tên View từ</String>
+	<String
+		x:Key="RENAMESHEETMODEL_MESS7" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hãy liên hệ BimSpeed để được trợ giúp nhé</String>
+	<String
+		x:Key="RENAMESHEETVM2_MESS1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn hãy nhập giá trị cần chèn vào nhé</String>
+	<String
+		x:Key="RENAMESHEETVM2_MESS2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bạn hãy nhập đủ trường tìm kiếm nhé</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_ALPHABET" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bảng chữ cái</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_NUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số thứ tự</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_OPTIONS" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Lựa chọn</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_PREFIX" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tiền tố:</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_START" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bắt đầu:</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_STEP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bước nhảy:</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_SURFFIX" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hậu tố:</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đánh thứ tự views trong bản vẽ</String>
+	<String
+		x:Key="RENUMBERVIEWS_MAINVIEW_TYPE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Kiểu:</String>
+	<String
+		x:Key="ColumnRebarViewModel_Message1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Các cột không thẳng hàng</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vui lòng không dùng detail type để tạo mặt cắt dọc. Hãy dùng section type và thử lại</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vui lòng không dùng section type để tạo mặt cắt ngang. Hãy dùng detail type và thử lại</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mặt cắt ngang không hợp lệ. Không có cột trong bản vẽ này</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Mặt cắt ngang không hợp lệ. Có nhiều hơn 1 cột trong bản vẽ này</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn mặt cắt ngang cần cập nhật, kết thúc bằng cách bấm Finish</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message6" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đang chạy tính năng cập nhật mặt cắt ngang. Vui lòng không chọn mặt cắt dọc</String>
+	<String
+		x:Key="UpdateColumnDrawingCmd_Message7" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tính năng này chỉ hoạt động trong mặt cắt dọc hoặc mặt cắt ngang</String>
+	<String
+		x:Key="ColumnDrawingModel_Message1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cột không thẳng đứng</String>
+	<String
+		x:Key="ColumnDrawingModel_Message2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Không có cạnh nào song song với hướng chính</String>
+	<String
+		x:Key="ColumnDrawingModel_Message3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cột tiết diện không xác định</String>
+	<String
+		x:Key="ColumnDrawingViewModel_Message1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cập nhật Mặt cắt dọc hoàn thành</String>
+	<String
+		x:Key="ColumnDrawingViewModel_Message2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cập nhật Mặt cắt ngang hoàn thành</String>
+	<String
+		x:Key="ColumnDrawingViewModel_Message3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tên bản vẽ không thể để trống</String>
+	<String
+		x:Key="ColumnDrawingViewModel_Message4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số bản vẽ không thể để trống</String>
+	<String
+		x:Key="ColumnDrawingViewModel_Message5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tỷ lệ phải lớn hơn 0</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TITLE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thép cột 2.0</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TITLE1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hình học &amp; bố trí thép</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_HEADER1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tất cả cột</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_HEADER2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hiệu chỉnh cốt thép</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_NUMBERREBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số lượng thép:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_CX" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số lượng thép cạnh Cx:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_CY" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Số lượng thép cạnh Cy:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_MAINREBAR_D" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đường kính cốt thép chính:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_D" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đường kính cốt đai chính:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_HOOK_D" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đường kính đai móc:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_INFO" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thông tin chung</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TOTAL_REBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tổng hợp số cốt thép:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_AREA_REBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Diện tích cốt thép (cm²):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_CONTENT_REBAR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Hàm lượng cốt thép (%):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_APPLYALLFLOOR" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Áp dụng cho các tầng còn lại</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TITLE2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tiết diện &amp; Loại đai</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_DISTRIBUTE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bố trí thép đai:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_MOC" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đai móc</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_LONGKINH" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đai lồng kín</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_DELETEALL" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Xoá tất cả</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_INFORCOLUMN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thông tin cột</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_HEIGHTBEAM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều cao dầm sàn (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TOPCOVER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bê tông bảo vệ trên (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_OTHERCOVER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Loại cấu kiện dầm sàn:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_TYPEBEAM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bê tông bảo vệ khác (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_SPACEDIS_STIRRUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đoạn rải cốt đai</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_DIS_BOTTOM" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Rải thép đai tới đáy dầm hoặc sàn</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_DIS_TOP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Rải tới cao độ lớn nhất của đỉnh cột dầm hoặc sàn</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_DIS_SPACE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bố trí theo khoảng cách (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_DIS_NUMBER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bố trí theo số lượng:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_START_SPACE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bắt đầu rải đai cách các mép 1 đoạn (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEADER1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Quy tắc rải cốt đai chính</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEADER2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">A1 được bố trí trong đoạn L1 tính từ mép nút khung</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEADER3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">L1 lấy lớn nhất trong các giá trị sau:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_MIN" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Giá trị tối thiểu (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEIGHTDIV" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều cao thông thủy cột chia cho:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEIGHTSEC" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều cao tiết diện cột</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_TYPEHOOK" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Loại móc:</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEADER4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Quy tắc rải cốt đai bổ sung</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_ADDSTIRRUP" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bố trí toàn bộ khoảng cách đai bổ sung theo đai chính</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_ADDSTIRRUP_SPACE" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khoảng cách cốt đai bổ sung (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_HEADER3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thép móng</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">CÀI ĐẶT THÉP CHỜ MÓNG</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thép chủ &amp; khoảng cách rải đai</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tách thép thành 2 đoạn tại vị trí thép chờ móng</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khoảng cách cốt đai (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bố trí hướng thép chờ móng</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cài đặt chung</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Đoạn bẻ móc cốt thép</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Theo chiều dài cố định L (mm):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Theo đường kính (xD):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Cài đặt cốt thép đỉnh mái</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Bẻ móc cốt thép tầng trên cùng</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tiếp tục chờ thép tầng trên cùng</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER3" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Gán thêm thông tin cho thép</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Gán cao độ cột cho thép</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT6" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tự động gán Partition cho thép</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER4" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều dài neo và nối thép cột</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT7" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều dài nối chồng (xØ):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT8" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều dài neo mặc định (xØ):</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT9" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nhấn thép tại các vị trí nối</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT10" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Group thép cùng số hiệu trong cột</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER5" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Điều kiện uốn hoặc cắt thép</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT11" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Uốn thép nếu e ≤ (mm)</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT12" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Uốn theo tỷ lệ Hd/e ≥</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER6" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Vị trí nối cốt thép</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT13" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nối cách chân cột L = (mm)</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT14" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nối giữa tầng</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT15" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Khoảng cách giữa 2 lần nối (xD)</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT16" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nối thép tại 1 vị trí</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT17" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Nối thép tại 2 vị trí</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER7" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tùy chọn ở vị trí dầm sàn</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT18" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chọn cấu kiện dầm sàn thủ công</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT19" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Quét chọn</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT20" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tự động tìm dầm có cao độ và chiều cao phù hợp liên kết với cột</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT21" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Tự động tìm sàn có cao độ và chiều dày phù hợp liên kết với cột</String>
+	<String
+		x:Key="COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT22" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Chiều cao mặc định Hd (mm):</String>
+	<String
+		x:Key="APPLYOTHERLEVELVIEW_HEADER1" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thép chủ</String>
+	<String
+		x:Key="APPLYOTHERLEVELVIEW_HEADER2" xmlns="clr-namespace:System;assembly=System.Private.CoreLib">Thép đai</String>
+</ResourceDictionary>

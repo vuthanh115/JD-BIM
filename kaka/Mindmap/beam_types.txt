@@ -1,0 +1,22 @@
+=== DLL: c:\Working\kaka\libs\2024\BimSpeedApp.dll ===
+=== DLL: c:\Working\kaka\libs\2024\BimSpeedUtils.dll ===
+BimSpeedUtilsl.RebarData
+BimSpeedUtils.BeamGeometryInfo
+BimSpeedUtils.RebarDetailModel
+BimSpeedUtils.DistributionRebarVersion
+BimSpeedUtils.GroupRebarUtils
+BimSpeedUtils.RebarDiameterModel
+BimSpeedUtils.RebarDistribution
+BimSpeedUtils.RebarUtils
+BimSpeedUtils.BeamSelectionFilter
+BimSpeedUtils.ElementContainRebarSelectionFilter
+BimSpeedUtils.SelectionFilter.RebarSelectionFilter
+BimSpeedUtils.ShearWallRebar.CrossSectionSettingJson
+BimSpeedUtils.ShearWallRebar.ShearWallRebarSettingJson
+BimSpeedUtils.Rebars.RebarLocationJson
+BimSpeedUtils.Rebars.RebarShape2D.RebarShape2DSettingJson
+BimSpeedUtils.ModelFromCadJson.ExportBeamDataTT
+BimSpeedUtils.ModelFromCadJson.BeamData
+BimSpeedUtils.ModelFromCadJson.ExportBeamData
+BimSpeedUtils.DataExporter.JWallRebar
+BimSpeedUtils.ComparerUtils.RebarComparer

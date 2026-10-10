@@ -1,0 +1,1136 @@
+<mah:MetroWindow
+    x:Class="kaka.Structure.Structural.App.Views.Column.ColumnRebarWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:codeg="clr-namespace:System;assembly=mscorlib"
+    xmlns:local="clr-namespace:kaka.Structure.Structural.App.Views.Column"
+
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:models="clr-namespace:kaka.Structure.Structural.App.Models.Column"
+    xmlns:behaviors="clr-namespace:BimSpeedUtils.WPFUtils.Behaviors;assembly=BimSpeedUtils"
+    xmlns:paz="clr-namespace:Wpf.Controls.PanAndZoom;assembly=Wpf.Controls.PanAndZoom"
+    xmlns:wpfUtils="clr-namespace:BimSpeedUtils.WPFUtils;assembly=BimSpeedUtils"
+    xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    mc:Ignorable="d"
+    Window.Title="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_TITLE}"
+    FrameworkElement.Width="1030"
+    FrameworkElement.Height="600"
+    Window.WindowStartupLocation="CenterScreen">
+
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+
+      <!-- 1) Merge resource dictionaries -->
+      <ResourceDictionary.MergedDictionaries>
+
+        <!-- Resource strings -->
+        <ResourceDictionary Source="pack://application:,,,/kaka.Structure.Structural.App;component/Resources/ResourceString.en.xaml" />
+
+        <!-- Styles from BimSpeedUtils -->
+        <ResourceDictionary Source="pack://application:,,,/BimSpeedUtils;component/WPFUtils/ResourceDictionaries/BSStyles.xaml" />
+
+      </ResourceDictionary.MergedDictionaries>
+
+      <!-- 2) Enum values provider -->
+      <ObjectDataProvider
+          x:Key="EnumDistributionType"
+          ObjectType="{x:Type codeg:Enum}"
+          MethodName="GetValues">
+        <ObjectDataProvider.MethodParameters>
+          <x:Type TypeName="models:EnumDistributionType" />
+        </ObjectDataProvider.MethodParameters>
+      </ObjectDataProvider>
+
+      <!-- 3) Converter -->
+      <models:ConverterEnumToImage x:Key="ConverterEnumToImage" />
+      <BooleanToVisibilityConverter x:Key="ConverterBoolToVisibility"/>
+
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <!-- MAIN -->
+      <RowDefinition Height="*" />
+      <!-- FOOTER -->
+      <RowDefinition Height="60" />
+    </Grid.RowDefinitions>
+
+    <!-- FOOTER -->
+    <Grid
+        Grid.Row="1"
+        Background="{DynamicResource SystemColors.ControlBrushKey}">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition />
+        <ColumnDefinition />
+      </Grid.ColumnDefinitions>
+
+      <StackPanel
+          Grid.Column="1"
+          Margin="10"
+          HorizontalAlignment="Right"
+          Orientation="Horizontal">
+        <Button
+            Width="100"
+            Height="30"
+            Margin="0,0,5,0"
+            Content="{DynamicResource COMMON_BUTTON_RUN}"
+            Command="{Binding RunCommand}" />
+        <Button
+            Width="100"
+            Height="30"
+            Content="{DynamicResource COMMON_BUTTON_CLOSE}"
+            IsCancel="True" />
+      </StackPanel>
+    </Grid>
+
+    <!-- TABS -->
+    <TabControl
+        Grid.Row="0"
+        Name="myTabControl"
+        Margin="10"
+        SelectedIndex="{Binding SelectedTabIndex}">
+      <!-- TAB 1 -->
+      <TabItem Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_TITLE1}">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="330" />
+          </Grid.ColumnDefinitions>
+
+          <!-- IMPORTANT: Row0 must be Star so preview areas can stretch -->
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+
+          <!-- LEFT: ALL COLUMNS (VERTICAL PREVIEW) -->
+          <GroupBox Grid.RowSpan="2"
+                    Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_HEADER1}">
+            <!-- FIX: Do NOT use ScrollViewer to size canvas (it can collapse/measure oddly).
+                 Use Grid and enforce Min sizes so Canvas is always visible. -->
+            <Grid>
+              <paz:ZoomBorder x:Name="zoomVerticalSection"
+                              ClipToBounds="True"
+                              Background="Transparent">
+                <Canvas x:Name="canvasVerticalSection"
+                        Background="Transparent"
+                        MinWidth="200"
+                        MinHeight="200"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch">
+                </Canvas>
+              </paz:ZoomBorder>
+            </Grid>
+          </GroupBox>
+
+          <!-- MIDDLE: ADJUST REBAR -->
+          <GroupBox Grid.Column="1"
+                    Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_HEADER2}">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+
+              <StackPanel>
+                <DockPanel Height="40"
+                           Visibility="{Binding IsRoundColumn, Converter={StaticResource ConverterBoolToVisibility}}">
+                  <TextBlock Width="180"
+                             Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_NUMBERREBAR}" />
+                  <ComboBox ItemsSource="{Binding SelectedColumn.DQuantities}"
+                            SelectedItem="{Binding SelectedColumn.DQuantity}" />
+                </DockPanel>
+
+                <DockPanel Height="40"
+                           Visibility="{Binding IsRectangleColumn, Converter={StaticResource ConverterBoolToVisibility}}">
+                  <TextBlock Width="180"
+                             Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_CX}" />
+                  <ComboBox ItemsSource="{Binding SelectedColumn.CxQuantities}"
+                            SelectedItem="{Binding SelectedColumn.CxQuantity}" />
+                </DockPanel>
+
+                <DockPanel Height="40"
+                           Visibility="{Binding IsRectangleColumn, Converter={StaticResource ConverterBoolToVisibility}}">
+                  <TextBlock Width="180"
+                             Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_CY}" />
+                  <ComboBox ItemsSource="{Binding SelectedColumn.CyQuantities}"
+                            SelectedItem="{Binding SelectedColumn.CyQuantity}" />
+                </DockPanel>
+
+                <DockPanel Height="40">
+                  <TextBlock Width="180"
+                             Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_MAINREBAR_D}" />
+                  <ComboBox DisplayMemberPath="Name"
+                            ItemsSource="{Binding MainRebarTypes}"
+                            SelectedItem="{Binding SelectedColumn.MainRebarType}" />
+                </DockPanel>
+
+                <DockPanel Height="40">
+                  <TextBlock Width="180"
+                             Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_D}" />
+                  <ComboBox DisplayMemberPath="Name"
+                            ItemsSource="{Binding StirrupTypes}"
+                            SelectedItem="{Binding SelectedColumn.MainStirrupType}" />
+                </DockPanel>
+
+                <DockPanel Height="40">
+                  <TextBlock Width="180"
+                             Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_HOOK_D}" />
+                  <ComboBox DisplayMemberPath="Name"
+                            ItemsSource="{Binding StirrupTypes}"
+                            SelectedItem="{Binding SelectedColumn.AdditionalStirrupType}" />
+                </DockPanel>
+              </StackPanel>
+
+              <StackPanel Grid.Row="1">
+                <TextBlock HorizontalAlignment="Center"
+                           Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_INFO}" />
+                <DockPanel>
+                  <TextBlock Width="150"
+                             Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_TOTAL_REBAR}" />
+                  <TextBlock HorizontalAlignment="Center"
+                             FontWeight="Bold"
+                             Text="{Binding SelectedColumn.SectionReinforcementDescription}" />
+                </DockPanel>
+                <DockPanel>
+                  <TextBlock Width="150"
+                             Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_AREA_REBAR}" />
+                  <TextBlock HorizontalAlignment="Center"
+                             FontWeight="Bold"
+                             Text="{Binding SelectedColumn.SectionReinforcementArea, StringFormat={}{0}(cm²)}" />
+                </DockPanel>
+                <DockPanel>
+                  <TextBlock Width="150"
+                             Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_CONTENT_REBAR}" />
+                  <TextBlock HorizontalAlignment="Center"
+                             FontWeight="Bold"
+                             Text="{Binding SelectedColumn.SectionReinforcementRatio, StringFormat={}{0:N2}%}" />
+                </DockPanel>
+                <Button Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_APPLYALLFLOOR}"
+                        Command="{Binding ApplyOtherLevelsCommand}" />
+              </StackPanel>
+            </Grid>
+          </GroupBox>
+
+          <!-- RIGHT: CROSS-SECTION & STIRRUP TYPE (CROSS PREVIEW MUST STRETCH) -->
+          <GroupBox Grid.Column="2"
+                    Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_TITLE2}">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+
+              <!-- Distribution -->
+              <DockPanel>
+                <TextBlock Margin="0,0,10,0"
+                           Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_DISTRIBUTE}" />
+                <ComboBox Height="60"
+                          ItemsSource="{Binding Source={StaticResource EnumDistributionType}}"
+                          SelectedItem="{Binding SelectedColumn.DistributionType}">
+                  <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                      <StackPanel Orientation="Horizontal">
+                        <Image Height="50"
+                               Margin="0,0,5,0"
+                               Source="{Binding Converter={StaticResource ConverterEnumToImage}}" />
+                        <TextBlock VerticalAlignment="Center"
+                                   Text="{Binding Converter={StaticResource ConverterEnumDescription}}" />
+                      </StackPanel>
+                    </DataTemplate>
+                  </ItemsControl.ItemTemplate>
+                </ComboBox>
+              </DockPanel>
+
+              <!-- Options -->
+              <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition />
+                  <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Height="40" Orientation="Horizontal">
+                  <RadioButton Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_MOC}"
+                               IsChecked="{Binding SingleTie}" />
+                  <RadioButton Margin="10,0,0,0"
+                               Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_LONGKINH}"
+                               IsChecked="{Binding ClosedTie}" />
+                </StackPanel>
+
+                <Button Grid.Column="1"
+                        Height="30"
+                        Margin="10,0,0,0"
+                        Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_DELETEALL}"
+                        Command="{Binding DeleteAllStirrupTieCommand}" />
+              </Grid>
+
+              <!-- Cross preview (FIX: remove ScrollViewer, enforce MinHeight + stretch) -->
+              <Grid Grid.Row="2">
+                <paz:ZoomBorder x:Name="zoomCrossSection"
+                                ClipToBounds="True"
+                                Background="Transparent">
+                  <Canvas x:Name="canvasCrossSection"
+                          Background="White"
+                          MinWidth="200"
+                          MinHeight="200"
+                          HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch">
+
+                    <Canvas.RenderTransform>
+                      <TransformGroup>
+                        <ScaleTransform ScaleY="-1" />
+                        <TranslateTransform Y="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" />
+                      </TransformGroup>
+                    </Canvas.RenderTransform>
+                  </Canvas>
+                </paz:ZoomBorder>
+              </Grid>
+
+
+            </Grid>
+          </GroupBox>
+
+          <!-- BOTTOM INFO -->
+          <GroupBox Grid.Row="1"
+          Grid.Column="1"
+          Grid.ColumnSpan="2"
+          Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_INFORCOLUMN}">
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition />
+              <ColumnDefinition Width="10" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="40" />
+              <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+
+              <TextBlock Margin="0,0,10,0"
+                         VerticalAlignment="Center"
+                         Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_HEIGHTBEAM}" />
+              <TextBlock Grid.Column="1"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"
+                         Text="{Binding SelectedColumn.FramingFloorHeight, Converter={StaticResource ConverterFootToMm}, ConverterParameter=0}" />
+
+              <TextBlock Grid.Row="1"
+                         Margin="0,0,10,0"
+                         VerticalAlignment="Center"
+                         Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_TOPCOVER}" />
+              
+              <TextBox Grid.Row="1"
+                       Grid.Column="1"
+                       HorizontalContentAlignment="Center"
+                       VerticalContentAlignment="Center"
+                       behaviors:NumberOnlyBehavior.IsEnabled="True"
+                       Text="{Binding SelectedColumn.CoverTop, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}" />
+
+              <TextBlock Grid.Column="3"
+                         Margin="0,0,10,0"
+                         VerticalAlignment="Center"
+                         Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_TYPEBEAM}" />
+              <TextBlock Grid.Column="4"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"
+                         Text="{Binding SelectedColumn.FramingFloorName}" />
+
+              <TextBlock Grid.Row="1"
+                         Grid.Column="3"
+                         Margin="0,0,10,0"
+                         VerticalAlignment="Center"
+                         Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_OTHERCOVER}" />
+
+               <TextBox Grid.Row="1"
+             Grid.Column="4"
+             HorizontalContentAlignment="Center"
+             VerticalContentAlignment="Center"
+             behaviors:NumberOnlyBehavior.IsEnabled="True"
+             Text="{Binding SelectedColumn.CoverOther, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}" />
+           </Grid>
+          </GroupBox>
+
+        </Grid>
+      </TabItem>
+
+      <!-- TAB 2 -->
+      <TabItem
+	      Margin="1,0,-1,0"
+	      Header="{DynamicResource COLUMREBAR_COLUMNREBARVIEW_STIRRUP}">
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition />
+						<ColumnDefinition />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition
+							Height="Auto" />
+						<RowDefinition />
+					</Grid.RowDefinitions>
+					<GroupBox
+						Grid.RowSpan="2"
+						Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_SPACEDIS_STIRRUP}">
+						<StackPanel>
+							<FrameworkElement.Resources>
+								<ResourceDictionary>
+									<Style
+										TargetType="{x:Type GroupBox}"
+										x:Key="{x:Type GroupBox}" />
+								</ResourceDictionary>
+							</FrameworkElement.Resources>
+							<RadioButton
+								Height="40"
+								Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_DIS_BOTTOM}"
+								IsChecked="{Binding StirrupSetting.ShouldSpreadToTopFramingFloor, Converter={StaticResource ConverterBoolReverse}}" />
+							<!--Unknown connection ID: 8-->
+							<RadioButton
+								Name="rbStirrupToTop"
+								Grid.Row="1"
+								Height="40"
+								Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_DIS_TOP}"
+								IsChecked="{Binding StirrupSetting.ShouldSpreadToTopFramingFloor}" />
+							<GroupBox
+								Margin="10,0,0,0"
+								Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_INBEAM_SEISMIC}"
+								IsEnabled="{Binding ElementName=rbStirrupToTop, Path=IsChecked}">
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition
+											Width="240" />
+										<ColumnDefinition />
+									</Grid.ColumnDefinitions>
+									<Grid.RowDefinitions>
+										<RowDefinition
+											Height="40" />
+										<RowDefinition
+											Height="40" />
+									</Grid.RowDefinitions>
+									<RadioButton
+										Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_DIS_SPACE}"
+										IsChecked="{Binding StirrupSetting.IsSeismicSrirrupSpacing}" />
+									<TextBox
+										Grid.Column="1"
+										Width="100"
+										Style="{StaticResource TextBoxNumberOnly}"
+										Text="{Binding StirrupSetting.SeismicSrirrupSpacing, Converter={StaticResource ConverterFootToMm}, ConverterParameter=0}" />
+									<RadioButton
+										Grid.Row="1"
+										Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_DIS_NUMBER}"
+										IsChecked="{Binding StirrupSetting.IsSeismicSrirrupSpacing, Converter={StaticResource ConverterBoolReverse}}" />
+									<TextBox
+										Grid.Row="1"
+										Grid.Column="1"
+										Width="100"
+										Style="{StaticResource TextBoxNumberOnly}"
+										Text="{Binding StirrupSetting.SeismicSrirrupQuantity}" />
+								</Grid>
+							</GroupBox>
+							<DockPanel
+								Height="40">
+								<TextBlock
+									Width="250"
+									Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_START_SPACE}" />
+								<TextBox
+									Width="100"
+									Style="{StaticResource TextBoxNumberOnly}"
+									Text="{Binding StirrupSetting.StartingOffset, Converter={StaticResource ConverterFootToMm}, ConverterParameter=0}" />
+							</DockPanel>
+						</StackPanel>
+					</GroupBox>
+					<GroupBox
+						Grid.Column="1"
+						Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEADER1}">
+						<StackPanel>
+							<FrameworkElement.Resources>
+								<ResourceDictionary>
+									<Style
+										TargetType="{x:Type GroupBox}"
+										x:Key="{x:Type GroupBox}" />
+								</ResourceDictionary>
+							</FrameworkElement.Resources>
+							<Grid>
+								<Grid.RowDefinitions>
+									<RowDefinition />
+									<RowDefinition />
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="Auto" />
+									<ColumnDefinition
+										Width="Auto" />
+									<ColumnDefinition />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Text="A1 (mm) = " />
+								<TextBox
+									Grid.Column="1"
+									Width="100"
+									HorizontalAlignment="Left"
+									Style="{StaticResource TextBoxNumberOnly}"
+									Text="{Binding StirrupSetting.A1Value, Converter={StaticResource ConverterFootToMm}, ConverterParameter=0}" />
+								<TextBlock
+									Grid.Row="1"
+									Text="A2 (mm) = " />
+								<TextBox
+									Grid.Row="1"
+									Grid.Column="1"
+									Width="100"
+									HorizontalAlignment="Left"
+									Style="{StaticResource TextBoxNumberOnly}"
+									Text="{Binding StirrupSetting.A2Value, Converter={StaticResource ConverterFootToMm}, ConverterParameter=0}" />
+								<Image 
+									Grid.RowSpan="2"
+									Grid.Column="2"
+									Height="100"
+									Source="/kaka.Structure.Structural.App;component/Resources/Images/Column/a1a2a1.png" />
+							</Grid>
+							<GroupBox
+								Margin="10,0,0,0"
+								Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEADER2}">
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition />
+										<ColumnDefinition
+											Width="Auto" />
+									</Grid.ColumnDefinitions>
+									<Grid.RowDefinitions>
+										<RowDefinition
+											Height="25" />
+										<RowDefinition
+											Height="35" />
+										<RowDefinition
+											Height="35" />
+										<RowDefinition
+											Height="25" />
+									</Grid.RowDefinitions>
+									<TextBlock
+										Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEADER3}" />
+									<!--Unknown connection ID: 9-->
+									<CheckBox
+										Name="ckbL1Minimum"
+										Grid.Row="1"
+										Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_MIN}"
+										IsChecked="{Binding StirrupSetting.HasL1Minimum}" />
+									<TextBox
+										Grid.Row="1"
+										Grid.Column="1"
+										Width="100"
+										Style="{StaticResource TextBoxNumberOnly}"
+										Text="{Binding StirrupSetting.L1Minimum, Converter={StaticResource ConverterFootToMm}, ConverterParameter=0}" />
+									<!--Unknown connection ID: 10-->
+									<CheckBox
+										Name="ckbL1Division"
+										Grid.Row="2"
+										Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEIGHTDIV}"
+										IsChecked="{Binding StirrupSetting.HasDivisionFactor}" />
+									<TextBox
+										Grid.Row="2"
+										Grid.Column="1"
+										Width="100"
+										Style="{StaticResource TextBoxNumberOnly}"
+										Text="{Binding StirrupSetting.DivisionFactor}" />
+									<CheckBox
+										Grid.Row="3"
+										Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEIGHTSEC}"
+										IsChecked="{Binding StirrupSetting.HasColumnSectionHeight}" />
+								</Grid>
+							</GroupBox>
+							<DockPanel
+								Height="40">
+								<TextBlock
+									Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_TYPEHOOK}" />
+								<ComboBox
+									Width="200"
+									HorizontalAlignment="Right"
+									DisplayMemberPath="Name"
+									ItemsSource="{Binding StirrupHookTypes}"
+									SelectedItem="{Binding StirrupSetting.MainStirrupHookType}" />
+							</DockPanel>
+						</StackPanel>
+					</GroupBox>
+					<GroupBox
+						Grid.Row="1"
+						Grid.Column="1"
+						Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_HEADER4}">
+						<StackPanel>
+							<RadioButton
+								Height="40"
+								GroupName="Stirruptype"
+								Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_ADDSTIRRUP}"
+								IsChecked="{Binding StirrupSetting.AdditionalStirrupSpacingFollowingMain}" />
+							<DockPanel>
+								<!--Unknown connection ID: 11-->
+								<RadioButton
+									Name="rbAdditionStirrup"
+									GroupName="Stirruptype"
+									Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_ADDSTIRRUP_SPACE}"
+									IsChecked="{Binding StirrupSetting.AdditionalStirrupSpacingFollowingMain, Converter={StaticResource ConverterBoolReverse}}" />
+								<TextBox
+									Width="100"
+									HorizontalAlignment="Right"
+									Style="{StaticResource TextBoxNumberOnly}"
+									IsEnabled="{Binding ElementName=rbAdditionStirrup, Path=IsChecked}"
+									Text="{Binding StirrupSetting.AdditionalStirupSpacing, Converter={StaticResource ConverterFootToMm}, ConverterParameter=0}" />
+							</DockPanel>
+							<DockPanel
+								Height="40">
+								<TextBlock
+									Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_STIRRUP_TYPEHOOK}" />
+								<ComboBox
+									Width="200"
+									HorizontalAlignment="Right"
+									DisplayMemberPath="Name"
+									ItemsSource="{Binding StirrupHookTypes}"
+									SelectedItem="{Binding StirrupSetting.AdditionalStirrupHookType}" />
+							</DockPanel>
+						</StackPanel>
+					</GroupBox>
+				</Grid>
+			</TabItem>
+
+      <!-- TAB 3 -->
+<TabItem Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_HEADER3}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <GroupBox>
+            <HeaderedContentControl.Header>
+                <CheckBox
+                    Name="ckbStarterBar"
+                    IsChecked="{Binding StarterBarSetting.HasStarterBar}">
+                    <TextBlock
+                        FontWeight="Bold"
+                        Foreground="#FFFFFFFF"
+                        Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT1}" />
+                </CheckBox>
+            </HeaderedContentControl.Header>
+
+            <Grid IsEnabled="{Binding ElementName=ckbStarterBar, Path=IsChecked}">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <GroupBox Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT2}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="0" Margin="0,0,0,5">
+                            <CheckBox
+                                Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT3}"
+                                IsChecked="{Binding StarterBarSetting.ShouldSeparateSegment}" />
+                            <CheckBox
+                                Content="Tự động theo móng bên dưới"
+                                IsChecked="{Binding StarterBarSetting.AutoDetectFoundation}"
+                                Margin="0,4,0,0" />
+                        </StackPanel>
+
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <CheckBox
+                                Name="ckbHasStirrupSpacing"
+                                Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT4}"
+                                IsChecked="{Binding StarterBarSetting.HasStirrupSpacing}" />
+                            
+                            <TextBox
+                                Grid.Column="1"
+                                Margin="10,0,0,0"
+                                IsEnabled="{Binding ElementName=ckbHasStirrupSpacing, Path=IsChecked}"
+                                Text="{Binding StarterBarSetting.StirrupSpacing, Converter={StaticResource ConverterFootToMm}, ConverterParameter=0}" />
+
+                            <TextBlock
+                                Grid.Row="1"
+                                HorizontalAlignment="Right"
+                                Text="Hm (mm):" />
+                            
+                            <TextBox
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Margin="10,0,0,0"
+                                Text="{Binding StarterBarSetting.HmValue, Converter={StaticResource ConverterFootToMm}, ConverterParameter=0}" />
+
+                            <TextBlock
+                                Grid.Row="2"
+                                HorizontalAlignment="Right"
+                                Text="Lb (mm):" />
+                            
+                            <TextBox
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Margin="10,0,0,0"
+                                Text="{Binding StarterBarSetting.LbValue, Converter={StaticResource ConverterFootToMm}, ConverterParameter=0}" />
+
+                            <Image
+                                Grid.RowSpan="3"
+                                Grid.Column="2"
+                                Source="/kaka.Structure.Structural.App;component/Resources/Images/Column/StarterBarCombine.png"
+                                Visibility="{Binding StarterBarSetting.ShouldSeparateSegment, Converter={StaticResource ConverterBoolToVisibilityReverse}}" />
+                            
+                            <Image
+                                Grid.RowSpan="3"
+                                Grid.Column="2"
+                                Source="/kaka.Structure.Structural.App;component/Resources/Images/Column/StarterBarSeparate.png"
+                                Visibility="{Binding StarterBarSetting.ShouldSeparateSegment, Converter={StaticResource ConverterBoolToVisibility}}" />
+                        </Grid>
+                    </Grid>
+                </GroupBox>
+
+                <GroupBox
+                    Grid.Row="1"
+                    Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_FOUNDATION_TEXT5}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Border
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Width="50"
+                            Height="50"
+                            HorizontalAlignment="Right"
+                            CornerRadius="4">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="BorderThickness" Value="1" />
+                                    <Setter Property="BorderBrush" Value="#FFAAAAAA" />
+                                    <Setter Property="Background" Value="#15000000" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding StarterBarSetting.Leftward}" Value="True">
+                                            <Setter Property="BorderThickness" Value="2.5" />
+                                            <Setter Property="BorderBrush" Value="#FFD32F2F" />
+                                            <Setter Property="Background" Value="#35D32F2F" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                            <Button
+                                Style="{StaticResource ButtonIcon}"
+                                Command="{Binding StarterBarSetting.LeftwardCommand}">
+                                <ContentControl.Content>
+                                    <Image
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Source="{Binding StarterBarSetting.LeftwardImage}" />
+                                </ContentControl.Content>
+                            </Button>
+                        </Border>
+
+                        <Border
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Width="50"
+                            Height="50"
+                            HorizontalAlignment="Left"
+                            CornerRadius="4">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="BorderThickness" Value="1" />
+                                    <Setter Property="BorderBrush" Value="#FFAAAAAA" />
+                                    <Setter Property="Background" Value="#15000000" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding StarterBarSetting.Rightward}" Value="True">
+                                            <Setter Property="BorderThickness" Value="2.5" />
+                                            <Setter Property="BorderBrush" Value="#FFD32F2F" />
+                                            <Setter Property="Background" Value="#35D32F2F" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                            <Button
+                                Style="{StaticResource ButtonIcon}"
+                                Command="{Binding StarterBarSetting.RightwardCommand}">
+                                <ContentControl.Content>
+                                    <Image
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Source="{Binding StarterBarSetting.RightwardImage}" />
+                                </ContentControl.Content>
+                            </Button>
+                        </Border>
+
+                        <Border
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Width="50"
+                            Height="50"
+                            VerticalAlignment="Bottom"
+                            CornerRadius="4">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="BorderThickness" Value="1" />
+                                    <Setter Property="BorderBrush" Value="#FFAAAAAA" />
+                                    <Setter Property="Background" Value="#15000000" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding StarterBarSetting.Backward}" Value="True">
+                                            <Setter Property="BorderThickness" Value="2.5" />
+                                            <Setter Property="BorderBrush" Value="#FFD32F2F" />
+                                            <Setter Property="Background" Value="#35D32F2F" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                            <Button
+                                Style="{StaticResource ButtonIcon}"
+                                Command="{Binding StarterBarSetting.BackwardCommand}">
+                                <ContentControl.Content>
+                                    <Image
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Source="{Binding StarterBarSetting.BackwardImage}" />
+                                </ContentControl.Content>
+                            </Button>
+                        </Border>
+
+                        <Border
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Width="50"
+                            Height="50"
+                            VerticalAlignment="Top"
+                            CornerRadius="4">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="BorderThickness" Value="1" />
+                                    <Setter Property="BorderBrush" Value="#FFAAAAAA" />
+                                    <Setter Property="Background" Value="#15000000" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding StarterBarSetting.Frontward}" Value="True">
+                                            <Setter Property="BorderThickness" Value="2.5" />
+                                            <Setter Property="BorderBrush" Value="#FFD32F2F" />
+                                            <Setter Property="Background" Value="#35D32F2F" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                            <Button
+                                Style="{StaticResource ButtonIcon}"
+                                Command="{Binding StarterBarSetting.FrontwardCommand}">
+                                <ContentControl.Content>
+                                    <Image
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Source="{Binding StarterBarSetting.FrontwardImage}" />
+                                </ContentControl.Content>
+                            </Button>
+                        </Border>
+
+                        <Border
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Width="50"
+                            Height="50"
+                            CornerRadius="4">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="BorderThickness" Value="1" />
+                                    <Setter Property="BorderBrush" Value="#FFAAAAAA" />
+                                    <Setter Property="Background" Value="#15000000" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding StarterBarSetting.IsCenterActive}" Value="True">
+                                            <Setter Property="BorderThickness" Value="2.5" />
+                                            <Setter Property="BorderBrush" Value="#FFD32F2F" />
+                                            <Setter Property="Background" Value="#35D32F2F" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                            <Button
+                                Style="{StaticResource ButtonIcon}"
+                                Command="{Binding StarterBarSetting.InwardOutwardCommand}">
+                                <Path
+                                    Data="{DynamicResource Round}"
+                                    Fill="#FF800000"
+                                    Stretch="Uniform" />
+                            </Button>
+                        </Border>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</TabItem>
+
+      <!-- TAB 4 -->
+      <TabItem
+	      Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER}">
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition />
+						<ColumnDefinition />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition
+							Height="Auto" />
+						<RowDefinition
+							Height="Auto" />
+						<RowDefinition
+							Height="Auto" />
+						<RowDefinition />
+					</Grid.RowDefinitions>
+					<GroupBox
+						Grid.Row="0"
+						Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER1}">
+						<StackPanel>
+							<DockPanel
+								Height="30"
+								Margin="0,0,0,5">
+								<!--Unknown connection ID: 14-->
+								<RadioButton
+									Name="rbHeadLockByLength"
+									Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT1}"
+									GroupName="HeadLockByLength"
+									IsChecked="{Binding GeneralSetting.IsHeadLockByLength}" />
+								<TextBox
+									Width="100"
+									HorizontalAlignment="Right"
+									Style="{StaticResource TextBoxNumberOnly}"
+									IsEnabled="{Binding ElementName=rbHeadLockByLength, Path=IsChecked}"
+									Text="{Binding GeneralSetting.HeadHookLength, Converter={StaticResource ConverterFootToMm}, ConverterParameter=0}" />
+							</DockPanel>
+							<DockPanel
+								Height="30">
+								<!--Unknown connection ID: 15-->
+								<RadioButton
+									Name="rbHeadLockByFactor"
+									Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT2}"
+									GroupName="HeadLockByLength"
+									IsChecked="{Binding GeneralSetting.IsHeadLockByLength, Converter={StaticResource ConverterBoolReverse}}" />
+								<TextBox
+									Width="100"
+									HorizontalAlignment="Right"
+									Style="{StaticResource TextBoxNumberOnly}"
+									IsEnabled="{Binding ElementName=rbHeadLockByFactor, Path=IsChecked}"
+									Text="{Binding GeneralSetting.HeadHookFactor}" />
+							</DockPanel>
+						</StackPanel>
+					</GroupBox>
+					<GroupBox
+						Grid.Row="1"
+						Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER2}">
+						<StackPanel>
+							<RadioButton
+								Height="25"
+								Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT3}"
+								IsChecked="{Binding GeneralSetting.HasHeadLock}" />
+							<RadioButton
+								Height="25"
+								Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT4}"
+								IsChecked="{Binding GeneralSetting.HasHeadLock, Converter={StaticResource ConverterBoolReverse}}" />
+						</StackPanel>
+					</GroupBox>
+					<GroupBox
+						Grid.Row="2"
+						Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER3}">
+						<StackPanel>
+							<CheckBox
+								Height="25"
+								Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT5}"
+								IsChecked="{Binding GeneralSetting.ShouldSetLevelForRebar}" />
+							<CheckBox
+								Height="25"
+								Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT6}"
+								IsChecked="{Binding GeneralSetting.ShouldSetPartitionForRebar}" />
+						</StackPanel>
+					</GroupBox>
+					<GroupBox
+						Grid.Row="3"
+						Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER4}">
+						<StackPanel>
+							<DockPanel
+								Height="30"
+								Margin="0,0,0,5">
+								<TextBlock
+									Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT7}" />
+								<TextBox
+									Width="100"
+									HorizontalAlignment="Right"
+									Style="{StaticResource TextBoxNumberOnly}"
+									Text="{Binding GeneralSetting.CoefficientLapLength}" />
+							</DockPanel>
+							<DockPanel
+								Height="30">
+								<TextBlock
+									Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT8}" />
+								<TextBox
+									Width="100"
+									HorizontalAlignment="Right"
+									Style="{StaticResource TextBoxNumberOnly}"
+									Text="{Binding GeneralSetting.CoefficientAnchorageLength}" />
+							</DockPanel>
+							<CheckBox
+								Height="30"
+								Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT9}"
+								IsChecked="{Binding GeneralSetting.ShouldCrankRebarAtSplice}" />
+							<DockPanel
+								Height="30">
+								<!--Unknown connection ID: 16-->
+								<CheckBox
+									Name="ckbGroupRebar"
+									Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT10}"
+									IsChecked="{Binding GeneralSetting.ShouldGroupRebarSameNumber}" />
+								<ComboBox
+									Width="150"
+									HorizontalAlignment="Right"
+									IsEnabled="{Binding ElementName=ckbGroupRebar, Path=IsChecked}"
+									ItemsSource="{Binding RebarParameters}"
+									SelectedItem="{Binding GeneralSetting.GroupParameterName}" />
+							</DockPanel>
+						</StackPanel>
+					</GroupBox>
+					<GroupBox
+						Grid.Column="1"
+						Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER5}">
+						<StackPanel>
+							<DockPanel
+								Height="30"
+								Margin="0,0,0,5">
+								<TextBlock
+									Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT11}" />
+								<TextBox
+									Width="100"
+									HorizontalAlignment="Right"
+									Style="{StaticResource TextBoxNumberOnly}"
+									Text="{Binding GeneralSetting.MaxE, Converter={StaticResource ConverterFootToMm}, ConverterParameter=0}" />
+							</DockPanel>
+							<DockPanel>
+								<TextBlock
+									Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT12}" />
+								<TextBox
+									Width="100"
+									HorizontalAlignment="Right"
+									Style="{StaticResource TextBoxNumberOnly}"
+									Text="{Binding GeneralSetting.CoefficientHdE}" />
+							</DockPanel>
+						</StackPanel>
+					</GroupBox>
+					<GroupBox
+						Grid.Row="1"
+						Grid.RowSpan="2"
+						Grid.Column="1"
+						Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER6}">
+						<StackPanel>
+							<DockPanel>
+								<!--Unknown connection ID: 17-->
+								<RadioButton
+									Name="rbSpliceAtBottom"
+									Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT13}"
+									GroupName="SplicePosition"
+									IsChecked="{Binding GeneralSetting.ShouldSpliceAtBottom}" />
+								<TextBox
+									Width="100"
+									HorizontalAlignment="Right"
+									Style="{StaticResource TextBoxNumberOnly}"
+									IsEnabled="{Binding ElementName=rbSpliceAtBottom, Path=IsChecked}"
+									Text="{Binding GeneralSetting.OffsetFromColumnBottom, Converter={StaticResource ConverterFootToMm}, ConverterParameter=0}" />
+							</DockPanel>
+							<RadioButton
+								Height="30"
+								Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT14}"
+								GroupName="SplicePosition"
+								IsChecked="{Binding GeneralSetting.ShouldSpliceAtBottom, Converter={StaticResource ConverterBoolReverse}}" />
+							<DockPanel>
+								<TextBlock
+									Text="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT15}" />
+								<TextBox
+									Width="100"
+									HorizontalAlignment="Right"
+									Style="{StaticResource TextBoxNumberOnly}"
+									Text="{Binding GeneralSetting.CoefficientDistanceBetweenTwoLaps}" />
+							</DockPanel>
+							<RadioButton
+								Height="30"
+								Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT16}"
+								IsChecked="{Binding GeneralSetting.ShouldSpliceAtTwoPositions, Converter={StaticResource ConverterBoolReverse}}" />
+							<RadioButton
+								Height="30"
+								Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT17}"
+								IsChecked="{Binding GeneralSetting.ShouldSpliceAtTwoPositions}" />
+						</StackPanel>
+					</GroupBox>
+					<GroupBox
+						Grid.Row="3"
+						Grid.Column="1"
+						Header="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_HEADER7}">
+						<StackPanel>
+							<DockPanel
+								Height="30">
+								<!--Unknown connection ID: 18-->
+								<RadioButton
+									Name="rbFramingFloorManual"
+									Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT18}"
+									IsChecked="{Binding GeneralSetting.FramingFloorSelectionType, Converter={StaticResource ConverterEnumToBoolean}, ConverterParameter={x:Static models:EnumFramingFloorSelectionType.Manual}}" />
+								<Button
+									Width="100"
+									HorizontalAlignment="Right"
+									Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT19}"
+									Command="{Binding SelectFramingFloorCommand}"
+									IsEnabled="{Binding ElementName=rbFramingFloorManual, Path=IsChecked}" />
+							</DockPanel>
+							<RadioButton
+								Height="30"
+								Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT20}"
+								IsChecked="{Binding GeneralSetting.FramingFloorSelectionType, Converter={StaticResource ConverterEnumToBoolean}, ConverterParameter={x:Static models:EnumFramingFloorSelectionType.Framing}}" />
+							<RadioButton
+								Height="30"
+								Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT21}"
+								IsChecked="{Binding GeneralSetting.FramingFloorSelectionType, Converter={StaticResource ConverterEnumToBoolean}, ConverterParameter={x:Static models:EnumFramingFloorSelectionType.Floor}}" />
+							<DockPanel>
+								<RadioButton
+									Content="{DynamicResource COLUMREBAR2_COLUMNREBARVIEW_COMMON_TEXT22}"
+									IsChecked="{Binding GeneralSetting.FramingFloorSelectionType, Converter={StaticResource ConverterEnumToBoolean}, ConverterParameter={x:Static models:EnumFramingFloorSelectionType.Default}}" />
+								<TextBox
+									Width="100"
+									HorizontalAlignment="Right"
+									Text="{Binding GeneralSetting.FramingFloorHeightDefault, Converter={StaticResource ConverterFootToMm}, ConverterParameter=0}" />
+							</DockPanel>
+						</StackPanel>
+					</GroupBox>
+				</Grid>
+			</TabItem>
+
+    </TabControl>
+  </Grid>
+
+  <i:Interaction.Triggers>
+    <i:EventTrigger EventName="Loaded">
+      <i:InvokeCommandAction Command="{Binding WindowLoadedCommand}" />
+    </i:EventTrigger>
+
+    <i:EventTrigger EventName="Closed">
+      <i:InvokeCommandAction Command="{Binding WindowClosedCommand}" />
+    </i:EventTrigger>
+  </i:Interaction.Triggers>
+
+</mah:MetroWindow>
