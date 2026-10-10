@@ -1,0 +1,67 @@
+﻿Activity ID,Activity Name,WBS Code,Original Duration (Days),Primary Resource,Cost Account,Status,Notes
+ACT-KC-01-1010,"Cọc ly tâm - [Commens:01.Coc] - Quy ước đặt type: ghi kích thước D - VD: 300, 350, 400, 500 - (Sau khi dựng móng tiến hà",WBS-KC.01.Coc,10,RES-PILE (Máy ép cọc Robot & Cọc D400),CA-PILE-00,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-01-1020,"Cọc ly tâm - [Commens:01.Coc] - Quy ước đặt type: ghi kích thước D - VD: 300, 350, 400, 500 - (Sau khi dựng móng tiến hà",WBS-KC.01.Coc,10,RES-PILE (Máy ép cọc Robot & Cọc D400),CA-PILE-00,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-01-1030,"Cọc ly tâm - [Commens:01.Coc] - Quy ước đặt type: ghi kích thước D - VD: 300, 350, 400, 500 - (Sau khi dựng móng tiến hà",WBS-KC.01.Coc,10,RES-PILE (Máy ép cọc Robot & Cọc D400),CA-PILE-00,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-01-1040,"Cọc ly tâm - [Commens:01.Coc] - Quy ước đặt type: ghi kích thước D - VD: 300, 350, 400, 500 - (Sau khi dựng móng tiến hà",WBS-KC.01.Coc,10,RES-PILE (Máy ép cọc Robot & Cọc D400),CA-PILE-00,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-02-1050,Bê tông - [Comments:02.Mong] - Quy ước đặt type: ngắn x dài x cao - VD: 800x1200x1000 - (Chạy Tool BSV_AutoFoundation_By,WBS-KC.02.Mong,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-02-1060,Bê tông - [Comments:02.Mong] - Quy ước đặt type: ngắn x dài x cao - VD: 800x1200x1000 - (Chạy Tool BSV_AutoFoundation_By,WBS-KC.02.Mong,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-02-1070,"Thép: Theo mặt cắt thiết kế - Chiều dài neo, lap...",WBS-KC.02.Mong,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-02-1080,Ván khuôn: Ván khuôn móng - [BSV_PhanLoai:VK_Mong],WBS-KC.02.Mong,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Not Started,"Kaka Label: Không tính phần giao sàn, đà kiềng; Module: KET_CAU"
+ACT-KC-02-1090,Ván khuôn: Ván khuôn lót móng [BSV_PhanLoai:VK_LotMong] - (Lọc theo diện tích hoặc quét chọn ván),WBS-KC.02.Mong,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Not Started,"Kaka Label: Không tính phần giao sàn, đà kiềng; Module: KET_CAU"
+ACT-KC-03-1100,"Thép: Theo mặt cắt thiết kế - Chú ý đọc kĩ spect kết cấu - về chiều dài neo, lap, vị trí cắt thép...",WBS-KC.03.DaKieng,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-03-1110,Bê tông - [Comments:03.DaKieng] - Quy ước đặt type: rộng x cao - VD: 300x500: Bê tông đà kiềng (B25),WBS-KC.03.DaKieng,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-03-1120,Bê tông - [Comments:03.DaKieng] - Quy ước đặt type: rộng x cao - VD: 300x500: Bê tông lót đà kiềng (B7.5),WBS-KC.03.DaKieng,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-03-1130,Ván khuôn: Ván khuôn đà kiềng - [BSV_PhanLoai:VK_DaKieng],WBS-KC.03.DaKieng,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Not Started,"Kaka Label: Không tính phần giao móng, cột; Module: KET_CAU"
+ACT-KC-03-1140,Ván khuôn: Ván khuôn lót - [BSV_PhanLoai:VK_LotDaKieng],WBS-KC.03.DaKieng,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Not Started,Kaka Label: Không tính phần giao móng; Module: KET_CAU
+ACT-KC-03-1150,Trám lỗ ti - [BSV_LoTi] - Chạy Tool TramLoTi,WBS-KC.03.DaKieng,4,RES-LABOR (Đội thợ kết cấu),CA-DIRECT,Not Started,Kaka Label: Revit Category; Module: KET_CAU
+ACT-KC-04-1160,"Bê tông (B25) - [Comments:04.Nen] - Quy ước đặt type: ghi chiều dày H sàn - VD: 150, 200, 300 - Nếu vẽ BTL thì đặt là 50",WBS-KC.04.Nen,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-04-1170,"Bê tông (B25) - [Comments:04.Nen] - Quy ước đặt type: ghi chiều dày H sàn - VD: 150, 200, 300 - Nếu vẽ BTL thì đặt là 50",WBS-KC.04.Nen,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-04-1180,"Khe: Tính chiều dài, vật liệu hoàn thiện khe",WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,Kaka Label: Theo spec; Module: KET_CAU
+ACT-KC-04-1190,Khe: Khe co giãn/nhiệt,WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,Kaka Label: Theo spec; Module: KET_CAU
+ACT-KC-04-1200,Khe: Khe cắt,WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,Kaka Label: Theo spec; Module: KET_CAU
+ACT-KC-04-1210,Khe: Khe thi công,WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,Kaka Label: Theo spec; Module: KET_CAU
+ACT-KC-04-1220,Khe: Khe cô lập,WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,Kaka Label: Theo spec; Module: KET_CAU
+ACT-KC-04-1230,Ván khuôn: Ván khuôn nền - [BSV_PhanLoai:VK_Nen],WBS-KC.04.Nen,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-04-1240,Thép: Cốt sợi,WBS-KC.04.Nen,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-04-1250,Thép: Cốt thép thường,WBS-KC.04.Nen,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-04-1260,Thép: Lưới thép hàn,WBS-KC.04.Nen,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-04-1270,Cấu tạo nền: ...,WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,"Kaka Label: Theo spec, mặt cắt nền; Module: KET_CAU"
+ACT-KC-04-1280,Cấu tạo nền: Lớp đá base - [BSV_PhanLoai:DT_Nen]*ChieuDayBase,WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,"Kaka Label: Theo spec, mặt cắt nền; Module: KET_CAU"
+ACT-KC-04-1290,Cấu tạo nền: Chống mối,WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,"Kaka Label: Theo spec, mặt cắt nền; Module: KET_CAU"
+ACT-KC-04-1300,Cấu tạo nền: Tấm PVC - [BSV_PhanLoai:DT_Nen],WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,"Kaka Label: Theo spec, mặt cắt nền; Module: KET_CAU"
+ACT-KC-04-1310,"Cấu tạo nền: Diện tích đầm chặt - [BSV_PhanLoai:DT_Nen] - (Diện tích nền) - (giao đà kiềng, cổ cột, móng nền)",WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,"Kaka Label: Theo spec, mặt cắt nền; Module: KET_CAU"
+ACT-KC-05-1320,"Thép: Theo cặt cắt thiết kế - Chiều dài bẻ móc, lap, sole ...",WBS-KC.05.Cot,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-05-1330,Ván khuôn: Ván khuôn cổ cột - [BSV_PhanLoai:VK_CoCot],WBS-KC.05.Cot,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-05-1340,"Ván khuôn: Ván khuôn cột tầng 1, 2, ..., mái [BSV_PhanLoai:VK_Cot]",WBS-KC.05.Cot,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-05-1350,"Bê tông - Quy ước đặt type: ngắn x dài - VD: 500x800 - (Chạy Tool BSV_Str_TaoCot_Ver4): Bê tông cột tầng 1, 2, ..., mái ",WBS-KC.05.Cot,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-05-1360,Bê tông - Quy ước đặt type: ngắn x dài - VD: 500x800 - (Chạy Tool BSV_Str_TaoCot_Ver4): Bê tông cổ cột (B25) - [Comments,WBS-KC.05.Cot,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-06-1370,Trám lỗ ti vách - [BSV_LoTi] - (Chạy Tool ti vách),WBS-KC.06.Vach,4,RES-LABOR (Đội thợ kết cấu),CA-DIRECT,Not Started,Kaka Label: Revit Category; Module: KET_CAU
+ACT-KC-06-1380,"Bê tông - [Comments:06.Vach] - Quy ước đặt type: ghi chiều dày vách - VD: 100, 200: Bê tông vách (B25)",WBS-KC.06.Vach,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-06-1390,Ván khuôn: Ván khuôn vách - [BSV_PhanLoai:VK_Vach],WBS-KC.06.Vach,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-06-1400,"Thép: Theo cặt cắt thiết kế - Chiều dài neo, lap...",WBS-KC.06.Vach,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-07-1410,"Thép: Theo mặt cắt thiết kế - Chú ý đọc kĩ spect kết cấu - về chiều dài neo, lap, vị trí cắt thép...",WBS-KC.07.Dam,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-07-1420,"Bê tông  (B25) - [Comments:07.Dam]: Bê tông dầm tầng 2, 3, ..., mái, tum",WBS-KC.07.Dam,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-07-1430,Trám lỗ ti,WBS-KC.07.Dam,4,RES-LABOR (Đội thợ kết cấu),CA-DIRECT,Not Started,Kaka Label: Revit Category; Module: KET_CAU
+ACT-KC-07-1440,"Ván khuôn: Ván khuôn dầm tầng 2, 3, ..., mái, tum [BSV_PhanLoai:VK_Dam] - (Không tính phần giao sàn,cột,dầm)",WBS-KC.07.Dam,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-08-1450,Thép: Lưới thép hàn,WBS-KC.08.San,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Not Started,Kaka Label: Tính trên revit; Module: KET_CAU
+ACT-KC-08-1460,Thép: Cốt thép thường,WBS-KC.08.San,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Not Started,Kaka Label: Tính trên revit; Module: KET_CAU
+ACT-KC-08-1470,"Bê tông: Bê tông sàn tầng 2, 3, ..., mái, tum - [Comment:08.1.San-T2-Xuong] - [Comment:08.2.San-T3-Xuong] - [Comment:08.",WBS-KC.08.San,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-08-1480,"Ván khuôn: Ván khuôn sàn tầng 2, 3, ..., mái, tum [BSV_PhanLoai:VK_San] - (Không tính phần giao cột)",WBS-KC.08.San,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-09-1490,"Cầu thang - (Có thể bao gồm cầu thang, dầm, cột): Hoàn thiện",WBS-KC.09.CauThang,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,Kaka Label: Cách tính tùy thuộc bản vẽ; Module: KET_CAU
+ACT-KC-09-1500,"Cầu thang - (Có thể bao gồm cầu thang, dầm, cột): Thép",WBS-KC.09.CauThang,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Not Started,Kaka Label: Tính excel; Module: KET_CAU
+ACT-KC-09-1510,"Cầu thang - (Có thể bao gồm cầu thang, dầm, cột): Ván khuôn [BSV_PhanLoai:VK_CauThang]",WBS-KC.09.CauThang,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-09-1520,"Cầu thang - (Có thể bao gồm cầu thang, dầm, cột): Kết cấu",WBS-KC.09.CauThang,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-10-1530,"Tam cấp - (Có thể bao gồm tam cấp, cách, đà): Bê tông - [Comments:10.1.TamCap-ST1-Xuong] - [Comments:10.2.TamCap...]",WBS-KC.10.TamCap,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-10-1540,"Tam cấp - (Có thể bao gồm tam cấp, cách, đà): Các lớp cấu tạo nền nếu có...",WBS-KC.10.TamCap,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-11-1550,Ramp: Bê tông ramp - [Comments:11.Ramp],WBS-KC.11.Ramp,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-11-1560,Ramp: Các lớp cấu tạo ramp,WBS-KC.11.Ramp,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-11-1570,Ramp: Ván khuôn ramp - [BSV_PhanLoai:VK_Ramp] - [BSV_PhanLoai:VK_VachRamp],WBS-KC.11.Ramp,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-12-1580,Pit thang máy: Các lớp cấu tạo pit,WBS-KC.12.Pit,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-12-1590,Pit thang máy: Bê tông ramp - [Comments:12.Pit],WBS-KC.12.Pit,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-12-1600,Pit thang máy: Ván khuôn ramp - [BSV_PhanLoai:VK_Pit] - [BSV_PhanLoai:VK_VachPit],WBS-KC.12.Pit,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-13-1610,Dock hàng: Các lớp cấu tạo dock,WBS-KC.13.Dock,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-13-1620,Dock hàng: Bê tông dock - [Comments:13.Dock],WBS-KC.13.Dock,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-13-1630,Dock hàng: Ván khuôn dock - [BSV_PhanLoai:VK_Dock] - [BSV_PhanLoai:VK_DamDock],WBS-KC.13.Dock,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-14-1640,Bệ máy - [Comments:14.2.BeMay]: [BSV_PhanLoai:VK_BeMay],WBS-KC.14.CauKienPhu,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,Kaka Label: Revit Standard; Module: KET_CAU
+ACT-KC-14-1650,...,WBS-KC.14.CauKienPhu,4,RES-LABOR (Đội thợ kết cấu),CA-DIRECT,Not Started,Kaka Label: Revit Category; Module: KET_CAU
+ACT-KC-14-1660,Mương - [Comments:14.1.Muong]: [BSV_PhanLoai:VK_Muong],WBS-KC.14.CauKienPhu,5,RES-LABOR (Đội thi công),CA-DIRECT,Not Started,Kaka Label: Revit Standard; Module: KET_CAU

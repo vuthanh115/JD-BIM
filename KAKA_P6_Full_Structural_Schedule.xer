@@ -1,0 +1,90 @@
+ERMHDR	8.3	2026-10-10	PROJECT	PROJECT MANAGER	ADMIN	kaka.Structure
+%T	PROJECT
+%F	proj_id	acct_id	orig_proj_id	plan_start_date	plan_end_date	proj_short_name	proj_title
+%R	1	1	1	2026-03-01 08:00	2026-11-30 17:00	PROJ-KAKA-FACTORY	Dự án Nhà máy Hải Phòng 30.000m2 (Kaka BIM-P6 Mapping)
+%T	PROJWBS
+%F	wbs_id	proj_id	parent_wbs_id	wbs_short_name	wbs_name	seq_num
+%R	100	1		PROJ-FACTORY	Dự án Nhà máy Công nghiệp Hải Phòng 30.000m2	1
+%R	110	1	100	WBS-KC	Phân hệ Kết cấu Kaka (Structural Engineering Works)	2
+%R	120	1	110	WBS-KC.01.Coc	01.Coc - Công tác Cọc (Pile Works)	3
+%R	121	1	110	WBS-KC.02.Mong	02.Mong - Công tác Móng (Foundations)	4
+%R	122	1	110	WBS-KC.03.DaKieng	03.DaKieng - Công tác Đà kiềng (Tie Beams)	5
+%R	123	1	110	WBS-KC.04.Nen	04.Nen - Công tác Nền & Sàn trệt (Slab on Grade)	6
+%R	124	1	110	WBS-KC.05.Cot	05.Cot - Công tác Cột (Columns)	7
+%R	125	1	110	WBS-KC.06.Vach	06.Vach - Công tác Vách bê tông (Shear Walls)	8
+%R	126	1	110	WBS-KC.07.Dam	07.Dam - Công tác Dầm kết cấu (Beams)	9
+%R	127	1	110	WBS-KC.08.San	08.San - Công tác Sàn kết cấu (Slabs)	10
+%R	128	1	110	WBS-KC.09.CauThang	09.CauThang - Công tác Cầu thang (Stairs)	11
+%R	129	1	110	WBS-KC.10.TamCap	10.TamCap - Công tác Tam cấp (Steps)	12
+%R	130	1	110	WBS-KC.11.Ramp	11.Ramp - Công tác Ramp dốc (Ramps)	13
+%R	131	1	110	WBS-KC.12.Pit	12.Pit - Công tác Hố Pit (Elevator Pits)	14
+%R	132	1	110	WBS-KC.13.Dock	13.Dock - Công tác Sàn Dock (Loading Docks)	15
+%R	133	1	110	WBS-KC.14.CauKienPhu	14.CauKienPhu - Công tác Cấu kiện phụ (Secondary Elements)	16
+%T	TASK
+%F	task_id	proj_id	wbs_id	task_code	task_name	target_drtn_hr_cnt	task_type	status_code
+%R	1010	1	120	ACT-KC-01-1010	Cọc ly tâm - [Commens:01.Coc] - Quy ước đặt type: ghi kích thước D - VD: 300, 350, 400, 500 - (Sau khi dựng móng tiến hà	80	TT_Task	TK_NotStart
+%R	1020	1	120	ACT-KC-01-1020	Cọc ly tâm - [Commens:01.Coc] - Quy ước đặt type: ghi kích thước D - VD: 300, 350, 400, 500 - (Sau khi dựng móng tiến hà	80	TT_Task	TK_NotStart
+%R	1030	1	120	ACT-KC-01-1030	Cọc ly tâm - [Commens:01.Coc] - Quy ước đặt type: ghi kích thước D - VD: 300, 350, 400, 500 - (Sau khi dựng móng tiến hà	80	TT_Task	TK_NotStart
+%R	1040	1	120	ACT-KC-01-1040	Cọc ly tâm - [Commens:01.Coc] - Quy ước đặt type: ghi kích thước D - VD: 300, 350, 400, 500 - (Sau khi dựng móng tiến hà	80	TT_Task	TK_NotStart
+%R	1050	1	121	ACT-KC-02-1050	Bê tông - [Comments:02.Mong] - Quy ước đặt type: ngắn x dài x cao - VD: 800x1200x1000 - (Chạy Tool BSV_AutoFoundation_By	24	TT_Task	TK_NotStart
+%R	1060	1	121	ACT-KC-02-1060	Bê tông - [Comments:02.Mong] - Quy ước đặt type: ngắn x dài x cao - VD: 800x1200x1000 - (Chạy Tool BSV_AutoFoundation_By	24	TT_Task	TK_NotStart
+%R	1070	1	121	ACT-KC-02-1070	Thép: Theo mặt cắt thiết kế - Chiều dài neo, lap...	48	TT_Task	TK_NotStart
+%R	1080	1	121	ACT-KC-02-1080	Ván khuôn: Ván khuôn móng - [BSV_PhanLoai:VK_Mong]	32	TT_Task	TK_NotStart
+%R	1090	1	121	ACT-KC-02-1090	Ván khuôn: Ván khuôn lót móng [BSV_PhanLoai:VK_LotMong] - (Lọc theo diện tích hoặc quét chọn ván)	32	TT_Task	TK_NotStart
+%R	1100	1	122	ACT-KC-03-1100	Thép: Theo mặt cắt thiết kế - Chú ý đọc kĩ spect kết cấu - về chiều dài neo, lap, vị trí cắt thép...	48	TT_Task	TK_NotStart
+%R	1110	1	122	ACT-KC-03-1110	Bê tông - [Comments:03.DaKieng] - Quy ước đặt type: rộng x cao - VD: 300x500: Bê tông đà kiềng (B25)	24	TT_Task	TK_NotStart
+%R	1120	1	122	ACT-KC-03-1120	Bê tông - [Comments:03.DaKieng] - Quy ước đặt type: rộng x cao - VD: 300x500: Bê tông lót đà kiềng (B7.5)	24	TT_Task	TK_NotStart
+%R	1130	1	122	ACT-KC-03-1130	Ván khuôn: Ván khuôn đà kiềng - [BSV_PhanLoai:VK_DaKieng]	32	TT_Task	TK_NotStart
+%R	1140	1	122	ACT-KC-03-1140	Ván khuôn: Ván khuôn lót - [BSV_PhanLoai:VK_LotDaKieng]	32	TT_Task	TK_NotStart
+%R	1150	1	122	ACT-KC-03-1150	Trám lỗ ti - [BSV_LoTi] - Chạy Tool TramLoTi	32	TT_Task	TK_NotStart
+%R	1160	1	123	ACT-KC-04-1160	Bê tông (B25) - [Comments:04.Nen] - Quy ước đặt type: ghi chiều dày H sàn - VD: 150, 200, 300 - Nếu vẽ BTL thì đặt là 50	24	TT_Task	TK_NotStart
+%R	1170	1	123	ACT-KC-04-1170	Bê tông (B25) - [Comments:04.Nen] - Quy ước đặt type: ghi chiều dày H sàn - VD: 150, 200, 300 - Nếu vẽ BTL thì đặt là 50	24	TT_Task	TK_NotStart
+%R	1180	1	123	ACT-KC-04-1180	Khe: Tính chiều dài, vật liệu hoàn thiện khe	40	TT_Task	TK_NotStart
+%R	1190	1	123	ACT-KC-04-1190	Khe: Khe co giãn/nhiệt	40	TT_Task	TK_NotStart
+%R	1200	1	123	ACT-KC-04-1200	Khe: Khe cắt	40	TT_Task	TK_NotStart
+%R	1210	1	123	ACT-KC-04-1210	Khe: Khe thi công	40	TT_Task	TK_NotStart
+%R	1220	1	123	ACT-KC-04-1220	Khe: Khe cô lập	40	TT_Task	TK_NotStart
+%R	1230	1	123	ACT-KC-04-1230	Ván khuôn: Ván khuôn nền - [BSV_PhanLoai:VK_Nen]	32	TT_Task	TK_NotStart
+%R	1240	1	123	ACT-KC-04-1240	Thép: Cốt sợi	48	TT_Task	TK_NotStart
+%R	1250	1	123	ACT-KC-04-1250	Thép: Cốt thép thường	48	TT_Task	TK_NotStart
+%R	1260	1	123	ACT-KC-04-1260	Thép: Lưới thép hàn	48	TT_Task	TK_NotStart
+%R	1270	1	123	ACT-KC-04-1270	Cấu tạo nền: ...	40	TT_Task	TK_NotStart
+%R	1280	1	123	ACT-KC-04-1280	Cấu tạo nền: Lớp đá base - [BSV_PhanLoai:DT_Nen]*ChieuDayBase	40	TT_Task	TK_NotStart
+%R	1290	1	123	ACT-KC-04-1290	Cấu tạo nền: Chống mối	40	TT_Task	TK_NotStart
+%R	1300	1	123	ACT-KC-04-1300	Cấu tạo nền: Tấm PVC - [BSV_PhanLoai:DT_Nen]	40	TT_Task	TK_NotStart
+%R	1310	1	123	ACT-KC-04-1310	Cấu tạo nền: Diện tích đầm chặt - [BSV_PhanLoai:DT_Nen] - (Diện tích nền) - (giao đà kiềng, cổ cột, móng nền)	40	TT_Task	TK_NotStart
+%R	1320	1	124	ACT-KC-05-1320	Thép: Theo cặt cắt thiết kế - Chiều dài bẻ móc, lap, sole ...	48	TT_Task	TK_NotStart
+%R	1330	1	124	ACT-KC-05-1330	Ván khuôn: Ván khuôn cổ cột - [BSV_PhanLoai:VK_CoCot]	32	TT_Task	TK_NotStart
+%R	1340	1	124	ACT-KC-05-1340	Ván khuôn: Ván khuôn cột tầng 1, 2, ..., mái [BSV_PhanLoai:VK_Cot]	32	TT_Task	TK_NotStart
+%R	1350	1	124	ACT-KC-05-1350	Bê tông - Quy ước đặt type: ngắn x dài - VD: 500x800 - (Chạy Tool BSV_Str_TaoCot_Ver4): Bê tông cột tầng 1, 2, ..., mái 	24	TT_Task	TK_NotStart
+%R	1360	1	124	ACT-KC-05-1360	Bê tông - Quy ước đặt type: ngắn x dài - VD: 500x800 - (Chạy Tool BSV_Str_TaoCot_Ver4): Bê tông cổ cột (B25) - [Comments	24	TT_Task	TK_NotStart
+%R	1370	1	125	ACT-KC-06-1370	Trám lỗ ti vách - [BSV_LoTi] - (Chạy Tool ti vách)	32	TT_Task	TK_NotStart
+%R	1380	1	125	ACT-KC-06-1380	Bê tông - [Comments:06.Vach] - Quy ước đặt type: ghi chiều dày vách - VD: 100, 200: Bê tông vách (B25)	24	TT_Task	TK_NotStart
+%R	1390	1	125	ACT-KC-06-1390	Ván khuôn: Ván khuôn vách - [BSV_PhanLoai:VK_Vach]	32	TT_Task	TK_NotStart
+%R	1400	1	125	ACT-KC-06-1400	Thép: Theo cặt cắt thiết kế - Chiều dài neo, lap...	48	TT_Task	TK_NotStart
+%R	1410	1	126	ACT-KC-07-1410	Thép: Theo mặt cắt thiết kế - Chú ý đọc kĩ spect kết cấu - về chiều dài neo, lap, vị trí cắt thép...	48	TT_Task	TK_NotStart
+%R	1420	1	126	ACT-KC-07-1420	Bê tông  (B25) - [Comments:07.Dam]: Bê tông dầm tầng 2, 3, ..., mái, tum	24	TT_Task	TK_NotStart
+%R	1430	1	126	ACT-KC-07-1430	Trám lỗ ti	32	TT_Task	TK_NotStart
+%R	1440	1	126	ACT-KC-07-1440	Ván khuôn: Ván khuôn dầm tầng 2, 3, ..., mái, tum [BSV_PhanLoai:VK_Dam] - (Không tính phần giao sàn,cột,dầm)	32	TT_Task	TK_NotStart
+%R	1450	1	127	ACT-KC-08-1450	Thép: Lưới thép hàn	48	TT_Task	TK_NotStart
+%R	1460	1	127	ACT-KC-08-1460	Thép: Cốt thép thường	48	TT_Task	TK_NotStart
+%R	1470	1	127	ACT-KC-08-1470	Bê tông: Bê tông sàn tầng 2, 3, ..., mái, tum - [Comment:08.1.San-T2-Xuong] - [Comment:08.2.San-T3-Xuong] - [Comment:08.	24	TT_Task	TK_NotStart
+%R	1480	1	127	ACT-KC-08-1480	Ván khuôn: Ván khuôn sàn tầng 2, 3, ..., mái, tum [BSV_PhanLoai:VK_San] - (Không tính phần giao cột)	32	TT_Task	TK_NotStart
+%R	1490	1	128	ACT-KC-09-1490	Cầu thang - (Có thể bao gồm cầu thang, dầm, cột): Hoàn thiện	40	TT_Task	TK_NotStart
+%R	1500	1	128	ACT-KC-09-1500	Cầu thang - (Có thể bao gồm cầu thang, dầm, cột): Thép	48	TT_Task	TK_NotStart
+%R	1510	1	128	ACT-KC-09-1510	Cầu thang - (Có thể bao gồm cầu thang, dầm, cột): Ván khuôn [BSV_PhanLoai:VK_CauThang]	32	TT_Task	TK_NotStart
+%R	1520	1	128	ACT-KC-09-1520	Cầu thang - (Có thể bao gồm cầu thang, dầm, cột): Kết cấu	40	TT_Task	TK_NotStart
+%R	1530	1	129	ACT-KC-10-1530	Tam cấp - (Có thể bao gồm tam cấp, cách, đà): Bê tông - [Comments:10.1.TamCap-ST1-Xuong] - [Comments:10.2.TamCap...]	24	TT_Task	TK_NotStart
+%R	1540	1	129	ACT-KC-10-1540	Tam cấp - (Có thể bao gồm tam cấp, cách, đà): Các lớp cấu tạo nền nếu có...	40	TT_Task	TK_NotStart
+%R	1550	1	130	ACT-KC-11-1550	Ramp: Bê tông ramp - [Comments:11.Ramp]	24	TT_Task	TK_NotStart
+%R	1560	1	130	ACT-KC-11-1560	Ramp: Các lớp cấu tạo ramp	40	TT_Task	TK_NotStart
+%R	1570	1	130	ACT-KC-11-1570	Ramp: Ván khuôn ramp - [BSV_PhanLoai:VK_Ramp] - [BSV_PhanLoai:VK_VachRamp]	32	TT_Task	TK_NotStart
+%R	1580	1	131	ACT-KC-12-1580	Pit thang máy: Các lớp cấu tạo pit	40	TT_Task	TK_NotStart
+%R	1590	1	131	ACT-KC-12-1590	Pit thang máy: Bê tông ramp - [Comments:12.Pit]	24	TT_Task	TK_NotStart
+%R	1600	1	131	ACT-KC-12-1600	Pit thang máy: Ván khuôn ramp - [BSV_PhanLoai:VK_Pit] - [BSV_PhanLoai:VK_VachPit]	32	TT_Task	TK_NotStart
+%R	1610	1	132	ACT-KC-13-1610	Dock hàng: Các lớp cấu tạo dock	40	TT_Task	TK_NotStart
+%R	1620	1	132	ACT-KC-13-1620	Dock hàng: Bê tông dock - [Comments:13.Dock]	24	TT_Task	TK_NotStart
+%R	1630	1	132	ACT-KC-13-1630	Dock hàng: Ván khuôn dock - [BSV_PhanLoai:VK_Dock] - [BSV_PhanLoai:VK_DamDock]	32	TT_Task	TK_NotStart
+%R	1640	1	133	ACT-KC-14-1640	Bệ máy - [Comments:14.2.BeMay]: [BSV_PhanLoai:VK_BeMay]	40	TT_Task	TK_NotStart
+%R	1650	1	133	ACT-KC-14-1650	...	32	TT_Task	TK_NotStart
+%R	1660	1	133	ACT-KC-14-1660	Mương - [Comments:14.1.Muong]: [BSV_PhanLoai:VK_Muong]	40	TT_Task	TK_NotStart

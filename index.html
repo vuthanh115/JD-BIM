@@ -1187,6 +1187,194 @@ PARAM	752a4b36-f055-486d-9375-05418d09da10	BSV_BeTongLot			MATERIAL</pre>
             </tbody>
           </table>
         </div>
+
+        <!-- PHÂN HỆ TỰ ĐỘNG HÓA KAKA DATABASE ➔ PRIMAVERA P6 AUTOMATED ENGINE -->
+        <div class="card" style="margin-bottom: 24px; border: 1px solid #38bdf8;">
+          <div class="card-header" style="background: linear-gradient(90deg, rgba(56, 189, 248, 0.15), transparent); padding: 12px 16px; border-radius: 8px 8px 0 0;">
+            <span class="card-title" style="color: #38bdf8;">⚡ Phân Hệ Tự Động Hóa: Kaka Revit SQLite Database ➔ Primavera P6 Engine</span>
+            <span class="pill pill-blue">C:\Working\kaka\Mindmap\mindmap.db</span>
+          </div>
+          <div style="padding: 16px;">
+            <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 14px;">
+              Hệ thống tự động trích xuất trực tiếp từ cơ sở dữ liệu Add-in <strong>kaka.Structure</strong> (SQLite <code>mindmap.db</code>) với <strong>1.118 danh mục</strong> và <strong>14 nhóm cấu kiện kết cấu thực tế</strong>, biên dịch thành cây tiến độ WBS và danh mục công tác (Activities) đạt chuẩn Primavera P6 (Encore Group Training Standard).
+            </p>
+
+            <!-- THANH TẢI FILE ENGINE KAKA -->
+            <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 8px; padding: 14px; align-items: center;">
+              <span style="font-size: 0.88rem; font-weight: 600; color: #38bdf8;">Tải Dữ Liệu Kaka Export Cho Primavera P6:</span>
+              <a href="KAKA_P6_Full_Structural_Schedule.xer" download class="btn btn-primary" style="text-decoration: none; font-size: 0.82rem; background: #0284c7;">
+                📥 Tải File Tiến Độ Kaka P6 (.xer)
+              </a>
+              <a href="KAKA_P6_Full_Structural_Schedule.csv" download class="btn" style="text-decoration: none; font-size: 0.82rem; background: #1e293b; border: 1px solid #475569;">
+                📊 Tải File Bảng Tính Kaka P6 (.csv)
+              </a>
+              <a href="export_kaka_to_p6.py" download class="btn" style="text-decoration: none; font-size: 0.82rem; background: #0f172a; border: 1px solid #38bdf8; color: #38bdf8;">
+                🐍 Tải Script Python Pipeline (.py)
+              </a>
+              <span style="font-size: 0.78rem; color: #94a3b8; margin-left: auto;">
+                ✨ <em>Đã ánh xạ 16 WBS Nodes &amp; 66 Task Activities thực tế từ C:\Working\kaka</em>
+              </span>
+            </div>
+
+            <!-- BẢNG TỔNG HỢP 14 CẤU KIỆN KAKA ↔ PRIMAVERA P6 -->
+            <div style="overflow-x: auto;">
+              <table class="table-custom" style="font-size: 0.84rem;">
+                <thead>
+                  <tr>
+                    <th>Mã Kaka (DB Code)</th>
+                    <th>Cấu Kiện Kết Cấu Kaka</th>
+                    <th>WBS P6 Tương Ứng</th>
+                    <th>Số Task</th>
+                    <th>Tài Nguyên P6 (Resource)</th>
+                    <th>Tài Khoản Chi Phí (Cost Account)</th>
+                    <th>Revit Parameters / Kaka Tools Liên Kết</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>01.Coc</code></td>
+                    <td><strong>Cọc ly tâm & Xử lý đầu cọc</strong></td>
+                    <td><code>WBS-KC.01.Coc</code></td>
+                    <td><span class="badge" style="background: #0284c7;">4 tasks</span></td>
+                    <td><code>RES-PILE</code> (Robot ép & Cọc D400)</td>
+                    <td><code>CA-PILE-00</code></td>
+                    <td>Tool <code>AutoPile_ByCenterPointCricle</code>, <code>AutoSetElevationPile</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>02.Mong</code></td>
+                    <td><strong>Móng bê tông cốt thép</strong></td>
+                    <td><code>WBS-KC.02.Mong</code></td>
+                    <td><span class="badge" style="background: #0284c7;">5 tasks</span></td>
+                    <td><code>RES-CONC</code>, <code>RES-STEEL</code>, <code>RES-FORMWORK</code></td>
+                    <td><code>CA-CONC-01</code>, <code>CA-STEEL-02</code></td>
+                    <td>Tool <code>AutoFoundation_ByLinkCad.Ver3</code>, <code>BSV_PhanLoai:VK_Mong</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>03.DaKieng</code></td>
+                    <td><strong>Đà kiềng & Giằng móng</strong></td>
+                    <td><code>WBS-KC.03.DaKieng</code></td>
+                    <td><span class="badge" style="background: #0284c7;">6 tasks</span></td>
+                    <td><code>RES-CONC</code>, <code>RES-STEEL</code>, <code>RES-FORMWORK</code></td>
+                    <td><code>CA-FORM-03</code>, <code>CA-FINISH-04</code></td>
+                    <td>Tool <code>TramLoTi</code>, <code>BSV_LoTi</code>, <code>VK_LotDaKieng</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>04.Nen</code></td>
+                    <td><strong>Sàn nền & Lớp lót, xử lý nền</strong></td>
+                    <td><code>WBS-KC.04.Nen</code></td>
+                    <td><span class="badge" style="background: #0284c7;">16 tasks</span></td>
+                    <td><code>RES-CONC</code>, Đá Base, Màng PVC, Lưới thép</td>
+                    <td><code>CA-CONC-01</code>, <code>CA-DIRECT</code></td>
+                    <td><code>DT_Nen</code>, Chống mối, Đầm chặt, Bê tông B25 / BTL 50_BTL</td>
+                  </tr>
+                  <tr>
+                    <td><code>05.Cot</code></td>
+                    <td><strong>Cột kết cấu bê tông cốt thép</strong></td>
+                    <td><code>WBS-KC.05.Cot</code></td>
+                    <td><span class="badge" style="background: #0284c7;">5 tasks</span></td>
+                    <td><code>RES-CONC</code>, <code>RES-STEEL</code>, <code>RES-FORMWORK</code></td>
+                    <td><code>CA-CONC-01</code>, <code>CA-STEEL-02</code></td>
+                    <td>Quy ước type ngắn x dài, Thép phân tầng F1-FN, Ván khuôn cột</td>
+                  </tr>
+                  <tr>
+                    <td><code>06.Vach</code></td>
+                    <td><strong>Vách thang máy & Vách cứng</strong></td>
+                    <td><code>WBS-KC.06.Vach</code></td>
+                    <td><span class="badge" style="background: #0284c7;">4 tasks</span></td>
+                    <td><code>RES-CONC</code>, <code>RES-STEEL</code>, <code>RES-FORMWORK</code></td>
+                    <td><code>CA-FORM-03</code>, <code>CA-FINISH-04</code></td>
+                    <td>Tool trám lỗ ti vách, Thép vách 2 lớp, <code>Comments: 06.Vach</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>07.Dam</code></td>
+                    <td><strong>Dầm khung & Dầm phụ</strong></td>
+                    <td><code>WBS-KC.07.Dam</code></td>
+                    <td><span class="badge" style="background: #0284c7;">4 tasks</span></td>
+                    <td><code>RES-CONC</code>, <code>RES-STEEL</code>, <code>RES-FORMWORK</code></td>
+                    <td><code>CA-CONC-01</code>, <code>CA-FORM-03</code></td>
+                    <td><code>Comments: 07.Dam</code>, Bê tông B25, Ván khuôn dầm đáy & thành bên</td>
+                  </tr>
+                  <tr>
+                    <td><code>08.San</code></td>
+                    <td><strong>Sàn tầng & Sàn mái BTCT</strong></td>
+                    <td><code>WBS-KC.08.San</code></td>
+                    <td><span class="badge" style="background: #0284c7;">4 tasks</span></td>
+                    <td><code>RES-CONC</code>, <code>RES-STEEL</code>, <code>RES-FORMWORK</code></td>
+                    <td><code>CA-CONC-01</code>, <code>CA-STEEL-02</code></td>
+                    <td>Quy ước ưu tiên Join <code>Sàn > Móng > Cột > Dầm</code>, Thép sàn 2 lớp</td>
+                  </tr>
+                  <tr>
+                    <td><code>09.CauThang</code></td>
+                    <td><strong>Cầu thang bộ thoát hiểm BTCT</strong></td>
+                    <td><code>WBS-KC.09.CauThang</code></td>
+                    <td><span class="badge" style="background: #0284c7;">4 tasks</span></td>
+                    <td><code>RES-LABOR</code>, <code>RES-CONC</code>, <code>RES-STEEL</code></td>
+                    <td><code>CA-DIRECT</code></td>
+                    <td>Mô hình cầu thang, dầm thang, bản thang, cọc thang</td>
+                  </tr>
+                  <tr>
+                    <td><code>10.TamCap</code></td>
+                    <td><strong>Tam cấp & Bậc lối vào</strong></td>
+                    <td><code>WBS-KC.10.TamCap</code></td>
+                    <td><span class="badge" style="background: #0284c7;">2 tasks</span></td>
+                    <td><code>RES-CONC</code>, <code>RES-LABOR</code></td>
+                    <td><code>CA-DIRECT</code></td>
+                    <td>Bê tông khối tam cấp, vách đà tam cấp lối sảnh chính</td>
+                  </tr>
+                  <tr>
+                    <td><code>11.Ramp</code></td>
+                    <td><strong>Ramp dốc xe tải & Xuất nhập hàng</strong></td>
+                    <td><code>WBS-KC.11.Ramp</code></td>
+                    <td><span class="badge" style="background: #0284c7;">3 tasks</span></td>
+                    <td><code>RES-CONC</code>, <code>RES-STEEL</code>, <code>RES-FORMWORK</code></td>
+                    <td><code>CA-CONC-01</code></td>
+                    <td>Độ dốc ramp, rãnh cắt nước, hoàn thiện bề mặt chống trượt</td>
+                  </tr>
+                  <tr>
+                    <td><code>12.Pit</code></td>
+                    <td><strong>Hố Pit thang máy & Hố lắng</strong></td>
+                    <td><code>WBS-KC.12.Pit</code></td>
+                    <td><span class="badge" style="background: #0284c7;">3 tasks</span></td>
+                    <td><code>RES-CONC</code>, <code>RES-FORMWORK</code>, Chống thấm</td>
+                    <td><code>CA-CONC-01</code></td>
+                    <td>Bê tông lót hố pit, vách hố pit chống thấm tinh thể thẩm thấu</td>
+                  </tr>
+                  <tr>
+                    <td><code>13.Dock</code></td>
+                    <td><strong>Sàn Dock Leveler bốc dỡ hàng</strong></td>
+                    <td><code>WBS-KC.13.Dock</code></td>
+                    <td><span class="badge" style="background: #0284c7;">3 tasks</span></td>
+                    <td><code>RES-CONC</code>, Thép chôn âm, Giảm chấn</td>
+                    <td><code>CA-DIRECT</code></td>
+                    <td>Hố dock leveler, bản thép chôn âm viền bảo vệ góc dock</td>
+                  </tr>
+                  <tr>
+                    <td><code>14.CauKienPhu</code></td>
+                    <td><strong>Cấu kiện phụ, Gối đỡ, Bệ máy</strong></td>
+                    <td><code>WBS-KC.14.CauKienPhu</code></td>
+                    <td><span class="badge" style="background: #0284c7;">3 tasks</span></td>
+                    <td><code>RES-CONC</code>, Bê tông không co ngót Sika</td>
+                    <td><code>CA-DIRECT</code></td>
+                    <td>Bệ máy Chiller, mương thoát nước kỹ thuật, gờ chắn nước</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- QUY TRÌNH KỸ THUẬT 4 BƯỚC PIPELINE -->
+            <div style="margin-top: 18px; padding: 14px; background: rgba(2, 6, 23, 0.6); border-radius: 8px; border: 1px solid var(--border);">
+              <div style="font-weight: 600; color: #f8fafc; font-size: 0.9rem; margin-bottom: 8px;">
+                ⚙️ Kiến Trúc Luồng Chuyển Đổi Dữ Liệu Tự Động (Data Pipeline Architecture):
+              </div>
+              <div style="font-size: 0.85rem; color: #94a3b8; line-height: 1.6;">
+                1. <strong>Revit Model (kaka.Structure):</strong> Người dùng thao tác dựng hình, chạy tool phân loại tự động (<code>AutoPile</code>, <code>AutoFoundation</code>, <code>PhanLoaiVanKhuon</code>, <code>TramLoTi</code>) và gán tham số <code>Comments</code>, <code>Partition</code>.<br>
+                2. <strong>SQLite Data Storage:</strong> Tất cả 14 cấu kiện và quy trình kiểm tra được lưu trữ trong <code>mindmap.db</code> tại bảng <code>categories</code>.<br>
+                3. <strong>Automated ETL Python Engine (<code>export_kaka_to_p6.py</code>):</strong> Trích xuất phân cấp từ <code>categories</code> (Level 1 ➔ WBS, Level 2/3 ➔ Activities), tự động suy luận loại tài nguyên (Material / Labor / Equipment) và mã Cost Account theo chuẩn Encore Group.<br>
+                4. <strong>Primavera P6 Professional:</strong> Xuất file <code>.xer</code> (Native SDK exchange format) và <code>.csv</code> (Spreadsheet template) để nhập trực tiếp vào P6 với đầy đủ WBS, Task, Duration, và Resource.
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- TAB 7: PLAYBOOK TRIỂN KHAI DỰ ÁN CỤ THỂ -->
