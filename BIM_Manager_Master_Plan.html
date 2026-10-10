@@ -557,21 +557,49 @@ flowchart LR
             <pre class="mermaid">
 flowchart TD
     RFI["Contractor gửi RFI (Yêu cầu làm rõ)"] --> REV["A/E thẩm tra trong 7 ngày"]
-    REV --> COND{"Ảnh hưởng Chi phí / Tiến độ?"}
+    REV --> COND{"Phát sinh chi phí hoặc tiến độ?"}
     
-    COND -- "Không" --> ASI["A/E ban hành ASI (Chỉ dẫn bổ sung - Chi phí = 0)"]
-    COND -- "Có" --> CRIT{"Mức độ Khẩn cấp?"}
+    COND -->|Không| ASI["A/E ban hành ASI (Chỉ dẫn bổ sung - Chi phí = 0)"]
+    COND -->|Có| CRIT{"Mức độ khẩn cấp?"}
     
-    CRIT -- "Khẩn cấp (Dưới 10k USD, trễ nặng)" --> CCD["A/E ban hành CCD (Lệnh thi công ngay)"]
+    CRIT -->|Khẩn cấp: Dưới 10k USD| CCD["A/E ban hành CCD (Lệnh thi công ngay)"]
     CCD --> WORK["Nhà thầu thi công ngay"]
     WORK --> PRICED["Quyết toán chi phí sau"]
-    PRICED --> CO["Ban hành Change Order (CO - Hợp đồng sửa đổi)"]
+    PRICED --> CO["Ban hành Change Order (CO)"]
     
-    CRIT -- "Không khẩn cấp" --> PR["A/E phát hành PR (Đề xuất thay đổi)"]
+    CRIT -->|Không khẩn cấp| PR["A/E phát hành PR (Đề xuất thay đổi)"]
     PR --> PRICE["Nhà thầu báo giá"]
     PRICE --> NEGO["Đàm phán chi phí và thời gian"]
     NEGO --> CO
             </pre>
+
+            <!-- SƠ ĐỒ QUY TRÌNH THẺ TRỰC QUAN DỰ PHÒNG (KHÔNG PHỤ THUỘC JS) -->
+            <div style="margin-top: 24px; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 18px;">
+              <h5 style="color: #38bdf8; margin-bottom: 14px; font-size: 0.95rem;">📌 Diễn Giải Chi Tiết 3 Nhánh Phân Luồng Thay Đổi Hiện Trường:</h5>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+                <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 14px;">
+                  <span class="pill pill-green" style="margin-bottom: 8px; display: inline-block;">NHÁNH 1: KHÔNG PHÁT SINH</span>
+                  <h6 style="color: #fff; font-size: 0.9rem; margin-bottom: 6px;">Ban hành ASI</h6>
+                  <p style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
+                    Chỉ làm rõ chi tiết bản vẽ kỹ thuật. <strong>Chi phí = 0, Thời gian = 0</strong>. A/E ký lệnh trực tiếp và nhà thầu thực hiện ngay.
+                  </p>
+                </div>
+                <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 8px; padding: 14px;">
+                  <span class="pill pill-orange" style="margin-bottom: 8px; display: inline-block;">NHÁNH 2: CÓ PHÁT SINH THƯỜNG</span>
+                  <h6 style="color: #fff; font-size: 0.9rem; margin-bottom: 6px;">Ban hành PR → Lập CO</h6>
+                  <p style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
+                    A/E phát hành <strong>Proposal Request (PR)</strong> → Nhà thầu báo giá → Đàm phán thống nhất chi phí/ngày bù tiến độ → Ký <strong>Change Order (CO)</strong>.
+                  </p>
+                </div>
+                <div style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 8px; padding: 14px;">
+                  <span class="pill pill-red" style="margin-bottom: 8px; display: inline-block;">NHÁNH 3: KHẨN CẤP (&lt; $10k)</span>
+                  <h6 style="color: #fff; font-size: 0.9rem; margin-bottom: 6px;">Ban hành CCD (Làm Trước - Tính Sau)</h6>
+                  <p style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
+                    Nếu dừng chờ đàm phán sẽ gây trễ tiến độ toàn dự án → A/E & CĐT ký <strong>Construction Change Directive (CCD)</strong> cho thi công ngay, quyết toán chi phí sau.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
