@@ -562,12 +562,15 @@ flowchart TD
     COND -- "Không" --> ASI["A/E ban hành ASI (Chỉ dẫn bổ sung - Chi phí = 0)"]
     COND -- "Có" --> CRIT{"Mức độ Khẩn cấp?"}
     
-    CRIT -- "Khẩn cấp (<$10k, trễ nặng)" --> CCD["A/E ban hành CCD (Lệnh thi công ngay)"]
-    CCD --> WORK["Nhà thầu thi công ngay"] --> PRICED["Quyết toán chi phí sau"] --> CO
+    CRIT -- "Khẩn cấp (Dưới 10k USD, trễ nặng)" --> CCD["A/E ban hành CCD (Lệnh thi công ngay)"]
+    CCD --> WORK["Nhà thầu thi công ngay"]
+    WORK --> PRICED["Quyết toán chi phí sau"]
+    PRICED --> CO["Ban hành Change Order (CO - Hợp đồng sửa đổi)"]
     
     CRIT -- "Không khẩn cấp" --> PR["A/E phát hành PR (Đề xuất thay đổi)"]
-    PR --> PRICE["Nhà thầu báo giá"] --> NEGO["Đàm phán chi phí & thời gian"]
-    NEGO --> CO["Ban hành Change Order (CO - Hợp đồng sửa đổi)"]
+    PR --> PRICE["Nhà thầu báo giá"]
+    PRICE --> NEGO["Đàm phán chi phí và thời gian"]
+    NEGO --> CO
             </pre>
           </div>
         </div>
@@ -1067,8 +1070,13 @@ flowchart LR
         tabPanes.forEach(p => p.classList.remove('active'));
 
         item.classList.add('active');
-        document.getElementById(tabId).classList.add('active');
+        const activeTab = document.getElementById(tabId);
+        activeTab.classList.add('active');
         viewTitle.innerText = titles[tabId];
+
+        try {
+          mermaid.run({ nodes: activeTab.querySelectorAll('.mermaid') });
+        } catch (e) {}
       });
     });
 
