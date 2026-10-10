@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIM Manager Master Planning & Ecosystem Integration</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <style>
+    :root {
+      --bg: #090d16;
+      --panel: #111827;
+      --card: #1e293b;
+      --border: #334155;
+      --primary: #38bdf8;
+      --primary-hover: #0ea5e9;
+      --accent: #f59e0b;
+      --green: #10b981;
+      --purple: #a855f7;
+      --red: #ef4444;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sidebar Navigation */
+    #sidebar {
+      width: 290px;
+      background: var(--panel);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
+    .brand-box {
+      padding: 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .brand-badge {
+      display: inline-block;
+      padding: 3px 8px;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--primary);
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .brand-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .nav-menu {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      color: var(--text-muted);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .nav-item:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+    }
+
+    .nav-item.active {
+      background: #0284c7;
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+    }
+
+    .nav-icon {
+      font-size: 1.1rem;
+    }
+
+    /* Main Content Area */
+    #content {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      background: #0b1120;
+    }
+
+    header {
+      padding: 16px 32px;
+      background: rgba(17, 24, 39, 0.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .header-title h2 {
+      font-size: 1.25rem;
+      color: #fff;
+    }
+    .header-title p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .search-input {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 14px;
+      color: #fff;
+      font-size: 0.85rem;
+      width: 250px;
+      outline: none;
+    }
+    .search-input:focus {
+      border-color: var(--primary);
+    }
+
+    .view-container {
+      padding: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .tab-pane {
+      display: none;
+      animation: fadeIn 0.25s ease-in-out;
+    }
+    .tab-pane.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Cards & Grids */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px;
+      position: relative;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.25);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 10px;
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pill {
+      font-size: 0.72rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .pill-blue { background: rgba(56, 189, 248, 0.15); color: var(--primary); }
+    .pill-green { background: rgba(16, 185, 129, 0.15); color: var(--green); }
+    .pill-orange { background: rgba(245, 158, 11, 0.15); color: var(--accent); }
+    .pill-red { background: rgba(239, 68, 68, 0.15); color: var(--red); }
+    .pill-purple { background: rgba(168, 85, 247, 0.15); color: var(--purple); }
+
+    /* Tables */
+    .table-custom {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.88rem;
+    }
+
+    .table-custom th {
+      background: rgba(15, 23, 42, 0.7);
+      color: var(--primary);
+      text-align: left;
+      padding: 10px 14px;
+      border-bottom: 2px solid var(--border);
+      font-weight: 600;
+    }
+
+    .table-custom td {
+      padding: 10px 14px;
+      border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+      color: #cbd5e1;
+    }
+
+    .table-custom tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Workflow Diagram box */
+    .diagram-container {
+      background: #0f172a;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+
+    .code-box {
+      background: #080c14;
+      border: 1px solid #1e293b;
+      border-radius: 6px;
+      padding: 14px;
+      font-family: Consolas, Monaco, "Courier New", monospace;
+      font-size: 0.82rem;
+      color: #38bdf8;
+      overflow-x: auto;
+      margin: 10px 0;
+      white-space: pre;
+      line-height: 1.6;
+    }
+
+    /* Highlight badge list */
+    ul.check-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul.check-list li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+
+    ul.check-list li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    .hero-stat {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .stat-box {
+      flex: 1;
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SIDEBAR NAVIGATION -->
+  <aside id="sidebar">
+    <div class="brand-box">
+      <span class="brand-badge">BIM ECOSYSTEM 2026</span>
+      <h1 class="brand-title">BIM Manager Master Plan</h1>
+      <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">Hoạch định Toàn diện & Tích hợp Tài sản Số</p>
+    </div>
+    <nav class="nav-menu">
+      <div class="nav-item active" data-tab="tab-overview">
+        <span class="nav-icon">🧭</span>
+        <span>1. Tổng quan & Bản đồ Hệ sinh thái</span>
+      </div>
+      <div class="nav-item" data-tab="tab-jd">
+        <span class="nav-icon">📋</span>
+        <span>2. Phân tích Đề bài JD (ONEBIM)</span>
+      </div>
+      <div class="nav-item" data-tab="tab-manual">
+        <span class="nav-icon">📘</span>
+        <span>3. Chuẩn Quản lý Dự án (MnSCU)</span>
+      </div>
+      <div class="nav-item" data-tab="tab-mindmap">
+        <span class="nav-icon">🧠</span>
+        <span>4. Số hóa Quy trình (Mindmap)</span>
+      </div>
+      <div class="nav-item" data-tab="tab-glc">
+        <span class="nav-icon">🏆</span>
+        <span>5. Năng lực Thực chiến (GLC BIM)</span>
+      </div>
+      <div class="nav-item" data-tab="tab-plan">
+        <span class="nav-icon">🎯</span>
+        <span>6. Hoạch định Bộ máy Quản trị</span>
+      </div>
+      <div class="nav-item" data-tab="tab-playbook">
+        <span class="nav-icon">📦</span>
+        <span>7. Playbook Dự án Thực tế (30.000m²)</span>
+      </div>
+      <div class="nav-item" data-tab="tab-pitch">
+        <span class="nav-icon">🚀</span>
+        <span>8. Chiến lược Phỏng vấn & Lương 50M</span>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- MAIN VIEWPORT -->
+  <main id="content">
+    <header>
+      <div class="header-title">
+        <h2 id="viewTitle">1. Tổng quan & Bản đồ Hệ sinh thái Kết nối</h2>
+        <p>Tích hợp 4 Trọng tâm: JD Tuyển dụng • Sách MnSCU • Quy trình Mindmap • Năng lực Thực tế GLC</p>
+      </div>
+      <div>
+        <input type="text" class="search-input" id="searchFilter" placeholder="Tìm nhanh từ khóa (RFI, CO, 5D...)">
+      </div>
+    </header>
+
+    <div class="view-container">
+
+      <!-- TAB 1: OVERVIEW & ECOSYSTEM -->
+      <section id="tab-overview" class="tab-pane active">
+        <div class="hero-stat">
+          <div class="stat-box">
+            <div class="stat-number">1.5M+ m²</div>
+            <div class="stat-label">Tổng diện tích sàn thực tế</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">20 - 50 Triệu</div>
+            <div class="stat-label">Biên độ Thu nhập Vị trí</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">94 Trang / 93 Biểu mẫu</div>
+            <div class="stat-label">Quy chuẩn Quản lý MnSCU</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">100% Số hóa</div>
+            <div class="stat-label">Hệ thống Quy trình Mindmap</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 24px;">
+          <div class="card-header">
+            <span class="card-title">🌐 Ma trận Tích hợp Toàn diện 4 Trụ Cột</span>
+            <span class="pill pill-blue">Master Integration</span>
+          </div>
+          <p style="color: #cbd5e1; font-size: 0.92rem; margin-bottom: 16px;">
+            Để định vị bản thân ở cấp độ **BIM Manager thực thụ (40 – 50 triệu/tháng)** thay vì một Modeler thông thường, toàn bộ kinh nghiệm thực chiến từ các đại dự án công nghiệp của bạn được gắn kết chặt chẽ với chuẩn mực quản lý xây dựng quốc tế:
+          </p>
+
+          <div class="diagram-container">
+            <pre class="mermaid">
+flowchart LR
+    subgraph D["1. ĐỀ BÀI JD (ONEBIM)"]
+        D1["Xây dựng & Quản lý mô hình BIM"]
+        D2["Trích xuất bản vẽ 2D/3D & Shop Drawing"]
+        D3["Tối ưu hóa quy trình Dynamo / API"]
+        D4["Quản lý nhóm & Đối tác Outsource"]
+    end
+
+    subgraph M["2. CHUẨN MỰC QLDA (MnSCU)"]
+        M1["Quy trình Thiết kế SD → DD → CD"]
+        M2["Quản lý Hồ sơ Submittals & Shop Drawings"]
+        M3["Ma trận Thay đổi: RFI → CCD → CO"]
+        M4["Tiến độ CPM & Nghiệm thu Closeout/O&M"]
+    end
+
+    subgraph MM["3. QUY TRÌNH SỐ HÓA (MINDMAP)"]
+        MM1["Quy trình Kiến trúc: Setup Folder, Template"]
+        MM2["Quy cách Kết cấu: 7 Bước đối soát BOQ"]
+        MM3["Shop Rebar: Chi tiết cấu kiện, Partition"]
+    end
+
+    subgraph G["4. NĂNG LỰC THỰC CHIẾN (GLC BIM)"]
+        G1["Dự án lớn: Mega Textile 67.5ha, APF, Kim Tín"]
+        G2["Hạ tầng Dữ liệu: Shared Parameters & XML Join"]
+        G3["BIM 4D Tiến độ & 5D Bóc tách Chi phí"]
+        G4["Digital Handover: As-built & CDE Vận hành"]
+    end
+
+    D <--> M
+    M <--> MM
+    MM <--> G
+    G <--> D
+            </pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: JD ANALYSIS -->
+      <section id="tab-jd" class="tab-pane">
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">📌 Thông số Vị trí (ONEBIM)</span>
+              <span class="pill pill-orange">JD Analysis</span>
+            </div>
+            <table class="table-custom">
+              <tr><td><strong>Vị trí</strong></td><td>BIM Manager</td></tr>
+              <tr><td><strong>Mức lương</strong></td><td><span style="color: #38bdf8; font-weight: bold;">20.000.000 – 50.000.000 VNĐ</span> (Thỏa thuận)</td></tr>
+              <tr><td><strong>Báo cáo cho</strong></td><td>Giám đốc trực tiếp</td></tr>
+              <tr><td><strong>Thời gian</strong></td><td>Thứ 2 – Thứ 6 (8h00 – 17h00) • <em>Nghỉ T7 & CN</em></td></tr>
+              <tr><td><strong>Kinh nghiệm</strong></td><td>3 – 5 năm làm việc thực tế</td></tr>
+              <tr><td><strong>Công cụ yêu cầu</strong></td><td>Revit, Navisworks, Dynamo, Python, Revit API, MS Project</td></tr>
+            </table>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">🔍 Bản chất Trọng tâm: "Player-Coach"</span>
+              <span class="pill pill-purple">Thực chất công việc</span>
+            </div>
+            <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 12px;">
+              Nhà tuyển dụng xác định trọng tâm cốt lõi là: <br>
+              <strong style="color: #f59e0b;">"Xây dựng và quản lý mô hình thông tin công trình (BIM) sử dụng phần mềm chuyên dụng."</strong>
+            </p>
+            <ul class="check-list">
+              <li><strong>Không phải Manager thuần lý thuyết bàn giấy:</strong> Vẫn phải trực tiếp tham gia mô hình hóa (Hands-on modeling), xử lý các nút giao phức tạp và tạo Family chuẩn.</li>
+              <li><strong>Quản trị sức khỏe dữ liệu (Model Health):**</strong> Phân chia Worksets, Central file, đồng bộ tọa độ Shared Coordinates, kiểm soát dung lượng file và cảnh báo lỗi.</li>
+              <li><strong>Tự động hóa bằng Script:</strong> Biết Dynamo/Python để giảm 50% thời gian xử lý thủ công cho cả đội ngũ.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: PROJECT MANAGEMENT MANUAL (MnSCU) -->
+      <section id="tab-manual" class="tab-pane">
+        <div class="card" style="margin-bottom: 24px;">
+          <div class="card-header">
+            <span class="card-title">📘 Khung Chuẩn Mực Quản Lý Dự Án Quốc Tế (MnSCU D-B-B)</span>
+            <span class="pill pill-green">94 Trang / AIA Standard</span>
+          </div>
+          <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 16px;">
+            Cẩm nang quản lý dự án xây dựng công lập của Minnesota State Colleges and Universities là khuôn mẫu điển hình cho việc vận hành dự án theo chuẩn Bắc Mỹ:
+          </p>
+
+          <table class="table-custom">
+            <thead>
+              <tr>
+                <th>Giai đoạn</th>
+                <th>Nội dung Trọng tâm</th>
+                <th>Cơ chế Kiểm soát & Điểm kết nối BIM</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Schematic Design (SD)</strong></td>
+                <td>Ý tưởng mặt bằng, giải pháp kết cấu, MEP sơ bộ</td>
+                <td>Ước tính ngân sách với dự phòng <strong>10% - 20%</strong>. Dùng mô hình BIM trực quan hóa phương án cho lãnh đạo.</td>
+              </tr>
+              <tr>
+                <td><strong>2. Design Development (DD)</strong></td>
+                <td>Vẽ đúng tỷ lệ, định tuyến ống MEP, bảng hoàn thiện Room Finish</td>
+                <td>Dự phòng chi phí giảm còn <strong>10% - 15%</strong>. Gửi tư vấn thẩm tra trong 10 ngày. Chạy Clash Detection sớm.</td>
+              </tr>
+              <tr>
+                <td><strong>3. Construction Documents (CD)</strong></td>
+                <td>100% bản vẽ thi công, Spec kỹ thuật, bộ hồ sơ Division 0</td>
+                <td>Thiết lập 3 - 5 gói đề xuất giảm giá (Deduct Alternates) làm dự phòng ngân sách khi đấu thầu.</td>
+              </tr>
+              <tr>
+                <td><strong>4. Thi công & Shop Drawings</strong></td>
+                <td>Quản lý Submittals, kiểm tra thí nghiệm vật liệu, họp tiền lắp đặt</td>
+                <td>Phê duyệt bản vẽ Shop Drawings trước khi gia công; kiểm soát quy trình thanh toán và giữ lại <strong>5% Retainage</strong>.</td>
+              </tr>
+              <tr>
+                <td><strong>5. Xử lý Thay đổi (Changes)</strong></td>
+                <td>Phân luồng: RFI → ASI → PR → CCD → CO</td>
+                <td>Giải quyết RFI trong 7 ngày; ban hành CCD với tình huống khẩn cấp (&lt;$10k); hợp thức hóa bằng Change Order (CO).</td>
+              </tr>
+              <tr>
+                <td><strong>6. Bàn giao (Closeout & O&M)</strong></td>
+                <td>Nghiệm thu cơ bản (Substantial), Punchlist, POE</td>
+                <td>Nộp hồ sơ As-built, O&M Manuals, bảo hành tháng thứ 10. Tiền đề của BIM 7D Facility Management.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">🔄 Ma trận Phân Luồng Thay Đổi Hiện Trường (Mục 4.5 MnSCU)</span>
+            <span class="pill pill-red">Critical Workflow</span>
+          </div>
+          <div class="diagram-container">
+            <pre class="mermaid">
+flowchart TD
+    RFI["Contractor gửi RFI (Yêu cầu làm rõ)"] --> REV["A/E thẩm tra trong 7 ngày"]
+    REV --> COND{"Ảnh hưởng Chi phí / Tiến độ?"}
+    
+    COND -- "Không" --> ASI["A/E ban hành ASI (Chỉ dẫn bổ sung - Chi phí = 0)"]
+    COND -- "Có" --> CRIT{"Mức độ Khẩn cấp?"}
+    
+    CRIT -- "Khẩn cấp (<$10k, trễ nặng)" --> CCD["A/E ban hành CCD (Lệnh thi công ngay)"]
+    CCD --> WORK["Nhà thầu thi công ngay"] --> PRICED["Quyết toán chi phí sau"] --> CO
+    
+    CRIT -- "Không khẩn cấp" --> PR["A/E phát hành PR (Đề xuất thay đổi)"]
+    PR --> PRICE["Nhà thầu báo giá"] --> NEGO["Đàm phán chi phí & thời gian"]
+    NEGO --> CO["Ban hành Change Order (CO - Hợp đồng sửa đổi)"]
+            </pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: MINDMAP WORKFLOWS -->
+      <section id="tab-mindmap" class="tab-pane">
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">🏛️ Quy trình Kiến trúc</span>
+              <span class="pill pill-blue">BSV Architecture</span>
+            </div>
+            <ul class="check-list">
+              <li>Tiếp cận bản vẽ từ tổng thể đến chi tiết (hạng mục chính/phụ).</li>
+              <li>Khởi tạo cây thư mục chuẩn trên Server: <code>Cad template</code>, <code>Rvt template</code>, <code>Central file</code>.</li>
+              <li>Kiểm tra hệ thống Family type trước khi dựng.</li>
+              <li>Đối chiếu thông số với BOQ Architecture để không sót khối lượng.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">🏗️ Quy cách Kết cấu</span>
+              <span class="pill pill-green">BSV Structure</span>
+            </div>
+            <ul class="check-list">
+              <li><strong>Quy tắc Join ưu tiên:</strong> Sàn &gt; Móng &gt; Cột &gt; Dầm &gt; Vách &gt; Cầu thang.</li>
+              <li>Gán chuẩn tham số: <code>Comments</code>, <code>BSV_PhanLoai</code>, <code>BSV_LoTi</code>.</li>
+              <li>7 bước kiểm soát khối lượng: Gán biến → Join cấu kiện → Chạy ván khuôn → Check trùng → Xuất Excel đối soát BOQ.</li>
+              <li>Tích hợp tool tự động: Atool, Bimspeed, AutoPile.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">🔩 Shop Drawing Rebar</span>
+              <span class="pill pill-orange">Cốt thép Thực chiến</span>
+            </div>
+            <ul class="check-list">
+              <li>Mô hình hóa chi tiết thép: Móng, Cột, Dầm, Sàn, Vách.</li>
+              <li>Quy chuẩn phân vùng đặt tên thép bằng biến <code>Partition</code> (ví dụ: F1) và <code>BSV_PhanLoai</code>.</li>
+              <li>Đóng gói View Template chuẩn: <code>BSV_02.1_Detail_Foundation</code>, hướng nhìn mặt cắt, Dim & Tag tự động.</li>
+              <li>Xuất bản vẽ Shop Drawing đạt độ chính xác gia công tại xưởng.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">⚙️ Cấu hình Tự động hóa Join Cấu kiện (Từ BSV_QuyTacJoin.xml)</span>
+            <span class="pill pill-purple">Revit Auto-Join Rules</span>
+          </div>
+          <pre class="code-box">&lt;!-- Thứ tự ưu tiên cắt giao hình học cấu kiện đã được lập trình sẵn --&gt;
+&lt;AllRules&gt;
+  &lt;Rule CategoryUuTien="Structural Floors"       CategoryBiCat="Structural Foundations" /&gt;
+  &lt;Rule CategoryUuTien="Structural Floors"       CategoryBiCat="Structural Framing" /&gt;
+  &lt;Rule CategoryUuTien="Structural Floors"       CategoryBiCat="Structural Columns" /&gt;
+  &lt;Rule CategoryUuTien="Structural Floors"       CategoryBiCat="Structural Walls" /&gt;
+  &lt;Rule CategoryUuTien="Structural Foundations"  CategoryBiCat="Structural Framing" /&gt;
+  &lt;Rule CategoryUuTien="Structural Columns"      CategoryBiCat="Structural Framing" /&gt;
+  &lt;Rule CategoryUuTien="Structural Columns"      CategoryBiCat="Structural Walls" /&gt;
+  &lt;Rule CategoryUuTien="Structural Framing"      CategoryBiCat="Structural Walls" /&gt;
+&lt;/AllRules&gt;</pre>
+        </div>
+      </section>
+
+      <!-- TAB 5: GLC BIM CAPABILITY -->
+      <section id="tab-glc" class="tab-pane">
+        <div class="card" style="margin-bottom: 24px;">
+          <div class="card-header">
+            <span class="card-title">🏆 Hồ sơ Năng lực Thực tế (Golden Lotus Construction - GLC)</span>
+            <span class="pill pill-green">Chứng nhận Thực tế</span>
+          </div>
+          <div class="grid-2">
+            <div>
+              <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 14px;">
+                Tài liệu <strong>00.DESIGN & BIM CAPABILITY GLC.pdf</strong> chứng minh năng lực triển khai BIM cấp độ Tổng thầu công nghiệp hàng đầu:
+              </p>
+              <ul class="check-list">
+                <li><strong>Quy mô triển khai:</strong> Hơn 15 dự án lớn với tổng diện tích <strong>1.500.000+ m² sàn</strong>.</li>
+                <li><strong>Dự án tiêu biểu:</strong>
+                  <br>• Mega Textile (VSIP 2 Nghệ An): <strong>67.5 ha</strong> (Chủ đầu tư Trung Quốc)
+                  <br>• Nhà xưởng APF Đồng Nai: <strong>122.000 m²</strong>
+                  <br>• Nhà xưởng Kim Tín Dầu Giây: <strong>311.845 m²</strong>
+                  <br>• Nhà máy Aimer Vietnam: <strong>20.000 m²</strong>
+                </li>
+                <li><strong>Phạm vi toàn diện:</strong> BIM Kiến trúc, Kết cấu, MEPF và Hạ tầng kỹ thuật (Infrastructure).</li>
+              </ul>
+            </div>
+            <div>
+              <div class="card" style="background: #090e17;">
+                <h4 style="color: #38bdf8; margin-bottom: 8px;">🌐 Hệ sinh thái Quản trị Dự án số GLC</h4>
+                <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 10px;">
+                  Kết nối dữ liệu đa tầng xuyên suốt vòng đời công trình:
+                </p>
+                <div style="font-size: 0.82rem; line-height: 1.8; color: #cbd5e1;">
+                  • <strong>Camera AI:</strong> Giám sát hiện trường 24/7 liên kết mô hình số.<br>
+                  • <strong>DATA BIM CORE:</strong> Cấu trúc dữ liệu nguồn duy nhất (Single Source of Truth).<br>
+                  • <strong>GLCONS:</strong> Điều hành dự án – Tiến độ – An toàn – Chất lượng.<br>
+                  • <strong>BIM 4D & 5D:</strong> Kiểm soát trực quan tiến độ và chi phí theo thời gian thực.<br>
+                  • <strong>Digital Handover:</strong> Bàn giao mô hình As-built, IFC, COBie phục vụ quản lý tài sản 50 năm.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">📋 Cấu trúc Bộ Tham số Shared Parameters (BSV_KC_ShareParameter.txt)</span>
+            <span class="pill pill-blue">Revit Parameters</span>
+          </div>
+          <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 12px;">
+            Hệ thống tham số dùng chung đã được chuẩn hóa phục vụ chính xác công tác bóc tách khối lượng và quản lý cấu kiện:
+          </p>
+          <table class="table-custom" style="margin-bottom: 16px;">
+            <thead>
+              <tr>
+                <th>Tên Tham Số</th>
+                <th>Kiểu Dữ Liệu</th>
+                <th>Mục Đích & Ứng Dụng Thực Tế Trong Mô Hình</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code style="color: #38bdf8; font-weight: bold;">BSV_ChieuDaiThepShop</code></td>
+                <td><span class="pill pill-blue">LENGTH</span></td>
+                <td>Chiều dài từng đoạn thanh thép phục vụ xuất bảng thống kê gia công Shop Drawing tại xưởng.</td>
+              </tr>
+              <tr>
+                <td><code style="color: #38bdf8; font-weight: bold;">BSV_SoHieuThep_PX_Section</code></td>
+                <td><span class="pill pill-purple">TEXT</span></td>
+                <td>Số hiệu định danh thanh thép theo từng phân đoạn mặt cắt (Section Part).</td>
+              </tr>
+              <tr>
+                <td><code style="color: #38bdf8; font-weight: bold;">BSV_CocThiNghiem</code></td>
+                <td><span class="pill pill-orange">NUMBER</span></td>
+                <td>Tách biệt số lượng cọc thí nghiệm kiểm tra tải và cọc ép đại trà trong móng.</td>
+              </tr>
+              <tr>
+                <td><code style="color: #38bdf8; font-weight: bold;">BSV_DaoDat</code></td>
+                <td><span class="pill pill-green">VOLUME</span></td>
+                <td>Tính toán thể tích đào đất móng tự động phục vụ dự toán và thi công đất.</td>
+              </tr>
+              <tr>
+                <td><code style="color: #38bdf8; font-weight: bold;">BSV_LoTi</code></td>
+                <td><span class="pill pill-orange">NUMBER</span></td>
+                <td>Đếm chính xác số lượng lỗ ti ren coppha trên dầm/vách để dự trù công tác trám chống thấm.</td>
+              </tr>
+              <tr>
+                <td><code style="color: #38bdf8; font-weight: bold;">BSV_BeTongLot</code></td>
+                <td><span class="pill pill-blue">MATERIAL</span></td>
+                <td>Gán vật liệu mác bê tông lót (B7.5) tách biệt với bê tông kết cấu chính (B25).</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 6px;">Cấu trúc file chia sẻ nguyên bản (Shared Parameter Syntax):</p>
+          <pre class="code-box">PARAM	e99aae0e-aecb-40a2-a86c-d4bbdd172f00	BSV_ChieuDaiThepShop	LENGTH
+PARAM	2e8d3f25-d137-46fa-851f-53ae61746473	BSV_SoHieuThep_PX_Section	TEXT
+PARAM	f1e9ac26-beab-4552-a3e9-043dd568e3c3	BSV_CocThiNghiem		NUMBER
+PARAM	2119c958-54f7-4de6-b36d-d994de2d10f1	BSV_DaoDat			VOLUME
+PARAM	259a476d-2352-4a0d-b867-d95b4f07b079	BSV_LoTi			NUMBER
+PARAM	752a4b36-f055-486d-9375-05418d09da10	BSV_BeTongLot			MATERIAL</pre>
+        </div>
+      </section>
+
+      <!-- TAB 6: MASTER PLANNING FRAMEWORK -->
+      <section id="tab-plan" class="tab-pane">
+        <div class="card" style="margin-bottom: 24px;">
+          <div class="card-header">
+            <span class="card-title">🎯 Hoạch Định 5 Trụ Cột Quản Trị Cho BIM Manager</span>
+            <span class="pill pill-orange">Framework Thực thi</span>
+          </div>
+          <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 16px;">
+            Khi tiếp nhận vị trí BIM Manager, bạn triển khai hệ thống quản trị theo 5 trụ cột vững chắc sau:
+          </p>
+
+          <div class="grid-2">
+            <div class="card" style="background: #0f172a;">
+              <h4 style="color: #38bdf8; margin-bottom: 8px;">1. Tiêu chuẩn hóa & Cấu trúc Dữ liệu</h4>
+              <p style="font-size: 0.85rem; color: #cbd5e1;">
+                • Ban hành ngay <strong>Bộ BEP (BIM Execution Plan)</strong> chuẩn.<br>
+                • Thiết lập hệ thống Shared Parameters (<code>BSV_KC_ShareParameter</code>) và Naming Convention cho toàn dự án.<br>
+                • Áp dụng bộ quy tắc Join tự động bằng file XML để mọi thành viên dựng hình đều đồng nhất.
+              </p>
+            </div>
+
+            <div class="card" style="background: #0f172a;">
+              <h4 style="color: #10b981; margin-bottom: 8px;">2. Điều phối Đa bộ môn & Xung đột</h4>
+              <p style="font-size: 0.85rem; color: #cbd5e1;">
+                • Thiết lập ma trận Clash Matrix (Hard, Soft, Clearance) bằng Navisworks.<br>
+                • Tổ chức họp điều phối BIM định kỳ hàng tuần.<br>
+                • Triệt tiêu 80% xung đột thiết kế trước khi xuất hồ sơ mời thầu, giảm thiểu tối đa phát sinh hiện trường.
+              </p>
+            </div>
+
+            <div class="card" style="background: #0f172a;">
+              <h4 style="color: #f59e0b; margin-bottom: 8px;">3. Tích hợp Tiến độ 4D & Chi phí 5D</h4>
+              <p style="font-size: 0.85rem; color: #cbd5e1;">
+                • Gắn kết mô hình với tiến độ đường găng <strong>CPM</strong> (Chương 7 MnSCU).<br>
+                • Bóc tách khối lượng tự động liên kết BOQ dự toán theo quy trình 7 bước đã chuẩn hóa.<br>
+                • Giúp Chủ đầu tư nhìn thấy ngay biến động chi phí khi có thay đổi phương án kiến trúc/kết cấu.
+              </p>
+            </div>
+
+            <div class="card" style="background: #0f172a;">
+              <h4 style="color: #a855f7; margin-bottom: 8px;">4. Kiểm soát Shop Drawing & RFI Hiện trường</h4>
+              <p style="font-size: 0.85rem; color: #cbd5e1;">
+                • Quản lý quy trình phát hành bản vẽ Shop Drawing cốt thép & kết cấu bằng View Template chuẩn.<br>
+                • Số hóa quy trình xử lý thay đổi: RFI → ASI → PR → CCD → Change Order (CO).<br>
+                • Đảm bảo dữ liệu hiện trường và mô hình Central luôn khớp nhau 100%.
+              </p>
+            </div>
+          </div>
+
+          <div class="card" style="background: #0f172a; margin-top: 18px;">
+            <h4 style="color: #ec4899; margin-bottom: 8px;">5. Nghiệm thu & Bàn giao số (Digital Handover 7D)</h4>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              • Đóng gói gói bàn giao số hoàn chỉnh tại thời điểm Substantial Completion: Mô hình As-built BIM, nhật ký hoàn công, dữ liệu tài sản COBie.<br>
+              • Bàn giao tài sản số để Chủ đầu tư vận hành bảo trì thông minh trong suốt 50 năm vòng đời công trình.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 7: PLAYBOOK TRIỂN KHAI DỰ ÁN CỤ THỂ -->
+      <section id="tab-playbook" class="tab-pane">
+        <div class="card" style="margin-bottom: 24px;">
+          <div class="card-header">
+            <span class="card-title">📦 Case Study Thực Chiến: Dự Án Nhà Máy Công Nghiệp X (30.000 m²)</span>
+            <span class="pill pill-green">Action Playbook</span>
+          </div>
+          <p style="color: #cbd5e1; font-size: 0.92rem; margin-bottom: 16px;">
+            Quy trình triển khai trọn gói áp dụng trực tiếp toàn bộ tài sản kỹ thuật từ bộ <strong>BIM</strong> và <strong>Mindmap</strong> cho một dự án công nghiệp thực tế gồm: Nhà xưởng sản xuất thép tiền chế, Nhà văn phòng 3 tầng, Nhà ăn và Hạ tầng kỹ thuật đồng bộ.
+          </p>
+
+          <div class="diagram-container">
+            <pre class="mermaid">
+flowchart LR
+    G0["G0: Setup Hạ tầng & CDE<br>(Ngày 1 - 3)"] --> G1["G1: Dựng hình & Join XML<br>(Ngày 4 - 15)"]
+    G1 --> G2["G2: Phối hợp & Xung đột<br>(Ngày 16 - 20)"]
+    G2 --> G3["G3: Bóc 5D & Khối lượng BOQ<br>(Ngày 21 - 25)"]
+    G3 --> G4["G4: Xuất Shop Drawing Thép<br>(Ngày 26 - 40)"]
+    G4 --> G5["G5: Quản trị Hiện trường & CO<br>(Thi công)"]
+    G5 --> G6["G6: Bàn giao số Digital Handover<br>(Nghiệm thu)"]
+            </pre>
+          </div>
+        </div>
+
+        <!-- BẢNG MA TRẬN PHÂN CÔNG & TÀI SẢN -->
+        <div class="card" style="margin-bottom: 24px;">
+          <div class="card-header">
+            <span class="card-title">📋 Ma Trận Phân Công Trách Nhiệm & Tài Sản Sử Dụng</span>
+            <span class="pill pill-blue">Responsibility Matrix</span>
+          </div>
+          <table class="table-custom">
+            <thead>
+              <tr>
+                <th>Giai Đoạn</th>
+                <th>Người Chủ Trì</th>
+                <th>Tài Sản / File Cốt Lõi Áp Dụng</th>
+                <th>Sản Phẩm Đầu Ra (Deliverable)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>G0: Khởi tạo & CDE</strong></td>
+                <td>BIM Manager</td>
+                <td><code>BSV_Arch_Working process</code>, <code>Template Revit</code>, Server tree</td>
+                <td>Cây thư mục CDE, các file Central đa bộ môn, mốc tọa độ thực Survey Point.</td>
+              </tr>
+              <tr>
+                <td><strong>G1: Dựng hình & Tự động</strong></td>
+                <td>BIM Modeler</td>
+                <td><code>BSV_QuyTacJoin.xml</code>, <code>AutoPile Tool</code>, <code>Bimspeed</code></td>
+                <td>Mô hình 3D thô (LOD 300) đã tự động cắt giao hình học, sạch lỗi giao cắt.</td>
+              </tr>
+              <tr>
+                <td><strong>G2: Điều phối 3D</strong></td>
+                <td>BIM Coordinator</td>
+                <td>Navisworks Manage, Ma trận Clash Matrix, Quy trình RFI (MnSCU)</td>
+                <td>Báo cáo Clash Report đã xử lý, biên bản xử lý va chạm không phát sinh (ASI).</td>
+              </tr>
+              <tr>
+                <td><strong>G3: Khối lượng 5D</strong></td>
+                <td>QS / Modeler</td>
+                <td>7 bước từ <code>Quy cách tính kết cấu.xmind</code>, <code>BOQ Master</code></td>
+                <td>Bảng khối lượng bê tông, ván khuôn, đào đất, lỗ ti đối soát sạch với BOQ.</td>
+              </tr>
+              <tr>
+                <td><strong>G4: Shop Drawing Rebar</strong></td>
+                <td>Senior Modeler</td>
+                <td><code>SHOP DRAWING REBAR.xmind</code>, View Template <code>BSV_02.1</code></td>
+                <td>Hồ sơ bản vẽ Shop Drawing chi tiết thép và bảng thống kê thép xưởng (BBS).</td>
+              </tr>
+              <tr>
+                <td><strong>G5: Quản trị Hiện trường</strong></td>
+                <td>BIM Manager</td>
+                <td>Quy trình RFI → PR → CCD → CO (Chương 4 MnSCU Manual)</td>
+                <td>Mô hình cập nhật thay đổi hiện trường, tiến độ CPM 4D phục vụ thanh toán.</td>
+              </tr>
+              <tr>
+                <td><strong>G6: Bàn giao số</strong></td>
+                <td>BIM Manager</td>
+                <td><code>00.GLC Capability</code> (Digital Handover), IFC/COBie data</td>
+                <td>Gói hồ sơ As-built BIM, thư viện O&M Manuals và dữ liệu vận hành tài sản.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- CHI TIẾT 6 GIAI ĐOẠN -->
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">🚀 G0: Thiết Lập Hạ Tầng & CDE (Ngày 1 - 3)</span>
+              <span class="pill pill-blue">Setup Phase</span>
+            </div>
+            <ul class="check-list">
+              <li><strong>Thiết lập CDE:</strong> Áp dụng quy chuẩn thư mục từ <em>BSV Architecture</em> tạo các phân vùng: <code>01_CAD_Reference/</code>, <code>02_RVT_Central/</code>, <code>03_BOQ_Master/</code>, <code>04_Family_Library/</code>.</li>
+              <li><strong>Nạp hệ thống Shared Parameters:</strong> Load file <code>BSV_KC_ShareParameter.txt</code> vào Revit Template dự án.</li>
+              <li><strong>Định vị tọa độ thực (Shared Coordinates):</strong> Khóa mốc Survey Point theo hệ tọa độ VN-2000 từ bản vẽ trắc địa tổng mặt bằng.</li>
+              <li><strong>Khởi tạo Central files:</strong> Tạo các file <code>DuAnX_ARC.rvt</code>, <code>DuAnX_STR.rvt</code>, <code>DuAnX_MEP.rvt</code> và phân quyền Worksets.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">⚙️ G1: Dựng Hình & Tự Động Hóa (Ngày 4 - 15)</span>
+              <span class="pill pill-purple">Modeling Phase</span>
+            </div>
+            <ul class="check-list">
+              <li><strong>Tự động hóa cọc móng:</strong> Chạy tool <code>BSV_AutoPile_ByCenterPointCircle</code> rải cọc theo CAD, chạy <code>BSV_AutoSetElevationPile</code> hạ cos cọc về đáy móng. Gán tham số <code>BSV_CocThiNghiem</code>.</li>
+              <li><strong>Quy chuẩn đặt tên cấu kiện:</strong> Móng đặt theo <code>Rộng x Dài x Cao</code> (vd: <code>1200x1500x1000</code>).</li>
+              <li><strong>Kích hoạt Auto-Join bằng XML:</strong> Nạp file <code>BSV_QuyTacJoin.xml</code> để hệ thống tự động cắt: <em>Sàn cắt Móng/Cột/Dầm/Vách; Móng cắt Dầm; Cột cắt Dầm</em> mà không cần thao tác tay.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">🔍 G2: Điều Phối 3D & Xung Đột (Ngày 16 - 20)</span>
+              <span class="pill pill-orange">Coordination Phase</span>
+            </div>
+            <ul class="check-list">
+              <li><strong>Hợp nhất mô hình:</strong> Link các file ARC, STR, MEPF vào <strong>Navisworks Manage</strong>.</li>
+              <li><strong>Chạy Clash Matrix:</strong> Kiểm tra Hard Clash (ống gió/cứu hỏa xuyên dầm), Soft Clash và khoảng hở thao tác (Clearance).</li>
+              <li><strong>Xử lý thay đổi kỹ thuật:</strong> Áp dụng luồng xử lý RFI từ Sách MnSCU. Các xung đột nội bộ giải quyết trực tiếp bằng chỉ dẫn kỹ thuật số (ASI), triệt tiêu 80% xung đột trước khi ra công trường.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">📊 G3: Bóc Tách 5D & Khối Lượng BOQ (Ngày 21 - 25)</span>
+              <span class="pill pill-green">5D Quantity Takeoff</span>
+            </div>
+            <ul class="check-list">
+              <li><strong>Gán biến phân khu:</strong> Nhập mã BOQ vào biến <code>Comments</code> (ví dụ: <code>02.Mong-Xuong</code>, <code>04.Nen-Xuong</code>).</li>
+              <li><strong>Bóc ván khuôn tự động:</strong> Dùng tool quét ván khuôn, tự động gán <code>BSV_PhanLoai:VK_Mong</code>, <code>VK_Dam</code>.</li>
+              <li><strong>Quét sạch lỗi trùng:</strong> Chạy tool <code>BSV_KiemTraTrungNhau</code> kiểm tra cấu kiện trùng lặp.</li>
+              <li><strong>Bóc đất & Lỗ ti:</strong> Xuất tham số <code>BSV_DaoDat</code> và đếm <code>BSV_LoTi</code> phục vụ dự toán chống thấm.</li>
+              <li><strong>Đối soát BOQ Master:</strong> Xuất Excel và liên kết đối chiếu với dự toán để không bị sót việc.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">🔩 G4: Xuất Shop Drawing Cốt Thép (Ngày 26 - 40)</span>
+              <span class="pill pill-blue">LOD 400 Shop Drawing</span>
+            </div>
+            <ul class="check-list">
+              <li><strong>Mô hình thép chi tiết:</strong> Áp dụng nhánh <em>Shop Drawing Rebar</em> mô hình hóa thép lớp trên/dưới, đai, tăng cường và chân kê.</li>
+              <li><strong>Phân vùng thép bằng Partition:</strong> Gán mã <code>Partition: F1</code> (Móng), <code>C1</code> (Cột) và <code>BSV_SoHieuThep_PX_Section</code>.</li>
+              <li><strong>Đóng gói View Template:</strong> Gán <code>BSV_02.1_Detail_Foundation</code>, mặt cắt chuẩn từ trên xuống, từ trái qua phải.</li>
+              <li><strong>Xuất bảng uốn thép xưởng (BBS):</strong> Bảng thống kê tự động xuất biến <code>BSV_ChieuDaiThepShop</code> phục vụ cắt uốn tại nhà máy.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">🏗️ G5 & G6: Hiện Trường & Bàn Giao Số 7D</span>
+              <span class="pill pill-red">Field & Digital Handover</span>
+            </div>
+            <ul class="check-list">
+              <li><strong>Quản lý thay đổi hiện trường:</strong> Phân luồng RFI → PR → CCD → Change Order (CO) chuẩn MnSCU.</li>
+              <li><strong>Kiểm soát tiến độ 4D:</strong> Mô phỏng trình tự thi công, gắn kết tiến độ đường găng CPM với hồ sơ thanh toán hàng tháng.</li>
+              <li><strong>Nghiệm thu hoàn thành cơ bản (Substantial):</strong> Rà soát Punchlist, bàn giao tài liệu O&M Manuals.</li>
+              <li><strong>Bàn giao tài sản số (Digital Handover):</strong> Bàn giao mô hình As-built BIM, dữ liệu COBie/IFC cho Chủ đầu tư vận hành 50 năm.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 8: VALUE PITCH & DEAL LƯƠNG 50M -->
+      <section id="tab-pitch" class="tab-pane">
+        <div class="card" style="margin-bottom: 24px;">
+          <div class="card-header">
+            <span class="card-title">🚀 Chiến Lược Định Vị Bản Thân & Deal Lương Mức Trần (40M - 50M)</span>
+            <span class="pill pill-red">Interview Strategy</span>
+          </div>
+          
+          <div class="grid-2">
+            <div>
+              <h4 style="color: #f59e0b; margin-bottom: 10px;">💡 Sự Khác Biệt Giữa 2 Phân Khúc Ứng Viên</h4>
+              <table class="table-custom">
+                <tr>
+                  <th>Mức 20M - 30M (Senior Modeler)</th>
+                  <th>Mức 40M - 50M (BIM Manager Thực Thụ)</th>
+                </tr>
+                <tr>
+                  <td>Chỉ biết dựng hình nhanh trên Revit theo yêu cầu.</td>
+                  <td><strong>Làm chủ toàn diện quy trình:</strong> Có sẵn bộ tiêu chuẩn (BEP, Shared Parameter, XML Join).</td>
+                </tr>
+                <tr>
+                  <td>Lúng túng khi file nặng, lỗi tọa độ, va chạm nhiều.</td>
+                  <td><strong>Tối ưu hóa hệ thống:</strong> Thiết lập quy chuẩn Central file, Worksets, script tự động hóa sửa lỗi.</td>
+                </tr>
+                <tr>
+                  <td>Chỉ biết vẽ hình học 3D đơn thuần.</td>
+                  <td><strong>Quản trị Dữ liệu & Chi phí:</strong> Kết nối mô hình với dự toán BOQ (5D), tiến độ CPM (4D) và As-built (7D).</td>
+                </tr>
+                <tr>
+                  <td>Kinh nghiệm các công trình nhà phố, chung cư nhỏ.</td>
+                  <td><strong>Kinh nghiệm dự án khủng:</strong> Đã triển khai các đại dự án 67.5 ha, 1.5M m² sàn công nghiệp.</td>
+                </tr>
+              </table>
+            </div>
+
+            <div>
+              <h4 style="color: #38bdf8; margin-bottom: 10px;">🎤 Kịch Bản Trình Bày (Value Pitch) Trước Giám Đốc</h4>
+              <div class="card" style="background: #090e17; font-size: 0.88rem; line-height: 1.7; color: #cbd5e1;">
+                <em>"Kính thưa Ban Giám đốc,</em><br><br>
+                Ở vị trí BIM Manager của ONEBIM, sự khác biệt lớn nhất tôi mang lại không chỉ là kỹ năng dựng hình phần mềm, mà là **một hệ thống quản trị dự án số đã được tôi đóng gói và kiểm chứng trên hơn 1.5 triệu m² sàn công nghiệp**.<br><br>
+                1. <strong>Vào việc ngay ngày đầu tiên:</strong> Tôi đã có sẵn toàn bộ quy trình Kiến trúc, Kết cấu, Shop Drawing được sơ đồ hóa thành Mindmap trực quan, cùng bộ thư viện tham số <code>Shared Parameters</code> và quy tắc <code>Auto-Join XML</code>. Đội ngũ nội bộ hay đối tác Outsource chỉ cần tuân thủ là mô hình chuẩn xác tuyệt đối.<br><br>
+                2. <strong>Bảo vệ dòng tiền dự án:</strong> Tôi kết hợp tư duy QLDA chuẩn Bắc Mỹ (AIA/MnSCU) với BIM 5D, giải quyết xung đột bằng RFI số ngay từ khâu thiết kế để triệt tiêu mọi phát sinh chi phí ngoài công trường.<br><br>
+                Do đó, mức đầu tư <strong>45 – 50 triệu/tháng</strong> cho vị trí này là một khoản đầu tư sinh lời ngay lập tức cho chất lượng và uy tín của công ty đối với các Chủ đầu tư lớn."
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">📅 Lộ Trình 30 Ngày Đầu Tiếp Quản Phòng BIM</span>
+            <span class="pill pill-green">First 30 Days Action Plan</span>
+          </div>
+          <div class="grid-3">
+            <div class="card" style="background: #0f172a;">
+              <h5 style="color: #38bdf8;">Tuần 1: Chuẩn Hóa Hạ Tầng</h5>
+              <p style="font-size: 0.82rem; color: #94a3b8; margin-top: 6px;">
+                Ban hành cây thư mục Server, cấu hình Revit Templates (Arch/Struct), nạp bộ Shared Parameters và quy tắc Join XML vào toàn bộ máy trạm.
+              </p>
+            </div>
+            <div class="card" style="background: #0f172a;">
+              <h5 style="color: #10b981;">Tuần 2: Đào Tạo Bằng Mindmap</h5>
+              <p style="font-size: 0.82rem; color: #94a3b8; margin-top: 6px;">
+                Dùng trực tiếp file Mindmap quy trình để training cho đội ngũ Modeler và đối tác thuê ngoài; thống nhất quy cách bẻ thép, đặt tên Partition và View Template.
+              </p>
+            </div>
+            <div class="card" style="background: #0f172a;">
+              <h5 style="color: #f59e0b;">Tuần 3 - 4: Tự Động Hóa & Báo Cáo</h5>
+              <p style="font-size: 0.82rem; color: #94a3b8; margin-top: 6px;">
+                Triển khai các script Dynamo/Tool kiểm tra trùng lặp cấu kiện, thiết lập luồng phối hợp Navisworks Clash Matrix và báo cáo tiến độ trực tiếp lên Giám đốc.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script>
+    mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+
+    // Tab Navigation Logic
+    const navItems = document.querySelectorAll('.nav-item');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    const viewTitle = document.getElementById('viewTitle');
+
+    const titles = {
+      'tab-overview': '1. Tổng quan & Bản đồ Hệ sinh thái Kết nối',
+      'tab-jd': '2. Phân tích Đề bài Tuyển dụng BIM Manager (ONEBIM)',
+      'tab-manual': '3. Chuẩn mực Quản lý Dự án Quốc tế (MnSCU Manual)',
+      'tab-mindmap': '4. Hệ thống Hóa & Số Hóa Quy trình (Mindmap)',
+      'tab-glc': '5. Năng lực Thực chiến Doanh nghiệp (GLC BIM Capability)',
+      'tab-plan': '6. Hoạch định 5 Trụ Cột Quản trị Bộ máy BIM',
+      'tab-playbook': '7. Playbook Triển khai Dự án Thực tế Mẫu (30.000 m²)',
+      'tab-pitch': '8. Chiến lược Phỏng vấn & Đạt Mức Lương Trần 50M'
+    };
+
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const tabId = item.getAttribute('data-tab');
+        
+        navItems.forEach(i => i.classList.remove('active'));
+        tabPanes.forEach(p => p.classList.remove('active'));
+
+        item.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+        viewTitle.innerText = titles[tabId];
+      });
+    });
+
+    // Simple Realtime Search / Filter
+    document.getElementById('searchFilter').addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      const currentTab = document.querySelector('.tab-pane.active');
+      const textNodes = currentTab.querySelectorAll('p, li, td, h4, h5, div.card-title');
+      
+      textNodes.forEach(node => {
+        if (!q) {
+          node.style.backgroundColor = 'transparent';
+        } else if (node.innerText.toLowerCase().includes(q)) {
+          node.style.backgroundColor = 'rgba(245, 158, 11, 0.25)';
+          node.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          node.style.backgroundColor = 'transparent';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

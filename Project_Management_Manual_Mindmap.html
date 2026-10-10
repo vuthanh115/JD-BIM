@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mindmap: Project Management Manual (Design & Construction)</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #38bdf8;
+      --accent: #f59e0b;
+      --green: #10b981;
+      --purple: #a855f7;
+      --pink: #ec4899;
+      --red: #ef4444;
+      --node-hover: #273549;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    header {
+      background: rgba(15, 23, 42, 0.95);
+      border-bottom: 1px solid var(--card-border);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .title-box h1 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .title-box p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-input {
+      background: #090d16;
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 6px 12px 6px 30px;
+      color: #fff;
+      font-size: 0.85rem;
+      width: 220px;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+      width: 280px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .btn {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s;
+    }
+
+    .btn:hover {
+      background: var(--card-border);
+      color: var(--primary);
+    }
+
+    .btn-primary {
+      background: #0284c7;
+      border-color: #38bdf8;
+    }
+    .btn-primary:hover {
+      background: #0369a1;
+    }
+
+    #main-container {
+      flex: 1;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #tree-canvas {
+      flex: 1;
+      overflow: auto;
+      padding: 40px;
+      cursor: grab;
+      user-select: none;
+    }
+
+    #tree-canvas:active {
+      cursor: grabbing;
+    }
+
+    /* Mindmap Tree Styles */
+    .tree {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 100%;
+    }
+
+    .node-group {
+      display: flex;
+      align-items: center;
+      margin: 6px 0;
+      position: relative;
+    }
+
+    .node-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+      max-width: 480px;
+    }
+
+    .node-card:hover {
+      background: var(--node-hover);
+      border-color: var(--primary);
+      transform: translateX(2px);
+    }
+
+    .node-card.root {
+      background: linear-gradient(135deg, #0369a1, #1e293b);
+      border: 2px solid var(--primary);
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 12px 20px;
+      color: #fff;
+    }
+
+    .node-card.level-1 {
+      border-left: 4px solid var(--accent);
+      font-weight: 600;
+      background: #182234;
+    }
+
+    .node-card.level-2 {
+      border-left: 3px solid var(--primary);
+      font-size: 0.85rem;
+    }
+
+    .node-card.level-3 {
+      border-left: 2px solid var(--green);
+      font-size: 0.82rem;
+      color: #cbd5e1;
+    }
+
+    .toggle-icon {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      transition: transform 0.2s;
+    }
+
+    .badge {
+      font-size: 0.7rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .badge.red {
+      background: rgba(239, 68, 68, 0.2);
+      color: #f87171;
+    }
+    .badge.green {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+    }
+    .badge.orange {
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+    }
+
+    .children-container {
+      margin-left: 28px;
+      padding-left: 14px;
+      border-left: 2px dashed rgba(100, 116, 139, 0.35);
+      transition: all 0.25s ease-in-out;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .highlight {
+      border-color: #f59e0b !important;
+      background: rgba(245, 158, 11, 0.15) !important;
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.5) !important;
+    }
+
+    /* Detail Inspector Drawer */
+    #inspector {
+      width: 360px;
+      background: #111827;
+      border-left: 1px solid var(--card-border);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      overflow-y: auto;
+    }
+
+    #inspector h2 {
+      font-size: 1.05rem;
+      color: var(--primary);
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 8px;
+    }
+
+    #inspector .desc-box {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: #cbd5e1;
+    }
+
+    #inspector .meta-tag {
+      font-size: 0.75rem;
+      padding: 4px 8px;
+      border-radius: 4px;
+      background: #1f2937;
+      color: #93c5fd;
+      display: inline-block;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="title-box">
+      <h1>📘 SƠ ĐỒ TƯ DUY: PROJECT MANAGEMENT MANUAL (MnSCU)</h1>
+      <p>Cẩm nang Quản lý Dự án Thiết kế và Thi công Xây dựng (Theo chuẩn AIA / D-B-B Framework)</p>
+    </div>
+    <div class="toolbar">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Tìm kiếm nội dung, RFI, CO...">
+      </div>
+      <button class="btn" id="expandAllBtn">Mở tất cả (+)</button>
+      <button class="btn" id="collapseAllBtn">Thu gọn (-)</button>
+    </div>
+  </header>
+
+  <div id="main-container">
+    <div id="tree-canvas">
+      <div class="tree" id="treeRoot"></div>
+    </div>
+
+    <div id="inspector">
+      <h2>📌 Chi tiết Hạng mục</h2>
+      <div id="inspectorContent" class="desc-box">
+        Chọn một nhánh bất kỳ trong sơ đồ để xem diễn giải chi tiết, vai trò và quy trình xử lý theo tiêu chuẩn dự án.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const data = {
+      title: "PROJECT MANAGEMENT MANUAL (MnSCU 2010)",
+      level: 0,
+      badge: "Cẩm nang QLDA",
+      desc: "Sổ tay quy trình chuẩn quản lý dự án xây dựng từ giai đoạn khởi tạo, thiết kế, đấu thầu, thi công đến bàn giao đưa vào sử dụng (94 trang, 93 biểu mẫu).",
+      children: [
+        {
+          title: "1. Tổng quan & Cơ cấu tổ chức (Overview)",
+          level: 1,
+          badge: "Chương 1",
+          desc: "Phân cấp quản lý dự án giữa Văn phòng Điều hành Trung tâm (System Office - SO) và Cấp trường (C/U - College/University).",
+          children: [
+            {
+              title: "1.1 Sơ đồ phân quyền (Delegation & Hierarchy)",
+              level: 2,
+              desc: "Hội đồng ủy thác (Board of Trustees) → Thống đốc/Hiệu trưởng (Chancellor) → Phó giám đốc Tài chính (CFO) → Phân quyền cho C/U President và C/U Project Manager.",
+              children: [
+                { title: "SO Facilities: Quản lý ngân sách công, chính sách, phê duyệt A/E & OR contract", level: 3, desc: "Giám sát vĩ mô, lập chỉ dẫn thiết kế Design Standards." },
+                { title: "C/U Project Manager: Điều hành dự án trực tiếp hàng ngày", level: 3, desc: "Chịu trách nhiệm quản lý toàn diện tiến độ, chi phí, chất lượng từ thiết kế đến nghiệm thu." }
+              ]
+            },
+            {
+              title: "1.2 Ma trận trách nhiệm (Roles & Responsibilities)",
+              level: 2,
+              desc: "Phân định rõ quyền hạn giữa các bên tham gia dự án.",
+              children: [
+                { title: "A/E Design Team: Thiết kế, lập dự toán, giám sát quyền tác giả, chủ trì họp hiện trường", level: 3 },
+                { title: "Owner's Rep (OR): Đại diện CĐT hỗ trợ C/U PM theo dõi tiến độ, chi phí", level: 3 },
+                { title: "Specialty Consultants: Tư vấn địa kỹ thuật, bao che, MEP, thí nghiệm vật liệu", level: 3 },
+                { title: "General Contractor: Thi công, an toàn, biện pháp thi công, Quality Control (QC)", level: 3 }
+              ]
+            }
+          ]
+        },
+        {
+          title: "2. Khởi tạo Dự án (Project Initiation)",
+          level: 1,
+          badge: "Chương 2",
+          desc: "Xác định nguồn vốn, lựa chọn hình thức quản lý và tuyển chọn đội ngũ tư vấn.",
+          children: [
+            {
+              title: "2.1 Phương thức thực hiện (Project Delivery Method)",
+              level: 2,
+              badge: "D-B-B",
+              desc: "Truyền thống Design-Bid-Build: Thiết kế hoàn chỉnh → Đấu thầu cạnh tranh công khai → Trao thầu giá thấp nhất.",
+              children: [
+                { title: "Hợp đồng độc lập giữa CĐT - A/E và CĐT - Tổng thầu", level: 3, desc: "A/E không có ràng buộc hợp đồng trực tiếp với Nhà thầu." }
+              ]
+            },
+            {
+              title: "2.2 Lựa chọn đơn vị Thiết kế (A/E Selection)",
+              level: 2,
+              desc: "Dựa trên quy mô ngân sách và hạn mức chi phí thiết kế.",
+              children: [
+                { title: "Dự án > $2M hoặc Phí A/E > $200k: Qua Hội đồng DSB bang (State Designer Selection Board)", level: 3, badge: "Bắt buộc DSB", desc: "Đấu thầu công khai qua State Register." },
+                { title: "Phí A/E > $100k: Quy trình mời thầu đề xuất (RFP) do trường thực hiện", level: 3, badge: "RFP" },
+                { title: "Phí A/E < $100k: Chọn từ danh sách tư vấn khung (PT Master List)", level: 3, badge: "Master List" },
+                { title: "Hợp đồng A/E chuẩn: AIA B101 hoặc B103 kèm Exhibit A", level: 3 }
+              ]
+            },
+            {
+              title: "2.3 Tuyển chọn Tư vấn Đại diện CĐT (OR Selection)",
+              level: 2,
+              desc: "Thường chiếm khoảng 2% tổng chi phí xây lắp. Phí > $100k chạy RFP; phí < $100k chọn qua Master List.",
+              children: [
+                { title: "OR hỗ trợ kiểm soát tiến độ, giám sát thi công và rà soát hồ sơ thanh toán", level: 3 }
+              ]
+            },
+            {
+              title: "2.4 Thông tin Chủ đầu tư cung cấp (Owner Provided Info)",
+              level: 2,
+              desc: "17 tài liệu đầu vào: Khảo sát địa hình, địa chất, báo cáo chất độc hại (Asbestos), quy hoạch tổng thể Master Plan, QA Plan."
+            }
+          ]
+        },
+        {
+          title: "3. Quản lý Thiết kế (Design Management)",
+          level: 1,
+          badge: "Chương 3",
+          desc: "Quản trị quy trình thiết kế 3 giai đoạn chính, đấu thầu và ký kết hợp đồng thi công.",
+          children: [
+            {
+              title: "3.1 Tiền thiết kế (Predesign Phase)",
+              level: 2,
+              desc: "Lập nhiệm vụ thiết kế, đối chiếu ngân sách lập pháp. Phạm vi thiết kế sau này không được lệch quá 10% so với Predesign."
+            },
+            {
+              title: "3.2 Thiết kế sơ bộ (Schematic Design - SD)",
+              level: 2,
+              desc: "Xác định công năng, mặt bằng, giải pháp kết cấu, MEP, tiêu chuẩn phòng cháy.",
+              children: [
+                { title: "Dự toán chi phí SD (Cost Estimate): Dự phòng tính 10% - 20%", level: 3, badge: "10-20% Contingency" },
+                { title: "Họp kỹ thuật (Technical Review Meeting) & Thuyết trình trước CFO", level: 3 },
+                { title: "Thông báo cho Cơ quan Lập pháp bang (Notice to Legislature theo luật MN 16B.335)", level: 3 }
+              ]
+            },
+            {
+              title: "3.3 Thiết kế kỹ thuật (Design Development - DD)",
+              level: 2,
+              desc: "Vẽ đúng tỷ lệ, định vị kết cấu, tuyến ống MEP chính, hoàn thiện vật liệu, bảng Room Finish Schedule.",
+              children: [
+                { title: "Dự toán chi phí DD: Dự phòng giảm xuống 10% - 15%", level: 3, badge: "10-15% Contingency" },
+                { title: "Gửi chuyên gia thẩm tra (Plan Review Consultants): Phản hồi trong 10 ngày làm việc", level: 3 },
+                { title: "Phê duyệt bằng văn bản của C/U PM trước khi sang giai đoạn CD", level: 3 }
+              ]
+            },
+            {
+              title: "3.4 Bản vẽ thi công & Hồ sơ mời thầu (Construction Documents - CD)",
+              level: 2,
+              desc: "100% bản vẽ chi tiết, chỉ dẫn kỹ thuật (Specifications), biên soạn bộ Division 0 (Hồ sơ mời thầu).",
+              children: [
+                { title: "Thiết lập 3 - 5 gói đề xuất thay thế (Alternates) làm dự phòng đấu thầu", level: 3, desc: "Nếu giá dự thầu vượt ngân sách, CĐT kích hoạt các Deduct Alternates để hạ giá mà không phải đấu thầu lại." }
+              ]
+            },
+            {
+              title: "3.5 Đấu thầu & Trao thầu (Bidding & Award)",
+              level: 2,
+              desc: "Phát hành hồ sơ trên QuestCDN (thời gian làm giá 2 - 4 tuần) → Mở thầu công khai → Thẩm định giá và năng lực.",
+              children: [
+                { title: "Hợp đồng > $50,000: Dùng mẫu MnSCU 110, Bảo lãnh thực hiện & thanh toán (MnSCU 130), Bảo hiểm ACORD 25", level: 3 },
+                { title: "Hợp đồng <= $50,000: Dùng mẫu chào hàng rút gọn MnSCU 120", level: 3 },
+                { title: "Ban hành Lệnh khởi công (Notice to Proceed - NTP)", level: 3 }
+              ]
+            },
+            {
+              title: "3.6 Nghệ thuật công cộng (Percent for Art)",
+              level: 2,
+              desc: "Trích tối đa 1% tổng vốn dự án (hoặc tối đa $100,000) để mua sắm tác phẩm nghệ thuật công cộng."
+            }
+          ]
+        },
+        {
+          title: "4. Quản lý Thi công (Construction Management)",
+          level: 1,
+          badge: "Chương 4",
+          desc: "Trọng tâm hiện trường: Quản lý hồ sơ đệ trình, bản vẽ Shop Drawings, xử lý thay đổi và nghiệm thu.",
+          children: [
+            {
+              title: "4.1 Khởi động thi công (Pre-Construction)",
+              level: 2,
+              children: [
+                { title: "Nhà thầu nộp danh sách Thầu phụ/NCC (trong 14 ngày) & Tiến độ (trong 10 ngày)", level: 3, badge: "Mốc 10-14 ngày" },
+                { title: "Họp Pre-Installation bắt buộc: Móng, Bê tông, Chống thấm, Vỏ bao che, PCCC, MEP, Commissioning", level: 3, badge: "Kiểm soát rủi ro" }
+              ]
+            },
+            {
+              title: "4.2 Đệ trình & Bản vẽ Shop Drawings (Submittals)",
+              level: 2,
+              desc: "Shop Drawings, Product Data, Mẫu vật liệu (Samples), Báo cáo thí nghiệm (Test Reports).",
+              children: [
+                { title: "Luồng duyệt: Nhà thầu kiểm tra → Nộp A/E thẩm tra → C/U PM phê duyệt", level: 3 },
+                { title: "Đề xuất vật tư thay thế: Phải nộp Material Substitution Proposal chứng minh chất lượng tương đương", level: 3 }
+              ]
+            },
+            {
+              title: "4.3 Ma trận Xử lý Thay đổi Phát sinh (Changes to the Work)",
+              level: 2,
+              badge: "Rất quan trọng",
+              desc: "Hệ thống phân luồng xử lý mọi vấn đề phát sinh tại công trường:",
+              children: [
+                { title: "RFI (Request for Information): Yêu cầu làm rõ thông tin bản vẽ (A/E trả lời trong 7 ngày)", level: 3 },
+                { title: "ASI (Architect's Supplemental Instructions): Làm rõ kỹ thuật, KHÔNG tăng chi phí/tiến độ", level: 3, badge: "Cost = 0" },
+                { title: "PR (Proposal Request): Đề xuất thay đổi có chi phí/tiến độ → Báo giá → Đàm phán → Lập CO", level: 3, badge: "Có phát sinh" },
+                { title: "CCD (Construction Change Directive): Tình huống khẩn cấp (< $10k, nguy cơ trễ nặng) → Chỉ đạo làm ngay, quyết toán sau", level: 3, badge: "Làm trước tính sau" },
+                { title: "CO (Change Order - MnSCU 022): Văn bản pháp lý chính thức điều chỉnh giá và thời hạn hợp đồng", level: 3, badge: "Hợp đồng chính thức" }
+              ]
+            },
+            {
+              title: "4.4 Đề nghị Thanh toán (Pay Request)",
+              level: 2,
+              desc: "Căn cứ bảng phân bổ giá trị (Schedule of Values - SOV).",
+              children: [
+                { title: "Giữ lại tiền bảo hành (Retainage): 5% trên mỗi đợt nghiệm thu", level: 3, badge: "5% Retainage" },
+                { title: "Bắt buộc kiểm tra việc tuân thủ lương tối thiểu (Prevailing Wage theo MN Statute 177)", level: 3 }
+              ]
+            },
+            {
+              title: "4.5 Bàn giao & Nghiệm thu (Project Closeout)",
+              level: 2,
+              children: [
+                { title: "Nghiệm thu hoàn thành cơ bản (Substantial Completion): Đủ điều kiện sử dụng, bắt đầu tính bảo hành", level: 3 },
+                { title: "Lập danh sách sửa lỗi tồn đọng (Punchlist)", level: 3 },
+                { title: "Bàn giao tài liệu vận hành (O&M Manuals) & Đào tạo người dùng", level: 3 },
+                { title: "Nghiệm thu dứt điểm (Final Completion): Hoàn thành 100% Punchlist, nộp As-built, giải tỏa 5% giữ lại", level: 3 },
+                { title: "Kiểm tra bảo hành tháng thứ 10 (10-Month Warranty Walk-through): Rà soát trước khi hết hạn 1 năm", level: 3 },
+                { title: "Đánh giá sau sử dụng (Post Occupancy Evaluation - POE): Áp dụng cho dự án > $2M", level: 3 }
+              ]
+            }
+          ]
+        },
+        {
+          title: "5. Đảm bảo & Kiểm soát Chất lượng (QA/QC)",
+          level: 1,
+          badge: "Chương 5",
+          children: [
+            { title: "QA (Quality Assurance): Thiết lập tiêu chuẩn, quy chuẩn, kế hoạch kiểm định (Do C/U và A/E lập)", level: 2, badge: "Đặt chuẩn" },
+            { title: "QC (Quality Control): Đo đạc, lấy mẫu thí nghiệm, kiểm tra hiện trường (Do Nhà thầu thực hiện)", level: 2, badge: "Kiểm nghiệm" },
+            { title: "Thuê đơn vị thí nghiệm độc lập (Testing Agency) do Chủ đầu tư trả phí trực tiếp", level: 2 }
+          ]
+        },
+        {
+          title: "6. Quản lý Ngân sách (Budgeting)",
+          level: 1,
+          badge: "Chương 6",
+          desc: "Kiểm soát chi phí liên tục qua các giai đoạn.",
+          children: [
+            { title: "Vòng đời cập nhật: Predesign → SD Budget → DD Budget → CD Budget → Construction Budget", level: 2 },
+            { title: "Sử dụng biểu mẫu MnSCU Project Budget Worksheet đối chiếu qua từng mốc", level: 2 }
+          ]
+        },
+        {
+          title: "7. Quản lý Tiến độ (Scheduling)",
+          level: 1,
+          badge: "Chương 7",
+          desc: "Bắt buộc tuân thủ phương pháp đường găng CPM.",
+          children: [
+            { title: "Tiến độ lập theo định dạng CPM (Critical Path Method)", level: 2, badge: "Chuẩn CPM" },
+            { title: "Nhà thầu nộp tiến độ chi tiết trong 10 ngày sau NTP", level: 2 },
+            { title: "Cập nhật tiến độ hàng tháng kèm theo mỗi hồ sơ đề nghị thanh toán (Pay Application)", level: 2 }
+          ]
+        },
+        {
+          title: "8. Quản lý Tài chính & Kế toán (Financial Management)",
+          level: 1,
+          badge: "Chương 9",
+          children: [
+            { title: "Thiết lập mã số kế toán MAPS (Appropriation, ORG #, Allotment)", level: 2 },
+            { title: "Dự phòng xây lắp (Construction Contingency): 5% (công trình mới), 10% (cải tạo)", level: 2, badge: "5-10%" },
+            { title: "Nội thất & Thiết bị (FF&E): Phải phối hợp chặt chẽ về diện tích, điện, dữ liệu mạng để tránh phát sinh", level: 2 }
+          ]
+        },
+        {
+          title: "9. Phụ lục Biểu mẫu & Hợp đồng (Appendix & Forms)",
+          level: 1,
+          badge: "93 Biểu mẫu",
+          desc: "Đóng gói 93 biểu mẫu chuẩn hóa theo từng giai đoạn.",
+          children: [
+            { title: "Giai đoạn Thiết kế: SD Checklist, Budget Worksheet, Schedule Milestones, SD Approval Letter", level: 2 },
+            { title: "Giai đoạn Đấu thầu: Division 0, Non-Responsible Bidder, Vendor Preference", level: 2 },
+            { title: "Giai đoạn Thi công: RFI Form, CCD (MnSCU 014), CO (MnSCU 022), Pay App (MnSCU 060)", level: 2 },
+            { title: "Giai đoạn Bàn giao: 10-Month Checklist, Substantial Completion Checklist, POE Form", level: 2 }
+          ]
+        }
+      ]
+    };
+
+    let globalCollapsed = false;
+
+    function renderNode(item) {
+      const group = document.createElement("div");
+      group.className = "node-group-container";
+
+      const nodeRow = document.createElement("div");
+      nodeRow.className = "node-group";
+
+      const card = document.createElement("div");
+      card.className = `node-card ${item.level === 0 ? 'root' : 'level-' + Math.min(item.level, 3)}`;
+      
+      const hasChildren = item.children && item.children.length > 0;
+      
+      if (hasChildren) {
+        const toggle = document.createElement("div");
+        toggle.className = "toggle-icon";
+        toggle.innerText = "▼";
+        card.appendChild(toggle);
+      }
+
+      const text = document.createElement("span");
+      text.className = "node-title";
+      text.innerText = item.title;
+      card.appendChild(text);
+
+      if (item.badge) {
+        const badge = document.createElement("span");
+        badge.className = "badge";
+        if (item.badge.includes("10") || item.badge.includes("Rất quan trọng")) badge.classList.add("orange");
+        if (item.badge.includes("Bắt buộc")) badge.classList.add("red");
+        if (item.badge.includes("CPM") || item.badge.includes("D-B-B")) badge.classList.add("green");
+        badge.innerText = item.badge;
+        card.appendChild(badge);
+      }
+
+      // Click to inspect
+      card.addEventListener("click", (e) => {
+        e.stopPropagation();
+        document.querySelectorAll(".node-card").forEach(c => c.classList.remove("highlight"));
+        card.classList.add("highlight");
+        showInspector(item);
+      });
+
+      nodeRow.appendChild(card);
+      group.appendChild(nodeRow);
+
+      if (hasChildren) {
+        const childrenContainer = document.createElement("div");
+        childrenContainer.className = "children-container";
+
+        // Click toggle to collapse/expand
+        card.querySelector(".toggle-icon").addEventListener("click", (e) => {
+          e.stopPropagation();
+          const isHidden = childrenContainer.classList.toggle("hidden");
+          card.querySelector(".toggle-icon").innerText = isHidden ? "▶" : "▼";
+        });
+
+        item.children.forEach(child => {
+          childrenContainer.appendChild(renderNode(child));
+        });
+
+        group.appendChild(childrenContainer);
+      }
+
+      return group;
+    }
+
+    function showInspector(item) {
+      const container = document.getElementById("inspectorContent");
+      container.innerHTML = `
+        <h3 style="color: #f1f5f9; margin-bottom: 8px; font-size: 1rem;">${item.title}</h3>
+        <div style="margin-bottom: 12px;">
+          ${item.badge ? `<span class="meta-tag">🏷️ ${item.badge}</span>` : ''}
+          <span class="meta-tag">Cấp độ: Level ${item.level}</span>
+        </div>
+        <p style="margin-bottom: 14px; line-height: 1.6;">${item.desc || 'Hạng mục chi tiết thuộc quy trình quản lý dự án theo chuẩn MnSCU.'}</p>
+        ${item.children ? `<p style="font-size: 0.8rem; color: #94a3b8;">Số nhánh con: <strong>${item.children.length}</strong> nhánh</p>` : ''}
+      `;
+    }
+
+    // Build tree
+    const rootEl = document.getElementById("treeRoot");
+    rootEl.appendChild(renderNode(data));
+
+    // Expand / Collapse all
+    document.getElementById("expandAllBtn").addEventListener("click", () => {
+      document.querySelectorAll(".children-container").forEach(c => c.classList.remove("hidden"));
+      document.querySelectorAll(".toggle-icon").forEach(t => t.innerText = "▼");
+    });
+
+    document.getElementById("collapseAllBtn").addEventListener("click", () => {
+      document.querySelectorAll(".children-container").forEach((c, idx) => {
+        if (idx > 0) c.classList.add("hidden");
+      });
+      document.querySelectorAll(".toggle-icon").forEach((t, idx) => {
+        if (idx > 0) t.innerText = "▶";
+      });
+    });
+
+    // Search filter
+    document.getElementById("searchInput").addEventListener("input", (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      if (!q) {
+        document.querySelectorAll(".node-card").forEach(c => c.classList.remove("highlight"));
+        return;
+      }
+      document.querySelectorAll(".node-card").forEach(c => {
+        const title = c.innerText.toLowerCase();
+        if (title.includes(q)) {
+          c.classList.add("highlight");
+          // expand parents
+          let parent = c.closest(".children-container");
+          while (parent) {
+            parent.classList.remove("hidden");
+            const toggle = parent.parentElement.querySelector(".toggle-icon");
+            if (toggle) toggle.innerText = "▼";
+            parent = parent.parentElement.closest(".children-container");
+          }
+        } else {
+          c.classList.remove("highlight");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
