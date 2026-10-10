@@ -732,10 +732,90 @@ flowchart TD
 
         <div class="card">
           <div class="card-header">
-            <span class="card-title">⚙️ Cấu hình Tự động hóa Join Cấu kiện (Từ BSV_QuyTacJoin.xml)</span>
-            <span class="pill pill-purple">Revit Auto-Join Rules</span>
+            <span class="card-title">⚙️ Quy Tắc Cắt Giao Hình Học Cấu Kiện (Revit Auto-Join System)</span>
+            <span class="pill pill-purple">BSV_QuyTacJoin.xml</span>
           </div>
-          <pre class="code-box">&lt;!-- Thứ tự ưu tiên cắt giao hình học cấu kiện đã được lập trình sẵn --&gt;
+          <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 14px;">
+            Hệ thống quy chuẩn thứ tự ưu tiên cắt giao cấu kiện tự động bằng phần mềm. Đảm bảo <strong>không bao giờ bị trùng lặp đôi khối lượng</strong> bê tông và ván khuôn khi bóc tách sang BOQ:
+          </p>
+
+          <!-- THANH PHÂN CẤP ƯU TIÊN TRỰC QUAN -->
+          <div style="background: rgba(15, 23, 42, 0.9); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 18px;">
+            <div style="font-size: 0.82rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; margin-bottom: 10px;">
+              🏆 Thứ Tự Ưu Tiên Cắt Giao (Từ Cao Đến Thấp):
+            </div>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 0.88rem; font-weight: 600;">
+              <span style="background: #0284c7; color: #fff; padding: 6px 14px; border-radius: 6px; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.4);">
+                1. SÀN (Floors)
+              </span>
+              <span style="color: #38bdf8;">➔</span>
+              <span style="background: #0d9488; color: #fff; padding: 6px 14px; border-radius: 6px;">
+                2. MÓNG (Foundations)
+              </span>
+              <span style="color: #38bdf8;">➔</span>
+              <span style="background: #f59e0b; color: #fff; padding: 6px 14px; border-radius: 6px;">
+                3. CỘT (Columns)
+              </span>
+              <span style="color: #38bdf8;">➔</span>
+              <span style="background: #8b5cf6; color: #fff; padding: 6px 14px; border-radius: 6px;">
+                4. DẦM (Framing)
+              </span>
+              <span style="color: #38bdf8;">➔</span>
+              <span style="background: #ec4899; color: #fff; padding: 6px 14px; border-radius: 6px;">
+                5. VÁCH (Walls)
+              </span>
+              <span style="color: #38bdf8;">➔</span>
+              <span style="background: #475569; color: #e2e8f0; padding: 6px 14px; border-radius: 6px;">
+                6. CẦU THANG (Stairs)
+              </span>
+            </div>
+          </div>
+
+          <!-- BẢNG MA TRẬN QUY TẮC CẮT GIAO CHI TIẾT -->
+          <table class="table-custom" style="margin-bottom: 18px;">
+            <thead>
+              <tr>
+                <th>Cấu Kiện Ưu Tiên (Cắt)</th>
+                <th>Cấu Kiện Bị Cắt (Trừ Khối Lượng)</th>
+                <th>Ý Nghĩa Kỹ Thuật & Quy Ước Bóc Tách Khối Lượng BOQ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong style="color: #38bdf8;">Sàn</strong> (Structural Floors)</td>
+                <td><span class="pill pill-orange">Móng</span>, <span class="pill pill-purple">Dầm</span>, <span class="pill pill-green">Cột</span>, <span class="pill pill-red">Vách</span></td>
+                <td>Sàn tính trọn diện tích và bề dày. Dầm chỉ tính phần sườn dầm nhô xuống bên dưới đáy sàn.</td>
+              </tr>
+              <tr>
+                <td><strong style="color: #10b981;">Móng</strong> (Structural Foundations)</td>
+                <td><span class="pill pill-purple">Dầm</span> (Đà kiềng / Dầm móng)</td>
+                <td>Đài móng tính đủ khối lượng hình học. Đà kiềng chỉ tính phần chiều dài thông thủy lọt lòng giữa các mép đài móng.</td>
+              </tr>
+              <tr>
+                <td><strong style="color: #f59e0b;">Cột</strong> (Structural Columns)</td>
+                <td><span class="pill pill-purple">Dầm</span>, <span class="pill pill-red">Vách</span></td>
+                <td>Cột bê tông chịu lực được bảo toàn nguyên vẹn tiết diện từ mặt sàn lên đến đáy sàn tầng trên.</td>
+              </tr>
+              <tr>
+                <td><strong style="color: #a855f7;">Dầm</strong> (Structural Framing)</td>
+                <td><span class="pill pill-red">Vách</span> (Structural Walls)</td>
+                <td>Dầm giữ nguyên vẹn tiết diện kết cấu. Vách bê tông / vách gạch bị khấu trừ tại phần giao cắt với đáy dầm.</td>
+              </tr>
+              <tr>
+                <td><strong style="color: #cbd5e1;">Cầu thang</strong> (Stairs)</td>
+                <td>Bị tất cả cấu kiện trên cắt</td>
+                <td>Cầu thang trừ toàn bộ các phần giao cắt với dầm chiếu nghỉ, cột và sàn để chống cộng dồn thể tích.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- KHUNG MÃ NGUỒN XML GỐC -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <span style="font-size: 0.8rem; color: #94a3b8;">Mã cấu hình nạp vào Tool AutoJoin Revit (<code>BSV_QuyTacJoin.xml</code>):</span>
+            <span class="pill pill-blue" style="font-size: 0.7rem;">XML Config</span>
+          </div>
+          <pre class="code-box">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!-- AutoJoin Setting - Lập trình thứ tự cắt giao hình học tự động --&gt;
 &lt;AllRules&gt;
   &lt;Rule CategoryUuTien="Structural Floors"       CategoryBiCat="Structural Foundations" /&gt;
   &lt;Rule CategoryUuTien="Structural Floors"       CategoryBiCat="Structural Framing" /&gt;
