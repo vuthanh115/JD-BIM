@@ -195,9 +195,9 @@
         {
           "id": "ExportP6Schedule",
           "text": "Export to P6 (XER/CSV)",
-          "commandClass": "kaka.Structure.Structural.App.Commands.Database.ExportSqlBoQCommand",
-          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Database.sql16.png",
-          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Database.sql.png",
+          "commandClass": "kaka.Structure.Structural.App.Commands.PrimaveraP6.ExportP6ScheduleCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Database.p616.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Database.p6.png",
           "tooltip": "Xuất tiến độ WBS và công tác (Activities) sang Primavera P6 (.xer / .csv) theo chuẩn Encore Group"
         }
       ]
