@@ -18,11 +18,11 @@ public static class RevitBoQExtractor
   private const double SqFtToSqM = 0.09290304;
   private const double FtToM = 0.3048;
 
-  public static List<RevitBoQItem> ExtractBoQ(Document doc)
+  public static List<RevitBoQItem> ExtractBoQ(Document doc, bool includeLinks = false, IEnumerable<string>? selectedLinkTitles = null)
   {
     var list = new List<RevitBoQItem>();
 
-    var categories = new[]
+    var categories = new List<BuiltInCategory>
     {
       BuiltInCategory.OST_StructuralColumns,
       BuiltInCategory.OST_StructuralFraming,
@@ -34,164 +34,264 @@ public static class RevitBoQExtractor
       BuiltInCategory.OST_Rebar
     };
 
-    var multicatFilter = new ElementMulticategoryFilter(categories);
-    var collector = new FilteredElementCollector(doc)
-      .WherePasses(multicatFilter)
-      .WhereElementIsNotElementType();
-
-    foreach (var elem in collector)
+    if (includeLinks)
     {
-      if (elem.Category == null) continue;
-
-      var bic = (BuiltInCategory)(long)elem.Category.Id.Value;
-      var item = new RevitBoQItem
+      categories.AddRange(new[]
       {
-        ElementId = elem.Id.Value,
-        UniqueId = elem.UniqueId
-      };
+        BuiltInCategory.OST_Doors,
+        BuiltInCategory.OST_Windows,
+        BuiltInCategory.OST_Ceilings,
+        BuiltInCategory.OST_Roofs,
+        BuiltInCategory.OST_StairsRailing,
+        BuiltInCategory.OST_CurtainWallPanels
+      });
+    }
 
-      // Tên Family & Type
-      var typeId = elem.GetTypeId();
-      var elemType = typeId != ElementId.InvalidElementId ? doc.GetElement(typeId) as ElementType : null;
-      item.TypeName = elemType?.Name ?? elem.Name ?? "";
-      item.FamilyName = elemType?.FamilyName ?? "";
-
-      // Level
-      var levelId = elem.LevelId;
-      if (levelId != ElementId.InvalidElementId)
-      {
-        item.LevelName = doc.GetElement(levelId)?.Name ?? "";
-      }
-      else
-      {
-        var lvlParam = elem.get_Parameter(BuiltInParameter.SCHEDULE_BASE_LEVEL_PARAM)
-                       ?? elem.get_Parameter(BuiltInParameter.LEVEL_PARAM);
-        item.LevelName = lvlParam?.AsValueString() ?? lvlParam?.AsString() ?? "";
-      }
-
-      // Parameters
-      item.Comments = elem.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS)?.AsString()
-                      ?? elem.LookupParameter("Comments")?.AsString() ?? "";
-      item.Mark = elem.get_Parameter(BuiltInParameter.ALL_MODEL_MARK)?.AsString()
-                  ?? elem.LookupParameter("Mark")?.AsString() ?? "";
-      item.BsvPhanLoai = elem.LookupParameter("BSV_PhanLoai")?.AsString() ?? "";
-      item.BsvComments = elem.LookupParameter("BSV_Comments")?.AsString() ?? "";
-      item.Partition = elem.LookupParameter("Partition")?.AsString() ?? "";
-
-      // Volume & Area
-      var volParam = elem.get_Parameter(BuiltInParameter.HOST_VOLUME_COMPUTED);
-      if (volParam != null && volParam.HasValue)
-        item.VolumeM3 = Math.Round(volParam.AsDouble() * CuFtToCuM, 4);
-
-      var areaParam = elem.get_Parameter(BuiltInParameter.HOST_AREA_COMPUTED);
-      if (areaParam != null && areaParam.HasValue)
-        item.AreaM2 = Math.Round(areaParam.AsDouble() * SqFtToSqM, 4);
-
-      // Phân loại theo cấu trúc Mindmap Kết cấu
-      switch (bic)
-      {
-        case BuiltInCategory.OST_StructuralColumns:
-          item.CategoryCode = "05.Cot";
-          item.CategoryName = "Cột kết cấu (Column)";
-          break;
-
-        case BuiltInCategory.OST_StructuralFraming:
-          if (item.TypeName.IndexOf("DK", StringComparison.OrdinalIgnoreCase) >= 0 ||
-              item.TypeName.IndexOf("ĐK", StringComparison.OrdinalIgnoreCase) >= 0 ||
-              item.Comments.IndexOf("DaKieng", StringComparison.OrdinalIgnoreCase) >= 0)
-          {
-            item.CategoryCode = "03.DaKieng";
-            item.CategoryName = "Đà kiềng (Tie Beam)";
-          }
-          else
-          {
-            item.CategoryCode = "07.Dam";
-            item.CategoryName = "Dầm kết cấu (Beam)";
-          }
-          break;
-
-        case BuiltInCategory.OST_Floors:
-          if (item.TypeName.IndexOf("Nen", StringComparison.OrdinalIgnoreCase) >= 0 ||
-              item.TypeName.IndexOf("Nền", StringComparison.OrdinalIgnoreCase) >= 0 ||
-              item.Comments.IndexOf("Nen", StringComparison.OrdinalIgnoreCase) >= 0)
-          {
-            item.CategoryCode = "04.Nen";
-            item.CategoryName = "Nền (Ground Slab)";
-          }
-          else
-          {
-            item.CategoryCode = "08.San";
-            item.CategoryName = "Sàn kết cấu (Slab)";
-          }
-          break;
-
-        case BuiltInCategory.OST_StructuralFoundation:
-          if (item.TypeName.IndexOf("Coc", StringComparison.OrdinalIgnoreCase) >= 0 ||
-              item.TypeName.IndexOf("Cọc", StringComparison.OrdinalIgnoreCase) >= 0 ||
-              item.FamilyName.IndexOf("Pile", StringComparison.OrdinalIgnoreCase) >= 0)
-          {
-            item.CategoryCode = "01.Coc";
-            item.CategoryName = "Cọc (Pile)";
-          }
-          else
-          {
-            item.CategoryCode = "02.Mong";
-            item.CategoryName = "Móng (Foundation)";
-          }
-          break;
-
-        case BuiltInCategory.OST_Walls:
-          item.CategoryCode = "06.Vach";
-          item.CategoryName = "Vách kết cấu (Shear Wall)";
-          break;
-
-        case BuiltInCategory.OST_Stairs:
-          item.CategoryCode = "09.CauThang";
-          item.CategoryName = "Cầu thang (Stair)";
-          break;
-
-        case BuiltInCategory.OST_Ramps:
-          item.CategoryCode = "11.Ramp";
-          item.CategoryName = "Ramp dốc";
-          break;
-
-        case BuiltInCategory.OST_Rebar:
-          item.CategoryCode = "00.Rebar";
-          item.CategoryName = "Cốt thép (Rebar)";
-          if (elem is Rebar rebar)
-          {
-            var len = rebar.TotalLength * FtToM;
-            item.RebarLengthM = Math.Round(len, 3);
-            var diaParam = elemType?.get_Parameter(BuiltInParameter.REBAR_BAR_DIAMETER);
-            if (diaParam != null && diaParam.HasValue)
-            {
-              var diaMm = diaParam.AsDouble() * FtToM * 1000.0;
-              item.RebarDiameterMm = Math.Round(diaMm, 1);
-              // Khối lượng thép (kg) = L * (d^2 / 162.0)
-              item.RebarWeightKg = Math.Round(len * (diaMm * diaMm / 162.0), 3);
-            }
-          }
-          break;
-
-        default:
-          item.CategoryCode = "14.CauKienPhu";
-          item.CategoryName = elem.Category.Name;
-          break;
-      }
-
-      // Material
+    var docs = new List<Document> { doc };
+    if (includeLinks)
+    {
       try
       {
-        var matIds = elem.GetMaterialIds(false);
-        if (matIds.Count > 0)
+        var linkInstances = new FilteredElementCollector(doc)
+          .OfClass(typeof(RevitLinkInstance))
+          .Cast<RevitLinkInstance>();
+
+        var allowedSet = selectedLinkTitles != null
+          ? new HashSet<string>(selectedLinkTitles, StringComparer.OrdinalIgnoreCase)
+          : null;
+
+        foreach (var link in linkInstances)
         {
-          var mat = doc.GetElement(matIds.First()) as Material;
-          item.MaterialName = mat?.Name ?? "";
+          var linkDoc = link.GetLinkDocument();
+          if (linkDoc != null)
+          {
+            if (allowedSet != null && !allowedSet.Contains(linkDoc.Title))
+            {
+              continue; // Bỏ qua link không được chọn
+            }
+
+            if (!docs.Any(d => string.Equals(d.Title, linkDoc.Title, StringComparison.OrdinalIgnoreCase)))
+            {
+              docs.Add(linkDoc);
+            }
+          }
         }
       }
       catch { }
+    }
 
-      list.Add(item);
+    var multicatFilter = new ElementMulticategoryFilter(categories);
+
+    foreach (var targetDoc in docs)
+    {
+      bool isLink = !ReferenceEquals(targetDoc, doc);
+      var collector = new FilteredElementCollector(targetDoc)
+        .WherePasses(multicatFilter)
+        .WhereElementIsNotElementType();
+
+      foreach (var elem in collector)
+      {
+        if (elem.Category == null) continue;
+
+        var bic = (BuiltInCategory)(long)elem.Category.Id.Value;
+        var item = new RevitBoQItem
+        {
+          ElementId = elem.Id.Value,
+          UniqueId = elem.UniqueId
+        };
+
+        // Tên Family & Type
+        var typeId = elem.GetTypeId();
+        var elemType = typeId != ElementId.InvalidElementId ? targetDoc.GetElement(typeId) as ElementType : null;
+        item.TypeName = elemType?.Name ?? elem.Name ?? "";
+        item.FamilyName = elemType?.FamilyName ?? "";
+
+        // Level
+        var levelId = elem.LevelId;
+        if (levelId != ElementId.InvalidElementId)
+        {
+          item.LevelName = targetDoc.GetElement(levelId)?.Name ?? "";
+        }
+        else
+        {
+          var lvlParam = elem.get_Parameter(BuiltInParameter.SCHEDULE_BASE_LEVEL_PARAM)
+                         ?? elem.get_Parameter(BuiltInParameter.LEVEL_PARAM);
+          item.LevelName = lvlParam?.AsValueString() ?? lvlParam?.AsString() ?? "";
+        }
+
+        // Parameters
+        item.Comments = elem.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS)?.AsString()
+                        ?? elem.LookupParameter("Comments")?.AsString() ?? "";
+        item.Mark = elem.get_Parameter(BuiltInParameter.ALL_MODEL_MARK)?.AsString()
+                    ?? elem.LookupParameter("Mark")?.AsString() ?? "";
+        item.BsvPhanLoai = elem.LookupParameter("BSV_PhanLoai")?.AsString() ?? "";
+        item.BsvComments = elem.LookupParameter("BSV_Comments")?.AsString() ?? "";
+        item.Partition = elem.LookupParameter("Partition")?.AsString() ?? "";
+
+        // Volume & Area
+        var volParam = elem.get_Parameter(BuiltInParameter.HOST_VOLUME_COMPUTED);
+        if (volParam != null && volParam.HasValue)
+          item.VolumeM3 = Math.Round(volParam.AsDouble() * CuFtToCuM, 4);
+
+        var areaParam = elem.get_Parameter(BuiltInParameter.HOST_AREA_COMPUTED);
+        if (areaParam != null && areaParam.HasValue)
+          item.AreaM2 = Math.Round(areaParam.AsDouble() * SqFtToSqM, 4);
+
+        // Phân loại theo cấu trúc Mindmap Kết cấu & Kiến trúc
+        switch (bic)
+        {
+          case BuiltInCategory.OST_StructuralColumns:
+            item.CategoryCode = "05.Cot";
+            item.CategoryName = "Cột kết cấu (Column)";
+            break;
+
+          case BuiltInCategory.OST_StructuralFraming:
+            if (item.TypeName.IndexOf("DK", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                item.TypeName.IndexOf("ĐK", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                item.Comments.IndexOf("DaKieng", StringComparison.OrdinalIgnoreCase) >= 0)
+            {
+              item.CategoryCode = "03.DaKieng";
+              item.CategoryName = "Đà kiềng (Tie Beam)";
+            }
+            else
+            {
+              item.CategoryCode = "07.Dam";
+              item.CategoryName = "Dầm kết cấu (Beam)";
+            }
+            break;
+
+          case BuiltInCategory.OST_Floors:
+            if (item.TypeName.IndexOf("Nen", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                item.TypeName.IndexOf("Nền", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                item.Comments.IndexOf("Nen", StringComparison.OrdinalIgnoreCase) >= 0)
+            {
+              item.CategoryCode = "04.Nen";
+              item.CategoryName = "Nền (Ground Slab)";
+            }
+            else if (isLink || item.TypeName.IndexOf("Gach", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                     item.TypeName.IndexOf("Gạch", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                     item.TypeName.IndexOf("Granite", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                     item.TypeName.IndexOf("Op", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                     item.TypeName.IndexOf("Ốp", StringComparison.OrdinalIgnoreCase) >= 0)
+            {
+              item.CategoryCode = "KT.03.OpLat";
+              item.CategoryName = "Ốp lát gạch & đá (Tiling & Flooring)";
+            }
+            else
+            {
+              item.CategoryCode = "08.San";
+              item.CategoryName = "Sàn kết cấu (Slab)";
+            }
+            break;
+
+          case BuiltInCategory.OST_StructuralFoundation:
+            if (item.TypeName.IndexOf("Coc", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                item.TypeName.IndexOf("Cọc", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                item.FamilyName.IndexOf("Pile", StringComparison.OrdinalIgnoreCase) >= 0)
+            {
+              item.CategoryCode = "01.Coc";
+              item.CategoryName = "Cọc (Pile)";
+            }
+            else
+            {
+              item.CategoryCode = "02.Mong";
+              item.CategoryName = "Móng (Foundation)";
+            }
+            break;
+
+          case BuiltInCategory.OST_Walls:
+            if (isLink ||
+                item.TypeName.IndexOf("Gach", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                item.TypeName.IndexOf("Gạch", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                item.TypeName.IndexOf("Xay", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                item.TypeName.IndexOf("Xây", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                item.TypeName.IndexOf("Thach cao", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                (elem is Wall w && w.StructuralUsage == StructuralWallUsage.NonBearing))
+            {
+              item.CategoryCode = "KT.01.TuongXay";
+              item.CategoryName = "Tường xây gạch (Brick Walls)";
+            }
+            else
+            {
+              item.CategoryCode = "06.Vach";
+              item.CategoryName = "Vách kết cấu (Shear Wall)";
+            }
+            break;
+
+          case BuiltInCategory.OST_Doors:
+            item.CategoryCode = "KT.04.CuaDi";
+            item.CategoryName = "Cửa đi & Phụ kiện (Doors & Hardware)";
+            break;
+
+          case BuiltInCategory.OST_Windows:
+          case BuiltInCategory.OST_CurtainWallPanels:
+            item.CategoryCode = "KT.05.CuaSo";
+            item.CategoryName = "Cửa sổ & Vách kính (Windows & Glazing)";
+            break;
+
+          case BuiltInCategory.OST_Ceilings:
+            item.CategoryCode = "KT.06.Tran";
+            item.CategoryName = "Trần thạch cao (Gypsum Ceilings)";
+            break;
+
+          case BuiltInCategory.OST_Roofs:
+            item.CategoryCode = "KT.10.Mai";
+            item.CategoryName = "Công tác Mái (Roofing Works)";
+            break;
+
+          case BuiltInCategory.OST_StairsRailing:
+            item.CategoryCode = "KT.09.LanCan";
+            item.CategoryName = "Lan can & Tay vịn (Railings)";
+            break;
+
+          case BuiltInCategory.OST_Stairs:
+            item.CategoryCode = "09.CauThang";
+            item.CategoryName = "Cầu thang (Stair)";
+            break;
+
+          case BuiltInCategory.OST_Ramps:
+            item.CategoryCode = "11.Ramp";
+            item.CategoryName = "Ramp dốc";
+            break;
+
+          case BuiltInCategory.OST_Rebar:
+            item.CategoryCode = "00.Rebar";
+            item.CategoryName = "Cốt thép (Rebar)";
+            if (elem is Rebar rebar)
+            {
+              var len = rebar.TotalLength * FtToM;
+              item.RebarLengthM = Math.Round(len, 3);
+              var diaParam = elemType?.get_Parameter(BuiltInParameter.REBAR_BAR_DIAMETER);
+              if (diaParam != null && diaParam.HasValue)
+              {
+                var diaMm = diaParam.AsDouble() * FtToM * 1000.0;
+                item.RebarDiameterMm = Math.Round(diaMm, 1);
+                // Khối lượng thép (kg) = L * (d^2 / 162.0)
+                item.RebarWeightKg = Math.Round(len * (diaMm * diaMm / 162.0), 3);
+              }
+            }
+            break;
+
+          default:
+            item.CategoryCode = "14.CauKienPhu";
+            item.CategoryName = elem.Category.Name;
+            break;
+        }
+
+        // Material
+        try
+        {
+          var matIds = elem.GetMaterialIds(false);
+          if (matIds.Count > 0)
+          {
+            var mat = targetDoc.GetElement(matIds.First()) as Material;
+            item.MaterialName = mat?.Name ?? "";
+          }
+        }
+        catch { }
+
+        list.Add(item);
+      }
     }
 
     return list;

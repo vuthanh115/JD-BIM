@@ -4,6 +4,7 @@ namespace kaka.Structure.Structural.App.Models.PrimaveraP6;
 
 public sealed class P6WbsSummaryItem
 {
+  public string Discipline { get; set; } = "KẾT CẤU";
   public string WbsCode { get; set; } = string.Empty;
   public string ComponentCode { get; set; } = string.Empty;
   public string ComponentName { get; set; } = string.Empty;

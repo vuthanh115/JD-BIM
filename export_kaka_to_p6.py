@@ -214,6 +214,15 @@ def generate_csv(wbs_list, activities):
             ])
     print(f"[OK] Generated P6 CSV: {CSV_PATH} ({len(activities)} activities)")
 
+def strip_accents(text):
+    if not text:
+        return ""
+    import unicodedata
+    text = text.replace('đ', 'd').replace('Đ', 'D')
+    text = unicodedata.normalize('NFD', text)
+    text = ''.join(c for c in text if unicodedata.category(c) != 'Mn')
+    return unicodedata.normalize('NFC', text)
+
 def generate_xer(wbs_list, activities):
     now_str = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
     date_start_str = "2026-03-01 08:00"
@@ -225,21 +234,24 @@ def generate_xer(wbs_list, activities):
     # Table: PROJECT
     xer_lines.append("%T\tPROJECT")
     xer_lines.append("%F\tproj_id\tacct_id\torig_proj_id\tplan_start_date\tplan_end_date\tproj_short_name\tproj_title")
-    xer_lines.append(f"%R\t1\t1\t1\t{date_start_str}\t{date_end_str}\tPROJ-KAKA-FACTORY\tDự án Nhà máy Hải Phòng 30.000m2 (Kaka BIM-P6 Mapping)")
+    clean_p_title = strip_accents("Dự án Nhà máy Hải Phòng 30.000m2 (Kaka BIM-P6 Mapping)")
+    xer_lines.append(f"%R\t1\t1\t1\t{date_start_str}\t{date_end_str}\tPROJ-KAKA-FACTORY\t{clean_p_title}")
 
     # Table: PROJWBS
     xer_lines.append("%T\tPROJWBS")
     xer_lines.append("%F\twbs_id\tproj_id\tparent_wbs_id\twbs_short_name\twbs_name\tseq_num")
     for idx, w in enumerate(wbs_list):
         parent_val = str(w['parent_wbs_id']) if w['parent_wbs_id'] is not None else ""
-        xer_lines.append(f"%R\t{w['wbs_id']}\t1\t{parent_val}\t{w['wbs_code']}\t{w['wbs_name']}\t{idx+1}")
+        clean_w_name = strip_accents(w['wbs_name'])
+        xer_lines.append(f"%R\t{w['wbs_id']}\t1\t{parent_val}\t{w['wbs_code']}\t{clean_w_name}\t{idx+1}")
 
     # Table: TASK
     xer_lines.append("%T\tTASK")
     xer_lines.append("%F\ttask_id\tproj_id\twbs_id\ttask_code\ttask_name\ttarget_drtn_hr_cnt\ttask_type\tstatus_code")
     for a in activities:
         duration_hrs = a['duration'] * 8
-        xer_lines.append(f"%R\t{a['act_id']}\t1\t{a['wbs_id']}\t{a['act_code']}\t{a['act_name']}\t{duration_hrs}\tTT_Task\tTK_NotStart")
+        clean_act_name = strip_accents(a['act_name'])
+        xer_lines.append(f"%R\t{a['act_id']}\t1\t{a['wbs_id']}\t{a['act_code']}\t{clean_act_name}\t{duration_hrs}\tTT_Task\tTK_NotStart")
 
     with open(XER_PATH, 'w', encoding='utf-8') as f:
         f.write("\n".join(xer_lines) + "\n")

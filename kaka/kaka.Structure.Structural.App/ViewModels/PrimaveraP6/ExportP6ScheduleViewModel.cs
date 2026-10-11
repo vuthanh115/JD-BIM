@@ -23,9 +23,15 @@ public sealed partial class ExportP6ScheduleViewModel : ObservableObject
 
   public string ProjectName { get; }
   public string ModelTitle { get; }
-  public int TotalElements { get; }
-  public int TotalWbsNodes { get; }
-  public int TotalActivities { get; }
+
+  [ObservableProperty]
+  private int _totalElements;
+
+  [ObservableProperty]
+  private int _totalWbsNodes;
+
+  [ObservableProperty]
+  private int _totalActivities;
 
   public ObservableCollection<P6WbsSummaryItem> WbsItems { get; }
 
@@ -36,10 +42,24 @@ public sealed partial class ExportP6ScheduleViewModel : ObservableObject
   private string _csvFilePath = string.Empty;
 
   [ObservableProperty]
+  private string _p6DatabasePath = string.Empty;
+
+  [ObservableProperty]
+  private bool _syncToP6Database = true;
+
+  [ObservableProperty]
   private bool _exportToXer = true;
 
   [ObservableProperty]
-  private bool _exportToCsv = true;
+  private bool _exportToCsv = false;
+
+  [ObservableProperty]
+  private bool _includeLinkedModels = true;
+
+  [ObservableProperty]
+  private bool _hasAvailableLinks;
+
+  public ObservableCollection<RevitLinkOptionItem> AvailableLinks { get; } = new();
 
   [ObservableProperty]
   private bool _openFolderAfterExport = true;
@@ -61,12 +81,11 @@ public sealed partial class ExportP6ScheduleViewModel : ObservableObject
 
     ModelTitle = string.IsNullOrWhiteSpace(doc.Title) ? "Active_Model" : doc.Title;
 
-    _summaries = PrimaveraP6ExportService.BuildWbsSummaries(doc);
-    WbsItems = new ObservableCollection<P6WbsSummaryItem>(_summaries);
+    _summaries = new List<P6WbsSummaryItem>();
+    WbsItems = new ObservableCollection<P6WbsSummaryItem>();
 
-    TotalElements = _summaries.Sum(x => x.ElementCount);
-    TotalWbsNodes = _summaries.Count + 2; // bao gồm root & structural WBS
-    TotalActivities = _summaries.Sum(x => x.TaskCount);
+    // Quét danh sách các file Revit Link hiện có trong mô hình
+    DiscoverLinkedModels();
 
     // Xác định thư mục lưu mặc định
     var defaultDir = @"c:\Working\kaka\Mindmap";
@@ -81,7 +100,101 @@ public sealed partial class ExportP6ScheduleViewModel : ObservableObject
     XerFilePath = Path.Combine(defaultDir, $"{baseName}_P6_Schedule.xer");
     CsvFilePath = Path.Combine(defaultDir, $"{baseName}_P6_Schedule.csv");
 
-    StatusMessage = $"Đã nạp {TotalElements:N0} cấu kiện, sẵn sàng xuất sang {TotalWbsNodes} WBS Nodes & {TotalActivities} Activities.";
+    var defaultP6Db = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "PPMDBSQLite.db");
+    P6DatabasePath = defaultP6Db;
+    SyncToP6Database = File.Exists(defaultP6Db);
+
+    ReloadSummaries();
+  }
+
+  private void DiscoverLinkedModels()
+  {
+    try
+    {
+      var linkInstances = new FilteredElementCollector(_doc)
+        .OfClass(typeof(RevitLinkInstance))
+        .Cast<RevitLinkInstance>();
+
+      var seenTitles = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+      foreach (var link in linkInstances)
+      {
+        var linkDoc = link.GetLinkDocument();
+        if (linkDoc != null && !seenTitles.Contains(linkDoc.Title))
+        {
+          seenTitles.Add(linkDoc.Title);
+          var item = new RevitLinkOptionItem
+          {
+            DocumentTitle = linkDoc.Title,
+            FilePath = linkDoc.PathName,
+            LinkInstanceId = (int)link.Id.Value,
+            IsSelected = true
+          };
+
+          item.PropertyChanged += (s, e) =>
+          {
+            if (e.PropertyName == nameof(RevitLinkOptionItem.IsSelected))
+            {
+              ReloadSummaries();
+            }
+          };
+
+          AvailableLinks.Add(item);
+        }
+      }
+
+      HasAvailableLinks = AvailableLinks.Count > 0;
+    }
+    catch
+    {
+      HasAvailableLinks = false;
+    }
+  }
+
+  partial void OnIncludeLinkedModelsChanged(bool value)
+  {
+    ReloadSummaries();
+  }
+
+  private void ReloadSummaries()
+  {
+    _summaries.Clear();
+
+    IEnumerable<string>? selectedTitles = null;
+    if (IncludeLinkedModels && AvailableLinks.Count > 0)
+    {
+      selectedTitles = AvailableLinks.Where(x => x.IsSelected).Select(x => x.DocumentTitle);
+    }
+
+    var newItems = PrimaveraP6ExportService.BuildWbsSummaries(_doc, IncludeLinkedModels, selectedTitles);
+    _summaries.AddRange(newItems);
+
+    WbsItems.Clear();
+    foreach (var item in _summaries)
+    {
+      WbsItems.Add(item);
+    }
+
+    TotalElements = _summaries.Sum(x => x.ElementCount);
+    TotalWbsNodes = _summaries.Count + (_summaries.Any(x => x.Discipline == "KIẾN TRÚC") ? 3 : 2);
+    TotalActivities = _summaries.Sum(x => x.TaskCount);
+    StatusMessage = $"Đã nạp {TotalElements:N0} cấu kiện ({_summaries.Count} nhóm hạng mục), sẵn sàng xuất sang {TotalWbsNodes} WBS Nodes & {TotalActivities} Activities.";
+  }
+
+  [RelayCommand]
+  private void BrowseP6Database()
+  {
+    var dlg = new OpenFileDialog
+    {
+      Title = "Chọn file CSDL Primavera P6 SQLite (.db)",
+      Filter = "SQLite Database (*.db)|*.db|All files (*.*)|*.*",
+      FileName = P6DatabasePath
+    };
+
+    if (dlg.ShowDialog() == true)
+    {
+      P6DatabasePath = dlg.FileName;
+    }
   }
 
   [RelayCommand]
@@ -119,18 +232,31 @@ public sealed partial class ExportP6ScheduleViewModel : ObservableObject
   [RelayCommand]
   private void Export()
   {
-    if (!ExportToXer && !ExportToCsv)
+    if (!SyncToP6Database && !ExportToXer && !ExportToCsv)
     {
-      MessageBox.Show("Vui lòng chọn ít nhất một định dạng xuất (.xer hoặc .csv).", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+      MessageBox.Show("Vui lòng chọn ít nhất một hình thức xuất/đồng bộ (P6 Database, .xer hoặc .csv).", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
       return;
     }
 
     try
     {
       IsBusy = true;
-      StatusMessage = "Đang trích xuất và biên dịch lịch trình Primavera P6...";
+      StatusMessage = "Đang trích xuất và đồng bộ tiến độ Primavera P6...";
 
       string? exportedFolder = null;
+      bool dbSuccess = false;
+
+      if (SyncToP6Database && !string.IsNullOrWhiteSpace(P6DatabasePath))
+      {
+        if (PrimaveraP6ExportService.SyncToP6Sqlite(P6DatabasePath, "PRJ-KAKA-BIM", ProjectName, _summaries, out var dbError))
+        {
+          dbSuccess = true;
+        }
+        else
+        {
+          MessageBox.Show($"Đồng bộ vào P6 SQLite Database thất bại:\n{dbError}", "Lỗi CSDL P6", MessageBoxButton.OK, MessageBoxImage.Warning);
+        }
+      }
 
       if (ExportToXer && !string.IsNullOrWhiteSpace(XerFilePath))
       {
@@ -152,16 +278,17 @@ public sealed partial class ExportP6ScheduleViewModel : ObservableObject
         exportedFolder = dir;
       }
 
-      StatusMessage = "Xuất dữ liệu Primavera P6 hoàn tất thành công!";
+      StatusMessage = "Đồng bộ & Xuất dữ liệu Primavera P6 hoàn tất thành công!";
 
       MessageBox.Show(
-        $"Xuất dữ liệu Primavera P6 thành công!\n\n" +
-        $"• Dự án: {ProjectName}\n" +
+        $"Đồng bộ & Xuất dữ liệu Primavera P6 thành công!\n\n" +
+        $"• Dự án: {ProjectName} (Mã: PRJ-KAKA-BIM)\n" +
         $"• WBS Nodes: {TotalWbsNodes}\n" +
         $"• Activities: {TotalActivities}\n\n" +
+        (SyncToP6Database && dbSuccess ? $"• CSDL P6: Đã nạp thành công 100% tiếng Việt có dấu vào PPMDBSQLite.db\n" : "") +
         (ExportToXer ? $"• File XER: {Path.GetFileName(XerFilePath)}\n" : "") +
         (ExportToCsv ? $"• File CSV: {Path.GetFileName(CsvFilePath)}\n" : ""),
-        "Primavera P6 Export",
+        "Primavera P6 Integration",
         MessageBoxButton.OK,
         MessageBoxImage.Information);
 

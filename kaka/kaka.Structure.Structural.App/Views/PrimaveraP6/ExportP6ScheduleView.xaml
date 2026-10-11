@@ -116,12 +116,83 @@
           <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0"
-                   FontSize="14"
-                   FontWeight="Bold"
-                   Foreground="#0F172A"
-                   Margin="0,0,0,8"
-                   Text="Bảng Phân Bổ 14 Cấu Kiện Kết Cấu ➔ WBS &amp; Hoạt Động Primavera P6 (BIM 4D/5D)" />
+        <!-- Header & Link Options Row -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,10">
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0"
+                       FontSize="14"
+                       FontWeight="Bold"
+                       Foreground="#0F172A"
+                       VerticalAlignment="Center"
+                       Text="Bảng Phân Bổ Cấu Kiện Kết Cấu &amp; Kiến Trúc ➔ WBS &amp; P6 (BIM 4D/5D)" />
+            <CheckBox Grid.Column="1"
+                      IsChecked="{Binding IncludeLinkedModels}"
+                      Content="Quét các mô hình Revit Link"
+                      FontWeight="SemiBold"
+                      Foreground="#0284C7"
+                      VerticalAlignment="Center"
+                      ToolTip="Tự động trích xuất cấu kiện Kiến trúc (Tường gạch, Cửa, Trần, Mái, Ốp lát...) từ các file Revit Link được chọn." />
+          </Grid>
+
+          <!-- Individual Link Selection Pills / Checkboxes -->
+          <Border Margin="0,6,0,0"
+                  Padding="10,6"
+                  Background="#F8FAFC"
+                  BorderBrush="#E2E8F0"
+                  BorderThickness="1"
+                  CornerRadius="6">
+            <Border.Style>
+              <Style TargetType="Border">
+                <Setter Property="Visibility" Value="Collapsed" />
+                <Style.Triggers>
+                  <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                      <Condition Binding="{Binding IncludeLinkedModels}" Value="True" />
+                      <Condition Binding="{Binding HasAvailableLinks}" Value="True" />
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="Visibility" Value="Visible" />
+                  </MultiDataTrigger>
+                </Style.Triggers>
+              </Style>
+            </Border.Style>
+
+            <DockPanel LastChildFill="True">
+              <TextBlock DockPanel.Dock="Left"
+                         Text="Chọn file Link cần bóc tách:"
+                         FontWeight="SemiBold"
+                         FontSize="12"
+                         Foreground="#475569"
+                         VerticalAlignment="Center"
+                         Margin="0,0,10,0" />
+
+              <ItemsControl ItemsSource="{Binding AvailableLinks}">
+                <ItemsControl.ItemsPanel>
+                  <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" />
+                  </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                  <DataTemplate>
+                    <CheckBox IsChecked="{Binding IsSelected}"
+                              Margin="0,2,16,2"
+                              VerticalAlignment="Center"
+                              ToolTip="{Binding FilePath}">
+                      <CheckBox.Content>
+                        <TextBlock Text="{Binding DisplayName}"
+                                   FontSize="12"
+                                   Foreground="#1E293B" />
+                      </CheckBox.Content>
+                    </CheckBox>
+                  </DataTemplate>
+                </ItemsControl.ItemTemplate>
+              </ItemsControl>
+            </DockPanel>
+          </Border>
+        </StackPanel>
 
         <DataGrid Grid.Row="1"
                   ItemsSource="{Binding WbsItems}"
@@ -156,13 +227,24 @@
           </DataGrid.RowStyle>
 
           <DataGrid.Columns>
+            <DataGridTextColumn Header="Bộ Môn"
+                                Binding="{Binding Discipline}"
+                                Width="95">
+              <DataGridTextColumn.ElementStyle>
+                <Style TargetType="TextBlock">
+                  <Setter Property="FontWeight" Value="SemiBold" />
+                  <Setter Property="HorizontalAlignment" Value="Center" />
+                </Style>
+              </DataGridTextColumn.ElementStyle>
+            </DataGridTextColumn>
+
             <DataGridTextColumn Header="Mã WBS (P6)"
                                 Binding="{Binding WbsCode}"
-                                Width="130" />
+                                Width="120" />
 
-            <DataGridTextColumn Header="Cấu Kiện Kết Cấu"
+            <DataGridTextColumn Header="Hạng Mục Công Việc"
                                 Binding="{Binding ComponentName}"
-                                Width="240" />
+                                Width="220" />
 
             <DataGridTextColumn Header="Cấu Kiện Revit"
                                 Binding="{Binding ElementCount, StringFormat='{}{0:N0}'}"
@@ -221,6 +303,35 @@
                    Foreground="#0F172A"
                    Margin="0,0,0,10"
                    Text="Tùy Chọn Định Dạng Xuất Primavera P6" />
+
+        <!-- P6 Database Sync Option (Tiếng Việt có dấu 100%) -->
+        <Grid Margin="0,0,0,8">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+
+          <CheckBox Grid.Column="0"
+                    Content="Đồng bộ vào P6 Database (.db)"
+                    FontWeight="SemiBold"
+                    Foreground="#0284C7"
+                    IsChecked="{Binding SyncToP6Database}" />
+
+          <TextBox Grid.Column="1"
+                   Text="{Binding P6DatabasePath, UpdateSourceTrigger=PropertyChanged}"
+                   Margin="8,0"
+                   IsEnabled="{Binding SyncToP6Database}" />
+
+          <Button Grid.Column="2"
+                  Content="Chọn..."
+                  Command="{Binding BrowseP6DatabaseCommand}"
+                  IsEnabled="{Binding SyncToP6Database}"
+                  Padding="14,4"
+                  Background="#F1F5F9"
+                  BorderBrush="#CBD5E1"
+                  Cursor="Hand" />
+        </Grid>
 
         <!-- XER File Option -->
         <Grid Margin="0,0,0,8">
