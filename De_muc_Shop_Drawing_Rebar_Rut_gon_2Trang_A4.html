@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng Đề Mục Quy Cách Shop Drawing Cốt Thép & BBS (Rút Gọn 2 Trang A4) - BSV Standard</title>
+  <style>
+    /* ==========================================================================
+       A4 EXECUTIVE PRINT STYLESHEET - SHOP REBAR 2 PAGES EXACTLY
+       ========================================================================== */
+    @page {
+      size: A4 portrait;
+      margin: 8mm 10mm 8mm 10mm;
+    }
+
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --navy: #0f172a;
+      --slate: #334155;
+      --light-bg: #f8fafc;
+      --border: #cbd5e1;
+      --border-dark: #94a3b8;
+      --param-bg: #eff6ff;
+      --param-text: #1d4ed8;
+      --template-bg: #fef3c7;
+      --template-text: #b45309;
+      --tool-bg: #ecfdf5;
+      --tool-text: #047857;
+      --amber-bg: #fffbeb;
+      --amber-text: #b45309;
+      --purple-bg: #f5f3ff;
+      --purple-text: #6d28d9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #0f172a;
+      background: #e2e8f0;
+      line-height: 1.34;
+      font-size: 7.9pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Screen Toolbar */
+    .screen-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: #0f172a;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .toolbar-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn {
+      padding: 6px 14px;
+      border-radius: 5px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .btn-primary { background: #0284c7; color: #fff; }
+    .btn-primary:hover { background: #0369a1; }
+    .btn-secondary { background: #334155; color: #fff; }
+
+    /* A4 Sheet Container */
+    .a4-page {
+      width: 210mm;
+      min-height: 297mm;
+      height: 297mm;
+      margin: 0 auto 16px auto;
+      background: #ffffff;
+      padding: 9mm 11mm 9mm 11mm;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Header Compact */
+    .doc-header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 5px;
+      margin-bottom: 7px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+
+    .org-tag {
+      font-size: 7.2pt;
+      font-weight: 700;
+      color: #64748b;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .doc-badge {
+      font-size: 7pt;
+      font-family: Consolas, monospace;
+      color: var(--primary);
+      font-weight: 700;
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+
+    .header-title-box {
+      text-align: center;
+    }
+
+    .header-title-box h1 {
+      font-size: 11.2pt;
+      font-weight: 800;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .header-title-box .subtitle {
+      font-size: 7.5pt;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Meta Ribbon Bar */
+    .meta-bar {
+      display: grid;
+      grid-template-columns: 2fr 1.8fr 1.8fr 1.4fr;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 3.5px 7px;
+      gap: 6px;
+      margin-bottom: 7px;
+      font-size: 7.1pt;
+    }
+
+    .meta-bar-item strong {
+      color: var(--navy);
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 8.3pt;
+      font-weight: 700;
+      color: #ffffff;
+      background: var(--navy);
+      padding: 3px 8px;
+      border-radius: 3px;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .section-title .badge {
+      background: var(--primary);
+      color: #fff;
+      font-size: 6.8pt;
+      padding: 1px 5px;
+      border-radius: 2px;
+      font-weight: 600;
+    }
+
+    /* Tables */
+    .compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7.1pt;
+      margin-bottom: 6px;
+    }
+
+    .compact-table th {
+      background: #f1f5f9;
+      color: var(--navy);
+      font-weight: 700;
+      text-align: left;
+      padding: 3px 5px;
+      border: 1px solid var(--border);
+      font-size: 6.9pt;
+      text-transform: uppercase;
+    }
+
+    .compact-table td {
+      padding: 2.8px 5px;
+      border: 1px solid #e2e8f0;
+      vertical-align: top;
+      color: #1e293b;
+    }
+
+    .compact-table tr:nth-child(even) {
+      background: #fafbfc;
+    }
+
+    .code-cell {
+      font-family: Consolas, monospace;
+      font-weight: 700;
+      color: var(--primary-dark);
+      white-space: nowrap;
+      width: 13%;
+    }
+
+    .name-cell {
+      font-weight: 600;
+      color: var(--navy);
+      width: 17%;
+    }
+
+    .param-pill {
+      display: inline-block;
+      font-family: Consolas, monospace;
+      font-size: 6.7pt;
+      font-weight: 600;
+      background: var(--param-bg);
+      color: var(--param-text);
+      border: 1px solid #bfdbfe;
+      padding: 0 4px;
+      border-radius: 2px;
+      margin-right: 2px;
+    }
+
+    .template-pill {
+      display: inline-block;
+      font-family: Consolas, monospace;
+      font-size: 6.6pt;
+      font-weight: 600;
+      background: var(--template-bg);
+      color: var(--template-text);
+      border: 1px solid #fde68a;
+      padding: 0 4px;
+      border-radius: 2px;
+      margin-right: 2px;
+    }
+
+    .tool-pill {
+      display: inline-block;
+      font-size: 6.5pt;
+      font-weight: 600;
+      background: var(--tool-bg);
+      color: var(--tool-text);
+      border: 1px solid #a7f3d0;
+      padding: 0 4px;
+      border-radius: 2px;
+    }
+
+    .amber-pill {
+      display: inline-block;
+      font-size: 6.5pt;
+      font-weight: 600;
+      background: var(--amber-bg);
+      color: var(--amber-text);
+      border: 1px solid #fde68a;
+      padding: 0 4px;
+      border-radius: 2px;
+    }
+
+    .purple-pill {
+      display: inline-block;
+      font-size: 6.5pt;
+      font-weight: 600;
+      background: var(--purple-bg);
+      color: var(--purple-text);
+      border: 1px solid #ddd6fe;
+      padding: 0 4px;
+      border-radius: 2px;
+    }
+
+    /* Grid 2 Columns */
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .rule-card {
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: 3px;
+      padding: 4px 6px;
+      background: #ffffff;
+      font-size: 7.1pt;
+    }
+
+    .rule-card h4 {
+      font-size: 7.4pt;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 2.5px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .rule-card ul {
+      padding-left: 13px;
+      margin: 0;
+    }
+
+    .rule-card li {
+      margin-bottom: 1.5px;
+      color: #334155;
+    }
+
+    /* BBS Grid Columns */
+    .bbs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+
+    .bbs-card {
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      background: #f8fafc;
+      padding: 3.5px 5px;
+      font-size: 6.8pt;
+    }
+
+    .bbs-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 7pt;
+      margin-bottom: 1px;
+    }
+
+    /* Page Footer */
+    .page-footer {
+      border-top: 1px solid var(--border);
+      padding-top: 3px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 6.8pt;
+      color: #64748b;
+    }
+
+    /* Print Tweaks */
+    @media print {
+      body { background: #ffffff !important; }
+      .screen-toolbar { display: none !important; }
+      .a4-page {
+        margin: 0 !important;
+        padding: 8mm 10mm 8mm 10mm !important;
+        box-shadow: none !important;
+        page-break-after: always;
+        height: 297mm !important;
+      }
+      .a4-page:last-child {
+        page-break-after: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="screen-toolbar">
+    <div class="toolbar-title">
+      <span>🔩 BSV SHOP DRAWING REBAR — ĐỀ MỤC QUY CÁCH TRIỂN KHAI RÚT GỌN (CHÍNH XÁC 2 TRANG A4)</span>
+    </div>
+    <div>
+      <button onclick="window.print()" class="btn btn-primary">
+        🖨️ In Ngay (2 Trang A4)
+      </button>
+      <a href="De_muc_Shop_Drawing_Rebar_A4.html" class="btn btn-secondary">
+        📖 Xem Bản Đầy Đủ Chi Tiết
+      </a>
+      <a href="De_muc_Ket_cau_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        📐 Đề Mục Kết Cấu (2 Trang)
+      </a>
+      <a href="De_muc_Kien_truc_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        🏛️ Đề Mục Kiến Trúc (2 Trang)
+      </a>
+      <a href="index.html" class="btn btn-secondary">
+        🏠 Master Portal
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- TRANG 1: QUY TẮC CỐT LÕI, QUY CHUẨN 5 BƯỚC & CẤU KIỆN MÓNG, ĐÀ KIỀNG, NỀN, CỘT -->
+  <!-- ========================================================================= -->
+  <div class="a4-page">
+    <div>
+      <!-- Header -->
+      <header class="doc-header">
+        <div class="header-top">
+          <span class="org-tag">BSV BIM REBAR DETAILING &amp; BAR BENDING SCHEDULE • STRUCTURAL DIVISION</span>
+          <span class="doc-badge">STANDARD: BSV-REBAR-SHOP-SUMMARY • A4 COMPACT</span>
+        </div>
+        <div class="header-title-box">
+          <h1>QUY CÁCH TRIỂN KHAI SHOP DRAWING CỐT THÉP &amp; THỐNG KÊ BBS (BẢN TÓM TẮT)</h1>
+          <div class="subtitle">QUY ƯỚC JOIN, MÃ HÓA PARTITION, BỘ VIEW TEMPLATE, TAG 2D VÀ 14 CẤU KIỆN THỰC CHIẾN</div>
+        </div>
+      </header>
+
+      <!-- Meta Ribbon -->
+      <div class="meta-bar">
+        <div class="meta-bar-item"><strong>Nguyên tắc Join:</strong> Sàn &gt; Móng &gt; Cột &gt; Dầm &gt; Vách &gt; Thang</div>
+        <div class="meta-bar-item"><strong>Revit Add-in:</strong> BimSpeed Rebar + kaka.Structure</div>
+        <div class="meta-bar-item"><strong>Tham số cốt lõi:</strong> Partition, BSV_PhanLoai, Bending Detail</div>
+        <div class="meta-bar-item"><strong>Trang:</strong> 1 / 2 (Phần Ngầm, Cột &amp; Đà Kiềng)</div>
+      </div>
+
+      <!-- Khung 1: Quy Tắc Join & Bộ 5 Bước Triển Khai Chuẩn Cho Mọi Cấu Kiện -->
+      <div class="grid-2col">
+        <div class="rule-card">
+          <h4>🔗 1. Quy Tắc Cắt Giao &amp; Đoạn Nối Neo Cốt Thép</h4>
+          <ul>
+            <li><strong>Thứ tự Join hình học:</strong> <code>Sàn > Móng > Cột > Dầm > Vách > Cầu Thang</code> quyết định chính xác điểm dừng bẻ móc và lớp bảo vệ.</li>
+            <li><strong>Thép chờ móng / đà:</strong> Bẻ chân vịt ngàm sâu vào móng $L_d$, chiều dài đoạn nối buộc sole tối thiểu $30d - 40d$ theo Spec kết cấu.</li>
+            <li><strong>Đường dóng nối cắt thép dầm/đà:</strong><br>
+              • Vẽ bằng nét <code>Hidden Line</code>.<br>
+              • Thép lớp trên: Vị trí nối tại <strong>khoảng giữa bụng dầm ($L/4$)</strong>.<br>
+              • Thép lớp dưới: Vị trí nối tại <strong>khu vực gối tựa ($L/6$)</strong>.
+            </li>
+          </ul>
+        </div>
+        <div class="rule-card">
+          <h4>📋 2. Quy Chuẩn 5 Bước Đóng Gói Hồ Sơ Cốt Thép</h4>
+          <ul>
+            <li><strong>1. Quy cách vẽ:</strong> Dùng BimSpeed Rebar nhập đúng lớp bê tông bảo vệ (<code>btbv</code>), rải thép chủ, thép đai, thép giá, thép gia cường.</li>
+            <li><strong>2. Đặt tên thép:</strong> Gán <span class="param-pill">Partition</span> phân khu/tên cấu kiện; gán <span class="param-pill">BSV_PhanLoai</span> theo nhóm BOQ.</li>
+            <li><strong>3. Xuất bản vẽ:</strong> Gán View Template chuẩn, tạo Mặt bằng (Section từ trên xuống), Mặt cắt dọc/ngang, Dim, Cao độ, Breakline.</li>
+            <li><strong>4. Tag 2D &amp; BBS:</strong> Tag thép 2D <code>Rebar Bending Detail</code> tắt leader; tạo bảng thống kê hình dạng, đường kính, chiều dài, khối lượng.</li>
+            <li><strong>5. Key Plan:</strong> Duplicate level cao độ, gán View Template KP, cây thư mục <code>BSV_ThuMucChinh</code>, <code>BSV_ThuMucPhu</code>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Khung 2: Bộ View Templates & Tiêu Chuẩn Tag 2D Chuẩn Hóa -->
+      <div class="section-title">
+        <span>🏷️ HỆ THỐNG VIEW TEMPLATES &amp; QUY CÁCH TAG 2D / MULTI-REBAR CHUẨN REVIT</span>
+        <span class="badge">TEMPLATES &amp; TAGS</span>
+      </div>
+      <table class="compact-table" style="margin-bottom: 7px;">
+        <thead>
+          <tr>
+            <th style="width: 18%;">Hạng Mục Cấu Kiện</th>
+            <th style="width: 28%;">View Template Mặt Cắt / Chi Tiết</th>
+            <th style="width: 25%;">View Template Key Plan</th>
+            <th style="width: 29%;">Quy Chuẩn Tag Thép 2D &amp; Dim Cao Độ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>02. Móng (Foundation)</strong></td>
+            <td><span class="template-pill">BSV_02.1_Detail_Foudation</span></td>
+            <td><span class="template-pill">BSV_02_KP_Foudation</span></td>
+            <td>Tag MB tắt leader: <code>BSV_02.0_TagRebar_Fou_SL_D_a</code>; Tag MC: <code>BSV_02.2_TagRebar_Fou_Opendot</code></td>
+          </tr>
+          <tr>
+            <td><strong>03. Đà Kiềng (Tie Beam)</strong></td>
+            <td><span class="template-pill">BSV_03.2_Detail_GroundBeam</span> (Dọc) / <span class="template-pill">03.3</span> (Ngang)</td>
+            <td><span class="template-pill">BSV_03.1_KP_GroundBeam</span></td>
+            <td>Tag dầm: <code>Rebar bending detail</code>; Dim khoảng rải đai <code>BSV_Dim</code>; Nét cắt <code>BSV_Bearkline</code></td>
+          </tr>
+          <tr>
+            <td><strong>04. Nền &amp; 08. Sàn (Slab)</strong></td>
+            <td><span class="template-pill">BSV_04.1_Detail_Slab</span> / <span class="template-pill">BSV_08.1_Detail_Slab</span></td>
+            <td><span class="template-pill">BSV_04_KP_Slab</span> / <span class="template-pill">BSV_08_KP</span></td>
+            <td>Tag thép sàn 2 lớp (Top/Bottom); Tag Multi-rebar rải thép tăng cường gối/bụng; Dim <code>BSV_Dim</code></td>
+          </tr>
+          <tr>
+            <td><strong>05. Cột (Column)</strong></td>
+            <td><span class="template-pill">BSV_05.2_Detail_Column</span></td>
+            <td><span class="template-pill">BSV_05.1_KP_Column</span></td>
+            <td>Tag thép chủ cột, tag đai chính/đai phụ; Cao độ chân/đỉnh cột <code>BSV_CaoDo</code>; Thép chờ móng</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Khung 3: Ma Trận Cấu Kiện Thực Chiến 01 -> 05 (Phần Ngầm & Cột) -->
+      <div class="section-title">
+        <span>🧱 MA TRẬN QUY CÁCH SHOP DRAWING CẤU KIỆN (01. CỌC ➔ 05. CỘT)</span>
+        <span class="badge">PHẦN NGẦM &amp; THẲNG ĐỨNG</span>
+      </div>
+      <table class="compact-table">
+        <thead>
+          <tr>
+            <th class="code-cell">Mã Cấu Kiện</th>
+            <th class="name-cell">Cấu Kiện</th>
+            <th style="width: 25%;">Quy Cách Đặt Tên &amp; Partition</th>
+            <th style="width: 45%;">Quy Cách Dựng Cốt Thép (BimSpeed), Khai Triển Mặt Cắt &amp; Bảng BBS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code-cell">01. Join</td>
+            <td class="name-cell">Join Cấu Kiện</td>
+            <td>
+              <span class="purple-pill">Quy tắc chuẩn</span><br>
+              Áp dụng toàn bộ mô hình
+            </td>
+            <td>
+              • Ưu tiên cắt giao hình học theo thứ tự: Sàn ➔ Móng ➔ Cột ➔ Dầm ➔ Vách ➔ Cầu Thang.<br>
+              • Tránh va chạm giao nhau giữa cốt thép dầm chính và dầm phụ (bố trí so le cao độ thép lớp trên).
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">02.Mong</td>
+            <td class="name-cell">Móng Đơn / Băng / Bè</td>
+            <td>
+              <span class="param-pill">Partition</span> : <code>F1, F2...</code><br>
+              <span class="param-pill">BSV_PhanLoai</span> : <code>02.ThepMong_VP</code><br>
+              <span class="template-pill">KP_Foudation</span>
+            </td>
+            <td>
+              • <strong>BimSpeed Móng:</strong> Nhập <code>btbv</code>, vẽ lớp thép dưới, lớp trên, cốt thép dọc/ngang hông móng vát.<br>
+              • <strong>Mặt bằng &amp; Mặt cắt:</strong> Section <code>BSV_02_Sec_Foudation</code> (nhìn từ trên xuống, trái qua phải); gán Tag 2D Bending Detail.<br>
+              • <strong>Bảng BBS:</strong> Bảng <code>THỐNG KÊ THÉP MÓNG F1</code> (Partitions, Bending detail, Ø, SL, Số cấu kiện, Chiều dài, Khối lượng).
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">03.DaKieng</td>
+            <td class="name-cell">Đà Kiềng &amp; Giằng Móng</td>
+            <td>
+              <span class="param-pill">Partition</span> : <code>B1_Caodo_VP</code><br>
+              <span class="param-pill">BSV_PhanLoai</span> : <code>03.ThepDaKieng_VP</code><br>
+              <span class="template-pill">KP_GroundBeam</span>
+            </td>
+            <td>
+              • <strong>BimSpeed Dầm:</strong> Thép lớp dưới + tăng cường bụng; Thép lớp trên + tăng cường gối; Thép giá + Thép đai chống xoắn.<br>
+              • <strong>Đường dóng nối cắt thép:</strong> Nét Hidden Line theo Spec ($L/4$ bụng trên, $L/6$ gối dưới).<br>
+              • <strong>Mặt cắt &amp; BBS:</strong> MC dọc <code>BSV_03.2</code>, MC ngang <code>BSV_03.3</code>; Thống kê thép Dầm B2; Key Plan <code>[SHOP THÉP DẦM]</code>.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">04.Nen</td>
+            <td class="name-cell">Sàn Nền Trệt &amp; Mương</td>
+            <td>
+              <span class="param-pill">Partition</span> : <code>Slab_F1_Nen</code><br>
+              <span class="param-pill">BSV_PhanLoai</span> : <code>04.ThepNen_Xuong</code><br>
+              <span class="template-pill">KP_Slab</span>
+            </td>
+            <td>
+              • <strong>BimSpeed Sàn:</strong> Lưới thép hàn hoặc cốt thép thường 2 lớp; bố trí thép tăng cường góc lõm, gia cường miệng hố mương/pit.<br>
+              • <strong>Chi tiết khe:</strong> Thép truyền lực (Dowel bar) trơn qua khe co giãn, ống bọc nhựa PVC nửa thanh.<br>
+              • <strong>Mặt bằng &amp; BBS:</strong> Thống kê thép Sàn Vp2; View Template mặt bằng &amp; mặt cắt; Key Plan <code>[SHOP THÉP SÀN]</code>.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">05.Cot</td>
+            <td class="name-cell">Cột Khung &amp; Cổ Cột</td>
+            <td>
+              <span class="param-pill">Partition</span> : <code>C1_T1-T2</code><br>
+              <span class="param-pill">BSV_PhanLoai</span> : <code>05.ThepCot_C5</code><br>
+              <span class="template-pill">KP_Column</span>
+            </td>
+            <td>
+              • <strong>BimSpeed Cột:</strong> Cốt thép chủ phương X, Y; Tiết diện đai chính + đai móc phụ liên kết C; Đoạn nối sole $\ge 50\%$.<br>
+              • <strong>Thép chờ móng &amp; đỉnh:</strong> Chân ngàm móng bẻ giò gà; đỉnh cột neo dầm sàn; Cài đặt vùng rải đai dày $h_{cl} / 6$ đầu cột.<br>
+              • <strong>Mặt cắt &amp; BBS:</strong> MC dọc <code>BSV_05.2_Detail_Column</code>, MC ngang; Thống kê thép Cột C5; Key Plan <code>[SHOP THÉP CỘT]</code>.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Footer Page 1 -->
+    <footer class="page-footer">
+      <div>Ban Hành: BP. Shop Drawing Rebar BSV • Cẩm Nang Triển Khai Bản Vẽ &amp; BBS Tiêu Chuẩn</div>
+      <div>Trang 1 / 2 • Phần Ngầm, Cột, Đà Kiềng &amp; Tiêu Chuẩn View Templates</div>
+    </footer>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- TRANG 2: CẤU KIỆN VÁCH, DẦM, SÀN, THANG, RAMP, CẤU KIỆN PHỤ & QUẢN TRỊ BBS -->
+  <!-- ========================================================================= -->
+  <div class="a4-page">
+    <div>
+      <!-- Header Compact Page 2 -->
+      <header class="doc-header">
+        <div class="header-top">
+          <span class="org-tag">BSV BIM REBAR DETAILING &amp; BAR BENDING SCHEDULE • STRUCTURAL DIVISION</span>
+          <span class="doc-badge">STANDARD: BSV-REBAR-SHOP-SUMMARY • A4 COMPACT</span>
+        </div>
+        <div class="header-title-box">
+          <h1>QUY CÁCH TRIỂN KHAI SHOP DRAWING CỐT THÉP &amp; THỐNG KÊ BBS (BẢN TÓM TẮT)</h1>
+          <div class="subtitle">VÁCH, DẦM TẦNG, SÀN, CẦU THANG, RAMP, PIT, DOCK &amp; QUẢN TRỊ HAO HỤT THÉP THI CÔNG</div>
+        </div>
+      </header>
+
+      <!-- Meta Ribbon Page 2 -->
+      <div class="meta-bar">
+        <div class="meta-bar-item"><strong>Cấu kiện kế thừa:</strong> Dầm (như Đà Kiềng), Sàn (như Nền)</div>
+        <div class="meta-bar-item"><strong>Cầu thang &amp; Ramp:</strong> Structure Rebar theo độ dốc</div>
+        <div class="meta-bar-item"><strong>Quản trị BBS:</strong> Đoạn cắt chẵn cây 11.7m, giảm nối đầu mẩu</div>
+        <div class="meta-bar-item"><strong>Trang:</strong> 2 / 2 (Phần Thân, Thang, Ramp &amp; BBS)</div>
+      </div>
+
+      <!-- Khung 4: Ma Trận Cấu Kiện Thực Chiến 06 -> 14 -->
+      <div class="section-title">
+        <span>📐 MA TRẬN QUY CÁCH SHOP DRAWING CẤU KIỆN (06. VÁCH ➔ 14. CẤU KIỆN PHỤ)</span>
+        <span class="badge">PHẦN THÂN NGANG, THANG &amp; HOÀN THIỆN</span>
+      </div>
+      <table class="compact-table">
+        <thead>
+          <tr>
+            <th class="code-cell">Mã Cấu Kiện</th>
+            <th class="name-cell">Cấu Kiện</th>
+            <th style="width: 25%;">Quy Cách Đặt Tên &amp; Partition</th>
+            <th style="width: 45%;">Quy Cách Dựng Cốt Thép, Triển Khai Mặt Cắt &amp; Bảng Uốn Thép BBS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code-cell">06.Vach</td>
+            <td class="name-cell">Vách Thang Máy &amp; Vách Cứng</td>
+            <td>
+              <span class="param-pill">Partition</span> : <code>SW1_T1-T2</code><br>
+              <span class="param-pill">BSV_PhanLoai</span> : <code>06.ThepVach_ThangMay</code><br>
+              <span class="template-pill">KP_ShearWall</span>
+            </td>
+            <td>
+              • <strong>BimSpeed Vách:</strong> Thép phương đứng 2 lớp, thép đai khê (S-hook) liên kết chống phình; Thép gia cường bo góc vách chữ L, chữ T.<br>
+              • <strong>Mặt cắt &amp; BBS:</strong> Mặt cắt đứng toàn chiều cao tầng, mặt cắt ngang phân bổ đai; Bảng <code>THỐNG KÊ THÉP VÁCH</code>; Key Plan <code>[SHOP THÉP VÁCH]</code>.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">07.Dam</td>
+            <td class="name-cell">Dầm Khung Tầng &amp; Mái</td>
+            <td>
+              <span class="param-pill">Partition</span> : <code>B_T2_Truc1-5</code><br>
+              <span class="param-pill">BSV_PhanLoai</span> : <code>07.ThepDam_T2</code><br>
+              <span class="amber-pill">Kế thừa 03. Đà Kiềng</span>
+            </td>
+            <td>
+              • Áp dụng 100% quy cách BimSpeed như Đà Kiềng: Thép lớp trên gối, lớp dưới bụng, đai dầm mau $a100$ đầu dầm, đai thưa $a200$ giữa nhịp.<br>
+              • Thép gia cường dầm phụ gác lên dầm chính (thép đai treo / thép vai bò tăng cường chống cắt). Đường dóng cắt thép $L/4$ và $L/6$.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">08.San</td>
+            <td class="name-cell">Sàn Tầng, Mái &amp; Ban Công</td>
+            <td>
+              <span class="param-pill">Partition</span> : <code>Slab_T2_Zone1</code><br>
+              <span class="param-pill">BSV_PhanLoai</span> : <code>08.ThepSan_T2</code><br>
+              <span class="amber-pill">Kế thừa 04. Nền</span>
+            </td>
+            <td>
+              • Thép sàn 2 lớp (lớp dưới $X, Y$ rải trước; lớp trên gác lên thép chân kê); Thép mũ/tăng cường gối dầm; Thép bo viền chống nứt lỗ mở hộp kỹ thuật MEP.<br>
+              • Bảng thống kê thép sàn tầng; Key Plan gán cao độ; Tag thép rải đều theo mảng sàn.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">09.CauThang</td>
+            <td class="name-cell">Cầu Thang Thoát Hiểm</td>
+            <td>
+              <span class="param-pill">Partition</span> : <code>ST1_Ve1-Ve2</code><br>
+              <span class="param-pill">BSV_PhanLoai</span> : <code>09.ThepCauThang_ST1</code><br>
+              <span class="template-pill">KP_Stair</span>
+            </td>
+            <td>
+              • <strong>Structure Rebar:</strong> Thép bản thang 2 lớp uốn theo góc nghiêng cối thang; Thép bẻ mỏ neo ngàm dầm chiếu nghỉ và dầm chân thang.<br>
+              • <strong>Thép bậc &amp; BBS:</strong> Thép đai tam giác gia cường gờ bậc; Bảng <code>THỐNG KÊ THÉP CẦU THANG</code> (hình dạng thanh chữ Z, chữ U); Key Plan.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">10.TamCap</td>
+            <td class="name-cell">Bậc Tam Cấp Sảnh</td>
+            <td>
+              <span class="param-pill">Partition</span> : <code>TC1_SanhChinh</code><br>
+              <span class="amber-pill">Kế thừa 09. Cầu Thang</span>
+            </td>
+            <td>
+              • Dựng Structure Rebar: Lưới thép nền tam cấp, thép đai bó vách đà tam cấp, thép ngàm vào đà kiềng sảnh; Bảng BBS uốn thép chi tiết.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">11.Ramp</td>
+            <td class="name-cell">Ramp Dốc Xe Tải</td>
+            <td>
+              <span class="param-pill">Partition</span> : <code>Ramp_Container</code><br>
+              <span class="param-pill">BSV_PhanLoai</span> : <code>11.ThepRamp_Kho</code><br>
+              <span class="template-pill">KP_Ramp</span>
+            </td>
+            <td>
+              • <strong>Structure Rebar:</strong> Thép bản dốc ramp xe tải 2 lớp $\ge \varnothing 12$; Thép ngàm dầm ramp; Thép bo rãnh cắt nước chống trượt.<br>
+              • Mặt cắt dọc độ dốc ramp, mặt cắt ngang vách bảo vệ ramp; Bảng <code>THỐNG KÊ THÉP RAMP</code>.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">12.Pit</td>
+            <td class="name-cell">Hố Pit Thang Máy</td>
+            <td>
+              <span class="param-pill">Partition</span> : <code>Pit_ThangMay</code><br>
+              <span class="param-pill">BSV_PhanLoai</span> : <code>12.ThepPit_TM</code>
+            </td>
+            <td>
+              • Thép bản đáy hố pit đan 2 lớp liên kết cọc/đài móng; Thép vách hố pit bẻ mỏ chờ dầm nền; Thép neo đế giảm chấn thang máy.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">13.Dock</td>
+            <td class="name-cell">Sàn Dock Leveler</td>
+            <td>
+              <span class="param-pill">Partition</span> : <code>Dock_Leveler_01</code><br>
+              <span class="param-pill">BSV_PhanLoai</span> : <code>13.ThepDock_XuatHang</code>
+            </td>
+            <td>
+              • Thép gia cường hốc sàn dock container; Thép râu hàn bản mã viền góc $V100\times 100\times 10$ chịu xung lực va chạm đuôi xe tải; Bảng BBS.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">14.CauKienPhu</td>
+            <td class="name-cell">Mương Cáp &amp; Bệ Máy</td>
+            <td>
+              <span class="param-pill">Partition</span> : <code>Muong_Dien / BeMay_Chiller</code><br>
+              <span class="param-pill">BSV_PhanLoai</span> : <code>14.ThepPhu</code>
+            </td>
+            <td>
+              • <strong>Mương kỹ thuật:</strong> Thép đai chữ U thành mương, thép tấm đan đậy mương; Lưới thép chống nứt.<br>
+              • <strong>Bệ máy Chiller / AHU:</strong> Lưới thép đan 2 lớp bệ máy, thép râu cấy bulong móng định vị máy; Bảng BBS độc lập.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Khung 5: 8 Cột Chuẩn Bảng Thống Kê Uốn Thép (BBS) -->
+      <div class="section-title">
+        <span>📊 8 CỘT CHUẨN BẢNG THỐNG KÊ GIA CÔNG UỐN THÉP NHÀ MÁY (BBS SCHEDULE)</span>
+        <span class="badge">FABRICATION SCHEDULE</span>
+      </div>
+      <div class="bbs-grid">
+        <div class="bbs-card">
+          <strong>1. SỐ HIỆU (Partition)</strong>
+          Số hiệu thanh thép (1, 2, 3...) gắn theo cấu kiện.
+        </div>
+        <div class="bbs-card">
+          <strong>2. HÌNH DẠNG (Bending Detail)</strong>
+          Hình học thanh duỗi thẳng, bẻ mỏ, chữ U, đai C.
+        </div>
+        <div class="bbs-card">
+          <strong>3. ĐƯỜNG KÍNH (Bar Diameter)</strong>
+          Quy cách $\varnothing 6, \varnothing 10, \varnothing 16, \varnothing 25, \varnothing 32...$
+        </div>
+        <div class="bbs-card">
+          <strong>4. SỐ LƯỢNG (Quantities)</strong>
+          Số thanh thép trên 1 cấu kiện đơn lẻ.
+        </div>
+        <div class="bbs-card">
+          <strong>5. SỐ CẤU KIỆN (BSV_SoCauKien)</strong>
+          Số lượng móng/cột/dầm tương đương nhân lên.
+        </div>
+        <div class="bbs-card">
+          <strong>6. CHIỀU DÀI 1 THANH (mm)</strong>
+          Tổng chiều dài thực tế đã cộng đoạn bẻ mỏ.
+        </div>
+        <div class="bbs-card">
+          <strong>7. TỔNG CHIỀU DÀI (m)</strong>
+          $L_{tổng} = SL \times Số\_cấu\_kiện \times L_{thanh} / 1000$.
+        </div>
+        <div class="bbs-card">
+          <strong>8. TỔNG TRỌNG LƯỢNG (Kg)</strong>
+          $M_{tổng} = L_{tổng} \times Tỷ\_trọng\_thép$ ($kg/m$).
+        </div>
+      </div>
+
+      <!-- Khung 6: Quy Tắc Quản Trị Hao Hụt Thép & Ra Sắt Thi Công Hiện Trường -->
+      <div class="rule-card" style="border-left-color: #059669; background: #f0fdf4; margin-bottom: 5px;">
+        <h4 style="color: #047857;">💡 QUY TẮC CẮT THÉP CHẴN CÂY 11.7M &amp; KIỂM SOÁT HAO HỤT THÉP (CUTTING OPTIMIZATION)</h4>
+        <div style="font-size: 7.1pt; color: #166534; line-height: 1.4;">
+          1. <strong>Tổ hợp chẵn cây tiêu chuẩn 11.7m:</strong> Khi triển khai bản vẽ Shop dầm và sàn, kỹ sư phải phối hợp các đoạn thanh (Ví dụ: $7.8\text{m} + 3.9\text{m} = 11.7\text{m}$ hoặc $5.85\text{m} \times 2 = 11.7\text{m}$) để giảm tỷ lệ thép vụn đầu mẩu xuống $< 1.5\%$.<br>
+          2. <strong>Bảo toàn vùng nối thép:</strong> Luôn tuân thủ tuyệt đối vùng nối $L/4$ bụng (thép trên) và $L/6$ gối (thép dưới), không bao giờ nối thép tại vị trí chịu uốn lớn nhất.<br>
+          3. <strong>Kiểm toán số học:</strong> Đối chiếu tổng trọng lượng thép trên bảng BBS Revit với định mức dự toán BOQ để phát hiện chênh lệch trước khi ký duyệt gia công.
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Page 2 -->
+    <footer class="page-footer">
+      <div>Ban Hành: BP. Shop Drawing Rebar BSV • Cẩm Nang Triển Khai Bản Vẽ &amp; BBS Tiêu Chuẩn</div>
+      <div>Trang 2 / 2 • Phần Thân Ngang, Thang, Ramp, 8 Cột BBS &amp; Tối Ưu Cắt Thép • Hết</div>
+    </footer>
+  </div>
+
+</body>
+</html>
