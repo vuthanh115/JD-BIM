@@ -427,7 +427,7 @@
                 <td><strong>Activity ID</strong> (<code>TASK.task_code</code>)</td>
               </tr>
               <tr>
-                <td><code>BIM_Zone_Area</code> / <code>BSV_PhanKhu</code></td>
+                <td><code>BIM_Zone_Area</code> / <code>BIM_Zone_Area</code></td>
                 <td>Text • Text (Instance)</td>
                 <td>Phân khu xưởng / Zone mặt bằng (VD: <code>Zone 1</code>, <code>Xuong A</code>, <code>VanPhong</code>).</td>
                 <td><strong>Activity Code: Zone / Facility</strong> (Lọc theo khu vực)</td>
@@ -479,7 +479,7 @@
                 <td>Định tuyến WBS (<code>WBS-KC.02.Mong</code>) &amp; tính <strong>Duration</strong> task Đổ bê tông.</td>
               </tr>
               <tr>
-                <td><code>BSV_PhanLoai</code> / <code>BIM_Formwork_Area</code></td>
+                <td><code>BIM_PhanLoai</code> / <code>BIM_Formwork_Area</code></td>
                 <td><code>VK_[Tên cấu kiện]</code><br>VD: <code>VK_Mong</code>, <code>VK_Cot</code>, <code>VK_Dam</code>, <code>VK_San</code></td>
                 <td>Tool tự động pick đáy &amp; mặt bên, gán biến ván khuôn $m^2$ theo BoQ.</td>
                 <td>Ánh xạ vào Activity: <strong>Lắp dựng ván khuôn</strong> (Duration tính từ $m^2$ ván).</td>
@@ -497,13 +497,13 @@
                 <td>Quyết định thời gian <strong>Lag Time</strong> (ngày chờ ninh kết) trước khi tháo ván khuôn.</td>
               </tr>
               <tr>
-                <td><code>BSV_PhanLoai</code> (Diện tích nền)</td>
+                <td><code>BIM_PhanLoai</code> (Diện tích nền)</td>
                 <td><code>DT_[Hạng mục]</code><br>VD: <code>DT_Nen</code> (Diện tích đầm chặt, nylon)</td>
                 <td>Tính diện tích trải bạt nylon lót, đầm chặt đất K98, đệm đá mi nền xưởng.</td>
                 <td>Ánh xạ vào Activity: <strong>Thi công đệm lót &amp; nền</strong> (<code>WBS-KC.04.Nen</code>).</td>
               </tr>
               <tr>
-                <td><code>BSV_EpAm</code> (Cọc ly tâm)</td>
+                <td><code>BIM_EpAm</code> (Cọc ly tâm)</td>
                 <td>Tool tự tính: <code>Cos tự nhiên - Cos đầu cọc</code></td>
                 <td>Tính chiều dài ép âm và số mối nối cọc ly tâm D300-D500 theo cao độ đáy đài.</td>
                 <td>Ánh xạ vào Activity: <strong>Ép cọc &amp; đệm đầu cọc</strong> (<code>WBS-KC.01.Coc</code>).</td>
@@ -524,7 +524,7 @@
     <footer class="page-foot">
       <span>Kaka BIM Suite • Khung Chuẩn Hóa Tham Số Đa Bộ Môn ⟷ Primavera P6 4D/5D</span>
       <span>Trang 1 / 3 • Sơ Đồ Pipeline, Master Parameters &amp; Kết Cấu</span>
-      <span>BSV Engineering Standard • 2026</span>
+      <span>BIM Engineering Standard • 2026</span>
     </footer>
   </div>
 
@@ -567,13 +567,13 @@
                 <td>Sinh mã <strong>Activity Code</strong> và phân bổ năng suất thợ (xây tường bao trước, ngăn sau).</td>
               </tr>
               <tr>
-                <td><code>BSV_HTKC</code><br>(Hoàn thiện kết cấu)</td>
+                <td><code>BIM_HTKC</code><br>(Hoàn thiện kết cấu)</td>
                 <td>Quy tắc viết liền in hoa: <code>TratTrongSonTrong_LTBT</code>, <code>TratNgoai</code>, <code>KHT</code></td>
                 <td>Gán công tác trát và sơn bám theo cấu kiện Host (cột, dầm, vách, lanh tô).</td>
                 <td>Tạo liên kết găng <strong>FS</strong> giữa Kết cấu xong ➔ Trát kết cấu ➔ Hoàn thiện sơn trên P6.</td>
               </tr>
               <tr>
-                <td><code>BSV_TratFull</code> / <code>BSV_Trat1m</code></td>
+                <td><code>BIM_TratFull</code> / <code>BIM_Trat1m</code></td>
                 <td>Điền <code>1</code> hoặc <code>0</code> theo vị trí cửa (trên tường gạch hay kết cấu thép)</td>
                 <td>Tự động tính diện tích trát cạnh cửa, trát đỉnh tường và sill cửa đi (chạy tool).</td>
                 <td>Gán thời lượng cho task <strong>Trát hoàn thiện cạnh cửa</strong> trước khi lắp khung bao cửa.</td>
@@ -631,13 +631,13 @@
                 <td>Phân luồng tự động vào 4 nhóm WBS Cơ điện: <code>WBS-MEP.01.Dien</code>, <code>02.Nuoc</code>, <code>03.HVAC</code>, <code>04.PCCC</code>.</td>
               </tr>
               <tr>
-                <td><code>BSV_MEP_Phase</code> / <code>BIM_MEP_Phase_Type</code></td>
+                <td><code>BIM_MEP_Phase_Type</code> / <code>BIM_MEP_Phase_Type</code></td>
                 <td><code>AmSan</code> (Âm sàn) • <code>Riser</code> (Trục đứng)<br><code>AmTran</code> (Âm trần) • <code>ThietBi</code> (Lắp TB)</td>
                 <td>Xác định giai đoạn công nghệ thi công, tránh chồng chéo với Kết cấu và Kiến trúc.</td>
                 <td><strong>Tham số cốt lõi tạo chuỗi logic CPM:</strong> Kết nối điểm găng với bê tông sàn, tường xây và trần.</td>
               </tr>
               <tr>
-                <td><code>BSV_Sleeve_Status</code> / <code>BIM_Sleeve_Required</code></td>
+                <td><code>BIM_Sleeve_Required</code> / <code>BIM_Sleeve_Required</code></td>
                 <td><code>Sleeve_Dam</code>, <code>Sleeve_San</code>, <code>Sleeve_Vach</code> (Yes/No)</td>
                 <td>Ống chờ kỹ thuật xuyên qua cấu kiện bê tông chịu lực theo bản vẽ SOD.</td>
                 <td>Tạo quan hệ găng: <strong>MEP đặt Sleeve (FS) ➔ Kết cấu đổ bê tông dầm sàn</strong> (Tránh đục phá).</td>
@@ -649,7 +649,7 @@
                 <td>Tính thời lượng lắp đặt ống theo định mức mét dài/ngày công trên P6.</td>
               </tr>
               <tr>
-                <td><code>BSV_Equipment_Tag</code></td>
+                <td><code>BIM_Equipment_Tag</code></td>
                 <td>Mã thiết bị: <code>MSB-01</code>, <code>PUMP-FP-01</code>, <code>FCU-L1-02</code>, <code>CHILLER-01</code></td>
                 <td>Định danh các thiết bị cơ điện có giá trị lớn và thời gian đặt hàng dài (Long Lead Items).</td>
                 <td>Tạo các <strong>Milestone</strong> bàn giao thiết bị và công tác Chạy thử, Nghiệm thu đóng điện (T&amp;C) trên P6.</td>
@@ -676,7 +676,7 @@
             </thead>
             <tbody>
               <tr>
-                <td><code>Comments</code> / <code>BSV_PhanLoai</code> / <code>System Type</code></td>
+                <td><code>Comments</code> / <code>BIM_PhanLoai</code> / <code>System Type</code></td>
                 <td>Bóc tách nhóm cấu kiện &amp; phân luồng BoQ theo 3 bộ môn</td>
                 <td><strong>PROJWBS.wbs_short_name</strong> (Cây 29 phân nhánh WBS)</td>
               </tr>
@@ -686,12 +686,12 @@
                 <td><strong>TASK.target_drtn_hr_cnt</strong> (Thời lượng Task Duration)</td>
               </tr>
               <tr>
-                <td><code>BSV_HTKC</code> / <code>BSV_MEP_Phase</code> / <code>BSV_Sleeve_Status</code></td>
+                <td><code>BIM_HTKC</code> / <code>BIM_MEP_Phase_Type</code> / <code>BIM_Sleeve_Required</code></td>
                 <td>Xác định thứ tự chuỗi công nghệ liên ngành bắt buộc</td>
                 <td><strong>TASKPRED.pred_type = 'PR_FS'</strong> (114 mối nối CPM)</td>
               </tr>
               <tr>
-                <td><code>BSV_PhanKhu</code> / <code>BIM_Zone_Area</code></td>
+                <td><code>BIM_Zone_Area</code> / <code>BIM_Zone_Area</code></td>
                 <td>Nhóm khu vực thi công mặt bằng (Xưởng A, B, Văn phòng)</td>
                 <td><strong>ACTVCODE</strong> (Mã phân nhóm Zone / Phân đoạn)</td>
               </tr>
@@ -710,7 +710,7 @@
     <footer class="page-foot">
       <span>Kaka BIM Suite • Khung Chuẩn Hóa Tham Số Đa Bộ Môn ⟷ Primavera P6 4D/5D</span>
       <span>Trang 2 / 3 • Tham Số Kiến Trúc, Cơ Điện MEP &amp; Ma Trận ETL</span>
-      <span>BSV Engineering Standard • 2026</span>
+      <span>BIM Engineering Standard • 2026</span>
     </footer>
   </div>
 
@@ -818,9 +818,9 @@
             <strong style="color: #b45309;">Q: Ban Giám đốc hỏi: "Em quản lý và kiểm soát chất lượng tham số (Parameter) trong mô hình BIM như thế nào để đảm bảo không bị sai lệch khi đẩy sang tiến độ P6?"</strong><br>
             <span style="color: #0f172a;">
               <strong>Trả lời:</strong> "Dạ thưa Giám đốc, toàn bộ hệ thống parameter của em được chuẩn hóa thành <strong>Khung quy chuẩn Mindmap tác nghiệp đồng nhất cho cả 3 bộ môn</strong>:<br>
-              <strong>1) Ở bộ môn Kết cấu:</strong> Dùng cặp biến <code>Comments</code> (bê tông) và <code>BSV_PhanLoai</code> (ván khuôn Kaka) đi kèm thuật toán join cấu kiện ưu tiên (Sàn &gt; Móng &gt; Cột &gt; Dầm) để khối lượng không bị trùng lặp.<br>
-              <strong>2) Ở bộ môn Kiến trúc:</strong> Áp dụng quy tắc gắn biến thống nhất theo BoQ (<code>BSV_PhanKhu</code>, <code>BSV_XuongChinh</code>, và tham biến đặc thù <code>BSV_HTKC</code> để gắn liền công tác trát/sơn bám theo cấu kiện Host kết cấu).<br>
-              <strong>3) Ở bộ môn Cơ điện MEP:</strong> Kiểm soát bằng tham biến giai đoạn <code>BSV_MEP_Phase</code> và kiểm tra đặt ống chờ <code>BSV_Sleeve_Status</code> để tự động khóa các mốc găng (chẳng hạn: MEP âm sàn xong mới được đổ bê tông kết cấu).<br>
+              <strong>1) Ở bộ môn Kết cấu:</strong> Dùng cặp biến <code>Comments</code> (bê tông) và <code>BIM_PhanLoai</code> (ván khuôn Kaka) đi kèm thuật toán join cấu kiện ưu tiên (Sàn &gt; Móng &gt; Cột &gt; Dầm) để khối lượng không bị trùng lặp.<br>
+              <strong>2) Ở bộ môn Kiến trúc:</strong> Áp dụng quy tắc gắn biến thống nhất theo BoQ (<code>BIM_Zone_Area</code>, <code>BIM_XuongChinh</code>, và tham biến đặc thù <code>BIM_HTKC</code> để gắn liền công tác trát/sơn bám theo cấu kiện Host kết cấu).<br>
+              <strong>3) Ở bộ môn Cơ điện MEP:</strong> Kiểm soát bằng tham biến giai đoạn <code>BIM_MEP_Phase_Type</code> và kiểm tra đặt ống chờ <code>BIM_Sleeve_Required</code> để tự động khóa các mốc găng (chẳng hạn: MEP âm sàn xong mới được đổ bê tông kết cấu).<br>
               Nhờ sự đồng bộ tham số từ gốc này, khi chạy qua Add-in, <strong>100% dữ liệu tự động định tuyến vào đúng WBS và tự tính toán mạng tiến độ P6</strong> mà không phụ thuộc vào bất kỳ thao tác thủ công nào."
             </span>
           </div>
@@ -851,7 +851,7 @@
     <footer class="page-foot">
       <span>Kaka BIM Suite • Khung Chuẩn Hóa Tham Số Đa Bộ Môn ⟷ Primavera P6 4D/5D</span>
       <span>Trang 3 / 3 • Mạng CPM Liên Ngành, P6 Metrics, ROI &amp; Kịch Bản Phỏng Vấn</span>
-      <span>BSV Engineering Standard • 2026</span>
+      <span>BIM Engineering Standard • 2026</span>
     </footer>
   </div>
 

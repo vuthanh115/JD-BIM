@@ -557,7 +557,7 @@
     <div class="page">
       <div class="page-header">
         <span class="brand">BIM MANAGER MASTER EXECUTIVE DOSSIER</span>
-        <span>HỒ SƠ NĂNG LỰC THỰC CHIẾN (GLC BIM CAPABILITY)</span>
+        <span>HỒ SƠ NĂNG LỰC THỰC CHIẾN (TỔNG THẦU GLC TRACK RECORD)</span>
         <span>TRANG 2 / 7</span>
       </div>
 
@@ -565,7 +565,7 @@
         <span>🏆 Năng Lực Triển Khai Thực Chiến Cấp Tổng Thầu (GLC) & Đại Dự Án</span>
       </div>
       <div class="section-subtitle">
-        Minh chứng năng lực quản lý mô hình BIM quy mô khủng từ tài liệu năng lực GLC (1.500.000+ m² sàn công nghiệp)
+        Minh chứng năng lực chủ trì quản lý mô hình BIM 1.500.000+ m² sàn công nghiệp thực tế tại Tổng thầu Golden Lotus Construction (GLC)
       </div>
 
       <!-- BẢNG 4 ĐẠI DỰ ÁN TIÊU BIỂU -->
@@ -640,7 +640,7 @@
       </div>
 
       <div class="page-footer">
-        <span>Hồ sơ Năng lực Thực chiến GLC • 1.5M+ m² sàn công nghiệp</span>
+        <span>Hồ sơ Năng lực Thực chiến Tổng thầu GLC • 1.5M+ m² sàn công nghiệp</span>
         <span>BIM Manager Executive Portfolio • Căn chỉnh in chuẩn A4</span>
         <span>Trang 2 / 7</span>
       </div>
@@ -837,7 +837,7 @@
             <span class="badge badge-green">QA/QC Protocol</span>
           </div>
           <ul class="check-list">
-            <li><strong>Bước 1 - Gán biến:</strong> Gán đủ bộ 3 biến <code>Comments</code>, <code>BSV_PhanLoai</code>, <code>BSV_LoTi</code>.</li>
+            <li><strong>Bước 1 - Gán biến:</strong> Gán đủ bộ 3 biến <code>Comments</code>, <code>BIM_PhanLoai</code>, <code>BIM_LoTi</code>.</li>
             <li><strong>Bước 2 - Auto Join:</strong> Chạy công cụ tự động Join hình học theo Core Join Rule.</li>
             <li><strong>Bước 3 - Ván khuôn:</strong> Bóc tách ván khuôn theo bề mặt tiếp xúc thực tế, trừ lỗ mở &gt; 1m².</li>
             <li><strong>Bước 4 - Check trùng:</strong> Chạy add-in kiểm tra va chạm cấu kiện trùng lặp (Duplicate Elements).</li>
@@ -849,7 +849,7 @@
 
         <div class="box box-gray">
           <div class="box-title">
-            <span>⚙️ Cấu Hình XML Tự Động Nạp Add-in Revit (BSV_QuyTacJoin.xml)</span>
+            <span>⚙️ Cấu Hình XML Tự Động Nạp Add-in Revit (BIM_QuyTacJoin.xml)</span>
             <span class="badge badge-navy">Scripting</span>
           </div>
           <div class="code-box">&lt;!-- File cấu hình nạp trực tiếp vào tool Join tự động --&gt;
@@ -941,19 +941,19 @@
               <td><strong>Móng (Footings)</strong></td>
               <td>Thép đài móng uốn móc neo 30d; thép giằng móng chạy suốt, so le mối nối 50%.</td>
               <td>Lớp bảo vệ Lớp bảo vệ C<sub>nom</sub> = 50mm (móng đất); C<sub>nom</sub> = 30mm (dầm móng).</td>
-              <td><code>BSV_02.1_Detail_Foundation</code>, tỷ lệ 1:25; tag thép hiển thị Số hiệu / Đường kính / Khoảng cách.</td>
+              <td><code>BIM_02.1_Detail_Foundation</code>, tỷ lệ 1:25; tag thép hiển thị Số hiệu / Đường kính / Khoảng cách.</td>
             </tr>
             <tr>
               <td><strong>Cột (Columns)</strong></td>
               <td>Thép chủ bố trí đối xứng, nối tại 1/2 chiều cao tầng; đai dày s = 100mm tại chân & đầu cột.</td>
               <td>Chiều dài đoạn nối buộc L<sub>d</sub> = 40d; so le tiết diện nối không quá 50% thanh thép.</td>
-              <td><code>BSV_02.2_Detail_Column</code>, mặt cắt ngang 1:20; chi tiết gióng đai bẻ móc 135°.</td>
+              <td><code>BIM_02.2_Detail_Column</code>, mặt cắt ngang 1:20; chi tiết gióng đai bẻ móc 135°.</td>
             </tr>
             <tr>
               <td><strong>Dầm & Sàn (Beams/Slabs)</strong></td>
               <td>Thép gối dầm nối tại giữa nhịp; thép bụng nối tại gối; thép sàn sole mối nối, kê con kê bê tông mác cao.</td>
               <td>C<sub>nom</sub> = 25mm (dầm); C<sub>nom</sub> = 15mm (sàn); neo thép vào cột L<sub>neo</sub> ≥ 35d.</td>
-              <td><code>BSV_02.3_Detail_Beam</code>, triển khai mặt cắt dọc dầm 1:25 kèm bảng uốn BBS chi tiết.</td>
+              <td><code>BIM_02.3_Detail_Beam</code>, triển khai mặt cắt dọc dầm 1:25 kèm bảng uốn BBS chi tiết.</td>
             </tr>
           </tbody>
         </table>
@@ -968,7 +968,7 @@
           </div>
           <ul class="check-list">
             <li><strong>Bước 1 - Khởi tạo mô hình:</strong> Dùng BimSpeed Rebar nhập đúng lớp bê tông bảo vệ C<sub>nom</sub> chuẩn (Móng 50mm, Cột 30mm, Dầm 25mm, Sàn 15mm).</li>
-            <li><strong>Bước 2 - Phân vùng Partition:</strong> Gán biến <code>Partition</code> theo cấu kiện (F1, C1, B1, S1...) và biến phân loại dự toán <code>BSV_PhanLoai</code>.</li>
+            <li><strong>Bước 2 - Phân vùng Partition:</strong> Gán biến <code>Partition</code> theo cấu kiện (F1, C1, B1, S1...) và biến phân loại dự toán <code>BIM_PhanLoai</code>.</li>
             <li><strong>Bước 3 - View Templates &amp; Range:</strong> Đóng gói hệ thống View Templates tỷ lệ 1:20 / 1:25, thiết lập View Range và Filter màu đường kính thép.</li>
             <li><strong>Bước 4 - Tag 2D &amp; Dimension:</strong> Bố trí Tag thép 2D Rebar Tag tắt leader, Dim chuỗi khoảng rải đai mau/thưa chính xác.</li>
             <li><strong>Bước 5 - Phối hợp nút giao 3D:</strong> Kiểm tra va chạm giao thoa giữa thép cột - dầm - móng, xử lý so le cao độ trước khi phát hành thi công.</li>
@@ -985,10 +985,10 @@
               <tr><th>Cấu Kiện</th><th>View Template Mặt Cắt</th><th>View Template Key Plan</th><th>Quy Chuẩn Tag &amp; Dim</th></tr>
             </thead>
             <tbody>
-              <tr><td><strong>Móng (Fou)</strong></td><td><code>BSV_02.1_Detail_Fou</code></td><td><code>BSV_02_KP_Fou</code></td><td>Tag MB tắt leader; Tag MC Opendot; Cao độ đáy đài.</td></tr>
-              <tr><td><strong>Đà Kiềng (GB)</strong></td><td><code>BSV_03.2_Detail_GB</code></td><td><code>BSV_03.1_KP_GB</code></td><td>Tag uốn dầm; Dim khoảng rải đai; Nét cắt Breakline.</td></tr>
-              <tr><td><strong>Cột (Col)</strong></td><td><code>BSV_05.2_Detail_Col</code></td><td><code>BSV_05.1_KP_Col</code></td><td>Tag thép chủ, đai chính/phụ; Mặt cắt ngang tỷ lệ 1:20.</td></tr>
-              <tr><td><strong>Dầm &amp; Sàn</strong></td><td><code>BSV_07.2_Detail_Beam</code></td><td><code>BSV_08_KP_Slab</code></td><td>Tag Multi-Rebar thép 2 lớp trên/dưới; Thép mũ gối.</td></tr>
+              <tr><td><strong>Móng (Fou)</strong></td><td><code>BIM_02.1_Detail_Fou</code></td><td><code>BIM_02_KP_Fou</code></td><td>Tag MB tắt leader; Tag MC Opendot; Cao độ đáy đài.</td></tr>
+              <tr><td><strong>Đà Kiềng (GB)</strong></td><td><code>BIM_03.2_Detail_GB</code></td><td><code>BIM_03.1_KP_GB</code></td><td>Tag uốn dầm; Dim khoảng rải đai; Nét cắt Breakline.</td></tr>
+              <tr><td><strong>Cột (Col)</strong></td><td><code>BIM_05.2_Detail_Col</code></td><td><code>BIM_05.1_KP_Col</code></td><td>Tag thép chủ, đai chính/phụ; Mặt cắt ngang tỷ lệ 1:20.</td></tr>
+              <tr><td><strong>Dầm &amp; Sàn</strong></td><td><code>BIM_07.2_Detail_Beam</code></td><td><code>BIM_08_KP_Slab</code></td><td>Tag Multi-Rebar thép 2 lớp trên/dưới; Thép mũ gối.</td></tr>
             </tbody>
           </table>
         </div>
@@ -1197,31 +1197,31 @@
           <tbody>
             <tr>
               <td><code>BIM_WBS_Code</code></td>
-              <td><code>BSV_PhanLoai</code></td>
+              <td><code>BIM_PhanLoai</code></td>
               <td><code>WBS Code</code> / <code>Task_Code</code></td>
               <td>Định danh phân cấp công việc duy nhất (VD: <code>WBS-KC-L1-COL</code>, <code>WBS-MEP-L1-SLV</code>).</td>
             </tr>
             <tr>
               <td><code>BIM_Zone_Area</code></td>
-              <td><code>BSV_PhanKhu</code></td>
+              <td><code>BIM_Zone_Area</code></td>
               <td><code>Activity Code: Zone</code></td>
               <td>Lọc tiến độ thi công cuốn chiếu theo phân khu (Zone A, Zone B, Block 1).</td>
             </tr>
             <tr>
               <td><code>BIM_MEP_Phase_Type</code></td>
-              <td><code>BSV_MEP_Phase</code></td>
+              <td><code>BIM_MEP_Phase_Type</code></td>
               <td><code>Activity Code: Phase</code></td>
               <td>Khóa logic 6 bước: Sleeve ➔ Riser ➔ Main ➔ Branch ➔ Equipment ➔ T&C.</td>
             </tr>
             <tr>
               <td><code>BIM_Sleeve_Required</code></td>
-              <td><code>BSV_Sleeve_Status</code></td>
+              <td><code>BIM_Sleeve_Required</code></td>
               <td><code>Predecessor Logic (FS)</code></td>
               <td>Mối liên kết bắt buộc: <em>Hoàn thành Sleeve MEP mới được đổ bê tông kết cấu</em>.</td>
             </tr>
             <tr>
               <td><code>BIM_Concrete_Grade</code></td>
-              <td><code>BSV_MacBeTong</code></td>
+              <td><code>BIM_Concrete_Grade</code></td>
               <td><code>Resource / Cost Account</code></td>
               <td>Gán mã chi phí mác bê tông (M250, M300, M350) bóc tách chi phí tích hợp 5D.</td>
             </tr>

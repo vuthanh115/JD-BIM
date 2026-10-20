@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bộ Đề Mục Quy Cách Tính Khối Lượng Bộ Môn Kết Cấu - BSV Standard (In A4)</title>
+  <title>Bộ Đề Mục Quy Cách Tính Khối Lượng Bộ Môn Kết Cấu - BIM Standard (In A4)</title>
   <style>
     /* ==========================================================================
        A4 EXECUTIVE PRINT STYLESHEET - BỘ MÔN KẾT CẤU
@@ -549,11 +549,11 @@
           <td class="meta-label">Quy Ước Ưu Tiên:</td>
           <td class="meta-val"><strong>Sàn &gt; Móng &gt; Cột &gt; Dầm &gt; Vách &gt; Cầu Thang</strong></td>
           <td class="meta-label">Bộ Tham Số Chuẩn:</td>
-          <td class="meta-val">Shared Parameters (<code>Comments</code>, <code>BSV_PhanLoai</code>, <code>BSV_LoTi</code>)</td>
+          <td class="meta-val">Shared Parameters (<code>Comments</code>, <code>BIM_PhanLoai</code>, <code>BIM_LoTi</code>)</td>
         </tr>
         <tr>
           <td class="meta-label">Công Cụ Tự Động:</td>
-          <td class="meta-val">BimSpeed, Atool Join, BSV_AutoFoundation, TramLoTi</td>
+          <td class="meta-val">BimSpeed, Atool Join, BIM_AutoFoundation, TramLoTi</td>
           <td class="meta-label">Mục Tiêu Hồ Sơ:</td>
           <td class="meta-val">Xuất BOQ Dự Toán, Hồ Sơ Thầu, Quản Lý Tiến Độ Primavera P6</td>
         </tr>
@@ -623,7 +623,7 @@
 <div class="node-title">Khối lượng ván khuôn<br>(Chạy tool bimspeed cho tòan bộ cấu kiện-pick đáy+mặt bên)</div>
 <div class="node-children">
 <div class="node-card level-3">
-<div class="node-title">Comments:  Tự động lấy theo bê tông<br>Vd: <span class="param-badge">[Comments:02.Mong-VanPhong]</span><br>BSV_PhanLoai: Nhập kiểu phân loại<br>Vd: <span class="param-badge">[BSV_PhanLoai:VK_Mong]</span></div>
+<div class="node-title">Comments:  Tự động lấy theo bê tông<br>Vd: <span class="param-badge">[Comments:02.Mong-VanPhong]</span><br>BIM_PhanLoai: Nhập kiểu phân loại<br>Vd: <span class="param-badge">[BIM_PhanLoai:VK_Mong]</span></div>
 </div>
 </div>
 </div>
@@ -631,7 +631,7 @@
 <div class="node-title">Khối lượng điện tích<br>(Thường sử dụng ván gán diện tích nền,đầm chặt...)</div>
 <div class="node-children">
 <div class="node-card level-3">
-<div class="node-title">Comments:  Tự động lấy theo bê tông<br>Vd: <span class="param-badge">[Comments:04.Nen-Xuong]</span><br>BSV_PhanLoai: Nhập kiểu phân loại<br>Vd: <span class="param-badge">[BSV_PhanLoai:DT_Nen]</span></div>
+<div class="node-title">Comments:  Tự động lấy theo bê tông<br>Vd: <span class="param-badge">[Comments:04.Nen-Xuong]</span><br>BIM_PhanLoai: Nhập kiểu phân loại<br>Vd: <span class="param-badge">[BIM_PhanLoai:DT_Nen]</span></div>
 </div>
 </div>
 </div>
@@ -646,7 +646,7 @@
 </div>
 <div class="section-body">
 <div class="node-card level-2">
-<div class="node-title">01.Gán biến bê tông theo BOQ<br>(Chia nhỏ để dễ đối chiếu khối lượng)<br>02.Chạy join bê tông theo quy ước (Load thứ tự trong Atool)<br>03.Chạy ván khuôn (Bim Speed), gán biến ván khuôn (Tool BSV_PhanLoaiVanKhuon)<br>+Chú ý xem có ván bị lỗi hay không?<br>04.Check trùng lặp (Tool BSV_KiemTraTrungNhau)<br>+Xem xét có nên xóa hay không?<br>05.Kiểm tra bảng thống kê với model 3D và xuất khối lượng ra Excel<br>06.Link khối lượng vô BOQ<br>+Tuyệt đối không tính toán thêm trong bảng để khi cập nhật không sai sót.<br>07.Sum tổng khối lượng lót, ván lót, bê tông, ván khuôn ... giữa số nhập vào và số trên máy xem khớp hay không (đặt mã code để thuận tiện filter)</div>
+<div class="node-title">01.Gán biến bê tông theo BOQ<br>(Chia nhỏ để dễ đối chiếu khối lượng)<br>02.Chạy join bê tông theo quy ước (Load thứ tự trong Atool)<br>03.Chạy ván khuôn (Bim Speed), gán biến ván khuôn (Tool BIM_PhanLoaiVanKhuon)<br>+Chú ý xem có ván bị lỗi hay không?<br>04.Check trùng lặp (Tool BIM_KiemTraTrungNhau)<br>+Xem xét có nên xóa hay không?<br>05.Kiểm tra bảng thống kê với model 3D và xuất khối lượng ra Excel<br>06.Link khối lượng vô BOQ<br>+Tuyệt đối không tính toán thêm trong bảng để khi cập nhật không sai sót.<br>07.Sum tổng khối lượng lót, ván lót, bê tông, ván khuôn ... giữa số nhập vào và số trên máy xem khớp hay không (đặt mã code để thuận tiện filter)</div>
 </div>
 </div>
 </section><section class="doc-section" id="sec-4">
@@ -659,7 +659,7 @@
 </div>
 <div class="section-body">
 <div class="node-card level-2">
-<div class="node-title">Cọc ly tâm <br><span class="param-badge">[Commens:01.Coc]</span><br>Quy ước đặt type: ghi kích thước D<br>VD: 300, 350, 400, 500<br><span class="tool-badge">(Sau khi dựng móng tiến hành dựng cọc bằng Tool BSV_AutoPile_ByCenterPointCricle)</span><br><span class="tool-badge">(Tiếp theo sử dụng Tool BSV_AutoSetElevationPile để đưa cos cọc về đáy móng)</span></div>
+<div class="node-title">Cọc ly tâm <br><span class="param-badge">[Commens:01.Coc]</span><br>Quy ước đặt type: ghi kích thước D<br>VD: 300, 350, 400, 500<br><span class="tool-badge">(Sau khi dựng móng tiến hành dựng cọc bằng Tool BIM_AutoPile_ByCenterPointCricle)</span><br><span class="tool-badge">(Tiếp theo sử dụng Tool BIM_AutoSetElevationPile để đưa cos cọc về đáy móng)</span></div>
 <div class="node-children">
 <div class="node-card level-3">
 <div class="node-title">Tổng số cọc</div>
@@ -704,7 +704,7 @@
 <div class="node-card level-4">
 <div class="node-title">TH1:Cos tự nhiên &gt; cos san lấp<br>Cos san lấp - cos đầu cọc<br>TH2:Cos tự nhien &lt; cos san lấp<br>Cos tự nhiên - cos đầu cọc<br>*Chỉ tính âm</div>
 <div class="node-labels">
-<span class="label-pill">🏷️ Chạy Tool BSV_EpAm</span>
+<span class="label-pill">🏷️ Chạy Tool BIM_EpAm</span>
 </div>
 </div>
 </div>
@@ -722,7 +722,7 @@
 </div>
 <div class="section-body">
 <div class="node-card level-2">
-<div class="node-title">Bê tông <br><span class="param-badge">[Comments:02.Mong]</span><br>Quy ước đặt type: ngắn x dài x cao<br>VD: 800x1200x1000<br><span class="tool-badge">(Chạy Tool BSV_AutoFoundation_ByLinkCad.Ver3)</span></div>
+<div class="node-title">Bê tông <br><span class="param-badge">[Comments:02.Mong]</span><br>Quy ước đặt type: ngắn x dài x cao<br>VD: 800x1200x1000<br><span class="tool-badge">(Chạy Tool BIM_AutoFoundation_ByLinkCad.Ver3)</span></div>
 <div class="node-children">
 <div class="node-card level-3">
 <div class="node-title">Bê tông lót móng (B7.5)</div>
@@ -762,14 +762,14 @@
 <div class="node-title">Ván khuôn</div>
 <div class="node-children">
 <div class="node-card level-3">
-<div class="node-title">Ván khuôn lót móng <span class="param-badge">[BSV_PhanLoai:VK_LotMong]</span><br>(Lọc theo diện tích hoặc quét chọn ván)</div>
+<div class="node-title">Ván khuôn lót móng <span class="param-badge">[BIM_PhanLoai:VK_LotMong]</span><br>(Lọc theo diện tích hoặc quét chọn ván)</div>
 <div class="node-labels">
 <span class="label-pill">🏷️ Không tính phần giao sàn</span>
 <span class="label-pill">🏷️ đà kiềng</span>
 </div>
 </div>
 <div class="node-card level-3">
-<div class="node-title">Ván khuôn móng <br><span class="param-badge">[BSV_PhanLoai:VK_Mong]</span></div>
+<div class="node-title">Ván khuôn móng <br><span class="param-badge">[BIM_PhanLoai:VK_Mong]</span></div>
 <div class="node-labels">
 <span class="label-pill">🏷️ Không tính phần giao sàn</span>
 <span class="label-pill">🏷️ đà kiềng</span>
@@ -805,7 +805,7 @@
 <div class="node-title">Chiều dày h, độ mở rộng a</div>
 </div>
 <div class="node-card level-4">
-<div class="node-title">Diện tích đầm chặt đà kiềng<br><span class="param-badge">[BSV_PhanLoai:DT_DamChat]</span></div>
+<div class="node-title">Diện tích đầm chặt đà kiềng<br><span class="param-badge">[BIM_PhanLoai:DT_DamChat]</span></div>
 </div>
 </div>
 </div>
@@ -836,13 +836,13 @@
 <div class="node-title">Ván khuôn</div>
 <div class="node-children">
 <div class="node-card level-3">
-<div class="node-title">Ván khuôn lót <br><span class="param-badge">[BSV_PhanLoai:VK_LotDaKieng]</span></div>
+<div class="node-title">Ván khuôn lót <br><span class="param-badge">[BIM_PhanLoai:VK_LotDaKieng]</span></div>
 <div class="node-labels">
 <span class="label-pill">🏷️ Không tính phần giao móng</span>
 </div>
 </div>
 <div class="node-card level-3">
-<div class="node-title">Ván khuôn đà kiềng <br><span class="param-badge">[BSV_PhanLoai:VK_DaKieng]</span></div>
+<div class="node-title">Ván khuôn đà kiềng <br><span class="param-badge">[BIM_PhanLoai:VK_DaKieng]</span></div>
 <div class="node-labels">
 <span class="label-pill">🏷️ Không tính phần giao móng</span>
 <span class="label-pill">🏷️ cột</span>
@@ -851,7 +851,7 @@
 </div>
 </div>
 <div class="node-card level-2">
-<div class="node-title">Trám lỗ ti <br><span class="param-badge">[BSV_LoTi]</span><br>Chạy Tool TramLoTi</div>
+<div class="node-title">Trám lỗ ti <br><span class="param-badge">[BIM_LoTi]</span><br>Chạy Tool TramLoTi</div>
 </div>
 </div>
 </section><section class="doc-section" id="sec-7">
@@ -871,13 +871,13 @@
 </div>
 <div class="node-children">
 <div class="node-card level-3">
-<div class="node-title">Tấm PVC <br><span class="param-badge">[BSV_PhanLoai:DT_Nen]</span></div>
+<div class="node-title">Tấm PVC <br><span class="param-badge">[BIM_PhanLoai:DT_Nen]</span></div>
 </div>
 <div class="node-card level-3">
-<div class="node-title">Lớp đá base<br><span class="param-badge">[BSV_PhanLoai:DT_Nen]</span>*ChieuDayBase</div>
+<div class="node-title">Lớp đá base<br><span class="param-badge">[BIM_PhanLoai:DT_Nen]</span>*ChieuDayBase</div>
 </div>
 <div class="node-card level-3">
-<div class="node-title">Diện tích đầm chặt <br><span class="param-badge">[BSV_PhanLoai:DT_Nen]</span><br>(Diện tích nền) - (giao đà kiềng, cổ cột, móng nền)</div>
+<div class="node-title">Diện tích đầm chặt <br><span class="param-badge">[BIM_PhanLoai:DT_Nen]</span><br>(Diện tích nền) - (giao đà kiềng, cổ cột, móng nền)</div>
 </div>
 <div class="node-card level-3">
 <div class="node-title">Chống mối</div>
@@ -891,7 +891,7 @@
 <div class="node-title">Bê tông (B25)<br><span class="param-badge">[Comments:04.Nen]</span><br>Quy ước đặt type: ghi chiều dày H sàn<br>VD: 150, 200, 300<br>Nếu vẽ BTL thì đặt là 50_BTL (nhớ đổi vật liệu về B7.5)</div>
 <div class="node-children">
 <div class="node-card level-3">
-<div class="node-title">Bê tông lót nền<br><span class="param-badge">[BSV_PhanLoai:DT_Nen]</span>*ChieuDayLot</div>
+<div class="node-title">Bê tông lót nền<br><span class="param-badge">[BIM_PhanLoai:DT_Nen]</span>*ChieuDayLot</div>
 </div>
 <div class="node-card level-3">
 <div class="node-title">Bê tông nền (B25)</div>
@@ -959,7 +959,7 @@
 <div class="node-title">Ván khuôn</div>
 <div class="node-children">
 <div class="node-card level-3">
-<div class="node-title">Ván khuôn nền <br><span class="param-badge">[BSV_PhanLoai:VK_Nen]</span></div>
+<div class="node-title">Ván khuôn nền <br><span class="param-badge">[BIM_PhanLoai:VK_Nen]</span></div>
 <div class="node-children">
 <div class="node-card level-4">
 <div class="node-title">Ván khuôn thành<br>(Xung quanh nền)</div>
@@ -1005,7 +1005,7 @@
 </div>
 <div class="section-body">
 <div class="node-card level-2">
-<div class="node-title">Bê tông<br>Quy ước đặt type: ngắn x dài<br>VD: 500x800<br><span class="tool-badge">(Chạy Tool BSV_Str_TaoCot_Ver4)</span></div>
+<div class="node-title">Bê tông<br>Quy ước đặt type: ngắn x dài<br>VD: 500x800<br><span class="tool-badge">(Chạy Tool BIM_Str_TaoCot_Ver4)</span></div>
 <div class="node-children">
 <div class="node-card level-3">
 <div class="node-title">Bê tông cổ cột (B25)<br><span class="param-badge">[Comments:05.1.CoCot]</span></div>
@@ -1050,10 +1050,10 @@
 <div class="node-title">Ván khuôn</div>
 <div class="node-children">
 <div class="node-card level-3">
-<div class="node-title">Ván khuôn cổ cột <br><span class="param-badge">[BSV_PhanLoai:VK_CoCot]</span></div>
+<div class="node-title">Ván khuôn cổ cột <br><span class="param-badge">[BIM_PhanLoai:VK_CoCot]</span></div>
 </div>
 <div class="node-card level-3">
-<div class="node-title">Ván khuôn cột tầng 1, 2, ..., mái <span class="param-badge">[BSV_PhanLoai:VK_Cot]</span></div>
+<div class="node-title">Ván khuôn cột tầng 1, 2, ..., mái <span class="param-badge">[BIM_PhanLoai:VK_Cot]</span></div>
 </div>
 </div>
 </div>
@@ -1097,12 +1097,12 @@
 <div class="node-title">Ván khuôn</div>
 <div class="node-children">
 <div class="node-card level-3">
-<div class="node-title">Ván khuôn vách <br><span class="param-badge">[BSV_PhanLoai:VK_Vach]</span></div>
+<div class="node-title">Ván khuôn vách <br><span class="param-badge">[BIM_PhanLoai:VK_Vach]</span></div>
 </div>
 </div>
 </div>
 <div class="node-card level-2">
-<div class="node-title">Trám lỗ ti vách<br><span class="param-badge">[BSV_LoTi]</span><br><span class="tool-badge">(Chạy Tool ti vách)</span></div>
+<div class="node-title">Trám lỗ ti vách<br><span class="param-badge">[BIM_LoTi]</span><br><span class="tool-badge">(Chạy Tool ti vách)</span></div>
 </div>
 </div>
 </section><section class="doc-section" id="sec-10">
@@ -1144,7 +1144,7 @@
 <div class="node-title">Ván khuôn</div>
 <div class="node-children">
 <div class="node-card level-3">
-<div class="node-title">Ván khuôn dầm tầng 2, 3, ..., mái, tum <span class="param-badge">[BSV_PhanLoai:VK_Dam]</span><br>(Không tính phần giao sàn,cột,dầm)</div>
+<div class="node-title">Ván khuôn dầm tầng 2, 3, ..., mái, tum <span class="param-badge">[BIM_PhanLoai:VK_Dam]</span><br>(Không tính phần giao sàn,cột,dầm)</div>
 <div class="node-children">
 <div class="node-card level-4">
 <div class="node-title">Cách tính:Ván khuôn 2 bên hông dầm<br>(Ván đáy dầm tính vô ván khuôn sàn-quy ước KL)</div>
@@ -1222,7 +1222,7 @@
 <div class="node-title">Ván khuôn</div>
 <div class="node-children">
 <div class="node-card level-3">
-<div class="node-title">Ván khuôn sàn tầng 2, 3, ..., mái, tum <span class="param-badge">[BSV_PhanLoai:VK_San]</span><br>(Không tính phần giao cột)</div>
+<div class="node-title">Ván khuôn sàn tầng 2, 3, ..., mái, tum <span class="param-badge">[BIM_PhanLoai:VK_San]</span><br>(Không tính phần giao cột)</div>
 <div class="node-children">
 <div class="node-card level-4">
 <div class="node-title">Cách tính: Ván dáy sàn+ván thành sàn+ván đáy dầm</div>
@@ -1253,7 +1253,7 @@
 </div>
 </div>
 <div class="node-card level-3">
-<div class="node-title">Ván khuôn <span class="param-badge">[BSV_PhanLoai:VK_CauThang]</span></div>
+<div class="node-title">Ván khuôn <span class="param-badge">[BIM_PhanLoai:VK_CauThang]</span></div>
 </div>
 <div class="node-card level-3">
 <div class="node-title">Thép</div>
@@ -1278,7 +1278,7 @@
 </div>
 <div class="node-children">
 <div class="node-card level-4">
-<div class="node-title">Ván khuôn <br><span class="param-badge">[BSV_PhanLoai:VK_CauThang]</span></div>
+<div class="node-title">Ván khuôn <br><span class="param-badge">[BIM_PhanLoai:VK_CauThang]</span></div>
 </div>
 <div class="node-card level-4">
 <div class="node-title">Bậc gạch</div>
@@ -1287,7 +1287,7 @@
 <div class="node-title">Gạch len cầu thang</div>
 </div>
 <div class="node-card level-4">
-<div class="node-title">Gạch, đá ốp mặt bậc, chiếu nghỉ<br><span class="param-badge">[BSV_PhanLoai:DT_MatTren]</span><br><span class="param-badge">[BSV_PhanLoai:DT_MatTruoc]</span><br><span class="param-badge">[BSV_PhanLoai:DT_MatHong]</span></div>
+<div class="node-title">Gạch, đá ốp mặt bậc, chiếu nghỉ<br><span class="param-badge">[BIM_PhanLoai:DT_MatTren]</span><br><span class="param-badge">[BIM_PhanLoai:DT_MatTruoc]</span><br><span class="param-badge">[BIM_PhanLoai:DT_MatHong]</span></div>
 </div>
 <div class="node-card level-4">
 <div class="node-title">Sơn</div>
@@ -1355,7 +1355,7 @@
 <div class="node-title">Các lớp cấu tạo ramp</div>
 <div class="node-children">
 <div class="node-card level-4">
-<div class="node-title">PVC, lót, đá base, đầm chặt ...<br><span class="param-badge">[BSV_PhanLoai:DT_NenRamp]</span></div>
+<div class="node-title">PVC, lót, đá base, đầm chặt ...<br><span class="param-badge">[BIM_PhanLoai:DT_NenRamp]</span></div>
 </div>
 </div>
 </div>
@@ -1363,7 +1363,7 @@
 <div class="node-title">Bê tông ramp<br><span class="param-badge">[Comments:11.Ramp]</span></div>
 </div>
 <div class="node-card level-3">
-<div class="node-title">Ván khuôn ramp <br><span class="param-badge">[BSV_PhanLoai:VK_Ramp]</span><br><span class="param-badge">[BSV_PhanLoai:VK_VachRamp]</span></div>
+<div class="node-title">Ván khuôn ramp <br><span class="param-badge">[BIM_PhanLoai:VK_Ramp]</span><br><span class="param-badge">[BIM_PhanLoai:VK_VachRamp]</span></div>
 </div>
 </div>
 </div>
@@ -1384,7 +1384,7 @@
 <div class="node-title">Các lớp cấu tạo pit</div>
 <div class="node-children">
 <div class="node-card level-4">
-<div class="node-title">PVC, lót, đá base, đầm chặt ...<br><span class="param-badge">[BSV_PhanLoai:DT_NenPit]</span></div>
+<div class="node-title">PVC, lót, đá base, đầm chặt ...<br><span class="param-badge">[BIM_PhanLoai:DT_NenPit]</span></div>
 </div>
 </div>
 </div>
@@ -1392,7 +1392,7 @@
 <div class="node-title">Bê tông ramp<br><span class="param-badge">[Comments:12.Pit]</span></div>
 </div>
 <div class="node-card level-3">
-<div class="node-title">Ván khuôn ramp <br><span class="param-badge">[BSV_PhanLoai:VK_Pit]</span><br><span class="param-badge">[BSV_PhanLoai:VK_VachPit]</span></div>
+<div class="node-title">Ván khuôn ramp <br><span class="param-badge">[BIM_PhanLoai:VK_Pit]</span><br><span class="param-badge">[BIM_PhanLoai:VK_VachPit]</span></div>
 </div>
 </div>
 </div>
@@ -1413,7 +1413,7 @@
 <div class="node-title">Các lớp cấu tạo dock</div>
 <div class="node-children">
 <div class="node-card level-4">
-<div class="node-title">PVC, lót, đá base, đầm chặt ...<br><span class="param-badge">[BSV_PhanLoai:DT_NenDock]</span></div>
+<div class="node-title">PVC, lót, đá base, đầm chặt ...<br><span class="param-badge">[BIM_PhanLoai:DT_NenDock]</span></div>
 </div>
 </div>
 </div>
@@ -1421,7 +1421,7 @@
 <div class="node-title">Bê tông dock<br><span class="param-badge">[Comments:13.Dock]</span></div>
 </div>
 <div class="node-card level-3">
-<div class="node-title">Ván khuôn dock <br><span class="param-badge">[BSV_PhanLoai:VK_Dock]</span><br><span class="param-badge">[BSV_PhanLoai:VK_DamDock]</span></div>
+<div class="node-title">Ván khuôn dock <br><span class="param-badge">[BIM_PhanLoai:VK_Dock]</span><br><span class="param-badge">[BIM_PhanLoai:VK_DamDock]</span></div>
 </div>
 </div>
 </div>
@@ -1439,7 +1439,7 @@
 <div class="node-title">Mương<br><span class="param-badge">[Comments:14.1.Muong]</span></div>
 <div class="node-children">
 <div class="node-card level-3">
-<div class="node-title"><span class="param-badge">[BSV_PhanLoai:VK_Muong]</span></div>
+<div class="node-title"><span class="param-badge">[BIM_PhanLoai:VK_Muong]</span></div>
 </div>
 </div>
 </div>
@@ -1447,7 +1447,7 @@
 <div class="node-title">Bệ máy<br><span class="param-badge">[Comments:14.2.BeMay]</span></div>
 <div class="node-children">
 <div class="node-card level-3">
-<div class="node-title"><span class="param-badge">[BSV_PhanLoai:VK_BeMay]</span></div>
+<div class="node-title"><span class="param-badge">[BIM_PhanLoai:VK_BeMay]</span></div>
 </div>
 </div>
 </div>

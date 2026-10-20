@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bảng Đề Mục Quy Cách Shop Drawing Cốt Thép & BBS (Rút Gọn 2 Trang A4) - BSV Standard</title>
+  <title>Bảng Đề Mục Quy Cách Shop Drawing Cốt Thép & BBS (Rút Gọn 2 Trang A4) - BIM Standard</title>
   <style>
     /* ==========================================================================
        A4 EXECUTIVE PRINT STYLESHEET - SHOP REBAR 2 PAGES EXACTLY
@@ -422,8 +422,8 @@
       <!-- Header -->
       <header class="doc-header">
         <div class="header-top">
-          <span class="org-tag">BSV BIM REBAR DETAILING &amp; BAR BENDING SCHEDULE • STRUCTURAL DIVISION</span>
-          <span class="doc-badge">STANDARD: BSV-REBAR-SHOP-SUMMARY • A4 COMPACT</span>
+          <span class="org-tag">KAKA BIM REBAR DETAILING &amp; BBS • STRUCTURAL DIVISION</span>
+          <span class="doc-badge">STANDARD: BIM-REBAR-SHOP-SUMMARY • A4 COMPACT</span>
         </div>
         <div class="header-title-box">
           <h1>QUY CÁCH TRIỂN KHAI SHOP DRAWING CỐT THÉP &amp; THỐNG KÊ BBS (BẢN TÓM TẮT)</h1>
@@ -435,7 +435,7 @@
       <div class="meta-bar">
         <div class="meta-bar-item"><strong>Nguyên tắc Join:</strong> Sàn &gt; Móng &gt; Cột &gt; Dầm &gt; Vách &gt; Thang</div>
         <div class="meta-bar-item"><strong>Revit Add-in:</strong> BimSpeed Rebar + kaka.Structure</div>
-        <div class="meta-bar-item"><strong>Tham số cốt lõi:</strong> Partition, BSV_PhanLoai, Bending Detail</div>
+        <div class="meta-bar-item"><strong>Tham số cốt lõi:</strong> Partition, BIM_PhanLoai, Bending Detail</div>
         <div class="meta-bar-item"><strong>Trang:</strong> 1 / 2 (Phần Ngầm, Cột &amp; Đà Kiềng)</div>
       </div>
 
@@ -457,10 +457,10 @@
           <h4>📋 2. Quy Chuẩn 5 Bước Đóng Gói Hồ Sơ Cốt Thép</h4>
           <ul>
             <li><strong>1. Quy cách vẽ:</strong> Dùng BimSpeed Rebar nhập đúng lớp bê tông bảo vệ (<code>btbv</code>), rải thép chủ, thép đai, thép giá, thép gia cường.</li>
-            <li><strong>2. Đặt tên thép:</strong> Gán <span class="param-pill">Partition</span> phân khu/tên cấu kiện; gán <span class="param-pill">BSV_PhanLoai</span> theo nhóm BOQ.</li>
+            <li><strong>2. Đặt tên thép:</strong> Gán <span class="param-pill">Partition</span> phân khu/tên cấu kiện; gán <span class="param-pill">BIM_PhanLoai</span> theo nhóm BOQ.</li>
             <li><strong>3. Xuất bản vẽ:</strong> Gán View Template chuẩn, tạo Mặt bằng (Section từ trên xuống), Mặt cắt dọc/ngang, Dim, Cao độ, Breakline.</li>
             <li><strong>4. Tag 2D &amp; BBS:</strong> Tag thép 2D <code>Rebar Bending Detail</code> tắt leader; tạo bảng thống kê hình dạng, đường kính, chiều dài, khối lượng.</li>
-            <li><strong>5. Key Plan:</strong> Duplicate level cao độ, gán View Template KP, cây thư mục <code>BSV_ThuMucChinh</code>, <code>BSV_ThuMucPhu</code>.</li>
+            <li><strong>5. Key Plan:</strong> Duplicate level cao độ, gán View Template KP, cây thư mục <code>BIM_ThuMucChinh</code>, <code>BIM_ThuMucPhu</code>.</li>
           </ul>
         </div>
       </div>
@@ -482,27 +482,27 @@
         <tbody>
           <tr>
             <td><strong>02. Móng (Foundation)</strong></td>
-            <td><span class="template-pill">BSV_02.1_Detail_Foudation</span></td>
-            <td><span class="template-pill">BSV_02_KP_Foudation</span></td>
-            <td>Tag MB tắt leader: <code>BSV_02.0_TagRebar_Fou_SL_D_a</code>; Tag MC: <code>BSV_02.2_TagRebar_Fou_Opendot</code></td>
+            <td><span class="template-pill">BIM_02.1_Detail_Foundation</span></td>
+            <td><span class="template-pill">BIM_02_KP_Foundation</span></td>
+            <td>Tag MB tắt leader: <code>BIM_02.0_TagRebar_Fou_SL_D_a</code>; Tag MC: <code>BIM_02.2_TagRebar_Fou_Opendot</code></td>
           </tr>
           <tr>
             <td><strong>03. Đà Kiềng (Tie Beam)</strong></td>
-            <td><span class="template-pill">BSV_03.2_Detail_GroundBeam</span> (Dọc) / <span class="template-pill">03.3</span> (Ngang)</td>
-            <td><span class="template-pill">BSV_03.1_KP_GroundBeam</span></td>
-            <td>Tag dầm: <code>Rebar bending detail</code>; Dim khoảng rải đai <code>BSV_Dim</code>; Nét cắt <code>BSV_Bearkline</code></td>
+            <td><span class="template-pill">BIM_03.2_Detail_GroundBeam</span> (Dọc) / <span class="template-pill">03.3</span> (Ngang)</td>
+            <td><span class="template-pill">BIM_03.1_KP_GroundBeam</span></td>
+            <td>Tag dầm: <code>Rebar bending detail</code>; Dim khoảng rải đai <code>BIM_Dim</code>; Nét cắt <code>BIM_Breakline</code></td>
           </tr>
           <tr>
             <td><strong>04. Nền &amp; 08. Sàn (Slab)</strong></td>
-            <td><span class="template-pill">BSV_04.1_Detail_Slab</span> / <span class="template-pill">BSV_08.1_Detail_Slab</span></td>
-            <td><span class="template-pill">BSV_04_KP_Slab</span> / <span class="template-pill">BSV_08_KP</span></td>
-            <td>Tag thép sàn 2 lớp (Top/Bottom); Tag Multi-rebar rải thép tăng cường gối/bụng; Dim <code>BSV_Dim</code></td>
+            <td><span class="template-pill">BIM_04.1_Detail_Slab</span> / <span class="template-pill">BIM_08.1_Detail_Slab</span></td>
+            <td><span class="template-pill">BIM_04_KP_Slab</span> / <span class="template-pill">BIM_08_KP</span></td>
+            <td>Tag thép sàn 2 lớp (Top/Bottom); Tag Multi-rebar rải thép tăng cường gối/bụng; Dim <code>BIM_Dim</code></td>
           </tr>
           <tr>
             <td><strong>05. Cột (Column)</strong></td>
-            <td><span class="template-pill">BSV_05.2_Detail_Column</span></td>
-            <td><span class="template-pill">BSV_05.1_KP_Column</span></td>
-            <td>Tag thép chủ cột, tag đai chính/đai phụ; Cao độ chân/đỉnh cột <code>BSV_CaoDo</code>; Thép chờ móng</td>
+            <td><span class="template-pill">BIM_05.2_Detail_Column</span></td>
+            <td><span class="template-pill">BIM_05.1_KP_Column</span></td>
+            <td>Tag thép chủ cột, tag đai chính/đai phụ; Cao độ chân/đỉnh cột <code>BIM_CaoDo</code>; Thép chờ móng</td>
           </tr>
         </tbody>
       </table>
@@ -539,12 +539,12 @@
             <td class="name-cell">Móng Đơn / Băng / Bè</td>
             <td>
               <span class="param-pill">Partition</span> : <code>F1, F2...</code><br>
-              <span class="param-pill">BSV_PhanLoai</span> : <code>02.ThepMong_VP</code><br>
-              <span class="template-pill">KP_Foudation</span>
+              <span class="param-pill">BIM_PhanLoai</span> : <code>02.ThepMong_VP</code><br>
+              <span class="template-pill">KP_Foundation</span>
             </td>
             <td>
               • <strong>BimSpeed Móng:</strong> Nhập <code>btbv</code>, vẽ lớp thép dưới, lớp trên, cốt thép dọc/ngang hông móng vát.<br>
-              • <strong>Mặt bằng &amp; Mặt cắt:</strong> Section <code>BSV_02_Sec_Foudation</code> (nhìn từ trên xuống, trái qua phải); gán Tag 2D Bending Detail.<br>
+              • <strong>Mặt bằng &amp; Mặt cắt:</strong> Section <code>BIM_02_Sec_Foundation</code> (nhìn từ trên xuống, trái qua phải); gán Tag 2D Bending Detail.<br>
               • <strong>Bảng BBS:</strong> Bảng <code>THỐNG KÊ THÉP MÓNG F1</code> (Partitions, Bending detail, Ø, SL, Số cấu kiện, Chiều dài, Khối lượng).
             </td>
           </tr>
@@ -553,13 +553,13 @@
             <td class="name-cell">Đà Kiềng &amp; Giằng Móng</td>
             <td>
               <span class="param-pill">Partition</span> : <code>B1_Caodo_VP</code><br>
-              <span class="param-pill">BSV_PhanLoai</span> : <code>03.ThepDaKieng_VP</code><br>
+              <span class="param-pill">BIM_PhanLoai</span> : <code>03.ThepDaKieng_VP</code><br>
               <span class="template-pill">KP_GroundBeam</span>
             </td>
             <td>
               • <strong>BimSpeed Dầm:</strong> Thép lớp dưới + tăng cường bụng; Thép lớp trên + tăng cường gối; Thép giá + Thép đai chống xoắn.<br>
               • <strong>Đường dóng nối cắt thép:</strong> Nét Hidden Line theo Spec (L/4 bụng trên, L/6 gối dưới).<br>
-              • <strong>Mặt cắt &amp; BBS:</strong> MC dọc <code>BSV_03.2</code>, MC ngang <code>BSV_03.3</code>; Thống kê thép Dầm B2; Key Plan <code>[SHOP THÉP DẦM]</code>.
+              • <strong>Mặt cắt &amp; BBS:</strong> MC dọc <code>BIM_03.2</code>, MC ngang <code>BIM_03.3</code>; Thống kê thép Dầm B2; Key Plan <code>[SHOP THÉP DẦM]</code>.
             </td>
           </tr>
           <tr>
@@ -567,7 +567,7 @@
             <td class="name-cell">Sàn Nền Trệt &amp; Mương</td>
             <td>
               <span class="param-pill">Partition</span> : <code>Slab_F1_Nen</code><br>
-              <span class="param-pill">BSV_PhanLoai</span> : <code>04.ThepNen_Xuong</code><br>
+              <span class="param-pill">BIM_PhanLoai</span> : <code>04.ThepNen_Xuong</code><br>
               <span class="template-pill">KP_Slab</span>
             </td>
             <td>
@@ -581,13 +581,13 @@
             <td class="name-cell">Cột Khung &amp; Cổ Cột</td>
             <td>
               <span class="param-pill">Partition</span> : <code>C1_T1-T2</code><br>
-              <span class="param-pill">BSV_PhanLoai</span> : <code>05.ThepCot_C5</code><br>
+              <span class="param-pill">BIM_PhanLoai</span> : <code>05.ThepCot_C5</code><br>
               <span class="template-pill">KP_Column</span>
             </td>
             <td>
               • <strong>BimSpeed Cột:</strong> Cốt thép chủ phương X, Y; Tiết diện đai chính + đai móc phụ liên kết C; Đoạn nối sole ≥ 50%.<br>
               • <strong>Thép chờ móng &amp; đỉnh:</strong> Chân ngàm móng bẻ giò gà; đỉnh cột neo dầm sàn; Cài đặt vùng rải đai dày h<sub>cl</sub> / 6 đầu cột.<br>
-              • <strong>Mặt cắt &amp; BBS:</strong> MC dọc <code>BSV_05.2_Detail_Column</code>, MC ngang; Thống kê thép Cột C5; Key Plan <code>[SHOP THÉP CỘT]</code>.
+              • <strong>Mặt cắt &amp; BBS:</strong> MC dọc <code>BIM_05.2_Detail_Column</code>, MC ngang; Thống kê thép Cột C5; Key Plan <code>[SHOP THÉP CỘT]</code>.
             </td>
           </tr>
         </tbody>
@@ -596,7 +596,7 @@
 
     <!-- Footer Page 1 -->
     <footer class="page-footer">
-      <div>Ban Hành: BP. Shop Drawing Rebar BSV • Cẩm Nang Triển Khai Bản Vẽ &amp; BBS Tiêu Chuẩn</div>
+      <div>Ban Hành: Khối Quản Lý & Điều Hành BIM • Cẩm Nang Triển Khai Bản Vẽ &amp; BBS Tiêu Chuẩn</div>
       <div>Trang 1 / 2 • Phần Ngầm, Cột, Đà Kiềng &amp; Tiêu Chuẩn View Templates</div>
     </footer>
   </div>
@@ -609,8 +609,8 @@
       <!-- Header Compact Page 2 -->
       <header class="doc-header">
         <div class="header-top">
-          <span class="org-tag">BSV BIM REBAR DETAILING &amp; BAR BENDING SCHEDULE • STRUCTURAL DIVISION</span>
-          <span class="doc-badge">STANDARD: BSV-REBAR-SHOP-SUMMARY • A4 COMPACT</span>
+          <span class="org-tag">KAKA BIM REBAR DETAILING &amp; BBS • STRUCTURAL DIVISION</span>
+          <span class="doc-badge">STANDARD: BIM-REBAR-SHOP-SUMMARY • A4 COMPACT</span>
         </div>
         <div class="header-title-box">
           <h1>QUY CÁCH TRIỂN KHAI SHOP DRAWING CỐT THÉP &amp; THỐNG KÊ BBS (BẢN TÓM TẮT)</h1>
@@ -646,7 +646,7 @@
             <td class="name-cell">Vách Thang Máy &amp; Vách Cứng</td>
             <td>
               <span class="param-pill">Partition</span> : <code>SW1_T1-T2</code><br>
-              <span class="param-pill">BSV_PhanLoai</span> : <code>06.ThepVach_ThangMay</code><br>
+              <span class="param-pill">BIM_PhanLoai</span> : <code>06.ThepVach_ThangMay</code><br>
               <span class="template-pill">KP_ShearWall</span>
             </td>
             <td>
@@ -659,7 +659,7 @@
             <td class="name-cell">Dầm Khung Tầng &amp; Mái</td>
             <td>
               <span class="param-pill">Partition</span> : <code>B_T2_Truc1-5</code><br>
-              <span class="param-pill">BSV_PhanLoai</span> : <code>07.ThepDam_T2</code><br>
+              <span class="param-pill">BIM_PhanLoai</span> : <code>07.ThepDam_T2</code><br>
               <span class="amber-pill">Kế thừa 03. Đà Kiềng</span>
             </td>
             <td>
@@ -672,7 +672,7 @@
             <td class="name-cell">Sàn Tầng, Mái &amp; Ban Công</td>
             <td>
               <span class="param-pill">Partition</span> : <code>Slab_T2_Zone1</code><br>
-              <span class="param-pill">BSV_PhanLoai</span> : <code>08.ThepSan_T2</code><br>
+              <span class="param-pill">BIM_PhanLoai</span> : <code>08.ThepSan_T2</code><br>
               <span class="amber-pill">Kế thừa 04. Nền</span>
             </td>
             <td>
@@ -685,7 +685,7 @@
             <td class="name-cell">Cầu Thang Thoát Hiểm</td>
             <td>
               <span class="param-pill">Partition</span> : <code>ST1_Ve1-Ve2</code><br>
-              <span class="param-pill">BSV_PhanLoai</span> : <code>09.ThepCauThang_ST1</code><br>
+              <span class="param-pill">BIM_PhanLoai</span> : <code>09.ThepCauThang_ST1</code><br>
               <span class="template-pill">KP_Stair</span>
             </td>
             <td>
@@ -709,7 +709,7 @@
             <td class="name-cell">Ramp Dốc Xe Tải</td>
             <td>
               <span class="param-pill">Partition</span> : <code>Ramp_Container</code><br>
-              <span class="param-pill">BSV_PhanLoai</span> : <code>11.ThepRamp_Kho</code><br>
+              <span class="param-pill">BIM_PhanLoai</span> : <code>11.ThepRamp_Kho</code><br>
               <span class="template-pill">KP_Ramp</span>
             </td>
             <td>
@@ -722,7 +722,7 @@
             <td class="name-cell">Hố Pit Thang Máy</td>
             <td>
               <span class="param-pill">Partition</span> : <code>Pit_ThangMay</code><br>
-              <span class="param-pill">BSV_PhanLoai</span> : <code>12.ThepPit_TM</code>
+              <span class="param-pill">BIM_PhanLoai</span> : <code>12.ThepPit_TM</code>
             </td>
             <td>
               • Thép bản đáy hố pit đan 2 lớp liên kết cọc/đài móng; Thép vách hố pit bẻ mỏ chờ dầm nền; Thép neo đế giảm chấn thang máy.
@@ -733,7 +733,7 @@
             <td class="name-cell">Sàn Dock Leveler</td>
             <td>
               <span class="param-pill">Partition</span> : <code>Dock_Leveler_01</code><br>
-              <span class="param-pill">BSV_PhanLoai</span> : <code>13.ThepDock_XuatHang</code>
+              <span class="param-pill">BIM_PhanLoai</span> : <code>13.ThepDock_XuatHang</code>
             </td>
             <td>
               • Thép gia cường hốc sàn dock container; Thép râu hàn bản mã viền góc V100 × 100 × 10 chịu xung lực va chạm đuôi xe tải; Bảng BBS.
@@ -744,7 +744,7 @@
             <td class="name-cell">Mương Cáp &amp; Bệ Máy</td>
             <td>
               <span class="param-pill">Partition</span> : <code>Muong_Dien / BeMay_Chiller</code><br>
-              <span class="param-pill">BSV_PhanLoai</span> : <code>14.ThepPhu</code>
+              <span class="param-pill">BIM_PhanLoai</span> : <code>14.ThepPhu</code>
             </td>
             <td>
               • <strong>Mương kỹ thuật:</strong> Thép đai chữ U thành mương, thép tấm đan đậy mương; Lưới thép chống nứt.<br>
@@ -757,7 +757,7 @@
 
     <!-- Footer Page 2 -->
     <footer class="page-footer">
-      <div>Ban Hành: BP. Shop Drawing Rebar BSV • Cẩm Nang Triển Khai Bản Vẽ &amp; BBS Tiêu Chuẩn</div>
+      <div>Ban Hành: Khối Quản Lý & Điều Hành BIM • Cẩm Nang Triển Khai Bản Vẽ &amp; BBS Tiêu Chuẩn</div>
       <div>Trang 2 / 2 • Phần Thân Ngang, Thang, Ramp &amp; Cấu Kiện Phụ • Hết</div>
     </footer>
   </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bảng Đề Mục Quy Cách Tính Khối Lượng Kết Cấu (Rút Gọn 2 Trang A4) - BSV Standard</title>
+  <title>Bảng Đề Mục Quy Cách Tính Khối Lượng Kết Cấu (Rút Gọn 2 Trang A4) - BIM Standard</title>
   <style>
     /* ==========================================================================
        A4 EXECUTIVE PRINT STYLESHEET - 2 PAGES EXACTLY
@@ -402,7 +402,7 @@
       <div class="meta-bar">
         <div class="meta-bar-item"><strong>Thứ tự ưu tiên:</strong> Sàn &gt; Móng &gt; Cột &gt; Dầm &gt; Vách &gt; Thang</div>
         <div class="meta-bar-item"><strong>Revit Add-in:</strong> kaka.Structure + BimSpeed</div>
-        <div class="meta-bar-item"><strong>Biến cốt lõi:</strong> Comments, BSV_PhanLoai, BSV_LoTi</div>
+        <div class="meta-bar-item"><strong>Biến cốt lõi:</strong> Comments, BIM_PhanLoai, BIM_LoTi</div>
         <div class="meta-bar-item"><strong>Trang:</strong> 1 / 2 (Phần ngầm &amp; Đứng)</div>
       </div>
 
@@ -424,8 +424,8 @@
           <ul>
             <li><strong>B1. Gán biến BOQ:</strong> Gán <code>Comments</code> theo phân khu để dễ đối chiếu.</li>
             <li><strong>B2. Join hình học:</strong> Chạy Atool Join tự động theo thứ tự ưu tiên.</li>
-            <li><strong>B3. Chạy ván khuôn:</strong> Chạy BimSpeed, gán <code>BSV_PhanLoaiVanKhuon</code>.</li>
-            <li><strong>B4. Check trùng lặp:</strong> Quét kiểm tra bằng <code>BSV_KiemTraTrungNhau</code>.</li>
+            <li><strong>B3. Chạy ván khuôn:</strong> Chạy BimSpeed, gán <code>BIM_PhanLoaiVanKhuon</code>.</li>
+            <li><strong>B4. Check trùng lặp:</strong> Quét kiểm tra bằng <code>BIM_KiemTraTrungNhau</code>.</li>
             <li><strong>B5. Đối soát 3D:</strong> So khớp bảng Schedule Revit với View 3D màu.</li>
             <li><strong>B6. Link BOQ:</strong> Đồng bộ số liệu vào file Excel BOQ dự toán.</li>
             <li><strong>B7. Kiểm toán chéo:</strong> Sum tổng BTL, ván lót, bê tông, ván khuôn.</li>
@@ -456,19 +456,19 @@
           </tr>
           <tr>
             <td><strong>Khối lượng Ván khuôn</strong></td>
-            <td><span class="param-pill">Comments</span> + <span class="param-pill">BSV_PhanLoai</span></td>
-            <td>Tự động nhận Comments; <code>[BSV_PhanLoai:VK_Mong]</code></td>
+            <td><span class="param-pill">Comments</span> + <span class="param-pill">BIM_PhanLoai</span></td>
+            <td>Tự động nhận Comments; <code>[BIM_PhanLoai:VK_Mong]</code></td>
             <td>Chạy tool BimSpeed pick đáy + mặt bên cấu kiện. <span class="tool-pill">BimSpeed</span></td>
           </tr>
           <tr>
             <td><strong>Khối lượng Diện tích</strong></td>
-            <td><span class="param-pill">Comments</span> + <span class="param-pill">BSV_PhanLoai</span></td>
-            <td>Tự động nhận Comments; <code>[BSV_PhanLoai:DT_Nen]</code></td>
+            <td><span class="param-pill">Comments</span> + <span class="param-pill">BIM_PhanLoai</span></td>
+            <td>Tự động nhận Comments; <code>[BIM_PhanLoai:DT_Nen]</code></td>
             <td>Sử dụng ván diện tích gán nền, đá base, đầm chặt.</td>
           </tr>
           <tr>
             <td><strong>Trám lỗ ti ván khuôn</strong></td>
-            <td><span class="param-pill">BSV_LoTi</span></td>
+            <td><span class="param-pill">BIM_LoTi</span></td>
             <td>Gán tự động số lượng và diện tích ti xuyên tường</td>
             <td>Chạy Add-in <code>TramLoTi</code>, <code>TiVach</code> cho đà kiềng, dầm, vách.</td>
           </tr>
@@ -495,14 +495,14 @@
             <td class="name-cell">Cọc Ly Tâm</td>
             <td>
               Đặt Type: ghi đường kính D (<code>300, 350, 400, 500</code>).<br>
-              <span class="tool-pill">Tool BSV_AutoPile</span> dựng theo tâm CAD;<br>
-              <span class="tool-pill">Tool BSV_AutoSetElevationPile</span> hạ cos đáy móng.
+              <span class="tool-pill">Tool BIM_AutoPile</span> dựng theo tâm CAD;<br>
+              <span class="tool-pill">Tool BIM_AutoSetElevationPile</span> hạ cos đáy móng.
             </td>
             <td>
               • <strong>Tổng số cọc:</strong> Tách cọc đại trà và cọc thí nghiệm theo bản vẽ.<br>
               • <strong>Xử lý đầu cọc:</strong> Bê tông, bản mã, thép đầu cọc tính theo file excel.<br>
               • <strong>Cắt đầu cọc:</strong> Đếm tổng số lượng cọc đại trà + thí nghiệm.<br>
-              • <strong>Ép âm cọc:</strong> Tính hiệu số (Cos tự nhiên/san lấp - Cos đầu cọc) bằng <span class="tool-pill">Tool BSV_EpAm</span>.
+              • <strong>Ép âm cọc:</strong> Tính hiệu số (Cos tự nhiên/san lấp - Cos đầu cọc) bằng <span class="tool-pill">Tool BIM_EpAm</span>.
             </td>
           </tr>
           <tr>
@@ -510,7 +510,7 @@
             <td class="name-cell">Móng BTCT</td>
             <td>
               Đặt Type: <code>ngắn x dài x cao</code> (VD: <code>800x1200x1000</code>).<br>
-              <span class="tool-pill">BSV_AutoFoundation_ByLinkCad.Ver3</span><br>
+              <span class="tool-pill">BIM_AutoFoundation_ByLinkCad.Ver3</span><br>
               <span class="param-pill">Comments:02.Mong</span>
             </td>
             <td>
@@ -532,7 +532,7 @@
               • <strong>BTL đà kiềng (B7.5):</strong> Bề rộng b + 2a, bề dày h; <span class="param-pill">DT_DamChat</span>.<br>
               • <strong>Bê tông đà (B25):</strong> Trừ phần giao móng và sàn nền.<br>
               • <strong>Cốt thép:</strong> Thép trên tăng cường gối, dưới tăng cường bụng, thép đai, giá, vai bò.<br>
-              • <strong>Ván khuôn:</strong> <span class="param-pill">VK_LotDaKieng</span>, <span class="param-pill">VK_DaKieng</span> (trừ giao móng, cột); Trám lỗ ti <span class="param-pill">BSV_LoTi</span>.
+              • <strong>Ván khuôn:</strong> <span class="param-pill">VK_LotDaKieng</span>, <span class="param-pill">VK_DaKieng</span> (trừ giao móng, cột); Trám lỗ ti <span class="param-pill">BIM_LoTi</span>.
             </td>
           </tr>
           <tr>
@@ -555,7 +555,7 @@
             <td class="name-cell">Cột BTCT</td>
             <td>
               Đặt Type: <code>ngắn x dài</code> (VD: <code>500x800</code>).<br>
-              <span class="tool-pill">Tool BSV_Str_TaoCot_Ver4</span><br>
+              <span class="tool-pill">Tool BIM_Str_TaoCot_Ver4</span><br>
               Phân tầng: <code>05.1.CoCot</code>, <code>05.2.Cot-T1</code>...
             </td>
             <td>
@@ -576,7 +576,7 @@
             <td>
               • <strong>Bê tông vách (B25):</strong> Tính trừ phần giao sàn, móng, cột và dầm.<br>
               • <strong>Cốt thép:</strong> Thép vách 2 lớp đứng/ngang, thép đai khê, bẻ móc neo ngàm móng/sàn.<br>
-              • <strong>Ván khuôn:</strong> <span class="param-pill">VK_Vach</span> hai mặt vách; Trám lỗ ti vách bằng <span class="param-pill">BSV_LoTi</span>.
+              • <strong>Ván khuôn:</strong> <span class="param-pill">VK_Vach</span> hai mặt vách; Trám lỗ ti vách bằng <span class="param-pill">BIM_LoTi</span>.
             </td>
           </tr>
         </tbody>
@@ -752,11 +752,11 @@
         </div>
         <div class="sched-card">
           <strong>3. 00.2.1.KL VÁN KHUÔN LÓT</strong>
-          Filter <code>BSV_PhanLoai = VK_Lot*</code>; Lấy diện tích đáy và cạnh biên lớp lót móng, đà kiềng.
+          Filter <code>BIM_PhanLoai = VK_Lot*</code>; Lấy diện tích đáy và cạnh biên lớp lót móng, đà kiềng.
         </div>
         <div class="sched-card">
           <strong>4. 00.2.2.KL VÁN KHUÔN (TỔNG)</strong>
-          Filter <code>BSV_PhanLoai = VK_*</code>; Tổng diện tích ván thành dầm, ván cột, ván sàn (m²).
+          Filter <code>BIM_PhanLoai = VK_*</code>; Tổng diện tích ván thành dầm, ván cột, ván sàn (m²).
         </div>
         <div class="sched-card">
           <strong>5. 00.2.2.KL VÁN KHUÔN (CHI TIẾT)</strong>
@@ -764,7 +764,7 @@
         </div>
         <div class="sched-card">
           <strong>6. 00.3.1.KL DIỆN TÍCH ĐỆM</strong>
-          Filter <code>BSV_PhanLoai = DT_*</code>; Thống kê diện tích tấm PVC, đá base, đầm chặt, chống mối.
+          Filter <code>BIM_PhanLoai = DT_*</code>; Thống kê diện tích tấm PVC, đá base, đầm chặt, chống mối.
         </div>
         <div class="sched-card" style="grid-column: span 2;">
           <strong>7. 01.1.CỌC LY TÂM &amp; THÍ NGHIỆM</strong>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bộ Đề Mục Quy Trình Làm Việc & Bóc Tách BOQ Kiến Trúc - BSV Standard (In A4)</title>
+  <title>Bộ Đề Mục Quy Trình Làm Việc & Bóc Tách BOQ Kiến Trúc - BIM Standard (In A4)</title>
   <style>
     /* ==========================================================================
        A4 EXECUTIVE PRINT STYLESHEET - BỘ MÔN KIẾN TRÚC
@@ -541,13 +541,13 @@
         </tr>
         <tr>
           <td class="meta-label">Cơ Chế Phân Loại:</td>
-          <td class="meta-val"><strong>Room Finishing Schedules + Shared Parameters</strong> (<code>Comments</code>, <code>Note</code>, <code>BSV_PhanKhu</code>)</td>
+          <td class="meta-val"><strong>Room Finishing Schedules + Shared Parameters</strong> (<code>Comments</code>, <code>Note</code>, <code>BIM_Zone_Area</code>)</td>
           <td class="meta-label">Bộ Tham Số Chuẩn:</td>
-          <td class="meta-val"><code>BSV_XuongChinh</code>, <code>BSV_TratFull</code>, <code>BSV_Trat1m</code>, <code>BSV_HTKC</code></td>
+          <td class="meta-val"><code>BIM_XuongChinh</code>, <code>BIM_TratFull</code>, <code>BIM_Trat1m</code>, <code>BIM_HTKC</code></td>
         </tr>
         <tr>
           <td class="meta-label">Công Cụ Tự Động:</td>
-          <td class="meta-val">Atool (Sàn/Trần/LT), BSV_BoTriBoTru, RaiGiangTuong, HoanThienCotTran</td>
+          <td class="meta-val">Atool (Sàn/Trần/LT), BIM_BoTriBoTru, RaiGiangTuong, HoanThienCotTran</td>
           <td class="meta-label">Mục Tiêu Hồ Sơ:</td>
           <td class="meta-val">Bóc tách BOQ chính xác, triệt tiêu xung đột hoàn thiện kiến trúc &amp; kết cấu</td>
         </tr>
@@ -576,7 +576,7 @@
 <div class="node-title">0. Khởi tạo thư mục chung <br>(Folder trên sever)</div>
 <div class="node-children">
 <div class="node-card level-3>
-<div class="node-title">0.1. Architech</div>
+<div class="node-title">0.1. Architecture</div>
 <div class="node-children">
 <div class="node-card level-4>
 <div class="node-title">0.1.1. Cad template</div>
@@ -604,7 +604,7 @@
 <div class="node-title">0.1.2. Rvt file</div>
 <div class="node-children">
 <div class="node-card level-5>
-<div class="node-title">Khởi tạo file mới từ template<br>Z:\BIM_BSV_Project\0.BSV_TaiLieuThamChieu\0.Teamplate_Rvt_R20\ARC</div>
+<div class="node-title">Khởi tạo file mới từ template<br>Z:\BIM_BIM_Project\0.BIM_TaiLieuThamChieu\0.Teamplate_Rvt_R20\ARC</div>
 <div class="node-children">
 <div class="node-card level-6>
 <div class="node-title">Sau khi khởi tạo sẽ tạo Center file</div>
@@ -614,7 +614,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.3. BoQ Architech</div>
+<div class="node-title">0.1.3. BOQ Architecture</div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">File này sẽ lưu bản sao của BoQ dự án, đổi đuôi thành _Arch_Version</div>
@@ -767,7 +767,7 @@
 <div class="node-title">E.1.1.1. Thông tin tường trong file template</div>
 <div class="node-children">
 <div class="node-card level-5>
-<div class="node-title">💡 [VÍ DỤ QUY CÁCH ĐẶT TÊN TƯỜNG NGOÀI]<br>Ví dụ: BSV_ExWall_100_1231<br>+ ExWall: Kí hiệu tường ngoài<br>+ 100: Kí hiệu chiều dày tường (mm)<br>+ 1231: Thứ tự các lớp hoàn thiện: Sơn trong (1) - Trát trong (2) - Trát ngoài (3) - Sơn ngoài (1)</div>
+<div class="node-title">💡 [VÍ DỤ QUY CÁCH ĐẶT TÊN TƯỜNG NGOÀI]<br>Ví dụ: BIM_ExWall_100_1231<br>+ ExWall: Kí hiệu tường ngoài<br>+ 100: Kí hiệu chiều dày tường (mm)<br>+ 1231: Thứ tự các lớp hoàn thiện: Sơn trong (1) - Trát trong (2) - Trát ngoài (3) - Sơn ngoài (1)</div>
 </div>
 <div class="node-card level-5>
 <div class="node-title">- 1</div>
@@ -840,7 +840,7 @@
 <div class="node-title">Lớp vật liệu trừ khối lượng sơn trên trần</div>
 <div class="node-children">
 <div class="node-card level-7>
-<div class="node-title">BSV_TruSonTrat_010_0900</div>
+<div class="node-title">BIM_TruSonTrat_010_0900</div>
 </div>
 </div>
 </div>
@@ -915,10 +915,10 @@
 <div class="node-title">E.1.3. Kiểm soát lại các mục va chạm với kết cấu bằng tool</div>
 <div class="node-children">
 <div class="node-card level-4>
-<div class="node-title"><span class="tool-badge">BSV_Arch_DieuChinhOffsetTuongtheoKetCau</span></div>
+<div class="node-title"><span class="tool-badge">BIM_Arch_DieuChinhOffsetTuongtheoKetCau</span></div>
 </div>
 <div class="node-card level-4>
-<div class="node-title"><span class="tool-badge">BSV_Arch_GiaoCatTuongtheoKetCau</span></div>
+<div class="node-title"><span class="tool-badge">BIM_Arch_GiaoCatTuongtheoKetCau</span></div>
 </div>
 </div>
 </div>
@@ -956,22 +956,22 @@
 <div class="node-title">I.1. Dựng bằng <span class="tool-badge">Atool</span> cho lanh tô</div>
 </div>
 <div class="node-card level-3>
-<div class="node-title">I.2. Dựng bổ trụ bằng Tool: <span class="tool-badge">BSV_Arch_BoTriBoTruTuDong_V2</span></div>
+<div class="node-title">I.2. Dựng bổ trụ bằng Tool: <span class="tool-badge">BIM_Arch_BoTriBoTruTuDong_V2</span></div>
 </div>
 <div class="node-card level-3>
 <div class="node-title">I.3. Dựng các loại giằng tường bằng tool:</div>
 <div class="node-children">
 <div class="node-card level-4>
-<div class="node-title"><span class="tool-badge">BSV_Arch_RaiGiangDinhTuong_V1</span></div>
+<div class="node-title"><span class="tool-badge">BIM_Arch_RaiGiangDinhTuong_V1</span></div>
 </div>
 <div class="node-card level-4>
-<div class="node-title"><span class="tool-badge">BSV_Arch_RaiGiangChanTuong_V1</span></div>
+<div class="node-title"><span class="tool-badge">BIM_Arch_RaiGiangChanTuong_V1</span></div>
 </div>
 <div class="node-card level-4>
-<div class="node-title"><span class="tool-badge">BSV_Arch_RaiGiangTuong_V1</span></div>
+<div class="node-title"><span class="tool-badge">BIM_Arch_RaiGiangTuong_V1</span></div>
 </div>
 <div class="node-card level-4>
-<div class="node-title"><span class="tool-badge">BSV_Arch_RaiGiangDinhTuongKCua_V1</span></div>
+<div class="node-title"><span class="tool-badge">BIM_Arch_RaiGiangDinhTuongKCua_V1</span></div>
 </div>
 </div>
 </div>
@@ -992,7 +992,7 @@
 <div class="node-title">L. KL hoàn thiện kết cấu</div>
 <div class="node-children">
 <div class="node-card level-3>
-<div class="node-title">L.1. Chạy tool: <span class="tool-badge">BSV_Arch_HoanThienCotTranKetCauDungSan_V1</span></div>
+<div class="node-title">L.1. Chạy tool: <span class="tool-badge">BIM_Arch_HoanThienCotTranKetCauDungSan_V1</span></div>
 </div>
 <div class="node-card level-3>
 <div class="node-title">L.2. Sử dụng lớp special equipment làm lớp hoàn thiện</div>
@@ -1007,13 +1007,13 @@
 <div class="node-title">B2. quét chọn trong view 3D (1) đó toàn bộ categories cột, dầm, special equipment (ván khuôn LTBT) =&gt; ẩn bằng lệnh EH</div>
 </div>
 <div class="node-card level-5>
-<div class="node-title">B3. tạo 1 3D view mới có tên View KC (2), tạo filter cho parameter <span class="param-badge">BSV_XuongChinh</span> : TenXuong_KC =&gt; chọn filter contain cho parameter <span class="param-badge">BSV_XuongChinh</span> với KC</div>
+<div class="node-title">B3. tạo 1 3D view mới có tên View KC (2), tạo filter cho parameter <span class="param-badge">BIM_XuongChinh</span> : TenXuong_KC =&gt; chọn filter contain cho parameter <span class="param-badge">BIM_XuongChinh</span> với KC</div>
 </div>
 <div class="node-card level-5>
 <div class="node-title">B4. vào view 3D (1) HI (isolate) file kết cấu cần convert =&gt; chạy tool <span class="tool-badge">Convertlinktomodel</span> dynamo trong sever để conver file link</div>
 </div>
 <div class="node-card level-5>
-<div class="node-title">B5. Convert xong quét chọn toàn bộ đối tượng đã convert trong view 3D (1) gắn biến cho parameter <span class="param-badge">BSV_XuongChinh</span> : TenXuong_KC</div>
+<div class="node-title">B5. Convert xong quét chọn toàn bộ đối tượng đã convert trong view 3D (1) gắn biến cho parameter <span class="param-badge">BIM_XuongChinh</span> : TenXuong_KC</div>
 </div>
 <div class="node-card level-5>
 <div class="node-title">B6. qua view 3D (2) quét chọn toàn bộ ván khuôn =&gt; xóa</div>
@@ -1103,7 +1103,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.3. <span class="param-badge">BSV_PhanKhu</span></div>
+<div class="node-title">0.1.3. <span class="param-badge">BIM_Zone_Area</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Phân khu xưởng hoặc hạng mục khác: &quot;Khu cần phân&quot;</div>
@@ -1111,7 +1111,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.4. <span class="param-badge">BSV_XuongChinh</span></div>
+<div class="node-title">0.1.4. <span class="param-badge">BIM_XuongChinh</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Đặt tên xưởng để phân xưởng cho file combine: &quot;tên xưởng&quot;</div>
@@ -1192,7 +1192,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.3. <span class="param-badge">BSV_PhanKhu</span></div>
+<div class="node-title">0.1.3. <span class="param-badge">BIM_Zone_Area</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Phân khu xưởng hoặc hạng mục khác: &quot;Khu cần phân&quot;</div>
@@ -1200,7 +1200,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.4. <span class="param-badge">BSV_XuongChinh</span></div>
+<div class="node-title">0.1.4. <span class="param-badge">BIM_XuongChinh</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Đặt tên xưởng để phân xưởng cho file combine: &quot;tên xưởng&quot;</div>
@@ -1249,7 +1249,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.3. <span class="param-badge">BSV_PhanKhu</span></div>
+<div class="node-title">0.1.3. <span class="param-badge">BIM_Zone_Area</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Phân khu xưởng hoặc hạng mục khác: &quot;Khu cần phân&quot;</div>
@@ -1257,7 +1257,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.4. <span class="param-badge">BSV_XuongChinh</span></div>
+<div class="node-title">0.1.4. <span class="param-badge">BIM_XuongChinh</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Đặt tên xưởng để phân xưởng cho file combine: &quot;tên xưởng&quot;</div>
@@ -1306,7 +1306,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.3. <span class="param-badge">BSV_PhanKhu</span></div>
+<div class="node-title">0.1.3. <span class="param-badge">BIM_Zone_Area</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Phân khu xưởng hoặc hạng mục khác: &quot;Khu cần phân&quot;</div>
@@ -1314,7 +1314,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.4. <span class="param-badge">BSV_XuongChinh</span></div>
+<div class="node-title">0.1.4. <span class="param-badge">BIM_XuongChinh</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Đặt tên xưởng để phân xưởng cho file combine: &quot;tên xưởng&quot;</div>
@@ -1363,7 +1363,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.9.3. <span class="param-badge">BSV_TratFull</span></div>
+<div class="node-title">0.9.3. <span class="param-badge">BIM_TratFull</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Điền 1 nếu cửa nằm trong tường, các cạnh của cửa đều cần trát        Điền 0 nếu cửa nằm trên tường 1m hoặc có chiều cao cố định</div>
@@ -1371,7 +1371,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.9.4. <span class="param-badge">BSV_Trat1m</span></div>
+<div class="node-title">0.9.4. <span class="param-badge">BIM_Trat1m</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Điền 0 nếu cửa nằm trong tường, các cạnh của cửa đều cần trát        Điền 1 nếu cửa nằm trên tường 1m hoặc có chiều cao cố định</div>
@@ -1382,10 +1382,10 @@
 <div class="node-title">0.9.5. <span class="param-badge">KL_TratCanhCua</span></div>
 <div class="node-children">
 <div class="node-card level-5>
-<div class="node-title">KL sử dụng đối với những cửa có giá trị <span class="param-badge">BSV_TratFull</span> là &quot;1&quot;</div>
+<div class="node-title">KL sử dụng đối với những cửa có giá trị <span class="param-badge">BIM_TratFull</span> là &quot;1&quot;</div>
 </div>
 <div class="node-card level-5 summary-card warning-card>
-<div class="node-title"><span class="warning-badge">📌 [LƯU Ý TỔNG KẾT]</span><br>Những cửa nằm hoàn toàn trên kết cấu thép thì điền <span class="param-badge">BSV_TratFull</span> = 0, <span class="param-badge">BSV_Trat1m</span>=0: =&gt; những cửa này k lấy KL tô trát</div>
+<div class="node-title"><span class="warning-badge">📌 [LƯU Ý TỔNG KẾT]</span><br>Những cửa nằm hoàn toàn trên kết cấu thép thì điền <span class="param-badge">BIM_TratFull</span> = 0, <span class="param-badge">BIM_Trat1m</span>=0: =&gt; những cửa này k lấy KL tô trát</div>
 </div>
 </div>
 </div>
@@ -1393,21 +1393,21 @@
 <div class="node-title">0.9.5. <span class="param-badge">KL_TratCanhCua1m</span></div>
 <div class="node-children">
 <div class="node-card level-5>
-<div class="node-title">KL sử dụng đối với những cửa có giá trị <span class="param-badge">BSV_TratFull</span> là &quot;0&quot;</div>
+<div class="node-title">KL sử dụng đối với những cửa có giá trị <span class="param-badge">BIM_TratFull</span> là &quot;0&quot;</div>
 </div>
 <div class="node-card level-5 summary-card warning-card>
-<div class="node-title"><span class="warning-badge">📌 [LƯU Ý TỔNG KẾT]</span><br>Những cửa nằm hoàn toàn trên kết cấu thép thì điền <span class="param-badge">BSV_TratFull</span> = 0, <span class="param-badge">BSV_Trat1m</span>=0: =&gt; những cửa này k lấy KL tô trát</div>
+<div class="node-title"><span class="warning-badge">📌 [LƯU Ý TỔNG KẾT]</span><br>Những cửa nằm hoàn toàn trên kết cấu thép thì điền <span class="param-badge">BIM_TratFull</span> = 0, <span class="param-badge">BIM_Trat1m</span>=0: =&gt; những cửa này k lấy KL tô trát</div>
 </div>
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.9.5. <span class="param-badge">BSV_ChieuDayThachCao</span></div>
+<div class="node-title">0.9.5. <span class="param-badge">BIM_ChieuDayThachCao</span></div>
 <div class="node-children">
 <div class="node-card level-5>
-<div class="node-title">KL sử dụng đối với những cửa có giá trị <span class="param-badge">BSV_ChieuDayThachCao</span></div>
+<div class="node-title">KL sử dụng đối với những cửa có giá trị <span class="param-badge">BIM_ChieuDayThachCao</span></div>
 <div class="node-children">
 <div class="node-card level-6>
-<div class="node-title"><span class="param-badge">BSV_ChieuDayThachCao</span>: chính là chiều dày tấm thạch cao cho phần ốp cửa (nhập tay)</div>
+<div class="node-title"><span class="param-badge">BIM_ChieuDayThachCao</span>: chính là chiều dày tấm thạch cao cho phần ốp cửa (nhập tay)</div>
 </div>
 </div>
 </div>
@@ -1422,10 +1422,10 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.9.2. BSV_ChieuDayTuong</div>
+<div class="node-title">0.9.2. BIM_ChieuDayTuong</div>
 <div class="node-children">
 <div class="node-card level-5>
-<div class="node-title">Chạy tool: <span class="tool-badge">BSV_Arch_LayChieuDayTuongChoCua_V1</span></div>
+<div class="node-title">Chạy tool: <span class="tool-badge">BIM_Arch_LayChieuDayTuongChoCua_V1</span></div>
 </div>
 </div>
 </div>
@@ -1438,7 +1438,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.9.5. <span class="param-badge">BSV_PhanKhu</span></div>
+<div class="node-title">0.9.5. <span class="param-badge">BIM_Zone_Area</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Phân khu xưởng hoặc hạng mục khác: &quot;Khu cần phân&quot;</div>
@@ -1446,7 +1446,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.9.6. <span class="param-badge">BSV_XuongChinh</span></div>
+<div class="node-title">0.9.6. <span class="param-badge">BIM_XuongChinh</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Đặt tên xưởng để phân xưởng cho file combine: &quot;tên xưởng&quot;</div>
@@ -1483,7 +1483,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.3. <span class="param-badge">BSV_PhanKhu</span></div>
+<div class="node-title">0.1.3. <span class="param-badge">BIM_Zone_Area</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Phân khu xưởng hoặc hạng mục khác: &quot;Khu cần phân&quot;</div>
@@ -1491,7 +1491,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.4. <span class="param-badge">BSV_XuongChinh</span></div>
+<div class="node-title">0.1.4. <span class="param-badge">BIM_XuongChinh</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Đặt tên xưởng để phân xưởng cho file combine: &quot;tên xưởng&quot;</div>
@@ -1532,7 +1532,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.10.2. <span class="param-badge">BSV_PhanKhu</span></div>
+<div class="node-title">0.10.2. <span class="param-badge">BIM_Zone_Area</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Phân khu xưởng hoặc hạng mục khác: &quot;Khu cần phân&quot;</div>
@@ -1540,7 +1540,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.10.3. <span class="param-badge">BSV_XuongChinh</span></div>
+<div class="node-title">0.10.3. <span class="param-badge">BIM_XuongChinh</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Đặt tên xưởng để phân xưởng cho file combine: &quot;tên xưởng&quot;</div>
@@ -1548,7 +1548,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.10.4. <span class="param-badge">BSV_HTKC</span></div>
+<div class="node-title">0.10.4. <span class="param-badge">BIM_HTKC</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">&quot;TratDinhTuong&quot; gán cho cấu kiện giằng đỉnh tường có khối lượng trát</div>
@@ -1589,7 +1589,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.3. <span class="param-badge">BSV_PhanKhu</span></div>
+<div class="node-title">0.1.3. <span class="param-badge">BIM_Zone_Area</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Phân khu xưởng hoặc hạng mục khác: &quot;Khu cần phân&quot;</div>
@@ -1597,7 +1597,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.4. <span class="param-badge">BSV_XuongChinh</span></div>
+<div class="node-title">0.1.4. <span class="param-badge">BIM_XuongChinh</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Đặt tên xưởng để phân xưởng cho file combine: &quot;tên xưởng&quot;</div>
@@ -1630,7 +1630,7 @@
 <div class="node-title">NOTE: Bảng thống kê Quantities</div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.1. <span class="param-badge">BSV_HTKC</span></div>
+<div class="node-title">0.1.1. <span class="param-badge">BIM_HTKC</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">NOTE: Sẽ gán cả trát và sơn vào HTKC kèm theo cấu kiện Host: Ví dụ : TratTrongSonTrong_LTBT</div>
@@ -1641,7 +1641,7 @@
 </div>
 </div>
 <div class="node-card level-5>
-<div class="node-title">Nguyên tắc gán giá trị cho parameter <span class="param-badge">BSV_HTKC</span></div>
+<div class="node-title">Nguyên tắc gán giá trị cho parameter <span class="param-badge">BIM_HTKC</span></div>
 <div class="node-children">
 <div class="node-card level-6>
 <div class="node-title">Tên công tác viết liền không dấu và in hoa chữ cái đầu. Những công tác chính</div>
@@ -1671,7 +1671,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.3. <span class="param-badge">BSV_PhanKhu</span></div>
+<div class="node-title">0.1.3. <span class="param-badge">BIM_Zone_Area</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Phân khu xưởng hoặc hạng mục khác: &quot;Khu cần phân&quot;</div>
@@ -1679,7 +1679,7 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.4. <span class="param-badge">BSV_XuongChinh</span></div>
+<div class="node-title">0.1.4. <span class="param-badge">BIM_XuongChinh</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">Đặt tên xưởng để phân xưởng cho file combine: &quot;tên xưởng&quot;</div>
@@ -1687,10 +1687,10 @@
 </div>
 </div>
 <div class="node-card level-4>
-<div class="node-title">0.1.4. <span class="param-badge">BSV_PhanLoai</span></div>
+<div class="node-title">0.1.4. <span class="param-badge">BIM_PhanLoai</span></div>
 <div class="node-children">
 <div class="node-card level-5>
-<div class="node-title"><span class="param-badge">BSV_PhanLoai</span> sẽ dùng để phân loại các loại cấu kiện theo BoQ (tên thang, tên tam cấp...)</div>
+<div class="node-title"><span class="param-badge">BIM_PhanLoai</span> sẽ dùng để phân loại các loại cấu kiện theo BoQ (tên thang, tên tam cấp...)</div>
 </div>
 </div>
 </div>
@@ -1779,7 +1779,7 @@
 <div class="node-title">0.13. Hoàn thiện kết cấu Detail</div>
 <div class="node-children">
 <div class="node-card level-4>
-<div class="node-title">bảng này tương tự bảng HTKC nhưng bảng này sẽ dùng để quản lí quá trình gán tham biến cho parameter <span class="param-badge">BSV_HTKC</span></div>
+<div class="node-title">bảng này tương tự bảng HTKC nhưng bảng này sẽ dùng để quản lí quá trình gán tham biến cho parameter <span class="param-badge">BIM_HTKC</span></div>
 <div class="node-children">
 <div class="node-card level-5>
 <div class="node-title">📷 [Bản vẽ minh họa] bảng này tương tự bảng HTKC nhưng bảng n</div>

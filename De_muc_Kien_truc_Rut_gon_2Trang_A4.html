@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bảng Đề Mục Quy Trình & Bóc Tách BOQ Kiến Trúc (Rút Gọn 2 Trang A4) - BSV Standard</title>
+  <title>Bảng Đề Mục Quy Trình & Bóc Tách BOQ Kiến Trúc (Rút Gọn 2 Trang A4) - BIM Standard</title>
   <style>
     /* ==========================================================================
        A4 EXECUTIVE PRINT STYLESHEET - ARCHITECTURE 2 PAGES EXACTLY
@@ -417,7 +417,7 @@
       <div class="meta-bar">
         <div class="meta-bar-item"><strong>4 Bước tác nghiệp:</strong> Tiếp cận ➔ Xử lý CAD ➔ Model Central ➔ BOQ</div>
         <div class="meta-bar-item"><strong>Công cụ chính:</strong> Atool, BimSpeed, BoTriBoTru, RaiGiang</div>
-        <div class="meta-bar-item"><strong>Bộ tham số:</strong> Comments, Note, BSV_PhanKhu, BSV_HTKC</div>
+        <div class="meta-bar-item"><strong>Bộ tham số:</strong> Comments, Note, BIM_Zone_Area, BIM_HTKC</div>
         <div class="meta-bar-item"><strong>Trang:</strong> 1 / 2 (Khởi Tạo &amp; Dựng Hình)</div>
       </div>
 
@@ -429,7 +429,7 @@
             <li><strong>0. Khởi tạo cây thư mục Server:</strong><br>
               • <code>0.1.1. Cad template:</code> Mặt bằng, mặt đứng, mặt cắt, cắt thang.<br>
               • <code>0.1.2. Rvt file:</code> Tạo từ template chuẩn <code>Template_Rvt_R20\ARC</code> ➔ Tạo Central file.<br>
-              • <code>0.1.3. BoQ Architech:</code> Lưu bản sao đặt đuôi <code>_Arch_Version</code>.
+              • <code>0.1.3. BOQ Architecture:</code> Lưu bản sao đặt đuôi <code>_Arch_Version</code>.
             </li>
             <li><strong>A. Đọc tổng quan dự án:</strong> Nắm hạng mục chính/phụ, diện tích sàn, số tầng, kiểu kiến trúc (vách tole, tường xây).</li>
             <li><strong>B. Chỉ mục chung &amp; Hoàn thiện:</strong><br>
@@ -514,8 +514,8 @@
             <td class="name-cell">Cửa, Lanh Tô, Bổ Trụ, Giằng Tường</td>
             <td>
               Dựng lanh tô bằng <span class="tool-pill">Atool</span>.<br>
-              Dựng bổ trụ bằng <span class="tool-pill">BSV_Arch_BoTriBoTruTuDong_V2</span>.<br>
-              Rải giằng tường bằng bộ 4 tools <span class="tool-pill">BSV_Arch_RaiGiang*</span>.
+              Dựng bổ trụ bằng <span class="tool-pill">BIM_Arch_BoTriBoTruTuDong_V2</span>.<br>
+              Rải giằng tường bằng bộ 4 tools <span class="tool-pill">BIM_Arch_RaiGiang*</span>.
             </td>
             <td>
               • Bố trí giằng đỉnh tường, giằng chân tường, giằng kẹp cửa.<br>
@@ -547,9 +547,9 @@
         <div style="font-size: 7.1pt; color: #334155; line-height: 1.38;">
           <strong>B1.</strong> Mở View 3D (1) full cấu kiện ➔ Chạy tool Join tường với cột, dầm.<br>
           <strong>B2.</strong> Quét chọn toàn bộ Cột, Dầm, Special Equipment (ván khuôn LTBT) trong View 3D (1) ➔ Ẩn bằng lệnh <code>EH</code>.<br>
-          <strong>B3.</strong> Tạo View 3D (2) tên <code>View KC</code>, tạo Filter cho biến <span class="param-pill">BSV_XuongChinh</span> chứa chữ <code>KC</code>.<br>
+          <strong>B3.</strong> Tạo View 3D (2) tên <code>View KC</code>, tạo Filter cho biến <span class="param-pill">BIM_XuongChinh</span> chứa chữ <code>KC</code>.<br>
           <strong>B4.</strong> Vào View 3D (1) <code>HI</code> (Isolate) file Kết Cấu cần convert ➔ Chạy tool <span class="tool-pill">Convertlinktomodel</span> trên server Dynamo.<br>
-          <strong>B5.</strong> Quét chọn toàn bộ đối tượng đã convert ➔ Gán biến <span class="param-pill">BSV_XuongChinh</span> : <code>TenXuong_KC</code>.<br>
+          <strong>B5.</strong> Quét chọn toàn bộ đối tượng đã convert ➔ Gán biến <span class="param-pill">BIM_XuongChinh</span> : <code>TenXuong_KC</code>.<br>
           <strong>B6.</strong> Qua View 3D (2) quét chọn toàn bộ ván khuôn kết cấu cũ ➔ Xóa sạch.<br>
           <strong>B7.</strong> Qua View 3D (1) dùng lệnh <code>HR</code> hiện toàn bộ tường ➔ Chạy lại ván khuôn kết cấu làm <strong>lớp Hoàn Thiện Kết Cấu</strong>.
         </div>
@@ -621,8 +621,8 @@
       <!-- Meta Ribbon Page 2 -->
       <div class="meta-bar">
         <div class="meta-bar-item"><strong>Mục tiêu:</strong> Bóc tách chính xác 100% theo BOQ CĐT</div>
-        <div class="meta-bar-item"><strong>Tham số Cửa:</strong> BSV_TratFull, BSV_Trat1m, KL_TratCanh</div>
-        <div class="meta-bar-item"><strong>Tham số Chung:</strong> Comments, Note, BSV_PhanKhu, XuongChinh</div>
+        <div class="meta-bar-item"><strong>Tham số Cửa:</strong> BIM_TratFull, BIM_Trat1m, KL_TratCanh</div>
+        <div class="meta-bar-item"><strong>Tham số Chung:</strong> Comments, Note, BIM_Zone_Area, XuongChinh</div>
         <div class="meta-bar-item"><strong>Trang:</strong> 2 / 2 (Gán Biến &amp; Đối Soát BOQ)</div>
       </div>
 
@@ -649,8 +649,8 @@
               <span class="param-pill">Note</span> : Mô tả loại tường (VD: <code>VachThachCao</code>, <code>TuongTrong</code>, <code>TuongNgoai</code>)
             </td>
             <td>
-              <span class="param-pill">BSV_PhanKhu</span> : Phân khu xưởng hoặc hạng mục.<br>
-              <span class="param-pill">BSV_XuongChinh</span> : Tên xưởng để phân xưởng combine.<br>
+              <span class="param-pill">BIM_Zone_Area</span> : Phân khu xưởng hoặc hạng mục.<br>
+              <span class="param-pill">BIM_XuongChinh</span> : Tên xưởng để phân xưởng combine.<br>
               Filter: <code>Comments = TuongVach</code>; Sorting theo Note &amp; Thickness.
             </td>
           </tr>
@@ -673,7 +673,7 @@
               <span class="param-pill">Note</span> : Tên loại sàn hoặc phạm vi theo BOQ
             </td>
             <td>
-              <span class="param-pill">BSV_PhanKhu</span>, <span class="param-pill">BSV_XuongChinh</span>.<br>
+              <span class="param-pill">BIM_Zone_Area</span>, <span class="param-pill">BIM_XuongChinh</span>.<br>
               Filter: <code>Comments = HoanThienSan</code>; Thống kê diện tích (m²) theo từng vật liệu ốp lát, sơn epoxy, mài bóng sàn.
             </td>
           </tr>
@@ -706,11 +706,11 @@
             <td class="name-cell">Door/Window Quantities</td>
             <td>
               <span class="param-pill">Comments</span> : Ghi Sill cửa, cửa ốp thạch cao.<br>
-              <span class="param-pill">BSV_TratFull</span> / <span class="param-pill">BSV_Trat1m</span>
+              <span class="param-pill">BIM_TratFull</span> / <span class="param-pill">BIM_Trat1m</span>
             </td>
             <td>
-              • Cửa nằm trong tường xây: <span class="param-pill">BSV_TratFull = 1</span>, <span class="param-pill">BSV_Trat1m = 0</span> ➔ Lấy biến <code>KL_TratCanhCua</code>.<br>
-              • Cửa trên tường xây 1m: <span class="param-pill">BSV_TratFull = 0</span>, <span class="param-pill">BSV_Trat1m = 1</span> ➔ Lấy biến <code>KL_TratCanhCua1m</code>.<br>
+              • Cửa nằm trong tường xây: <span class="param-pill">BIM_TratFull = 1</span>, <span class="param-pill">BIM_Trat1m = 0</span> ➔ Lấy biến <code>KL_TratCanhCua</code>.<br>
+              • Cửa trên tường xây 1m: <span class="param-pill">BIM_TratFull = 0</span>, <span class="param-pill">BIM_Trat1m = 1</span> ➔ Lấy biến <code>KL_TratCanhCua1m</code>.<br>
               • Cửa trên kết cấu thép: Điền cả 2 biến = <code>0</code> ➔ <span class="amber-pill">Không lấy KL trát</span>.
             </td>
           </tr>
@@ -750,8 +750,8 @@
             <td class="code-cell">0.12 &amp; 0.13. HTKC</td>
             <td class="name-cell">Special Equipment</td>
             <td>
-              <span class="param-pill">BSV_HTKC</span> : Gán mã tiền tố 1 ➔ 6.<br>
-              <span class="param-pill">BSV_PhanLoai</span> : Tên thang, tam cấp, dầm...
+              <span class="param-pill">BIM_HTKC</span> : Gán mã tiền tố 1 ➔ 6.<br>
+              <span class="param-pill">BIM_PhanLoai</span> : Tên thang, tam cấp, dầm...
             </td>
             <td>
               Bảng quản lý phân bổ hoàn thiện kết cấu sang trát/sơn tường trong, tường ngoài, trần và thang bộ. Mặt ván không tận dụng HTKC gán biến <code>KHT</code>.

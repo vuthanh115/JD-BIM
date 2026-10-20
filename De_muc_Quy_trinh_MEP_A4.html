@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quy Trình Triển Khai BIM & Shop Drawing Cơ Điện (MEP) - BSV Standard (In A4)</title>
+  <title>Quy Trình Triển Khai BIM & Shop Drawing Cơ Điện (MEP) - BIM Standard (In A4)</title>
   <style>
     /* ==========================================================================
        A4 EXECUTIVE PRINT STYLESHEET - BỘ MÔN CƠ ĐIỆN MEP (M-E-P-FP)
@@ -422,7 +422,10 @@
           <span>⚙️ NGUYÊN TẮC VÀNG VỀ ĐIỀU PHỐI KHÔNG GIAN CƠ ĐIỆN (CLASH PRIORITY &amp; COORDINATION)</span>
         </div>
         <div class="golden-rule-desc">
-          <strong>1. Thứ tự Ưu tiên Không gian (Clash Space Hierarchy):</strong> Ống tự chảy dốc không thể chuyển hướng (Thoát nước thải/mưa Gravity Pipe) $ightarrow$ Ống gió kích thước lớn khó uốn lượn (Ductwork &gt; 500mm) $ightarrow$ Ống cấp nước áp lực &amp; Ống chữa cháy PCCC $ightarrow$ Máng cáp điện (Cable Tray / Trunking có thể uốn lượn linh hoạt).<br>
+          <strong>1. Thứ tự Ưu tiên Không gian (Clash Space Hierarchy):</strong> Ống tự chảy dốc không thể chuyển hướng (Thoát nước thải/mưa Gravity Pipe) $
+ightarrow$ Ống gió kích thước lớn khó uốn lượn (Ductwork &gt; 500mm) $
+ightarrow$ Ống cấp nước áp lực &amp; Ống chữa cháy PCCC $
+ightarrow$ Máng cáp điện (Cable Tray / Trunking có thể uốn lượn linh hoạt).<br>
           <strong>2. Bản vẽ Định vị Lỗ mở Kết cấu (SOD - Structural Opening):</strong> Bắt buộc chốt bản vẽ lỗ mở dầm, vách, sàn trước khi Nhà thầu Kết cấu đổ bê tông. Mọi lỗ mở dầm phải tuân thủ vùng an toàn: nằm trong khoảng $1/3$ chiều cao giữa dầm ($h/3$) và cách mép cột tối thiểu $2h$.<br>
           <strong>3. Kiểm soát Giá treo &amp; Tải trọng (Hanger &amp; Support QA):</strong> Tuyệt đối không treo chung các hệ thống vào nhau (VD: Cấm treo máng điện vào ty ren ống PCCC). Bắt buộc tính toán tải trọng động và lắp giảm chấn cho bơm/chiller.
         </div>
@@ -479,7 +482,9 @@
               <span class="sub-card-pill">Hệ Nước</span>
             </div>
             <ul class="bullet-list">
-              <li><strong>Cấp nước sinh hoạt &amp; công nghiệp:</strong> Bể ngầm $ightarrow$ Bơm tăng áp biến tần $ightarrow$ Tuyến ống cấp PPR / HDPE / Inox 304, van giảm áp (PRV), đồng hồ đo nước.</li>
+              <li><strong>Cấp nước sinh hoạt &amp; công nghiệp:</strong> Bể ngầm $
+ightarrow$ Bơm tăng áp biến tần $
+ightarrow$ Tuyến ống cấp PPR / HDPE / Inox 304, van giảm áp (PRV), đồng hồ đo nước.</li>
               <li><strong>Thoát nước thải &amp; Thông hơi (Soil, Waste &amp; Vent):</strong> Ống uPVC class 2/3 hoặc ống gang đúc chống ồn; độ dốc chuẩn $1\% \div 2\%$; bố trí đai co giãn nhiệt (Expansion Joint) và ống thông hơi trục đứng xuyên mái.</li>
               <li><strong>Thoát nước mưa mái (Stormwater):</strong> Hệ thống phễu thu nước mưa có rọ chắn rác, hệ thoát nước mưa trọng lực hoặc hệ thống thoát nước mưa Siphonic lưu lượng lớn cho mái xưởng 30.000m².</li>
               <li><strong>Hệ thống Xử lý Nước thải (WWTP):</strong> Tuyến thu gom tách dầu mỡ (Grease Trap), hố ga lắng cặn, trạm xử lý nước thải đạt cột A QCVN 40.</li>
@@ -628,7 +633,8 @@
               <li><strong>Thử áp lực đường ống (Hydrostatic Pressure Test):</strong> Bơm nước thử áp ở mức <code>1.5 lần áp suất làm việc</code> (tối thiểu 10 bar) duy trì liên tục trong 2 giờ, độ sụt áp $\le 0.2	ext{ bar}$.</li>
               <li><strong>Thử rò rỉ ống gió (Duct Air Leakage Testing):</strong> Theo chuẩn SMACNA, thử kín bằng khói hoặc quạt tạo áp đo lượng gió rò rỉ.</li>
               <li><strong>Cân bằng lưu lượng gió và nước (TAB - Testing, Adjusting, Balancing):</strong> Hiệu chỉnh van cân bằng nước lạnh và miệng gió đạt lưu lượng thiết kế $\pm 10\%$.</li>
-              <li><strong>Chạy thử liên động PCCC &amp; Khói:</strong> Kích hoạt cảm biến khói báo cháy $ightarrow$ Tự động hạ thang máy về tầng 1, mở cửa từ thoát hiểm, bật quạt tăng áp thang bộ, bật hút khói hành lang, đóng van chặn lửa FD.</li>
+              <li><strong>Chạy thử liên động PCCC &amp; Khói:</strong> Kích hoạt cảm biến khói báo cháy $
+ightarrow$ Tự động hạ thang máy về tầng 1, mở cửa từ thoát hiểm, bật quạt tăng áp thang bộ, bật hút khói hành lang, đóng van chặn lửa FD.</li>
               <li><strong>Nghiệm thu cấp phép PCCC:</strong> Kiểm định vật tư thiết bị, hồ sơ nghiệm thu kỹ thuật và cấp biên bản nghiệm thu PCCC của Cục Cảnh sát PCCC.</li>
             </ul>
           </div>
