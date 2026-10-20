@@ -497,7 +497,7 @@
               <td>
                 • Cây thư mục Server 01-09<br>
                 • Quy tắc Join Kết cấu ưu tiên<br>
-                • Cốt thép BBS 8 cột, cắt 11.7m<br>
+                • Shop Rebar 14 cấu kiện thực chiến<br>
                 • Cơ điện MEP: CSD/SOD & T&C<br>
                 • P6 CPM 100 tác vụ đa bộ môn
               </td>
@@ -725,9 +725,9 @@
           </p>
           <div style="font-size: 7.3pt; line-height: 1.45; background: #fff; padding: 6px; border: 1px solid #fde68a; border-radius: 4px;">
             <strong>1. RFI (Request for Information):</strong> Nhà thầu hỏi, KTS/Kỹ sư trả lời trong <strong>7 ngày</strong>.<br>
-            <strong>2. ASI (Supplemental Instructions):</strong> Làm rõ thiết kế, <em>chi phí & thời gian = $0</em>.<br>
+            <strong>2. ASI (Supplemental Instructions):</strong> Làm rõ thiết kế, <em>chi phí & thời gian = 0 đồng</em>.<br>
             <strong>3. PR (Proposal Request):</strong> Yêu cầu báo giá thay đổi khi có phát sinh chi phí.<br>
-            <strong>4. CCD (Change Directive):</strong> Lệnh thi công ngay với tình huống khẩn cấp (&lt;$10k).<br>
+            <strong>4. CCD (Change Directive):</strong> Lệnh thi công ngay với tình huống khẩn cấp (&lt; 10.000 USD).<br>
             <strong>5. CO (Change Order):</strong> Hợp thức hóa bằng phụ lục hợp đồng pháp lý chính thức.
           </div>
         </div>
@@ -887,10 +887,10 @@
       </div>
 
       <div class="section-title">
-        <span>🏛️ Quy Trình Kiến Trúc & Shop Drawing Cốt Thép Thực Chiến (BBS)</span>
+        <span>🏛️ Quy Trình Kiến Trúc & Shop Drawing Cốt Thép Thực Chiến</span>
       </div>
       <div class="section-subtitle">
-        Chuẩn hóa hệ thống dữ liệu kiến trúc 01-09 và giải thuật tối ưu cắt uốn thép 11.7m hao hụt &lt; 2%
+        Chuẩn hóa hệ thống dữ liệu kiến trúc 01-09 và quy chuẩn triển khai bản vẽ Shop Drawing chi tiết cấu kiện
       </div>
 
       <!-- BỘ MÔN KIẾN TRÚC -->
@@ -940,63 +940,62 @@
             <tr>
               <td><strong>Móng (Footings)</strong></td>
               <td>Thép đài móng uốn móc neo 30d; thép giằng móng chạy suốt, so le mối nối 50%.</td>
-              <td>Lớp bảo vệ $C_{nom} = 50\text{mm}$ (móng tiếp xúc đất); $C_{nom} = 30\text{mm}$ (dầm móng).</td>
+              <td>Lớp bảo vệ Lớp bảo vệ C<sub>nom</sub> = 50mm (móng đất); C<sub>nom</sub> = 30mm (dầm móng).</td>
               <td><code>BSV_02.1_Detail_Foundation</code>, tỷ lệ 1:25; tag thép hiển thị Số hiệu / Đường kính / Khoảng cách.</td>
             </tr>
             <tr>
               <td><strong>Cột (Columns)</strong></td>
-              <td>Thép chủ bố trí đối xứng, nối tại 1/2 chiều cao tầng; đai dày $s = 100\text{mm}$ tại chân & đầu cột.</td>
-              <td>Chiều dài đoạn nối buộc $L_d = 40d$; so le tiết diện nối không quá 50% thanh thép.</td>
-              <td><code>BSV_02.2_Detail_Column</code>, mặt cắt ngang 1:20; chi tiết gióng đai bẻ móc $135^\circ$.</td>
+              <td>Thép chủ bố trí đối xứng, nối tại 1/2 chiều cao tầng; đai dày s = 100mm tại chân & đầu cột.</td>
+              <td>Chiều dài đoạn nối buộc L<sub>d</sub> = 40d; so le tiết diện nối không quá 50% thanh thép.</td>
+              <td><code>BSV_02.2_Detail_Column</code>, mặt cắt ngang 1:20; chi tiết gióng đai bẻ móc 135°.</td>
             </tr>
             <tr>
               <td><strong>Dầm & Sàn (Beams/Slabs)</strong></td>
               <td>Thép gối dầm nối tại giữa nhịp; thép bụng nối tại gối; thép sàn sole mối nối, kê con kê bê tông mác cao.</td>
-              <td>$C_{nom} = 25\text{mm}$ (dầm); $C_{nom} = 15\text{mm}$ (sàn); neo thép vào cột $L_{neo} \ge 35d$.</td>
+              <td>C<sub>nom</sub> = 25mm (dầm); C<sub>nom</sub> = 15mm (sàn); neo thép vào cột L<sub>neo</sub> ≥ 35d.</td>
               <td><code>BSV_02.3_Detail_Beam</code>, triển khai mặt cắt dọc dầm 1:25 kèm bảng uốn BBS chi tiết.</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <!-- BẢNG BBS 8 CỘT & THUẬT TOÁN CẮT THÉP 11.7M -->
+      <!-- QUY TRÌNH 5 BƯỚC ĐÓNG GÓI SHOP REBAR & HỆ THỐNG VIEW TEMPLATES -->
       <div class="grid-2">
+        <div class="box box-green">
+          <div class="box-title">
+            <span>📋 Quy Trình 5 Bước Đóng Gói Hồ Sơ Shop Drawing Rebar Thực Chiến</span>
+            <span class="badge badge-green">Shop Protocol</span>
+          </div>
+          <ul class="check-list">
+            <li><strong>Bước 1 - Khởi tạo mô hình:</strong> Dùng BimSpeed Rebar nhập đúng lớp bê tông bảo vệ C<sub>nom</sub> chuẩn (Móng 50mm, Cột 30mm, Dầm 25mm, Sàn 15mm).</li>
+            <li><strong>Bước 2 - Phân vùng Partition:</strong> Gán biến <code>Partition</code> theo cấu kiện (F1, C1, B1, S1...) và biến phân loại dự toán <code>BSV_PhanLoai</code>.</li>
+            <li><strong>Bước 3 - View Templates &amp; Range:</strong> Đóng gói hệ thống View Templates tỷ lệ 1:20 / 1:25, thiết lập View Range và Filter màu đường kính thép.</li>
+            <li><strong>Bước 4 - Tag 2D &amp; Dimension:</strong> Bố trí Tag thép 2D Rebar Tag tắt leader, Dim chuỗi khoảng rải đai mau/thưa chính xác.</li>
+            <li><strong>Bước 5 - Phối hợp nút giao 3D:</strong> Kiểm tra va chạm giao thoa giữa thép cột - dầm - móng, xử lý so le cao độ trước khi phát hành thi công.</li>
+          </ul>
+        </div>
+
         <div class="box box-gray">
           <div class="box-title">
-            <span>📊 Cấu Trúc Bảng Uốn Thép BBS Chuẩn 8 Cột (Revit Schedule)</span>
-            <span class="badge badge-navy">BBS Standard</span>
+            <span>🏷️ Hệ Thống View Templates &amp; Quy Chuẩn Triển Khai Bản Vẽ</span>
+            <span class="badge badge-navy">View Templates</span>
           </div>
           <table class="table-report" style="margin-bottom: 0;">
             <thead>
-              <tr><th>STT</th><th>Tên Cột</th><th>Tham Số Revit</th><th>Mô Tả Đầu Ra</th></tr>
+              <tr><th>Cấu Kiện</th><th>View Template Mặt Cắt</th><th>View Template Key Plan</th><th>Quy Chuẩn Tag &amp; Dim</th></tr>
             </thead>
             <tbody>
-              <tr><td>1-2</td><td>Số hiệu & Phân vùng</td><td><code>Rebar Number</code>, <code>Partition</code></td><td>Số hiệu thanh thép và mã cấu kiện (VD: F1, C1).</td></tr>
-              <tr><td>3-4</td><td>Đường kính & Số lượng</td><td><code>Bar Diameter</code>, <code>Quantity</code></td><td>Quy cách $\Phi 10 - \Phi 32$ và số lượng thanh trong cấu kiện.</td></tr>
-              <tr><td>5-6</td><td>Chiều dài & Hình dạng</td><td><code>Bar Length</code>, <code>Shape Image</code></td><td>Chiều dài cắt thẳng và hình vẽ uốn móc kèm kích thước chi tiết.</td></tr>
-              <tr><td>7-8</td><td>Trọng lượng & Tổng kg</td><td><code>Weight per Meter</code>, <code>Total Weight</code></td><td>Định mức khối lượng (kg/m) và tổng khối lượng thép gia công.</td></tr>
+              <tr><td><strong>Móng (Fou)</strong></td><td><code>BSV_02.1_Detail_Fou</code></td><td><code>BSV_02_KP_Fou</code></td><td>Tag MB tắt leader; Tag MC Opendot; Cao độ đáy đài.</td></tr>
+              <tr><td><strong>Đà Kiềng (GB)</strong></td><td><code>BSV_03.2_Detail_GB</code></td><td><code>BSV_03.1_KP_GB</code></td><td>Tag uốn dầm; Dim khoảng rải đai; Nét cắt Breakline.</td></tr>
+              <tr><td><strong>Cột (Col)</strong></td><td><code>BSV_05.2_Detail_Col</code></td><td><code>BSV_05.1_KP_Col</code></td><td>Tag thép chủ, đai chính/phụ; Mặt cắt ngang tỷ lệ 1:20.</td></tr>
+              <tr><td><strong>Dầm &amp; Sàn</strong></td><td><code>BSV_07.2_Detail_Beam</code></td><td><code>BSV_08_KP_Slab</code></td><td>Tag Multi-Rebar thép 2 lớp trên/dưới; Thép mũ gối.</td></tr>
             </tbody>
           </table>
-        </div>
-
-        <div class="box box-green">
-          <div class="box-title">
-            <span>✂️ Giải Thuật Ghép Modun Cắt Thép Cây 11.7m (Hao Hụt &lt; 2%)</span>
-            <span class="badge badge-green">Cutting Optimization</span>
-          </div>
-          <p style="font-size: 7.4pt; color: #334155; margin-bottom: 4px;">
-            Ứng dụng thuật toán tối ưu hóa cắt thanh 1 chiều (1D Cutting Stock Problem):
-          </p>
-          <ul class="check-list">
-            <li><strong>Tổ hợp chiều dài:</strong> Ghép các thanh ngắn ($1.2\text{m}, 2.4\text{m}$) với thanh dài ($5.8\text{m}, 9.3\text{m}$) sao cho tổng $\le 11.7\text{m}$.</li>
-            <li><strong>Tận dụng đầu thừa:</strong> Đầu mẩu $\ge 0.8\text{m}$ được tự động chuyển đổi làm râu thép chân tường, cọc định vị hoặc thép giằng gia cường.</li>
-            <li><strong>Hiệu quả kinh tế:</strong> Giảm tỷ lệ hao hụt thép công trường từ mức thông thường <strong>5% - 7%</strong> xuống còn <strong>&lt; 1.8%</strong>, tiết kiệm hàng tỷ đồng cho dự án.</li>
-          </ul>
         </div>
       </div>
 
       <div class="page-footer">
-        <span>Kiến Trúc & Shop Drawing Rebar • Tối ưu cắt thép 11.7m hao hụt &lt; 2%</span>
+        <span>Kiến Trúc & Shop Drawing Rebar • Triển khai bản vẽ chi tiết 14 cấu kiện</span>
         <span>BIM Manager Executive Portfolio • Căn chỉnh in chuẩn A4</span>
         <span>Trang 5 / 8</span>
       </div>
@@ -1085,7 +1084,7 @@
               <td><span class="badge badge-amber">Ưu tiên 4</span></td>
               <td><strong>Máng cáp điện (Cable Tray / Trunking)</strong></td>
               <td>Cần duy trì bán kính uốn cong của cáp động lực; phải đặt cao hơn ống nước tránh rò rỉ chập cháy.</td>
-              <td>Ống cấp nước áp lực có thể đi vòng dưới máng cáp với khoảng cách an toàn $\ge 150\text{mm}$.</td>
+              <td>Ống cấp nước áp lực có thể đi vòng dưới máng cáp với khoảng cách an toàn ≥ 150mm.</td>
             </tr>
             <tr>
               <td><span class="badge badge-blue">Ưu tiên 5</span></td>
@@ -1108,7 +1107,7 @@
             Khóa cứng điều kiện tiên quyết nghiệm thu trước khi đổ bê tông:
           </p>
           <ul class="check-list">
-            <li><strong>Quy tắc lỗ mở dầm:</strong> Lỗ mở phải nằm trong khoảng <strong>1/3 chiều cao giữa dầm</strong>; khoảng cách mép lỗ mở đến mép cột $\ge 2H_{dam}$; gia cường thép chéo 2 bên.</li>
+            <li><strong>Quy tắc lỗ mở dầm:</strong> Lỗ mở phải nằm trong khoảng <strong>1/3 chiều cao giữa dầm</strong>; khoảng cách mép lỗ mở đến mép cột ≥ 2H<sub>dầm</sub>; gia cường thép chéo 2 bên.</li>
             <li><strong>Nghiệm thu Sleeve:</strong> Bản vẽ SOD được Kỹ sư Kết cấu & MEP ký duyệt trước khi lắp đặt ống chờ (Sleeve) / hộp xốp định vị.</li>
             <li><strong>Triệt tiêu rủi ro:</strong> <em>100% không cho phép khoan rút lõi hoặc đục phá dầm sau khi bê tông đã đạt cường độ!</em></li>
           </ul>
@@ -1162,7 +1161,7 @@
             <li><strong>Cấu trúc WBS 5 cấp độ:</strong> EPS ➔ Project ➔ Discipline (KC/KT/MEP) ➔ Floor / Area ➔ Activity.</li>
             <li><strong>Kiểm soát đường găng CPM:</strong> Xác định chính xác Total Float = 0 ngày; giám sát 21 tác vụ xung yếu chi phối toàn bộ tiến độ dự án.</li>
             <li><strong>Quy trình F9 Data Date:</strong> Định kỳ cập nhật % hoàn thành thực tế và chạy lại tiến độ (Schedule F9) so sánh với Baseline B1.</li>
-            <li><strong>Đo lường giá trị thu được EVA:</strong> Theo dõi chặt chẽ chỉ số $SPI = BCWP / BCWS$ và $CPI = BCWP / ACWP$ dự báo chi phí khi hoàn thành (EAC).</li>
+            <li><strong>Đo lường giá trị thu được EVA:</strong> Theo dõi chặt chẽ chỉ số SPI = BCWP / BCWS và CPI = BCWP / ACWP dự báo chi phí khi hoàn thành (EAC).</li>
           </ul>
         </div>
 
@@ -1249,7 +1248,7 @@
           </div>
           <ul class="check-list">
             <li><strong>Giảm 85% thời gian:</strong> Lập và cập nhật tiến độ 100 tác vụ chỉ mất <strong>2 ngày</strong> thay vì 14 ngày thủ công.</li>
-            <li><strong>Triệt tiêu 100% chi phí đục phá:</strong> Tránh lãng phí trung bình $15.000 - $35.000 cho mỗi dự án nhà máy do quên đặt ống chờ MEP.</li>
+            <li><strong>Triệt tiêu 100% chi phí đục phá:</strong> Tránh lãng phí trung bình 350 - 800 triệu VNĐ cho mỗi dự án nhà máy do quên đặt ống chờ MEP.</li>
             <li><strong>Kiểm soát dòng tiền:</strong> Tự động xuất đường cong S-Curve kế hoạch và thực tế phục vụ giải ngân ngân hàng chính xác.</li>
           </ul>
         </div>
