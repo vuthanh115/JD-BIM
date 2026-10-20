@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đề Mục Quản Lý Dự Án Xây Dựng - MnSCU Standard (Rút Gọn 2 Trang A4)</title>
+  <style>
+    /* ==========================================================================
+       A4 EXECUTIVE PRINT STYLESHEET - PROJECT MANAGEMENT MANUAL 2 PAGES EXACTLY
+       ========================================================================== */
+    @page {
+      size: A4 portrait;
+      margin: 7mm 9mm 7mm 9mm;
+    }
+
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --navy: #0f172a;
+      --slate: #334155;
+      --light-bg: #f8fafc;
+      --border: #cbd5e1;
+      --border-dark: #94a3b8;
+      --param-bg: #eff6ff;
+      --param-text: #1d4ed8;
+      --template-bg: #fef3c7;
+      --template-text: #b45309;
+      --tool-bg: #ecfdf5;
+      --tool-text: #047857;
+      --amber-bg: #fffbeb;
+      --amber-text: #b45309;
+      --purple-bg: #f5f3ff;
+      --purple-text: #6d28d9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #0f172a;
+      background: #e2e8f0;
+      line-height: 1.33;
+      font-size: 7.85pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Screen Toolbar */
+    .screen-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: #0f172a;
+      color: #fff;
+      padding: 10px 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .toolbar-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+    }
+
+    .btn-primary { background: #059669; color: #fff; }
+    .btn-primary:hover { background: #047857; }
+    .btn-detail { background: #0284c7; color: #fff; }
+    .btn-detail:hover { background: #0369a1; }
+    .btn-secondary { background: #1e293b; color: #e2e8f0; border-color: #334155; }
+    .btn-secondary:hover { background: #334155; color: #fff; }
+
+    /* Exact A4 Page Container */
+    .a4-page {
+      width: 210mm;
+      min-height: 297mm;
+      height: 297mm;
+      margin: 0 auto 16px auto;
+      background: #ffffff;
+      padding: 7.5mm 9.5mm 7.5mm 9.5mm;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Header Cover */
+    .doc-header {
+      border-bottom: 1.5px solid #0f172a;
+      padding-bottom: 6px;
+      margin-bottom: 6px;
+    }
+
+    .org-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 7.2pt;
+      font-weight: 800;
+      color: #0369a1;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 3px;
+      margin-bottom: 4px;
+    }
+
+    .doc-code {
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      font-size: 7pt;
+      background: #f1f5f9;
+      padding: 1px 6px;
+      border-radius: 3px;
+      border: 1px solid #cbd5e1;
+      color: #334155;
+    }
+
+    .title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .title-row h1 {
+      font-size: 11.2pt;
+      font-weight: 900;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: -0.2px;
+      margin: 0;
+    }
+
+    .title-tagline {
+      font-size: 7.4pt;
+      font-weight: 700;
+      color: #0284c7;
+      text-transform: uppercase;
+    }
+
+    /* Meta Table */
+    .meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7.1pt;
+      margin-bottom: 5px;
+      border: 1px solid #cbd5e1;
+    }
+
+    .meta-table td {
+      padding: 2.5px 5px;
+      border: 1px solid #cbd5e1;
+    }
+
+    .lbl {
+      background: #f1f5f9;
+      font-weight: 700;
+      color: #334155;
+      width: 15%;
+    }
+
+    .val {
+      color: #0f172a;
+      width: 35%;
+    }
+
+    /* Golden Rule Box */
+    .golden-box {
+      background: #f0fdf4;
+      border: 1.2px solid #059669;
+      border-left: 4px solid #059669;
+      padding: 4px 7px;
+      border-radius: 3px;
+      margin-bottom: 6px;
+      font-size: 7.2pt;
+      line-height: 1.34;
+    }
+
+    .golden-box-title {
+      font-size: 7.5pt;
+      font-weight: 800;
+      color: #047857;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Section Component */
+    .sec-block {
+      border: 1px solid #cbd5e1;
+      border-radius: 3px;
+      margin-bottom: 6px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .sec-title {
+      background: #0f172a;
+      color: #fff;
+      font-size: 7.8pt;
+      font-weight: 800;
+      padding: 3.5px 7px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sec-badge {
+      font-size: 6.7pt;
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 1px 5px;
+      border-radius: 2px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .sec-content {
+      padding: 5px 7px;
+      font-size: 7.3pt;
+    }
+
+    /* Grid Layouts */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 5px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 4px;
+    }
+
+    /* Mini Card */
+    .mini-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 2.5px solid #0284c7;
+      padding: 4px 6px;
+      border-radius: 2px;
+      margin-bottom: 4px;
+    }
+
+    .mini-card.amber { border-left-color: #d97706; background: #fffbeb; }
+    .mini-card.green { border-left-color: #059669; background: #f0fdf4; }
+    .mini-card.purple { border-left-color: #7c3aed; background: #faf5ff; }
+    .mini-card.red { border-left-color: #dc2626; background: #fef2f2; }
+
+    .mini-card-head {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+
+    .chip {
+      font-size: 6.5pt;
+      font-weight: 700;
+      padding: 1px 4px;
+      border-radius: 2px;
+      display: inline-block;
+    }
+    .chip-blue { background: #e0f2fe; color: #0369a1; }
+    .chip-green { background: #dcfce7; color: #15803d; }
+    .chip-amber { background: #fef3c7; color: #b45309; }
+    .chip-red { background: #fee2e2; color: #b91c1c; }
+    .chip-purple { background: #f3e8ff; color: #6b21a8; }
+
+    /* Bullet List */
+    .b-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .b-list li {
+      position: relative;
+      padding-left: 10px;
+      margin-bottom: 1.5px;
+      line-height: 1.32;
+    }
+
+    .b-list li::before {
+      content: "▪";
+      position: absolute;
+      left: 1px;
+      color: #0284c7;
+      font-size: 7pt;
+    }
+
+    .b-list.green li::before { content: "✓"; color: #059669; font-weight: 800; }
+    .b-list.alert li::before { content: "⚠"; color: #d97706; font-weight: 800; }
+
+    /* Tables */
+    .c-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7.05pt;
+      margin: 3px 0;
+    }
+
+    .c-table th, .c-table td {
+      border: 1px solid #cbd5e1;
+      padding: 2.5px 4.5px;
+      text-align: left;
+    }
+
+    .c-table th {
+      background: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .c-table tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    /* Page Footer */
+    .page-foot {
+      border-top: 1px solid #cbd5e1;
+      padding-top: 4px;
+      margin-top: 4px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 6.9pt;
+      color: #64748b;
+    }
+
+    /* Print media overrides */
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .screen-toolbar {
+        display: none !important;
+      }
+      .a4-page {
+        margin: 0 !important;
+        padding: 6.5mm 8.5mm 6.5mm 8.5mm !important;
+        box-shadow: none !important;
+        page-break-after: always !important;
+        break-after: page !important;
+        height: 297mm !important;
+      }
+      .a4-page:last-child {
+        page-break-after: auto !important;
+        break-after: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="screen-toolbar">
+    <div class="toolbar-title">
+      <span>📘 MNSCU PROJECT MANAGEMENT MANUAL — ĐỀ MỤC RÚT GỌN 2 TRANG A4 (PRINT READY)</span>
+    </div>
+    <div class="toolbar-actions">
+      <button onclick="window.print()" class="btn btn-primary">
+        🖨️ In 2 Trang A4 / Xuất PDF (Ctrl + P)
+      </button>
+      <a href="De_muc_Project_Management_Manual_A4.html" class="btn btn-detail">
+        📄 Bản Chi Tiết Đầy Đủ
+      </a>
+      <a href="Project_Management_Manual_Mindmap.html" class="btn btn-secondary">
+        🌐 Xem Mindmap Gốc
+      </a>
+      <a href="De_muc_Ket_cau_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        🏗️ Đề Mục KC A4
+      </a>
+      <a href="De_muc_Kien_truc_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        🏛️ Đề Mục KT A4
+      </a>
+      <a href="De_muc_Shop_Drawing_Rebar_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        🔩 Đề Mục Rebar A4
+      </a>
+      <a href="index.html" class="btn btn-secondary">
+        🏠 Master Portal
+      </a>
+    </div>
+  </div>
+
+  <!-- ==================== TRANG 1 ==================== -->
+  <div class="a4-page">
+    <div>
+      <!-- Header -->
+      <header class="doc-header">
+        <div class="org-bar">
+          <span>MINNESOTA STATE COLLEGES &amp; UNIVERSITIES (MnSCU FACILITIES) — STANDARD PMM SYSTEM</span>
+          <span class="doc-code">CODE: DOC-PMM-MNSCU-2P-EXECUTIVE</span>
+        </div>
+        <div class="title-row">
+          <h1>CẨM NANG TIÊU CHUẨN QUẢN LÝ DỰ ÁN XÂY DỰNG (MNSCU MANUAL)</h1>
+          <span class="title-tagline">⚡ BẢN ĐIỀU HÀNH RÚT GỌN 2 TRANG A4</span>
+        </div>
+        <table class="meta-table">
+          <tr>
+            <td class="lbl">Chuẩn Pháp Lý:</td>
+            <td class="val">AIA Contract Framework (A201, B101/B103), MN Statute 16B.335 &amp; 177</td>
+            <td class="lbl">Quy Mô Cẩm Nang:</td>
+            <td class="val">94 Trang chuẩn hóa, 11 Chương chuyên môn, 93 Biểu mẫu thực chiến</td>
+          </tr>
+          <tr>
+            <td class="lbl">Phương Thức:</td>
+            <td class="val">Design-Bid-Build (D-B-B) / Hợp đồng độc lập CĐT - A/E và CĐT - Tổng thầu</td>
+            <td class="lbl">Mục Tiêu Hồ Sơ:</td>
+            <td class="val">Kiểm soát chặt chẽ 3 trục: Tiến độ (CPM), Chi phí (SOV/MAPS), Chất lượng (QA/QC)</td>
+          </tr>
+        </table>
+
+        <!-- Golden Rule -->
+        <div class="golden-box">
+          <div class="golden-box-title">
+            <span>⚖️ NGUYÊN TẮC VÀNG VỀ PHÂN QUYỀN, THẨM QUYỀN VÀ TRÁCH NHIỆM (CORE GOVERNANCE)</span>
+            <span>AIA / D-B-B FRAMEWORK</span>
+          </div>
+          <strong>1. Hợp đồng độc lập:</strong> Chủ đầu tư (C/U) ký hai hợp đồng riêng rẽ: CĐT - Tư vấn Thiết kế (A/E) và CĐT - Tổng thầu (GC). Không có quan hệ hợp đồng trực tiếp giữa A/E và GC. A/E là đại diện kỹ thuật của CĐT.<br>
+          <strong>2. Ma trận thay đổi nghiêm ngặt:</strong> Mọi phát sinh chi phí hoặc ngày bắt buộc qua luồng: <code>RFI → PR → Thẩm tra báo giá → Ban hành Change Order (CO - MnSCU 022)</code> trước khi thi công; khẩn cấp dùng <code>CCD (MnSCU 014)</code>.<br>
+          <strong>3. Giữ lại bảo hành &amp; Lương tối thiểu:</strong> Khấu trừ <code>5% Retainage</code> trên mỗi kỳ thanh toán; kiểm tra tuân thủ <code>Prevailing Wage</code> theo MN Statute 177.
+        </div>
+      </header>
+
+      <!-- CHƯƠNG 1: TỔNG QUAN & PHÂN CẤP TỔ CHỨC -->
+      <section class="sec-block">
+        <div class="sec-title">
+          <span>CHƯƠNG 1: CƠ CẤU PHÂN CẤP TỔ CHỨC &amp; MA TRẬN TRÁCH NHIỆM RACI (GOVERNANCE)</span>
+          <span class="sec-badge">Chương 1</span>
+        </div>
+        <div class="sec-content">
+          <div class="grid-2">
+            <div class="mini-card">
+              <div class="mini-card-head">
+                <span>1.1 Sơ Đồ Phân Quyền (Delegation Hierarchy)</span>
+                <span class="chip chip-blue">Hệ Thống</span>
+              </div>
+              <ul class="b-list">
+                <li><strong>Hội đồng Ủy thác (Board of Trustees) → Chancellor → CFO:</strong> Ban hành chính sách, phân bổ ngân sách công bang.</li>
+                <li><strong>SO Facilities (System Office):</strong> Giám sát vĩ mô, ban hành Design Standards, duyệt hợp đồng A/E &amp; OR vượt hạn mức.</li>
+                <li><strong>C/U Project Manager:</strong> Đại diện CĐT cấp trường điều hành hàng ngày; toàn quyền và chịu trách nhiệm tiến độ, chi phí, nghiệm thu.</li>
+              </ul>
+            </div>
+            <div class="mini-card amber">
+              <div class="mini-card-head">
+                <span>1.2 Ma Trận Trách Nhiệm RACI (Roles)</span>
+                <span class="chip chip-amber">RACI</span>
+              </div>
+              <ul class="b-list">
+                <li><strong>A/E Design Team:</strong> Thiết kế kiến trúc/kết cấu/MEP, dự toán chi phí, giám sát quyền tác giả, chủ trì họp kỹ thuật hiện trường.</li>
+                <li><strong>Owner's Rep (OR):</strong> Hỗ trợ C/U PM kiểm soát tiến độ đường găng CPM, rà soát hồ sơ thanh toán, thẩm tra khối lượng phát sinh.</li>
+                <li><strong>General Contractor (GC):</strong> Toàn quyền biện pháp thi công, an toàn lao động, tiến độ chi tiết và hệ thống QC nội bộ.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHƯƠNG 2: KHỞI TẠO DỰ ÁN & LỰA CHỌN TƯ VẤN -->
+      <section class="sec-block">
+        <div class="sec-title">
+          <span>CHƯƠNG 2: KHỞI TẠO DỰ ÁN, TUYỂN CHỌN TƯ VẤN THIẾT KẾ &amp; OR (INITIATION)</span>
+          <span class="sec-badge">Chương 2</span>
+        </div>
+        <div class="sec-content">
+          <div class="grid-3">
+            <div class="mini-card">
+              <div class="mini-card-head">
+                <span>2.1 Phương Thức D-B-B</span>
+                <span class="chip chip-blue">Truyền Thống</span>
+              </div>
+              <p style="font-size: 7.0pt; color: #475569; margin-bottom: 2px;">
+                Thiết kế hoàn chỉnh 100% $ightarrow$ Đấu thầu công khai $ightarrow$ Trao thầu giá thấp nhất. Tối ưu tính minh bạch và cạnh tranh giá cho vốn ngân sách.
+              </p>
+            </div>
+            <div class="mini-card amber">
+              <div class="mini-card-head">
+                <span>2.2 Tuyển Chọn A/E (3 Hạn Mức)</span>
+                <span class="chip chip-amber">A/E Selection</span>
+              </div>
+              <ul class="b-list">
+                <li><strong class="chip chip-red">&gt; $2M hoặc Phí &gt; $200k:</strong> Qua Hội đồng DSB Bang.</li>
+                <li><strong class="chip chip-amber">Phí &gt; $100k:</strong> Quy trình mời thầu đề xuất (RFP) do trường làm.</li>
+                <li><strong class="chip chip-green">Phí &lt; $100k:</strong> Chọn từ danh sách tư vấn khung (Master List).</li>
+                <li>Hợp đồng chuẩn: AIA B101/B103 kèm Exhibit A.</li>
+              </ul>
+            </div>
+            <div class="mini-card green">
+              <div class="mini-card-head">
+                <span>2.3 Tư Vấn Đại Diện CĐT (OR)</span>
+                <span class="chip chip-green">Định Mức 2%</span>
+              </div>
+              <ul class="b-list">
+                <li>Chiếm khoảng <code>2% chi phí xây lắp</code>.</li>
+                <li>Phí &gt; $100k chạy RFP; phí &lt; $100k chọn Master List.</li>
+                <li>Theo dõi CPM, rà soát hồ sơ nghiệm thu, đàm phán CO.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- 17 tài liệu đầu vào -->
+          <div style="background: #f1f5f9; padding: 3px 6px; border-radius: 2px; font-size: 6.9pt; color: #334155; margin-top: 2px;">
+            <strong>2.4 17 Tài liệu CĐT cung cấp:</strong> Trắc địa ranh đất, Khảo sát địa chất, Báo cáo Asbestos/chì, Master Plan, Quy chuẩn PCCC &amp; cấp nước, Hạ tầng CNTT, Báo cáo EAW, Danh mục OFCI, Ngân sách lập pháp...
+          </div>
+        </div>
+      </section>
+
+      <!-- CHƯƠNG 3: QUẢN LÝ THIẾT KẾ & ĐẤU THẦU -->
+      <section class="sec-block">
+        <div class="sec-title">
+          <span>CHƯƠNG 3: QUẢN LÝ THIẾT KẾ 3 GIAI ĐOẠN, DỰ PHÒNG &amp; CHIẾN LƯỢC ĐẤU THẦU (DESIGN &amp; BIDDING)</span>
+          <span class="sec-badge">Chương 3</span>
+        </div>
+        <div class="sec-content">
+          <table class="c-table">
+            <thead>
+              <tr>
+                <th style="width: 18%;">Giai Đoạn</th>
+                <th style="width: 32%;">Hồ Sơ Yêu Cầu Bắt Buộc</th>
+                <th style="width: 22%;">Dự Phòng Chi Phí (Contingency)</th>
+                <th style="width: 28%;">Quy Chuẩn Phê Duyệt &amp; Thẩm Tra</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>3.1 Tiền Thiết Kế (Predesign)</strong></td>
+                <td>Nhiệm vụ thiết kế, đối chiếu hạn mức ngân sách lập pháp.</td>
+                <td><span class="chip chip-blue">Khung vốn lập pháp</span></td>
+                <td>Phạm vi thiết kế sau này <strong>không được lệch quá $\pm 10\%$</strong> so với Predesign.</td>
+              </tr>
+              <tr>
+                <td><strong>3.2 Thiết Kế Sơ Bộ (SD)</strong></td>
+                <td>Mặt bằng công năng, giải pháp kết cấu, trục MEP, tuân thủ PCCC.</td>
+                <td><strong class="chip chip-amber">10% - 20% Contingency</strong></td>
+                <td>Họp Technical Review; gửi thông báo Lập pháp bang theo <code>MN Statute 16B.335</code>.</td>
+              </tr>
+              <tr>
+                <td><strong>3.3 Thiết Kế KT (DD)</strong></td>
+                <td>Vẽ đúng tỷ lệ, định vị kết cấu, MEP chính, Room Finish Schedule.</td>
+                <td><strong class="chip chip-green">10% - 15% Contingency</strong></td>
+                <td>Thẩm tra độc lập (Plan Review) phản hồi trong <strong>10 ngày làm việc</strong>; C/U PM duyệt văn bản.</td>
+              </tr>
+              <tr>
+                <td><strong>3.4 Bản Vẽ TC (CD)</strong></td>
+                <td>100% bản vẽ chi tiết, Specs (Div 01-48), Hồ sơ mời thầu Div 0.</td>
+                <td><span class="chip chip-purple">Dự toán đấu thầu 100%</span></td>
+                <td><strong>Thiết lập 3-5 gói Alternates:</strong> Kích hoạt Deduct Alternates hạ giá không cần đấu lại.</td>
+              </tr>
+              <tr>
+                <td><strong>3.5 Đấu Thầu &amp; Trao Thầu</strong></td>
+                <td>Đăng QuestCDN (2-4 tuần), Hợp đồng MnSCU 110/120, NTP.</td>
+                <td><span class="chip chip-green">Bảo lãnh 100% (MnSCU 130)</span></td>
+                <td>Hợp đồng &gt; $50k dùng MnSCU 110, ACORD 25; Trích <strong>1% cho Percent for Art</strong> (max $100k).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- Page Footer -->
+    <footer class="page-foot">
+      <span>MnSCU Project Management Manual — Standard AIA / D-B-B Framework</span>
+      <span>Trang 1 / 2 • Bản Điều Hành Rút Gọn A4</span>
+      <span>BSV PM Standard • 2026</span>
+    </footer>
+  </div>
+
+  <!-- ==================== TRANG 2 ==================== -->
+  <div class="a4-page">
+    <div>
+      <!-- Header Trang 2 -->
+      <div style="border-bottom: 1.5px solid #0f172a; padding-bottom: 4px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 7.4pt; font-weight: 800; color: #0369a1; text-transform: uppercase;">MNSCU PMM — THI CÔNG HIỆN TRƯỜNG, THAY ĐỔI, QA/QC, NGÂN SÁCH, TIẾN ĐỘ &amp; BIỂU MẪU</span>
+        <span class="doc-code">TRANG 2 / 2</span>
+      </div>
+
+      <!-- CHƯƠNG 4: THI CÔNG HIỆN TRƯỜNG & MA TRẬN THAY ĐỔI -->
+      <section class="sec-block">
+        <div class="sec-title">
+          <span>CHƯƠNG 4: THI CÔNG HIỆN TRƯỜNG, MA TRẬN THAY ĐỔI &amp; NGHIỆM THU (CONSTRUCTION)</span>
+          <span class="sec-badge">Chương 4</span>
+        </div>
+        <div class="sec-content">
+          <div class="grid-2">
+            <div class="mini-card">
+              <div class="mini-card-head">
+                <span>4.1 Khởi Động &amp; Hồ Sơ Đệ Trình (Submittals)</span>
+                <span class="chip chip-blue">10-14 Ngày</span>
+              </div>
+              <ul class="b-list">
+                <li><strong>Tiến độ CPM:</strong> Nhà thầu nộp Baseline trong <code>10 ngày sau NTP</code>; DS Thầu phụ/NCC nộp trong <code>14 ngày</code>.</li>
+                <li><strong>Họp Pre-Installation bắt buộc:</strong> Móng, Bê tông, Chống thấm, Bao che, PCCC, MEP, Commissioning.</li>
+                <li><strong>Luồng duyệt 3 bước:</strong> Nhà thầu tự rà soát $ightarrow$ A/E thẩm tra $ightarrow$ C/U PM phê duyệt lưu trữ.</li>
+              </ul>
+            </div>
+            <div class="mini-card green">
+              <div class="mini-card-head">
+                <span>4.4 Thanh Toán &amp; 4.5 Nghiệm Thu Closeout</span>
+                <span class="chip chip-green">5% Retainage</span>
+              </div>
+              <ul class="b-list green">
+                <li><strong>Thanh toán:</strong> Căn cứ SOV, khấu trừ <code>5% Retainage</code>; kiểm tra tuân thủ lương <code>Prevailing Wage</code>.</li>
+                <li><strong>Nghiệm thu cơ bản (Substantial):</strong> Bắt đầu tính bảo hành 1 năm; lập danh sách tồn đọng Punchlist.</li>
+                <li><strong>Nghiệm thu dứt điểm (Final):</strong> 100% Punchlist, nộp As-built, O&amp;M, giải tỏa 5% Retainage.</li>
+                <li><strong>Bảo hành tháng thứ 10:</strong> Rà soát trước khi hết hạn 1 năm. POE đối với dự án &gt; $2M.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Ma trận phân luồng thay đổi -->
+          <div style="margin-top: 4px;">
+            <div style="font-size: 7.3pt; font-weight: 800; color: #dc2626; margin-bottom: 2px;">
+              4.3 MA TRẬN PHÂN LUỒNG XỬ LÝ THAY ĐỔI HIỆN TRƯỜNG (CHANGES TO THE WORK MATRIX):
+            </div>
+            <table class="c-table">
+              <thead>
+                <tr>
+                  <th style="width: 12%;">Loại Văn Bản</th>
+                  <th style="width: 25%;">Tên Gọi &amp; Biểu Mẫu</th>
+                  <th style="width: 14%;">Thời Hạn Phản Hồi</th>
+                  <th style="width: 16%;">Tác Động Chi Phí / Ngày</th>
+                  <th style="width: 33%;">Quy Trình &amp; Trách Nhiệm Xử Lý</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong class="chip chip-blue">RFI</strong></td>
+                  <td>Request for Information</td>
+                  <td>Tối đa <strong>7 ngày</strong></td>
+                  <td><strong>Cost = 0 • Time = 0</strong></td>
+                  <td>Nhà thầu hỏi làm rõ bản vẽ; A/E trả lời bằng văn bản trong 7 ngày.</td>
+                </tr>
+                <tr>
+                  <td><strong class="chip chip-green">ASI</strong></td>
+                  <td>Architect's Supplemental Instructions</td>
+                  <td>Khi A/E phát hiện</td>
+                  <td><strong>Cost = 0 • Time = 0</strong></td>
+                  <td>Chỉ dẫn bổ sung của A/E; cam kết không tăng chi phí và không kéo dài ngày.</td>
+                </tr>
+                <tr>
+                  <td><strong class="chip chip-amber">PR</strong></td>
+                  <td>Proposal Request</td>
+                  <td>GC báo giá 14 ngày</td>
+                  <td><strong>Có phát sinh</strong> (Dự toán)</td>
+                  <td>CĐT yêu cầu báo giá $ightarrow$ A/E &amp; OR thẩm tra $ightarrow$ C/U PM đàm phán trước khi làm.</td>
+                </tr>
+                <tr>
+                  <td><strong class="chip chip-red">CCD</strong></td>
+                  <td>Construction Change Directive (<strong>MnSCU 014</strong>)</td>
+                  <td>Khẩn cấp thi công ngay</td>
+                  <td><strong>Quyết toán sau</strong> (&lt; $10k hoặc rủi ro trễ)</td>
+                  <td>C/U PM chỉ đạo làm ngay để không chặn đường găng CPM; chi phí nghiệm thu thanh toán sau.</td>
+                </tr>
+                <tr>
+                  <td><strong class="chip chip-purple">CO</strong></td>
+                  <td>Change Order (<strong>MnSCU 022</strong>)</td>
+                  <td>Ký trước nghiệm thu</td>
+                  <td><strong>Điều chỉnh HĐ chính thức</strong></td>
+                  <td>Văn bản pháp lý duy nhất điều chỉnh Giá và Tiến độ hợp đồng. Đủ 3 chữ ký: GC, A/E, C/U PM.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHƯƠNG 5 ĐẾN 8: QA/QC, NGÂN SÁCH, TIẾN ĐỘ, TÀI CHÍNH -->
+      <section class="sec-block">
+        <div class="sec-title">
+          <span>CHƯƠNG 5 - 8: QA/QC, QUẢN LÝ NGÂN SÁCH, ĐƯỜNG GĂNG CPM &amp; KẾ TOÁN MAPS</span>
+          <span class="sec-badge">Hệ Thống Trụ Cột</span>
+        </div>
+        <div class="sec-content">
+          <div class="grid-4">
+            <div class="mini-card">
+              <div class="mini-card-head">
+                <span>Chương 5: QA/QC</span>
+                <span class="chip chip-blue">Độc Lập</span>
+              </div>
+              <ul class="b-list">
+                <li><strong>QA (Phòng ngừa):</strong> C/U và A/E đặt tiêu chuẩn, kế hoạch kiểm định.</li>
+                <li><strong>QC (Kiểm tra):</strong> Tổng thầu GC đo đạc, tự nghiệm thu trước.</li>
+                <li><strong>Testing Agency:</strong> CĐT ký hợp đồng và trả phí trực tiếp.</li>
+              </ul>
+            </div>
+            <div class="mini-card amber">
+              <div class="mini-card-head">
+                <span>Chương 6: Budgeting</span>
+                <span class="chip chip-amber">5 Mốc</span>
+              </div>
+              <ul class="b-list">
+                <li>Vòng đời 5 mốc: Predesign $ightarrow$ SD $ightarrow$ DD $ightarrow$ CD $ightarrow$ Construction.</li>
+                <li>Theo dõi liên tục bằng biểu mẫu <strong>MnSCU Budget Worksheet</strong>.</li>
+              </ul>
+            </div>
+            <div class="mini-card green">
+              <div class="mini-card-head">
+                <span>Chương 7: Scheduling</span>
+                <span class="chip chip-green">CPM Standard</span>
+              </div>
+              <ul class="b-list">
+                <li>Tiến độ chuẩn <strong>Critical Path Method (CPM)</strong>.</li>
+                <li>Nộp Baseline trong 10 ngày sau NTP; cập nhật hàng tháng theo Pay App.</li>
+              </ul>
+            </div>
+            <div class="mini-card purple">
+              <div class="mini-card-head">
+                <span>Chương 8: Tài Chính</span>
+                <span class="chip chip-purple">Dự Phòng 5-10%</span>
+              </div>
+              <ul class="b-list">
+                <li>Hệ thống tài khoản MAPS (Appropriation, Org, Allotment).</li>
+                <li>Dự phòng xây lắp: <code>5% (xây mới)</code>, <code>10% (cải tạo)</code>.</li>
+                <li>Phối hợp cổng điện/mạng cho FF&amp;E.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHƯƠNG 9: PHỤ LỤC 93 BIỂU MẪU & BẢNG 10 CHỈ SỐ KIỂM TRA ĐIỀU HÀNH -->
+      <section class="sec-block">
+        <div class="sec-title">
+          <span>CHƯƠNG 9: PHÂN BỔ 93 BIỂU MẪU &amp; DANH MỤC 10 CHỈ SỐ KIỂM TRA ĐIỀU HÀNH CỦA PM</span>
+          <span class="sec-badge">Executive Checklist</span>
+        </div>
+        <div class="sec-content">
+          <div class="grid-2">
+            <div>
+              <div style="font-size: 7.2pt; font-weight: 700; color: #0369a1; margin-bottom: 2px;">
+                📂 Phân Loại 93 Biểu Mẫu Chuẩn Theo 4 Giai Đoạn:
+              </div>
+              <ul class="b-list" style="font-size: 7.0pt;">
+                <li><strong>1. Thiết Kế:</strong> SD Checklist, Budget Worksheet, Schedule Milestones, Exhibit A.</li>
+                <li><strong>2. Đấu Thầu:</strong> Division 0, QuestCDN Notice, Non-Responsible Bidder, MnSCU 110/120/130, ACORD 25.</li>
+                <li><strong>3. Thi Công:</strong> NTP, Pre-Installation Agenda, RFI, ASI, PR, <strong>CCD (MnSCU 014)</strong>, <strong>CO (MnSCU 022)</strong>, <strong>Pay App (MnSCU 060)</strong>.</li>
+                <li><strong>4. Nghiệm Thu:</strong> AIA G704 Substantial, Punchlist Form, Final Completion, 10-Month Warranty Checklist, POE Survey.</li>
+              </ul>
+            </div>
+            <div>
+              <div style="font-size: 7.2pt; font-weight: 700; color: #047857; margin-bottom: 2px;">
+                🎯 10 Chỉ Số Sống Còn PM Phải Giám Sát:
+              </div>
+              <ul class="b-list green" style="font-size: 7.0pt;">
+                <li><strong>1.</strong> Hạn mức A/E: &gt; $2M qua DSB | <strong>2.</strong> Dự phòng: SD 10-20%, DD 10-15%, Xây lắp 5-10%.</li>
+                <li><strong>3.</strong> 3-5 Alternates dự phòng giá | <strong>4.</strong> Nộp DS Thầu phụ trong 14 ngày.</li>
+                <li><strong>5.</strong> Nộp CPM trong 10 ngày sau NTP | <strong>6.</strong> Họp Pre-Installation 7 mục rủi ro cao.</li>
+                <li><strong>7.</strong> RFI phản hồi $\le 7$ ngày | <strong>8.</strong> Phát sinh bắt buộc ký CO (MnSCU 022) trước.</li>
+                <li><strong>9.</strong> Giữ lại 5% Retainage &amp; Prevailing Wage | <strong>10.</strong> Rà soát bảo hành tháng thứ 10.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Chữ ký trách nhiệm -->
+          <div style="margin-top: 6px; padding-top: 4px; border-top: 1px dashed #cbd5e1; display: flex; justify-content: space-between; text-align: center; font-size: 7.1pt;">
+            <div style="width: 30%;">
+              <strong>TƯ VẤN THIẾT KẾ (A/E)</strong><br>
+              <span style="color: #64748b; font-size: 6.6pt;">(AIA Design Standards)</span><br><br>
+              <strong>Đại diện Chủ trì Kiến trúc / MEP</strong>
+            </div>
+            <div style="width: 30%;">
+              <strong>TƯ VẤN ĐẠI DIỆN CĐT (OR)</strong><br>
+              <span style="color: #64748b; font-size: 6.6pt;">(Kiểm soát Tiến độ &amp; Chi phí SOV)</span><br><br>
+              <strong>Trưởng nhóm Giám sát / OR Director</strong>
+            </div>
+            <div style="width: 30%;">
+              <strong>BAN QLDA C/U PROJECT MANAGER</strong><br>
+              <span style="color: #64748b; font-size: 6.6pt;">(Phê duyệt &amp; Nghiệm thu Hợp đồng)</span><br><br>
+              <strong>Giám đốc Quản lý Dự án (C/U PM)</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Page Footer -->
+    <footer class="page-foot">
+      <span>MnSCU Project Management Manual — Standard AIA / D-B-B Framework</span>
+      <span>Trang 2 / 2 • Bản Điều Hành Rút Gọn A4 Hoàn Chỉnh</span>
+      <span>BSV PM Standard • 2026</span>
+    </footer>
+  </div>
+
+</body>
+</html>
