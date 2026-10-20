@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cẩm Nang Tiêu Chuẩn Quản Lý Tiến Độ Primavera P6 - P6 CPM Standard (In A4)</title>
+  <style>
+    /* ==========================================================================
+       A4 EXECUTIVE PRINT STYLESHEET - PRIMAVERA P6 CPM SCHEDULING STANDARD
+       ========================================================================== */
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 12mm 12mm;
+    }
+
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --navy: #0f172a;
+      --slate: #334155;
+      --muted: #64748b;
+      --light-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #cbd5e1;
+      --border-dark: #94a3b8;
+      --accent-blue: #0284c7;
+      --accent-amber: #d97706;
+      --accent-green: #059669;
+      --accent-purple: #7c3aed;
+      --accent-red: #dc2626;
+      --p6-orange: #ea580c;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #0f172a;
+      background: #e2e8f0;
+      line-height: 1.45;
+      font-size: 8.8pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Screen Toolbar */
+    .screen-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: #0f172a;
+      color: #fff;
+      padding: 12px 24px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .toolbar-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+    }
+
+    .btn-primary { background: #ea580c; color: #fff; }
+    .btn-primary:hover { background: #c2410c; }
+    .btn-compact { background: #059669; color: #fff; }
+    .btn-compact:hover { background: #047857; }
+    .btn-secondary { background: #1e293b; color: #e2e8f0; border-color: #334155; }
+    .btn-secondary:hover { background: #334155; color: #fff; }
+
+    /* Paper Container */
+    .paper-container {
+      width: 210mm;
+      margin: 0 auto 40px auto;
+      background: #fff;
+      padding: 12mm 14mm;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      border-radius: 4px;
+    }
+
+    /* Header Cover */
+    .doc-cover {
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+
+    .org-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+    }
+
+    .org-title {
+      font-size: 8.5pt;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      color: #ea580c;
+      text-transform: uppercase;
+    }
+
+    .doc-code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 8pt;
+      font-weight: 700;
+      color: #475569;
+      background: #f1f5f9;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid #cbd5e1;
+    }
+
+    .main-title-box {
+      text-align: center;
+      margin: 12px 0 14px 0;
+    }
+
+    .main-title-box h1 {
+      font-size: 15.5pt;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.25;
+      letter-spacing: -0.3px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .main-title-box .sub-title {
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: #ea580c;
+      line-height: 1.35;
+    }
+
+    .doc-meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7.9pt;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      margin-top: 8px;
+    }
+
+    .doc-meta-table td {
+      padding: 5px 8px;
+      border: 1px solid #cbd5e1;
+    }
+
+    .meta-label {
+      font-weight: 700;
+      color: #334155;
+      background: #e2e8f0;
+      width: 16%;
+    }
+
+    .meta-val {
+      color: #0f172a;
+      width: 34%;
+    }
+
+    /* Golden Box */
+    .golden-rule-box {
+      background: #fff7ed;
+      border: 1.5px solid #ea580c;
+      border-left: 5px solid #ea580c;
+      border-radius: 4px;
+      padding: 8px 12px;
+      margin: 12px 0 16px 0;
+    }
+
+    .golden-rule-title {
+      font-size: 8.8pt;
+      font-weight: 800;
+      color: #c2410c;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .golden-rule-desc {
+      font-size: 8.2pt;
+      color: #1e293b;
+      line-height: 1.4;
+    }
+
+    /* Section & Cards */
+    .doc-section {
+      margin-bottom: 18px;
+      page-break-inside: avoid;
+    }
+
+    .section-header {
+      background: #0f172a;
+      color: #fff;
+      padding: 6px 12px;
+      font-size: 9.5pt;
+      font-weight: 800;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .section-badge {
+      font-size: 7.4pt;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      background: #ea580c;
+      color: #fff;
+    }
+
+    .section-body {
+      border: 1px solid #cbd5e1;
+      border-top: none;
+      padding: 10px 12px;
+      background: #fff;
+      border-radius: 0 0 4px 4px;
+    }
+
+    .section-desc {
+      font-size: 8.3pt;
+      color: #475569;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+
+    /* Grids */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+    .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 8px; }
+
+    /* Sub-card */
+    .sub-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 3px solid #ea580c;
+      padding: 8px 10px;
+      border-radius: 3px;
+      font-size: 8pt;
+      margin-bottom: 8px;
+    }
+
+    .sub-card.blue { border-left-color: #0284c7; background: #eff6ff; }
+    .sub-card.green { border-left-color: #059669; background: #f0fdf4; }
+    .sub-card.purple { border-left-color: #7c3aed; background: #faf5ff; }
+    .sub-card.red { border-left-color: #dc2626; background: #fef2f2; }
+
+    .sub-card-title {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sub-card-pill {
+      font-size: 7pt;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 3px;
+      background: #e2e8f0;
+      color: #334155;
+    }
+
+    /* Tables */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7.8pt;
+      margin: 6px 0;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid #cbd5e1;
+      padding: 4.5px 7px;
+      text-align: left;
+    }
+
+    .data-table th {
+      background: #f1f5f9;
+      color: #1e293b;
+      font-weight: 700;
+    }
+
+    .data-table tr:nth-child(even) { background: #f8fafc; }
+
+    /* Badges & Chips */
+    .chip {
+      display: inline-block;
+      font-size: 7.2pt;
+      font-weight: 600;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin: 1px;
+    }
+    .chip-orange { background: #ffedd5; color: #c2410c; border: 1px solid #fed7aa; }
+    .chip-blue { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
+    .chip-green { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .chip-purple { background: #f3e8ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+    .chip-red { background: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; }
+
+    /* Bullet list */
+    .bullet-list { list-style-type: none; padding-left: 0; }
+    .bullet-list li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 3px;
+      line-height: 1.38;
+    }
+    .bullet-list li::before {
+      content: "▪";
+      position: absolute;
+      left: 2px;
+      color: #ea580c;
+      font-size: 8pt;
+    }
+    .bullet-list.check li::before { content: "✓"; color: #059669; font-weight: 800; }
+    .bullet-list.alert li::before { content: "⚠"; color: #dc2626; font-weight: 800; }
+
+    /* Flow step */
+    .flow-steps { display: flex; gap: 6px; margin: 6px 0; }
+    .flow-step {
+      flex: 1;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      padding: 6px 8px;
+      text-align: center;
+    }
+    .flow-step-num {
+      font-size: 7.2pt;
+      font-weight: 800;
+      color: #ea580c;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .flow-step-title { font-size: 8pt; font-weight: 700; color: #0f172a; }
+    .flow-step-desc { font-size: 7.2pt; color: #64748b; margin-top: 2px; }
+
+    /* Page Breaks */
+    .page-break {
+      page-break-before: always;
+      break-before: page;
+      margin-top: 20px;
+    }
+
+    .doc-footer {
+      border-top: 1px solid #cbd5e1;
+      padding-top: 8px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 7.4pt;
+      color: #64748b;
+    }
+
+    @media print {
+      body { background: #fff; font-size: 8.3pt; }
+      .screen-toolbar { display: none !important; }
+      .paper-container {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+      }
+      .page-break { page-break-before: always !important; break-before: page !important; height: 0; }
+      .doc-section { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="screen-toolbar">
+    <div class="toolbar-title">
+      <span>📊 PRIMAVERA P6 CPM SCHEDULING — TÀI LIỆU ĐỀ MỤC TIÊU CHUẨN QUẢN LÝ TIẾN ĐỘ & 4D BIM (A4 READY)</span>
+    </div>
+    <div class="toolbar-actions">
+      <button onclick="window.print()" class="btn btn-primary">
+        🖨️ In A4 / Xuất PDF (Ctrl + P)
+      </button>
+      <a href="De_muc_Primavera_P6_Rut_gon_2Trang_A4.html" class="btn btn-compact">
+        ⚡ In Rút Gọn 2 Trang A4
+      </a>
+      <a href="De_muc_Project_Management_Manual_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        📘 Đề Mục QLDA A4
+      </a>
+      <a href="De_muc_Ket_cau_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        🏗️ Đề Mục KC A4
+      </a>
+      <a href="De_muc_Kien_truc_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        🏛️ Đề Mục KT A4
+      </a>
+      <a href="De_muc_Shop_Drawing_Rebar_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        🔩 Đề Mục Rebar A4
+      </a>
+      <a href="index.html" class="btn btn-secondary">
+        🏠 Master Portal
+      </a>
+    </div>
+  </div>
+
+  <div class="paper-container">
+    
+    <!-- Cover Header -->
+    <header class="doc-cover">
+      <div class="org-header">
+        <div class="org-title">ORACLE PRIMAVERA P6 EPPM / ENCORE GROUP CPM STANDARD &amp; 4D BIM DIVISION</div>
+        <div class="doc-code">STANDARD: DOC-P6-CPM-4DBIM-REV26</div>
+      </div>
+
+      <div class="main-title-box">
+        <h1>QUY CHUẨN QUẢN LÝ TIẾN ĐỘ PRIMAVERA P6 &amp; TÍCH HỢP 4D BIM</h1>
+        <div class="sub-title">CẨM NANG THỰC CHIẾN 12 CHƯƠNG — PHƯƠNG PHÁP ĐƯỜNG GĂNG (CPM), CẤU TRÚC EPS/WBS KẾT CẤU KAKA, KIỂM SOÁT BASELINE, TÀI NGUYÊN &amp; CHI PHÍ (EVA)</div>
+      </div>
+
+      <table class="doc-meta-table">
+        <tr>
+          <td class="meta-label">Chuẩn Phần Mềm:</td>
+          <td class="meta-val">Oracle Primavera P6 Professional / EPPM (v8.x - v23.x) &amp; XER Exchange Standard</td>
+          <td class="meta-label">Quy Chuẩn Lý Thuyết:</td>
+          <td class="meta-val">Encore Group P6 Training Manual (142 trang), PMI-SP &amp; AACE International 29R-03</td>
+        </tr>
+        <tr>
+          <td class="meta-label">Mô Hình Tích Hợp:</td>
+          <td class="meta-val">Kaka Revit Database (SQLite) $ightarrow$ 14 WBS Cấu Kiện $ightarrow$ Primavera P6 $ightarrow$ Navisworks 4D</td>
+          <td class="meta-label">Mục Tiêu Hồ Sơ:</td>
+          <td class="meta-val">Kiểm soát Đường găng (Critical Path), Độ trôi (Total Float), Giá trị thu được (Earned Value EVA)</td>
+        </tr>
+        <tr>
+          <td class="meta-label">Đối Tượng Tuân Thủ:</td>
+          <td class="meta-val">BIM Manager, Project Controls Engineer, Planning Engineer, Site Superintendent, PM</td>
+          <td class="meta-label">Tần Suất Báo Cáo:</td>
+          <td class="meta-val">Cập nhật Data Date định kỳ hàng tuần / hàng tháng kèm Hồ sơ Đề nghị Thanh toán (Pay App)</td>
+        </tr>
+      </table>
+
+      <!-- Golden Box -->
+      <div class="golden-rule-box">
+        <div class="golden-rule-title">
+          <span>⚡ NGUYÊN TẮC VÀNG VỀ QUẢN TRỊ TIẾN ĐỘ ĐƯỜNG GĂNG (CPM &amp; BASELINE GOVERNANCE)</span>
+        </div>
+        <div class="golden-rule-desc">
+          <strong>1. Nguyên tắc 100% Logic:</strong> Mọi công việc (Activity) trong P6 đều phải có ít nhất một công việc tiền nhiệm (Predecessor) và một công việc kế nhiệm (Successor), ngoại trừ mốc Khởi công (Start Milestone) và mốc Hoàn thành (Finish Milestone). Tuyệt đối cấm để công việc dạng "Open End".<br>
+          <strong>2. Khóa Tiến độ Cơ sở (Baseline Freeze):</strong> Sau khi CĐT và Tư vấn phê duyệt, tiến độ Baseline (Target Schedule B1) phải được gán cố định và khóa lại. Mọi biến động tiến độ hiện trường được so sánh trực tiếp với Baseline để xác định ngày trễ hạn và trách nhiệm bồi thường.<br>
+          <strong>3. Kiểm soát Total Float:</strong> Tổng độ trôi tự do (Total Float) phản ánh độ an toàn của dự án. Nếu $TF = 0$ hoặc $TF < 0$, công việc lập tức trở thành đường găng nguy cấp (Critical Activity) đòi hỏi biện pháp Crash / Fast-track ngay lập tức.
+        </div>
+      </div>
+    </header>
+
+    <!-- CHƯƠNG 1 & 2 -->
+    <section class="doc-section">
+      <div class="section-header">
+        <span>PHẦN I: NỀN TẢNG CPM &amp; THIẾT LẬP KẾ HOẠCH DỰ ÁN (CHAPTER 1 - 2)</span>
+        <span class="section-badge">Phần 1</span>
+      </div>
+      <div class="section-body">
+        <div class="section-desc">
+          Xác định triết lý lập tiến độ theo phương pháp Đường găng Critical Path Method (CPM), phân bổ 5 nguồn lực khan hiếm và xác lập độ chi tiết (Level of Detail) theo WBS.
+        </div>
+
+        <div class="grid-2">
+          <!-- Ch 1 -->
+          <div class="sub-card">
+            <div class="sub-card-title">
+              <span>Chương 1: Tổng Quan Phương Pháp Đường Găng (CPM Scheduling)</span>
+              <span class="sub-card-pill">Lý Thuyết CPM</span>
+            </div>
+            <ul class="bullet-list">
+              <li><strong>Bản đồ đến thành công (Roadmap to Success):</strong> Tiến độ không chỉ là thanh Gantt Chart tĩnh mà là mô hình động dự báo tương lai và phân bổ tối ưu 5 nguồn lực: <code>TIME, MONEY, EQUIPMENT, PERSONNEL, MATERIAL</code>.</li>
+              <li><strong>Khái niệm Đường găng (Critical Path):</strong> Chuỗi công việc liên tục dài nhất từ đầu đến cuối dự án, quyết định tổng thời gian hoàn thành. Bất kỳ sự chậm trễ nào trên đường găng đều làm trễ hạn bàn giao dự án.</li>
+              <li><strong>Công thức tính toán xuôi và ngược (Forward &amp; Backward Pass):</strong>
+                <br>• Tính xuôi (Forward Pass): $ES + 	ext{Duration} = EF \implies 	ext{Tìm ngày hoàn thành sớm nhất}$.
+                <br>• Tính ngược (Backward Pass): $LF - 	ext{Duration} = LS \implies 	ext{Tìm ngày bắt đầu muộn nhất}$.
+                <br>• Tổng thời gian dự trữ: $\mathbf{Total\ Float\ (TF) = LS - ES = LF - EF}$.
+              </li>
+              <li><strong>Hồ sơ pháp lý giải quyết tranh chấp (Delay Claims):</strong> P6 là công cụ pháp lý duy nhất được các tòa trọng tài quốc tế (FIDIC, AIA) công nhận để bảo vệ quyền gia hạn thời gian (EOT) và phân định lỗi trễ hạn (Excusable vs Non-Excusable Delay).</li>
+            </ul>
+          </div>
+
+          <!-- Ch 2 -->
+          <div class="sub-card amber">
+            <div class="sub-card-title">
+              <span>Chương 2: Lập Kế Hoạch &amp; Cấu Trúc Phân Chia Công Việc (WBS Architecture)</span>
+              <span class="sub-card-pill">WBS Design</span>
+            </div>
+            <ul class="bullet-list">
+              <li><strong>Xác định thời lượng (Project Duration):</strong> Dựa trên năng suất thiết bị, định mức nhân công thực tế và khối lượng bóc tách từ mô hình BIM (BIM QTO to Production Rate).</li>
+              <li><strong>Cấp độ chi tiết (Level of Detail - LOD/WBS):</strong>
+                <br>• Cấp Lãnh đạo (Level 1-2): Mốc bàn giao chính (Milestones), phân kỳ thanh toán.
+                <br>• Cấp Điều hành (Level 3-4): Theo phân khu (Zone), hạng mục kết cấu (Footing, Beam, Slab).
+                <br>• Cấp Đội thi công (Level 5): Từng chu kỳ lắp dựng cốp pha, đặt thép, đổ bê tông, bảo dưỡng.
+              </li>
+              <li><strong>Quy tắc WBS 100%:</strong> WBS phải bao hàm 100% phạm vi công việc hợp đồng, không trùng lặp và phân định rõ quyền sở hữu trách nhiệm.</li>
+              <li><strong>Thời lượng công việc chuẩn (Activity Duration Rule):</strong> Không nên đặt một công việc thi công có thời lượng lớn hơn chu kỳ cập nhật tiến độ (thông thường từ <code>5 đến 15 ngày làm việc</code>). Nếu lớn hơn, bắt buộc phải chia nhỏ theo phân đoạn (Pour / Segment).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHƯƠNG 3 & 4 -->
+    <section class="doc-section">
+      <div class="section-header">
+        <span>PHẦN II: CẤU TRÚC DOANH NGHIỆP EPS, OBS &amp; MAPPING WBS KẾT CẤU KAKA (CHAPTER 3 - 4)</span>
+        <span class="section-badge">Phần 2</span>
+      </div>
+      <div class="section-body">
+        <div class="section-desc">
+          Thiết lập cấu trúc phân cấp doanh nghiệp EPS/OBS trong P6 và cơ chế tự động hóa chuyển đổi 14 cấu kiện kết cấu từ cơ sở dữ liệu Kaka Revit sang cây WBS của P6.
+        </div>
+
+        <div class="grid-3">
+          <div class="sub-card blue">
+            <div class="sub-card-title">
+              <span>EPS (Enterprise Project Structure)</span>
+              <span class="sub-card-pill">Hệ Thống</span>
+            </div>
+            <p style="font-size: 7.9pt; color: #475569; margin-bottom: 4px;">
+              Cây phân cấp quản trị toàn bộ danh mục dự án công ty:
+            </p>
+            <ul class="bullet-list" style="font-size: 7.6pt;">
+              <li><strong>Root:</strong> TỔNG CÔNG TY XÂY DỰNG / GLC GROUP</li>
+              <li><strong>Node 1:</strong> DỰ ÁN NHÀ MÁY CÔNG NGHIỆP (INDUSTRIAL)</li>
+              <li><strong>Node 2:</strong> Dự án Nhà máy Hải Phòng 30.000m²</li>
+              <li><strong>Node 3:</strong> Phân kỳ Giai đoạn 1 &amp; Giai đoạn 2</li>
+            </ul>
+          </div>
+
+          <div class="sub-card purple">
+            <div class="sub-card-title">
+              <span>OBS (Organizational Breakdown)</span>
+              <span class="sub-card-pill">Tổ Chức</span>
+            </div>
+            <p style="font-size: 7.9pt; color: #475569; margin-bottom: 4px;">
+              Ma trận phân quyền nhân sự chịu trách nhiệm từng nút:
+            </p>
+            <ul class="bullet-list" style="font-size: 7.6pt;">
+              <li><strong>Giám đốc Dự án (Project Director):</strong> Phụ trách toàn bộ EPS.</li>
+              <li><strong>BIM Manager / Planning Lead:</strong> Quản trị WBS kỹ thuật và P6 baseline.</li>
+              <li><strong>Chỉ huy trưởng (Site Manager):</strong> Chịu trách nhiệm thi công hiện trường.</li>
+              <li><strong>Kỹ sư Đội trưởng:</strong> Cập nhật sản lượng thực tế hàng ngày.</li>
+            </ul>
+          </div>
+
+          <div class="sub-card green">
+            <div class="sub-card-title">
+              <span>WBS (Work Breakdown Structure)</span>
+              <span class="sub-card-pill">14 Cấu Kiện</span>
+            </div>
+            <p style="font-size: 7.9pt; color: #475569; margin-bottom: 4px;">
+              Cấu trúc phân rã sản phẩm xây dựng:
+            </p>
+            <ul class="bullet-list" style="font-size: 7.6pt;">
+              <li><strong>Cấp 1:</strong> Gói thầu Kết cấu (Structural Works)</li>
+              <li><strong>Cấp 2:</strong> Phần ngầm (Substructure) vs Thân (Superstructure)</li>
+              <li><strong>Cấp 3:</strong> 14 Nhóm cấu kiện Kaka (01.Coc $ightarrow$ 14.Phu)</li>
+              <li><strong>Cấp 4:</strong> Ván khuôn, Cốt thép, Bê tông, Nghiệm thu</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bảng 14 Cấu Kiện Kaka Mapping P6 WBS -->
+        <div style="margin-top: 8px;">
+          <div style="font-size: 8.3pt; font-weight: 800; color: #ea580c; margin-bottom: 4px;">
+            MÃ HÓA TỰ ĐỘNG: 14 CẤU KIỆN KẾT CẤU KAKA SANG CÂY PRIMAVERA P6 WBS &amp; ACTIVITIES:
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 10%;">Mã Kaka</th>
+                <th style="width: 25%;">Tên Cấu Kiện Kết Cấu</th>
+                <th style="width: 22%;">Mã P6 WBS Code</th>
+                <th style="width: 25%;">Chuỗi Công Việc Điển Hình (Activities)</th>
+                <th style="width: 18%;">Tài Nguyên Gán Vào (Resources)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>01.Coc</strong></td>
+                <td>Công tác Cọc (Piles Works)</td>
+                <td><code>WBS-KC.01.Coc</code></td>
+                <td>Ép cọc đại trà $ightarrow$ Đập đầu cọc $ightarrow$ Thí nghiệm PDA/PIT</td>
+                <td>Máy ép cọc, Đội cọc, Bê tông cọc</td>
+              </tr>
+              <tr>
+                <td><strong>02.Mong</strong></td>
+                <td>Móng đơn, móng băng, móng bè</td>
+                <td><code>WBS-KC.02.Mong</code></td>
+                <td>Đào đất $ightarrow$ Bê tông lót $ightarrow$ Cốt thép $ightarrow$ Ván khuôn $ightarrow$ Đổ BT</td>
+                <td>Đội cốp pha, Đội thép, Bơm BT</td>
+              </tr>
+              <tr>
+                <td><strong>03.DaKieng</strong></td>
+                <td>Đà kiềng &amp; Giằng móng (Tie Beams)</td>
+                <td><code>WBS-KC.03.DaKieng</code></td>
+                <td>Gia công thép $ightarrow$ Lắp dựng ván khuôn $ightarrow$ Đổ BT đà kiềng</td>
+                <td>Đội thép gối/nhịp, Bê tông thương phẩm</td>
+              </tr>
+              <tr>
+                <td><strong>04.Nen</strong></td>
+                <td>Nền nhà xưởng &amp; Sàn trệt (Slab on Grade)</td>
+                <td><code>WBS-KC.04.Nen</code></td>
+                <td>Lu lèn đầm chặt K98 $ightarrow$ Trải PE $ightarrow$ Lưới thép $ightarrow$ Đổ BT xoa nền</td>
+                <td>Lu rung, Đội xoa nền hardener, Lưới thép</td>
+              </tr>
+              <tr>
+                <td><strong>05.Cot</strong></td>
+                <td>Cột bê tông cốt thép (Columns)</td>
+                <td><code>WBS-KC.05.Cot</code></td>
+                <td>Thép cột $ightarrow$ Nghiệm thu thép $ightarrow$ Ghép cốp pha $ightarrow$ Đổ BT cột</td>
+                <td>Thép cây Ø20-25, Cốp pha nhôm/ván phủ phim</td>
+              </tr>
+              <tr>
+                <td><strong>06.Vach</strong></td>
+                <td>Vách bể nước, vách thang (Shear Walls)</td>
+                <td><code>WBS-KC.06.Vach</code></td>
+                <td>Lắp đặt Waterstop $ightarrow$ Thép vách 2 lớp $ightarrow$ Cốp pha $ightarrow$ Đổ BT</td>
+                <td>Băng cản nước, Đai C con bọ, Bơm cần</td>
+              </tr>
+              <tr>
+                <td><strong>07.Dam</strong></td>
+                <td>Dầm khung kết cấu tầng (Beams)</td>
+                <td><code>WBS-KC.07.Dam</code></td>
+                <td>Cốp pha đáy dầm $ightarrow$ Thép dầm chính/phụ $ightarrow$ Cốp pha thành dầm</td>
+                <td>Giàn giáo nêm, Thép gối L/4, Đai treo</td>
+              </tr>
+              <tr>
+                <td><strong>08.San</strong></td>
+                <td>Sàn bê tông cốt thép (Slabs)</td>
+                <td><code>WBS-KC.08.San</code></td>
+                <td>Cốp pha sàn $ightarrow$ Thép lớp dưới $ightarrow$ Điện MEP âm sàn $ightarrow$ Thép mũ $ightarrow$ Đổ BT</td>
+                <td>Thép sàn Ø10-12, Con kê bê tông, Đội xoa</td>
+              </tr>
+              <tr>
+                <td><strong>09-10.Thang</strong></td>
+                <td>Cầu thang bộ &amp; Bậc tam cấp</td>
+                <td><code>WBS-KC.09-10.Stairs</code></td>
+                <td>Đóng cốn thang $ightarrow$ Thép chiếu nghỉ $ightarrow$ Bẻ thép chống nhổ $ightarrow$ Đổ bậc</td>
+                <td>Thép uốn chữ X, Thợ mộc cốp pha bậc</td>
+              </tr>
+              <tr>
+                <td><strong>11-14.Phu</strong></td>
+                <td>Ramp dốc, Hố Pit, Sàn Dock &amp; Phụ</td>
+                <td><code>WBS-KC.11-14.Others</code></td>
+                <td>Chống thấm đáy Pit $ightarrow$ Lắp V góc mép Dock $ightarrow$ Lanh tô, gờ nước</td>
+                <td>Waterstop, Thép hình V, Vữa không co</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHƯƠNG 5 & 6 -->
+    <section class="doc-section page-break">
+      <div class="section-header">
+        <span>PHẦN III: LỊCH THI CÔNG, MỐI QUAN HỆ LOGIC &amp; TÙY BIẾN TIẾN ĐỘ (CHAPTER 5 - 6)</span>
+        <span class="section-badge">Phần 3</span>
+      </div>
+      <div class="section-body">
+        <div class="section-desc">
+          Xây dựng hệ thống Lịch (Calendars), thiết lập 4 dạng liên kết logic, ràng buộc thời gian (Constraints), bộ mã hoạt động (Activity Codes) và bộ lọc chuyên sâu.
+        </div>
+
+        <div class="grid-2">
+          <!-- Calendars -->
+          <div class="sub-card">
+            <div class="sub-card-title">
+              <span>5.1 Thiết Lập Lịch Thi Công Chuẩn (Calendars Architecture)</span>
+              <span class="sub-card-pill">Calendars</span>
+            </div>
+            <ul class="bullet-list">
+              <li><strong>Lịch 7 ngày (7-Day Calendar - 24/7):</strong> Dành riêng cho các công tác phản ứng hóa học tự nhiên không phụ thuộc ca kíp con người: <code>Bảo dưỡng bê tông (Curing 7 ngày)</code>, thoát nước, chờ khô lớp chống thấm màng khò.</li>
+              <li><strong>Lịch 6 ngày (6-Day Construction Calendar - 8h/ngày):</strong> Lịch làm việc tiêu chuẩn của đại đa số công trường xây lắp tại Việt Nam (nghỉ ngày Chủ nhật và các ngày Lễ Tết theo luật lao động).</li>
+              <li><strong>Lịch 5 ngày (5-Day Office Calendar - 40h/tuần):</strong> Dành cho công tác phê duyệt văn phòng: Thẩm tra Shop Drawings của A/E, phản hồi RFI, kiểm định của cơ quan quản lý nhà nước.</li>
+              <li><strong>Quản lý ngày mưa bão (Weather Days Contingency):</strong> Dự kiến số ngày mưa trung bình từng tháng dựa trên trạm khí tượng thủy văn để đưa vào lịch làm việc, tránh rủi ro tranh chấp tiến độ do thời tiết bất khả kháng.</li>
+            </ul>
+          </div>
+
+          <!-- Relationships & Lags -->
+          <div class="sub-card amber">
+            <div class="sub-card-title">
+              <span>5.2 4 Mối Quan Hệ Logic &amp; Độ Trễ (Relationships &amp; Lags)</span>
+              <span class="sub-card-pill">Logic Links</span>
+            </div>
+            <ul class="bullet-list">
+              <li><strong>Finish-to-Start (FS):</strong> Công việc A kết thúc thì công việc B mới bắt đầu (Quan hệ phổ biến nhất, chiếm &gt; 85% tiến độ). VD: Đổ bê tông móng xong $ightarrow$ Bảo dưỡng 3 ngày $\implies \mathbf{FS + 3d}$.</li>
+              <li><strong>Start-to-Start (SS):</strong> Hai công việc bắt đầu song song gối đầu nhau với độ trễ Lag. VD: Bắt đầu lắp cốp pha dầm được 2 ngày thì thợ thép bắt đầu đặt thép $\implies \mathbf{SS + 2d}$.</li>
+              <li><strong>Finish-to-Finish (FF):</strong> Hai công việc kết thúc cùng lúc hoặc nối tiếp. VD: Lắp xong thanh giằng cốp pha cuối cùng thì hoàn tất nghiệm thu nội bộ $\implies \mathbf{FF + 0d}$.</li>
+              <li><strong>Start-to-Finish (SF):</strong> Rất hiếm khi sử dụng trong xây dựng, chỉ áp dụng cho ca trực bảo vệ hoặc chạy thử liên động.</li>
+              <li><strong class="chip chip-red">Cảnh báo nghiêm cấm Negative Lag:</strong> Tuyệt đối cấm sử dụng độ trễ âm (VD: $	ext{FS} - 3	ext{d}$) vì làm méo mó bản chất vật lý của chuỗi công việc và bị các tổ chức tư vấn quốc tế bác bỏ.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Activity Codes, Filters, Layouts -->
+        <div class="sub-card purple" style="margin-top: 6px;">
+          <div class="sub-card-title">
+            <span>Chương 6: Tùy Biến P6 Bằng Bộ Mã Hoạt Động (Activity Codes), Bộ Lọc &amp; Layouts</span>
+            <span class="sub-card-pill">Activity Codes</span>
+          </div>
+          <div class="grid-3" style="font-size: 7.8pt;">
+            <div>
+              <strong>1. Activity Codes Đa Chiều:</strong>
+              <br>• <code>ZONE:</code> Zone 1 (Xưởng A), Zone 2 (Xưởng B), Zone 3 (Văn phòng).
+              <br>• <code>PHASE:</code> Móng, Thân, Hoàn thiện, Cơ điện, Hạ tầng.
+              <br>• <code>RESP:</code> Tổng thầu GLC, Thầu phụ Cơ điện, NCC Thép.
+              <br>• <code>DISCIPLINE:</code> Kiến trúc, Kết cấu, Cơ điện, Cảnh quan.
+            </div>
+            <div>
+              <strong>2. Bộ Lọc Trọng Yếu (Filters):</strong>
+              <br>• <em>Critical Activities:</em> Lọc riêng công việc có $TF \le 0$ để họp giao ban.
+              <br>• <em>3-Week Lookahead:</em> Lọc công việc trong 21 ngày tới để cấp vật tư.
+              <br>• <em>Behind Baseline:</em> Lọc các công việc đang trễ so với mốc Baseline B1.
+              <br>• <em>Submittals Pending:</em> Lọc các đệ trình Shop chưa phê duyệt.
+            </div>
+            <div>
+              <strong>3. Chuẩn Hóa Layout Xuất Báo Cáo:</strong>
+              <br>• Định dạng màu thanh Gantt: Đỏ (Đường găng), Xanh lá (Hoàn thành), Xanh dương (Đang làm), Vàng (Baseline).
+              <br>• Bảng cột chuẩn: Activity ID, Name, Original Duration, Remaining Duration, Start, Finish, Total Float, % Complete.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHƯƠNG 7 & 8 -->
+    <section class="doc-section">
+      <div class="section-header">
+        <span>PHẦN IV: CẬP NHẬT TIẾN ĐỘ, DATA DATE, QUẢN TRỊ BASELINE &amp; TÀI NGUYÊN (CHAPTER 7 - 8)</span>
+        <span class="section-badge">Phần 4</span>
+      </div>
+      <div class="section-body">
+        <div class="section-desc">
+          Chu trình 4 bước chuẩn cập nhật tiến độ định kỳ, định vị ngày dữ liệu Data Date, rà soát Total Float và cân bằng tài nguyên (Resource Leveling).
+        </div>
+
+        <!-- 4 Bước cập nhật -->
+        <div class="flow-steps">
+          <div class="flow-step">
+            <div class="flow-step-num">BƯỚC 1 • THU THẬP</div>
+            <div class="flow-step-title">Thu Thập Số Liệu</div>
+            <div class="flow-step-desc">Ghi nhận Actual Start (AS), % Tiến độ, Thời gian còn lại (RD)</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-step-num">BƯỚC 2 • DATA DATE</div>
+            <div class="flow-step-title">Dời Ngày Dữ Liệu</div>
+            <div class="flow-step-desc">Thiết lập mốc Data Date (VD: 25 hàng tháng) phân tách quá khứ &amp; tương lai</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-step-num">BƯỚC 3 • CHẠY F9</div>
+            <div class="flow-step-title">Chạy Tính Toán F9</div>
+            <div class="flow-step-desc">Nhấn F9 (Schedule) để tính lại đường găng và độ trôi Total Float</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-step-num">BƯỚC 4 • BÁO CÁO</div>
+            <div class="flow-step-title">Đánh Giá &amp; Báo Cáo</div>
+            <div class="flow-step-desc">Đối chiếu Baseline Variance, lập kế hoạch bù tiến độ (Catch-up)</div>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 8px;">
+          <!-- Baseline & Float -->
+          <div class="sub-card">
+            <div class="sub-card-title">
+              <span>7.1 Quản Trị Tiến Độ Cơ Sở (Baseline Management) &amp; Total Float</span>
+              <span class="sub-card-pill">Baseline B1</span>
+            </div>
+            <ul class="bullet-list alert">
+              <li><strong>Quy trình đóng băng Baseline (Project Baseline B1):</strong> Lệnh <code>Project → Maintain Baselines → Save a copy as new baseline</code>, sau đó gán vào <code>Assign Baselines → Project Baseline</code>. Tuyệt đối không thay đổi Baseline khi chưa có Change Order (CO) được duyệt.</li>
+              <li><strong>Rà soát Total Float (Check the Float):</strong>
+                <br>• $TF > 0$: Dự án đang an toàn, có thời gian dự phòng trước rủi ro.
+                <br>• $TF = 0$: Dự án đi đúng đường găng sát nút, không được phép chậm 1 ngày nào.
+                <br>• $TF < 0$: Dự án đã bị vỡ tiến độ, trễ so với mốc cam kết hợp đồng. Bắt buộc kích hoạt ngay phương án Fast-tracking (thi công song song) hoặc Crashing (tăng ca, thêm nhân lực thiết bị).
+              </li>
+            </ul>
+          </div>
+
+          <!-- Resources & Roles -->
+          <div class="sub-card green">
+            <div class="sub-card-title">
+              <span>Chương 8: Quản Trị Tài Nguyên, Nhân Lực &amp; Cân Bằng (Resource Leveling)</span>
+              <span class="sub-card-pill">Resource Leveling</span>
+            </div>
+            <ul class="bullet-list check">
+              <li><strong>3 Nhóm tài nguyên trong P6:</strong>
+                <br>• <code>Labor:</code> Kỹ sư, thợ cốp pha, thợ sắt, thợ hàn, thợ phụ (đo theo Man-hours).
+                <br>• <code>Non-labor:</code> Máy ép cọc, cần trục tháp, xe bơm bê tông, máy lu rung (đo theo Machine-hours).
+                <br>• <code>Material:</code> Thép xây dựng (Tấn), Bê tông thương phẩm (m³), Ván khuôn (m²).
+              </li>
+              <li><strong>Cân bằng tài nguyên (Resource Leveling):</strong> Khi biểu đồ nhân lực/thiết bị bị đỉnh nhọn vượt quá năng lực đáp ứng (Over-allocated), sử dụng tính năng tự động chuyển dịch các công việc không nằm trên đường găng (có Float) để làm phẳng biểu đồ huy động nhân sự.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHƯƠNG 9 ĐẾN 12 -->
+    <section class="doc-section page-break">
+      <div class="section-header">
+        <span>PHẦN V: BÁO CÁO, QUẢN LÝ CHI PHÍ EVA &amp; KHIẾU NẠI TIẾN ĐỘ (CHAPTER 9 - 12)</span>
+        <span class="section-badge">Phần 5</span>
+      </div>
+      <div class="section-body">
+        <div class="section-desc">
+          Hệ thống báo cáo đường cong chữ S, phương pháp phân tích giá trị thu được (Earned Value Analysis - EVA) đo lường CPI/SPI và giải quyết tranh chấp gia hạn thời gian (EOT Claim).
+        </div>
+
+        <div class="grid-2">
+          <!-- Cost Accounts & EVA -->
+          <div class="sub-card">
+            <div class="sub-card-title">
+              <span>Chương 10: Tài Khoản Chi Phí &amp; Đo Lường Hiệu Suất (Earned Value EVA)</span>
+              <span class="sub-card-pill">EVA CPI / SPI</span>
+            </div>
+            <ul class="bullet-list">
+              <li><strong>3 Giá trị nền tảng của phương pháp EVA:</strong>
+                <br>• <strong>PV (Planned Value):</strong> Giá trị ngân sách kế hoạch dự kiến hoàn thành tại thời điểm Data Date.
+                <br>• <strong>EV (Earned Value):</strong> Giá trị ngân sách thực tế đã tạo ra dựa trên % sản lượng nghiệm thu thực tế ($EV = \% 	ext{Actual} 	imes 	ext{Budget}$).
+                <br>• <strong>AC (Actual Cost):</strong> Chi phí tài chính thực tế đã chi trả cho nhà thầu/đội thợ.
+              </li>
+              <li><strong>2 Chỉ số hiệu suất sống còn:</strong>
+                <br>• <strong>Chỉ số Hiệu suất Tiến độ:</strong> $\mathbf{SPI = EV / PV}$ ($SPI > 1$: Nhanh tiến độ; $SPI < 1$: Chậm tiến độ).
+                <br>• <strong>Chỉ số Hiệu suất Chi phí:</strong> $\mathbf{CPI = EV / AC}$ ($CPI > 1$: Tiết kiệm chi phí; $CPI < 1$: Bị đội vốn).
+              </li>
+              <li><strong>Dự báo tổng chi phí khi hoàn thành (EAC):</strong> $\mathbf{EAC = BAC / CPI}$ giúp Ban Giám đốc phát hiện nguy cơ vượt ngân sách trước hàng quý.</li>
+            </ul>
+          </div>
+
+          <!-- Contract Changes & Claims -->
+          <div class="sub-card amber">
+            <div class="sub-card-title">
+              <span>Chương 11: Quản Trị Phát Sinh Hợp Đồng &amp; Khiếu Nại Tiến Độ (Delay Claims)</span>
+              <span class="sub-card-pill">Delay Analysis</span>
+            </div>
+            <ul class="bullet-list">
+              <li><strong>Phương pháp Phân tích Trễ hạn Tiềm năng (Time Impact Analysis - TIA):</strong>
+                <br>1. Trích xuất file tiến độ cập nhật ngay trước thời điểm xảy ra sự kiện phát sinh (Unimpacted Schedule).
+                <br>2. Chèn phân đoạn công việc phát sinh (Fragnet) gồm các công việc mới kèm mối liên kết logic thực tế vào tiến độ.
+                <br>3. Chạy lại F9 để tính toán sự dịch chuyển của ngày hoàn thành dự án (Impacted Schedule).
+                <br>4. Số ngày chênh lệch đường găng chính là cơ sở pháp lý đòi gia hạn tiến độ (EOT) và chi phí bồi thường lán trại gián tiếp.
+              </li>
+              <li><strong>Phân định nguyên nhân trễ hạn:</strong> Trễ do Chủ đầu tư chậm bàn giao mặt bằng/chậm duyệt Shop Drawings (Excusable Compensable) vs Trễ do năng lực Nhà thầu (Non-excusable).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bảng 10 bước chuẩn hóa P6 cho BIM Manager -->
+        <div style="margin-top: 8px;">
+          <div style="font-size: 8.3pt; font-weight: 800; color: #0284c7; margin-bottom: 4px;">
+            QUY TRÌNH 10 BƯỚC CHUẨN HÓA PRIMAVERA P6 DÀNH CHO GIÁM ĐỐC / CHUYÊN GIA QUẢN LÝ DỰ ÁN:
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 6%;">Bước</th>
+                <th style="width: 26%;">Hạng Mục Công Việc Chuẩn Hóa</th>
+                <th style="width: 38%;">Tiêu Chuẩn Đạt Yêu Cầu (Acceptance Standard)</th>
+                <th style="width: 15%;">Tần Suất / Mốc</th>
+                <th style="width: 15%;">Tài Liệu Xuất Ra</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td><strong>Khởi tạo Dự án trong EPS</strong></td>
+                <td>Gán đúng mã dự án, tên dự án, ngày bắt đầu theo Hợp đồng và đơn vị tiền tệ VNĐ/USD.</td>
+                <td>Khi ký Hợp đồng</td>
+                <td>P6 Project File</td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td><strong>Xây dựng cây WBS 14 Cấu Kiện</strong></td>
+                <td>Tương thích 100% với cấu trúc Categories của Kaka Revit Database và phân khu mặt bằng.</td>
+                <td>Giai đoạn Kế hoạch</td>
+                <td>WBS Dictionary</td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td><strong>Khai báo Lịch (Calendars)</strong></td>
+                <td>Phân tách lịch 6 ngày (xây lắp), lịch 7 ngày (bảo dưỡng BT), lịch 5 ngày (văn phòng/thẩm duyệt).</td>
+                <td>Trước khi add việc</td>
+                <td>Calendar Settings</td>
+              </tr>
+              <tr>
+                <td>04</td>
+                <td><strong>Nhập Activities &amp; Thời Lượng</strong></td>
+                <td>Thời lượng tính theo định mức năng suất bóc từ BIM QTO; thời lượng mỗi việc từ 5-15 ngày.</td>
+                <td>Thiết lập tiến độ</td>
+                <td>Activity Table</td>
+              </tr>
+              <tr>
+                <td>05</td>
+                <td><strong>Nối Logic FS/SS &amp; Lags</strong></td>
+                <td>100% việc có quan hệ logic kín; tuyệt đối không dùng Negative Lag; cấm Open End.</td>
+                <td>Kiểm soát logic</td>
+                <td>Network Diagram</td>
+              </tr>
+              <tr>
+                <td>06</td>
+                <td><strong>Kiểm tra Đường Găng &amp; Phê Duyệt</strong></td>
+                <td>Chạy F9 kiểm tra Total Float; rà soát chuỗi Critical Path có hợp lý biện pháp hay không.</td>
+                <td>Trước khi thi công</td>
+                <td>CPM Validation</td>
+              </tr>
+              <tr>
+                <td>07</td>
+                <td><strong>Khóa Baseline Cơ Sở (B1)</strong></td>
+                <td>Maintain Baseline &amp; Assign Project Baseline B1; khóa đóng băng không tự ý sửa đổi.</td>
+                <td>10 ngày sau NTP</td>
+                <td>Baseline Schedule B1</td>
+              </tr>
+              <tr>
+                <td>08</td>
+                <td><strong>Cập Nhật Tiến Độ &amp; Data Date</strong></td>
+                <td>Nhập Actual Start, % Tiến độ, Remaining Duration; dời Data Date và chạy F9 định kỳ.</td>
+                <td>Hàng tuần / Hàng tháng</td>
+                <td>Update Schedule</td>
+              </tr>
+              <tr>
+                <td>09</td>
+                <td><strong>Phân Tích Chênh Lệch &amp; EVA</strong></td>
+                <td>So sánh Variance với Baseline B1; đo lường chỉ số SPI, CPI, xuất S-Curve tiến độ.</td>
+                <td>Kỳ thanh toán</td>
+                <td>Monthly Progress Report</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td><strong>Xuất File XER &amp; Tích Hợp 4D BIM</strong></td>
+                <td>Xuất file chuẩn .XER liên kết vào Autodesk Navisworks / Synchro 4D để mô phỏng thi công.</td>
+                <td>Phục vụ giao ban CĐT</td>
+                <td>File .XER &amp; 4D Video</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Chữ ký xác nhận -->
+        <div style="margin-top: 20px; display: flex; justify-content: space-between; text-align: center; font-size: 8pt;">
+          <div style="width: 28%;">
+            <strong>KỸ SƯ QUẢN LÝ TIẾN ĐỘ (PLANNING LEAD)</strong><br>
+            <span style="color: #64748b; font-size: 7.2pt;">(Xây dựng mô hình CPM &amp; Cập nhật P6)</span><br><br><br><br>
+            <strong>Project Controls Specialist</strong>
+          </div>
+          <div style="width: 28%;">
+            <strong>GIÁM ĐỐC BIM (BIM MANAGER)</strong><br>
+            <span style="color: #64748b; font-size: 7.2pt;">(Tích hợp 4D BIM &amp; Khối lượng Kaka)</span><br><br><br><br>
+            <strong>BIM &amp; Digital Delivery Manager</strong>
+          </div>
+          <div style="width: 28%;">
+            <strong>CHỈ HUY TRƯỞNG / GIÁM ĐỐC DỰ ÁN</strong><br>
+            <span style="color: #64748b; font-size: 7.2pt;">(Phê duyệt Kế hoạch &amp; Kiểm soát Baseline)</span><br><br><br><br>
+            <strong>Project Director / Construction Manager</strong>
+          </div>
+        </div>
+
+        <div class="doc-footer">
+          <span>Chuẩn mực quản lý tiến độ Oracle Primavera P6 — Encore Group CPM / 4D BIM Standards</span>
+          <span>Trang 5 / 5 • Đề mục chi tiết toàn diện (Full A4)</span>
+          <span>Phát hành: 2026 • GLC Controls Division</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
