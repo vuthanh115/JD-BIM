@@ -217,7 +217,7 @@
     }
 
     .compact-table td {
-      padding: 2.8px 5px;
+      padding: 4.5px 6px;
       border: 1px solid #e2e8f0;
       vertical-align: top;
       color: #1e293b;
@@ -614,7 +614,7 @@
         </div>
         <div class="header-title-box">
           <h1>QUY CÁCH TRIỂN KHAI SHOP DRAWING CỐT THÉP &amp; THỐNG KÊ BBS (BẢN TÓM TẮT)</h1>
-          <div class="subtitle">VÁCH, DẦM TẦNG, SÀN, CẦU THANG, RAMP, PIT, DOCK &amp; QUẢN TRỊ HAO HỤT THÉP THI CÔNG</div>
+          <div class="subtitle">VÁCH, DẦM TẦNG, SÀN, CẦU THANG, RAMP, PIT, DOCK &amp; CẤU KIỆN PHỤ</div>
         </div>
       </header>
 
@@ -622,8 +622,8 @@
       <div class="meta-bar">
         <div class="meta-bar-item"><strong>Cấu kiện kế thừa:</strong> Dầm (như Đà Kiềng), Sàn (như Nền)</div>
         <div class="meta-bar-item"><strong>Cầu thang &amp; Ramp:</strong> Structure Rebar theo độ dốc</div>
-        <div class="meta-bar-item"><strong>Quản trị BBS:</strong> Đoạn cắt chẵn cây 11.7m, giảm nối đầu mẩu</div>
-        <div class="meta-bar-item"><strong>Trang:</strong> 2 / 2 (Phần Thân, Thang, Ramp &amp; BBS)</div>
+        <div class="meta-bar-item"><strong>Quy chuẩn Shop:</strong> Triển khai 14 cấu kiện chi tiết</div>
+        <div class="meta-bar-item"><strong>Trang:</strong> 2 / 2 (Phần Thân, Thang, Ramp &amp; Cấu Kiện Phụ)</div>
       </div>
 
       <!-- Khung 4: Ma Trận Cấu Kiện Thực Chiến 06 -> 14 -->
@@ -753,62 +753,12 @@
           </tr>
         </tbody>
       </table>
-
-      <!-- Khung 5: 8 Cột Chuẩn Bảng Thống Kê Uốn Thép (BBS) -->
-      <div class="section-title">
-        <span>📊 8 CỘT CHUẨN BẢNG THỐNG KÊ GIA CÔNG UỐN THÉP NHÀ MÁY (BBS SCHEDULE)</span>
-        <span class="badge">FABRICATION SCHEDULE</span>
-      </div>
-      <div class="bbs-grid">
-        <div class="bbs-card">
-          <strong>1. SỐ HIỆU (Partition)</strong>
-          Số hiệu thanh thép (1, 2, 3...) gắn theo cấu kiện.
-        </div>
-        <div class="bbs-card">
-          <strong>2. HÌNH DẠNG (Bending Detail)</strong>
-          Hình học thanh duỗi thẳng, bẻ mỏ, chữ U, đai C.
-        </div>
-        <div class="bbs-card">
-          <strong>3. ĐƯỜNG KÍNH (Bar Diameter)</strong>
-          Quy cách $\varnothing 6, \varnothing 10, \varnothing 16, \varnothing 25, \varnothing 32...$
-        </div>
-        <div class="bbs-card">
-          <strong>4. SỐ LƯỢNG (Quantities)</strong>
-          Số thanh thép trên 1 cấu kiện đơn lẻ.
-        </div>
-        <div class="bbs-card">
-          <strong>5. SỐ CẤU KIỆN (BSV_SoCauKien)</strong>
-          Số lượng móng/cột/dầm tương đương nhân lên.
-        </div>
-        <div class="bbs-card">
-          <strong>6. CHIỀU DÀI 1 THANH (mm)</strong>
-          Tổng chiều dài thực tế đã cộng đoạn bẻ mỏ.
-        </div>
-        <div class="bbs-card">
-          <strong>7. TỔNG CHIỀU DÀI (m)</strong>
-          $L_{tổng} = SL \times Số\_cấu\_kiện \times L_{thanh} / 1000$.
-        </div>
-        <div class="bbs-card">
-          <strong>8. TỔNG TRỌNG LƯỢNG (Kg)</strong>
-          $M_{tổng} = L_{tổng} \times Tỷ\_trọng\_thép$ ($kg/m$).
-        </div>
-      </div>
-
-      <!-- Khung 6: Quy Tắc Quản Trị Hao Hụt Thép & Ra Sắt Thi Công Hiện Trường -->
-      <div class="rule-card" style="border-left-color: #059669; background: #f0fdf4; margin-bottom: 5px;">
-        <h4 style="color: #047857;">💡 QUY TẮC CẮT THÉP CHẴN CÂY 11.7M &amp; KIỂM SOÁT HAO HỤT THÉP (CUTTING OPTIMIZATION)</h4>
-        <div style="font-size: 7.1pt; color: #166534; line-height: 1.4;">
-          1. <strong>Tổ hợp chẵn cây tiêu chuẩn 11.7m:</strong> Khi triển khai bản vẽ Shop dầm và sàn, kỹ sư phải phối hợp các đoạn thanh (Ví dụ: $7.8\text{m} + 3.9\text{m} = 11.7\text{m}$ hoặc $5.85\text{m} \times 2 = 11.7\text{m}$) để giảm tỷ lệ thép vụn đầu mẩu xuống $< 1.5\%$.<br>
-          2. <strong>Bảo toàn vùng nối thép:</strong> Luôn tuân thủ tuyệt đối vùng nối $L/4$ bụng (thép trên) và $L/6$ gối (thép dưới), không bao giờ nối thép tại vị trí chịu uốn lớn nhất.<br>
-          3. <strong>Kiểm toán số học:</strong> Đối chiếu tổng trọng lượng thép trên bảng BBS Revit với định mức dự toán BOQ để phát hiện chênh lệch trước khi ký duyệt gia công.
-        </div>
-      </div>
     </div>
 
     <!-- Footer Page 2 -->
     <footer class="page-footer">
       <div>Ban Hành: BP. Shop Drawing Rebar BSV • Cẩm Nang Triển Khai Bản Vẽ &amp; BBS Tiêu Chuẩn</div>
-      <div>Trang 2 / 2 • Phần Thân Ngang, Thang, Ramp, 8 Cột BBS &amp; Tối Ưu Cắt Thép • Hết</div>
+      <div>Trang 2 / 2 • Phần Thân Ngang, Thang, Ramp &amp; Cấu Kiện Phụ • Hết</div>
     </footer>
   </div>
 
