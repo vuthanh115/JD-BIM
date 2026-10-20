@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng Đề Mục Quy Trình & Bóc Tách BOQ Kiến Trúc (Rút Gọn 2 Trang A4) - BSV Standard</title>
+  <style>
+    /* ==========================================================================
+       A4 EXECUTIVE PRINT STYLESHEET - ARCHITECTURE 2 PAGES EXACTLY
+       ========================================================================== */
+    @page {
+      size: A4 portrait;
+      margin: 8mm 10mm 8mm 10mm;
+    }
+
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --navy: #0f172a;
+      --slate: #334155;
+      --light-bg: #f8fafc;
+      --border: #cbd5e1;
+      --border-dark: #94a3b8;
+      --param-bg: #eff6ff;
+      --param-text: #1d4ed8;
+      --tool-bg: #ecfdf5;
+      --tool-text: #047857;
+      --amber-bg: #fffbeb;
+      --amber-text: #b45309;
+      --red-bg: #fef2f2;
+      --red-text: #991b1b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #0f172a;
+      background: #e2e8f0;
+      line-height: 1.34;
+      font-size: 7.9pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Screen Toolbar */
+    .screen-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: #0f172a;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .toolbar-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn {
+      padding: 6px 14px;
+      border-radius: 5px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .btn-primary { background: #0284c7; color: #fff; }
+    .btn-primary:hover { background: #0369a1; }
+    .btn-secondary { background: #334155; color: #fff; }
+
+    /* A4 Sheet Container */
+    .a4-page {
+      width: 210mm;
+      min-height: 297mm;
+      height: 297mm;
+      margin: 0 auto 16px auto;
+      background: #ffffff;
+      padding: 9mm 11mm 9mm 11mm;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Header Compact */
+    .doc-header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 5px;
+      margin-bottom: 7px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+
+    .org-tag {
+      font-size: 7.2pt;
+      font-weight: 700;
+      color: #64748b;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .doc-badge {
+      font-size: 7pt;
+      font-family: Consolas, monospace;
+      color: var(--primary);
+      font-weight: 700;
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+
+    .header-title-box {
+      text-align: center;
+    }
+
+    .header-title-box h1 {
+      font-size: 11.2pt;
+      font-weight: 800;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .header-title-box .subtitle {
+      font-size: 7.5pt;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Meta Ribbon Bar */
+    .meta-bar {
+      display: grid;
+      grid-template-columns: 2fr 1.8fr 1.8fr 1.4fr;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 3.5px 7px;
+      gap: 6px;
+      margin-bottom: 7px;
+      font-size: 7.1pt;
+    }
+
+    .meta-bar-item strong {
+      color: var(--navy);
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 8.3pt;
+      font-weight: 700;
+      color: #ffffff;
+      background: var(--navy);
+      padding: 3px 8px;
+      border-radius: 3px;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .section-title .badge {
+      background: var(--primary);
+      color: #fff;
+      font-size: 6.8pt;
+      padding: 1px 5px;
+      border-radius: 2px;
+      font-weight: 600;
+    }
+
+    /* Tables */
+    .compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7.1pt;
+      margin-bottom: 6px;
+    }
+
+    .compact-table th {
+      background: #f1f5f9;
+      color: var(--navy);
+      font-weight: 700;
+      text-align: left;
+      padding: 3px 5px;
+      border: 1px solid var(--border);
+      font-size: 6.9pt;
+      text-transform: uppercase;
+    }
+
+    .compact-table td {
+      padding: 2.8px 5px;
+      border: 1px solid #e2e8f0;
+      vertical-align: top;
+      color: #1e293b;
+    }
+
+    .compact-table tr:nth-child(even) {
+      background: #fafbfc;
+    }
+
+    .code-cell {
+      font-family: Consolas, monospace;
+      font-weight: 700;
+      color: var(--primary-dark);
+      white-space: nowrap;
+      width: 13%;
+    }
+
+    .name-cell {
+      font-weight: 600;
+      color: var(--navy);
+      width: 17%;
+    }
+
+    .param-pill {
+      display: inline-block;
+      font-family: Consolas, monospace;
+      font-size: 6.7pt;
+      font-weight: 600;
+      background: var(--param-bg);
+      color: var(--param-text);
+      border: 1px solid #bfdbfe;
+      padding: 0 4px;
+      border-radius: 2px;
+      margin-right: 2px;
+    }
+
+    .tool-pill {
+      display: inline-block;
+      font-size: 6.5pt;
+      font-weight: 600;
+      background: var(--tool-bg);
+      color: var(--tool-text);
+      border: 1px solid #a7f3d0;
+      padding: 0 4px;
+      border-radius: 2px;
+    }
+
+    .warn-pill {
+      display: inline-block;
+      font-size: 6.5pt;
+      font-weight: 700;
+      background: var(--red-bg);
+      color: var(--red-text);
+      border: 1px solid #fecaca;
+      padding: 0 4px;
+      border-radius: 2px;
+    }
+
+    .amber-pill {
+      display: inline-block;
+      font-size: 6.5pt;
+      font-weight: 600;
+      background: var(--amber-bg);
+      color: var(--amber-text);
+      border: 1px solid #fde68a;
+      padding: 0 4px;
+      border-radius: 2px;
+    }
+
+    /* Grid 2 Columns */
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .rule-card {
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: 3px;
+      padding: 4px 6px;
+      background: #ffffff;
+      font-size: 7.1pt;
+    }
+
+    .rule-card h4 {
+      font-size: 7.4pt;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 2.5px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .rule-card ul {
+      padding-left: 13px;
+      margin: 0;
+    }
+
+    .rule-card li {
+      margin-bottom: 1.5px;
+      color: #334155;
+    }
+
+    /* HTKC 6 Codes Grid */
+    .htkc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+
+    .htkc-card {
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      background: #f8fafc;
+      padding: 3.5px 5px;
+      font-size: 6.8pt;
+    }
+
+    .htkc-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 7pt;
+      margin-bottom: 1px;
+    }
+
+    /* Page Footer */
+    .page-footer {
+      border-top: 1px solid var(--border);
+      padding-top: 3px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 6.8pt;
+      color: #64748b;
+    }
+
+    /* Print Tweaks */
+    @media print {
+      body { background: #ffffff !important; }
+      .screen-toolbar { display: none !important; }
+      .a4-page {
+        margin: 0 !important;
+        padding: 8mm 10mm 8mm 10mm !important;
+        box-shadow: none !important;
+        page-break-after: always;
+        height: 297mm !important;
+      }
+      .a4-page:last-child {
+        page-break-after: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="screen-toolbar">
+    <div class="toolbar-title">
+      <span>🏛️ BSV KIẾN TRÚC — ĐỀ MỤC QUY TRÌNH & BÓC TÁCH BOQ RÚT GỌN (CHÍNH XÁC 2 TRANG A4)</span>
+    </div>
+    <div>
+      <button onclick="window.print()" class="btn btn-primary">
+        🖨️ In Ngay (2 Trang A4)
+      </button>
+      <a href="De_muc_Quy_trinh_Kien_truc_A4.html" class="btn btn-secondary">
+        📖 Xem Bản Đầy Đủ Chi Tiết
+      </a>
+      <a href="De_muc_Ket_cau_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        📐 Đề Mục Kết Cấu (2 Trang)
+      </a>
+      <a href="index.html" class="btn btn-secondary">
+        🏠 Master Portal
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- TRANG 1: STEP 1 ➔ STEP 3 (TIẾP CẬN, CAD, DỰNG MODEL CENTRAL, LTGT & HTKC) -->
+  <!-- ========================================================================= -->
+  <div class="a4-page">
+    <div>
+      <!-- Header -->
+      <header class="doc-header">
+        <div class="header-top">
+          <span class="org-tag">BSV BIM &amp; QUANTITY SURVEYING • ARCHITECTURE DIVISION</span>
+          <span class="doc-badge">STANDARD: BSV-ARC-QTO-SUMMARY • A4 COMPACT</span>
+        </div>
+        <div class="header-title-box">
+          <h1>QUY TRÌNH TÁC NGHIỆP &amp; BÓC TÁCH BOQ KIẾN TRÚC (BẢN TÓM TẮT)</h1>
+          <div class="subtitle">TIẾP CẬN BẢN VẼ, XỬ LÝ CAD, DỰNG MODEL CENTRAL FILE VÀ HOÀN THIỆN KẾT CẤU (HTKC)</div>
+        </div>
+      </header>
+
+      <!-- Meta Ribbon -->
+      <div class="meta-bar">
+        <div class="meta-bar-item"><strong>4 Bước tác nghiệp:</strong> Tiếp cận ➔ Xử lý CAD ➔ Model Central ➔ BOQ</div>
+        <div class="meta-bar-item"><strong>Công cụ chính:</strong> Atool, BimSpeed, BoTriBoTru, RaiGiang</div>
+        <div class="meta-bar-item"><strong>Bộ tham số:</strong> Comments, Note, BSV_PhanKhu, BSV_HTKC</div>
+        <div class="meta-bar-item"><strong>Trang:</strong> 1 / 2 (Khởi Tạo &amp; Dựng Hình)</div>
+      </div>
+
+      <!-- Khung 1: Step 1 & Step 2 (Tiếp Cận Bản Vẽ & Xử Lý CAD) -->
+      <div class="grid-2col">
+        <div class="rule-card">
+          <h4>📂 STEP 1: Tiếp Cận Bản Vẽ &amp; Cây Thư Mục Server</h4>
+          <ul>
+            <li><strong>0. Khởi tạo cây thư mục Server:</strong><br>
+              • <code>0.1.1. Cad template:</code> Mặt bằng, mặt đứng, mặt cắt, cắt thang.<br>
+              • <code>0.1.2. Rvt file:</code> Tạo từ template chuẩn <code>Template_Rvt_R20\ARC</code> ➔ Tạo Central file.<br>
+              • <code>0.1.3. BoQ Architech:</code> Lưu bản sao đặt đuôi <code>_Arch_Version</code>.
+            </li>
+            <li><strong>A. Đọc tổng quan dự án:</strong> Nắm hạng mục chính/phụ, diện tích sàn, số tầng, kiểu kiến trúc (vách tole, tường xây).</li>
+            <li><strong>B. Chỉ mục chung &amp; Hoàn thiện:</strong><br>
+              • Đọc kỹ Sheet <strong>"Schedules Finishing"</strong> để nắm vật liệu phòng.<br>
+              • Kiểm tra chỉ dẫn kết cấu: quy cách lanh tô, bổ trụ, giằng tường.<br>
+              • <span class="warn-pill">LƯU Ý</span> Kiểm tra Template có sẵn Family Type chưa để nạp ngay.
+            </li>
+          </ul>
+        </div>
+        <div class="rule-card">
+          <h4>📐 STEP 2: Xử Lý Thông Tin Bản Vẽ &amp; Chuẩn Hóa Cửa</h4>
+          <ul>
+            <li><strong>C. Tách CAD &amp; Import Central:</strong><br>
+              • <span class="warn-pill">BẮT BUỘC</span> Chỉ dùng lệnh <code>BURST</code> trong CAD, <strong>tuyệt đối không dùng lệnh X (Explode)</strong> để tránh mất thuộc tính block.<br>
+              • Import vào file Central: Kiểm tra hệ lưới trục và cao độ Level giữa <strong>Kiến Trúc, Kết Cấu, Cơ Điện</strong> phải trùng khớp 100%.<br>
+              • Kiểm tra đúng vị trí tọa độ, đúng tỉ lệ bản vẽ.
+            </li>
+            <li><strong>D. Xử lý thông tin cửa (Đi &amp; Sổ):</strong><br>
+              • Khởi tạo cửa đúng tên: <code>TênCửa(Width x Height)</code> (VD: <code>SD(1000x2100)</code>).<br>
+              • Gán parameter <span class="param-pill">Cost</span> = Số lượng cửa trong bảng thống kê CĐT để đối soát số học nhanh.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Khung 2: Step 3 - Trình Tự Triển Khai Dựng Model Trên Central File -->
+      <div class="section-title">
+        <span>🏗️ STEP 3: QUY TRÌNH TRIỂN KHAI DỰNG MODEL TRÊN CENTRAL FILE (E ➔ M)</span>
+        <span class="badge">LOD 350 - 400 MODELING</span>
+      </div>
+      <table class="compact-table">
+        <thead>
+          <tr>
+            <th class="code-cell">Mục Công Việc</th>
+            <th class="name-cell">Hạng Mục Cấu Kiện</th>
+            <th style="width: 32%;">Công Cụ &amp; Trình Tự Dựng Hình</th>
+            <th style="width: 38%;">Quy Cách &amp; Tiêu Chí Kiểm Soát Bóc Tách Khối Lượng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code-cell">E. Dựng tường</td>
+            <td class="name-cell">Tường Xây &amp; Vách</td>
+            <td>
+              Phân biệt tường trong và tường ngoài.<br>
+              Dựng vách thạch cao, vách ngăn panel.<br>
+              <span class="tool-pill">Tool kiểm tra va chạm</span> kết cấu.
+            </td>
+            <td>
+              • Tường ngoài tính theo đường bao, tường trong theo lưới phòng.<br>
+              • Kiểm soát va chạm với dầm, cột để tự động trừ giao.<br>
+              • Phân tách rõ mã tường theo chiều dày (100, 200, tường 1m).
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">F. Set Room</td>
+            <td class="name-cell">Không Gian Phòng</td>
+            <td>
+              Đặt Room cho 100% các phòng.<br>
+              Set tên Room khớp bản vẽ mặt bằng.<br>
+              Set biến <strong>Ceiling Height</strong>.
+            </td>
+            <td>
+              • Tên Room là chìa khóa lọc khối lượng hoàn thiện theo Schedules Finishing.<br>
+              • <code>Ceiling Height</code> bắt buộc đúng cao độ trần để tính tường trát dưới/trên trần.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">G. Sàn &amp; Trần</td>
+            <td class="name-cell">Hoàn Thiện Sàn/Trần</td>
+            <td>
+              <span class="tool-pill">Atool</span> dựng sàn hoàn thiện theo Room.<br>
+              Dựng trần bằng sàn đã tạo ở bước trên.
+            </td>
+            <td>
+              • Tách lớp vữa lót, gạch lát, sơn epoxy, sàn nâng kỹ thuật.<br>
+              • Trần thạch cao khung chìm/nổi, trần nhôm, trần sơn trực tiếp.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">H. Cửa &amp; I. LTGT</td>
+            <td class="name-cell">Cửa, Lanh Tô, Bổ Trụ, Giằng Tường</td>
+            <td>
+              Dựng lanh tô bằng <span class="tool-pill">Atool</span>.<br>
+              Dựng bổ trụ bằng <span class="tool-pill">BSV_Arch_BoTriBoTruTuDong_V2</span>.<br>
+              Rải giằng tường bằng bộ 4 tools <span class="tool-pill">BSV_Arch_RaiGiang*</span>.
+            </td>
+            <td>
+              • Bố trí giằng đỉnh tường, giằng chân tường, giằng kẹp cửa.<br>
+              • Tính đầy đủ bê tông, ván khuôn lanh tô bổ trụ và thép LTGT.<br>
+              • Phục vụ bóc tách tô trát cạnh cửa và sill cửa.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">K. Hoàn thiện</td>
+            <td class="name-cell">Lớp Chống Thấm &amp; Tường</td>
+            <td>
+              <span class="tool-pill">Atool</span> dựng chống thấm chân tường, sàn WC.<br>
+              Dựng hoàn thiện ốp gạch, trát tường theo Room.
+            </td>
+            <td>
+              • Chống thấm góc chân tường bo cao 200-300mm.<br>
+              • Gạch ốp tường WC full chiều cao trần hoặc theo thiết kế.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Khung 3: 7 Bước Chuyển Đổi Hoàn Thiện Kết Cấu (L. KL Hoàn Thiện Kết Cấu) -->
+      <div class="section-title">
+        <span>🔄 L. QUY TRÌNH 7 BƯỚC CONVERT LINK KẾT CẤU LÀM HOÀN THIỆN (HTKC)</span>
+        <span class="badge">DYNAMO &amp; SPECIAL EQUIPMENT</span>
+      </div>
+      <div class="rule-card" style="margin-bottom: 5px;">
+        <div style="font-size: 7.1pt; color: #334155; line-height: 1.38;">
+          <strong>B1.</strong> Mở View 3D (1) full cấu kiện ➔ Chạy tool Join tường với cột, dầm.<br>
+          <strong>B2.</strong> Quét chọn toàn bộ Cột, Dầm, Special Equipment (ván khuôn LTBT) trong View 3D (1) ➔ Ẩn bằng lệnh <code>EH</code>.<br>
+          <strong>B3.</strong> Tạo View 3D (2) tên <code>View KC</code>, tạo Filter cho biến <span class="param-pill">BSV_XuongChinh</span> chứa chữ <code>KC</code>.<br>
+          <strong>B4.</strong> Vào View 3D (1) <code>HI</code> (Isolate) file Kết Cấu cần convert ➔ Chạy tool <span class="tool-pill">Convertlinktomodel</span> trên server Dynamo.<br>
+          <strong>B5.</strong> Quét chọn toàn bộ đối tượng đã convert ➔ Gán biến <span class="param-pill">BSV_XuongChinh</span> : <code>TenXuong_KC</code>.<br>
+          <strong>B6.</strong> Qua View 3D (2) quét chọn toàn bộ ván khuôn kết cấu cũ ➔ Xóa sạch.<br>
+          <strong>B7.</strong> Qua View 3D (1) dùng lệnh <code>HR</code> hiện toàn bộ tường ➔ Chạy lại ván khuôn kết cấu làm <strong>lớp Hoàn Thiện Kết Cấu</strong>.
+        </div>
+      </div>
+
+      <!-- Khung 4: Bảng 6 Mã Tiền Tố Gán Hoàn Thiện Kết Cấu (HTKC) -->
+      <div class="section-title">
+        <span>🏷️ NGUYÊN TẮC 6 MÃ TIỀN TỐ GÁN GIÁ TRỊ PARAMETER HOÀN THIỆN KẾT CẤU</span>
+        <span class="badge">PREFIX CODES 1 ➔ 6</span>
+      </div>
+      <div class="htkc-grid">
+        <div class="htkc-card">
+          <strong>+ CODE 1: Trát Cùng Mặt Tường</strong>
+          Cột/dầm/LTBT cùng mặt phẳng tường trong/ngoài ➔ Cộng dồn khối lượng vào trát/sơn tường xây.<br>
+          <em>VD: <code>1.In.TratTrongSonTrong</code></em>
+        </div>
+        <div class="htkc-card">
+          <strong>+ CODE 2: Trát/Mài Kết Cấu Riêng</strong>
+          Chân tường bê tông ngoài nhà, vách thang, bể nước, vách parapet mái ➔ Tách đầu mục riêng.<br>
+          <em>VD: <code>2.Ex.TratNgoaiSonNgoai</code></em>
+        </div>
+        <div class="htkc-card">
+          <strong>+ CODE 3: 2 Mặt Bên Hông Dầm</strong>
+          Ván khuôn 2 bên hông dầm trần kết cấu (FW BEAM SIDE) ➔ Cộng dồn vào hoàn thiện/sơn trần.<br>
+          <em>VD: <code>3.Ce.TratTranSonTran</code></em>
+        </div>
+        <div class="htkc-card">
+          <strong>+ CODE 4: Đáy Dầm &amp; Đáy Sàn Trần</strong>
+          Mặt đáy dầm trần và mặt dưới đáy sàn trần kết cấu ➔ Cộng vào khối lượng trát/sơn trần.<br>
+          <em>VD: <code>4.Ce.TratTranSonTran</code></em>
+        </div>
+        <div class="htkc-card">
+          <strong>+ CODE 5: Đáy &amp; Cạnh Thang/Tam Cấp</strong>
+          Mặt đáy và hông bản thang bộ, tam cấp ➔ Cộng vào hoàn thiện thang (hoặc trần/ngoài nhà).<br>
+          <em>VD: <code>5.St.TratThangSonThang</code></em>
+        </div>
+        <div class="htkc-card">
+          <strong>+ CODE 6: Mặt Bậc Thang &amp; Tam Cấp</strong>
+          Vật liệu hoàn thiện mặt bậc và chiếu nghỉ thang bộ/tam cấp (đá, gạch, mài granito).<br>
+          <em>VD: <code>6.Fs.DaGranite</code></em>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Page 1 -->
+    <footer class="page-footer">
+      <div>Ban Hành: BP. BIM/QS BSV Kiến Trúc • Cẩm Nang Tác Nghiệp &amp; Bóc Tách BOQ Tiêu Chuẩn</div>
+      <div>Trang 1 / 2 • Khởi Tạo, Xử Lý CAD, Central Model &amp; Quy Trình HTKC</div>
+    </footer>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- TRANG 2: STEP 4 (GÁN PARAMETERS BOQ, LƯU Ý SƠN/TRÁT & ĐẦU MỤC BỔ SUNG) -->
+  <!-- ========================================================================= -->
+  <div class="a4-page">
+    <div>
+      <!-- Header Compact Page 2 -->
+      <header class="doc-header">
+        <div class="header-top">
+          <span class="org-tag">BSV BIM &amp; QUANTITY SURVEYING • ARCHITECTURE DIVISION</span>
+          <span class="doc-badge">STANDARD: BSV-ARC-QTO-SUMMARY • A4 COMPACT</span>
+        </div>
+        <div class="header-title-box">
+          <h1>QUY TRÌNH TÁC NGHIỆP &amp; BÓC TÁCH BOQ KIẾN TRÚC (BẢN TÓM TẮT)</h1>
+          <div class="subtitle">STEP 4: QUY TẮC GÁN PARAMETERS CHO 12 HẠNG MỤC, LƯU Ý NHẬP BOQ SƠN/TRÁT &amp; CỘNG TRỪ</div>
+        </div>
+      </header>
+
+      <!-- Meta Ribbon Page 2 -->
+      <div class="meta-bar">
+        <div class="meta-bar-item"><strong>Mục tiêu:</strong> Bóc tách chính xác 100% theo BOQ CĐT</div>
+        <div class="meta-bar-item"><strong>Tham số Cửa:</strong> BSV_TratFull, BSV_Trat1m, KL_TratCanh</div>
+        <div class="meta-bar-item"><strong>Tham số Chung:</strong> Comments, Note, BSV_PhanKhu, XuongChinh</div>
+        <div class="meta-bar-item"><strong>Trang:</strong> 2 / 2 (Gán Biến &amp; Đối Soát BOQ)</div>
+      </div>
+
+      <!-- Khung 5: Ma Trận Quy Tắc Gán Biến Parameters Cho 12 Hạng Mục Kiến Trúc -->
+      <div class="section-title">
+        <span>📋 QUY TẮC GÁN BIẾN PARAMETERS CHO 12 HẠNG MỤC BẢNG THỐNG KÊ (0.1 ➔ 0.13)</span>
+        <span class="badge">REVIT SCHEDULES FILTERS</span>
+      </div>
+      <table class="compact-table">
+        <thead>
+          <tr>
+            <th class="code-cell">Hạng Mục</th>
+            <th class="name-cell">Loại Bảng Schedule</th>
+            <th style="width: 28%;">Giá Trị Comments &amp; Note Quy Chuẩn</th>
+            <th style="width: 42%;">Tham Số Phân Loại Bổ Sung &amp; Quy Tắc Filter Bóc Tách</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code-cell">0.1. Tường xây</td>
+            <td class="name-cell">Wall Quantities</td>
+            <td>
+              <span class="param-pill">Comments</span> : <code>TuongVach</code><br>
+              <span class="param-pill">Note</span> : Mô tả loại tường (VD: <code>VachThachCao</code>, <code>TuongTrong</code>, <code>TuongNgoai</code>)
+            </td>
+            <td>
+              <span class="param-pill">BSV_PhanKhu</span> : Phân khu xưởng hoặc hạng mục.<br>
+              <span class="param-pill">BSV_XuongChinh</span> : Tên xưởng để phân xưởng combine.<br>
+              Filter: <code>Comments = TuongVach</code>; Sorting theo Note &amp; Thickness.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">0.2. HT Tường</td>
+            <td class="name-cell">Material Takeoff</td>
+            <td>
+              Bảng thống kê vật liệu lớp trát &amp; sơn tường.<br>
+              <span class="param-pill">Material Name</span> : <code>TruKLHoanThienTuong</code>
+            </td>
+            <td>
+              Dùng để trừ ra những vị trí không hoàn thiện sơn hoặc trát (hoặc cả hai) ghi chú ở <code>Note</code>. Lọc theo Room và loại hoàn thiện.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">0.7. Sàn HT</td>
+            <td class="name-cell">Floor Quantities</td>
+            <td>
+              <span class="param-pill">Comments</span> : <code>HoanThienSan</code><br>
+              <span class="param-pill">Note</span> : Tên loại sàn hoặc phạm vi theo BOQ
+            </td>
+            <td>
+              <span class="param-pill">BSV_PhanKhu</span>, <span class="param-pill">BSV_XuongChinh</span>.<br>
+              Filter: <code>Comments = HoanThienSan</code>; Thống kê diện tích ($m^2$) theo từng vật liệu ốp lát, sơn epoxy, mài bóng sàn.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">0.7. Trần HT</td>
+            <td class="name-cell">Ceiling Quantities</td>
+            <td>
+              <span class="param-pill">Comments</span> : <code>HoanThienTran</code><br>
+              <span class="param-pill">Note</span> : Tên trần (thạch cao, nhôm, sơn...)
+            </td>
+            <td>
+              Filter: <code>Comments = HoanThienTran</code>.<br>
+              Tách trần thạch cao chống ẩm WC, trần văn phòng và trần sơn trực tiếp đáy sàn kết cấu.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">0.8. Chống thấm</td>
+            <td class="name-cell">Multi Material</td>
+            <td>
+              <span class="param-pill">Comments</span> : <code>ChongTham</code><br>
+              <span class="param-pill">Note</span> : Loại chống thấm (màng khò, sơn thẩm thấu)
+            </td>
+            <td>
+              Filter: <code>Comments = ChongTham</code>.<br>
+              Thống kê diện tích chống thấm sàn WC, sàn mái, sê nô, hố pit và chân tường cao 300mm.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">0.9. Cửa &amp; Tô Trát</td>
+            <td class="name-cell">Door/Window Quantities</td>
+            <td>
+              <span class="param-pill">Comments</span> : Ghi Sill cửa, cửa ốp thạch cao.<br>
+              <span class="param-pill">BSV_TratFull</span> / <span class="param-pill">BSV_Trat1m</span>
+            </td>
+            <td>
+              • Cửa nằm trong tường xây: <span class="param-pill">BSV_TratFull = 1</span>, <span class="param-pill">BSV_Trat1m = 0</span> ➔ Lấy biến <code>KL_TratCanhCua</code>.<br>
+              • Cửa trên tường xây 1m: <span class="param-pill">BSV_TratFull = 0</span>, <span class="param-pill">BSV_Trat1m = 1</span> ➔ Lấy biến <code>KL_TratCanhCua1m</code>.<br>
+              • Cửa trên kết cấu thép: Điền cả 2 biến = <code>0</code> ➔ <span class="amber-pill">Không lấy KL trát</span>.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">0.10. Bổ trụ BT</td>
+            <td class="name-cell">Column Quantities</td>
+            <td>
+              <span class="param-pill">Comments</span> : <code>BoTru</code><br>
+              <span class="param-pill">Note</span> : <code>BT1, BT2...</code>
+            </td>
+            <td>
+              Lọc khối lượng bê tông bổ trụ B20/B25 tường xây ($m^3$).
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">0.10. Lanh tô/Giằng</td>
+            <td class="name-cell">Framing Quantities</td>
+            <td>
+              <span class="param-pill">Comments</span> : <code>LanhTo</code>, <code>GiangTuong</code><br>
+              <span class="param-pill">Note</span> : Tên lanh tô, giằng đỉnh/chân tường
+            </td>
+            <td>
+              Lọc khối lượng bê tông lanh tô giằng tường ($m^3$). Tách riêng lanh tô cửa đi, cửa sổ và giằng ngang tường chèn vách panel.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">0.11. Ván khuôn LT</td>
+            <td class="name-cell">Special Equipment</td>
+            <td>
+              <span class="param-pill">Comments</span> : <code>VanKhuonLTBT</code>
+            </td>
+            <td>
+              Thống kê diện tích ván khuôn bổ trụ, lanh tô, giằng tường ($m^2$).
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">0.12 &amp; 0.13. HTKC</td>
+            <td class="name-cell">Special Equipment</td>
+            <td>
+              <span class="param-pill">BSV_HTKC</span> : Gán mã tiền tố 1 ➔ 6.<br>
+              <span class="param-pill">BSV_PhanLoai</span> : Tên thang, tam cấp, dầm...
+            </td>
+            <td>
+              Bảng quản lý phân bổ hoàn thiện kết cấu sang trát/sơn tường trong, tường ngoài, trần và thang bộ. Mặt ván không tận dụng HTKC gán biến <code>KHT</code>.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Khung 6: Quy Tắc Cộng Trừ Sơn Trát Trong/Ngoài & Đầu Mục Bổ Sung -->
+      <div class="grid-2col">
+        <div class="rule-card" style="border-left-color: #0284c7;">
+          <h4>🏠 Q.1. Quy Tắc Cộng Trừ Hoàn Thiện Trong Nhà</h4>
+          <ul>
+            <li><strong>Sơn tường trong:</strong><br>
+              • <strong>TRỪ:</strong> Len chân tường, gạch ốp WC, diện tích trên trần hoàn thiện, vị trí bị che khuất tủ âm.<br>
+              • <strong>CỘNG:</strong> Mặt trong lanh tô, bổ trụ, sơn kết cấu trong nhà cùng mí.
+            </li>
+            <li><strong>Trát tường trong:</strong><br>
+              • <strong>TRỪ:</strong> Vị trí trên trần (nếu spec ghi không trát), vị trí che khuất.<br>
+              • <strong>CỘNG:</strong> Mặt trong lanh tô bổ trụ, trát kết cấu cùng mí tường.
+            </li>
+          </ul>
+        </div>
+        <div class="rule-card" style="border-left-color: #d97706;">
+          <h4>🌤️ Q.2. Quy Tắc Cộng Trừ Hoàn Thiện Ngoài Nhà</h4>
+          <ul>
+            <li><strong>Sơn tường ngoài:</strong><br>
+              • <strong>TRỪ:</strong> Len chân tường ngoài, vách kính/curtain wall mặt ngoài.<br>
+              • <strong>CỘNG:</strong> Mặt ngoài lanh tô bổ trụ, sơn kết cấu mặt ngoài dầm/cột.
+            </li>
+            <li><strong>Trát tường ngoài:</strong><br>
+              • <strong>TRỪ:</strong> Diện tích vách kính ngoài nhà.<br>
+              • <strong>CỘNG:</strong> Mặt ngoài lanh tô bổ trụ, trát cạnh ban công, sê nô.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Khung 7: 3 Đầu Mục Thường Xuyên Bị Sót Cần Bổ Sung Vào BOQ -->
+      <div class="rule-card" style="border-left-color: #dc2626; background: #fff5f5; margin-bottom: 5px;">
+        <h4 style="color: #b91c1c;">⚠️ Q.3. BA ĐẦU MỤC CÔNG TÁC THƯỜNG XUYÊN BỊ SÓT (BẮT BUỘC BỔ SUNG VÀO BOQ)</h4>
+        <div style="font-size: 7.1pt; color: #7f1d1d; line-height: 1.4;">
+          1. <strong>Trát cạnh cửa &amp; đỉnh tường:</strong> Thường bản vẽ không thể hiện khối lượng riêng, phải xuất từ biến <code>KL_TratCanhCua</code> của bảng Schedule Cửa để lập mục thanh toán.<br>
+          2. <strong>Giàn giáo xây tô hoàn thiện:</strong> Tính bằng $Diện\_tích\_tường\_full \times 2$ (không trừ cửa, không trừ khoảng cột dầm), áp dụng cho các diện tích tường có chiều cao $> 3.4\text{m}$.<br>
+          3. <strong>Trát/Mài kết cấu đặc thù:</strong> Chân tường bê tông ngoài nhà, vách parapet, gờ chỉ máng xối mà BOQ ban đầu chưa lập đầu mục.
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Page 2 -->
+    <footer class="page-footer">
+      <div>Ban Hành: BP. BIM/QS BSV Kiến Trúc • Cẩm Nang Tác Nghiệp &amp; Bóc Tách BOQ Tiêu Chuẩn</div>
+      <div>Trang 2 / 2 • Gán Biến Parameters, Đối Soát BOQ &amp; Các Đầu Mục Bổ Sung • Hết</div>
+    </footer>
+  </div>
+
+</body>
+</html>
