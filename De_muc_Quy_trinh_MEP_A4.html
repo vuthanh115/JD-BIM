@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quy Trình Triển Khai BIM & Shop Drawing Cơ Điện (MEP) - BSV Standard (In A4)</title>
+  <style>
+    /* ==========================================================================
+       A4 EXECUTIVE PRINT STYLESHEET - BỘ MÔN CƠ ĐIỆN MEP (M-E-P-FP)
+       ========================================================================== */
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 12mm 12mm;
+    }
+
+    :root {
+      --primary: #0d9488;
+      --primary-dark: #0f766e;
+      --navy: #0f172a;
+      --slate: #334155;
+      --muted: #64748b;
+      --light-bg: #f8fafc;
+      --border: #cbd5e1;
+      --border-dark: #94a3b8;
+      --accent-m: #0284c7;   /* HVAC Mechanical - Blue */
+      --accent-e: #f59e0b;   /* Electrical - Amber */
+      --accent-p: #059669;   /* Plumbing - Green */
+      --accent-fp: #dc2626;  /* Fire Protection - Red */
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #0f172a;
+      background: #e2e8f0;
+      line-height: 1.45;
+      font-size: 8.8pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .screen-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: #0f172a;
+      color: #fff;
+      padding: 12px 24px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .toolbar-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toolbar-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+    }
+
+    .btn-primary { background: #0d9488; color: #fff; }
+    .btn-primary:hover { background: #0f766e; }
+    .btn-compact { background: #059669; color: #fff; }
+    .btn-compact:hover { background: #047857; }
+    .btn-secondary { background: #1e293b; color: #e2e8f0; border-color: #334155; }
+    .btn-secondary:hover { background: #334155; color: #fff; }
+
+    .paper-container {
+      width: 210mm;
+      margin: 0 auto 40px auto;
+      background: #fff;
+      padding: 12mm 14mm;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      border-radius: 4px;
+    }
+
+    .doc-cover {
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+
+    .org-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+    }
+
+    .org-title {
+      font-size: 8.5pt;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      color: #0d9488;
+      text-transform: uppercase;
+    }
+
+    .doc-code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 8pt;
+      font-weight: 700;
+      color: #475569;
+      background: #f1f5f9;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid #cbd5e1;
+    }
+
+    .main-title-box { text-align: center; margin: 12px 0 14px 0; }
+    .main-title-box h1 {
+      font-size: 15.5pt;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.25;
+      letter-spacing: -0.3px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .main-title-box .sub-title {
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: #0d9488;
+      line-height: 1.35;
+    }
+
+    .doc-meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7.9pt;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      margin-top: 8px;
+    }
+
+    .doc-meta-table td { padding: 5px 8px; border: 1px solid #cbd5e1; }
+    .meta-label { font-weight: 700; color: #334155; background: #e2e8f0; width: 16%; }
+    .meta-val { color: #0f172a; width: 34%; }
+
+    .golden-rule-box {
+      background: #f0fdfa;
+      border: 1.5px solid #0d9488;
+      border-left: 5px solid #0d9488;
+      border-radius: 4px;
+      padding: 8px 12px;
+      margin: 12px 0 16px 0;
+    }
+
+    .golden-rule-title {
+      font-size: 8.8pt;
+      font-weight: 800;
+      color: #0f766e;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .golden-rule-desc {
+      font-size: 8.2pt;
+      color: #1e293b;
+      line-height: 1.4;
+    }
+
+    .doc-section { margin-bottom: 18px; page-break-inside: avoid; }
+    .section-header {
+      background: #0f172a;
+      color: #fff;
+      padding: 6px 12px;
+      font-size: 9.5pt;
+      font-weight: 800;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .section-badge {
+      font-size: 7.4pt;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      background: #0d9488;
+      color: #fff;
+    }
+
+    .section-body {
+      border: 1px solid #cbd5e1;
+      border-top: none;
+      padding: 10px 12px;
+      background: #fff;
+      border-radius: 0 0 4px 4px;
+    }
+
+    .section-desc {
+      font-size: 8.3pt;
+      color: #475569;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+    .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 8px; }
+
+    .sub-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 3px solid #0d9488;
+      padding: 8px 10px;
+      border-radius: 3px;
+      font-size: 8pt;
+      margin-bottom: 8px;
+    }
+
+    .sub-card.m { border-left-color: #0284c7; background: #eff6ff; }
+    .sub-card.e { border-left-color: #f59e0b; background: #fffbeb; }
+    .sub-card.p { border-left-color: #059669; background: #f0fdf4; }
+    .sub-card.fp { border-left-color: #dc2626; background: #fef2f2; }
+
+    .sub-card-title {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sub-card-pill {
+      font-size: 7pt;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 3px;
+      background: #e2e8f0;
+      color: #334155;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7.8pt;
+      margin: 6px 0;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid #cbd5e1;
+      padding: 4.5px 7px;
+      text-align: left;
+    }
+
+    .data-table th { background: #f1f5f9; color: #1e293b; font-weight: 700; }
+    .data-table tr:nth-child(even) { background: #f8fafc; }
+
+    .chip {
+      display: inline-block;
+      font-size: 7.2pt;
+      font-weight: 600;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin: 1px;
+    }
+    .chip-teal { background: #ccfbf1; color: #0f766e; border: 1px solid #99f6e4; }
+    .chip-blue { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
+    .chip-amber { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+    .chip-green { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .chip-red { background: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; }
+
+    .bullet-list { list-style-type: none; padding-left: 0; }
+    .bullet-list li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 3px;
+      line-height: 1.38;
+    }
+    .bullet-list li::before {
+      content: "▪";
+      position: absolute;
+      left: 2px;
+      color: #0d9488;
+      font-size: 8pt;
+    }
+    .bullet-list.check li::before { content: "✓"; color: #059669; font-weight: 800; }
+    .bullet-list.alert li::before { content: "⚠"; color: #dc2626; font-weight: 800; }
+
+    .flow-steps { display: flex; gap: 6px; margin: 6px 0; }
+    .flow-step {
+      flex: 1;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      padding: 6px 8px;
+      text-align: center;
+    }
+    .flow-step-num {
+      font-size: 7.2pt;
+      font-weight: 800;
+      color: #0d9488;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .flow-step-title { font-size: 8pt; font-weight: 700; color: #0f172a; }
+    .flow-step-desc { font-size: 7.2pt; color: #64748b; margin-top: 2px; }
+
+    .page-break { page-break-before: always; break-before: page; margin-top: 20px; }
+
+    .doc-footer {
+      border-top: 1px solid #cbd5e1;
+      padding-top: 8px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 7.4pt;
+      color: #64748b;
+    }
+
+    @media print {
+      body { background: #fff; font-size: 8.3pt; }
+      .screen-toolbar { display: none !important; }
+      .paper-container {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+      }
+      .page-break { page-break-before: always !important; break-before: page !important; height: 0; }
+      .doc-section { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="screen-toolbar">
+    <div class="toolbar-title">
+      <span>⚡ BSV BIM MEP — QUY TRÌNH TRIỂN KHAI MÔ HÌNH, SHOP DRAWING & ĐIỀU PHỐI CƠ ĐIỆN (A4 READY)</span>
+    </div>
+    <div class="toolbar-actions">
+      <button onclick="window.print()" class="btn btn-primary">
+        🖨️ In A4 / Xuất PDF (Ctrl + P)
+      </button>
+      <a href="De_muc_MEP_Rut_gon_2Trang_A4.html" class="btn btn-compact">
+        ⚡ In Rút Gọn 2 Trang A4
+      </a>
+      <a href="De_muc_Primavera_P6_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        📊 Tiến Độ P6
+      </a>
+      <a href="De_muc_Ket_cau_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        🏗️ Đề Mục KC A4
+      </a>
+      <a href="De_muc_Kien_truc_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        🏛️ Đề Mục KT A4
+      </a>
+      <a href="De_muc_Shop_Drawing_Rebar_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        🔩 Đề Mục Rebar A4
+      </a>
+      <a href="index.html" class="btn btn-secondary">
+        🏠 Master Portal
+      </a>
+    </div>
+  </div>
+
+  <div class="paper-container">
+    
+    <!-- Header -->
+    <header class="doc-cover">
+      <div class="org-header">
+        <div class="org-title">BSV BIM MEP ENGINEERING &amp; MULTI-DISCIPLINE COORDINATION DIVISION</div>
+        <div class="doc-code">STANDARD: BSV-MEP-BIM-SHOP-2026</div>
+      </div>
+
+      <div class="main-title-box">
+        <h1>QUY TRÌNH TRIỂN KHAI BIM &amp; SHOP DRAWING CƠ ĐIỆN (MEP)</h1>
+        <div class="sub-title">HỆ THỐNG ĐỀ MỤC TIÊU CHUẨN 4 PHÂN HỆ M-E-P-FP, MA TRẬN PHỐI HỢP CSD/SOD, GIÁ TREO HANGERS &amp; CHẠY THỬ LIÊN ĐỘNG (T&amp;C)</div>
+      </div>
+
+      <table class="doc-meta-table">
+        <tr>
+          <td class="meta-label">Chuẩn Kỹ Thuật:</td>
+          <td class="meta-val">ASHRAE, NFPA 13/20/72, SMACNA, TCVN Cơ Điện &amp; QCVN 06:2022/BXD PCCC</td>
+          <td class="meta-label">Cấp Độ Mô Hình:</td>
+          <td class="meta-val">LOD 350 - 400 (Phục vụ gia công chế tạo Shop Drawings &amp; Lắp đặt công trường)</td>
+        </tr>
+        <tr>
+          <td class="meta-label">Phạm Vi 4 Hệ Thống:</td>
+          <td class="meta-val">M (HVAC / Khí nén), E (Điện / Trạm biến áp / ELV), P (Cấp thoát nước), FP (PCCC)</td>
+          <td class="meta-label">Liên Kết Tiến Độ:</td>
+          <td class="meta-val">Tích hợp Primavera P6 WBS <code>WBS-MEP</code> &amp; Mô phỏng 4D Navisworks / Synchro</td>
+        </tr>
+      </table>
+
+      <!-- Golden Box -->
+      <div class="golden-rule-box">
+        <div class="golden-rule-title">
+          <span>⚙️ NGUYÊN TẮC VÀNG VỀ ĐIỀU PHỐI KHÔNG GIAN CƠ ĐIỆN (CLASH PRIORITY &amp; COORDINATION)</span>
+        </div>
+        <div class="golden-rule-desc">
+          <strong>1. Thứ tự Ưu tiên Không gian (Clash Space Hierarchy):</strong> Ống tự chảy dốc không thể chuyển hướng (Thoát nước thải/mưa Gravity Pipe) $ightarrow$ Ống gió kích thước lớn khó uốn lượn (Ductwork &gt; 500mm) $ightarrow$ Ống cấp nước áp lực &amp; Ống chữa cháy PCCC $ightarrow$ Máng cáp điện (Cable Tray / Trunking có thể uốn lượn linh hoạt).<br>
+          <strong>2. Bản vẽ Định vị Lỗ mở Kết cấu (SOD - Structural Opening):</strong> Bắt buộc chốt bản vẽ lỗ mở dầm, vách, sàn trước khi Nhà thầu Kết cấu đổ bê tông. Mọi lỗ mở dầm phải tuân thủ vùng an toàn: nằm trong khoảng $1/3$ chiều cao giữa dầm ($h/3$) và cách mép cột tối thiểu $2h$.<br>
+          <strong>3. Kiểm soát Giá treo &amp; Tải trọng (Hanger &amp; Support QA):</strong> Tuyệt đối không treo chung các hệ thống vào nhau (VD: Cấm treo máng điện vào ty ren ống PCCC). Bắt buộc tính toán tải trọng động và lắp giảm chấn cho bơm/chiller.
+        </div>
+      </div>
+    </header>
+
+    <!-- PHẦN 1: 4 PHÂN HỆ MEP -->
+    <section class="doc-section">
+      <div class="section-header">
+        <span>PHẦN I: TIÊU CHUẨN THIẾT KẾ &amp; MÔ HÌNH HÓA 4 PHÂN HỆ CƠ ĐIỆN (M - E - P - FP)</span>
+        <span class="section-badge">Phần 1</span>
+      </div>
+      <div class="section-body">
+        <div class="section-desc">
+          Quy chuẩn kỹ thuật dựng hình, gán mã hệ thống (System Abbreviation), độ dốc, thông số áp lực và phụ kiện chi tiết cho 4 hệ thống MEP chính.
+        </div>
+
+        <div class="grid-2">
+          <!-- Hệ M -->
+          <div class="sub-card m">
+            <div class="sub-card-title">
+              <span>1. Hệ M - HVAC, Thông Gió &amp; Khí Nén (Mechanical)</span>
+              <span class="sub-card-pill">Hệ HVAC</span>
+            </div>
+            <ul class="bullet-list">
+              <li><strong>Phân loại hệ thống (Duct Systems):</strong> Cấp gió tươi (FA - Fresh Air), Gió hồi (RA - Return Air), Gió thải (EA - Exhaust Air), Hút khói hành lang/sự cố (SE - Smoke Exhaust), Tăng áp buồng thang (SP - Staircase Pressurization).</li>
+              <li><strong>Tiêu chuẩn mô hình hóa:</strong> Theo chuẩn SMACNA; dựng đầy đủ độ dày cách nhiệt (Insulation), van chặn lửa (FD - Fire Damper), van điều tiết lưu lượng (VCD), miệng gió (Diffusers), ống gió mềm (Flexible duct $\le 1.5	ext{m}$).</li>
+              <li><strong>Hệ thống đường ống nước lạnh (Chilled Water):</strong> Ống thép đúc chịu áp lực, van cân bằng, đồng hồ đo nhiệt - áp, độ dốc thoát khí $0.2\%$, bọc bảo ôn foam cao su lưu hóa chống đọng sương.</li>
+              <li><strong>Hệ thống Khí nén công nghiệp (Compressed Air):</strong> Áp suất $7 \div 10	ext{ bar}$, ống thép mạ kẽm hoặc ống nhôm chuyên dụng, bẫy ngưng tụ nước.</li>
+            </ul>
+          </div>
+
+          <!-- Hệ E -->
+          <div class="sub-card e">
+            <div class="sub-card-title">
+              <span>2. Hệ E - Điện Động Lực, Chiếu Sáng &amp; Điện Nhẹ (Electrical &amp; ELV)</span>
+              <span class="sub-card-pill">Hệ Điện</span>
+            </div>
+            <ul class="bullet-list">
+              <li><strong>Trạm biến áp &amp; Nguồn chính:</strong> Máy biến áp, máy phát điện dự phòng, tủ hòa đồng bộ, tủ tổng MSB, hệ thống thanh dẫn Busway chịu dòng lớn $2500	ext{A} \div 4000	ext{A}$.</li>
+              <li><strong>Máng cáp &amp; Thang cáp (Cable Tray / Ladder):</strong> Phân tách máng điện động lực (Power) và máng điện nhẹ/tín hiệu (ELV) cách nhau tối thiểu <code>300mm</code> để chống nhiễu từ trường (EMI).</li>
+              <li><strong>Hệ thống Chiếu sáng &amp; Ổ cắm:</strong> Dựng đèn đúng cao độ trần, công tắc, ổ cắm công nghiệp IP65 chống bụi nước cho nhà xưởng.</li>
+              <li><strong>Hệ thống Chống sét &amp; Tiếp địa:</strong> Kim thu sét phát tia tiên đạo sớm (ESE), cáp đồng trần thoát sét, bãi tiếp địa điện trở $R \le 10\Omega$ (chống sét) và $R \le 4\Omega$ (an toàn thiết bị).</li>
+              <li><strong>Điện nhẹ ELV:</strong> Mạng LAN/Wi-Fi công nghiệp, CCTV camera, âm thanh công cộng PA, kiểm soát cửa ra vào Access Control.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 6px;">
+          <!-- Hệ P -->
+          <div class="sub-card p">
+            <div class="sub-card-title">
+              <span>3. Hệ P - Cấp Thoát Nước &amp; Xử Lý Nước Thải (Plumbing)</span>
+              <span class="sub-card-pill">Hệ Nước</span>
+            </div>
+            <ul class="bullet-list">
+              <li><strong>Cấp nước sinh hoạt &amp; công nghiệp:</strong> Bể ngầm $ightarrow$ Bơm tăng áp biến tần $ightarrow$ Tuyến ống cấp PPR / HDPE / Inox 304, van giảm áp (PRV), đồng hồ đo nước.</li>
+              <li><strong>Thoát nước thải &amp; Thông hơi (Soil, Waste &amp; Vent):</strong> Ống uPVC class 2/3 hoặc ống gang đúc chống ồn; độ dốc chuẩn $1\% \div 2\%$; bố trí đai co giãn nhiệt (Expansion Joint) và ống thông hơi trục đứng xuyên mái.</li>
+              <li><strong>Thoát nước mưa mái (Stormwater):</strong> Hệ thống phễu thu nước mưa có rọ chắn rác, hệ thoát nước mưa trọng lực hoặc hệ thống thoát nước mưa Siphonic lưu lượng lớn cho mái xưởng 30.000m².</li>
+              <li><strong>Hệ thống Xử lý Nước thải (WWTP):</strong> Tuyến thu gom tách dầu mỡ (Grease Trap), hố ga lắng cặn, trạm xử lý nước thải đạt cột A QCVN 40.</li>
+            </ul>
+          </div>
+
+          <!-- Hệ FP -->
+          <div class="sub-card fp">
+            <div class="sub-card-title">
+              <span>4. Hệ FP - Phòng Cháy Chữa Cháy (Fire Protection)</span>
+              <span class="sub-card-pill">Hệ PCCC</span>
+            </div>
+            <ul class="bullet-list">
+              <li><strong>Hệ thống chữa cháy Sprinkler tự động:</strong> Đường ống thép đen ASTM A53 tráng kẽm/nhúng nóng SCH40; khớp nối rãnh (Grooved Couplings); đầu phun hướng lên/hướng xuống $68^\circ	ext{C}$ hoặc $93^\circ	ext{C}$.</li>
+              <li><strong>Họng nước vách tường &amp; Trụ ngoài nhà:</strong> Tủ chữa cháy âm tường, cuộn vòi D50/D65, lăng phun, trụ cứu hỏa 3 cửa đấu nối xe chữa cháy.</li>
+              <li><strong>Trạm bơm PCCC chuẩn NFPA 20:</strong> Cụm bơm điện chính (Duty Pump) + Bơm diesel dự phòng (Standby Pump) + Bơm duy trì áp lực bù áp (Jockey Pump).</li>
+              <li><strong>Hệ thống Báo cháy Địa chỉ (Addressable Fire Alarm):</strong> Đầu báo khói quang, báo nhiệt gia tăng, nút ấn khẩn cấp, chuông/còi đèn chớp và liên động ngắt điện/hạ thang máy khi có cháy.</li>
+              <li><strong>Chữa cháy khí sạch:</strong> Khí FM-200 / Novec 1230 cho phòng máy chủ Server và trạm biến áp trung thế.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHẦN 2: CSD, SOD & MA TRẬN XUNG ĐỘT -->
+    <section class="doc-section page-break">
+      <div class="section-header">
+        <span>PHẦN II: BẢN VẼ PHỐI HỢP CSD, LỖ MỞ KẾT CẤU SOD &amp; MA TRẬN CLASH (COORDINATION)</span>
+        <span class="section-badge">Phần 2</span>
+      </div>
+      <div class="section-body">
+        <div class="section-desc">
+          Chu trình xuất bản vẽ phối hợp tổng thể Combined Services Drawings (CSD), định vị lỗ mở Structural Opening Drawings (SOD) và nguyên tắc xử lý va chạm liên ngành.
+        </div>
+
+        <div class="flow-steps">
+          <div class="flow-step">
+            <div class="flow-step-num">BƯỚC 1 • MÔ HÌNH HÓA</div>
+            <div class="flow-step-title">Dựng Đúng Kích Thước</div>
+            <div class="flow-step-desc">Dựng 100% chi tiết ống, bảo ôn, phụ kiện co lơ, hộp van, giá treo</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-step-num">BƯỚC 2 • CLASH NAVIS</div>
+            <div class="flow-step-title">Kiểm Tra Xung Đột</div>
+            <div class="flow-step-desc">Chạy Navisworks Clash Matrix theo dung sai Hard Clash &lt; 25mm</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-step-num">BƯỚC 3 • XUẤT SOD</div>
+            <div class="flow-step-title">Bản Vẽ Lỗ Mở SOD</div>
+            <div class="flow-step-desc">Định vị Sleeves dầm/vách chuyển cho Kỹ sư Kết cấu duyệt trước khi đổ BT</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-step-num">BƯỚC 4 • PHÊ DUYỆT CSD</div>
+            <div class="flow-step-title">Bản Vẽ CSD Hoàn Chỉnh</div>
+            <div class="flow-step-desc">Ký duyệt bản vẽ CSD đa hệ mặt bằng, mặt cắt 1:25/1:50 phục vụ thi công</div>
+          </div>
+        </div>
+
+        <!-- Ma trận xung đột -->
+        <div style="margin-top: 8px;">
+          <div style="font-size: 8.3pt; font-weight: 800; color: #0d9488; margin-bottom: 4px;">
+            MA TRẬN ƯU TIÊN GIẢI QUYẾT XUNG ĐỘT KHÔNG GIAN CƠ ĐIỆN (MEP CLASH RESOLUTION MATRIX):
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 18%;">Hệ Thống Đối Đầu</th>
+                <th style="width: 20%;">Bên Có Quyền Ưu Tiên</th>
+                <th style="width: 32%;">Nguyên Tắc Xử Lý Kỹ Thuật</th>
+                <th style="width: 30%;">Tiêu Chuẩn Tham Chiếu</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Ống Thoát Nước (P) vs Ống Gió (M)</strong></td>
+                <td><strong class="chip chip-green">Ống Thoát Nước (P)</strong></td>
+                <td>Ống thoát nước dốc $1\%-2\%$ giữ nguyên cao độ; ống gió uốn lượn né tránh bên trên hoặc bên dưới.</td>
+                <td>Nguyên lý thủy lực tự chảy không áp lực</td>
+              </tr>
+              <tr>
+                <td><strong>Ống Gió (M) vs Máng Cáp Điện (E)</strong></td>
+                <td><strong class="chip chip-blue">Ống Gió Lớn (M)</strong></td>
+                <td>Ống gió kích thước lớn giữ thẳng trục; máng cáp điện lượn co lơ vượt qua mặt trên ống gió.</td>
+                <td>Hạn chế tổn thất áp suất động ống gió</td>
+              </tr>
+              <tr>
+                <td><strong>Ống Chữa Cháy (FP) vs Máng Điện (E)</strong></td>
+                <td><strong class="chip chip-amber">Khoảng Cách $\ge 150	ext{mm}$</strong></td>
+                <td>Ống PCCC đi dưới máng điện; cấm đặt máng điện hở ngay dưới mối nối ống nước tránh rò rỉ chập điện.</td>
+                <td>Tiêu chuẩn an toàn điện NFPA 70 / NEC</td>
+              </tr>
+              <tr>
+                <td><strong>Ống MEP vs Dầm Kết Cấu (SOD)</strong></td>
+                <td><strong class="chip chip-red">Vùng An Toàn $h/3$</strong></td>
+                <td>Lỗ mở xuyên dầm phải nằm ở trục trung hòa giữa dầm; đường kính lỗ $\le h/3$; cách gối tựa dầm $\ge 2h$.</td>
+                <td>Tiêu chuẩn kết cấu ACI 318 &amp; TCVN 5574</td>
+              </tr>
+              <tr>
+                <td><strong>Ống Gas Lạnh vs Ống Nước Nóng</strong></td>
+                <td><strong class="chip chip-blue">Cách ly $\ge 200	ext{mm}$</strong></td>
+                <td>Cách ly nhiệt độ để không làm suy giảm hiệu suất trao đổi nhiệt của hệ VRV/Chiller.</td>
+                <td>Tiêu chuẩn tiết kiệm năng lượng ASHRAE 90.1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHẦN 3: GIÁ TREO, T&C & NGHIỆM THU -->
+    <section class="doc-section">
+      <div class="section-header">
+        <span>PHẦN III: GIÁ TREO HANGERS, THỬ NGHIỆM LIÊN ĐỘNG T&amp;C &amp; BÀN GIAO (CLOSEOUT)</span>
+        <span class="section-badge">Phần 3</span>
+      </div>
+      <div class="section-body">
+        <div class="section-desc">
+          Quy chuẩn lắp đặt giá treo đỡ đa hệ Unistrut Trapeze, quy trình thử áp lực, cân bằng khí/nước TAB, nghiệm thu PCCC và hoàn công BIM 7D.
+        </div>
+
+        <div class="grid-2">
+          <!-- Hangers -->
+          <div class="sub-card">
+            <div class="sub-card-title">
+              <span>1. Quy Chuẩn Giá Treo Đỡ (Hangers &amp; Supports)</span>
+              <span class="sub-card-pill">Hangers</span>
+            </div>
+            <ul class="bullet-list">
+              <li><strong>Giá treo tổng hợp đa hệ (Multi-tier Trapeze):</strong> Dùng thanh thép hình C Unistrut mạ kẽm nhúng nóng kết hợp ty ren chịu lực $arnothing 10 \div arnothing 16$ gom chung ống gió, máng điện và ống cấp nước trên cùng một cụm treo để tiết kiệm không gian trần.</li>
+              <li><strong>Khoảng cách gối đỡ tiêu chuẩn:</strong>
+                <br>• Ống thép PCCC/Nước: Cự ly gối đỡ từ $2.5	ext{m} \div 3.5	ext{m}$ (tùy đường kính).
+                <br>• Máng cáp điện: Cự ly gối đỡ từ $1.5	ext{m} \div 2.0	ext{m}$.
+                <br>• Ống gió tôn: Cự ly gối đỡ từ $2.0	ext{m} \div 2.5	ext{m}$.
+              </li>
+              <li><strong>Chống rung &amp; Giảm chấn (Vibration Isolator):</strong> Lắp đặt lò xo giảm chấn cho bơm nước, chiller, máy nén khí; lắp ống nối mềm cao su ở đầu hút/đẩy của bơm để triệt tiêu truyền rung động vào kết cấu tòa nhà.</li>
+            </ul>
+          </div>
+
+          <!-- T&C -->
+          <div class="sub-card green">
+            <div class="sub-card-title">
+              <span>2. Thử Nghiệm, Hiệu Chỉnh &amp; Chạy Thử (T&amp;C Commissioning)</span>
+              <span class="sub-card-pill">T&amp;C Process</span>
+            </div>
+            <ul class="bullet-list check">
+              <li><strong>Thử áp lực đường ống (Hydrostatic Pressure Test):</strong> Bơm nước thử áp ở mức <code>1.5 lần áp suất làm việc</code> (tối thiểu 10 bar) duy trì liên tục trong 2 giờ, độ sụt áp $\le 0.2	ext{ bar}$.</li>
+              <li><strong>Thử rò rỉ ống gió (Duct Air Leakage Testing):</strong> Theo chuẩn SMACNA, thử kín bằng khói hoặc quạt tạo áp đo lượng gió rò rỉ.</li>
+              <li><strong>Cân bằng lưu lượng gió và nước (TAB - Testing, Adjusting, Balancing):</strong> Hiệu chỉnh van cân bằng nước lạnh và miệng gió đạt lưu lượng thiết kế $\pm 10\%$.</li>
+              <li><strong>Chạy thử liên động PCCC &amp; Khói:</strong> Kích hoạt cảm biến khói báo cháy $ightarrow$ Tự động hạ thang máy về tầng 1, mở cửa từ thoát hiểm, bật quạt tăng áp thang bộ, bật hút khói hành lang, đóng van chặn lửa FD.</li>
+              <li><strong>Nghiệm thu cấp phép PCCC:</strong> Kiểm định vật tư thiết bị, hồ sơ nghiệm thu kỹ thuật và cấp biên bản nghiệm thu PCCC của Cục Cảnh sát PCCC.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 10 bước chuẩn hóa BIM MEP -->
+        <div style="margin-top: 8px;">
+          <div style="font-size: 8.3pt; font-weight: 800; color: #0f766e; margin-bottom: 4px;">
+            QUY TRÌNH 10 BƯỚC CHUẨN HÓA BIM &amp; SHOP DRAWING MEP DÀNH CHO QUẢN LÝ DỰ ÁN:
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 6%;">Bước</th>
+                <th style="width: 28%;">Hạng Mục Công Việc</th>
+                <th style="width: 40%;">Tiêu Chuẩn Đạt Chuẩn Nghiệm Thu</th>
+                <th style="width: 26%;">Sản Phẩm Đầu Ra</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td><strong>Khởi tạo RVT MEP Template</strong></td>
+                <td>Hệ tọa độ Shared Coordinates khớp 100% với Central file Kết cấu và Kiến trúc.</td>
+                <td>Revit Central File đa hệ MEP</td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td><strong>Mô hình hóa Trục đứng (Risers)</strong></td>
+                <td>Dựng các hộp gen kỹ thuật xuyên tầng, kiểm soát vị trí neo và co giãn nở nhiệt.</td>
+                <td>BIM Riser Diagrams 3D</td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td><strong>Xuất bản vẽ Lỗ mở dầm sàn (SOD)</strong></td>
+                <td>Định vị kích thước, cao độ tâm ống xuyên kết cấu chuyển Nhà thầu Kết cấu đặt Sleeves.</td>
+                <td>Bản vẽ SOD &amp; Sleeves Schedule</td>
+              </tr>
+              <tr>
+                <td>04</td>
+                <td><strong>Mô hình hóa Phòng Máy chính</strong></td>
+                <td>Dựng chi tiết Chiller Plant, Trạm Biến áp, Bể nước ngầm, Trạm bơm PCCC chuẩn LOD 400.</td>
+                <td>Plant Room 3D Detailed Layouts</td>
+              </tr>
+              <tr>
+                <td>05</td>
+                <td><strong>Điều phối Xung đột (Clash Detection)</strong></td>
+                <td>Chạy Navisworks đối soát ma trận xung đột; giải quyết 100% Hard Clash trước khi ra Shop.</td>
+                <td>Báo cáo Clash Resolution Matrix</td>
+              </tr>
+              <tr>
+                <td>06</td>
+                <td><strong>Thiết kế Giá treo Unistrut Trapeze</strong></td>
+                <td>Tính toán tải trọng ty treo, vị trí gối đỡ và bố trí con sơn chịu lực.</td>
+                <td>Bản vẽ Hangers &amp; Support Details</td>
+              </tr>
+              <tr>
+                <td>07</td>
+                <td><strong>Xuất Bản vẽ Phối hợp Tổng thể CSD</strong></td>
+                <td>Thể hiện đầy đủ cao độ đáy ống (BOP), đáy ống gió (BOD), mặt cắt 1:25 qua vị trí hẹp.</td>
+                <td>Bộ bản vẽ Shop CSD A1/A0 duyệt thi công</td>
+              </tr>
+              <tr>
+                <td>08</td>
+                <td><strong>Giám sát Thi công &amp; Lắp đặt Hiện trường</strong></td>
+                <td>Lắp đặt đúng cao độ CSD; kiểm tra độ dốc ống nước và tiếp địa tủ điện.</td>
+                <td>Biên bản nghiệm thu lắp đặt từng giai đoạn</td>
+              </tr>
+              <tr>
+                <td>09</td>
+                <td><strong>Thực hiện Thử nghiệm Liên động T&amp;C</strong></td>
+                <td>Thử áp lực 1.5x, cân bằng gió/nước TAB, kiểm tra liên động PCCC và kiểm định an toàn điện.</td>
+                <td>Hồ sơ T&amp;C Commissioning Report</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td><strong>Bàn giao Hồ sơ As-built &amp; Asset Data 7D</strong></td>
+                <td>Cập nhật mô hình As-built đúng thực tế, gắn mã tài sản Asset Tag, CO/CQ và sách O&amp;M.</td>
+                <td>Mô hình As-built BIM 7D &amp; O&amp;M Manuals</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Chữ ký -->
+        <div style="margin-top: 20px; display: flex; justify-content: space-between; text-align: center; font-size: 8pt;">
+          <div style="width: 28%;">
+            <strong>KỸ SƯ TRƯỞNG CƠ ĐIỆN (MEP LEAD)</strong><br>
+            <span style="color: #64748b; font-size: 7.2pt;">(Chủ trì thiết kế &amp; Thẩm duyệt CSD/SOD)</span><br><br><br><br>
+            <strong>Senior MEP Coordinator</strong>
+          </div>
+          <div style="width: 28%;">
+            <strong>GIÁM ĐỐC BIM (BIM MANAGER)</strong><br>
+            <span style="color: #64748b; font-size: 7.2pt;">(Điều phối Clash &amp; Tích hợp 4D/7D)</span><br><br><br><br>
+            <strong>BIM &amp; Digital Engineering Manager</strong>
+          </div>
+          <div style="width: 28%;">
+            <strong>CHỈ HUY TRƯỞNG / GIÁM ĐỐC DỰ ÁN</strong><br>
+            <span style="color: #64748b; font-size: 7.2pt;">(Phê duyệt Thi công &amp; Nghiệm thu T&amp;C)</span><br><br><br><br>
+            <strong>Project Director / Construction Manager</strong>
+          </div>
+        </div>
+
+        <div class="doc-footer">
+          <span>Quy trình điều phối Cơ điện BIM MEP — BSV Multi-Discipline Coordination Standard</span>
+          <span>Trang 5 / 5 • Đề mục chi tiết toàn diện (Full A4)</span>
+          <span>Phát hành: 2026 • BSV Engineering Hub</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>

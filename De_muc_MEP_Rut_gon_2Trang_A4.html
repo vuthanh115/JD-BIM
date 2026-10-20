@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đề Mục Quy Trình Cơ Điện (MEP) - BSV Standard (Rút Gọn 2 Trang A4)</title>
+  <style>
+    /* ==========================================================================
+       A4 EXECUTIVE PRINT STYLESHEET - BỘ MÔN MEP 2 PAGES EXACTLY
+       ========================================================================== */
+    @page {
+      size: A4 portrait;
+      margin: 7mm 9mm 7mm 9mm;
+    }
+
+    :root {
+      --primary: #0d9488;
+      --primary-dark: #0f766e;
+      --navy: #0f172a;
+      --slate: #334155;
+      --light-bg: #f8fafc;
+      --border: #cbd5e1;
+      --border-dark: #94a3b8;
+      --param-bg: #eff6ff;
+      --param-text: #1d4ed8;
+      --template-bg: #fef3c7;
+      --template-text: #b45309;
+      --tool-bg: #ecfdf5;
+      --tool-text: #047857;
+      --accent-m: #0284c7;
+      --accent-e: #d97706;
+      --accent-p: #059669;
+      --accent-fp: #dc2626;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #0f172a;
+      background: #e2e8f0;
+      line-height: 1.33;
+      font-size: 7.85pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .screen-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: #0f172a;
+      color: #fff;
+      padding: 10px 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .toolbar-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toolbar-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+    }
+
+    .btn-primary { background: #059669; color: #fff; }
+    .btn-primary:hover { background: #047857; }
+    .btn-detail { background: #0d9488; color: #fff; }
+    .btn-detail:hover { background: #0f766e; }
+    .btn-secondary { background: #1e293b; color: #e2e8f0; border-color: #334155; }
+    .btn-secondary:hover { background: #334155; color: #fff; }
+
+    .a4-page {
+      width: 210mm;
+      min-height: 297mm;
+      height: 297mm;
+      margin: 0 auto 16px auto;
+      background: #ffffff;
+      padding: 7.5mm 9.5mm 7.5mm 9.5mm;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .doc-header {
+      border-bottom: 1.5px solid #0f172a;
+      padding-bottom: 6px;
+      margin-bottom: 6px;
+    }
+
+    .org-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 7.2pt;
+      font-weight: 800;
+      color: #0d9488;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 3px;
+      margin-bottom: 4px;
+    }
+
+    .doc-code {
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      font-size: 7pt;
+      background: #f1f5f9;
+      padding: 1px 6px;
+      border-radius: 3px;
+      border: 1px solid #cbd5e1;
+      color: #334155;
+    }
+
+    .title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .title-row h1 {
+      font-size: 11.2pt;
+      font-weight: 900;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: -0.2px;
+      margin: 0;
+    }
+
+    .title-tagline {
+      font-size: 7.4pt;
+      font-weight: 700;
+      color: #0d9488;
+      text-transform: uppercase;
+    }
+
+    .meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7.1pt;
+      margin-bottom: 5px;
+      border: 1px solid #cbd5e1;
+    }
+
+    .meta-table td { padding: 2.5px 5px; border: 1px solid #cbd5e1; }
+    .lbl { background: #f1f5f9; font-weight: 700; color: #334155; width: 15%; }
+    .val { color: #0f172a; width: 35%; }
+
+    .golden-box {
+      background: #f0fdfa;
+      border: 1.2px solid #0d9488;
+      border-left: 4px solid #0d9488;
+      padding: 4px 7px;
+      border-radius: 3px;
+      margin-bottom: 6px;
+      font-size: 7.2pt;
+      line-height: 1.34;
+    }
+
+    .golden-box-title {
+      font-size: 7.5pt;
+      font-weight: 800;
+      color: #0f766e;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sec-block {
+      border: 1px solid #cbd5e1;
+      border-radius: 3px;
+      margin-bottom: 6px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .sec-title {
+      background: #0f172a;
+      color: #fff;
+      font-size: 7.8pt;
+      font-weight: 800;
+      padding: 3.5px 7px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sec-badge {
+      font-size: 6.7pt;
+      background: #0d9488;
+      color: #fff;
+      padding: 1px 5px;
+      border-radius: 2px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .sec-content { padding: 5px 7px; font-size: 7.3pt; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; }
+    .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 4px; }
+
+    .mini-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 2.5px solid #0d9488;
+      padding: 4px 6px;
+      border-radius: 2px;
+      margin-bottom: 4px;
+    }
+
+    .mini-card.m { border-left-color: #0284c7; background: #eff6ff; }
+    .mini-card.e { border-left-color: #d97706; background: #fffbeb; }
+    .mini-card.p { border-left-color: #059669; background: #f0fdf4; }
+    .mini-card.fp { border-left-color: #dc2626; background: #fef2f2; }
+
+    .mini-card-head {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+
+    .chip {
+      font-size: 6.5pt;
+      font-weight: 700;
+      padding: 1px 4px;
+      border-radius: 2px;
+      display: inline-block;
+    }
+    .chip-teal { background: #ccfbf1; color: #0f766e; }
+    .chip-blue { background: #e0f2fe; color: #0369a1; }
+    .chip-amber { background: #fef3c7; color: #b45309; }
+    .chip-green { background: #dcfce7; color: #15803d; }
+    .chip-red { background: #fee2e2; color: #b91c1c; }
+
+    .b-list { list-style: none; padding-left: 0; margin: 0; }
+    .b-list li {
+      position: relative;
+      padding-left: 10px;
+      margin-bottom: 1.5px;
+      line-height: 1.32;
+    }
+    .b-list li::before {
+      content: "▪";
+      position: absolute;
+      left: 1px;
+      color: #0d9488;
+      font-size: 7pt;
+    }
+    .b-list.green li::before { content: "✓"; color: #059669; font-weight: 800; }
+    .b-list.alert li::before { content: "⚠"; color: #dc2626; font-weight: 800; }
+
+    .c-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7.05pt;
+      margin: 3px 0;
+    }
+    .c-table th, .c-table td { border: 1px solid #cbd5e1; padding: 2.5px 4.5px; text-align: left; }
+    .c-table th { background: #f1f5f9; color: #0f172a; font-weight: 700; }
+    .c-table tr:nth-child(even) { background: #f8fafc; }
+
+    .page-foot {
+      border-top: 1px solid #cbd5e1;
+      padding-top: 4px;
+      margin-top: 4px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 6.9pt;
+      color: #64748b;
+    }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .screen-toolbar { display: none !important; }
+      .a4-page {
+        margin: 0 !important;
+        padding: 6.5mm 8.5mm 6.5mm 8.5mm !important;
+        box-shadow: none !important;
+        page-break-after: always !important;
+        break-after: page !important;
+        height: 297mm !important;
+      }
+      .a4-page:last-child { page-break-after: auto !important; break-after: auto !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="screen-toolbar">
+    <div class="toolbar-title">
+      <span>⚡ BSV BIM MEP — ĐỀ MỤC QUY TRÌNH CƠ ĐIỆN RÚT GỌN 2 TRANG A4 (PRINT READY)</span>
+    </div>
+    <div class="toolbar-actions">
+      <button onclick="window.print()" class="btn btn-primary">
+        🖨️ In 2 Trang A4 / Xuất PDF (Ctrl + P)
+      </button>
+      <a href="De_muc_Quy_trinh_MEP_A4.html" class="btn btn-detail">
+        📄 Bản Chi Tiết Đầy Đủ
+      </a>
+      <a href="De_muc_Primavera_P6_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        📊 Tiến Độ P6
+      </a>
+      <a href="De_muc_Project_Management_Manual_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        📘 Đề Mục QLDA
+      </a>
+      <a href="De_muc_Ket_cau_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        🏗️ Đề Mục KC
+      </a>
+      <a href="De_muc_Kien_truc_Rut_gon_2Trang_A4.html" class="btn btn-secondary">
+        🏛️ Đề Mục KT
+      </a>
+      <a href="index.html" class="btn btn-secondary">
+        🏠 Master Portal
+      </a>
+    </div>
+  </div>
+
+  <!-- ==================== TRANG 1 ==================== -->
+  <div class="a4-page">
+    <div>
+      <!-- Header -->
+      <header class="doc-header">
+        <div class="org-bar">
+          <span>BSV BIM MEP COORDINATION &amp; SHOP DRAWING DIVISION — FACTORY STANDARD</span>
+          <span class="doc-code">CODE: DOC-MEP-BIM-2P-EXECUTIVE</span>
+        </div>
+        <div class="title-row">
+          <h1>QUY TRÌNH TRIỂN KHAI BIM &amp; SHOP DRAWING CƠ ĐIỆN (MEP)</h1>
+          <span class="title-tagline">⚡ BẢN ĐIỀU HÀNH RÚT GỌN 2 TRANG A4</span>
+        </div>
+        <table class="meta-table">
+          <tr>
+            <td class="lbl">Chuẩn Kỹ Thuật:</td>
+            <td class="val">ASHRAE, NFPA 13/20/72, SMACNA, TCVN Cơ điện &amp; QCVN 06:2022 PCCC</td>
+            <td class="lbl">Cấp Độ Mô Hình:</td>
+            <td class="val">LOD 350 - 400 (Phục vụ xuất CSD/SOD Shop Drawings &amp; Lắp đặt)</td>
+          </tr>
+          <tr>
+            <td class="lbl">Phạm Vi 4 Hệ:</td>
+            <td class="val">M (HVAC / Khí nén), E (Điện / ELV), P (Cấp thoát nước), FP (PCCC)</td>
+            <td class="lbl">Tích Hợp Tiến Độ:</td>
+            <td class="val">Liên kết WBS <code>WBS-MEP</code> trong Primavera P6 &amp; Mô phỏng 4D Navisworks</td>
+          </tr>
+        </table>
+
+        <!-- Golden Rule -->
+        <div class="golden-box">
+          <div class="golden-box-title">
+            <span>⚙️ NGUYÊN TẮC VÀNG VỀ ĐIỀU PHỐI KHÔNG GIAN CƠ ĐIỆN (CLASH PRIORITY &amp; COORDINATION)</span>
+            <span>BSV STANDARD</span>
+          </div>
+          <strong>1. Thứ tự Ưu tiên Không gian (Clash Space Hierarchy):</strong> Ống thoát nước dốc tự chảy (Gravity Pipe) $ightarrow$ Ống gió kích thước lớn (&gt; 500mm) $ightarrow$ Ống cấp nước áp lực &amp; Chữa cháy PCCC $ightarrow$ Máng cáp điện (Cable Tray / Trunking linh hoạt uốn lượn).<br>
+          <strong>2. Bản vẽ Định vị Lỗ mở Kết cấu (SOD - Structural Opening):</strong> Bắt buộc chốt bản vẽ lỗ mở dầm/sàn trước khi đổ bê tông. Lỗ mở dầm phải nằm ở trục trung hòa giữa dầm ($h/3$) và cách mép cột $\ge 2h$.<br>
+          <strong>3. Kiểm soát Giá treo &amp; Tải trọng:</strong> Tuyệt đối cấm treo chung các hệ thống vào nhau (Cấm treo máng cáp vào ty ren ống PCCC). Lắp lò xo giảm chấn chống truyền rung cho bơm, chiller.
+        </div>
+      </header>
+
+      <!-- PHẦN I: 4 PHÂN HỆ MEP -->
+      <section class="sec-block">
+        <div class="sec-title">
+          <span>PHẦN I: QUY CHUẨN THIẾT KẾ &amp; MÔ HÌNH HÓA 4 PHÂN HỆ CƠ ĐIỆN (M - E - P - FP)</span>
+          <span class="sec-badge">4 Hệ Thống</span>
+        </div>
+        <div class="sec-content">
+          <div class="grid-2">
+            <!-- M -->
+            <div class="mini-card m">
+              <div class="mini-card-head">
+                <span>1. Hệ M - HVAC, Thông Gió &amp; Khí Nén</span>
+                <span class="chip chip-blue">HVAC</span>
+              </div>
+              <ul class="b-list">
+                <li><strong>Gió:</strong> FA (Gió tươi), RA (Hồi), EA (Thải), SE (Hút khói), SP (Tăng áp thang). Chuẩn SMACNA, bảo ôn, van FD, van VCD, miệng gió, ống mềm $\le 1.5	ext{m}$.</li>
+                <li><strong>Chilled Water:</strong> Ống thép đúc chịu áp lực, van cân bằng, độ dốc thoát khí $0.2\%$, bọc cao su lưu hóa chống đọng sương. Khí nén: $7-10	ext{ bar}$.</li>
+              </ul>
+            </div>
+            <!-- E -->
+            <div class="mini-card e">
+              <div class="mini-card-head">
+                <span>2. Hệ E - Điện Động Lực, Chiếu Sáng &amp; ELV</span>
+                <span class="chip chip-amber">Điện &amp; ELV</span>
+              </div>
+              <ul class="b-list">
+                <li><strong>Nguồn chính:</strong> Trạm biến áp, máy phát dự phòng, tủ MSB, thanh dẫn Busway $2500	ext{A}-4000	ext{A}$.</li>
+                <li><strong>Máng cáp:</strong> Phân tách máng Điện (Power) và máng Tín hiệu (ELV) cách nhau $\ge 300	ext{mm}$ chống nhiễu từ trường. Tiếp địa $R \le 4\Omega$ (an toàn) và $R \le 10\Omega$ (chống sét).</li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid-2" style="margin-top: 2px;">
+            <!-- P -->
+            <div class="mini-card p">
+              <div class="mini-card-head">
+                <span>3. Hệ P - Cấp Thoát Nước &amp; Xử Lý Nước Thải</span>
+                <span class="chip chip-green">Plumbing</span>
+              </div>
+              <ul class="b-list">
+                <li><strong>Cấp nước:</strong> Bơm biến tần $ightarrow$ Tuyến ống PPR/HDPE/Inox 304, van giảm áp PRV.</li>
+                <li><strong>Thoát nước:</strong> Ống uPVC dốc chuẩn $1\%-2\%$, đai co giãn nhiệt, ống thông hơi trục đứng. Thoát nước mưa Siphonic lưu lượng lớn cho mái xưởng 30.000m². Hố ga, trạm WWTP.</li>
+              </ul>
+            </div>
+            <!-- FP -->
+            <div class="mini-card fp">
+              <div class="mini-card-head">
+                <span>4. Hệ FP - Chữa Cháy Sprinkler &amp; Báo Cháy</span>
+                <span class="chip chip-red">PCCC</span>
+              </div>
+              <ul class="b-list">
+                <li><strong>Chữa cháy:</strong> Ống thép đen SCH40, cùm rãnh (Grooved Couplings), đầu phun Sprinkler $68^\circ	ext{C}/93^\circ	ext{C}$, cuộn vòi vách tường D50/D65, trạm bơm NFPA 20 (Điện + Diesel + Bù).</li>
+                <li><strong>Báo cháy &amp; Khí sạch:</strong> Đầu báo khói địa chỉ, nút ấn, chuông còi. Khí FM-200 / Novec 1230 phòng Server.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHẦN II: MA TRẬN CLASH & ĐIỀU PHỐI CSD/SOD -->
+      <section class="sec-block">
+        <div class="sec-title">
+          <span>PHẦN II: MA TRẬN ƯU TIÊN XỬ LÝ XUNG ĐỘT KHÔNG GIAN (CLASH PRIORITY MATRIX)</span>
+          <span class="sec-badge">CSD &amp; SOD</span>
+        </div>
+        <div class="sec-content">
+          <table class="c-table">
+            <thead>
+              <tr>
+                <th style="width: 20%;">Cặp Hệ Thống Va Chạm</th>
+                <th style="width: 22%;">Bên Ưu Tiên Tuyệt Đối</th>
+                <th style="width: 32%;">Giải Pháp Kỹ Thuật Điều Phối</th>
+                <th style="width: 26%;">Tiêu Chuẩn Kỹ Thuật</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Ống Nước Dốc (P) vs Ống Gió (M)</strong></td>
+                <td><strong class="chip chip-green">Ống Nước Dốc (P)</strong></td>
+                <td>Ống thoát nước giữ nguyên độ dốc $1\%-2\%$; ống gió lượn co lơ né tránh.</td>
+                <td>Thủy lực tự chảy không áp</td>
+              </tr>
+              <tr>
+                <td><strong>Ống Gió Lớn (M) vs Máng Điện (E)</strong></td>
+                <td><strong class="chip chip-blue">Ống Gió Lớn (M)</strong></td>
+                <td>Ống gió đi thẳng; máng cáp điện uốn lượn vượt qua mặt trên ống gió.</td>
+                <td>Giảm tổn thất áp suất gió</td>
+              </tr>
+              <tr>
+                <td><strong>Ống Chữa Cháy (FP) vs Máng Điện (E)</strong></td>
+                <td><strong class="chip chip-amber">Cách ly $\ge 150	ext{mm}$</strong></td>
+                <td>Ống PCCC đi dưới; cấm máng điện hở ngay dưới mối nối ống nước.</td>
+                <td>An toàn điện NFPA 70 / NEC</td>
+              </tr>
+              <tr>
+                <td><strong>Ống MEP vs Dầm Kết Cấu (SOD)</strong></td>
+                <td><strong class="chip chip-red">Vùng an toàn $h/3$</strong></td>
+                <td>Khoét lỗ ở trục trung hòa giữa dầm; cấm khoét sát mép cột (&lt; $2h$).</td>
+                <td>Tiêu chuẩn kết cấu ACI 318</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- Page Footer -->
+    <footer class="page-foot">
+      <span>BSV BIM MEP Coordination &amp; Shop Drawing Standard Manual</span>
+      <span>Trang 1 / 2 • Bản Điều Hành Rút Gọn A4</span>
+      <span>BSV Engineering Division • 2026</span>
+    </footer>
+  </div>
+
+  <!-- ==================== TRANG 2 ==================== -->
+  <div class="a4-page">
+    <div>
+      <!-- Header Trang 2 -->
+      <div style="border-bottom: 1.5px solid #0f172a; padding-bottom: 4px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 7.4pt; font-weight: 800; color: #0d9488; text-transform: uppercase;">BIM MEP — GIÁ TREO UNISTRUT, THỬ ÁP LỰC, CÂN BẰNG TAB, LIÊN ĐỘNG PCCC &amp; TIẾN ĐỘ P6</span>
+        <span class="doc-code">TRANG 2 / 2</span>
+      </div>
+
+      <!-- PHẦN III: GIÁ TREO & THỬ NGHIỆM T&C -->
+      <section class="sec-block">
+        <div class="sec-title">
+          <span>PHẦN III: QUY CHUẨN GIÁ TREO HANGERS, THỬ ÁP LỰC &amp; CHẠY THỬ LIÊN ĐỘNG (T&amp;C)</span>
+          <span class="sec-badge">Hangers &amp; T&amp;C</span>
+        </div>
+        <div class="sec-content">
+          <div class="grid-2">
+            <div class="mini-card">
+              <div class="mini-card-head">
+                <span>1. Giá Treo Đa Hệ (Unistrut Trapeze)</span>
+                <span class="chip chip-blue">Trapeze</span>
+              </div>
+              <ul class="b-list">
+                <li><strong>Gom cụm:</strong> Dùng thanh C Unistrut mạ kẽm nhúng nóng + ty ren $arnothing 10-arnothing 16$ gom chung ống gió, máng cáp và ống nước.</li>
+                <li><strong>Cự ly gối đỡ:</strong> Ống nước/PCCC: $2.5	ext{m}-3.5	ext{m}$; Máng cáp: $1.5	ext{m}-2.0	ext{m}$; Ống gió: $2.0	ext{m}-2.5	ext{m}$.</li>
+                <li><strong>Chống rung:</strong> Lắp lò xo giảm chấn cho bơm, chiller, khớp nối mềm cao su đầu bơm.</li>
+              </ul>
+            </div>
+            <div class="mini-card green">
+              <div class="mini-card-head">
+                <span>2. Thử Nghiệm &amp; Chạy Thử Liên Động (T&amp;C)</span>
+                <span class="chip chip-green">Testing &amp; Commissioning</span>
+              </div>
+              <ul class="b-list green">
+                <li><strong>Thử áp lực ống nước:</strong> Áp suất $1.5	ext{x}$ áp suất làm việc (tối thiểu 10 bar), giữ 2 giờ, sụt áp $\le 0.2	ext{ bar}$.</li>
+                <li><strong>Cân bằng khí/nước TAB:</strong> Đạt lưu lượng thiết kế $\pm 10\%$. Thử kín khói ống gió SMACNA.</li>
+                <li><strong>Liên động PCCC:</strong> Báo cháy $ightarrow$ Hạ thang máy tầng 1, mở cửa từ thoát hiểm, bật hút khói và quạt tăng áp, ngắt điện chiếu sáng thường.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHẦN IV: TÍCH HỢP MEP VÀO PRIMAVERA P6 -->
+      <section class="sec-block">
+        <div class="sec-title">
+          <span>PHẦN IV: TÍCH HỢP PHÂN HỆ CƠ ĐIỆN VÀO TIẾN ĐỘ PRIMAVERA P6 (WBS-MEP LOGIC)</span>
+          <span class="sec-badge">P6 WBS-MEP</span>
+        </div>
+        <div class="sec-content">
+          <table class="c-table">
+            <thead>
+              <tr>
+                <th style="width: 18%;">Mã WBS P6</th>
+                <th style="width: 25%;">Hạng Mục Công Tác Cơ Điện</th>
+                <th style="width: 32%;">Chuỗi Logic Tiền Nhiệm / Kế Nhiệm</th>
+                <th style="width: 25%;">Quan Hệ Ràng Buộc Hợp Đồng</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>WBS-MEP.01.SOD</code></td>
+                <td>Đặt Sleeves lỗ mở dầm, sàn, vách</td>
+                <td>Lắp cốt thép dầm/sàn $ightarrow \mathbf{SS+1d} ightarrow$ Đặt Sleeves $ightarrow \mathbf{FS} ightarrow$ Đổ bê tông</td>
+                <td>Trước khi đổ bê tông kết cấu (KC)</td>
+              </tr>
+              <tr>
+                <td><code>WBS-MEP.02.Riser</code></td>
+                <td>Lắp trục đứng Riser ống &amp; máng cáp</td>
+                <td>Tháo cốp pha sàn tầng trên $ightarrow \mathbf{FS+2d} ightarrow$ Thi công trục đứng</td>
+                <td>Phục vụ thông tuyến các tầng</td>
+              </tr>
+              <tr>
+                <td><code>WBS-MEP.03.RoughIn</code></td>
+                <td>Đi ống luồn dây âm tường &amp; cấp thoát</td>
+                <td>Xây tường kiến trúc $ightarrow \mathbf{SS+3d} ightarrow$ Cắt đục đi ống $ightarrow \mathbf{FS} ightarrow$ Trát tường</td>
+                <td>Hoàn thành trước khi trát tường (KT)</td>
+              </tr>
+              <tr>
+                <td><code>WBS-MEP.04.Ceiling</code></td>
+                <td>Lắp ống gió, máng điện, PCCC trần</td>
+                <td>Trát trần/sơn lót $ightarrow \mathbf{FS} ightarrow$ Lắp giá treo Unistrut $ightarrow$ Đi ống</td>
+                <td>Trước khi đóng tấm trần thạch cao</td>
+              </tr>
+              <tr>
+                <td><code>WBS-MEP.05.Device</code></td>
+                <td>Lắp thiết bị: đèn, mặt hạt, miệng gió</td>
+                <td>Sơn hoàn thiện nước 1 $ightarrow \mathbf{FS} ightarrow$ Lắp thiết bị $ightarrow$ Sơn dặm vá</td>
+                <td>Đồng bộ hoàn thiện kiến trúc</td>
+              </tr>
+              <tr>
+                <td><code>WBS-MEP.06.TC</code></td>
+                <td>Thử nghiệm T&amp;C, xả rửa, nghiệm thu</td>
+                <td>Đấu nối điện trạm biến áp $ightarrow \mathbf{FS} ightarrow$ Chạy thử liên động $ightarrow$ PCCC</td>
+                <td>Điều kiện tiên quyết bàn giao dự án</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- PHẦN V: 10 CHỈ SỐ QUẢN TRỊ BIM MEP DÀNH CHO PM -->
+      <section class="sec-block">
+        <div class="sec-title">
+          <span>PHẦN V: 10 BƯỚC CHUẨN HÓA ĐIỀU HÀNH BIM MEP DÀNH CHO GIÁM ĐỐC / BIM MANAGER</span>
+          <span class="sec-badge">Executive Checklist</span>
+        </div>
+        <div class="sec-content">
+          <div class="grid-2">
+            <div>
+              <div style="font-size: 7.2pt; font-weight: 700; color: #0d9488; margin-bottom: 2px;">
+                🎯 5 Bước Phối Hợp &amp; Chuẩn Bị Shop Drawings:
+              </div>
+              <ul class="b-list" style="font-size: 7.0pt;">
+                <li><strong>1. Khởi tạo RVT MEP:</strong> Đồng bộ Shared Coordinates với Kết cấu &amp; Kiến trúc.</li>
+                <li><strong>2. Chốt bản vẽ SOD:</strong> Định vị Sleeves dầm sàn bàn giao đội Kết cấu trước khi đổ BT.</li>
+                <li><strong>3. Dựng chi tiết phòng máy:</strong> Trạm biến áp, Chiller Plant, Bơm PCCC chuẩn LOD 400.</li>
+                <li><strong>4. Giải quyết 100% Clash:</strong> Không xuất bản vẽ Shop khi còn xung đột Hard Clash.</li>
+                <li><strong>5. Duyệt bản vẽ CSD:</strong> Đủ cao độ đáy ống BOP, BOD và mặt cắt 1:25 qua vị trí hẹp.</li>
+              </ul>
+            </div>
+            <div>
+              <div style="font-size: 7.2pt; font-weight: 700; color: #047857; margin-bottom: 2px;">
+                🚀 5 Bước Giám Sát Lắp Đặt, T&amp;C &amp; Nghiệm Thu:
+              </div>
+              <ul class="b-list green" style="font-size: 7.0pt;">
+                <li><strong>6. Lắp giá treo Unistrut:</strong> Đảm bảo đúng cự ly $2.5	ext{m}-3.5	ext{m}$, lò xo giảm chấn.</li>
+                <li><strong>7. Thử áp lực ống nước 1.5x:</strong> Giữ 2h, sụt áp $\le 0.2	ext{ bar}$, có biên bản ký xác nhận.</li>
+                <li><strong>8. Cân bằng lưu lượng TAB:</strong> Đo lưu lượng gió miệng thổi, áp suất nước lạnh $\pm 10\%$.</li>
+                <li><strong>9. Thử liên động PCCC:</strong> Kiểm định thiết bị và nghiệm thu PCCC với Công an PCCC.</li>
+                <li><strong>10. Bàn giao As-built 7D:</strong> Gắn mã tài sản Asset Tag, sách O&amp;M số hóa chuyển giao CĐT.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Chữ ký trách nhiệm -->
+          <div style="margin-top: 6px; padding-top: 4px; border-top: 1px dashed #cbd5e1; display: flex; justify-content: space-between; text-align: center; font-size: 7.1pt;">
+            <div style="width: 30%;">
+              <strong>KỸ SƯ TRƯỞNG MEP</strong><br>
+              <span style="color: #64748b; font-size: 6.6pt;">(Chủ trì Kỹ thuật CSD / T&amp;C)</span><br><br>
+              <strong>Senior MEP Coordinator</strong>
+            </div>
+            <div style="width: 30%;">
+              <strong>GIÁM ĐỐC BIM (BIM MANAGER)</strong><br>
+              <span style="color: #64748b; font-size: 6.6pt;">(Điều phối Clash &amp; Tích hợp 4D P6)</span><br><br>
+              <strong>BIM &amp; Digital Delivery Lead</strong>
+            </div>
+            <div style="width: 30%;">
+              <strong>CHỈ HUY TRƯỞNG / GIÁM ĐỐC DỰ ÁN</strong><br>
+              <span style="color: #64748b; font-size: 6.6pt;">(Phê duyệt Thi công &amp; Nghiệm thu)</span><br><br>
+              <strong>Project Director / CM</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Page Footer -->
+    <footer class="page-foot">
+      <span>BSV BIM MEP Coordination &amp; Shop Drawing Standard Manual</span>
+      <span>Trang 2 / 2 • Bản Điều Hành Rút Gọn A4 Hoàn Chỉnh</span>
+      <span>BSV Engineering Division • 2026</span>
+    </footer>
+  </div>
+
+</body>
+</html>

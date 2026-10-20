@@ -1,0 +1,101 @@
+Activity ID,Activity Name,WBS Code,Original Duration (Days),Primary Resource,Cost Account,Notes / Module Reference
+ACT-KC-01-1010,"Cọc ly tâm - [Commens:01.Coc] - Quy ước đặt type: ghi kích thước D - VD: 300, 350, 400, 500 - (Sau khi dựng móng tiến hà",WBS-KC.01.Coc,10,RES-PILE (Máy ép cọc Robot & Cọc D400),CA-PILE-00,Module: KET_CAU; Component: 01.Coc
+ACT-KC-01-1020,"Cọc ly tâm - [Commens:01.Coc] - Quy ước đặt type: ghi kích thước D - VD: 300, 350, 400, 500 - (Sau khi dựng móng tiến hà",WBS-KC.01.Coc,10,RES-PILE (Máy ép cọc Robot & Cọc D400),CA-PILE-00,Module: KET_CAU; Component: 01.Coc
+ACT-KC-01-1030,"Cọc ly tâm - [Commens:01.Coc] - Quy ước đặt type: ghi kích thước D - VD: 300, 350, 400, 500 - (Sau khi dựng móng tiến hà",WBS-KC.01.Coc,10,RES-PILE (Máy ép cọc Robot & Cọc D400),CA-PILE-00,Module: KET_CAU; Component: 01.Coc
+ACT-KC-01-1040,"Cọc ly tâm - [Commens:01.Coc] - Quy ước đặt type: ghi kích thước D - VD: 300, 350, 400, 500 - (Sau khi dựng móng tiến hà",WBS-KC.01.Coc,10,RES-PILE (Máy ép cọc Robot & Cọc D400),CA-PILE-00,Module: KET_CAU; Component: 01.Coc
+ACT-KC-02-1050,Bê tông - [Comments:02.Mong] - Quy ước đặt type: ngắn x dài x cao - VD: 800x1200x1000 - (Chạy Tool BSV_AutoFoundation_By,WBS-KC.02.Mong,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Module: KET_CAU; Component: 02.Mong
+ACT-KC-02-1060,Bê tông - [Comments:02.Mong] - Quy ước đặt type: ngắn x dài x cao - VD: 800x1200x1000 - (Chạy Tool BSV_AutoFoundation_By,WBS-KC.02.Mong,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Module: KET_CAU; Component: 02.Mong
+ACT-KC-02-1070,"Thép: Theo mặt cắt thiết kế - Chiều dài neo, lap...",WBS-KC.02.Mong,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Module: KET_CAU; Component: 02.Mong
+ACT-KC-02-1080,Ván khuôn: Ván khuôn móng - [BSV_PhanLoai:VK_Mong],WBS-KC.02.Mong,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Module: KET_CAU; Component: 02.Mong
+ACT-KC-02-1090,Ván khuôn: Ván khuôn lót móng [BSV_PhanLoai:VK_LotMong] - (Lọc theo diện tích hoặc quét chọn ván),WBS-KC.02.Mong,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Module: KET_CAU; Component: 02.Mong
+ACT-KC-03-1100,"Thép: Theo mặt cắt thiết kế - Chú ý đọc kĩ spect kết cấu - về chiều dài neo, lap, vị trí cắt thép...",WBS-KC.03.DaKieng,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Module: KET_CAU; Component: 03.DaKieng
+ACT-KC-03-1110,Bê tông - [Comments:03.DaKieng] - Quy ước đặt type: rộng x cao - VD: 300x500: Bê tông đà kiềng (B25),WBS-KC.03.DaKieng,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Module: KET_CAU; Component: 03.DaKieng
+ACT-KC-03-1120,Bê tông - [Comments:03.DaKieng] - Quy ước đặt type: rộng x cao - VD: 300x500: Bê tông lót đà kiềng (B7.5),WBS-KC.03.DaKieng,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Module: KET_CAU; Component: 03.DaKieng
+ACT-KC-03-1130,Ván khuôn: Ván khuôn đà kiềng - [BSV_PhanLoai:VK_DaKieng],WBS-KC.03.DaKieng,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Module: KET_CAU; Component: 03.DaKieng
+ACT-KC-03-1140,Ván khuôn: Ván khuôn lót - [BSV_PhanLoai:VK_LotDaKieng],WBS-KC.03.DaKieng,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Module: KET_CAU; Component: 03.DaKieng
+ACT-KC-04-1150,"Bê tông (B25) - [Comments:04.Nen] - Quy ước đặt type: ghi chiều dày H sàn - VD: 150, 200, 300 - Nếu vẽ BTL thì đặt là 50",WBS-KC.04.Nen,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Module: KET_CAU; Component: 04.Nen
+ACT-KC-04-1160,"Bê tông (B25) - [Comments:04.Nen] - Quy ước đặt type: ghi chiều dày H sàn - VD: 150, 200, 300 - Nếu vẽ BTL thì đặt là 50",WBS-KC.04.Nen,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Module: KET_CAU; Component: 04.Nen
+ACT-KC-04-1170,"Khe: Tính chiều dài, vật liệu hoàn thiện khe",WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 04.Nen
+ACT-KC-04-1180,Khe: Khe co giãn/nhiệt,WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 04.Nen
+ACT-KC-04-1190,Khe: Khe cắt,WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 04.Nen
+ACT-KC-04-1200,Khe: Khe thi công,WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 04.Nen
+ACT-KC-04-1210,Khe: Khe cô lập,WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 04.Nen
+ACT-KC-04-1220,Ván khuôn: Ván khuôn nền - [BSV_PhanLoai:VK_Nen],WBS-KC.04.Nen,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Module: KET_CAU; Component: 04.Nen
+ACT-KC-04-1230,Thép: Cốt sợi,WBS-KC.04.Nen,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Module: KET_CAU; Component: 04.Nen
+ACT-KC-04-1240,Thép: Cốt thép thường,WBS-KC.04.Nen,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Module: KET_CAU; Component: 04.Nen
+ACT-KC-04-1250,Thép: Lưới thép hàn,WBS-KC.04.Nen,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Module: KET_CAU; Component: 04.Nen
+ACT-KC-04-1260,Cấu tạo nền: ...,WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 04.Nen
+ACT-KC-04-1270,Cấu tạo nền: Lớp đá base - [BSV_PhanLoai:DT_Nen]*ChieuDayBase,WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 04.Nen
+ACT-KC-04-1280,Cấu tạo nền: Chống mối,WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 04.Nen
+ACT-KC-04-1290,Cấu tạo nền: Tấm PVC - [BSV_PhanLoai:DT_Nen],WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 04.Nen
+ACT-KC-04-1300,"Cấu tạo nền: Diện tích đầm chặt - [BSV_PhanLoai:DT_Nen] - (Diện tích nền) - (giao đà kiềng, cổ cột, móng nền)",WBS-KC.04.Nen,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 04.Nen
+ACT-KC-05-1310,"Thép: Theo cặt cắt thiết kế - Chiều dài bẻ móc, lap, sole ...",WBS-KC.05.Cot,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Module: KET_CAU; Component: 05.Cot
+ACT-KC-05-1320,Ván khuôn: Ván khuôn cổ cột - [BSV_PhanLoai:VK_CoCot],WBS-KC.05.Cot,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Module: KET_CAU; Component: 05.Cot
+ACT-KC-05-1330,"Ván khuôn: Ván khuôn cột tầng 1, 2, ..., mái [BSV_PhanLoai:VK_Cot]",WBS-KC.05.Cot,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Module: KET_CAU; Component: 05.Cot
+ACT-KC-05-1340,"Bê tông - Quy ước đặt type: ngắn x dài - VD: 500x800 - (Chạy Tool BSV_Str_TaoCot_Ver4): Bê tông cột tầng 1, 2, ..., mái ",WBS-KC.05.Cot,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Module: KET_CAU; Component: 05.Cot
+ACT-KC-05-1350,Bê tông - Quy ước đặt type: ngắn x dài - VD: 500x800 - (Chạy Tool BSV_Str_TaoCot_Ver4): Bê tông cổ cột (B25) - [Comments,WBS-KC.05.Cot,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Module: KET_CAU; Component: 05.Cot
+ACT-KC-06-1360,"Bê tông - [Comments:06.Vach] - Quy ước đặt type: ghi chiều dày vách - VD: 100, 200: Bê tông vách (B25)",WBS-KC.06.Vach,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Module: KET_CAU; Component: 06.Vach
+ACT-KC-06-1370,Ván khuôn: Ván khuôn vách - [BSV_PhanLoai:VK_Vach],WBS-KC.06.Vach,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Module: KET_CAU; Component: 06.Vach
+ACT-KC-06-1380,"Thép: Theo cặt cắt thiết kế - Chiều dài neo, lap...",WBS-KC.06.Vach,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Module: KET_CAU; Component: 06.Vach
+ACT-KC-07-1390,"Thép: Theo mặt cắt thiết kế - Chú ý đọc kĩ spect kết cấu - về chiều dài neo, lap, vị trí cắt thép...",WBS-KC.07.Dam,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Module: KET_CAU; Component: 07.Dam
+ACT-KC-07-1400,"Bê tông  (B25) - [Comments:07.Dam]: Bê tông dầm tầng 2, 3, ..., mái, tum",WBS-KC.07.Dam,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Module: KET_CAU; Component: 07.Dam
+ACT-KC-07-1410,"Ván khuôn: Ván khuôn dầm tầng 2, 3, ..., mái, tum [BSV_PhanLoai:VK_Dam] - (Không tính phần giao sàn,cột,dầm)",WBS-KC.07.Dam,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Module: KET_CAU; Component: 07.Dam
+ACT-KC-08-1420,Thép: Lưới thép hàn,WBS-KC.08.San,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Module: KET_CAU; Component: 08.San
+ACT-KC-08-1430,Thép: Cốt thép thường,WBS-KC.08.San,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Module: KET_CAU; Component: 08.San
+ACT-KC-08-1440,"Bê tông: Bê tông sàn tầng 2, 3, ..., mái, tum - [Comment:08.1.San-T2-Xuong] - [Comment:08.2.San-T3-Xuong] - [Comment:08.",WBS-KC.08.San,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Module: KET_CAU; Component: 08.San
+ACT-KC-08-1450,"Ván khuôn: Ván khuôn sàn tầng 2, 3, ..., mái, tum [BSV_PhanLoai:VK_San] - (Không tính phần giao cột)",WBS-KC.08.San,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Module: KET_CAU; Component: 08.San
+ACT-KC-09-1460,"Cầu thang - (Có thể bao gồm cầu thang, dầm, cột): Hoàn thiện",WBS-KC.09.CauThang,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 09.CauThang
+ACT-KC-09-1470,"Cầu thang - (Có thể bao gồm cầu thang, dầm, cột): Thép",WBS-KC.09.CauThang,6,RES-STEEL (Thép cây CB400-V/CB300),CA-STEEL-02,Module: KET_CAU; Component: 09.CauThang
+ACT-KC-09-1480,"Cầu thang - (Có thể bao gồm cầu thang, dầm, cột): Ván khuôn [BSV_PhanLoai:VK_CauThang]",WBS-KC.09.CauThang,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Module: KET_CAU; Component: 09.CauThang
+ACT-KC-09-1490,"Cầu thang - (Có thể bao gồm cầu thang, dầm, cột): Kết cấu",WBS-KC.09.CauThang,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 09.CauThang
+ACT-KC-10-1500,"Tam cấp - (Có thể bao gồm tam cấp, cách, đà): Bê tông - [Comments:10.1.TamCap-ST1-Xuong] - [Comments:10.2.TamCap...]",WBS-KC.10.TamCap,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Module: KET_CAU; Component: 10.TamCap
+ACT-KC-10-1510,"Tam cấp - (Có thể bao gồm tam cấp, cách, đà): Các lớp cấu tạo nền nếu có...",WBS-KC.10.TamCap,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 10.TamCap
+ACT-KC-11-1520,Ramp: Bê tông ramp - [Comments:11.Ramp],WBS-KC.11.Ramp,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Module: KET_CAU; Component: 11.Ramp
+ACT-KC-11-1530,Ramp: Các lớp cấu tạo ramp,WBS-KC.11.Ramp,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 11.Ramp
+ACT-KC-11-1540,Ramp: Ván khuôn ramp - [BSV_PhanLoai:VK_Ramp] - [BSV_PhanLoai:VK_VachRamp],WBS-KC.11.Ramp,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Module: KET_CAU; Component: 11.Ramp
+ACT-KC-12-1550,Pit thang máy: Các lớp cấu tạo pit,WBS-KC.12.Pit,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 12.Pit
+ACT-KC-12-1560,Pit thang máy: Bê tông ramp - [Comments:12.Pit],WBS-KC.12.Pit,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Module: KET_CAU; Component: 12.Pit
+ACT-KC-12-1570,Pit thang máy: Ván khuôn ramp - [BSV_PhanLoai:VK_Pit] - [BSV_PhanLoai:VK_VachPit],WBS-KC.12.Pit,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Module: KET_CAU; Component: 12.Pit
+ACT-KC-13-1580,Dock hàng: Các lớp cấu tạo dock,WBS-KC.13.Dock,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 13.Dock
+ACT-KC-13-1590,Dock hàng: Bê tông dock - [Comments:13.Dock],WBS-KC.13.Dock,3,RES-CONC (Bê tông thương phẩm B25/B7.5),CA-CONC-01,Module: KET_CAU; Component: 13.Dock
+ACT-KC-13-1600,Dock hàng: Ván khuôn dock - [BSV_PhanLoai:VK_Dock] - [BSV_PhanLoai:VK_DamDock],WBS-KC.13.Dock,4,RES-FORMWORK (Ván phủ phim & Giàn giáo),CA-FORM-03,Module: KET_CAU; Component: 13.Dock
+ACT-KC-14-1610,Bệ máy - [Comments:14.2.BeMay]: [BSV_PhanLoai:VK_BeMay],WBS-KC.14.CauKienPhu,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 14.CauKienPhu
+ACT-KC-14-1620,Mương - [Comments:14.1.Muong]: [BSV_PhanLoai:VK_Muong],WBS-KC.14.CauKienPhu,5,RES-LABOR (Đội thi công),CA-DIRECT,Module: KET_CAU; Component: 14.CauKienPhu
+ACT-KT-1630,Xây tường ngoài bao che BSV_ExWall (chống thấm),WBS-KT.01.Tuong,12,RES-MASON (Đội thợ nề xây tường),CA-KT-WALL,Module: KIEN_TRUC; Sub: WBS-KT.01.Tuong
+ACT-KT-1640,Xây tường trong ngăn chia phòng BSV_InWall,WBS-KT.01.Tuong,10,RES-MASON (Đội thợ nề xây tường),CA-KT-WALL,Module: KIEN_TRUC; Sub: WBS-KT.01.Tuong
+ACT-KT-1650,Đổ bê tông bổ trụ BSV_BoTru,WBS-KT.01.Tuong,5,RES-CONC (Bê tông B20 bổ trụ),CA-KT-CONC,Module: KIEN_TRUC; Sub: WBS-KT.01.Tuong
+ACT-KT-1660,Lắp dựng cốp pha & đổ bê tông lanh tô giằng tường,WBS-KT.01.Tuong,6,RES-MASON (Thợ cốp pha lanh tô),CA-KT-CONC,Module: KIEN_TRUC; Sub: WBS-KT.01.Tuong
+ACT-KT-1670,Trát tường ngoài dày 20mm trộn phụ gia chống thấm,WBS-KT.02.Trat,10,RES-PLASTER (Đội thợ trát),CA-KT-PLASTER,Module: KIEN_TRUC; Sub: WBS-KT.02.Trat
+ACT-KT-1680,Trát tường trong dày 15mm mác M75,WBS-KT.02.Trat,12,RES-PLASTER (Đội thợ trát),CA-KT-PLASTER,Module: KIEN_TRUC; Sub: WBS-KT.02.Trat
+ACT-KT-1690,Trát cạnh cửa & đắp Sill dốc cửa sổ,WBS-KT.02.Trat,4,RES-PLASTER (Đội thợ trát),CA-KT-PLASTER,Module: KIEN_TRUC; Sub: WBS-KT.02.Trat
+ACT-KT-1700,Chống thấm sàn khu vệ sinh & mái (Màng Sika/Bitum),WBS-KT.03.SanTran,6,RES-WATERPROOF (Chống thấm chuyên nghiệp),CA-KT-WATERPROOF,Module: KIEN_TRUC; Sub: WBS-KT.03.SanTran
+ACT-KT-1710,Cán vữa tạo dốc sàn vệ sinh & hành lang,WBS-KT.03.SanTran,5,RES-MASON (Đội cán vữa),CA-KT-FLOOR,Module: KIEN_TRUC; Sub: WBS-KT.03.SanTran
+ACT-KT-1720,Ốp lát gạch ceramic/granite sàn & chân tường,WBS-KT.03.SanTran,10,RES-TILER (Đội thợ ốp lát),CA-KT-FLOOR,Module: KIEN_TRUC; Sub: WBS-KT.03.SanTran
+ACT-KT-1730,Lắp đặt khung xương & đóng tấm trần thạch cao chống ẩm,WBS-KT.03.SanTran,8,RES-CEILING (Đội trần thạch cao),CA-KT-CEILING,Module: KIEN_TRUC; Sub: WBS-KT.03.SanTran
+ACT-KT-1740,Lắp đặt khung bao cửa đi nhôm kính & cửa thép chống cháy,WBS-KT.04.Cua,6,RES-DOOR (Đội lắp đặt cửa),CA-KT-DOOR,Module: KIEN_TRUC; Sub: WBS-KT.04.Cua
+ACT-KT-1750,"Lắp cánh cửa, phụ kiện khóa tay gạt & chèn keo Foam",WBS-KT.04.Cua,5,RES-DOOR (Đội lắp đặt cửa),CA-KT-DOOR,Module: KIEN_TRUC; Sub: WBS-KT.04.Cua
+ACT-KT-1760,Lắp đặt hệ vách kính mặt dựng Curtain Wall,WBS-KT.04.Cua,12,RES-FACADE (Nhà thầu nhôm kính),CA-KT-FACADE,Module: KIEN_TRUC; Sub: WBS-KT.04.Cua
+ACT-KT-1770,Bả matic 2 lớp & xả nhám phẳng tường trần,WBS-KT.05.Son,8,RES-PAINTER (Đội sơn bả),CA-KT-PAINT,Module: KIEN_TRUC; Sub: WBS-KT.05.Son
+ACT-KT-1780,Sơn lót kháng kiềm 1 lớp & sơn phủ màu 2 lớp,WBS-KT.05.Son,6,RES-PAINTER (Đội sơn bả),CA-KT-PAINT,Module: KIEN_TRUC; Sub: WBS-KT.05.Son
+ACT-KT-1790,Vệ sinh công nghiệp & bàn giao khối kiến trúc,WBS-KT.05.Son,4,RES-CLEAN (Đội vệ sinh),CA-KT-CLEAN,Module: KIEN_TRUC; Sub: WBS-KT.05.Son
+ACT-MEP-1800,Đặt Sleeves ống dầm sàn theo bản vẽ SOD trước khi đổ BT,WBS-MEP.01.AmKetCau,5,RES-MEP (Đội thợ điện nước),CA-MEP-SLEEVES,Module: MEP; Sub: WBS-MEP.01.AmKetCau
+ACT-MEP-1810,Đi ống luồn dây điện Conduit âm sàn kết cấu,WBS-MEP.01.AmKetCau,6,RES-ELEC (Đội thợ điện),CA-MEP-CONDUIT,Module: MEP; Sub: WBS-MEP.01.AmKetCau
+ACT-MEP-1820,Lắp đặt giá treo Unistrut & ống gió tôn mạ kẽm (Ductwork),WBS-MEP.02.HVAC,12,RES-HVAC (Đội thợ ống gió),CA-MEP-HVAC,Module: MEP; Sub: WBS-MEP.02.HVAC
+ACT-MEP-1830,Lắp đặt đường ống nước lạnh Chilled Water & bọc cách nhiệt,WBS-MEP.02.HVAC,10,RES-HVAC (Thợ hàn ống áp lực),CA-MEP-CHILLER,Module: MEP; Sub: WBS-MEP.02.HVAC
+ACT-MEP-1840,"Lắp đặt dàn nóng/lạnh VRV, AHU & quạt thông gió nhà xưởng",WBS-MEP.02.HVAC,8,RES-HVAC (Kỹ thuật viên cơ điện),CA-MEP-EQUIP,Module: MEP; Sub: WBS-MEP.02.HVAC
+ACT-MEP-1850,Cân bằng lưu lượng gió và nước (TAB testing),WBS-MEP.02.HVAC,5,RES-COMMISSION (Chuyên gia TAB),CA-MEP-TAB,Module: MEP; Sub: WBS-MEP.02.HVAC
+ACT-MEP-1860,Lắp đặt thang máng cáp điện (Cable Tray / Ladder),WBS-MEP.03.Elec,10,RES-ELEC (Thợ máng cáp),CA-MEP-TRAY,Module: MEP; Sub: WBS-MEP.03.Elec
+ACT-MEP-1870,Kéo rải cáp nguồn chính trung thế & hạ thế Cu/XLPE/PVC,WBS-MEP.03.Elec,8,RES-ELEC (Đội kéo cáp),CA-MEP-CABLE,Module: MEP; Sub: WBS-MEP.03.Elec
+ACT-MEP-1880,"Lắp đặt máy biến áp, máy phát điện dự phòng & tủ tổng MSB",WBS-MEP.03.Elec,6,RES-ELEC (Kỹ sư điện chính),CA-MEP-SUBSTATION,Module: MEP; Sub: WBS-MEP.03.Elec
+ACT-MEP-1890,"Lắp đặt tủ tầng DB, đèn chiếu sáng Led Highbay & công tắc",WBS-MEP.03.Elec,10,RES-ELEC (Thợ điện chiếu sáng),CA-MEP-LIGHT,Module: MEP; Sub: WBS-MEP.03.Elec
+ACT-MEP-1900,"Kéo rải cáp mạng LAN, camera CCTV, âm thanh PA & Access Control",WBS-MEP.03.Elec,8,RES-ELV (Kỹ thuật viên điện nhẹ),CA-MEP-ELV,Module: MEP; Sub: WBS-MEP.03.Elec
+ACT-MEP-1910,Lắp đặt trục đứng Riser cấp nước PPR & thoát nước uPVC,WBS-MEP.04.Plumb,8,RES-PLUMB (Thợ cấp thoát nước),CA-MEP-PIPE,Module: MEP; Sub: WBS-MEP.04.Plumb
+ACT-MEP-1920,Lắp đặt hệ thống phễu thu nước mưa mái Siphonic nhà xưởng,WBS-MEP.04.Plumb,7,RES-PLUMB (Thợ cấp thoát nước),CA-MEP-STORM,Module: MEP; Sub: WBS-MEP.04.Plumb
+ACT-MEP-1930,"Lắp cụm bơm cấp nước biến tần & thiết bị vệ sinh (Lavabo, WC)",WBS-MEP.04.Plumb,6,RES-PLUMB (Thợ lắp thiết bị),CA-MEP-PLUMB,Module: MEP; Sub: WBS-MEP.04.Plumb
+ACT-MEP-1940,Thử áp lực thủy tĩnh đường ống 1.5x (Hydrostatic test),WBS-MEP.04.Plumb,3,RES-PLUMB (Đội thử áp lực),CA-MEP-TEST,Module: MEP; Sub: WBS-MEP.04.Plumb
+ACT-MEP-1950,Lắp đặt đường ống chữa cháy Sprinkler thép đen SCH40,WBS-MEP.05.FP,12,RES-FP (Thợ hàn & cùm rãnh PCCC),CA-MEP-FP,Module: MEP; Sub: WBS-MEP.05.FP
+ACT-MEP-1960,Lắp đặt cụm máy bơm chữa cháy cứu hỏa chuẩn NFPA 20,WBS-MEP.05.FP,6,RES-FP (Kỹ sư lắp bơm PCCC),CA-MEP-PUMP,Module: MEP; Sub: WBS-MEP.05.FP
+ACT-MEP-1970,"Kéo dây & lắp đặt đầu báo khói, còi đèn báo cháy địa chỉ",WBS-MEP.05.FP,8,RES-FP (Thợ báo cháy),CA-MEP-ALARM,Module: MEP; Sub: WBS-MEP.05.FP
+ACT-MEP-1980,Chạy thử liên động PCCC & kiểm định nghiệm thu Công an PCCC,WBS-MEP.05.FP,5,RES-COMMISSION (Chuyên gia PCCC),CA-MEP-INSPECT,Module: MEP; Sub: WBS-MEP.05.FP
+ACT-MEP-1990,Đóng điện trạm biến áp & hòa đồng bộ máy phát điện,WBS-MEP.06.TC,3,RES-COMMISSION (Chuyên gia đóng điện),CA-MEP-COMM,Module: MEP; Sub: WBS-MEP.06.TC
+ACT-MEP-2000,Chạy thử tải liên động toàn nhà xưởng & bàn giao O&M,WBS-MEP.06.TC,5,RES-COMMISSION (Ban nghiệm thu T&C),CA-MEP-COMM,Module: MEP; Sub: WBS-MEP.06.TC
