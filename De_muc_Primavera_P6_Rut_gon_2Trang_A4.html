@@ -426,10 +426,7 @@
           </tr>
           <tr>
             <td class="lbl">Mô Hình Tích Hợp:</td>
-            <td class="val">Kaka Revit Database (SQLite) $
-ightarrow$ 14 WBS Cấu kiện $
-ightarrow$ P6 $
-ightarrow$ Navisworks 4D</td>
+            <td class="val">Kaka Revit Database (SQLite) ➔ 14 WBS Cấu kiện ➔ P6 ➔ Navisworks 4D</td>
             <td class="lbl">Mục Tiêu Hồ Sơ:</td>
             <td class="val">Kiểm soát Đường găng (Critical Path), Total Float, Baseline B1, Giá trị EVA</td>
           </tr>
@@ -443,7 +440,7 @@ ightarrow$ Navisworks 4D</td>
           </div>
           <strong>1. Nguyên tắc 100% Logic:</strong> 100% công việc phải có quan hệ tiền nhiệm (Predecessor) và kế nhiệm (Successor); tuyệt đối cấm để công việc Open End. Nghiêm cấm sử dụng độ trễ âm (Negative Lag).<br>
           <strong>2. Khóa Tiến độ Cơ sở (Baseline Freeze):</strong> Sau khi duyệt, Baseline B1 phải được gán và khóa cố định. Mọi biến động công trường được so sánh trực tiếp với B1 để xác định ngày trễ hạn và giải quyết phát sinh (CO).<br>
-          <strong>3. Kiểm soát Total Float:</strong> $TF = LS - ES = LF - EF$. Nếu $TF = 0$ hoặc $TF < 0$, công việc lập tức trở thành đường găng nguy cấp (Critical Activity), bắt buộc kích hoạt giải pháp Fast-tracking hoặc Crashing.
+          <strong>3. Kiểm soát Total Float:</strong> TF = LS - ES = LF - EF. Nếu TF = 0 hoặc TF < 0, công việc lập tức trở thành đường găng nguy cấp (Critical Activity), bắt buộc kích hoạt giải pháp Fast-tracking hoặc Crashing.
         </div>
       </header>
 
@@ -461,9 +458,9 @@ ightarrow$ Navisworks 4D</td>
                 <span class="chip chip-blue">CPM Math</span>
               </div>
               <ul class="b-list">
-                <li><strong>Forward Pass (Tính xuôi):</strong> $ES + 	ext{Duration} = EF$ (Tìm ngày hoàn thành sớm nhất).</li>
-                <li><strong>Backward Pass (Tính ngược):</strong> $LF - 	ext{Duration} = LS$ (Tìm ngày bắt đầu muộn nhất).</li>
-                <li><strong>Total Float (Độ trôi tổng):</strong> $\mathbf{TF = LS - ES = LF - EF}$. Đo lường số ngày dự phòng.</li>
+                <li><strong>Forward Pass (Tính xuôi):</strong> ES + Duration = EF (Tìm ngày hoàn thành sớm nhất).</li>
+                <li><strong>Backward Pass (Tính ngược):</strong> LF - Duration = LS (Tìm ngày bắt đầu muộn nhất).</li>
+                <li><strong>Total Float (Độ trôi tổng):</strong> <strong>TF = LS - ES = LF - EF</strong>. Đo lường số ngày dự phòng.</li>
                 <li><strong>Free Float:</strong> Số ngày một công việc có thể chậm trễ mà không làm chậm ngày ES của việc kế tiếp.</li>
               </ul>
             </div>
@@ -473,8 +470,7 @@ ightarrow$ Navisworks 4D</td>
                 <span class="chip chip-amber">Structure</span>
               </div>
               <ul class="b-list">
-                <li><strong>EPS (Doanh nghiệp):</strong> Phân cấp danh mục Tổng công ty $
-ightarrow$ Nhà máy công nghiệp.</li>
+                <li><strong>EPS (Doanh nghiệp):</strong> Phân cấp danh mục Tổng công ty ➔ Nhà máy công nghiệp.</li>
                 <li><strong>OBS (Tổ chức):</strong> Gán người chịu trách nhiệm (Project Director, BIM Manager, Đội trưởng).</li>
                 <li><strong>Thời lượng hoạt động (Activity Duration):</strong> Không nên vượt quá chu kỳ cập nhật tiến độ (thông thường từ <code>5 đến 15 ngày</code>); chia nhỏ theo phân khu (Zone) và phân đoạn (Pour).</li>
               </ul>
@@ -505,79 +501,56 @@ ightarrow$ Nhà máy công nghiệp.</li>
                 <td><strong>01.Coc</strong></td>
                 <td>Công tác Cọc (Piles)</td>
                 <td><code>WBS-KC.01.Coc</code></td>
-                <td>Ép cọc đại trà $
-ightarrow$ Đập đầu cọc $
-ightarrow$ Thử PDA/PIT</td>
+                <td>Ép cọc đại trà ➔ Đập đầu cọc ➔ Thử PDA/PIT</td>
                 <td>Máy ép cọc, Đội cọc BT</td>
               </tr>
               <tr>
                 <td><strong>02.Mong</strong></td>
                 <td>Móng đơn, móng băng, móng bè</td>
                 <td><code>WBS-KC.02.Mong</code></td>
-                <td>Đào hố $
-ightarrow$ BT lót $
-ightarrow$ Cốt thép $
-ightarrow$ Ván khuôn $
-ightarrow$ Đổ BT</td>
+                <td>Đào hố ➔ BT lót ➔ Cốt thép ➔ Ván khuôn ➔ Đổ BT</td>
                 <td>Đội cốp pha, Thép, Bơm BT</td>
               </tr>
               <tr>
                 <td><strong>03.DaKieng</strong></td>
                 <td>Đà kiềng &amp; Giằng móng (Tie Beam)</td>
                 <td><code>WBS-KC.03.DaKieng</code></td>
-                <td>Gia công thép $
-ightarrow$ Lắp ván khuôn $
-ightarrow$ Đổ BT đà kiềng</td>
+                <td>Gia công thép ➔ Lắp ván khuôn ➔ Đổ BT đà kiềng</td>
                 <td>Thép gối/nhịp, Bê tông thương phẩm</td>
               </tr>
               <tr>
                 <td><strong>04.Nen</strong></td>
                 <td>Nền nhà xưởng (Slab on Grade)</td>
                 <td><code>WBS-KC.04.Nen</code></td>
-                <td>Lu lèn K98 $
-ightarrow$ Trải PE $
-ightarrow$ Lưới thép $
-ightarrow$ Đổ BT xoa nền</td>
+                <td>Lu lèn K98 ➔ Trải PE ➔ Lưới thép ➔ Đổ BT xoa nền</td>
                 <td>Lu rung, Thép lưới, Hardener</td>
               </tr>
               <tr>
                 <td><strong>05.Cot</strong></td>
                 <td>Cột bê tông cốt thép (Columns)</td>
                 <td><code>WBS-KC.05.Cot</code></td>
-                <td>Thép cột $
-ightarrow$ Nghiệm thu $
-ightarrow$ Ghép cốp pha $
-ightarrow$ Đổ BT cột</td>
+                <td>Thép cột ➔ Nghiệm thu ➔ Ghép cốp pha ➔ Đổ BT cột</td>
                 <td>Thép cây Ø20-25, Cốp pha nhôm/ván</td>
               </tr>
               <tr>
                 <td><strong>06.Vach</strong></td>
                 <td>Vách bể nước, thang (Shear Walls)</td>
                 <td><code>WBS-KC.06.Vach</code></td>
-                <td>Lắp Waterstop $
-ightarrow$ Thép 2 lớp $
-ightarrow$ Cốp pha $
-ightarrow$ Đổ BT</td>
+                <td>Lắp Waterstop ➔ Thép 2 lớp ➔ Cốp pha ➔ Đổ BT</td>
                 <td>Băng cản nước, Đai C con bọ</td>
               </tr>
               <tr>
                 <td><strong>07.Dam</strong></td>
                 <td>Dầm khung kết cấu (Beams)</td>
                 <td><code>WBS-KC.07.Dam</code></td>
-                <td>Cốp pha đáy $
-ightarrow$ Thép dầm chính/phụ $
-ightarrow$ Cốp pha thành</td>
+                <td>Cốp pha đáy ➔ Thép dầm chính/phụ ➔ Cốp pha thành</td>
                 <td>Giàn giáo nêm, Thép gối L/4</td>
               </tr>
               <tr>
                 <td><strong>08.San</strong></td>
                 <td>Sàn bê tông cốt thép (Slabs)</td>
                 <td><code>WBS-KC.08.San</code></td>
-                <td>Cốp pha $
-ightarrow$ Thép lớp dưới $
-ightarrow$ Điện MEP âm $
-ightarrow$ Thép mũ $
-ightarrow$ Đổ BT</td>
+                <td>Cốp pha ➔ Thép lớp dưới ➔ Điện MEP âm ➔ Thép mũ ➔ Đổ BT</td>
                 <td>Thép sàn Ø10-12, Con kê BT, Bơm</td>
               </tr>
               <tr>
@@ -617,15 +590,9 @@ ightarrow$ Đổ BT</td>
                 <span class="chip chip-red">Cấm Negative Lag</span>
               </div>
               <ul class="b-list">
-                <li><strong>FS (Finish-to-Start):</strong> Xong A mới bắt đầu B (chiếm &gt; 85% tiến độ). VD: Đổ BT $
-ightarrow \mathbf{FS + 3d} 
-ightarrow$ Tháo cốp pha.</li>
-                <li><strong>SS (Start-to-Start):</strong> Bắt đầu song song gối đầu. VD: Lắp ván khuôn $
-ightarrow \mathbf{SS + 2d} 
-ightarrow$ Lắp cốt thép.</li>
-                <li><strong>FF (Finish-to-Finish):</strong> Kết thúc đồng bộ. VD: Căng cáp dầm $
-ightarrow \mathbf{FF + 0d} 
-ightarrow$ Nghiệm thu dự ứng lực.</li>
+                <li><strong>FS (Finish-to-Start):</strong> Xong A mới bắt đầu B (chiếm &gt; 85% tiến độ). VD: Đổ BT ➔ (FS + 3d) ➔ Tháo cốp pha.</li>
+                <li><strong>SS (Start-to-Start):</strong> Bắt đầu song song gối đầu. VD: Lắp ván khuôn ➔ (SS + 2d) ➔ Lắp cốt thép.</li>
+                <li><strong>FF (Finish-to-Finish):</strong> Kết thúc đồng bộ. VD: Căng cáp dầm ➔ (FF + 0d) ➔ Nghiệm thu dự ứng lực.</li>
                 <li><strong class="chip chip-red">Cấm Negative Lag:</strong> Tuyệt đối cấm dùng độ trễ âm (FS - 3d) vì làm méo mó logic vật lý.</li>
               </ul>
             </div>
@@ -673,7 +640,7 @@ ightarrow$ Nghiệm thu dự ứng lực.</li>
             </div>
             <div class="mini-card purple">
               <div class="mini-card-head"><span>B4. Đánh Giá Variance</span><span class="chip chip-purple">Báo Cáo</span></div>
-              <p style="font-size: 7.0pt; color: #334155;">Đối chiếu sai lệch so với Baseline B1; lập kế hoạch bù tiến độ (Catch-up Plan) nếu $TF < 0$.</p>
+              <p style="font-size: 7.0pt; color: #334155;">Đối chiếu sai lệch so với Baseline B1; lập kế hoạch bù tiến độ (Catch-up Plan) nếu TF < 0.</p>
             </div>
           </div>
         </div>
@@ -707,11 +674,11 @@ ightarrow$ Nghiệm thu dự ứng lực.</li>
               </div>
               <ul class="b-list green">
                 <li><strong>PV (Planned Value):</strong> Ngân sách dự kiến hoàn thành tại Data Date.</li>
-                <li><strong>EV (Earned Value):</strong> Giá trị sản lượng thực tế: $\mathbf{EV = \% Actual 	imes Budget}$.</li>
+                <li><strong>EV (Earned Value):</strong> Giá trị sản lượng thực tế: <strong>EV = % Actual × Budget</strong>.</li>
                 <li><strong>AC (Actual Cost):</strong> Chi phí tài chính thực tế đã giải ngân.</li>
-                <li><strong>Chỉ số Tiến độ:</strong> $\mathbf{SPI = EV / PV}$ ($SPI < 1$: Báo động chậm tiến độ).</li>
-                <li><strong>Chỉ số Chi phí:</strong> $\mathbf{CPI = EV / AC}$ ($CPI < 1$: Báo động vượt ngân sách).</li>
-                <li><strong>Dự báo hoàn thành:</strong> $\mathbf{EAC = BAC / CPI}$ (Tổng chi phí dự báo khi về đích).</li>
+                <li><strong>Chỉ số Tiến độ:</strong> <strong>SPI = EV / PV</strong> (SPI < 1: Báo động chậm tiến độ).</li>
+                <li><strong>Chỉ số Chi phí:</strong> <strong>CPI = EV / AC</strong> (CPI < 1: Báo động vượt ngân sách).</li>
+                <li><strong>Dự báo hoàn thành:</strong> <strong>EAC = BAC / CPI</strong> (Tổng chi phí dự báo khi về đích).</li>
               </ul>
             </div>
           </div>
@@ -744,12 +711,9 @@ ightarrow$ Nghiệm thu dự ứng lực.</li>
                 <span class="chip chip-red">Pháp Lý</span>
               </div>
               <ul class="b-list">
-                <li><strong>Excusable Compensable:</strong> Lỗi CĐT (chậm bàn giao đất, chậm duyệt Shop) $
-ightarrow$ Nhà thầu được bù Ngày + Tiền lán trại gián tiếp.</li>
-                <li><strong>Excusable Non-compensable:</strong> Bất khả kháng (thiên tai, dịch bệnh) $
-ightarrow$ Nhà thầu được gia hạn ngày, tự chịu chi phí.</li>
-                <li><strong>Non-excusable:</strong> Lỗi do Nhà thầu (thiếu thợ, vật tư trễ) $
-ightarrow$ Không được gia hạn, bị phạt chậm tiến độ (LD).</li>
+                <li><strong>Excusable Compensable:</strong> Lỗi CĐT (chậm bàn giao đất, chậm duyệt Shop) ➔ Nhà thầu được bù Ngày + Tiền lán trại gián tiếp.</li>
+                <li><strong>Excusable Non-compensable:</strong> Bất khả kháng (thiên tai, dịch bệnh) ➔ Nhà thầu được gia hạn ngày, tự chịu chi phí.</li>
+                <li><strong>Non-excusable:</strong> Lỗi do Nhà thầu (thiếu thợ, vật tư trễ) ➔ Không được gia hạn, bị phạt chậm tiến độ (LD).</li>
               </ul>
             </div>
           </div>
@@ -782,8 +746,8 @@ ightarrow$ Không được gia hạn, bị phạt chậm tiến độ (LD).</li>
               </div>
               <ul class="b-list green" style="font-size: 7.0pt;">
                 <li><strong>6. Cập nhật tiến độ định kỳ:</strong> Nhập Actual Start, % Tiến độ, dời Data Date và chạy F9.</li>
-                <li><strong>7. Rà soát Total Float:</strong> Cảnh báo nguy cấp ngay khi $TF \le 0$ để kích hoạt Crash/Fast-track.</li>
-                <li><strong>8. Đo lường chỉ số EVA:</strong> Giám sát chặt chẽ $SPI = EV/PV$ và $CPI = EV/AC$ từng kỳ thanh toán.</li>
+                <li><strong>7. Rà soát Total Float:</strong> Cảnh báo nguy cấp ngay khi TF ≤ 0 để kích hoạt Crash/Fast-track.</li>
+                <li><strong>8. Đo lường chỉ số EVA:</strong> Giám sát chặt chẽ SPI = EV/PV và CPI = EV/AC từng kỳ thanh toán.</li>
                 <li><strong>9. Phân tích trễ hạn TIA:</strong> Lập Fragnet bảo vệ quyền đòi gia hạn thời gian EOT hợp pháp.</li>
                 <li><strong>10. Tích hợp 4D BIM:</strong> Xuất file .XER liên kết sang Navisworks/Synchro để mô phỏng thi công trực quan.</li>
               </ul>

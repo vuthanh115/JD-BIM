@@ -514,7 +514,7 @@
               <span class="param-pill">Comments:02.Mong</span>
             </td>
             <td>
-              • <strong>BTL móng (B7.5):</strong> Chiều dày h, độ mở rộng a; Diện tích đầm chặt = $V_{BTL} / h$.<br>
+              • <strong>BTL móng (B7.5):</strong> Chiều dày h, độ mở rộng a; Diện tích đầm chặt = V<sub>BTL</sub> / h.<br>
               • <strong>Bê tông móng (B25):</strong> Tính đủ kích thước móng trừ phần giao sàn.<br>
               • <strong>Cốt thép:</strong> Thép lớp trên, dưới, đai; đo neo lap theo Spec.<br>
               • <strong>Ván khuôn:</strong> <span class="param-pill">VK_LotMong</span>, <span class="param-pill">VK_Mong</span> (tách móng có thành / móng vát sửa đất).
@@ -529,7 +529,7 @@
               Trám lỗ ti: <span class="tool-pill">Tool TramLoTi</span>
             </td>
             <td>
-              • <strong>BTL đà kiềng (B7.5):</strong> Bề rộng $b+2a$, bề dày h; <span class="param-pill">DT_DamChat</span>.<br>
+              • <strong>BTL đà kiềng (B7.5):</strong> Bề rộng b + 2a, bề dày h; <span class="param-pill">DT_DamChat</span>.<br>
               • <strong>Bê tông đà (B25):</strong> Trừ phần giao móng và sàn nền.<br>
               • <strong>Cốt thép:</strong> Thép trên tăng cường gối, dưới tăng cường bụng, thép đai, giá, vai bò.<br>
               • <strong>Ván khuôn:</strong> <span class="param-pill">VK_LotDaKieng</span>, <span class="param-pill">VK_DaKieng</span> (trừ giao móng, cột); Trám lỗ ti <span class="param-pill">BSV_LoTi</span>.
@@ -546,7 +546,7 @@
             <td>
               • <strong>Cấu tạo nền:</strong> Tấm PVC, lớp đá base, chống mối, đầm chặt <span class="param-pill">DT_Nen</span>.<br>
               • <strong>Bê tông nền (B25):</strong> Tách nền đàn hồi không liên kết và nền thường.<br>
-              • <strong>Thép:</strong> Cốt sợi ($kg/m^3$), cốt thép thường (chân kê, neo móc), lưới thép hàn.<br>
+              • <strong>Thép:</strong> Cốt sợi (kg/m³), cốt thép thường (chân kê, neo móc), lưới thép hàn.<br>
               • <strong>Ván khuôn &amp; Khe:</strong> <span class="param-pill">VK_Nen</span>; Khe cắt, khe co giãn nhiệt, khe cô lập, khe thi công (đo mét dài).
             </td>
           </tr>
@@ -670,7 +670,7 @@
             </td>
             <td>
               • <strong>Kết cấu:</strong> Bê tông bản thang, dầm thang; Ván khuôn <span class="param-pill">VK_CauThang</span>; Thép 2 lớp + thép bậc.<br>
-              • <strong>Hoàn thiện:</strong> Bậc gạch; Len chân tường; Đá ốp mặt bậc &amp; chiếu nghỉ (<span class="param-pill">DT_MatTren</span>, <span class="param-pill">DT_MatTruoc</span>, <span class="param-pill">DT_MatHong</span>); Sơn đáy thang = $VK + DT_{Hông}$; Lan can tay vịn (m dài); Mũi chống trượt = $Số\_bậc \times Rộng\_bậc$.
+              • <strong>Hoàn thiện:</strong> Bậc gạch; Len chân tường; Đá ốp mặt bậc &amp; chiếu nghỉ (<span class="param-pill">DT_MatTren</span>, <span class="param-pill">DT_MatTruoc</span>, <span class="param-pill">DT_MatHong</span>); Sơn đáy thang = VK + DT_Hông; Lan can tay vịn (m dài); Mũi chống trượt = Số bậc × Rộng bậc.
             </td>
           </tr>
           <tr>
@@ -744,7 +744,7 @@
       <div class="sched-grid">
         <div class="sched-card">
           <strong>1. 00.1.2.KL BÊ TÔNG (TỔNG)</strong>
-          Filter theo Comments từng cấu kiện; Trường: Family &amp; Type, Level, Volume ($m^3$), Count.
+          Filter theo Comments từng cấu kiện; Trường: Family &amp; Type, Level, Volume (m³), Count.
         </div>
         <div class="sched-card">
           <strong>2. 00.1.2.KL BÊ TÔNG (PHÂN KHU)</strong>
@@ -756,7 +756,7 @@
         </div>
         <div class="sched-card">
           <strong>4. 00.2.2.KL VÁN KHUÔN (TỔNG)</strong>
-          Filter <code>BSV_PhanLoai = VK_*</code>; Tổng diện tích ván thành dầm, ván cột, ván sàn ($m^2$).
+          Filter <code>BSV_PhanLoai = VK_*</code>; Tổng diện tích ván thành dầm, ván cột, ván sàn (m²).
         </div>
         <div class="sched-card">
           <strong>5. 00.2.2.KL VÁN KHUÔN (CHI TIẾT)</strong>
