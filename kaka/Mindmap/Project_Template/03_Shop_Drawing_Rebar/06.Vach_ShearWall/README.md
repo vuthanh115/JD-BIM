@@ -6,7 +6,7 @@
 ## 📋 Các nội dung / Quy chuẩn kỹ thuật chi tiết
 
 ### Quy cách vẽ 
-> (Chạy tool Bimspeed vẽ vách)
+> (Chạy tool kaka vẽ vách)
 
 ### Quy cách đặt tên thép
 

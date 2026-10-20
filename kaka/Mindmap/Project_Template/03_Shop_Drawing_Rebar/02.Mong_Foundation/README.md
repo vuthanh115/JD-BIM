@@ -6,7 +6,7 @@
 ## 📋 Các nội dung / Quy chuẩn kỹ thuật chi tiết
 
 ### Quy cách vẽ 
-> (Chạy tool Bimspeed vẽ móng)
+> (Chạy tool kaka vẽ móng)
 
 ### Quy cách đặt tên thép
 

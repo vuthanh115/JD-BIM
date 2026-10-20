@@ -256,11 +256,11 @@ def build_ket_cau(conn, base_dir, node_drawings, image_resources):
         f.write("# 00. Quy Chuẩn Bóc Tách Khối Lượng BoQ Kết Cấu\n\n")
         f.write("Quy ước tính khối lượng với QS và bảng tra tiêu chuẩn cho 17 cấu kiện kết cấu.\n\n")
         f.write("### Thứ tự ưu tiên tính toán & Join cấu kiện:\n")
-        f.write("`Sàn > Móng > Cột > Dầm > Vách > Cầu Thang` *(Sử dụng ATool để chạy Join tự động)*\n\n")
+        f.write("`Sàn > Móng > Cột > Dầm > Vách > Cầu Thang` *(Sử dụng kaka để chạy Join tự động)*\n\n")
         f.write("### Quy trình 7 bước tính khối lượng:\n")
         f.write("1. Gán biến bê tông theo BoQ (chia nhỏ để dễ đối chiếu).\n")
-        f.write("2. Chạy Join bê tông theo quy ước (Load thứ tự trong ATool).\n")
-        f.write("3. Chạy ván khuôn (Bim Speed), gán biến ván khuôn (Tool BSV_PhanLoaiVanKhuon).\n")
+        f.write("2. Chạy Join bê tông theo quy ước (Load thứ tự trong kaka).\n")
+        f.write("3. Chạy ván khuôn (kaka), gán biến ván khuôn (Tool BSV_PhanLoaiVanKhuon).\n")
         f.write("4. Kiểm tra trùng lặp (Tool BSV_KiemTraTrungNhau).\n")
         f.write("5. Kiểm tra bảng thống kê với Model 3D và xuất khối lượng ra Excel.\n")
         f.write("6. Link khối lượng vào BoQ (tuyệt đối không tính toán thêm trong bảng).\n")
@@ -421,7 +421,7 @@ Quy chuẩn bóc tách khối lượng và bảng tra cho 17 cấu kiện:
 Quy chuẩn triển khai bản vẽ Shop Drawing chi tiết cho từng cấu kiện:
 - **`01_Join_Cau_Kien_Theo_Quy_Tac/`**: Quy chuẩn liên kết giao cắt cốt thép giữa các cấu kiện.
 - **13 Thư mục cấu kiện Shop Rebar**, mỗi cấu kiện bao gồm đầy đủ 5 đề mục tiêu chuẩn:
-  - `Quy_cach_ve/`: Sử dụng BimSpeed / Structure Rebar, quy chuẩn neo, bẻ móc, đoạn nối chồng.
+  - `Quy_cach_ve/`: Sử dụng kaka Rebar / Structure Rebar, quy chuẩn neo, bẻ móc, đoạn nối chồng.
   - `Quy_cach_dat_ten_thep/`: Cấu trúc Partition, BSV_PhanLoai, BSV_Comments.
   - `Xuat_ban_ve/`: View template, mặt bằng, mặt cắt, bố trí Viewport trên Sheet.
   - `Bang_thong_ke/`: Template Schedule thép, bộ lọc Filter, Sorting theo đường kính/hình dạng.

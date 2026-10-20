@@ -1,7 +1,7 @@
-# Quy cách vẽ  - (Chạy tool Bimspeed vẽ dầm)
+# Quy cách vẽ  - (Chạy tool kaka vẽ dầm)
 
 - **Phân loại:** `TOPIC`
-- **Đường dẫn phân cấp:** `SHOP DRAWING REBAR / 03.Đà Kiềng / Quy cách vẽ  (Chạy tool Bimspeed vẽ dầm)`
+- **Đường dẫn phân cấp:** `SHOP DRAWING REBAR / 03.Đà Kiềng / Quy cách vẽ  (Chạy tool kaka vẽ dầm)`
 
 ## 📋 Các nội dung / Quy chuẩn kỹ thuật chi tiết
 

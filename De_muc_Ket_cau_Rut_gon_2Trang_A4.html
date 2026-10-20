@@ -401,7 +401,7 @@
       <!-- Meta Ribbon -->
       <div class="meta-bar">
         <div class="meta-bar-item"><strong>Thứ tự ưu tiên:</strong> Sàn &gt; Móng &gt; Cột &gt; Dầm &gt; Vách &gt; Thang</div>
-        <div class="meta-bar-item"><strong>Revit Add-in:</strong> kaka.Structure + BimSpeed</div>
+        <div class="meta-bar-item"><strong>Revit Add-in:</strong> kaka.Structure + kaka.Rebar</div>
         <div class="meta-bar-item"><strong>Biến cốt lõi:</strong> Comments, BIM_PhanLoai, BIM_LoTi</div>
         <div class="meta-bar-item"><strong>Trang:</strong> 1 / 2 (Phần ngầm &amp; Đứng)</div>
       </div>
@@ -409,7 +409,7 @@
       <!-- Khung 1: Quy Ước Cắt Giao & Quy Trình 7 Bước -->
       <div class="grid-2col">
         <div class="rule-card">
-          <h4>⚖️ 1. Quy Ước Cắt Giao Hình Học (Atool Join)</h4>
+          <h4>⚖️ 1. Quy Ước Cắt Giao Hình Học (kaka Join)</h4>
           <ul>
             <li><strong>Sàn / Nền:</strong> Tính full 100% diện tích (chú ý khe cô lập tách cột, đà).</li>
             <li><strong>Móng:</strong> Tính đủ hình học khối móng, trừ phần giao sàn/nền.</li>
@@ -423,8 +423,8 @@
           <h4>📋 2. Quy Trình 7 Bước Kiểm Soát Khối Lượng</h4>
           <ul>
             <li><strong>B1. Gán biến BOQ:</strong> Gán <code>Comments</code> theo phân khu để dễ đối chiếu.</li>
-            <li><strong>B2. Join hình học:</strong> Chạy Atool Join tự động theo thứ tự ưu tiên.</li>
-            <li><strong>B3. Chạy ván khuôn:</strong> Chạy BimSpeed, gán <code>BIM_PhanLoaiVanKhuon</code>.</li>
+            <li><strong>B2. Join hình học:</strong> Chạy kaka Join tự động theo thứ tự ưu tiên.</li>
+            <li><strong>B3. Chạy ván khuôn:</strong> Chạy kaka, gán <code>BIM_PhanLoaiVanKhuon</code>.</li>
             <li><strong>B4. Check trùng lặp:</strong> Quét kiểm tra bằng <code>BIM_KiemTraTrungNhau</code>.</li>
             <li><strong>B5. Đối soát 3D:</strong> So khớp bảng Schedule Revit với View 3D màu.</li>
             <li><strong>B6. Link BOQ:</strong> Đồng bộ số liệu vào file Excel BOQ dự toán.</li>
@@ -458,7 +458,7 @@
             <td><strong>Khối lượng Ván khuôn</strong></td>
             <td><span class="param-pill">Comments</span> + <span class="param-pill">BIM_PhanLoai</span></td>
             <td>Tự động nhận Comments; <code>[BIM_PhanLoai:VK_Mong]</code></td>
-            <td>Chạy tool BimSpeed pick đáy + mặt bên cấu kiện. <span class="tool-pill">BimSpeed</span></td>
+            <td>Chạy tool kaka pick đáy + mặt bên cấu kiện. <span class="tool-pill">kaka</span></td>
           </tr>
           <tr>
             <td><strong>Khối lượng Diện tích</strong></td>

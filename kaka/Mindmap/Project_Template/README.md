@@ -38,7 +38,7 @@ Quy chuẩn bóc tách khối lượng và bảng tra cho 17 cấu kiện:
 Quy chuẩn triển khai bản vẽ Shop Drawing chi tiết cho từng cấu kiện:
 - **`01_Join_Cau_Kien_Theo_Quy_Tac/`**: Quy chuẩn liên kết giao cắt cốt thép giữa các cấu kiện.
 - **13 Thư mục cấu kiện Shop Rebar**, mỗi cấu kiện bao gồm đầy đủ 5 đề mục tiêu chuẩn:
-  - `Quy_cach_ve/`: Sử dụng BimSpeed / Structure Rebar, quy chuẩn neo, bẻ móc, đoạn nối chồng.
+  - `Quy_cach_ve/`: Sử dụng kaka Rebar / Structure Rebar, quy chuẩn neo, bẻ móc, đoạn nối chồng.
   - `Quy_cach_dat_ten_thep/`: Cấu trúc Partition, BSV_PhanLoai, BSV_Comments.
   - `Xuat_ban_ve/`: View template, mặt bằng, mặt cắt, bố trí Viewport trên Sheet.
   - `Bang_thong_ke/`: Template Schedule thép, bộ lọc Filter, Sorting theo đường kính/hình dạng.

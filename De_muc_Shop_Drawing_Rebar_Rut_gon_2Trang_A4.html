@@ -434,7 +434,7 @@
       <!-- Meta Ribbon -->
       <div class="meta-bar">
         <div class="meta-bar-item"><strong>Nguyên tắc Join:</strong> Sàn &gt; Móng &gt; Cột &gt; Dầm &gt; Vách &gt; Thang</div>
-        <div class="meta-bar-item"><strong>Revit Add-in:</strong> BimSpeed Rebar + kaka.Structure</div>
+        <div class="meta-bar-item"><strong>Revit Add-in:</strong> kaka Rebar + kaka.Structure</div>
         <div class="meta-bar-item"><strong>Tham số cốt lõi:</strong> Partition, BIM_PhanLoai, Bending Detail</div>
         <div class="meta-bar-item"><strong>Trang:</strong> 1 / 2 (Phần Ngầm, Cột &amp; Đà Kiềng)</div>
       </div>
@@ -456,7 +456,7 @@
         <div class="rule-card">
           <h4>📋 2. Quy Chuẩn 5 Bước Đóng Gói Hồ Sơ Cốt Thép</h4>
           <ul>
-            <li><strong>1. Quy cách vẽ:</strong> Dùng BimSpeed Rebar nhập đúng lớp bê tông bảo vệ (<code>btbv</code>), rải thép chủ, thép đai, thép giá, thép gia cường.</li>
+            <li><strong>1. Quy cách vẽ:</strong> Dùng kaka Rebar nhập đúng lớp bê tông bảo vệ (<code>btbv</code>), rải thép chủ, thép đai, thép giá, thép gia cường.</li>
             <li><strong>2. Đặt tên thép:</strong> Gán <span class="param-pill">Partition</span> phân khu/tên cấu kiện; gán <span class="param-pill">BIM_PhanLoai</span> theo nhóm BOQ.</li>
             <li><strong>3. Xuất bản vẽ:</strong> Gán View Template chuẩn, tạo Mặt bằng (Section từ trên xuống), Mặt cắt dọc/ngang, Dim, Cao độ, Breakline.</li>
             <li><strong>4. Tag 2D &amp; BBS:</strong> Tag thép 2D <code>Rebar Bending Detail</code> tắt leader; tạo bảng thống kê hình dạng, đường kính, chiều dài, khối lượng.</li>
@@ -518,7 +518,7 @@
             <th class="code-cell">Mã Cấu Kiện</th>
             <th class="name-cell">Cấu Kiện</th>
             <th style="width: 25%;">Quy Cách Đặt Tên &amp; Partition</th>
-            <th style="width: 45%;">Quy Cách Dựng Cốt Thép (BimSpeed), Khai Triển Mặt Cắt &amp; Bảng BBS</th>
+            <th style="width: 45%;">Quy Cách Dựng Cốt Thép (kaka), Khai Triển Mặt Cắt &amp; Bảng BBS</th>
           </tr>
         </thead>
         <tbody>
@@ -543,7 +543,7 @@
               <span class="template-pill">KP_Foundation</span>
             </td>
             <td>
-              • <strong>BimSpeed Móng:</strong> Nhập <code>btbv</code>, vẽ lớp thép dưới, lớp trên, cốt thép dọc/ngang hông móng vát.<br>
+              • <strong>kaka Móng:</strong> Nhập <code>btbv</code>, vẽ lớp thép dưới, lớp trên, cốt thép dọc/ngang hông móng vát.<br>
               • <strong>Mặt bằng &amp; Mặt cắt:</strong> Section <code>BIM_02_Sec_Foundation</code> (nhìn từ trên xuống, trái qua phải); gán Tag 2D Bending Detail.<br>
               • <strong>Bảng BBS:</strong> Bảng <code>THỐNG KÊ THÉP MÓNG F1</code> (Partitions, Bending detail, Ø, SL, Số cấu kiện, Chiều dài, Khối lượng).
             </td>
@@ -557,7 +557,7 @@
               <span class="template-pill">KP_GroundBeam</span>
             </td>
             <td>
-              • <strong>BimSpeed Dầm:</strong> Thép lớp dưới + tăng cường bụng; Thép lớp trên + tăng cường gối; Thép giá + Thép đai chống xoắn.<br>
+              • <strong>kaka Dầm:</strong> Thép lớp dưới + tăng cường bụng; Thép lớp trên + tăng cường gối; Thép giá + Thép đai chống xoắn.<br>
               • <strong>Đường dóng nối cắt thép:</strong> Nét Hidden Line theo Spec (L/4 bụng trên, L/6 gối dưới).<br>
               • <strong>Mặt cắt &amp; BBS:</strong> MC dọc <code>BIM_03.2</code>, MC ngang <code>BIM_03.3</code>; Thống kê thép Dầm B2; Key Plan <code>[SHOP THÉP DẦM]</code>.
             </td>
@@ -571,7 +571,7 @@
               <span class="template-pill">KP_Slab</span>
             </td>
             <td>
-              • <strong>BimSpeed Sàn:</strong> Lưới thép hàn hoặc cốt thép thường 2 lớp; bố trí thép tăng cường góc lõm, gia cường miệng hố mương/pit.<br>
+              • <strong>kaka Sàn:</strong> Lưới thép hàn hoặc cốt thép thường 2 lớp; bố trí thép tăng cường góc lõm, gia cường miệng hố mương/pit.<br>
               • <strong>Chi tiết khe:</strong> Thép truyền lực (Dowel bar) trơn qua khe co giãn, ống bọc nhựa PVC nửa thanh.<br>
               • <strong>Mặt bằng &amp; BBS:</strong> Thống kê thép Sàn Vp2; View Template mặt bằng &amp; mặt cắt; Key Plan <code>[SHOP THÉP SÀN]</code>.
             </td>
@@ -585,7 +585,7 @@
               <span class="template-pill">KP_Column</span>
             </td>
             <td>
-              • <strong>BimSpeed Cột:</strong> Cốt thép chủ phương X, Y; Tiết diện đai chính + đai móc phụ liên kết C; Đoạn nối sole ≥ 50%.<br>
+              • <strong>kaka Cột:</strong> Cốt thép chủ phương X, Y; Tiết diện đai chính + đai móc phụ liên kết C; Đoạn nối sole ≥ 50%.<br>
               • <strong>Thép chờ móng &amp; đỉnh:</strong> Chân ngàm móng bẻ giò gà; đỉnh cột neo dầm sàn; Cài đặt vùng rải đai dày h<sub>cl</sub> / 6 đầu cột.<br>
               • <strong>Mặt cắt &amp; BBS:</strong> MC dọc <code>BIM_05.2_Detail_Column</code>, MC ngang; Thống kê thép Cột C5; Key Plan <code>[SHOP THÉP CỘT]</code>.
             </td>
@@ -650,7 +650,7 @@
               <span class="template-pill">KP_ShearWall</span>
             </td>
             <td>
-              • <strong>BimSpeed Vách:</strong> Thép phương đứng 2 lớp, thép đai khê (S-hook) liên kết chống phình; Thép gia cường bo góc vách chữ L, chữ T.<br>
+              • <strong>kaka Vách:</strong> Thép phương đứng 2 lớp, thép đai khê (S-hook) liên kết chống phình; Thép gia cường bo góc vách chữ L, chữ T.<br>
               • <strong>Mặt cắt &amp; BBS:</strong> Mặt cắt đứng toàn chiều cao tầng, mặt cắt ngang phân bổ đai; Bảng <code>THỐNG KÊ THÉP VÁCH</code>; Key Plan <code>[SHOP THÉP VÁCH]</code>.
             </td>
           </tr>
@@ -663,7 +663,7 @@
               <span class="amber-pill">Kế thừa 03. Đà Kiềng</span>
             </td>
             <td>
-              • Áp dụng 100% quy cách BimSpeed như Đà Kiềng: Thép lớp trên gối, lớp dưới bụng, đai dầm mau a100 đầu dầm, đai thưa a200 giữa nhịp.<br>
+              • Áp dụng 100% quy cách kaka như Đà Kiềng: Thép lớp trên gối, lớp dưới bụng, đai dầm mau a100 đầu dầm, đai thưa a200 giữa nhịp.<br>
               • Thép gia cường dầm phụ gác lên dầm chính (thép đai treo / thép vai bò tăng cường chống cắt). Đường dóng cắt thép L/4 và L/6.
             </td>
           </tr>

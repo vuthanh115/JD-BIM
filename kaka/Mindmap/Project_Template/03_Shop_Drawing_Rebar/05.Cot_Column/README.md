@@ -6,7 +6,7 @@
 ## 📋 Các nội dung / Quy chuẩn kỹ thuật chi tiết
 
 ### Quy cách vẽ 
-> (Chạy tool Bimspeed vẽ Cột)
+> (Chạy tool kaka vẽ Cột)
 
 ### Quy cách đặt tên thép
 

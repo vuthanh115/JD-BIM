@@ -1,7 +1,7 @@
-# Quy cách vẽ  - (Chạy tool Bimspeed vẽ sàn)
+# Quy cách vẽ  - (Chạy tool kaka vẽ sàn)
 
 - **Phân loại:** `TOPIC`
-- **Đường dẫn phân cấp:** `SHOP DRAWING REBAR / 04.Nền / Quy cách vẽ  (Chạy tool Bimspeed vẽ sàn)`
+- **Đường dẫn phân cấp:** `SHOP DRAWING REBAR / 04.Nền / Quy cách vẽ  (Chạy tool kaka vẽ sàn)`
 
 ## 📋 Các nội dung / Quy chuẩn kỹ thuật chi tiết
 

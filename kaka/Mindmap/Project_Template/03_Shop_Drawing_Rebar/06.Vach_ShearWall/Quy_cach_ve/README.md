@@ -1,7 +1,7 @@
-# Quy cách vẽ  - (Chạy tool Bimspeed vẽ vách)
+# Quy cách vẽ  - (Chạy tool kaka vẽ vách)
 
 - **Phân loại:** `TOPIC`
-- **Đường dẫn phân cấp:** `SHOP DRAWING REBAR / 06.Vách / Quy cách vẽ  (Chạy tool Bimspeed vẽ vách)`
+- **Đường dẫn phân cấp:** `SHOP DRAWING REBAR / 06.Vách / Quy cách vẽ  (Chạy tool kaka vẽ vách)`
 
 ## 📋 Các nội dung / Quy chuẩn kỹ thuật chi tiết
 

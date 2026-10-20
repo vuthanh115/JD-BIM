@@ -3,12 +3,12 @@
 Quy ước tính khối lượng với QS và bảng tra tiêu chuẩn cho 17 cấu kiện kết cấu.
 
 ### Thứ tự ưu tiên tính toán & Join cấu kiện:
-`Sàn > Móng > Cột > Dầm > Vách > Cầu Thang` *(Sử dụng ATool để chạy Join tự động)*
+`Sàn > Móng > Cột > Dầm > Vách > Cầu Thang` *(Sử dụng kaka để chạy Join tự động)*
 
 ### Quy trình 7 bước tính khối lượng:
 1. Gán biến bê tông theo BoQ (chia nhỏ để dễ đối chiếu).
-2. Chạy Join bê tông theo quy ước (Load thứ tự trong ATool).
-3. Chạy ván khuôn (Bim Speed), gán biến ván khuôn (Tool BSV_PhanLoaiVanKhuon).
+2. Chạy Join bê tông theo quy ước (Load thứ tự trong kaka).
+3. Chạy ván khuôn (kaka), gán biến ván khuôn (Tool BSV_PhanLoaiVanKhuon).
 4. Kiểm tra trùng lặp (Tool BSV_KiemTraTrungNhau).
 5. Kiểm tra bảng thống kê với Model 3D và xuất khối lượng ra Excel.
 6. Link khối lượng vào BoQ (tuyệt đối không tính toán thêm trong bảng).

@@ -5,4 +5,4 @@
 
 ## 📋 Các nội dung / Quy chuẩn kỹ thuật chi tiết
 
-### K.1 - K.1. Dựng các lớp chống thấm, hoàn thiện tường bằng Atool
+### K.1 - K.1. Dựng các lớp chống thấm, hoàn thiện tường bằng kaka

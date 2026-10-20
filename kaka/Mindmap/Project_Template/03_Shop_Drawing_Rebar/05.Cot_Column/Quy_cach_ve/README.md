@@ -1,7 +1,7 @@
-# Quy cách vẽ  - (Chạy tool Bimspeed vẽ Cột)
+# Quy cách vẽ  - (Chạy tool kaka vẽ Cột)
 
 - **Phân loại:** `TOPIC`
-- **Đường dẫn phân cấp:** `SHOP DRAWING REBAR / 05.Cột / Quy cách vẽ  (Chạy tool Bimspeed vẽ Cột)`
+- **Đường dẫn phân cấp:** `SHOP DRAWING REBAR / 05.Cột / Quy cách vẽ  (Chạy tool kaka vẽ Cột)`
 
 ## 📋 Các nội dung / Quy chuẩn kỹ thuật chi tiết
 

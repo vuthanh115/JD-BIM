@@ -1,7 +1,7 @@
-# Quy cách vẽ  - (Chạy tool Bimspeed vẽ móng)
+# Quy cách vẽ  - (Chạy tool kaka vẽ móng)
 
 - **Phân loại:** `TOPIC`
-- **Đường dẫn phân cấp:** `SHOP DRAWING REBAR / 02.Móng / Quy cách vẽ  (Chạy tool Bimspeed vẽ móng)`
+- **Đường dẫn phân cấp:** `SHOP DRAWING REBAR / 02.Móng / Quy cách vẽ  (Chạy tool kaka vẽ móng)`
 
 ## 📋 Các nội dung / Quy chuẩn kỹ thuật chi tiết
 

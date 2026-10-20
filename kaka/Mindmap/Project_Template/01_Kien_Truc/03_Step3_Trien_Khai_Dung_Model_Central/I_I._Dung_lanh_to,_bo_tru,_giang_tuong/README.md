@@ -5,7 +5,7 @@
 
 ## 📋 Các nội dung / Quy chuẩn kỹ thuật chi tiết
 
-### I.1 - I.1. Dựng bằng Atool cho lanh tô
+### I.1 - I.1. Dựng bằng kaka cho lanh tô
 
 ### I.2 - I.2. Dựng bổ trụ bằng Tool: BSV_Arch_BoTriBoTruTuDong_V2
 
