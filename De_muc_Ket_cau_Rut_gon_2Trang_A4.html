@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng Đề Mục Quy Cách Tính Khối Lượng Kết Cấu (Rút Gọn 2 Trang A4) - BSV Standard</title>
+  <style>
+    /* ==========================================================================
+       A4 EXECUTIVE PRINT STYLESHEET - 2 PAGES EXACTLY
+       ========================================================================== */
+    @page {
+      size: A4 portrait;
+      margin: 8mm 10mm 8mm 10mm;
+    }
+
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --navy: #0f172a;
+      --slate: #334155;
+      --light-bg: #f8fafc;
+      --border: #cbd5e1;
+      --border-dark: #94a3b8;
+      --param-bg: #eff6ff;
+      --param-text: #1d4ed8;
+      --tool-bg: #ecfdf5;
+      --tool-text: #047857;
+      --amber-bg: #fffbeb;
+      --amber-text: #b45309;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #0f172a;
+      background: #e2e8f0;
+      line-height: 1.35;
+      font-size: 8pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Screen Toolbar */
+    .screen-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: #0f172a;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .toolbar-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn {
+      padding: 6px 14px;
+      border-radius: 5px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .btn-primary { background: #0284c7; color: #fff; }
+    .btn-primary:hover { background: #0369a1; }
+    .btn-secondary { background: #334155; color: #fff; }
+
+    /* A4 Sheet Container */
+    .a4-page {
+      width: 210mm;
+      min-height: 297mm;
+      height: 297mm;
+      margin: 0 auto 16px auto;
+      background: #ffffff;
+      padding: 9mm 11mm 9mm 11mm;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Header Compact */
+    .doc-header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .org-tag {
+      font-size: 7.2pt;
+      font-weight: 700;
+      color: #64748b;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .doc-badge {
+      font-size: 7pt;
+      font-family: Consolas, monospace;
+      color: var(--primary);
+      font-weight: 700;
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+
+    .header-title-box {
+      text-align: center;
+    }
+
+    .header-title-box h1 {
+      font-size: 11.5pt;
+      font-weight: 800;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .header-title-box .subtitle {
+      font-size: 7.6pt;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Meta Ribbon Bar */
+    .meta-bar {
+      display: grid;
+      grid-template-columns: 2.2fr 1.8fr 1.8fr 1.4fr;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 4px 8px;
+      gap: 6px;
+      margin-bottom: 8px;
+      font-size: 7.2pt;
+    }
+
+    .meta-bar-item strong {
+      color: var(--navy);
+    }
+
+    /* Core Tables & Cards */
+    .section-title {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #ffffff;
+      background: var(--navy);
+      padding: 3px 8px;
+      border-radius: 3px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .section-title .badge {
+      background: var(--primary);
+      color: #fff;
+      font-size: 6.8pt;
+      padding: 1px 5px;
+      border-radius: 2px;
+      font-weight: 600;
+    }
+
+    /* Clean Compact Tables */
+    .compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7.2pt;
+      margin-bottom: 7px;
+    }
+
+    .compact-table th {
+      background: #f1f5f9;
+      color: var(--navy);
+      font-weight: 700;
+      text-align: left;
+      padding: 3px 5px;
+      border: 1px solid var(--border);
+      font-size: 7pt;
+      text-transform: uppercase;
+    }
+
+    .compact-table td {
+      padding: 2.8px 5px;
+      border: 1px solid #e2e8f0;
+      vertical-align: top;
+      color: #1e293b;
+    }
+
+    .compact-table tr:nth-child(even) {
+      background: #fafbfc;
+    }
+
+    .code-cell {
+      font-family: Consolas, monospace;
+      font-weight: 700;
+      color: var(--primary-dark);
+      white-space: nowrap;
+      width: 12%;
+    }
+
+    .name-cell {
+      font-weight: 600;
+      color: var(--navy);
+      width: 16%;
+    }
+
+    .param-pill {
+      display: inline-block;
+      font-family: Consolas, monospace;
+      font-size: 6.8pt;
+      font-weight: 600;
+      background: var(--param-bg);
+      color: var(--param-text);
+      border: 1px solid #bfdbfe;
+      padding: 0 4px;
+      border-radius: 2px;
+      margin-right: 3px;
+    }
+
+    .tool-pill {
+      display: inline-block;
+      font-size: 6.6pt;
+      font-weight: 600;
+      background: var(--tool-bg);
+      color: var(--tool-text);
+      border: 1px solid #a7f3d0;
+      padding: 0 4px;
+      border-radius: 2px;
+    }
+
+    .warn-pill {
+      display: inline-block;
+      font-size: 6.6pt;
+      font-weight: 600;
+      background: var(--amber-bg);
+      color: var(--amber-text);
+      border: 1px solid #fde68a;
+      padding: 0 4px;
+      border-radius: 2px;
+    }
+
+    /* 2 Columns Grid for Rules */
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+      margin-bottom: 7px;
+    }
+
+    .rule-card {
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: 3px;
+      padding: 5px 7px;
+      background: #ffffff;
+      font-size: 7.2pt;
+    }
+
+    .rule-card h4 {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .rule-card ul {
+      padding-left: 14px;
+      margin: 0;
+    }
+
+    .rule-card li {
+      margin-bottom: 1.5px;
+      color: #334155;
+    }
+
+    /* Schedules Matrix */
+    .sched-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+      margin-top: 4px;
+      margin-bottom: 6px;
+    }
+
+    .sched-card {
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      background: #f8fafc;
+      padding: 4px 6px;
+      font-size: 6.8pt;
+    }
+
+    .sched-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 7pt;
+      margin-bottom: 2px;
+    }
+
+    /* Page Footer */
+    .page-footer {
+      border-top: 1px solid var(--border);
+      padding-top: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 6.8pt;
+      color: #64748b;
+    }
+
+    /* Print Tweaks */
+    @media print {
+      body { background: #ffffff !important; }
+      .screen-toolbar { display: none !important; }
+      .a4-page {
+        margin: 0 !important;
+        padding: 8mm 10mm 8mm 10mm !important;
+        box-shadow: none !important;
+        page-break-after: always;
+        height: 297mm !important;
+      }
+      .a4-page:last-child {
+        page-break-after: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="screen-toolbar">
+    <div class="toolbar-title">
+      <span>📐 BSV KẾT CẤU — ĐỀ MỤC QUY CÁCH TÍNH TOÁN RÚT GỌN (CHÍNH XÁC 2 TRANG A4)</span>
+    </div>
+    <div>
+      <button onclick="window.print()" class="btn btn-primary">
+        🖨️ In Ngay (2 Trang A4)
+      </button>
+      <a href="De_muc_Quy_cach_tinh_Ket_cau_A4.html" class="btn btn-secondary">
+        📖 Xem Bản Đầy Đủ Chi Tiết
+      </a>
+      <a href="index.html" class="btn btn-secondary">
+        🏠 Master Portal
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- TRANG 1: QUY CHUẨN NỀN TẢNG & CẤU KIỆN MÓNG - ĐÀ - NỀN - CỘT - VÁCH -->
+  <!-- ========================================================================= -->
+  <div class="a4-page">
+    <div>
+      <!-- Header -->
+      <header class="doc-header">
+        <div class="header-top">
+          <span class="org-tag">BSV BIM &amp; QUANTITY SURVEYING • STRUCTURAL DIVISION</span>
+          <span class="doc-badge">STANDARD: BSV-STR-QTO-SUMMARY • A4 COMPACT</span>
+        </div>
+        <div class="header-title-box">
+          <h1>QUY CÁCH TÍNH TOÁN &amp; BÓC TÁCH KHỐI LƯỢNG KẾT CẤU (BẢN TÓM TẮT)</h1>
+          <div class="subtitle">QUY ƯỚC JOIN CẮU KIỆN, BỘ PROJECT PARAMETERS VÀ BẢNG QUN CHUẨN 14 CẤU KIỆN</div>
+        </div>
+      </header>
+
+      <!-- Meta Ribbon -->
+      <div class="meta-bar">
+        <div class="meta-bar-item"><strong>Thứ tự ưu tiên:</strong> Sàn &gt; Móng &gt; Cột &gt; Dầm &gt; Vách &gt; Thang</div>
+        <div class="meta-bar-item"><strong>Revit Add-in:</strong> kaka.Structure + BimSpeed</div>
+        <div class="meta-bar-item"><strong>Biến cốt lõi:</strong> Comments, BSV_PhanLoai, BSV_LoTi</div>
+        <div class="meta-bar-item"><strong>Trang:</strong> 1 / 2 (Phần ngầm &amp; Đứng)</div>
+      </div>
+
+      <!-- Khung 1: Quy Ước Cắt Giao & Quy Trình 7 Bước -->
+      <div class="grid-2col">
+        <div class="rule-card">
+          <h4>⚖️ 1. Quy Ước Cắt Giao Hình Học (Atool Join)</h4>
+          <ul>
+            <li><strong>Sàn / Nền:</strong> Tính full 100% diện tích (chú ý khe cô lập tách cột, đà).</li>
+            <li><strong>Móng:</strong> Tính đủ hình học khối móng, trừ phần giao sàn/nền.</li>
+            <li><strong>Cột:</strong> Tính từ mặt móng đến đáy sàn tầng trên (trừ giao sàn).</li>
+            <li><strong>Dầm:</strong> Tính trừ phần giao sàn, móng và cột khung.</li>
+            <li><strong>Vách:</strong> Tính trừ phần giao sàn, móng, cột và dầm.</li>
+            <li><strong>Cầu thang:</strong> Trừ toàn bộ phần giao với các cấu kiện trên.</li>
+          </ul>
+        </div>
+        <div class="rule-card">
+          <h4>📋 2. Quy Trình 7 Bước Kiểm Soát Khối Lượng</h4>
+          <ul>
+            <li><strong>B1. Gán biến BOQ:</strong> Gán <code>Comments</code> theo phân khu để dễ đối chiếu.</li>
+            <li><strong>B2. Join hình học:</strong> Chạy Atool Join tự động theo thứ tự ưu tiên.</li>
+            <li><strong>B3. Chạy ván khuôn:</strong> Chạy BimSpeed, gán <code>BSV_PhanLoaiVanKhuon</code>.</li>
+            <li><strong>B4. Check trùng lặp:</strong> Quét kiểm tra bằng <code>BSV_KiemTraTrungNhau</code>.</li>
+            <li><strong>B5. Đối soát 3D:</strong> So khớp bảng Schedule Revit với View 3D màu.</li>
+            <li><strong>B6. Link BOQ:</strong> Đồng bộ số liệu vào file Excel BOQ dự toán.</li>
+            <li><strong>B7. Kiểm toán chéo:</strong> Sum tổng BTL, ván lót, bê tông, ván khuôn.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Khung 2: Bộ Project Parameters Chuẩn -->
+      <div class="section-title">
+        <span>⚙️ BỘ PROJECT PARAMETERS QUY CHUẨN GÁN CHO MÔ HÌNH REVIT</span>
+        <span class="badge">SHARED PARAMETERS</span>
+      </div>
+      <table class="compact-table" style="margin-bottom: 9px;">
+        <thead>
+          <tr>
+            <th style="width: 18%;">Hạng Mục Bóc Tách</th>
+            <th style="width: 25%;">Tham Số Revit (Parameter)</th>
+            <th style="width: 27%;">Quy Cách Đặt Giá Trị Mẫu</th>
+            <th style="width: 30%;">Công Cụ &amp; Lưu Ý Kiểm Soát</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Khối lượng Bê tông</strong></td>
+            <td><span class="param-pill">Comments</span></td>
+            <td><code>[Comments:02.Mong-VP]</code>, <code>[Comments:05.1.CoCot-Xuong]</code></td>
+            <td>Gán biến thật kỹ trước khi chạy ván khuôn. <span class="warn-pill">Bắt buộc</span></td>
+          </tr>
+          <tr>
+            <td><strong>Khối lượng Ván khuôn</strong></td>
+            <td><span class="param-pill">Comments</span> + <span class="param-pill">BSV_PhanLoai</span></td>
+            <td>Tự động nhận Comments; <code>[BSV_PhanLoai:VK_Mong]</code></td>
+            <td>Chạy tool BimSpeed pick đáy + mặt bên cấu kiện. <span class="tool-pill">BimSpeed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Khối lượng Diện tích</strong></td>
+            <td><span class="param-pill">Comments</span> + <span class="param-pill">BSV_PhanLoai</span></td>
+            <td>Tự động nhận Comments; <code>[BSV_PhanLoai:DT_Nen]</code></td>
+            <td>Sử dụng ván diện tích gán nền, đá base, đầm chặt.</td>
+          </tr>
+          <tr>
+            <td><strong>Trám lỗ ti ván khuôn</strong></td>
+            <td><span class="param-pill">BSV_LoTi</span></td>
+            <td>Gán tự động số lượng và diện tích ti xuyên tường</td>
+            <td>Chạy Add-in <code>TramLoTi</code>, <code>TiVach</code> cho đà kiềng, dầm, vách.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Khung 3: Ma Trận Quy Cách Bóc Tách Chi Tiết 01 -> 06 -->
+      <div class="section-title">
+        <span>🏗️ MA TRẬN QUY CÁCH BÓC TÁCH CẤU KIỆN (01. CỌC ➔ 06. VÁCH)</span>
+        <span class="badge">PHẦN NGẦM &amp; THÂN ĐỨNG</span>
+      </div>
+      <table class="compact-table">
+        <thead>
+          <tr>
+            <th class="code-cell">Mã Cấu Kiện</th>
+            <th class="name-cell">Tên Cấu Kiện</th>
+            <th style="width: 28%;">Quy Cách Đặt Type &amp; Mô Hình Hóa</th>
+            <th style="width: 44%;">Chi Tiết Bóc Tách: Bê Tông, Cốt Thép, Ván Khuôn &amp; Đào Đất</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code-cell">01.Coc</td>
+            <td class="name-cell">Cọc Ly Tâm</td>
+            <td>
+              Đặt Type: ghi đường kính D (<code>300, 350, 400, 500</code>).<br>
+              <span class="tool-pill">Tool BSV_AutoPile</span> dựng theo tâm CAD;<br>
+              <span class="tool-pill">Tool BSV_AutoSetElevationPile</span> hạ cos đáy móng.
+            </td>
+            <td>
+              • <strong>Tổng số cọc:</strong> Tách cọc đại trà và cọc thí nghiệm theo bản vẽ.<br>
+              • <strong>Xử lý đầu cọc:</strong> Bê tông, bản mã, thép đầu cọc tính theo file excel.<br>
+              • <strong>Cắt đầu cọc:</strong> Đếm tổng số lượng cọc đại trà + thí nghiệm.<br>
+              • <strong>Ép âm cọc:</strong> Tính hiệu số (Cos tự nhiên/san lấp - Cos đầu cọc) bằng <span class="tool-pill">Tool BSV_EpAm</span>.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">02.Mong</td>
+            <td class="name-cell">Móng BTCT</td>
+            <td>
+              Đặt Type: <code>ngắn x dài x cao</code> (VD: <code>800x1200x1000</code>).<br>
+              <span class="tool-pill">BSV_AutoFoundation_ByLinkCad.Ver3</span><br>
+              <span class="param-pill">Comments:02.Mong</span>
+            </td>
+            <td>
+              • <strong>BTL móng (B7.5):</strong> Chiều dày h, độ mở rộng a; Diện tích đầm chặt = $V_{BTL} / h$.<br>
+              • <strong>Bê tông móng (B25):</strong> Tính đủ kích thước móng trừ phần giao sàn.<br>
+              • <strong>Cốt thép:</strong> Thép lớp trên, dưới, đai; đo neo lap theo Spec.<br>
+              • <strong>Ván khuôn:</strong> <span class="param-pill">VK_LotMong</span>, <span class="param-pill">VK_Mong</span> (tách móng có thành / móng vát sửa đất).
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">03.DaKieng</td>
+            <td class="name-cell">Đà Kiềng</td>
+            <td>
+              Đặt Type: <code>rộng x cao</code> (VD: <code>300x500</code>).<br>
+              <span class="param-pill">Comments:03.DaKieng</span><br>
+              Trám lỗ ti: <span class="tool-pill">Tool TramLoTi</span>
+            </td>
+            <td>
+              • <strong>BTL đà kiềng (B7.5):</strong> Bề rộng $b+2a$, bề dày h; <span class="param-pill">DT_DamChat</span>.<br>
+              • <strong>Bê tông đà (B25):</strong> Trừ phần giao móng và sàn nền.<br>
+              • <strong>Cốt thép:</strong> Thép trên tăng cường gối, dưới tăng cường bụng, thép đai, giá, vai bò.<br>
+              • <strong>Ván khuôn:</strong> <span class="param-pill">VK_LotDaKieng</span>, <span class="param-pill">VK_DaKieng</span> (trừ giao móng, cột); Trám lỗ ti <span class="param-pill">BSV_LoTi</span>.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">04.Nen</td>
+            <td class="name-cell">Sàn Nền Trệt</td>
+            <td>
+              Đặt Type: chiều dày H (VD: <code>150, 200, 300</code>).<br>
+              Nếu vẽ BTL: đặt type <code>50_BTL</code> (vật liệu B7.5).<br>
+              <span class="param-pill">Comments:04.Nen</span>
+            </td>
+            <td>
+              • <strong>Cấu tạo nền:</strong> Tấm PVC, lớp đá base, chống mối, đầm chặt <span class="param-pill">DT_Nen</span>.<br>
+              • <strong>Bê tông nền (B25):</strong> Tách nền đàn hồi không liên kết và nền thường.<br>
+              • <strong>Thép:</strong> Cốt sợi ($kg/m^3$), cốt thép thường (chân kê, neo móc), lưới thép hàn.<br>
+              • <strong>Ván khuôn &amp; Khe:</strong> <span class="param-pill">VK_Nen</span>; Khe cắt, khe co giãn nhiệt, khe cô lập, khe thi công (đo mét dài).
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">05.Cot</td>
+            <td class="name-cell">Cột BTCT</td>
+            <td>
+              Đặt Type: <code>ngắn x dài</code> (VD: <code>500x800</code>).<br>
+              <span class="tool-pill">Tool BSV_Str_TaoCot_Ver4</span><br>
+              Phân tầng: <code>05.1.CoCot</code>, <code>05.2.Cot-T1</code>...
+            </td>
+            <td>
+              • <strong>Cổ cột (B25):</strong> Tính tới đáy sàn (nếu không cô lập) hoặc tới mặt trên sàn (nếu cô lập).<br>
+              • <strong>Cột các tầng (B25):</strong> Tính từ mặt sàn đến đáy sàn/dầm tầng trên.<br>
+              • <strong>Cốt thép:</strong> Cốt thép chủ sole, neo ngàm móng, thép đai chính + đai phụ, hàm lượng.<br>
+              • <strong>Ván khuôn:</strong> <span class="param-pill">VK_CoCot</span>, <span class="param-pill">VK_Cot</span> (trừ giao dầm, sàn).
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">06.Vach</td>
+            <td class="name-cell">Vách Cứng / Pit</td>
+            <td>
+              Đặt Type: chiều dày vách (<code>100, 200, 250</code>).<br>
+              <span class="param-pill">Comments:06.Vach</span><br>
+              Trám ti: <span class="tool-pill">Tool TiVach</span>
+            </td>
+            <td>
+              • <strong>Bê tông vách (B25):</strong> Tính trừ phần giao sàn, móng, cột và dầm.<br>
+              • <strong>Cốt thép:</strong> Thép vách 2 lớp đứng/ngang, thép đai khê, bẻ móc neo ngàm móng/sàn.<br>
+              • <strong>Ván khuôn:</strong> <span class="param-pill">VK_Vach</span> hai mặt vách; Trám lỗ ti vách bằng <span class="param-pill">BSV_LoTi</span>.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Footer Page 1 -->
+    <footer class="page-footer">
+      <div>Ban Hành: BP. BIM/QS BSV Kết Cấu • Cẩm Nang Bóc Tách Khối Lượng Tiêu Chuẩn</div>
+      <div>Trang 1 / 2 • Phần Ngầm &amp; Cấu Kiện Thẳng Đứng</div>
+    </footer>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- TRANG 2: CẤU KIỆN DẦM - SÀN - THANG - CẤU KIỆN PHỤ & BẢNG MẪU BOQ -->
+  <!-- ========================================================================= -->
+  <div class="a4-page">
+    <div>
+      <!-- Header Compact Page 2 -->
+      <header class="doc-header">
+        <div class="header-top">
+          <span class="org-tag">BSV BIM &amp; QUANTITY SURVEYING • STRUCTURAL DIVISION</span>
+          <span class="doc-badge">STANDARD: BSV-STR-QTO-SUMMARY • A4 COMPACT</span>
+        </div>
+        <div class="header-title-box">
+          <h1>QUY CÁCH TÍNH TOÁN &amp; BÓC TÁCH KHỐI LƯỢNG KẾT CẤU (BẢN TÓM TẮT)</h1>
+          <div class="subtitle">DẦM, SÀN, CẦU THANG, RAMP, HỐ PIT, DOCK &amp; HỆ THỐNG BẢNG MẪU SCHEDULES</div>
+        </div>
+      </header>
+
+      <!-- Meta Ribbon Page 2 -->
+      <div class="meta-bar">
+        <div class="meta-bar-item"><strong>Thứ tự ưu tiên:</strong> Sàn &gt; Móng &gt; Cột &gt; Dầm &gt; Vách &gt; Thang</div>
+        <div class="meta-bar-item"><strong>Đầu ra:</strong> BOQ Dự Toán, Hồ Sơ Thầu, P6 WBS</div>
+        <div class="meta-bar-item"><strong>Quy ước ván:</strong> Đáy dầm tính vào ván sàn</div>
+        <div class="meta-bar-item"><strong>Trang:</strong> 2 / 2 (Phần Thân, Hoàn Thiện &amp; BOQ)</div>
+      </div>
+
+      <!-- Khung 4: Ma Trận Cấu Kiện 07 -> 14 -->
+      <div class="section-title">
+        <span>📐 MA TRẬN QUY CÁCH BÓC TÁCH CẤU KIỆN (07. DẦM ➔ 14. CẤU KIỆN PHỤ)</span>
+        <span class="badge">PHẦN THÂN NGANG &amp; HOÀN THIỆN</span>
+      </div>
+      <table class="compact-table">
+        <thead>
+          <tr>
+            <th class="code-cell">Mã Cấu Kiện</th>
+            <th class="name-cell">Tên Cấu Kiện</th>
+            <th style="width: 28%;">Quy Cách Đặt Type &amp; Mô Hình Hóa</th>
+            <th style="width: 44%;">Chi Tiết Bóc Tách: Bê Tông, Cốt Thép, Ván Khuôn &amp; Chi Tiết Phụ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code-cell">07.Dam</td>
+            <td class="name-cell">Dầm Khung BTCT</td>
+            <td>
+              Đặt Type: <code>rộng x cao</code> (VD: <code>250x500</code>).<br>
+              <span class="param-pill">Comments:07.Dam</span> phân tầng;<br>
+              Trám ti: <span class="tool-pill">Tool TramLoTi</span>
+            </td>
+            <td>
+              • <strong>Bê tông dầm (B25):</strong> Trừ phần giao sàn, móng, cột và dầm chính.<br>
+              • <strong>Cốt thép:</strong> Lớp trên + tăng cường gối, lớp dưới + tăng cường bụng, đai, giá, vai bò.<br>
+              • <strong>Ván khuôn:</strong> <span class="param-pill">VK_Dam</span> <strong>chỉ tính 2 bên hông dầm</strong> (Quy ước ván đáy dầm tính gộp vào ván khuôn sàn để khớp định mức QS).<br>
+              • <strong>Trám lỗ ti:</strong> Quét tính diện tích trám vữa không co ngót cho lỗ ti dầm.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">08.San</td>
+            <td class="name-cell">Sàn Tầng &amp; Mái</td>
+            <td>
+              Đặt Type: chiều dày sàn (<code>100, 120, 150</code>).<br>
+              <span class="param-pill">Comment:08.1.San-T2</span>, <code>T3</code>, <code>TM</code>, <code>TT</code><br>
+              Khối lượng thép: tính trên Revit.
+            </td>
+            <td>
+              • <strong>Bê tông sàn (B25):</strong> Tính full diện tích sàn nhân chiều dày (trừ lỗ mở thang, hộp kỹ thuật).<br>
+              • <strong>Cốt thép thường:</strong> Thép lớp trên, lớp dưới, gia cường lỗ mở, thép mũ, chân kê.<br>
+              • <strong>Lưới thép hàn:</strong> Chiều dài tấm lưới, chiều dài nối chồng lap, thép chân kê.<br>
+              • <strong>Ván khuôn:</strong> <span class="param-pill">VK_San</span> = <strong>Ván đáy sàn + Ván thành biên sàn + Ván đáy dầm</strong> (trừ cột).
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">09.CauThang</td>
+            <td class="name-cell">Cầu Thang Bộ</td>
+            <td>
+              Dựng *Model in place* (Structural Framing).<br>
+              <span class="param-pill">Comments:09.1.CauThang-ST1</span>...<br>
+              Thép: Tính bảng Excel chuyên dụng.
+            </td>
+            <td>
+              • <strong>Kết cấu:</strong> Bê tông bản thang, dầm thang; Ván khuôn <span class="param-pill">VK_CauThang</span>; Thép 2 lớp + thép bậc.<br>
+              • <strong>Hoàn thiện:</strong> Bậc gạch; Len chân tường; Đá ốp mặt bậc &amp; chiếu nghỉ (<span class="param-pill">DT_MatTren</span>, <span class="param-pill">DT_MatTruoc</span>, <span class="param-pill">DT_MatHong</span>); Sơn đáy thang = $VK + DT_{Hông}$; Lan can tay vịn (m dài); Mũi chống trượt = $Số\_bậc \times Rộng\_bậc$.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">10.TamCap</td>
+            <td class="name-cell">Bậc Tam Cấp</td>
+            <td>
+              Dựng *Model in place* (Structural Framing).<br>
+              <span class="param-pill">Comments:10.1.TamCap-ST1</span>
+            </td>
+            <td>
+              • <strong>Cấu tạo:</strong> Lớp đệm cát, đá dăm, màng chống thấm nếu có.<br>
+              • <strong>Bê tông &amp; Ván:</strong> Khối bê tông đặc tam cấp, vách đà tam cấp; Hoàn thiện ốp đá mặt bậc.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">11.Ramp</td>
+            <td class="name-cell">Ramp Dốc Xe</td>
+            <td>
+              Mô hình sàn vát dốc kết hợp dầm ramp.<br>
+              <span class="param-pill">Comments:11.Ramp</span>
+            </td>
+            <td>
+              • <strong>Lớp đệm:</strong> Màng PVC, lót B7.5, đá base, đầm chặt nền ramp <span class="param-pill">DT_NenRamp</span>.<br>
+              • <strong>Bê tông &amp; Ván:</strong> Bê tông ramp (B25); Ván khuôn thành và vách chắn <span class="param-pill">VK_Ramp</span>, <span class="param-pill">VK_VachRamp</span>.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">12.Pit</td>
+            <td class="name-cell">Hố Pit Thang Máy</td>
+            <td>
+              Hạ cos đáy móng sâu; tường vách pit.<br>
+              <span class="param-pill">Comments:12.Pit</span>
+            </td>
+            <td>
+              • <strong>Lớp đệm &amp; Chống thấm:</strong> Lót đáy pit, đá base, màng chống thấm <span class="param-pill">DT_NenPit</span>.<br>
+              • <strong>Bê tông &amp; Ván:</strong> Bê tông đáy hố pit, vách pit bê tông B25; Ván khuôn <span class="param-pill">VK_Pit</span>, <span class="param-pill">VK_VachPit</span>.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">13.Dock</td>
+            <td class="name-cell">Sàn Dock Leveler</td>
+            <td>
+              Hốc âm sàn đóng mở xe container.<br>
+              <span class="param-pill">Comments:13.Dock</span>
+            </td>
+            <td>
+              • <strong>Lớp móng đệm:</strong> PVC, bê tông lót, đầm chặt <span class="param-pill">DT_NenDock</span>.<br>
+              • <strong>Bê tông, Thép &amp; Ván:</strong> Bê tông dock; Bản thép chôn âm bảo vệ gờ; Ván khuôn <span class="param-pill">VK_Dock</span>, <span class="param-pill">VK_DamDock</span>.
+            </td>
+          </tr>
+          <tr>
+            <td class="code-cell">14.CauKienPhu</td>
+            <td class="name-cell">Cấu Kiện Phụ</td>
+            <td>
+              Dựng Family hoặc Model In Place.<br>
+              <code>14.1.Muong</code>, <code>14.2.BeMay</code>, gờ nước
+            </td>
+            <td>
+              • <strong>Mương thoát nước:</strong> Bê tông đáy, thành mương; Ván khuôn mương <span class="param-pill">VK_Muong</span>; Tấm đan đậy.<br>
+              • <strong>Bệ máy Chiller / AHU:</strong> Bê tông không co ngót Sika; Ván khuôn bệ máy <span class="param-pill">VK_BeMay</span>.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Khung 5: Hệ Thống Bảng Mẫu Schedules Chuẩn -->
+      <div class="section-title">
+        <span>📊 HỆ THỐNG BẢNG MẪU THỐNG KÊ SCHEDULES QUY CHUẨN XUẤT BOQ DỰ TOÁN</span>
+        <span class="badge">7 REVIT SCHEDULES</span>
+      </div>
+      <div class="sched-grid">
+        <div class="sched-card">
+          <strong>1. 00.1.2.KL BÊ TÔNG (TỔNG)</strong>
+          Filter theo Comments từng cấu kiện; Trường: Family &amp; Type, Level, Volume ($m^3$), Count.
+        </div>
+        <div class="sched-card">
+          <strong>2. 00.1.2.KL BÊ TÔNG (PHÂN KHU)</strong>
+          Filter theo Comments + Phân xưởng VP/Xưởng; Tách riêng Bê tông B7.5 lót và Bê tông B25 cấu kiện.
+        </div>
+        <div class="sched-card">
+          <strong>3. 00.2.1.KL VÁN KHUÔN LÓT</strong>
+          Filter <code>BSV_PhanLoai = VK_Lot*</code>; Lấy diện tích đáy và cạnh biên lớp lót móng, đà kiềng.
+        </div>
+        <div class="sched-card">
+          <strong>4. 00.2.2.KL VÁN KHUÔN (TỔNG)</strong>
+          Filter <code>BSV_PhanLoai = VK_*</code>; Tổng diện tích ván thành dầm, ván cột, ván sàn ($m^2$).
+        </div>
+        <div class="sched-card">
+          <strong>5. 00.2.2.KL VÁN KHUÔN (CHI TIẾT)</strong>
+          Tách ván khuôn móng thường/móng vát, ván cột cổ/tầng, ván 2 bên hông dầm, ván đáy dầm + sàn.
+        </div>
+        <div class="sched-card">
+          <strong>6. 00.3.1.KL DIỆN TÍCH ĐỆM</strong>
+          Filter <code>BSV_PhanLoai = DT_*</code>; Thống kê diện tích tấm PVC, đá base, đầm chặt, chống mối.
+        </div>
+        <div class="sched-card" style="grid-column: span 2;">
+          <strong>7. 01.1.CỌC LY TÂM &amp; THÍ NGHIỆM</strong>
+          Filter <code>Comments = 01.Coc</code>; Đếm tổng số cọc đại trà, số cọc thí nghiệm, chiều dài ép âm, số đầu cọc cắt &amp; xử lý bản mã.
+        </div>
+      </div>
+
+      <!-- Khung 6: Ghi Chú Cốt Lõi Khi Link Sang BOQ -->
+      <div class="rule-card" style="border-left-color: #059669; background: #f0fdf4;">
+        <h4 style="color: #047857;">💡 NGUYÊN TẮC LIÊN KẾT BOQ &amp; QUẢN TRỊ RỦI RO SAI SỐ KHỐI LƯỢNG</h4>
+        <div style="font-size: 7.1pt; color: #166534; line-height: 1.4;">
+          1. <strong>Tuyệt đối không cộng trừ thêm số học thủ công</strong> trong bảng tính Excel mà phải gán đúng tham số trên Revit để phần mềm tự tính.<br>
+          2. Khi chủ đầu tư hoặc thiết kế thay đổi kích thước, chỉ cần tải lại mô hình và chạy cập nhật Schedule, số liệu tự động đồng bộ sang BOQ.<br>
+          3. Đặt mã code lọc <code>[01.Coc]</code>, <code>[02.Mong]</code>... đồng nhất 100% giữa Revit Parameter, File CAD, Bảng BOQ và Mã công tác Primavera P6 WBS.
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Page 2 -->
+    <footer class="page-footer">
+      <div>Ban Hành: BP. BIM/QS BSV Kết Cấu • Cẩm Nang Bóc Tách Khối Lượng Tiêu Chuẩn</div>
+      <div>Trang 2 / 2 • Phần Thân Ngang, Hoàn Thiện &amp; Bảng Mẫu BOQ • Hết</div>
+    </footer>
+  </div>
+
+</body>
+</html>
