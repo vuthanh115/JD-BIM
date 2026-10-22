@@ -86,8 +86,8 @@ public static class NavisworksSearchSetsService
     using var writer = XmlWriter.Create(filePath, settings);
     writer.WriteStartDocument();
     
-    // <exchange> root
-    writer.WriteStartElement("exchange", "http://download.autodesk.com/us/navisworks/schemas/nw-exchange-12.0.xsd");
+    // <exchange> root - không đặt default xmlns để tương thích với MSXML Schema validation của Navisworks
+    writer.WriteStartElement("exchange");
     writer.WriteAttributeString("xmlns", "xsi", null, "http://www.w3.org/2001/XMLSchema-instance");
     writer.WriteAttributeString("xsi", "noNamespaceSchemaLocation", null, "http://download.autodesk.com/us/navisworks/schemas/nw-exchange-12.0.xsd");
     writer.WriteAttributeString("units", "m");

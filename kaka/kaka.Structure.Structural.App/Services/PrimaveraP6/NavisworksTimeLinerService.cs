@@ -22,27 +22,25 @@ public static class NavisworksTimeLinerService
   public static void ExportTimeLinerCsv(string filePath, IEnumerable<Bim4DTaskItem> tasks)
   {
     var sb = new StringBuilder();
-    // Headers chuẩn tương thích tuyệt đối với Navisworks TimeLiner Field Mapping
-    sb.AppendLine("Task Name,Display ID,Status,Planned Start,Planned End,Actual Start,Actual End,Task Type,Attached,Cost,Notes");
+    // Headers chuẩn khớp 100% tên trường nội bộ của Navisworks TimeLiner Field Selector để tự động map
+    sb.AppendLine("Task Name,Display ID,Synchronization ID,Task Type,Planned Start Date,Planned End Date,Actual Start Date,Actual End Date,Material Cost,Total Cost");
 
     foreach (var t in tasks)
     {
       var plannedStart = t.StartDate.ToString("yyyy-MM-dd 08:00:00");
       var plannedEnd = t.EndDate.ToString("yyyy-MM-dd 17:00:00");
-      var notes = $"WBS: {t.WbsCode}; Qty: {t.Quantity:N1} {t.Unit}; Prod: {t.ProductivityRate}/day; Pred: {t.PredecessorsDisplay}; Critical: {t.IsCritical}";
 
       sb.AppendLine(
         $"\"{t.TaskName}\"," +
         $"\"{t.TaskCode}\"," +
-        $"\"Planned\"," +
+        $"\"{t.TaskCode}\"," +
+        $"\"{t.TaskType}\"," +
         $"\"{plannedStart}\"," +
         $"\"{plannedEnd}\"," +
         $"\"\"," +
         $"\"\"," +
-        $"\"{t.TaskType}\"," +
-        $"\"\"," +
         $"\"0\"," +
-        $"\"{notes}\"");
+        $"\"0\"");
     }
 
     File.WriteAllText(filePath, sb.ToString(), Encoding.UTF8);
@@ -63,8 +61,9 @@ public static class NavisworksTimeLinerService
     using var writer = XmlWriter.Create(filePath, settings);
     writer.WriteStartDocument();
 
-    writer.WriteStartElement("exchange", "http://download.autodesk.com/us/navisworks/schemas/nw-timeliner-rules-12.0.xsd");
+    writer.WriteStartElement("exchange");
     writer.WriteAttributeString("xmlns", "xsi", null, "http://www.w3.org/2001/XMLSchema-instance");
+    writer.WriteAttributeString("xsi", "noNamespaceSchemaLocation", null, "http://download.autodesk.com/us/navisworks/schemas/nw-timeliner-rules-12.0.xsd");
 
     writer.WriteStartElement("rules");
 
