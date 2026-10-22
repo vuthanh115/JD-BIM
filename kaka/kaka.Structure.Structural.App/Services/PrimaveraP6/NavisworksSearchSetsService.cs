@@ -184,14 +184,20 @@ public static class NavisworksSearchSetsService
 
       writer.WriteStartElement("category");
       writer.WriteStartElement("name");
-      writer.WriteAttributeString("internal", "LcOaNode");
-      writer.WriteString("Item");
+      writer.WriteAttributeString("internal", "LcRevitData");
+      writer.WriteString("Element");
       writer.WriteEndElement(); // name
       writer.WriteEndElement();
 
       writer.WriteStartElement("property");
-      writer.WriteElementString("name", def.SecondProperty);
-      writer.WriteEndElement();
+      writer.WriteStartElement("name");
+      string propInternal = def.SecondProperty.Equals("Type Name", StringComparison.OrdinalIgnoreCase) 
+          ? "LcRevitPropertyElementName" 
+          : def.SecondProperty;
+      writer.WriteAttributeString("internal", propInternal);
+      writer.WriteString(def.SecondProperty.Equals("Type Name", StringComparison.OrdinalIgnoreCase) ? "Name" : def.SecondProperty);
+      writer.WriteEndElement(); // name
+      writer.WriteEndElement(); // property
 
       writer.WriteStartElement("value");
       writer.WriteStartElement("data");

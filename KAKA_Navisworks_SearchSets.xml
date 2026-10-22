@@ -18,10 +18,10 @@
           </condition>
           <condition test="contains" flags="26">
             <category>
-              <name internal="LcOaNode">Item</name>
+              <name internal="LcRevitData">Element</name>
             </category>
             <property>
-              <name>Type Name</name>
+              <name internal="LcRevitPropertyElementName">Name</name>
             </property>
             <value>
               <data type="wstring">Pile</data>
@@ -47,10 +47,10 @@
           </condition>
           <condition test="contains" flags="26">
             <category>
-              <name internal="LcOaNode">Item</name>
+              <name internal="LcRevitData">Element</name>
             </category>
             <property>
-              <name>Type Name</name>
+              <name internal="LcRevitPropertyElementName">Name</name>
             </property>
             <value>
               <data type="wstring">Footing</data>
@@ -76,10 +76,10 @@
           </condition>
           <condition test="contains" flags="26">
             <category>
-              <name internal="LcOaNode">Item</name>
+              <name internal="LcRevitData">Element</name>
             </category>
             <property>
-              <name>Type Name</name>
+              <name internal="LcRevitPropertyElementName">Name</name>
             </property>
             <value>
               <data type="wstring">Tie Beam</data>
@@ -105,10 +105,10 @@
           </condition>
           <condition test="contains" flags="26">
             <category>
-              <name internal="LcOaNode">Item</name>
+              <name internal="LcRevitData">Element</name>
             </category>
             <property>
-              <name>Type Name</name>
+              <name internal="LcRevitPropertyElementName">Name</name>
             </property>
             <value>
               <data type="wstring">Slab on Grade</data>
@@ -152,10 +152,10 @@
           </condition>
           <condition test="contains" flags="26">
             <category>
-              <name internal="LcOaNode">Item</name>
+              <name internal="LcRevitData">Element</name>
             </category>
             <property>
-              <name>Structural</name>
+              <name internal="Structural">Structural</name>
             </property>
             <value>
               <data type="wstring">1</data>
@@ -235,10 +235,10 @@
           </condition>
           <condition test="contains" flags="26">
             <category>
-              <name internal="LcOaNode">Item</name>
+              <name internal="LcRevitData">Element</name>
             </category>
             <property>
-              <name>Type Name</name>
+              <name internal="LcRevitPropertyElementName">Name</name>
             </property>
             <value>
               <data type="wstring">Step</data>
@@ -264,10 +264,10 @@
           </condition>
           <condition test="contains" flags="26">
             <category>
-              <name internal="LcOaNode">Item</name>
+              <name internal="LcRevitData">Element</name>
             </category>
             <property>
-              <name>Type Name</name>
+              <name internal="LcRevitPropertyElementName">Name</name>
             </property>
             <value>
               <data type="wstring">Ramp</data>
@@ -293,10 +293,10 @@
           </condition>
           <condition test="contains" flags="26">
             <category>
-              <name internal="LcOaNode">Item</name>
+              <name internal="LcRevitData">Element</name>
             </category>
             <property>
-              <name>Type Name</name>
+              <name internal="LcRevitPropertyElementName">Name</name>
             </property>
             <value>
               <data type="wstring">Pit</data>
@@ -340,10 +340,10 @@
           </condition>
           <condition test="contains" flags="26">
             <category>
-              <name internal="LcOaNode">Item</name>
+              <name internal="LcRevitData">Element</name>
             </category>
             <property>
-              <name>Type Name</name>
+              <name internal="LcRevitPropertyElementName">Name</name>
             </property>
             <value>
               <data type="wstring">Brick</data>
@@ -369,10 +369,10 @@
           </condition>
           <condition test="contains" flags="26">
             <category>
-              <name internal="LcOaNode">Item</name>
+              <name internal="LcRevitData">Element</name>
             </category>
             <property>
-              <name>Type Name</name>
+              <name internal="LcRevitPropertyElementName">Name</name>
             </property>
             <value>
               <data type="wstring">Plaster</data>
@@ -398,10 +398,10 @@
           </condition>
           <condition test="contains" flags="26">
             <category>
-              <name internal="LcOaNode">Item</name>
+              <name internal="LcRevitData">Element</name>
             </category>
             <property>
-              <name>Type Name</name>
+              <name internal="LcRevitPropertyElementName">Name</name>
             </property>
             <value>
               <data type="wstring">Tile</data>
@@ -481,10 +481,10 @@
           </condition>
           <condition test="contains" flags="26">
             <category>
-              <name internal="LcOaNode">Item</name>
+              <name internal="LcRevitData">Element</name>
             </category>
             <property>
-              <name>Type Name</name>
+              <name internal="LcRevitPropertyElementName">Name</name>
             </property>
             <value>
               <data type="wstring">Paint</data>
@@ -510,10 +510,10 @@
           </condition>
           <condition test="contains" flags="26">
             <category>
-              <name internal="LcOaNode">Item</name>
+              <name internal="LcRevitData">Element</name>
             </category>
             <property>
-              <name>Type Name</name>
+              <name internal="LcRevitPropertyElementName">Name</name>
             </property>
             <value>
               <data type="wstring">Waterproof</data>
@@ -575,10 +575,10 @@
           </condition>
           <condition test="contains" flags="26">
             <category>
-              <name internal="LcOaNode">Item</name>
+              <name internal="LcRevitData">Element</name>
             </category>
             <property>
-              <name>System Type</name>
+              <name internal="System Type">System Type</name>
             </property>
             <value>
               <data type="wstring">Fire</data>
@@ -604,10 +604,10 @@
           </condition>
           <condition test="contains" flags="26">
             <category>
-              <name internal="LcOaNode">Item</name>
+              <name internal="LcRevitData">Element</name>
             </category>
             <property>
-              <name>System Type</name>
+              <name internal="System Type">System Type</name>
             </property>
             <value>
               <data type="wstring">Plumb</data>
