@@ -95,18 +95,13 @@ public static class NavisworksSearchSetsService
     // <selectionsets>
     writer.WriteStartElement("selectionsets");
 
-    // 1. Phân mục theo các bộ môn chuẩn hóa (Discipline folders)
+    // 1. Ghi toàn bộ các Search Sets chuẩn hóa phẳng trực tiếp vào selectionsets (tương thích 100% Navisworks)
     foreach (var folderKvp in StandardDisciplineSets)
     {
-      writer.WriteStartElement("viewfolder");
-      writer.WriteAttributeString("name", folderKvp.Key);
-
       foreach (var setDef in folderKvp.Value)
       {
         WriteSelectionSet(writer, setDef.Name, setDef);
       }
-
-      writer.WriteEndElement(); // viewfolder
     }
 
     // 2. Nếu có danh sách công tác theo tiến độ (Tasks có SearchSetName riêng)
@@ -148,20 +143,27 @@ public static class NavisworksSearchSetsService
 
     writer.WriteStartElement("findspec");
     writer.WriteAttributeString("mode", "all");
+    writer.WriteAttributeString("disjoint", "1");
 
     writer.WriteStartElement("conditions");
 
     // Condition 1: Category
     writer.WriteStartElement("condition");
     writer.WriteAttributeString("test", def.Test);
-    writer.WriteAttributeString("flags", "10");
+    writer.WriteAttributeString("flags", "26");
 
     writer.WriteStartElement("category");
-    writer.WriteElementString("name", def.CategoryDisplayName);
+    writer.WriteStartElement("name");
+    writer.WriteAttributeString("internal", "LcRevitData");
+    writer.WriteString(def.CategoryDisplayName);
+    writer.WriteEndElement(); // name
     writer.WriteEndElement(); // category
 
     writer.WriteStartElement("property");
-    writer.WriteElementString("name", def.PropertyDisplayName);
+    writer.WriteStartElement("name");
+    writer.WriteAttributeString("internal", "LcRevitPropertyElementCategory");
+    writer.WriteString(def.PropertyDisplayName);
+    writer.WriteEndElement(); // name
     writer.WriteEndElement(); // property
 
     writer.WriteStartElement("value");
@@ -178,10 +180,13 @@ public static class NavisworksSearchSetsService
     {
       writer.WriteStartElement("condition");
       writer.WriteAttributeString("test", "contains");
-      writer.WriteAttributeString("flags", "10");
+      writer.WriteAttributeString("flags", "26");
 
       writer.WriteStartElement("category");
-      writer.WriteElementString("name", "Item");
+      writer.WriteStartElement("name");
+      writer.WriteAttributeString("internal", "LcOaNode");
+      writer.WriteString("Item");
+      writer.WriteEndElement(); // name
       writer.WriteEndElement();
 
       writer.WriteStartElement("property");
