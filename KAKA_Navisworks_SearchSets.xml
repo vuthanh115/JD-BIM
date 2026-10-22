@@ -2,36 +2,7 @@
 
 <exchange xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.navisworks.com/schemas/nw-exchange-5.0.xsd" units="m">
   <selectionsets>
-    <selectionset name="KC_01_Coc_Piles">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Structural Foundations</data>
-            </value>
-          </condition>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementName">Name</name>
-            </property>
-            <value>
-              <data type="wstring">Pile</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KC_02_Mong_Foundations">
+    <selectionset name="01_FND_Mong">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
@@ -49,7 +20,7 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
-    <selectionset name="KC_03_DaKieng_TieBeams">
+    <selectionset name="02_FND_DaKieng">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
@@ -63,77 +34,12 @@
               <data type="wstring">Structural Framing</data>
             </value>
           </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KC_04_Nen_SlabOnGrade">
-      <findspec mode="all" disjoint="1">
-        <conditions>
           <condition test="contains" flags="26">
             <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Floors</data>
-            </value>
-          </condition>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
+              <name internal="LcRevitData">Reference Level</name>
             </category>
             <property>
               <name internal="LcRevitPropertyElementName">Name</name>
-            </property>
-            <value>
-              <data type="wstring">Nen</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KC_05_Cot_Columns">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Structural Columns</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KC_06_Vach_ShearWalls">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Walls</data>
-            </value>
-          </condition>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="Structural">Structural</name>
             </property>
             <value>
               <data type="wstring">1</data>
@@ -143,119 +49,7 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
-    <selectionset name="KC_07_Dam_FramingBeams">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Structural Framing</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KC_08_San_StructuralSlabs">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Floors</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KC_09_CauThang_Stairs">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Stairs</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KC_10_TamCap_Steps">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Floors</data>
-            </value>
-          </condition>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementName">Name</name>
-            </property>
-            <value>
-              <data type="wstring">Step</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KC_11_Ramp_Doc">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Floors</data>
-            </value>
-          </condition>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementName">Name</name>
-            </property>
-            <value>
-              <data type="wstring">Ramp</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KC_12_Pit_ElevatorPits">
+    <selectionset name="03_FND_Pit">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
@@ -284,7 +78,7 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
-    <selectionset name="KC_14_CauKienPhu_Secondary">
+    <selectionset name="04_L1_Nen_SlabOnGrade">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
@@ -295,14 +89,493 @@
               <name internal="LcRevitPropertyElementCategory">Category</name>
             </property>
             <value>
-              <data type="wstring">Generic Models</data>
+              <data type="wstring">Floors</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Level</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">1</data>
             </value>
           </condition>
         </conditions>
         <locator>/</locator>
       </findspec>
     </selectionset>
-    <selectionset name="KT_10_Mai_Roofing">
+    <selectionset name="05_L1_Cot_Columns">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Structural Columns</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Base Level</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">1</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="06_L1_Vach_ShearWalls">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Walls</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Base Level</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">1</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="Structural">Structural</name>
+            </property>
+            <value>
+              <data type="wstring">1</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="07_L2_Dam_FramingBeams">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Structural Framing</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Reference Level</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">2</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="08_L2_San_StructuralSlabs">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Floors</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Level</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">2</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="09_L1_CauThang_Stairs">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Stairs</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Base Level</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">1</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="10_L2_Cot_Columns">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Structural Columns</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Base Level</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">2</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="11_L2_Vach_ShearWalls">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Walls</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Base Level</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">2</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="Structural">Structural</name>
+            </property>
+            <value>
+              <data type="wstring">1</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="12_L3_Dam_FramingBeams">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Structural Framing</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Reference Level</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">3</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="13_L3_San_StructuralSlabs">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Floors</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Level</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">3</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="14_L2_CauThang_Stairs">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Stairs</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Base Level</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">2</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="15_L3_Cot_Columns">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Structural Columns</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Base Level</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">3</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="16_L3_Vach_ShearWalls">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Walls</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Base Level</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">3</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="Structural">Structural</name>
+            </property>
+            <value>
+              <data type="wstring">1</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="17_LM_Dam_FramingBeams">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Structural Framing</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Reference Level</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">4</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="18_LM_San_StructuralSlabs">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Floors</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Level</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">4</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="19_L3_CauThang_Stairs">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Stairs</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Base Level</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">3</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="20_Roof_Mai">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
@@ -320,7 +593,7 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
-    <selectionset name="KT_01_TuongXay_BrickWalls">
+    <selectionset name="21_KT_TuongXay">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
@@ -338,7 +611,7 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
-    <selectionset name="KT_08_ChongTham_Waterproofing">
+    <selectionset name="22_KT_ChongTham">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
@@ -367,7 +640,7 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
-    <selectionset name="KT_02_TratBa_Plastering">
+    <selectionset name="23_KT_TratBa">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
@@ -396,7 +669,7 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
-    <selectionset name="KT_06_Tran_Ceilings">
+    <selectionset name="24_KT_Tran">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
@@ -414,7 +687,7 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
-    <selectionset name="KT_03_OpLat_Tiling">
+    <selectionset name="25_KT_OpLat">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
@@ -443,25 +716,7 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
-    <selectionset name="KT_05_CuaSo_Windows">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Windows</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KT_04_CuaDi_Doors">
+    <selectionset name="26_KT_Cua">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
@@ -479,7 +734,7 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
-    <selectionset name="KT_07_SonBa_Painting">
+    <selectionset name="27_KT_SonBa">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
@@ -508,7 +763,7 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
-    <selectionset name="KT_09_LanCan_Railings">
+    <selectionset name="28_KT_LanCan">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
@@ -526,7 +781,7 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
-    <selectionset name="MEP_01_ChuaChay_FireFighting">
+    <selectionset name="29_MEP_PCCC">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
@@ -544,7 +799,7 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
-    <selectionset name="MEP_02_CapThoatNuoc_Plumbing">
+    <selectionset name="30_MEP_Plumbing">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
@@ -562,7 +817,7 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
-    <selectionset name="MEP_04_DieuHoaThongGio_HVAC">
+    <selectionset name="31_MEP_HVAC">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
@@ -580,7 +835,7 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
-    <selectionset name="MEP_03_DienChieuSang_Electrical">
+    <selectionset name="32_MEP_Electrical">
       <findspec mode="all" disjoint="1">
         <conditions>
           <condition test="contains" flags="26">
