@@ -189,9 +189,17 @@
     },
     {
       "id": "PrimaveraP6",
-      "text": "Primavera P6",
-      "defaultItemId": "ExportP6Schedule",
+      "text": "4D BIM & P6",
+      "defaultItemId": "RuleBased4DBim",
       "items": [
+        {
+          "id": "RuleBased4DBim",
+          "text": "Rule-Based 4D BIM",
+          "commandClass": "kaka.Structure.Structural.App.Commands.PrimaveraP6.RuleBased4DBimCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Database.p616.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Database.p6.png",
+          "tooltip": "Quy trình Rule-based 4D BIM (Navisworks + P6) thay thế Bexel: Sinh Search Sets XML, tính Duration & CPM từ 3D, và Auto-Attach TimeLiner"
+        },
         {
           "id": "ExportP6Schedule",
           "text": "Export to P6 (XER/CSV)",

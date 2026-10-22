@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<exchange xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://download.autodesk.com/us/navisworks/schemas/nw-timeliner-rules-12.0.xsd">
+  <rules>
+    <rule name="KAKA 4D: Map TimeLiner Tasks to Search Sets (Exact Name)" enabled="true">
+      <description>Tự động gán 100% hình học từ Search Sets vào Task TimeLiner có cùng tên gọi</description>
+      <mapping task_column="Task Name" set_property="Name" match_mode="exact_case_insensitive"/>
+    </rule>
+  </rules>
+</exchange>

@@ -138,7 +138,7 @@
         <Resource Include="Resources\Images\Column\up.png" />
     </ItemGroup>
 
-    <Target Name="DeployAddin" AfterTargets="Build">
+    <Target Name="DeployAddin" AfterTargets="Build" Condition="'$(DeployAddin)' != 'false'">
         <PropertyGroup>
             <RevitAddinsDir>$(AppData)\Autodesk\Revit\Addins\$(RevitVersion)</RevitAddinsDir>
             <DeployDir>$(RevitAddinsDir)\kaka.Structure</DeployDir>
