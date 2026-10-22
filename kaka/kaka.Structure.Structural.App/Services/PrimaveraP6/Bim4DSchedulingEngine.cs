@@ -81,12 +81,14 @@ public static class Bim4DSchedulingEngine
     var tasks = new List<Bim4DTaskItem>();
     int taskCounter = 1000;
     var baseDate = DateTime.Today.AddDays(7); // Bắt đầu tuần tới
+    bool hasPiles = countByCode.TryGetValue("01.Coc", out var pileCnt) && pileCnt > 0;
 
     // Danh sách các mã công tác tuần tự theo biện pháp thi công
+    // Nếu mô hình không có cọc (móng nông, móng đơn/băng), MÓNG là công tác số 1 xuất phát ngay từ baseDate
     var sequenceDefinitions = new (string Code, string Discipline, string WbsCode, string Name, string SearchSet, string? PredecessorCode, int LagDays)[]
     {
       ("01.Coc", "KẾT CẤU", "WBS-KC.01.Coc", "Thi công Cọc & Ép cọc thí nghiệm", "KC_01_Coc_Piles", null, 0),
-      ("02.Mong", "KẾT CẤU", "WBS-KC.02.Mong", "Thi công Móng & Bê tông móng", "KC_02_Mong_Foundations", "01.Coc", 1),
+      ("02.Mong", "KẾT CẤU", "WBS-KC.02.Mong", "Thi công Móng & Bê tông móng", "KC_02_Mong_Foundations", hasPiles ? "01.Coc" : null, hasPiles ? 1 : 0),
       ("03.DaKieng", "KẾT CẤU", "WBS-KC.03.DaKieng", "Thi công Đà kiềng & Giằng móng", "KC_03_DaKieng_TieBeams", "02.Mong", 1),
       ("12.Pit", "KẾT CẤU", "WBS-KC.12.Pit", "Thi công Hố Pit thang máy", "KC_12_Pit_ElevatorPits", "02.Mong", 0),
       ("04.Nen", "KẾT CẤU", "WBS-KC.04.Nen", "Thi công Nền hạ tầng & Slab on Grade", "KC_04_Nen_SlabOnGrade", "03.DaKieng", 1),
