@@ -3,7 +3,7 @@
   <selectionsets>
     <viewfolder name="01. KẾT CẤU (STRUCTURAL WORKS)">
       <selectionset name="KC_01_Coc_Piles">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -32,7 +32,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KC_02_Mong_Foundations">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -61,7 +61,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KC_03_DaKieng_TieBeams">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -90,7 +90,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KC_04_Nen_SlabOnGrade">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -119,7 +119,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KC_05_Cot_Columns">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -137,7 +137,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KC_06_Vach_ShearWalls">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -166,7 +166,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KC_07_Dam_FramingBeams">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -184,7 +184,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KC_08_San_StructuralSlabs">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -202,7 +202,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KC_09_CauThang_Stairs">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -220,7 +220,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KC_10_TamCap_Steps">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -249,7 +249,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KC_11_Ramp_Doc">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -278,7 +278,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KC_12_Pit_ElevatorPits">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -307,7 +307,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KC_14_CauKienPhu_Secondary">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -327,7 +327,7 @@
     </viewfolder>
     <viewfolder name="02. KIẾN TRÚC (ARCHITECTURAL WORKS)">
       <selectionset name="KT_01_TuongXay_BrickWalls">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -356,7 +356,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KT_02_TratBa_Plastering">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -385,7 +385,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KT_03_OpLat_Tiling">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -414,7 +414,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KT_04_CuaDi_Doors">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -432,7 +432,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KT_05_CuaSo_Windows">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -450,7 +450,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KT_06_Tran_Ceilings">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -468,7 +468,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KT_07_SonBa_Painting">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -497,7 +497,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KT_08_ChongTham_Waterproofing">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -526,7 +526,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KT_09_LanCan_Railings">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -544,7 +544,7 @@
         </findspec>
       </selectionset>
       <selectionset name="KT_10_Mai_Roofing">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -564,7 +564,7 @@
     </viewfolder>
     <viewfolder name="03. CƠ ĐIỆN (MEP WORKS)">
       <selectionset name="MEP_01_ChuaChay_FireFighting">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -593,7 +593,7 @@
         </findspec>
       </selectionset>
       <selectionset name="MEP_02_CapThoatNuoc_Plumbing">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -622,7 +622,7 @@
         </findspec>
       </selectionset>
       <selectionset name="MEP_03_DienChieuSang_Electrical">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>
@@ -651,7 +651,7 @@
         </findspec>
       </selectionset>
       <selectionset name="MEP_04_DieuHoaThongGio_HVAC">
-        <findspec mode="all" type="tsel">
+        <findspec mode="all">
           <conditions>
             <condition test="contains" flags="10">
               <category>

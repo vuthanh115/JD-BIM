@@ -148,7 +148,6 @@ public static class NavisworksSearchSetsService
 
     writer.WriteStartElement("findspec");
     writer.WriteAttributeString("mode", "all");
-    writer.WriteAttributeString("type", "tsel");
 
     writer.WriteStartElement("conditions");
 

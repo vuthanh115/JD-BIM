@@ -77,7 +77,7 @@ def generate_search_sets_xml(xml_path):
         vfolder = ET.SubElement(selectionsets, "viewfolder", {"name": folder_name})
         for set_name, cat, secondary in sets:
             sset = ET.SubElement(vfolder, "selectionset", {"name": set_name})
-            fspec = ET.SubElement(sset, "findspec", {"mode": "all", "type": "tsel"})
+            fspec = ET.SubElement(sset, "findspec", {"mode": "all"})
             conds = ET.SubElement(fspec, "conditions")
             
             # Cond 1: Category
