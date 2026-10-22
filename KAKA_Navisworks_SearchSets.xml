@@ -45,17 +45,6 @@
               <data type="wstring">Structural Foundations</data>
             </value>
           </condition>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementName">Name</name>
-            </property>
-            <value>
-              <data type="wstring">Footing</data>
-            </value>
-          </condition>
         </conditions>
         <locator>/</locator>
       </findspec>
@@ -72,17 +61,6 @@
             </property>
             <value>
               <data type="wstring">Structural Framing</data>
-            </value>
-          </condition>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementName">Name</name>
-            </property>
-            <value>
-              <data type="wstring">Tie Beam</data>
             </value>
           </condition>
         </conditions>
@@ -111,7 +89,7 @@
               <name internal="LcRevitPropertyElementName">Name</name>
             </property>
             <value>
-              <data type="wstring">Slab on Grade</data>
+              <data type="wstring">Nen</data>
             </value>
           </condition>
         </conditions>
@@ -324,6 +302,24 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
+    <selectionset name="KT_10_Mai_Roofing">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Roofs</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
     <selectionset name="KT_01_TuongXay_BrickWalls">
       <findspec mode="all" disjoint="1">
         <conditions>
@@ -336,158 +332,6 @@
             </property>
             <value>
               <data type="wstring">Walls</data>
-            </value>
-          </condition>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementName">Name</name>
-            </property>
-            <value>
-              <data type="wstring">Brick</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KT_02_TratBa_Plastering">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Walls</data>
-            </value>
-          </condition>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementName">Name</name>
-            </property>
-            <value>
-              <data type="wstring">Plaster</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KT_03_OpLat_Tiling">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Floors</data>
-            </value>
-          </condition>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementName">Name</name>
-            </property>
-            <value>
-              <data type="wstring">Tile</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KT_04_CuaDi_Doors">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Doors</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KT_05_CuaSo_Windows">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Windows</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KT_06_Tran_Ceilings">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Ceilings</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KT_07_SonBa_Painting">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Walls</data>
-            </value>
-          </condition>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementName">Name</name>
-            </property>
-            <value>
-              <data type="wstring">Paint</data>
             </value>
           </condition>
         </conditions>
@@ -523,6 +367,147 @@
         <locator>/</locator>
       </findspec>
     </selectionset>
+    <selectionset name="KT_02_TratBa_Plastering">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Walls</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">Plaster</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="KT_06_Tran_Ceilings">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Ceilings</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="KT_03_OpLat_Tiling">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Floors</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">Tile</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="KT_05_CuaSo_Windows">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Windows</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="KT_04_CuaDi_Doors">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Doors</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="KT_07_SonBa_Painting">
+      <findspec mode="all" disjoint="1">
+        <conditions>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
+            </property>
+            <value>
+              <data type="wstring">Walls</data>
+            </value>
+          </condition>
+          <condition test="contains" flags="26">
+            <category>
+              <name internal="LcRevitData">Element</name>
+            </category>
+            <property>
+              <name internal="LcRevitPropertyElementName">Name</name>
+            </property>
+            <value>
+              <data type="wstring">Paint</data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
     <selectionset name="KT_09_LanCan_Railings">
       <findspec mode="all" disjoint="1">
         <conditions>
@@ -535,24 +520,6 @@
             </property>
             <value>
               <data type="wstring">Railings</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="KT_10_Mai_Roofing">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Roofs</data>
             </value>
           </condition>
         </conditions>
@@ -573,17 +540,6 @@
               <data type="wstring">Pipes</data>
             </value>
           </condition>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="System Type">System Type</name>
-            </property>
-            <value>
-              <data type="wstring">Fire</data>
-            </value>
-          </condition>
         </conditions>
         <locator>/</locator>
       </findspec>
@@ -602,15 +558,22 @@
               <data type="wstring">Pipes</data>
             </value>
           </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+    <selectionset name="MEP_04_DieuHoaThongGio_HVAC">
+      <findspec mode="all" disjoint="1">
+        <conditions>
           <condition test="contains" flags="26">
             <category>
               <name internal="LcRevitData">Element</name>
             </category>
             <property>
-              <name internal="System Type">System Type</name>
+              <name internal="LcRevitPropertyElementCategory">Category</name>
             </property>
             <value>
-              <data type="wstring">Plumb</data>
+              <data type="wstring">Ducts</data>
             </value>
           </condition>
         </conditions>
@@ -629,24 +592,6 @@
             </property>
             <value>
               <data type="wstring">Lighting Fixtures</data>
-            </value>
-          </condition>
-        </conditions>
-        <locator>/</locator>
-      </findspec>
-    </selectionset>
-    <selectionset name="MEP_04_DieuHoaThongGio_HVAC">
-      <findspec mode="all" disjoint="1">
-        <conditions>
-          <condition test="contains" flags="26">
-            <category>
-              <name internal="LcRevitData">Element</name>
-            </category>
-            <property>
-              <name internal="LcRevitPropertyElementCategory">Category</name>
-            </property>
-            <value>
-              <data type="wstring">Ducts</data>
             </value>
           </condition>
         </conditions>
