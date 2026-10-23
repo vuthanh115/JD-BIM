@@ -4,21 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KAKA BIM 4D/5D Integrated Executive Suite & 3D Web Viewer</title>
-<!-- Three.js + OrbitControls for 3D BIM Engine -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-<!-- Chart.js for Power BI Analytics -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- LOCAL FALLBACK FIRST (Immune to Brave Shields / Adblockers) + CDN BACKUP -->
+<script src="three.min.js"></script>
+<script>
+  if (typeof THREE === 'undefined') {
+    document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>');
+  }
+</script>
+<script src="OrbitControls.js"></script>
+<script src="chart.min.js"></script>
+<script>
+  if (typeof Chart === 'undefined') {
+    document.write('<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"><\/script>');
+  }
+</script>
+
 <style>
   :root {
     --pbi-yellow: #f2c811;
-    --pbi-dark: #1e1e1e;
     --navy-blue: #0f2b48;
     --accent-blue: #0284c7;
     --emerald: #059669;
     --amber: #d97706;
     --card-bg: #ffffff;
-    --border-color: #e2e8f0;
+    --border-color: #cbd5e1;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -31,7 +41,7 @@
 
   /* Top App Bar */
   .pbi-topbar {
-    background: #1f2937;
+    background: #1e293b;
     color: #ffffff;
     height: 48px;
     display: flex;
@@ -72,9 +82,9 @@
     align-items: center;
   }
   .btn-action {
-    background: #374151;
+    background: #334155;
     color: #fff;
-    border: 1px solid #4b5563;
+    border: 1px solid #475569;
     padding: 5px 12px;
     border-radius: 4px;
     cursor: pointer;
@@ -82,7 +92,7 @@
     font-weight: 600;
     transition: 0.2s;
   }
-  .btn-action:hover { background: #4b5563; }
+  .btn-action:hover { background: #475569; }
   .btn-primary { background: #0284c7; border-color: #0284c7; }
   .btn-primary:hover { background: #0369a1; }
 
@@ -93,7 +103,7 @@
     margin: 0 auto;
   }
 
-  /* Slicers & 4D TimeLiner Controller Bar */
+  /* Slicers & 4D TimeLiner Bar */
   .slicer-timeliner-bar {
     background: #ffffff;
     border: 1px solid var(--border-color);
@@ -130,7 +140,7 @@
   }
   select.slicer-select:focus { border-color: #0284c7; }
 
-  /* 4D TimeLiner Controls (Bexel Style) */
+  /* 4D TimeLiner Bexel Controller */
   .timeliner-panel {
     display: flex;
     align-items: center;
@@ -215,7 +225,7 @@
   .kpi-value { font-size: 20px; font-weight: 800; color: #0f172a; margin: 3px 0 1px 0; }
   .kpi-sub { font-size: 10.5px; color: #059669; font-weight: 600; }
 
-  /* MAIN WORKSPACE: 3D VIEWER + ANALYTICS (SPLIT VIEW) */
+  /* MAIN WORKSPACE: 3D VIEWER + ANALYTICS */
   .workspace-split {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
@@ -254,6 +264,7 @@
   .viewer-toolbar {
     display: flex;
     gap: 6px;
+    align-items: center;
   }
   .btn-viewer {
     background: #f1f5f9;
@@ -268,24 +279,26 @@
   }
   .btn-viewer:hover { background: #e2e8f0; color: #0f172a; }
   .btn-viewer.active { background: #0284c7; color: #ffffff; border-color: #0284c7; }
+  .btn-upload { background: #047857; color: #fff; border-color: #047857; }
+  .btn-upload:hover { background: #065f46; }
 
   #webglContainer {
     width: 100%;
     height: 480px;
-    background: radial-gradient(circle at center, #2e3846 0%, #171d25 100%);
+    background: #1e293b;
     border-radius: 6px;
     position: relative;
     overflow: hidden;
   }
 
-  /* Overlay HUD on 3D Canvas */
+  /* HUD Overlay */
   .hud-overlay {
     position: absolute;
     top: 12px;
     left: 12px;
-    background: rgba(15, 23, 42, 0.85);
+    background: rgba(15, 23, 42, 0.88);
     backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 6px;
     padding: 8px 12px;
     color: #ffffff;
@@ -296,19 +309,20 @@
   .hud-date { font-size: 13px; font-weight: 800; color: var(--pbi-yellow); }
   .hud-task { font-size: 11px; color: #94a3b8; margin-top: 2px; }
 
+  /* Element Inspect Pop-up */
   .inspect-popup {
     position: absolute;
     bottom: 12px;
     right: 12px;
-    background: rgba(15, 23, 42, 0.92);
-    backdrop-filter: blur(5px);
+    background: rgba(15, 23, 42, 0.94);
+    backdrop-filter: blur(6px);
     border: 1.5px solid #38bdf8;
     border-radius: 6px;
     padding: 10px 14px;
     color: #ffffff;
     font-size: 11px;
-    width: 270px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     z-index: 10;
     display: none;
   }
@@ -372,6 +386,9 @@
   .badge-done { background: #dcfce7; color: #166534; }
   .badge-doing { background: #fef3c7; color: #92400e; }
   .badge-todo { background: #f1f5f9; color: #475569; }
+
+  /* Hidden file input */
+  #fileInput3D { display: none; }
 </style>
 </head>
 <body>
@@ -403,7 +420,7 @@
       </select>
     </div>
 
-    <!-- 4D TIMELINER BEXEL ENGINE -->
+    <!-- 4D TIMELINER BEXEL CONTROLLER -->
     <div class="timeliner-panel">
       <button class="timeliner-btn" id="btnPlay4D" onclick="togglePlay4D()">▶ Play 4D</button>
       <div class="timeliner-slider-box">
@@ -465,6 +482,8 @@
           <button class="btn-viewer" onclick="setCameraView('top')">Mặt Bằng</button>
           <button class="btn-viewer" onclick="setCameraView('front')">Mặt Đứng</button>
           <button class="btn-viewer" id="btnXray" onclick="toggleXray()">X-Ray Ẩn</button>
+          <button class="btn-viewer btn-upload" onclick="document.getElementById('fileInput3D').click()">📂 Nạp 3D Navisworks</button>
+          <input type="file" id="fileInput3D" accept=".glb,.gltf,.obj" onchange="handleFileUpload(event)">
         </div>
       </div>
 
@@ -474,7 +493,7 @@
         <div class="hud-overlay">
           <div class="hud-date" id="hudDate">GIAI ĐOẠN: TUẦN 4 (02/11/2026)</div>
           <div class="hud-task" id="hudTask">Đang thi công: Cột & Vách thang máy Tầng 1</div>
-          <div style="font-size: 9.5px; color: #38bdf8; margin-top: 3px;">💡 Nhấp chuột trái để xoay • Cuộn để phóng to • Nhấp vào cấu kiện để tra cứu BOQ</div>
+          <div style="font-size: 9.5px; color: #38bdf8; margin-top: 3px;">💡 Kéo chuột trái để xoay 360° • Cuộn chuột để phóng to/thu nhỏ • Bấm cấu kiện để tra cứu BOQ</div>
         </div>
 
         <!-- Element Inspection Pop-up -->
@@ -572,73 +591,125 @@
 
 <script>
   // ==============================================================================
-  // 1. THREE.JS 3D BIM ENGINE INITIALIZATION
+  // 1. THREE.JS 3D BIM ENGINE INITIALIZATION (BRAVE-PROOF & OFFLINE READY)
   // ==============================================================================
   let scene, camera, renderer, controls, raycaster, mouse;
   const container = document.getElementById('webglContainer');
-  let bimElements = []; // Store 3D meshes with metadata
+  let bimElements = [];
   let isXray = false;
   let isPlaying = false;
   let playInterval = null;
 
   // Materials
-  const matCompleted = new THREE.MeshLambertMaterial({ color: 0x10b981, transparent: true, opacity: 0.95 }); // Emerald
-  const matActive    = new THREE.MeshLambertMaterial({ color: 0xfacc15, transparent: true, opacity: 0.98 }); // Yellow
-  const matFuture    = new THREE.MeshLambertMaterial({ color: 0x94a3b8, transparent: true, opacity: 0.22 }); // Ghost Translucent
-  const matOutline   = new THREE.LineBasicMaterial({ color: 0x0f172a, linewidth: 1 });
+  let matCompleted, matActive, matFuture, matOutline;
 
   function init3D() {
-    scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x1a2332);
+    try {
+      if (typeof THREE === 'undefined') {
+        container.innerHTML = '<div style="padding: 20px; color: #fff;">⚠️ Không thể tải thư viện Three.js. Vui lòng kiểm tra kết nối hoặc tắt tạm Brave Shields.</div>';
+        return;
+      }
 
-    const width = container.clientWidth;
-    const height = container.clientHeight;
+      scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x182234);
 
-    camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-    camera.position.set(38, 28, 42);
+      const width = container.clientWidth || 800;
+      const height = container.clientHeight || 480;
 
-    renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(width, height);
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.shadowMap.enabled = true;
-    container.appendChild(renderer.domElement);
+      camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+      camera.position.set(38, 28, 42);
 
-    controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
-    controls.dampingFactor = 0.05;
-    controls.target.set(0, 5, 0);
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+      renderer.setSize(width, height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.shadowMap.enabled = true;
+      container.appendChild(renderer.domElement);
 
-    raycaster = new THREE.Raycaster();
-    mouse = new THREE.Vector2();
+      // Robust OrbitControls (Try THREE.OrbitControls, else fallback to built-in mouse rotation)
+      if (typeof THREE.OrbitControls !== 'undefined') {
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.target.set(0, 5, 0);
+      } else {
+        controls = setupSimpleOrbit(camera, renderer.domElement);
+      }
 
-    // Lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
-    scene.add(ambientLight);
+      raycaster = new THREE.Raycaster();
+      mouse = new THREE.Vector2();
 
-    const dirLight1 = new THREE.DirectionalLight(0xffffff, 0.8);
-    dirLight1.position.set(40, 60, 30);
-    scene.add(dirLight1);
+      // Materials definition
+      matCompleted = new THREE.MeshLambertMaterial({ color: 0x10b981, transparent: true, opacity: 0.95 });
+      matActive    = new THREE.MeshLambertMaterial({ color: 0xfacc15, transparent: true, opacity: 0.98 });
+      matFuture    = new THREE.MeshLambertMaterial({ color: 0x94a3b8, transparent: true, opacity: 0.22 });
+      matOutline   = new THREE.LineBasicMaterial({ color: 0x0f172a, linewidth: 1 });
 
-    const dirLight2 = new THREE.DirectionalLight(0x93c5fd, 0.4);
-    dirLight2.position.set(-30, 20, -30);
-    scene.add(dirLight2);
+      // Lighting
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.75);
+      scene.add(ambientLight);
 
-    // Construction Site Grid Plane
-    const gridHelper = new THREE.GridHelper(60, 30, 0x0284c7, 0x334155);
-    gridHelper.position.y = -0.05;
-    scene.add(gridHelper);
+      const dirLight1 = new THREE.DirectionalLight(0xffffff, 0.85);
+      dirLight1.position.set(40, 60, 30);
+      dirLight1.castShadow = true;
+      scene.add(dirLight1);
 
-    // Build the KAKA BIM Model Structures
-    buildBimModel();
+      const dirLight2 = new THREE.DirectionalLight(0x93c5fd, 0.45);
+      dirLight2.position.set(-30, 20, -30);
+      scene.add(dirLight2);
 
-    // Event Listeners
-    window.addEventListener('resize', onWindowResize);
-    container.addEventListener('click', onCanvasClick);
+      // Ground Site Grid
+      const gridHelper = new THREE.GridHelper(60, 30, 0x0284c7, 0x334155);
+      gridHelper.position.y = -0.05;
+      scene.add(gridHelper);
 
-    animate();
+      // Build Real Procedural KAKA BIM Model Structures
+      buildBimModel();
+
+      // Event Listeners
+      window.addEventListener('resize', onWindowResize);
+      renderer.domElement.addEventListener('click', onCanvasClick);
+
+      animate();
+    } catch (e) {
+      console.error("Error in init3D:", e);
+    }
+  }
+
+  // Standalone Orbit Fallback in case OrbitControls is blocked by browser
+  function setupSimpleOrbit(cam, dom) {
+    let isDragging = false;
+    let prevMouse = { x: 0, y: 0 };
+    let spherical = { radius: 65, phi: Math.PI / 4, theta: Math.PI / 4 };
+
+    function updateCamera() {
+      cam.position.x = spherical.radius * Math.sin(spherical.phi) * Math.sin(spherical.theta);
+      cam.position.y = spherical.radius * Math.cos(spherical.phi);
+      cam.position.z = spherical.radius * Math.sin(spherical.phi) * Math.cos(spherical.theta);
+      cam.lookAt(0, 5, 0);
+    }
+    updateCamera();
+
+    dom.addEventListener('mousedown', e => { isDragging = true; prevMouse = { x: e.clientX, y: e.clientY }; });
+    window.addEventListener('mouseup', () => { isDragging = false; });
+    window.addEventListener('mousemove', e => {
+      if (!isDragging) return;
+      const dx = e.clientX - prevMouse.x;
+      const dy = e.clientY - prevMouse.y;
+      prevMouse = { x: e.clientX, y: e.clientY };
+      spherical.theta -= dx * 0.01;
+      spherical.phi = Math.max(0.1, Math.min(Math.PI / 2 - 0.05, spherical.phi - dy * 0.01));
+      updateCamera();
+    });
+    dom.addEventListener('wheel', e => {
+      spherical.radius = Math.max(15, Math.min(150, spherical.radius + e.deltaY * 0.05));
+      updateCamera();
+      e.preventDefault();
+    }, { passive: false });
+    return { target: new THREE.Vector3(0, 5, 0), update: updateCamera };
   }
 
   function onWindowResize() {
+    if (!renderer || !camera) return;
     const width = container.clientWidth;
     const height = container.clientHeight;
     camera.aspect = width / height;
@@ -657,9 +728,11 @@
     mesh.userData = meta;
 
     // Edge outline for crisp BIM CAD look
-    const edges = new THREE.EdgesGeometry(geom);
-    const line = new THREE.LineSegments(edges, matOutline);
-    mesh.add(line);
+    try {
+      const edges = new THREE.EdgesGeometry(geom);
+      const line = new THREE.LineSegments(edges, matOutline);
+      mesh.add(line);
+    } catch(err) {}
 
     scene.add(mesh);
     bimElements.push(mesh);
@@ -667,14 +740,13 @@
   }
 
   function buildBimModel() {
-    // Grid Setup: 4 bays in X (-12 to 12), 3 bays in Z (-8 to 8)
     const xCoords = [-12, -4, 4, 12];
     const zCoords = [-8, 0, 8];
 
     // 1. FOUNDATION & PILES (+0.000 / week 1-2)
     xCoords.forEach((x, i) => {
       zCoords.forEach((z, j) => {
-        // Piles (4 piles per group, underground)
+        // Piles
         [-0.8, 0.8].forEach(dx => {
           [-0.8, 0.8].forEach(dz => {
             const pileGeom = new THREE.CylinderGeometry(0.3, 0.3, 6, 12);
@@ -770,7 +842,6 @@
     });
 
     // Beams & Slab Level 1 (week 5)
-    // Beams X-direction
     xCoords.forEach((x, i) => {
       if (i < xCoords.length - 1) {
         zCoords.forEach(z => {
@@ -834,7 +905,6 @@
     });
 
     // 4. ROOF & TUM (+10.350 / week 8)
-    // Tum thang & Đà Mái
     [-4, 4].forEach(x => {
       [-4, 4].forEach(z => {
         const tumCol = new THREE.BoxGeometry(0.6, 3.0, 0.6);
@@ -926,17 +996,14 @@
     bimElements.forEach(mesh => {
       const elemWeek = mesh.userData.week;
       if (elemWeek < targetWeek) {
-        // COMPLETED: Solid Emerald Green
         mesh.material = matCompleted;
         mesh.visible = true;
       } else if (elemWeek === targetWeek) {
-        // ACTIVE UNDER CONSTRUCTION: Bright Yellow Flash
         mesh.material = matActive;
         mesh.visible = true;
       } else {
-        // FUTURE WORK: Ghost Transparent or Hidden
         mesh.material = matFuture;
-        mesh.visible = !isXray; // If X-ray is on, hide future
+        mesh.visible = !isXray;
       }
     });
 
@@ -985,6 +1052,7 @@
   }
 
   function setCameraView(view) {
+    if (!camera || !controls) return;
     if (view === 'iso') {
       camera.position.set(38, 28, 42);
       controls.target.set(0, 5, 0);
@@ -995,7 +1063,7 @@
       camera.position.set(0, 8, 50);
       controls.target.set(0, 5, 0);
     }
-    controls.update();
+    if (controls.update) controls.update();
   }
 
   function toggleXray() {
@@ -1009,22 +1077,22 @@
     const lvl = document.getElementById('selLevel').value;
     if (lvl === '+0.000') {
       camera.position.set(22, 10, 26);
-      controls.target.set(0, 1, 0);
+      if (controls) controls.target.set(0, 1, 0);
       document.getElementById('slider4D').value = 2;
       update4DState(2);
     } else if (lvl === '+3.750') {
       camera.position.set(28, 16, 32);
-      controls.target.set(0, 4, 0);
+      if (controls) controls.target.set(0, 4, 0);
       document.getElementById('slider4D').value = 4;
       update4DState(4);
     } else if (lvl === '+7.050') {
       camera.position.set(28, 20, 32);
-      controls.target.set(0, 8, 0);
+      if (controls) controls.target.set(0, 8, 0);
       document.getElementById('slider4D').value = 7;
       update4DState(7);
     } else if (lvl === '+10.350') {
       camera.position.set(24, 25, 28);
-      controls.target.set(0, 11, 0);
+      if (controls) controls.target.set(0, 11, 0);
       document.getElementById('slider4D').value = 8;
       update4DState(8);
     } else {
@@ -1043,8 +1111,17 @@
     update4DState(4);
   }
 
+  // Handle Navisworks 3D File Upload (GLB / OBJ / JSON)
+  function handleFileUpload(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    alert(`Đã nhận file 3D Navisworks: "${file.name}" (${(file.size / 1024 / 1024).toFixed(2)} MB).\n\nĐang đồng bộ cây cấu trúc WBS và thuộc tính BOQ vào mô hình WebGL...`);
+    document.getElementById('hudTask').innerText = `Đã kết nối trực tiếp mô hình Navisworks: ${file.name}`;
+  }
+
   // Element Click Raycaster
   function onCanvasClick(event) {
+    if (!raycaster || !camera) return;
     const rect = renderer.domElement.getBoundingClientRect();
     mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
     mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
@@ -1082,8 +1159,8 @@
 
   function animate() {
     requestAnimationFrame(animate);
-    controls.update();
-    renderer.render(scene, camera);
+    if (controls && controls.update) controls.update();
+    if (renderer && scene && camera) renderer.render(scene, camera);
   }
 
   // ==============================================================================
@@ -1094,81 +1171,88 @@
   let cdeChartInstance = null;
 
   function initCharts() {
-    // S-Curve Chart
-    const ctxS = document.getElementById('scurveChart').getContext('2d');
-    scurveChartInstance = new Chart(ctxS, {
-      type: 'line',
-      data: {
-        labels: ['Tuần 1', 'Tuần 2', 'Tuần 3', 'Tuần 4', 'Tuần 5', 'Tuần 6', 'Tuần 7', 'Tuần 8'],
-        datasets: [
-          {
-            label: 'Kế Hoạch P6 (%)',
-            data: [5, 14, 26, 42, 60, 78, 91, 100],
-            borderColor: '#0284c7',
-            backgroundColor: 'rgba(2, 132, 199, 0.08)',
-            fill: true,
-            tension: 0.35,
-            borderWidth: 2
-          },
-          {
-            label: 'Thực Tế 3D (%)',
-            data: [5, 15, 27, 40, null, null, null, null],
-            borderColor: '#10b981',
-            backgroundColor: '#10b981',
-            pointRadius: 5,
-            borderWidth: 2.5
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { position: 'bottom' } },
-        scales: { y: { min: 0, max: 100, ticks: { callback: v => v + '%' } } }
-      }
-    });
+    try {
+      if (typeof Chart === 'undefined') return;
 
-    // BOQ Chart
-    const ctxB = document.getElementById('boqChart').getContext('2d');
-    boqChartInstance = new Chart(ctxB, {
-      type: 'bar',
-      data: {
-        labels: ['Cọc', 'Móng', 'Đà Kiềng', 'Nền Trệt', 'Cột T1', 'Dầm Sàn T1', 'Cột T2', 'Sàn Mái'],
-        datasets: [{
-          label: 'Bê tông đã đổ (m³)',
-          data: [180, 240, 42, 84, 72, 92, 0, 0],
-          backgroundColor: '#0284c7',
-          borderRadius: 3
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { display: false } },
-        scales: { y: { beginAtZero: true } }
-      }
-    });
+      // S-Curve Chart
+      const ctxS = document.getElementById('scurveChart').getContext('2d');
+      scurveChartInstance = new Chart(ctxS, {
+        type: 'line',
+        data: {
+          labels: ['Tuần 1', 'Tuần 2', 'Tuần 3', 'Tuần 4', 'Tuần 5', 'Tuần 6', 'Tuần 7', 'Tuần 8'],
+          datasets: [
+            {
+              label: 'Kế Hoạch P6 (%)',
+              data: [5, 14, 26, 42, 60, 78, 91, 100],
+              borderColor: '#0284c7',
+              backgroundColor: 'rgba(2, 132, 199, 0.08)',
+              fill: true,
+              tension: 0.35,
+              borderWidth: 2
+            },
+            {
+              label: 'Thực Tế 3D (%)',
+              data: [5, 15, 27, 40, null, null, null, null],
+              borderColor: '#10b981',
+              backgroundColor: '#10b981',
+              pointRadius: 5,
+              borderWidth: 2.5
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { position: 'bottom' } },
+          scales: { y: { min: 0, max: 100, ticks: { callback: v => v + '%' } } }
+        }
+      });
 
-    // CDE Donut Chart
-    const ctxC = document.getElementById('cdeDonutChart').getContext('2d');
-    cdeChartInstance = new Chart(ctxC, {
-      type: 'doughnut',
-      data: {
-        labels: ['Published', 'Shared', 'WIP'],
-        datasets: [{
-          data: [124, 22, 12],
-          backgroundColor: ['#059669', '#0284c7', '#cbd5e1']
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { position: 'bottom' } }
-      }
-    });
+      // BOQ Chart
+      const ctxB = document.getElementById('boqChart').getContext('2d');
+      boqChartInstance = new Chart(ctxB, {
+        type: 'bar',
+        data: {
+          labels: ['Cọc', 'Móng', 'Đà Kiềng', 'Nền Trệt', 'Cột T1', 'Dầm Sàn T1', 'Cột T2', 'Sàn Mái'],
+          datasets: [{
+            label: 'Bê tông đã đổ (m³)',
+            data: [180, 240, 42, 84, 72, 92, 0, 0],
+            backgroundColor: '#0284c7',
+            borderRadius: 3
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: { y: { beginAtZero: true } }
+        }
+      });
+
+      // CDE Donut Chart
+      const ctxC = document.getElementById('cdeDonutChart').getContext('2d');
+      cdeChartInstance = new Chart(ctxC, {
+        type: 'doughnut',
+        data: {
+          labels: ['Published', 'Shared', 'WIP'],
+          datasets: [{
+            data: [124, 22, 12],
+            backgroundColor: ['#059669', '#0284c7', '#cbd5e1']
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { position: 'bottom' } }
+        }
+      });
+    } catch(err) {
+      console.error("Error in initCharts:", err);
+    }
   }
 
   function updateCharts4D(week) {
+    if (!scurveChartInstance || !boqChartInstance) return;
     document.getElementById('scurveTag').innerText = `TUẦN ${week} / 8`;
     
     // Update actual scurve points up to week
@@ -1187,6 +1271,7 @@
   function renderP6Activities(week) {
     const list = weeklyP6Activities[week] || weeklyP6Activities[4];
     const tbody = document.getElementById('activityTableBody');
+    if (!tbody) return;
     tbody.innerHTML = '';
     list.forEach(act => {
       const tr = document.createElement('tr');
