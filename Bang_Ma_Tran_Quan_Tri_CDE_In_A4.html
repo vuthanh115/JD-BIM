@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Bảng Ma Trận Quản Trị CDE - Chuẩn ISO 19650</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    color: #0f172a;
+    background-color: #ffffff;
+    font-size: 8.8pt;
+    line-height: 1.4;
+  }
+  .page {
+    width: 210mm;
+    height: 297mm;
+    padding: 10mm 12mm 10mm 12mm;
+    box-sizing: border-box;
+    position: relative;
+    background: #ffffff;
+    overflow: hidden;
+  }
+
+  /* Header Bar */
+  .header-card {
+    background: linear-gradient(135deg, #0b1f3a 0%, #1e3a8a 60%, #0369a1 100%);
+    border-radius: 6px;
+    padding: 10px 14px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 9px;
+    border-left: 6px solid #38bdf8;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  }
+  .header-title-box h1 {
+    font-size: 13.5pt;
+    font-weight: 800;
+    margin: 0 0 3px 0;
+    letter-spacing: 0.3px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  .header-title-box p {
+    font-size: 8.5pt;
+    margin: 0;
+    color: #bae6fd;
+    font-weight: 500;
+  }
+  .header-badge-box {
+    text-align: right;
+  }
+  .badge-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 7.6pt;
+    font-weight: 700;
+    color: #f0f9ff;
+    letter-spacing: 0.5px;
+  }
+  .badge-sub {
+    font-size: 7pt;
+    color: #cbd5e1;
+    margin-top: 3px;
+  }
+
+  /* Top Notice Callout */
+  .callout-box {
+    background: #fffbeb;
+    border-left: 4.5px solid #d97706;
+    border-radius: 4px;
+    padding: 7px 11px;
+    margin-bottom: 9px;
+    border-right: 1px solid #fef3c7;
+    border-top: 1px solid #fef3c7;
+    border-bottom: 1px solid #fef3c7;
+  }
+  .callout-title {
+    font-size: 8.4pt;
+    font-weight: 800;
+    color: #92400e;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+  }
+  .callout-text {
+    font-size: 8pt;
+    color: #78350f;
+    line-height: 1.35;
+    margin: 0;
+  }
+
+  /* Core Table */
+  table.matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.2pt;
+    margin-bottom: 10px;
+    border: 1.5px solid #0f2b48;
+  }
+  table.matrix-table th {
+    background: #0f2b48;
+    color: #ffffff;
+    padding: 7px 8px;
+    font-weight: 700;
+    text-align: left;
+    border: 1px solid #0f2b48;
+    font-size: 8.3pt;
+  }
+  table.matrix-table td {
+    padding: 8px 8px;
+    border: 1px solid #cbd5e1;
+    vertical-align: top;
+    line-height: 1.38;
+  }
+  
+  .col-1 { 
+    width: 18%; 
+    font-weight: 800; 
+    color: #0f2b48; 
+    background: #f8fafc;
+    border-right: 1.5px solid #cbd5e1;
+  }
+  .col-2 { 
+    width: 22%; 
+    color: #475569; 
+    background: #ffffff;
+  }
+  .col-3 { 
+    width: 35%; 
+    color: #0f172a; 
+    background: #ffffff;
+  }
+  .col-4 { 
+    width: 25%; 
+    color: #065f46; 
+    background: #f0fdf4;
+    border-left: 1.5px solid #a7f3d0;
+  }
+
+  .col-1-title {
+    font-size: 8.5pt;
+    color: #1e3a8a;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  ul.table-list {
+    margin: 3px 0 0 0;
+    padding-left: 14px;
+  }
+  ul.table-list li {
+    margin-bottom: 3px;
+  }
+
+  .badge-acc { color: #0284c7; font-weight: 700; }
+  .badge-tc { color: #d97706; font-weight: 700; }
+  .badge-dalux { color: #059669; font-weight: 700; }
+
+  /* Bottom Tips Section */
+  .bottom-card {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 9px 12px;
+  }
+  .bottom-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+    border-bottom: 1.5px solid #cbd5e1;
+    padding-bottom: 4px;
+  }
+  .bottom-title {
+    font-size: 8.8pt;
+    font-weight: 800;
+    color: #0f2b48;
+    text-transform: uppercase;
+  }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+  }
+  .tip-box {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 6px 8px;
+  }
+  .tip-box-title {
+    font-size: 7.9pt;
+    font-weight: 800;
+    color: #1e3a8a;
+    margin-bottom: 3px;
+    display: block;
+  }
+  .tip-box-desc {
+    font-size: 7.4pt;
+    color: #334155;
+    line-height: 1.35;
+    margin: 0;
+  }
+
+  /* Footer */
+  .page-footer {
+    position: absolute;
+    bottom: 5mm;
+    left: 12mm;
+    right: 12mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #cbd5e1;
+    padding-top: 4px;
+    font-size: 7.2pt;
+    color: #64748b;
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <!-- HEADER -->
+  <div class="header-card">
+    <div class="header-title-box">
+      <h1>MA TRẬN NÂNG CẤP NĂNG LỰC QUẢN TRỊ CDE • CHUẨN ISO 19650</h1>
+      <p>Tài liệu in nhanh (Cheat Sheet) phục vụ Phỏng vấn Vị trí Trưởng phòng BIM / Giám đốc BIM</p>
+    </div>
+    <div class="header-badge-box">
+      <span class="badge-tag">EXECUTIVE CHEAT SHEET</span>
+      <div class="badge-sub">ACC • TRIMBLE CONNECT • DALUX</div>
+    </div>
+  </div>
+
+  <!-- CALLOUT -->
+  <div class="callout-box">
+    <div class="callout-title">
+      <span>🎯 NGUYÊN TẮC CỐT LÕI: TỪ "NGƯỜI DÙNG MỞ FILE" (30%) SANG "NHÀ THIẾT LẬP QUY TẮC" (70%)</span>
+      <span style="font-size: 7.2pt; background: #fde68a; padding: 1px 6px; border-radius: 3px; color: #92400e;">BẢN CHẤT QUẢN TRỊ</span>
+    </div>
+    <p class="callout-text">
+      Nhà tuyển dụng cấp cao không hỏi cách thao tác bấm nút gộp mô hình (Combine). Giá trị của Trưởng phòng BIM nằm ở <b>tư duy quy trình (Workflow)</b> và <b>thiết lập quy tắc quản trị (Governance)</b>: kiểm soát trạng thái dữ liệu, phân quyền ma trận, tự động hóa luồng ký duyệt và quản lý lỗi BCF liên thông giữa các bên.
+    </p>
+  </div>
+
+  <!-- BẢNG CHÍNH -->
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th style="width: 18%;">Tính Năng CDE</th>
+        <th style="width: 21%;">Mức Độ Đã Làm<br><span style="font-weight: normal; font-size: 7.4pt; opacity: 0.9;">(30% - User / Kỹ sư)</span></th>
+        <th style="width: 36%;">Mức Trưởng Phòng BIM Cần Nắm<br><span style="font-weight: normal; font-size: 7.4pt; opacity: 0.9;">(70% - Admin / Quản trị hệ thống)</span></th>
+        <th style="width: 25%;">Từ Khóa "Ăn Tiền"<br><span style="font-weight: normal; font-size: 7.4pt; opacity: 0.9;">(ACC & Trimble & Dalux)</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- HÀNG 1 -->
+      <tr>
+        <td class="col-1">
+          <span class="col-1-title">1. Cấu Trúc Thư Mục & Trạng Thái Dữ Liệu</span>
+          <span style="font-size: 7pt; color: #64748b; font-weight: normal;">(ISO 19650 Common Data Environment)</span>
+        </td>
+        <td class="col-2">
+          Tải file lên thư mục có sẵn của dự án để xem, tải về và gộp (combine) mô hình.
+        </td>
+        <td class="col-3">
+          <b>Quy hoạch 4 phân khu dữ liệu chuẩn ISO 19650:</b>
+          <ul class="table-list">
+            <li><b>WIP (Work in Progress):</b> Đang thực hiện nội bộ từng bộ môn.</li>
+            <li><b>Shared:</b> Chia sẻ phối hợp liên bộ môn (Kiến trúc, Kết cấu, MEP).</li>
+            <li><b>Published:</b> Đã duyệt chính thức phát hành cho TVGS, Nhà thầu thi công.</li>
+            <li><b>Archive:</b> Đóng băng lưu trữ lịch sử pháp lý của dự án.</li>
+          </ul>
+        </td>
+        <td class="col-4">
+          • <span class="badge-acc">ACC:</span> <i>Naming Standard</i> (ép chuẩn tên file, sai chuẩn rơi vào <i>Holding Area</i>).<br><br>
+          • <span class="badge-tc">Trimble:</span> <i>Folder Template & Releases</i>.<br><br>
+          • <span class="badge-dalux">Dalux:</span> <i>Box Pro Published Folders</i>.
+        </td>
+      </tr>
+
+      <!-- HÀNG 2 -->
+      <tr>
+        <td class="col-1">
+          <span class="col-1-title">2. Ma Trận Phân Quyền</span>
+          <span style="font-size: 7pt; color: #64748b; font-weight: normal;">(Permission Matrix)</span>
+        </td>
+        <td class="col-2">
+          Đăng nhập bằng tài khoản được cấp quyền sẵn để truy cập file dự án.
+        </td>
+        <td class="col-3">
+          <b>Phân quyền ma trận theo Vai trò (Role) và Đơn vị (Company):</b>
+          <ul class="table-list">
+            <li><b>Thầu phụ MEP:</b> Chỉ thấy thư mục riêng của mình (View/Upload).</li>
+            <li><b>Chủ trì Kết cấu:</b> Quyền Edit/Manage trong phân khu WIP nội bộ.</li>
+            <li><b>Hiện trường / QS:</b> Quyền View Only tại thư mục Published đã duyệt.</li>
+          </ul>
+        </td>
+        <td class="col-4">
+          • <span class="badge-acc">ACC:</span> <i>5 Permission Levels</i> (View ➔ Download ➔ Markup ➔ Upload ➔ Edit/Manage).<br><br>
+          • <span class="badge-tc">Trimble:</span> <i>User Groups & Access Control</i>.<br><br>
+          • <span class="badge-dalux">Dalux:</span> <i>User Roles & User Groups</i>.
+        </td>
+      </tr>
+
+      <!-- HÀNG 3 -->
+      <tr>
+        <td class="col-1">
+          <span class="col-1-title">3. Luồng Phê Duyệt Hồ Sơ</span>
+          <span style="font-size: 7pt; color: #64748b; font-weight: normal;">(Approval Workflows)</span>
+        </td>
+        <td class="col-2">
+          Xem bản vẽ 2D/3D trên viewer để kiểm tra kỹ thuật và phản hồi thủ công.
+        </td>
+        <td class="col-3">
+          <b>Thiết lập luồng trình ký tự động trên mây:</b><br>
+          <b>Modeler</b> nộp file (WIP) ➔ <b>Chủ trì bộ môn</b> kiểm tra (Review) ➔ <b>BIM Manager</b> phê duyệt (Approve) ➔ <i>Hệ thống tự động copy file sang thư mục Published kèm chữ ký số/con dấu Approved.</i>
+        </td>
+        <td class="col-4">
+          • <span class="badge-acc">ACC:</span> <i>Reviews Module</i> (Setup luồng duyệt 1, 2, 3 bước; Auto-copy to Published).<br><br>
+          • <span class="badge-tc">Trimble:</span> <i>Releases & ToDos Tracking</i>.<br><br>
+          • <span class="badge-dalux">Dalux:</span> <i>Comments, Tasks & Release Flow</i>.
+        </td>
+      </tr>
+
+      <!-- HÀNG 4 -->
+      <tr>
+        <td class="col-1">
+          <span class="col-1-title">4. Quản Lý Lỗi & Phối Hợp</span>
+          <span style="font-size: 7pt; color: #64748b; font-weight: normal;">(Issue / BCF Management)</span>
+        </td>
+        <td class="col-2">
+          Bật tắt các model bộ môn để mắt thường soi va chạm (Visual Clash).
+        </td>
+        <td class="col-3">
+          <b>Quản lý vòng đời phối hợp (Issue Lifecycle):</b><br>
+          Khoanh vùng đám mây (Markup), ghim Issue gắn tọa độ camera 3D, chỉ định đích danh cá nhân phụ trách, ấn định hạn xử lý (Due date) và <i>đồng bộ 2 chiều về phần mềm tác nghiệp (Revit/Tekla/Navis) bằng chuẩn mở BCF</i>.
+        </td>
+        <td class="col-4">
+          • <span class="badge-acc">ACC:</span> <i>Issues & Model Coordination</i>.<br><br>
+          • <span class="badge-tc">Trimble:</span> <i>BCF Topics Sync</i> (mở thẳng góc nhìn Revit/Tekla).<br><br>
+          • <span class="badge-dalux">Dalux:</span> <i>BIM Issues & Capture Tasks</i>.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- TÓM TẮT TRẢ LỜI PHỎNG VẤN -->
+  <div class="bottom-card">
+    <div class="bottom-header">
+      <span style="font-size: 10pt;">💡</span>
+      <span class="bottom-title">BỘ 3 NGUYÊN TẮC "GHI ĐIỂM" KHI HỘI ĐỒNG HỎI VỀ KINH NGHIỆM ADMIN CDE</span>
+    </div>
+    <div class="grid-3">
+      <div class="tip-box">
+        <span class="tip-box-title">1. Không thừa nhận thụ động</span>
+        <p class="tip-box-desc">
+          Tránh câu: <i>"Em mới chỉ dùng xem file và combine"</i>. Hãy trả lời: <i>"Tôi đã khai thác CDE giải quyết bài toán cốt lõi nhất: Federated Model, đối chiếu 2D/3D kiểm duyệt Shop Drawing và bóc tách BOQ."</i>
+        </p>
+      </div>
+      <div class="tip-box">
+        <span class="tip-box-title">2. Nhấn mạnh ISO 19650</span>
+        <p class="tip-box-desc">
+          Khẳng định vai trò Trưởng phòng BIM là <b>ra đề bài quy trình</b>: quy hoạch 4 vùng dữ liệu (WIP - Archive), ma trận phân quyền Role-based, và luồng duyệt tự động (Admin kỹ thuật hãng luôn hỗ trợ setup).
+        </p>
+      </div>
+      <div class="tip-box">
+        <span class="tip-box-title">3. Tích hợp Open API & CSDL</span>
+        <p class="tip-box-desc">
+          Đưa ra định hướng vượt trội: Kết nối CSDL SQL nội bộ với Cloud CDE thông qua Open API và chuẩn BCF để tự động hóa tiến độ, chất lượng và phục vụ Dashboard Ban Lãnh đạo.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="page-footer">
+    <span>KAKA BIM MANAGEMENT FRAMEWORK • CDE ISO 19650 GOVERNANCE CHEAT SHEET</span>
+    <span>Trang 1 / 1 (Khổ A4 In Nhanh)</span>
+  </div>
+</div>
+
+</body>
+</html>

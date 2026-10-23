@@ -1,0 +1,15 @@
+﻿Category_Code,Category_Name,Zone_Group,English_Name,Standard_Duration_Days
+01.Coc,Cọc Ly Tâm & Đài Cọc,Kết Cấu Phần Ngầm,Foundation & Piles,10
+02.Mong,Móng Bê Tông Cốt Thép,Kết Cấu Phần Ngầm,Footings / Raft,12
+03.DaKieng,Đà Kiềng & Giằng Móng,Kết Cấu Phần Ngầm,Tie Beams,8
+04.Nen,Nền & Lớp Lót BTXM,Kết Cấu Tầng Trệt,Slab on Grade,15
+05.Cot,Cột Bê Tông Cốt Thép,Kết Cấu Thân,Columns,10
+06.Vach,Vách Thang Máy & Vách Cứng,Kết Cấu Thân,Shear Walls,8
+07.Dam,Dầm Khung Kết Cấu,Kết Cấu Thân,Framing Beams,9
+08.San,Sàn Sườn & Sàn Nấm BTCT,Kết Cấu Thân,Structural Slabs,12
+09.CauThang,Cầu Thang Bộ Bộ Môn Kết Cấu,Giao Thông Đứng,Stairs,6
+10.TamCap,Tam Cấp & Bậc Cửa,Hạng Mục Phụ,Entrance Steps,4
+11.Ramp,Ramp Dốc Tầng Hầm & Dock,Giao Thông Ngầm,Access Ramps,5
+12.Pit,Hố Pit Thang Máy & Bể Nước,Kết Cấu Ngầm Đặc Biệt,Elevator Pits,4
+13.Dock,Sàn Dock Tải Hàng,Khu Vực Phụ Trợ,Loading Docks,5
+14.CauKienPhu,Cấu Kiện Phụ & Gờ Bê Tông,Chi Tiết Kiến Trúc/Kết Cấu,Secondary Works,4

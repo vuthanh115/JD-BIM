@@ -1,0 +1,63 @@
+// ==============================================================================
+// BỘ CÔNG THỨC DAX CHUYÊN SÂU DÀNH CHO DASHBOARD KAKA BIM 4D / 5D / CDE
+// ==============================================================================
+
+// 1. NHÓM TIẾN ĐỘ 4D (SCHEDULE & EARNED VALUE)
+// ------------------------------------------------------------------------------
+[Tổng Số Công Tác] = COUNTROWS('Fact_Schedule_4D')
+
+[Số Công Tác Đường Găng CPM] = 
+CALCULATE(
+    COUNTROWS('Fact_Schedule_4D'), 
+    'Fact_Schedule_4D'[Is_Critical_Path] = "Có (Đường Găng CPM)"
+)
+
+[% Tiến Độ Hoàn Thành Bình Quân] = 
+AVERAGE('Fact_Schedule_4D'[Percent_Complete])
+
+[Tổng Thời Gian Thi Công (Ngày)] = 
+SUM('Fact_Schedule_4D'[Duration_Days])
+
+[Chỉ Số Hiệu Suất Tiến Độ SPI] = 
+DIVIDE(
+    [% Tiến Độ Hoàn Thành Bình Quân], 
+    100, 
+    1.0
+)
+
+// 2. NHÓM KHỐI LƯỢNG & CHI PHÍ 5D (BOQ & COST)
+// ------------------------------------------------------------------------------
+[Tổng Cấu Kiện BIM] = COUNTROWS('Dim_BIM_Elements')
+
+[Tổng Khối Lượng Bê Tông (m3)] = 
+SUM('Dim_BIM_Elements'[Volume_m3])
+
+[Tổng Khối Lượng Cốt Thép (Tấn)] = 
+DIVIDE(SUM('Dim_BIM_Elements'[Rebar_Weight_kg]), 1000, 0)
+
+[Hàm Lượng Cốt Thép Bình Quân (kg/m3)] = 
+DIVIDE(
+    SUM('Dim_BIM_Elements'[Rebar_Weight_kg]), 
+    [Tổng Khối Lượng Bê Tông (m3)], 
+    0
+)
+
+[Tổng Dự Toán Cấu Kiện (Tỷ VNĐ)] = 
+DIVIDE(SUM('Dim_BIM_Elements'[Estimated_Cost_VND]), 1000000000, 0)
+
+// 3. NHÓM QUẢN TRỊ CDE & CHẤT LƯỢNG (ISO 19650)
+// ------------------------------------------------------------------------------
+[Tổng Bản Vẽ Shop Đăng Ký] = 
+SUM('Fact_CDE_Quality'[Total_Shop_Drawings])
+
+[Bản Vẽ Đã Duyệt Published] = 
+SUM('Fact_CDE_Quality'[Drawings_Approved_Published])
+
+[% Tỷ Lệ Bản Vẽ Sẵn Sàng Ra Công Trường] = 
+DIVIDE([Bản Vẽ Đã Duyệt Published], [Tổng Bản Vẽ Shop Đăng Ký], 0) * 100
+
+[Tổng Số Lỗi BCF Còn Mở (Open Issues)] = 
+SUM('Fact_CDE_Quality'[Open_BCF_Issues])
+
+[% Tỷ Lệ Giải Quyết Va Chạm] = 
+AVERAGE('Fact_CDE_Quality'[Issue_Closure_Rate_Pct])

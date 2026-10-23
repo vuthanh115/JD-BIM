@@ -1,0 +1,605 @@
+import os
+from weasyprint import HTML
+
+html_content = """<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Chiến Lược Tích Hợp CDE Open API (ACC • Trimble Connect • Dalux) & KAKA Data Hub</title>
+<style>
+    @page {
+        size: A4 portrait;
+        margin: 0;
+        @bottom-right {
+            content: "Trang " counter(page) " / " counter(pages);
+            font-size: 7.5pt;
+            color: #64748b;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            padding-right: 12mm;
+            padding-bottom: 8mm;
+        }
+        @bottom-left {
+            content: "BIM Director Executive Strategy • KAKA Open API Middleware Architecture";
+            font-size: 7.5pt;
+            color: #64748b;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            padding-left: 12mm;
+            padding-bottom: 8mm;
+        }
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+        color: #0f172a;
+        background: #fff;
+        font-size: 8.2pt;
+        line-height: 1.4;
+    }
+
+    .page {
+        width: 210mm;
+        height: 297mm;
+        padding: 10mm 12mm 10mm 12mm;
+        page-break-after: always;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .page:last-child {
+        page-break-after: auto;
+    }
+
+    /* Header */
+    .doc-header {
+        border-bottom: 2px solid #0284c7;
+        padding-bottom: 6px;
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .doc-brand {
+        font-size: 8.5pt;
+        font-weight: 800;
+        color: #0369a1;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    .doc-sub {
+        font-size: 7.5pt;
+        color: #64748b;
+        font-weight: 600;
+    }
+
+    /* Titles */
+    .title-banner {
+        background: #0f172a;
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .title-banner h1 {
+        font-size: 14pt;
+        font-weight: 800;
+        color: #38bdf8;
+        margin-bottom: 3px;
+        letter-spacing: -0.2px;
+    }
+
+    .title-banner p {
+        font-size: 8pt;
+        color: #cbd5e1;
+        line-height: 1.35;
+    }
+
+    .section-title {
+        font-size: 9.5pt;
+        font-weight: 700;
+        color: #0f172a;
+        border-left: 3.5px solid #0284c7;
+        padding-left: 6px;
+        margin: 8px 0 5px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 1.5px 6px;
+        border-radius: 3px;
+        font-size: 6.8pt;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .badge-blue { background: #e0f2fe; color: #0369a1; }
+    .badge-green { background: #dcfce7; color: #15803d; }
+    .badge-amber { background: #fef3c7; color: #b45309; }
+    .badge-purple { background: #f3e8ff; color: #6b21a8; }
+    .badge-navy { background: #0f172a; color: #fff; }
+
+    /* Tables */
+    table.data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 7.3pt;
+        margin-bottom: 6px;
+    }
+
+    table.data-table th {
+        background: #0f172a;
+        color: #fff;
+        padding: 4px 6px;
+        border: 1px solid #334155;
+        font-weight: 700;
+        text-align: left;
+    }
+
+    table.data-table td {
+        padding: 3.5px 6px;
+        border: 1px solid #cbd5e1;
+        vertical-align: top;
+    }
+
+    table.data-table tr:nth-child(even) td {
+        background: #f8fafc;
+    }
+
+    /* Grids & Cards */
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+
+    .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    .card {
+        border: 1px solid #cbd5e1;
+        border-radius: 4px;
+        padding: 7px 8px;
+        background: #fff;
+    }
+
+    .card-header {
+        font-weight: 700;
+        font-size: 8.2pt;
+        margin-bottom: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card-acc { background: #f0f9ff; border-color: #bae6fd; }
+    .card-trimble { background: #f0fdf4; border-color: #bbf7d0; }
+    .card-dalux { background: #faf5ff; border-color: #e9d5ff; }
+
+    ul.check-list {
+        list-style: none;
+        padding-left: 0;
+        font-size: 7.4pt;
+    }
+
+    ul.check-list li {
+        position: relative;
+        padding-left: 11px;
+        margin-bottom: 2.5px;
+        color: #334155;
+    }
+
+    ul.check-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 0;
+        color: #0284c7;
+        font-weight: 700;
+        font-size: 6.8pt;
+    }
+
+    /* Code snippet */
+    .code-box {
+        font-family: Consolas, Monaco, monospace;
+        font-size: 6.8pt;
+        background: #0f172a;
+        color: #38bdf8;
+        padding: 6px 8px;
+        border-radius: 4px;
+        line-height: 1.35;
+        white-space: pre-wrap;
+        margin-top: 4px;
+    }
+
+    /* Architecture Diagram Box */
+    .arch-box {
+        background: #f8fafc;
+        border: 1.5px dashed #0284c7;
+        border-radius: 6px;
+        padding: 8px 10px;
+        margin-bottom: 8px;
+    }
+
+    .arch-flow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 7.2pt;
+        text-align: center;
+        gap: 4px;
+    }
+
+    .flow-node {
+        background: #fff;
+        border: 1.2px solid #cbd5e1;
+        border-radius: 4px;
+        padding: 6px 6px;
+        flex: 1;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .flow-arrow {
+        color: #0284c7;
+        font-weight: 900;
+        font-size: 10pt;
+    }
+
+    .flow-node strong {
+        display: block;
+        color: #0f172a;
+        font-size: 7.8pt;
+        margin-bottom: 1px;
+    }
+
+    .kpi-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+
+    .kpi-box {
+        background: #f1f5f9;
+        border: 1px solid #cbd5e1;
+        border-radius: 4px;
+        padding: 6px;
+        text-align: center;
+    }
+
+    .kpi-num {
+        font-size: 12pt;
+        font-weight: 800;
+        color: #0284c7;
+        line-height: 1.1;
+    }
+
+    .kpi-lbl {
+        font-size: 6.2pt;
+        font-weight: 700;
+        color: #64748b;
+        text-transform: uppercase;
+    }
+</style>
+</head>
+<body>
+
+<!-- ==========================================================================
+     TRANG 1: KIẾN TRÚC TỔNG THỂ & GIẢI PHÁP TÍCH HỢP 3 NỀN TẢNG CDE
+     ========================================================================== -->
+<div class="page">
+    <div>
+        <div class="doc-header">
+            <span class="doc-brand">KAKA BIM DATA HUB • ENTERPRISE DIGITAL TRANSFORMATION</span>
+            <span class="doc-sub">CHIẾN LƯỢC TÍCH HỢP ĐA NỀN TẢNG CDE QUA OPEN API • TRANG 1 / 2</span>
+        </div>
+
+        <div class="title-banner">
+            <h1>GIẢI PHÁP TÍCH HỢP DỮ LIỆU CSDL NỘI BỘ LÊN 3 NỀN TẢNG CDE</h1>
+            <p>Xây dựng tầng trung gian KAKA Open API Middleware kết nối hai chiều giữa Cơ sở dữ liệu Dự án (SQL Server / SQLite P6) với Autodesk Construction Cloud (ACC), Trimble Connect và Dalux Build.</p>
+        </div>
+
+        <!-- 4 KPI Metrics -->
+        <div class="kpi-row">
+            <div class="kpi-num-box kpi-box">
+                <div class="kpi-num">100% TỰ ĐỘNG</div>
+                <div class="kpi-lbl">Đồng Bộ 2 Chiều REST API</div>
+            </div>
+            <div class="kpi-num-box kpi-box">
+                <div class="kpi-num">ISO 19650</div>
+                <div class="kpi-lbl">Phân Quyền &amp; Luồng CDE Chuẩn</div>
+            </div>
+            <div class="kpi-num-box kpi-box">
+                <div class="kpi-num">-80% THAO TÁC</div>
+                <div class="kpi-lbl">Cắt Giảm Nhập Liệu Thủ Công</div>
+            </div>
+            <div class="kpi-num-box kpi-box">
+                <div class="kpi-num">REAL-TIME</div>
+                <div class="kpi-lbl">Dashboard Ban Tổng Giám Đốc</div>
+            </div>
+        </div>
+
+        <!-- SƠ ĐỒ KIẾN TRÚC DỮ LIỆU -->
+        <div class="section-title">
+            <span>🏛️ Sơ Đồ Kiến Trúc Luồng Dữ Liệu Tự Động (Data Pipeline Architecture)</span>
+            <span class="badge badge-blue">Enterprise Pipeline</span>
+        </div>
+        <div class="arch-box">
+            <div class="arch-flow">
+                <div class="flow-node">
+                    <strong>1. REVIT &amp; DESIGN</strong>
+                    Bóc tách khối lượng BOQ, phân chia WBS, Floor &amp; Zone.
+                </div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-node" style="border-color: #0284c7; background: #f0f9ff;">
+                    <strong style="color: #0284c7;">2. KAKA DATA HUB</strong>
+                    ETL Engine, SQLite / SQL Server, P6 CPM Scheduling.
+                </div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-node">
+                    <strong>3. OPEN API ENGINE</strong>
+                    OAuth 2.0, REST API, JSON Payload, Batch Processing.
+                </div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-node" style="border-color: #059669; background: #f0fdf4;">
+                    <strong style="color: #059669;">4. CDE CLOUD HUBS</strong>
+                    ACC (BIM 360) • Trimble Connect • Dalux Build.
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 NỀN TẢNG CDE CHI TIẾT -->
+        <div class="section-title">
+            <span>⚡ Cơ Chế Kỹ Thuật Kết Nối 3 Nền Tảng CDE Đám Mây</span>
+            <span class="badge badge-navy">Cloud Integration</span>
+        </div>
+        <div class="grid-3">
+            <!-- 1. ACC -->
+            <div class="card card-acc">
+                <div class="card-header">
+                    <span style="color: #0369a1;">1. AUTODESK ACC</span>
+                    <span class="badge badge-blue">APS / Forge API</span>
+                </div>
+                <ul class="check-list">
+                    <li><strong>Giao thức:</strong> Autodesk Platform Services (APS) OAuth 2.0 2-Legged Authentication.</li>
+                    <li><strong>Dữ liệu đẩy:</strong> Đồng bộ trạng thái thi công vào Custom Properties của BIM Viewer; tự động tạo danh sách <em>Issues / Submittals</em> theo mốc WBS P6.</li>
+                    <li><strong>Điểm mạnh:</strong> Worksharing Revit cực mượt, kiểm duyệt thiết kế Design Collaboration.</li>
+                </ul>
+            </div>
+
+            <!-- 2. Trimble Connect -->
+            <div class="card card-trimble">
+                <div class="card-header">
+                    <span style="color: #15803d;">2. TRIMBLE CONNECT</span>
+                    <span class="badge badge-green">.NET SDK / REST</span>
+                </div>
+                <ul class="check-list">
+                    <li><strong>Giao thức:</strong> Trimble Connect Workspace REST API &amp; bộ thư viện C# <em>Trimble.Connect.Client</em>.</li>
+                    <li><strong>Dữ liệu đẩy:</strong> Gán trạng thái lắp dựng (Fabrication / Erected) vào GUID cấu kiện; tự động sinh danh mục <em>Tasks / ToDo</em>.</li>
+                    <li><strong>Điểm mạnh:</strong> Tối ưu tuyệt đối cho Kết cấu thép (Tekla), bản vẽ Shop &amp; OpenBIM IFC nhẹ.</li>
+                </ul>
+            </div>
+
+            <!-- 3. Dalux -->
+            <div class="card card-dalux">
+                <div class="card-header">
+                    <span style="color: #6b21a8;">3. DALUX BUILD</span>
+                    <span class="badge badge-purple">Dalux Build API</span>
+                </div>
+                <ul class="check-list">
+                    <li><strong>Giao thức:</strong> Dalux Build REST API qua HTTPS Header <code>X-API-KEY</code> &amp; JSON payload.</li>
+                    <li><strong>Dữ liệu đẩy:</strong> Tự động tạo <em>Tasks thi công</em> cho thầu phụ; kích hoạt sẵn <em>Checklists nghiệm thu số</em> theo tiến độ hoàn thành trong SQL.</li>
+                    <li><strong>Điểm mạnh:</strong> Ứng dụng hiện trường (Mobile BIM), nghiệm thu và quản lý lỗi thực tế tốt nhất.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- BẢNG ĐỐI CHIẾU THỰC THI -->
+        <div class="section-title">
+            <span>📋 Bảng So Sánh Các Trường Dữ Liệu Đồng Bộ Giữa SQL &amp; CDE</span>
+            <span class="badge badge-amber">Field Mapping</span>
+        </div>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th style="width: 22%;">Trường Dữ Liệu SQL (KAKA Hub)</th>
+                    <th style="width: 26%;">Autodesk Construction Cloud (ACC)</th>
+                    <th style="width: 26%;">Trimble Connect</th>
+                    <th style="width: 26%;">Dalux Build</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Mã WBS &amp; Tên công việc</strong><br><code>task_code / task_name</code></td>
+                    <td>ACC Project Issues ➔ <em>Title &amp; Root Cause</em></td>
+                    <td>Trimble Workspace Task ➔ <em>Label &amp; Subject</em></td>
+                    <td>Dalux Work Package ➔ <em>Task Name</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Thời hạn kế hoạch</strong><br><code>early_start_date / early_end_date</code></td>
+                    <td>Custom Attribute ➔ <em>Start Date &amp; Due Date</em></td>
+                    <td>Task Properties ➔ <em>startDate &amp; dueDate</em></td>
+                    <td>Task Metadata ➔ <em>Deadline Date</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Khối lượng &amp; Đơn vị tính</strong><br><code>target_work_qty / unit_code</code></td>
+                    <td>Assets Module ➔ <em>Specification Quantity</em></td>
+                    <td>Property Set (Pset) ➔ <em>BOQ Volume / Weight</em></td>
+                    <td>Checklist Item ➔ <em>Inspection Quantity</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Phân khu &amp; Tầng (Spatial)</strong><br><code>level_name / zone_area</code></td>
+                    <td>Location Breakdown Structure (LBS)</td>
+                    <td>Trimble Connect Folder &amp; Spatial Hierarchy</td>
+                    <td>Dalux Location &amp; Room Drawing Pin</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="font-size: 6.8pt; color: #64748b; border-top: 1px solid #cbd5e1; padding-top: 4px; display: flex; justify-content: space-between;">
+        <span>KAKA BIM Data Hub • Giải Pháp Chuyển Đổi Số Cấp Công Ty Cho Ban Tổng Giám Đốc</span>
+        <span>A4 Print Standard • Trang 1 / 2</span>
+    </div>
+</div>
+
+<!-- ==========================================================================
+     TRANG 2: THỰC THI CODE C# & KỊCH BẢN PHỎNG VẤN BAN TỔNG GIÁM ĐỐC
+     ========================================================================== -->
+<div class="page">
+    <div>
+        <div class="doc-header">
+            <span class="doc-brand">KAKA BIM DATA HUB • ENTERPRISE DIGITAL TRANSFORMATION</span>
+            <span class="doc-sub">CHIẾN LƯỢC TÍCH HỢP ĐA NỀN TẢNG CDE QUA OPEN API • TRANG 2 / 2</span>
+        </div>
+
+        <div class="section-title" style="margin-top: 0;">
+            <span>💻 Triển Khai Kỹ Thuật Trên C# .NET Trong KAKA Add-in (Code Architecture)</span>
+            <span class="badge badge-navy">C# / WPF Implementation</span>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-header">
+                    <span style="color: #0369a1;">1. Code Đẩy Issues / Tasks Lên ACC (APS API)</span>
+                    <span class="badge badge-blue">C# REST Client</span>
+                </div>
+                <div class="code-box">// Gửi Task từ SQL lên ACC Issues qua APS REST API
+var payload = new {
+    title = $"{task.WbsCode} - {task.TaskName}",
+    status = "open",
+    issueTypeId = "quality_compliance",
+    dueDate = task.EarlyEndDate.ToString("yyyy-MM-dd"),
+    customAttributes = new [] {
+        new { id = "wbs_code", value = task.WbsCode },
+        new { id = "target_qty", value = task.Quantity.ToString() }
+    }
+};
+var req = new HttpRequestMessage(HttpMethod.Post, accApiUrl);
+req.Headers.Authorization = new AuthenticationHeaderValue("Bearer", oauthToken);
+req.Content = JsonContent.Create(payload);
+await httpClient.SendAsync(req);</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span style="color: #6b21a8;">2. Code Kích Hoạt Tasks &amp; Checklist Trên Dalux</span>
+                    <span class="badge badge-purple">Dalux Build API</span>
+                </div>
+                <div class="code-box">// Đẩy công tác nghiệm thu từ P6 lên Dalux Build
+var daluxTask = new {
+    title = $"Nghiệm thu: {task.TaskName}",
+    deadline = task.EarlyEndDate.ToString("yyyy-MM-dd"),
+    zone = task.LevelZone, // Level 2, Zone B
+    responsibleUser = "GiamSat_Truong",
+    subject = task.Discipline // Kết Cấu / MEP
+};
+var req = new HttpRequestMessage(HttpMethod.Post, daluxApiUrl);
+req.Headers.Add("X-API-KEY", daluxApiKey);
+req.Content = JsonContent.Create(daluxTask);
+var res = await httpClient.SendAsync(req);</div>
+            </div>
+        </div>
+
+        <!-- MÔ HÌNH VẬN HÀNH 1-CLICK CDE SYNC TRONG TOOL KAKA -->
+        <div class="section-title">
+            <span>⚙️ Giao Diện Tích Hợp "1-Click CDE Cloud Sync" Trong Tool KAKA</span>
+            <span class="badge badge-green">Feature Blueprint</span>
+        </div>
+        <div class="box box-green" style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 4px; padding: 7px 9px; margin-bottom: 8px;">
+            <div style="font-weight: 700; color: #166534; font-size: 8pt; margin-bottom: 4px;">
+                Quy Trình 3 Bước Tự Động Hóa Dành Cho Kỹ Sư BIM &amp; Quản Lý Dự Án:
+            </div>
+            <div class="grid-3">
+                <div style="background: #fff; padding: 6px; border: 1px solid #cbd5e1; border-radius: 3px;">
+                    <strong style="color: #0f172a; font-size: 7.6pt;">Bước 1: Chọn Nguồn SQL</strong><br>
+                    <span style="font-size: 7pt; color: #475569;">Trích xuất dữ liệu từ tiến độ P6 (PPMDBSQLite.db), BOQ bóc tách Revit hoặc bảng tiến độ rút gọn.</span>
+                </div>
+                <div style="background: #fff; padding: 6px; border: 1px solid #cbd5e1; border-radius: 3px;">
+                    <strong style="color: #0f172a; font-size: 7.6pt;">Bước 2: Tích Chọn Đám Mây</strong><br>
+                    <span style="font-size: 7pt; color: #475569;">Chọn đẩy lên <em>ACC</em> (Issues thiết kế), <em>Trimble</em> (Trạng thái thép), hay <em>Dalux</em> (Nghiệm thu công trường).</span>
+                </div>
+                <div style="background: #fff; padding: 6px; border: 1px solid #cbd5e1; border-radius: 3px;">
+                    <strong style="color: #0f172a; font-size: 7.6pt;">Bước 3: Nhấn [Sync to Cloud]</strong><br>
+                    <span style="font-size: 7pt; color: #475569;">Hệ thống xử lý batch request đa luồng, đẩy hàng trăm công tác lên đám mây trong vòng 5-10 giây.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- GIÁ TRỊ DOANH NGHIỆP & ROI CHO BAN TỔNG GIÁM ĐỐC -->
+        <div class="section-title">
+            <span>🛡️ Lợi Ích Quản Trị Doanh Nghiệp &amp; Hiệu Suất Đầu Tư (ROI)</span>
+            <span class="badge badge-amber">Executive Value</span>
+        </div>
+        <div class="grid-2">
+            <div class="box box-gray" style="background: #f8fafc; border: 1px solid #cbd5e1; padding: 7px 9px; border-radius: 4px;">
+                <div style="font-weight: 700; color: #0f172a; font-size: 8pt; margin-bottom: 3px;">
+                    Xóa Bỏ "Ốc Đảo Dữ Liệu" (Siloed Data Elimination):
+                </div>
+                <ul class="check-list">
+                    <li><strong>Dữ liệu thông suốt:</strong> Phá vỡ rào cản thông tin giữa Kỹ sư Thiết kế (Revit), Kỹ sư Kế hoạch (P6) và Ban Chỉ huy công trường (Dalux/ACC).</li>
+                    <li><strong>Không phụ thuộc license đắt đỏ:</strong> Nhờ tận dụng Open API và CSDL SQL nội bộ, công ty chỉ cần mua một lượng license CDE tối thiểu cho các vị trí quản lý then chốt.</li>
+                </ul>
+            </div>
+
+            <div class="box box-gray" style="background: #f8fafc; border: 1px solid #cbd5e1; padding: 7px 9px; border-radius: 4px;">
+                <div style="font-weight: 700; color: #0f172a; font-size: 8pt; margin-bottom: 3px;">
+                    Giám Sát Thời Gian Thực (Real-Time Executive Governance):
+                </div>
+                <ul class="check-list">
+                    <li><strong>Dashboard trực tiếp cho Ban TGĐ:</strong> Toàn bộ dữ liệu phản hồi từ hiện trường qua Dalux/ACC được kéo ngược về SQL Server, đổ thẳng lên Power BI của Tổng Giám Đốc.</li>
+                    <li><strong>Chủ động kiểm soát rủi ro:</strong> Nhận diện ngay công tác chậm tiến độ (Negative Float) hoặc khối lượng vượt dự toán trước khi xảy ra hậu quả tài chính.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- KỊCH BẢN TRẢ LỜI PHỎNG VẤN CHỐT HẠ -->
+        <div class="section-title">
+            <span>🎯 Kịch Bản Trình Bày Xuất Sắc Khi Phỏng Vấn Với Ban Tổng Giám Đốc</span>
+            <span class="badge badge-purple">Interview Winning Script</span>
+        </div>
+        <div style="background: #fffbeb; border: 1.2px solid #fde68a; border-radius: 4px; padding: 8px 10px; font-size: 7.3pt; line-height: 1.45; color: #1e293b;">
+            <em>"Thưa Ban Tổng Giám Đốc, rào cản lớn nhất của chuyển đổi số trong xây dựng là <strong>dữ liệu bị cô lập trong từng phần mềm riêng rẽ</strong> — P6 nằm ở phòng Kế hoạch, Revit nằm ở phòng Thiết kế, còn hiện trường dùng Dalux hay ACC độc lập.
+            Với giải pháp <strong>KAKA Data Hub</strong> em xây dựng:
+            Toàn bộ khối lượng BOQ và tiến độ đường găng CPM được tập hợp chuẩn hóa trong SQL Database của công ty. Sau đó, thông qua Open API, hệ thống tự động đẩy dữ liệu sang <strong>ACC</strong> để kiểm soát hồ sơ thiết kế, đẩy sang <strong>Trimble Connect</strong> để quản lý gia công thép, và đẩy sang <strong>Dalux</strong> để giao việc nghiệm thu cho thầu phụ.
+            Ban TGĐ không cần yêu cầu các bộ phận làm báo cáo giấy tờ tốn kém — chỉ cần mở Dashboard là thấy toàn bộ tiến độ, khối lượng và chất lượng thực tế theo thời gian thực."</em>
+        </div>
+    </div>
+
+    <div style="font-size: 6.8pt; color: #64748b; border-top: 1px solid #cbd5e1; padding-top: 4px; display: flex; justify-content: space-between;">
+        <span>KAKA BIM Data Hub • Giải Pháp Chuyển Đổi Số Cấp Công Ty Cho Ban Tổng Giám Đốc</span>
+        <span>A4 Print Standard • Trang 2 / 2</span>
+    </div>
+</div>
+
+</body>
+</html>
+"""
+
+html_path = r'c:\Users\vophi\Downloads\Github\CV\JD-BIM\KAKA_CDE_OpenAPI_Integration_Strategy.html'
+pdf_path = r'c:\Users\vophi\Downloads\Github\CV\JD-BIM\KAKA_CDE_OpenAPI_Integration_Strategy.pdf'
+
+with open(html_path, 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print('HTML created successfully!')
+HTML(string=html_content).write_pdf(pdf_path)
+print('PDF generated successfully:', pdf_path)
+print('File size:', os.path.getsize(pdf_path), 'bytes')

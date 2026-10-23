@@ -1,0 +1,1057 @@
+﻿Element_ID,Unique_ID,Category_Code,Category_Name,Family_Name,Type_Name,Level_Name,Volume_m3,Area_m2,Length_m,Rebar_Weight_kg,Material_Name,Mark,Estimated_Cost_VND
+10180644,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b5824,02.Mong,Móng (Foundation),BSV_KC_Mong_BTCT_ChuNhat,1000x1000x250,+0.000,0.31,2.21,0.0,34.2,BSV_VL_BeTong_M350(B25),FA,1534138.0
+10181097,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b59e9,02.Mong,Móng (Foundation),BSV_KC_Mong_BTCT_ChuNhat,1000x1000x250,+0.000,0.31,2.21,0.0,34.2,BSV_VL_BeTong_M350(B25),FA,1534138.0
+10185032,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b6948,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X300,+0.000,0.042,0.47,0.0,4.6,BSV_VL_BeTong_M350(B25),"C1,C1A,C2",245018.0
+10185397,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b6ab5,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X300,+0.000,0.043,0.53,0.0,4.7,BSV_VL_BeTong_M350(B25),"C1,C1A,C2",260412.0
+10185440,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b6ae0,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X300,+0.000,0.05,0.59,0.0,5.5,BSV_VL_BeTong_M350(B25),"C1,C1A,C2",300780.0
+10185908,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b6cb4,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+0.000,0.056,0.5,0.0,6.2,BSV_VL_BeTong_M350(B25),"C3,C4,C5,C6",299000.0
+10186102,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b6d76,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+0.000,0.056,0.5,0.0,6.2,BSV_VL_BeTong_M350(B25),"C3,C4,C5,C6",299000.0
+10186371,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b6e83,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+0.000,0.056,0.5,0.0,6.2,BSV_VL_BeTong_M350(B25),"C3,C4,C5,C6",299000.0
+10186721,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b6fe1,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+0.000,0.065,0.63,0.0,7.2,BSV_VL_BeTong_M350(B25),"C7,C8",359530.0
+10187094,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b7156,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+0.000,0.065,0.63,0.0,7.2,BSV_VL_BeTong_M350(B25),"C7,C8",359530.0
+10187667,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b7393,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200x200,+0.000,0.03,0.34,0.0,3.3,BSV_VL_BeTong_M350(B25),MFA,176050.0
+10187850,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b744a,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200x200,+0.000,0.03,0.34,0.0,3.3,BSV_VL_BeTong_M350(B25),MFA,176050.0
+10188688,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b7790,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X300,+0.000,0.204,1.76,0.0,22.4,BSV_VL_BeTong_M350(B25),C1A,1075700.0
+10188689,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b7791,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X300,+0.000,0.204,1.76,0.0,22.4,BSV_VL_BeTong_M350(B25),C2,1075700.0
+10188690,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b7792,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X300,+0.000,0.204,1.76,0.0,22.4,BSV_VL_BeTong_M350(B25),C1,1075700.0
+10188691,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b7793,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+0.000,0.272,2.12,0.0,29.9,BSV_VL_BeTong_M350(B25),C3,1384400.0
+10188692,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b7794,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+0.000,0.272,2.12,0.0,29.9,BSV_VL_BeTong_M350(B25),C4,1384400.0
+10188693,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b7795,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+0.000,0.248,1.94,0.0,27.3,BSV_VL_BeTong_M350(B25),C5,1263800.0
+10188694,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b7796,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+0.000,0.248,1.94,0.0,27.3,BSV_VL_BeTong_M350(B25),C6,1263800.0
+10188695,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b7797,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+0.000,0.248,1.94,0.0,27.3,BSV_VL_BeTong_M350(B25),C7,1263800.0
+10188696,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b7798,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+0.000,0.248,1.94,0.0,27.3,BSV_VL_BeTong_M350(B25),C8,1263800.0
+10188749,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b77cd,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X300,+3.750,0.177,1.53,0.0,19.5,BSV_VL_BeTong_M350(B25),C1A,935075.0
+10188750,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b77ce,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X300,+3.750,0.176,1.56,0.0,19.4,BSV_VL_BeTong_M350(B25),C2,939430.0
+10188751,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b77cf,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X300,+3.750,0.174,1.51,0.0,19.1,BSV_VL_BeTong_M350(B25),C1,919450.0
+10188752,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b77d0,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+3.750,0.236,1.85,0.0,26.0,BSV_VL_BeTong_M350(B25),C3,1203500.0
+10188753,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b77d1,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+3.750,0.232,1.82,0.0,25.5,BSV_VL_BeTong_M350(B25),C4,1183400.0
+10188754,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b77d2,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+3.750,0.232,1.82,0.0,25.5,BSV_VL_BeTong_M350(B25),C5,1183400.0
+10188755,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b77d3,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+3.750,0.244,1.94,0.0,26.8,BSV_VL_BeTong_M350(B25),C6,1250300.0
+10188766,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b77de,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X300,+7.050,0.192,1.66,0.0,21.1,BSV_VL_BeTong_M350(B25),C1A,1013200.0
+10188767,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b77df,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X300,+7.050,0.192,1.66,0.0,21.1,BSV_VL_BeTong_M350(B25),C2,1013200.0
+10188768,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b77e0,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X300,+7.050,0.192,1.66,0.0,21.1,BSV_VL_BeTong_M350(B25),C1,1013200.0
+10188769,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b77e1,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+7.050,0.258,2.02,0.0,28.4,BSV_VL_BeTong_M350(B25),C3,1315150.0
+10188770,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b77e2,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+7.050,0.256,2.0,0.0,28.2,BSV_VL_BeTong_M350(B25),C4,1304000.0
+10188771,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b77e3,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+7.050,0.256,2.0,0.0,28.2,BSV_VL_BeTong_M350(B25),C5,1304000.0
+10188772,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b77e4,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+7.050,0.256,2.0,0.0,28.2,BSV_VL_BeTong_M350(B25),C6,1304000.0
+10189852,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b7c1c,03.DaKieng,Đà kiềng (Tie Beam),BSV_KC_DaKieng_BTCT,200x400,Ground,0.267,2.78,0.0,29.3,BSV_VL_BeTong_M350(B25),1B1-2,1510906.0
+10190340,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b7e04,03.DaKieng,Đà kiềng (Tie Beam),BSV_KC_DaKieng_BTCT,200x400,Ground,0.447,4.6,0.0,49.2,BSV_VL_BeTong_M350(B25),1B3,2522525.0
+10190350,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b7e0e,03.DaKieng,Đà kiềng (Tie Beam),BSV_KC_DaKieng_BTCT,200x400,Ground,0.455,4.68,0.0,50.1,BSV_VL_BeTong_M350(B25),1B4,2566303.0
+10190480,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b7e90,03.DaKieng,Đà kiềng (Tie Beam),BSV_KC_DaKieng_BTCT,200x400,Ground,0.455,4.68,0.0,50.1,BSV_VL_BeTong_M350(B25),1B2,2566303.0
+10191298,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b81c2,03.DaKieng,Đà kiềng (Tie Beam),BSV_KC_DaKieng_BTCT,200x400,Ground,0.155,1.66,0.0,17.0,BSV_VL_BeTong_M350(B25),1B6-1,888758.0
+10191735,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b8377,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x350,Ground,0.125,1.17,0.0,13.8,BSV_VL_BeTong_M350(B25),2B1-1,680206.0
+10191877,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b8405,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.206,1.79,0.0,22.7,BSV_VL_BeTong_M350(B25),2B2,1089072.0
+10191995,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b847b,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.3,2.58,0.0,33.0,BSV_VL_BeTong_M350(B25),2B3,1578919.0
+10192214,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b8556,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.275,2.35,0.0,30.3,BSV_VL_BeTong_M350(B25),2B5,1447575.0
+10192611,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b86e3,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+3.750,0.234,1.88,0.0,25.7,BSV_VL_BeTong_M350(B25),C7A,1203350.0
+10192912,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b8810,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+3.750,0.232,1.82,0.0,25.5,BSV_VL_BeTong_M350(B25),C8A,1183400.0
+10193630,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b8ade,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.206,1.78,0.0,22.6,BSV_VL_BeTong_M350(B25),2B8-1,1085119.0
+10194041,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b8c79,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x350,Ground,0.172,1.59,0.0,18.9,BSV_VL_BeTong_M350(B25),2B6-1,929404.0
+10194164,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b8cf4,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.192,1.66,0.0,21.1,BSV_VL_BeTong_M350(B25),2B7,1013156.0
+10194279,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b8d67,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.192,1.66,0.0,21.1,BSV_VL_BeTong_M350(B25),2B6-2,1013156.0
+10194391,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b8dd7,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,100x400,Ground,0.136,1.74,0.0,15.0,BSV_VL_BeTong_M350(B25),2B8-2,841756.0
+10194494,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b8e3e,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.299,2.56,0.0,32.9,BSV_VL_BeTong_M350(B25),2B4,1572575.0
+10196428,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b95cc,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x350,Ground,0.07,0.68,0.0,7.7,BSV_VL_BeTong_M350(B25),2B2,385850.0
+10196611,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b9683,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x700,Ground,0.424,2.98,0.0,46.6,BSV_VL_BeTong_M350(B25),2B6-3,2086130.0
+10196688,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b96d0,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x700,Ground,0.424,2.98,0.0,46.6,BSV_VL_BeTong_M350(B25),2B8-3,2086130.0
+10196743,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b9707,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x650,Ground,0.154,1.16,0.0,16.9,BSV_VL_BeTong_M350(B25),2B6-3,774950.0
+10196783,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b972f,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x650,Ground,0.154,1.16,0.0,16.9,BSV_VL_BeTong_M350(B25),2B8-3,774950.0
+10197428,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b99b4,03.DaKieng,Đà kiềng (Tie Beam),BSV_KC_DaKieng_BTCT,200x400,Ground,0.332,3.42,0.0,36.5,BSV_VL_BeTong_M350(B25),1B6-2,1872709.0
+10197764,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b9b04,03.DaKieng,Đà kiềng (Tie Beam),BSV_KC_DaKieng_BTCT,200x400,Ground,0.449,4.61,0.0,49.4,BSV_VL_BeTong_M350(B25),1B6-3,2530126.0
+10197945,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b9bb9,03.DaKieng,Đà kiềng (Tie Beam),BSV_KC_DaKieng_BTCT,200x400,Ground,0.326,3.37,0.0,35.8,BSV_VL_BeTong_M350(B25),1B5-1,1842082.0
+10197997,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b9bed,03.DaKieng,Đà kiềng (Tie Beam),BSV_KC_DaKieng_BTCT,200x400,Ground,0.332,3.42,0.0,36.5,BSV_VL_BeTong_M350(B25),1B5-2,1872709.0
+10198050,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b9c22,03.DaKieng,Đà kiềng (Tie Beam),BSV_KC_DaKieng_BTCT,200x400,Ground,0.442,4.59,0.0,48.6,BSV_VL_BeTong_M350(B25),1B5-3,2500794.0
+10198415,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b9d8f,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x250,Ground,0.06,0.74,0.0,6.6,BSV_VL_BeTong_M350(B25),3B1-1,366430.0
+10198466,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b9dc2,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.164,1.44,0.0,18.1,BSV_VL_BeTong_M350(B25),3B1-2,871598.0
+10198527,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b9dff,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.209,1.82,0.0,23.0,BSV_VL_BeTong_M350(B25),3B11-1,1107785.0
+10198679,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b9e97,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.215,1.89,0.0,23.7,BSV_VL_BeTong_M350(B25),3B7-2,1142122.0
+10198747,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b9edb,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.287,2.46,0.0,31.6,BSV_VL_BeTong_M350(B25),3B4,1510075.0
+10198859,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b9f4b,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.2,1.73,0.0,22.0,BSV_VL_BeTong_M350(B25),3B11-3,1053825.0
+10198898,7fbffdf9-fc31-494a-ac56-4d01846380ed-009b9f72,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x350,Ground,0.178,1.47,0.0,19.6,BSV_VL_BeTong_M350(B25),3B7-3,926388.0
+10199121,7fbffdf9-fc31-494a-ac56-4d01846380ed-009ba051,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.305,2.56,0.0,33.6,BSV_VL_BeTong_M350(B25),3B5,1595025.0
+10199346,7fbffdf9-fc31-494a-ac56-4d01846380ed-009ba132,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.186,1.63,0.0,20.5,BSV_VL_BeTong_M350(B25),3B3,988148.0
+10199518,7fbffdf9-fc31-494a-ac56-4d01846380ed-009ba1de,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x350,Ground,0.07,0.68,0.0,7.7,BSV_VL_BeTong_M350(B25),3B3,385850.0
+10199700,7fbffdf9-fc31-494a-ac56-4d01846380ed-009ba294,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.194,1.68,0.0,21.3,BSV_VL_BeTong_M350(B25),3B9,1022575.0
+10199775,7fbffdf9-fc31-494a-ac56-4d01846380ed-009ba2df,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.167,1.33,0.0,18.4,BSV_VL_BeTong_M350(B25),3B2,857780.0
+10199895,7fbffdf9-fc31-494a-ac56-4d01846380ed-009ba357,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.066,0.83,0.0,7.3,BSV_VL_BeTong_M350(B25),3B7-1,405350.0
+10199972,7fbffdf9-fc31-494a-ac56-4d01846380ed-009ba3a4,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x350,Ground,0.106,1.01,0.0,11.7,BSV_VL_BeTong_M350(B25),3B7-1,581308.0
+10200406,7fbffdf9-fc31-494a-ac56-4d01846380ed-009ba556,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x250,Ground,0.102,1.22,0.0,11.2,BSV_VL_BeTong_M350(B25),3B6,611938.0
+10200442,7fbffdf9-fc31-494a-ac56-4d01846380ed-009ba57a,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x250,Ground,0.036,0.45,0.0,4.0,BSV_VL_BeTong_M350(B25),3B8,220500.0
+10200556,7fbffdf9-fc31-494a-ac56-4d01846380ed-009ba5ec,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,100x400,Ground,0.056,0.74,0.0,6.1,BSV_VL_BeTong_M350(B25),3B7-4,349848.0
+10200663,7fbffdf9-fc31-494a-ac56-4d01846380ed-009ba657,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x250,Ground,0.07,0.68,0.0,7.7,BSV_VL_BeTong_M350(B25),3B11-4,384574.0
+10200939,7fbffdf9-fc31-494a-ac56-4d01846380ed-009ba76b,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.192,1.66,0.0,21.1,BSV_VL_BeTong_M350(B25),3B10,1013200.0
+10202272,7fbffdf9-fc31-494a-ac56-4d01846380ed-009baca0,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.232,1.82,0.0,25.5,BSV_VL_BeTong_M350(B25),RB1,1183400.0
+10202273,7fbffdf9-fc31-494a-ac56-4d01846380ed-009baca1,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.372,2.87,0.0,40.9,BSV_VL_BeTong_M350(B25),RB4,1886900.0
+10202274,7fbffdf9-fc31-494a-ac56-4d01846380ed-009baca2,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.363,2.87,0.0,40.0,BSV_VL_BeTong_M350(B25),RB2,1858080.0
+10202275,7fbffdf9-fc31-494a-ac56-4d01846380ed-009baca3,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.367,2.83,0.0,40.4,BSV_VL_BeTong_M350(B25),RB3,1862780.0
+10202364,7fbffdf9-fc31-494a-ac56-4d01846380ed-009bacfc,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.256,2.0,0.0,28.2,BSV_VL_BeTong_M350(B25),RB10,1304000.0
+10202579,7fbffdf9-fc31-494a-ac56-4d01846380ed-009badd3,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.372,2.87,0.0,40.9,BSV_VL_BeTong_M350(B25),RB5,1886900.0
+10202616,7fbffdf9-fc31-494a-ac56-4d01846380ed-009badf8,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.286,2.25,0.0,31.4,BSV_VL_BeTong_M350(B25),RB11-2,1458020.0
+10202672,7fbffdf9-fc31-494a-ac56-4d01846380ed-009bae30,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.315,2.49,0.0,34.7,BSV_VL_BeTong_M350(B25),RB8-2,1612040.0
+10202945,7fbffdf9-fc31-494a-ac56-4d01846380ed-009baf41,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.25,1.96,0.0,27.5,BSV_VL_BeTong_M350(B25),RB8-3,1275860.0
+10203018,7fbffdf9-fc31-494a-ac56-4d01846380ed-009baf8a,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.25,1.96,0.0,27.5,BSV_VL_BeTong_M350(B25),RB11-3,1275860.0
+10203086,7fbffdf9-fc31-494a-ac56-4d01846380ed-009bafce,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x750,Ground,0.749,4.89,0.0,82.3,BSV_VL_BeTong_M350(B25),RB7,3602098.0
+10203170,7fbffdf9-fc31-494a-ac56-4d01846380ed-009bb022,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.367,2.83,0.0,40.4,BSV_VL_BeTong_M350(B25),RB6,1862780.0
+10203277,7fbffdf9-fc31-494a-ac56-4d01846380ed-009bb08d,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.07,0.61,0.0,7.7,BSV_VL_BeTong_M350(B25),RB9,371360.0
+10203427,7fbffdf9-fc31-494a-ac56-4d01846380ed-009bb123,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.256,2.03,0.0,28.2,BSV_VL_BeTong_M350(B25),RB8-1,1311510.0
+10203458,7fbffdf9-fc31-494a-ac56-4d01846380ed-009bb142,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.272,2.13,0.0,29.9,BSV_VL_BeTong_M350(B25),RB11-1,1387040.0
+10203577,7fbffdf9-fc31-494a-ac56-4d01846380ed-009bb1b9,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,100x300,Ground,0.021,0.36,0.0,2.3,BSV_VL_BeTong_M350(B25),RB11-4,151175.0
+10203604,7fbffdf9-fc31-494a-ac56-4d01846380ed-009bb1d4,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,100x300,Ground,0.021,0.36,0.0,2.3,BSV_VL_BeTong_M350(B25),RB8-4,151175.0
+10203939,7fbffdf9-fc31-494a-ac56-4d01846380ed-009bb323,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+7.050,0.242,1.93,0.0,26.6,BSV_VL_BeTong_M350(B25),C7A,1241350.0
+10203940,7fbffdf9-fc31-494a-ac56-4d01846380ed-009bb324,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+7.050,0.242,1.93,0.0,26.6,BSV_VL_BeTong_M350(B25),C8A,1241350.0
+10204376,7fbffdf9-fc31-494a-ac56-4d01846380ed-009bb4d8,03.DaKieng,Đà kiềng (Tie Beam),BSV_KC_DaKieng_BTCT,200x400,Ground,0.189,1.98,0.0,20.7,BSV_VL_BeTong_M350(B25),1B1-1,1072279.0
+10205456,f2b0a1cf-df72-4ddd-8258-b42dd46809b5-009bb910,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.144,1.26,0.0,15.9,BSV_VL_BeTong_M350(B25),2B1-2,764762.0
+10209679,b7e3dc6c-afd2-47ff-80d4-e2a75a3bd83d-009bc98f,03.DaKieng,Đà kiềng (Tie Beam),BSV_KC_DaKieng_BTCT,200x300,Ground,0.389,4.49,0.0,42.7,BSV_VL_BeTong_M350(B25),FB1-1,2299758.0
+10209729,b7e3dc6c-afd2-47ff-80d4-e2a75a3bd83d-009bc9c1,03.DaKieng,Đà kiềng (Tie Beam),BSV_KC_DaKieng_BTCT,200x300,Ground,0.359,4.18,0.0,39.5,BSV_VL_BeTong_M350(B25),FB1-2,2131372.0
+10209752,b7e3dc6c-afd2-47ff-80d4-e2a75a3bd83d-009bc9d8,03.DaKieng,Đà kiềng (Tie Beam),BSV_KC_DaKieng_BTCT,200x300,Ground,0.389,4.49,0.0,42.7,BSV_VL_BeTong_M350(B25),FB1-1,2299758.0
+10209847,b7e3dc6c-afd2-47ff-80d4-e2a75a3bd83d-009bca37,04.Nen,Nền (Ground Slab),Floor,50,+0.000,2.506,50.13,0.0,275.7,BSV_VL_BeTong_M350(B25),S_50,19488038.0
+10210008,b7e3dc6c-afd2-47ff-80d4-e2a75a3bd83d-009bcad8,04.Nen,Nền (Ground Slab),Floor,50,+0.000,0.114,2.28,0.0,12.5,BSV_VL_BeTong_M350(B25),S_50,886394.0
+10210060,b7e3dc6c-afd2-47ff-80d4-e2a75a3bd83d-009bcb0c,08.San,Sàn kết cấu (Slab),Floor,100,+3.750,3.689,36.89,0.0,405.8,BSV_VL_BeTong_M350(B25),S_100,20567826.0
+10210258,b7e3dc6c-afd2-47ff-80d4-e2a75a3bd83d-009bcbd2,08.San,Sàn kết cấu (Slab),Floor,100,+3.750,1.465,15.08,0.0,161.2,BSV_VL_BeTong_M350(B25),S_100,8262856.0
+10210920,b7e3dc6c-afd2-47ff-80d4-e2a75a3bd83d-009bce68,08.San,Sàn kết cấu (Slab),Floor,100,+10.350,0.749,7.49,0.0,82.4,BSV_VL_BeTong_M350(B25),S_100,4174560.0
+10210972,b7e3dc6c-afd2-47ff-80d4-e2a75a3bd83d-009bce9c,08.San,Sàn kết cấu (Slab),Floor,150,+10.350,1.048,6.99,0.0,115.3,BSV_VL_BeTong_M350(B25),S_150,5073604.0
+10211014,b7e3dc6c-afd2-47ff-80d4-e2a75a3bd83d-009bcec6,08.San,Sàn kết cấu (Slab),Floor,100,+7.050,3.252,32.99,0.0,357.7,BSV_VL_BeTong_M350(B25),S_100,18233388.0
+10211176,b7e3dc6c-afd2-47ff-80d4-e2a75a3bd83d-009bcf68,08.San,Sàn kết cấu (Slab),Floor,100,+7.050,0.392,3.92,0.0,43.1,BSV_VL_BeTong_M350(B25),S_100,2184798.0
+10214452,a8e23195-e5d2-4535-8038-352e0795ab9d-009bdc34,08.San,Sàn kết cấu (Slab),Floor,100,+7.050,0.699,6.99,0.0,76.9,BSV_VL_BeTong_M350(B25),S_100,3896434.0
+10223472,b098f0b5-f675-4805-bdc0-905c2753df35-009bff70,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.7,Bê tông cốt thép C30,,82862.0
+10223473,b098f0b5-f675-4805-bdc0-905c2753df35-009bff71,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.7,Bê tông cốt thép C30,,82862.0
+10223474,b098f0b5-f675-4805-bdc0-905c2753df35-009bff72,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.7,Bê tông cốt thép C30,,82862.0
+10223475,b098f0b5-f675-4805-bdc0-905c2753df35-009bff73,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.7,Bê tông cốt thép C30,,82862.0
+10249009,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6331,07.Dam,Dầm kết cấu (Beam),BSV_KC_Mong_BTCT_BangDungTam,700x200x100x1000x350,Ground,2.426,14.83,0.0,266.9,BSV_VL_BeTong_M350(B25),M1,11451670.0
+10249010,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6332,07.Dam,Dầm kết cấu (Beam),BSV_KC_Mong_BTCT_BangDungTam,800x200x100x1400x450,Ground,3.516,19.68,0.0,386.8,BSV_VL_BeTong_M350(B25),M2,16197039.0
+10249011,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6333,07.Dam,Dầm kết cấu (Beam),BSV_KC_Mong_BTCT_BangDungTam,800x200x100x1600x450,Ground,3.68,20.99,0.0,404.8,BSV_VL_BeTong_M350(B25),M3,17039040.0
+10249012,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6334,07.Dam,Dầm kết cấu (Beam),BSV_KC_Mong_BTCT_BangDungTam,700x200x100x1200x450,Ground,2.971,17.0,0.0,326.8,BSV_VL_BeTong_M350(B25),M4,13767918.0
+10249015,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6337,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.3,Bê tông cốt thép C30,,110828.0
+10249016,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6338,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,18.3,Bê tông cốt thép C30,,320408.0
+10249017,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6339,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,28.0,Bê tông cốt thép C30,,490612.0
+10249018,a71b6566-d424-4d91-b668-0d9a517d9d85-009c633a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,42.7,Bê tông cốt thép C30,,746830.0
+10249019,a71b6566-d424-4d91-b668-0d9a517d9d85-009c633b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,58.6,Bê tông cốt thép C30,,1025535.0
+10249022,a71b6566-d424-4d91-b668-0d9a517d9d85-009c633e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D12,Ground,0.0,0.0,0.0,9.0,Bê tông cốt thép C30,,158042.0
+10249024,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6340,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.2,Bê tông cốt thép C30,,55860.0
+10249026,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6342,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,9.5,Bê tông cốt thép C30,,166898.0
+10249027,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6343,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,25.0,Bê tông cốt thép C30,,437080.0
+10249028,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6344,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,45.6,Bê tông cốt thép C30,,798682.0
+10249029,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6345,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,71.2,Bê tông cốt thép C30,,1245248.0
+10249030,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6346,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,25.9,Bê tông cốt thép C30,,452410.0
+10249031,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6347,00.Rebar,Cốt thép (Rebar),Rebar Bar,D25,Ground,0.0,0.0,0.0,6.0,Bê tông cốt thép C30,,105332.0
+10249032,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6348,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,17.5,Bê tông cốt thép C30,,306285.0
+10249033,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6349,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,19.1,Bê tông cốt thép C30,,333918.0
+10249034,a71b6566-d424-4d91-b668-0d9a517d9d85-009c634a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,17.6,Bê tông cốt thép C30,,308228.0
+10249035,a71b6566-d424-4d91-b668-0d9a517d9d85-009c634b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D12,Ground,0.0,0.0,0.0,9.0,Bê tông cốt thép C30,,158042.0
+10249036,a71b6566-d424-4d91-b668-0d9a517d9d85-009c634c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,5.7,Bê tông cốt thép C30,,99382.0
+10249037,a71b6566-d424-4d91-b668-0d9a517d9d85-009c634d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.9,Bê tông cốt thép C30,,67725.0
+10249040,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6350,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.3,Bê tông cốt thép C30,,110828.0
+10249041,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6351,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,21.6,Bê tông cốt thép C30,,378735.0
+10249042,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6352,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,45.6,Bê tông cốt thép C30,,798682.0
+10249043,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6353,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,70.9,Bê tông cốt thép C30,,1240680.0
+10249044,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6354,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,28.8,Bê tông cốt thép C30,,504262.0
+10249045,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6355,00.Rebar,Cốt thép (Rebar),Rebar Bar,D25,Ground,0.0,0.0,0.0,4.5,Bê tông cốt thép C30,,78995.0
+10249046,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6356,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,16.1,Bê tông cốt thép C30,,282310.0
+10249047,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6357,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,16.1,Bê tông cốt thép C30,,282310.0
+10249048,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6358,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,16.1,Bê tông cốt thép C30,,282310.0
+10249049,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6359,00.Rebar,Cốt thép (Rebar),Rebar Bar,D12,Ground,0.0,0.0,0.0,9.0,Bê tông cốt thép C30,,158042.0
+10249050,a71b6566-d424-4d91-b668-0d9a517d9d85-009c635a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,5.6,Bê tông cốt thép C30,,97440.0
+10249051,a71b6566-d424-4d91-b668-0d9a517d9d85-009c635b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.9,Bê tông cốt thép C30,,67725.0
+10249058,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6362,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,27.3,Bê tông cốt thép C30,,477068.0
+10249059,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6363,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,44.2,Bê tông cốt thép C30,,772765.0
+10249060,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6364,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,68.7,Bê tông cốt thép C30,,1201515.0
+10249061,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6365,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,41.2,Bê tông cốt thép C30,,720912.0
+10249062,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6366,00.Rebar,Cốt thép (Rebar),Rebar Bar,D25,Ground,0.0,0.0,0.0,6.0,Bê tông cốt thép C30,,105332.0
+10249063,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6367,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,17.6,Bê tông cốt thép C30,,308228.0
+10249064,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6368,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,16.1,Bê tông cốt thép C30,,282555.0
+10249065,a71b6566-d424-4d91-b668-0d9a517d9d85-009c6369,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,17.6,Bê tông cốt thép C30,,308228.0
+10249066,a71b6566-d424-4d91-b668-0d9a517d9d85-009c636a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D12,Ground,0.0,0.0,0.0,8.7,Bê tông cốt thép C30,,151830.0
+10249067,a71b6566-d424-4d91-b668-0d9a517d9d85-009c636b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,5.7,Bê tông cốt thép C30,,99382.0
+10249068,a71b6566-d424-4d91-b668-0d9a517d9d85-009c636c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.5,Bê tông cốt thép C30,,61582.0
+10254840,8331a762-8bea-470c-bc42-a4d6a79cd467-009c79f8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,24990.0
+10256616,4e5c543d-2be8-4d35-ab43-e7639c2cae76-009c80e8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,30538.0
+10256618,4e5c543d-2be8-4d35-ab43-e7639c2cae76-009c80ea,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.6,Bê tông cốt thép C30,,10185.0
+10256959,4e5c543d-2be8-4d35-ab43-e7639c2cae76-009c823f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,14.2,Bê tông cốt thép C30,,247800.0
+10256971,4e5c543d-2be8-4d35-ab43-e7639c2cae76-009c824b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,18.9,Bê tông cốt thép C30,,330382.0
+10256983,4e5c543d-2be8-4d35-ab43-e7639c2cae76-009c8257,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,33372.0
+10256985,4e5c543d-2be8-4d35-ab43-e7639c2cae76-009c8259,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12512.0
+10257318,4e5c543d-2be8-4d35-ab43-e7639c2cae76-009c83a6,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200X400,+0.000,0.056,0.5,0.0,6.2,BSV_VL_BeTong_M350(B25),"C3,C4,C5,C6",299000.0
+10257349,4e5c543d-2be8-4d35-ab43-e7639c2cae76-009c83c5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,24.7,Bê tông cốt thép C30,,431602.0
+10257355,4e5c543d-2be8-4d35-ab43-e7639c2cae76-009c83cb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,18.5,Bê tông cốt thép C30,,323750.0
+10257361,4e5c543d-2be8-4d35-ab43-e7639c2cae76-009c83d1,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37538.0
+10257363,4e5c543d-2be8-4d35-ab43-e7639c2cae76-009c83d3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12512.0
+10306223,4699a925-5843-4b79-b817-8ecff354e61e-009d42af,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,9.1,Bê tông cốt thép C30,,159775.0
+10310898,b48cf272-a4ad-4668-b438-42436cc867bd-009d547f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.3,Bê tông cốt thép C30,,110828.0
+10311480,b48cf272-a4ad-4668-b438-42436cc867bd-009d5738,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,9.5,Bê tông cốt thép C30,,166898.0
+10312574,b48cf272-a4ad-4668-b438-42436cc867bd-009d5b7e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.3,Bê tông cốt thép C30,,110828.0
+10314767,3f103cfb-85b1-4b96-af91-f6e829db39c4-009d640f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,3.0,Bê tông cốt thép C30,,53358.0
+10315361,3f103cfb-85b1-4b96-af91-f6e829db39c4-009d6661,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,3.0,Bê tông cốt thép C30,,53358.0
+10316024,8f52e634-45fa-4e1a-9816-0c55d90e7501-009d68f8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.6,Bê tông cốt thép C30,,9695.0
+10317598,1d94be45-e45a-41a5-8376-86ffb55aaefe-009d6f1e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.6,Bê tông cốt thép C30,,9695.0
+10318343,adf7862e-ed06-43de-905c-f0c96709f2b5-009d7207,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,9.1,Bê tông cốt thép C30,,159775.0
+10328620,0015df40-0844-4719-8900-0f8a071f21aa-009d9a2c,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200x200,+0.000,0.03,0.34,0.0,3.3,BSV_VL_BeTong_M350(B25),,176050.0
+10328641,0015df40-0844-4719-8900-0f8a071f21aa-009d9a41,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200x200,+0.000,0.03,0.34,0.0,3.3,BSV_VL_BeTong_M350(B25),,176050.0
+10328643,0015df40-0844-4719-8900-0f8a071f21aa-009d9a43,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,3.0,Bê tông cốt thép C30,,52168.0
+10328644,0015df40-0844-4719-8900-0f8a071f21aa-009d9a44,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,3.0,Bê tông cốt thép C30,,53008.0
+10328645,0015df40-0844-4719-8900-0f8a071f21aa-009d9a45,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.5,Bê tông cốt thép C30,,26163.0
+10329272,2c1f9b41-fc79-4381-9649-992fdb1fcd2f-009d90b2,03.DaKieng,Đà kiềng (Tie Beam),BSV_KC_DaKieng_BTCT,200x350,Ground,0.146,1.65,0.0,16.0,BSV_VL_BeTong_M350(B25),1B6-1,855295.0
+10336693,a79361c4-ca2b-4d63-92b3-141ad9897764-009db678,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,7.1,Bê tông cốt thép C30,,123865.0
+10336694,a79361c4-ca2b-4d63-92b3-141ad9897764-009db698,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,9.4,Bê tông cốt thép C30,,165148.0
+10337153,8b4f8d2d-9f23-4294-ae22-3a66951e54c8-009dbb81,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224088.0
+10337154,8b4f8d2d-9f23-4294-ae22-3a66951e54c8-009dbb82,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.4,Bê tông cốt thép C30,,234675.0
+10337155,8b4f8d2d-9f23-4294-ae22-3a66951e54c8-009dbb83,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,4.4,Bê tông cốt thép C30,,76300.0
+10337158,8b4f8d2d-9f23-4294-ae22-3a66951e54c8-009dbb86,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,5.7,Bê tông cốt thép C30,,100398.0
+10338196,8b4f8d2d-9f23-4294-ae22-3a66951e54c8-009dbf94,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224088.0
+10338197,8b4f8d2d-9f23-4294-ae22-3a66951e54c8-009dbf95,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.4,Bê tông cốt thép C30,,234675.0
+10338198,8b4f8d2d-9f23-4294-ae22-3a66951e54c8-009dbf96,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48195.0
+10338199,8b4f8d2d-9f23-4294-ae22-3a66951e54c8-009dbf97,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.5,Bê tông cốt thép C30,,44170.0
+10338200,8b4f8d2d-9f23-4294-ae22-3a66951e54c8-009dbf98,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48195.0
+10340435,ce77c035-c096-4230-961b-ef6b39a76c02-009dc7cc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,3.4,Bê tông cốt thép C30,,58888.0
+10340436,ce77c035-c096-4230-961b-ef6b39a76c02-009dc7cd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,3.4,Bê tông cốt thép C30,,58888.0
+10346585,adba4482-b03a-426d-884a-52cff1af079e-009de059,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,3.4,Bê tông cốt thép C30,,58888.0
+10346586,adba4482-b03a-426d-884a-52cff1af079e-009de05a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,3.4,Bê tông cốt thép C30,,58888.0
+10350387,59cf920b-0c11-4e68-bd47-62bb9e4feb1b-009def33,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,3.0,Bê tông cốt thép C30,,53358.0
+10350388,59cf920b-0c11-4e68-bd47-62bb9e4feb1b-009def34,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,3.0,Bê tông cốt thép C30,,53358.0
+10354060,aeee172e-fa9c-4329-bfef-78e4b8838b12-009dfa2e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.8,Bê tông cốt thép C30,,32130.0
+10354061,aeee172e-fa9c-4329-bfef-78e4b8838b12-009dfa2f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.6,Bê tông cốt thép C30,,28105.0
+10354062,aeee172e-fa9c-4329-bfef-78e4b8838b12-009dfa30,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.8,Bê tông cốt thép C30,,32130.0
+10354063,aeee172e-fa9c-4329-bfef-78e4b8838b12-009dfa31,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,36138.0
+10354064,aeee172e-fa9c-4329-bfef-78e4b8838b12-009dfa32,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.8,Bê tông cốt thép C30,,32130.0
+10354065,aeee172e-fa9c-4329-bfef-78e4b8838b12-009dfa33,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,36138.0
+10354066,aeee172e-fa9c-4329-bfef-78e4b8838b12-009dfa34,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48475.0
+10354067,aeee172e-fa9c-4329-bfef-78e4b8838b12-009dfa35,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.3,Bê tông cốt thép C30,,40390.0
+10354068,aeee172e-fa9c-4329-bfef-78e4b8838b12-009dfa36,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48475.0
+10354766,199b5aa9-a801-4443-99e7-1f51405aefd1-009e004e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,14.2,Bê tông cốt thép C30,,247800.0
+10354767,199b5aa9-a801-4443-99e7-1f51405aefd1-009e004f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,17.1,Bê tông cốt thép C30,,299040.0
+10354962,199b5aa9-a801-4443-99e7-1f51405aefd1-009e0112,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,16.6,Bê tông cốt thép C30,,291078.0
+10354963,199b5aa9-a801-4443-99e7-1f51405aefd1-009e0113,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,14.2,Bê tông cốt thép C30,,247765.0
+10356920,68ea85d2-bcb7-45b8-b711-38aa74b4a990-009e08b8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29015.0
+10356921,68ea85d2-bcb7-45b8-b711-38aa74b4a990-009e08b9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12040.0
+10356922,68ea85d2-bcb7-45b8-b711-38aa74b4a990-009e08ba,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.8,Bê tông cốt thép C30,,32130.0
+10356923,68ea85d2-bcb7-45b8-b711-38aa74b4a990-009e08bb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,36138.0
+10356924,68ea85d2-bcb7-45b8-b711-38aa74b4a990-009e08bc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.8,Bê tông cốt thép C30,,32130.0
+10356925,68ea85d2-bcb7-45b8-b711-38aa74b4a990-009e08bd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,36138.0
+10356926,68ea85d2-bcb7-45b8-b711-38aa74b4a990-009e08be,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.1,Bê tông cốt thép C30,,20072.0
+10356927,68ea85d2-bcb7-45b8-b711-38aa74b4a990-009e08bf,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.3,Bê tông cốt thép C30,,40162.0
+10356928,68ea85d2-bcb7-45b8-b711-38aa74b4a990-009e08c0,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48195.0
+10356930,68ea85d2-bcb7-45b8-b711-38aa74b4a990-009e08c2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,17.1,Bê tông cốt thép C30,,298585.0
+10356931,68ea85d2-bcb7-45b8-b711-38aa74b4a990-009e08c3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,16.6,Bê tông cốt thép C30,,290570.0
+10356932,68ea85d2-bcb7-45b8-b711-38aa74b4a990-009e08c4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,14.2,Bê tông cốt thép C30,,247730.0
+10357404,68ea85d2-bcb7-45b8-b711-38aa74b4a990-009e0a9c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,14.2,Bê tông cốt thép C30,,247782.0
+10358093,68ea85d2-bcb7-45b8-b711-38aa74b4a990-009e0d4d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,18130.0
+10363244,fed6c32a-6d9f-4ba5-8029-068c3fb1403c-009e216c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,3.0,Bê tông cốt thép C30,,52588.0
+10363245,fed6c32a-6d9f-4ba5-8029-068c3fb1403c-009e216d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,3.0,Bê tông cốt thép C30,,52342.0
+10364301,12d95665-b30a-433c-9fbb-dfca07e0fe18-009e2263,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,14.1,Bê tông cốt thép C30,,247380.0
+10364303,12d95665-b30a-433c-9fbb-dfca07e0fe18-009e2266,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.6,Bê tông cốt thép C30,,237422.0
+10364304,12d95665-b30a-433c-9fbb-dfca07e0fe18-009e2268,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,6.1,Bê tông cốt thép C30,,106855.0
+10364310,12d95665-b30a-433c-9fbb-dfca07e0fe18-009e2429,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224088.0
+10364311,12d95665-b30a-433c-9fbb-dfca07e0fe18-009e242a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224088.0
+10364312,12d95665-b30a-433c-9fbb-dfca07e0fe18-009e242b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,5.7,Bê tông cốt thép C30,,100380.0
+10390739,bdf26ec7-a24a-43a1-9dab-80e951d870b4-009e8cd3,08.San,Sàn kết cấu (Slab),Floor,100,+0.000,0.499,4.99,0.0,54.9,BSV_VL_BeTong_M350(B25),1B4,2781925.0
+10390870,bdf26ec7-a24a-43a1-9dab-80e951d870b4-009e8d56,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224088.0
+10390871,bdf26ec7-a24a-43a1-9dab-80e951d870b4-009e8d57,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.4,Bê tông cốt thép C30,,234675.0
+10390872,bdf26ec7-a24a-43a1-9dab-80e951d870b4-009e8d58,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48195.0
+10390873,bdf26ec7-a24a-43a1-9dab-80e951d870b4-009e8d59,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.5,Bê tông cốt thép C30,,44170.0
+10390874,bdf26ec7-a24a-43a1-9dab-80e951d870b4-009e8d5a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48195.0
+10393022,bdf26ec7-a24a-43a1-9dab-80e951d870b4-009e95be,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,21.3,Bê tông cốt thép C30,,373345.0
+10400908,04bf077a-5ed6-409c-a1c1-240ead23ffda-009eb48c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,8.4,Bê tông cốt thép C30,,147350.0
+10401206,04bf077a-5ed6-409c-a1c1-240ead23ffda-009eb5b6,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,8.4,Bê tông cốt thép C30,,147105.0
+10404818,95e41ccc-3d16-4f3a-8933-30e0a743caf5-009ec3d2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12040.0
+10404907,95e41ccc-3d16-4f3a-8933-30e0a743caf5-009ec42b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12040.0
+10407193,83f35dc6-4b19-449d-bdcb-78f48e927fef-009ecd19,07.Dam,Dầm kết cấu (Beam),BSV_BTH Loại 1,TB,+0.000,5.63,44.63,0.0,619.3,Default Floor,,28818500.0
+10433142,e947cb18-f2d5-4cdc-bb35-6791c852f32a-009f3276,08.San,Sàn kết cấu (Slab),Floor,150,+3.750,1.048,6.99,0.0,115.3,BSV_VL_BeTong_M350(B25),S_150,5073582.0
+10435484,f4088709-4de2-4562-a17a-a5576f8d4d14-009f3b9c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,14.2,Bê tông cốt thép C30,,247730.0
+10435485,f4088709-4de2-4562-a17a-a5576f8d4d14-009f3b9d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,9.4,Bê tông cốt thép C30,,165148.0
+10435774,f4088709-4de2-4562-a17a-a5576f8d4d14-009f3cbe,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,9.4,Bê tông cốt thép C30,,165148.0
+10436541,853cbd0e-77ff-45a7-9b91-f20fe66aaa09-009f3fbd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,14.2,Bê tông cốt thép C30,,247730.0
+10439342,2b3e281e-7652-415e-a547-3b49009ec8ee-009f4aae,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,23765.0
+10439460,2b3e281e-7652-415e-a547-3b49009ec8ee-009f4b24,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,33932.0
+10439515,2b3e281e-7652-415e-a547-3b49009ec8ee-009f4b5b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,23765.0
+10439915,2b3e281e-7652-415e-a547-3b49009ec8ee-009f4ceb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.6,Bê tông cốt thép C30,,10185.0
+10440114,2b3e281e-7652-415e-a547-3b49009ec8ee-009f4db2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,20370.0
+10440115,2b3e281e-7652-415e-a547-3b49009ec8ee-009f4db3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,30538.0
+10440116,2b3e281e-7652-415e-a547-3b49009ec8ee-009f4db4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,20370.0
+10440117,2b3e281e-7652-415e-a547-3b49009ec8ee-009f4db5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.6,Bê tông cốt thép C30,,10185.0
+10440771,2b3e281e-7652-415e-a547-3b49009ec8ee-009f5043,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,20370.0
+10440772,2b3e281e-7652-415e-a547-3b49009ec8ee-009f5044,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,33932.0
+10440895,2b3e281e-7652-415e-a547-3b49009ec8ee-009f50bf,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,20370.0
+10441190,2b3e281e-7652-415e-a547-3b49009ec8ee-009f51e6,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.6,Bê tông cốt thép C30,,10185.0
+10448167,b9f27cdf-61f5-4f01-92de-40f53aa291de-009f6d27,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,18.9,Bê tông cốt thép C30,,330295.0
+10448266,b9f27cdf-61f5-4f01-92de-40f53aa291de-009f6d8a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,18.9,Bê tông cốt thép C30,,330295.0
+10456530,422c299e-e1bf-4c45-96fd-cfe5ca817cdc-009f3dc5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,1.6,Bê tông cốt thép C30,,28822.0
+10456538,66054c07-fcc7-4065-b833-cd63b7b9bb21-009f3fe7,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,24028.0
+10459138,094f5327-3d52-4cd2-8864-60644edb5096-009f9260,08.San,Sàn kết cấu (Slab),Floor,100,+7.050,0.489,4.89,0.0,53.8,BSV_VL_BeTong_M350(B25),S_100,2727378.0
+10459266,094f5327-3d52-4cd2-8864-60644edb5096-009f938d,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.048,0.44,0.0,5.3,BSV_VL_BeTong_M350(B25),RB9A,258800.0
+10461327,542dadeb-7a55-471c-80d0-48d85fb7c95a-009fa08f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.6,Bê tông cốt thép C30,,10185.0
+10461437,542dadeb-7a55-471c-80d0-48d85fb7c95a-009fa0fd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12512.0
+10461618,542dadeb-7a55-471c-80d0-48d85fb7c95a-009fa1b2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12512.0
+10462086,c59192e4-b5fa-495a-bc7a-140465fa8933-009fa386,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,18.9,Bê tông cốt thép C30,,330295.0
+10462152,c59192e4-b5fa-495a-bc7a-140465fa8933-009fa3c8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,28.3,Bê tông cốt thép C30,,495442.0
+10464900,c59192e4-b5fa-495a-bc7a-140465fa8933-009fae84,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29208.0
+10464901,c59192e4-b5fa-495a-bc7a-140465fa8933-009fae85,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.4,Bê tông cốt thép C30,,41720.0
+10464902,c59192e4-b5fa-495a-bc7a-140465fa8933-009fae86,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29208.0
+10464903,c59192e4-b5fa-495a-bc7a-140465fa8933-009fae87,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12512.0
+10465062,c59192e4-b5fa-495a-bc7a-140465fa8933-009faf26,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,25025.0
+10465063,c59192e4-b5fa-495a-bc7a-140465fa8933-009faf27,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37538.0
+10465064,c59192e4-b5fa-495a-bc7a-140465fa8933-009faf28,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,25025.0
+10465307,c59192e4-b5fa-495a-bc7a-140465fa8933-009fb01b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12512.0
+10465559,c59192e4-b5fa-495a-bc7a-140465fa8933-009fb117,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,25025.0
+10465560,c59192e4-b5fa-495a-bc7a-140465fa8933-009fb118,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.4,Bê tông cốt thép C30,,41720.0
+10465561,c59192e4-b5fa-495a-bc7a-140465fa8933-009fb119,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,25025.0
+10465562,c59192e4-b5fa-495a-bc7a-140465fa8933-009fb11a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12512.0
+10466709,b24dd031-5743-4db1-a8dc-97bbd8c87869-009fb595,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,18.1,Bê tông cốt thép C30,,317555.0
+10466710,b24dd031-5743-4db1-a8dc-97bbd8c87869-009fb596,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,24.3,Bê tông cốt thép C30,,425408.0
+10468403,b24dd031-5743-4db1-a8dc-97bbd8c87869-009fbc33,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29208.0
+10468404,b24dd031-5743-4db1-a8dc-97bbd8c87869-009fbc34,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37538.0
+10468405,b24dd031-5743-4db1-a8dc-97bbd8c87869-009fbc35,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29208.0
+10468915,b24dd031-5743-4db1-a8dc-97bbd8c87869-009fbe33,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+10471849,b24dd031-5743-4db1-a8dc-97bbd8c87869-009fc9a9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,25.7,Bê tông cốt thép C30,,448945.0
+10472414,d14e8ec4-4a6d-4bb7-ae0a-d4f12c9768fc-009fcbde,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,10.0,Bê tông cốt thép C30,,175648.0
+10472415,d14e8ec4-4a6d-4bb7-ae0a-d4f12c9768fc-009fcbdf,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,15.4,Bê tông cốt thép C30,,269062.0
+10473118,d14e8ec4-4a6d-4bb7-ae0a-d4f12c9768fc-009fce9e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,25025.0
+10473119,d14e8ec4-4a6d-4bb7-ae0a-d4f12c9768fc-009fce9f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37538.0
+10473120,d14e8ec4-4a6d-4bb7-ae0a-d4f12c9768fc-009fcea0,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29208.0
+10473121,d14e8ec4-4a6d-4bb7-ae0a-d4f12c9768fc-009fcea1,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12512.0
+10473154,d14e8ec4-4a6d-4bb7-ae0a-d4f12c9768fc-009fcec2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,25025.0
+10473155,d14e8ec4-4a6d-4bb7-ae0a-d4f12c9768fc-009fcec3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.4,Bê tông cốt thép C30,,41720.0
+10473156,d14e8ec4-4a6d-4bb7-ae0a-d4f12c9768fc-009fcec4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,25025.0
+10473157,d14e8ec4-4a6d-4bb7-ae0a-d4f12c9768fc-009fcec5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12512.0
+10473198,d14e8ec4-4a6d-4bb7-ae0a-d4f12c9768fc-009fceee,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12512.0
+10482378,9a5f6ea3-a59e-46f3-8fc3-0c732d98bf2b-009ff2ca,00.Rebar,Cốt thép (Rebar),Rebar Bar,D12,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37362.0
+10486017,6695e6f2-ad67-4437-9a55-d0b2f1dd05bf-00a00101,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,6.6,Bê tông cốt thép C30,,115728.0
+10493440,ee14b038-9184-4ec8-bcbf-8065c7689751-00a01e00,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,31.0,Bê tông cốt thép C30,,542115.0
+10496090,f20c6282-c773-482c-b2e5-cb19837d2870-00a0285a,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80x200,Ground,0.08,1.42,0.0,8.8,BSV_VL_BeTong_M350(B25),GCT1,581520.0
+10496403,f20c6282-c773-482c-b2e5-cb19837d2870-00a02993,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80x200,Ground,0.079,1.39,0.0,8.6,BSV_VL_BeTong_M350(B25),GCT2,571251.0
+10496447,f20c6282-c773-482c-b2e5-cb19837d2870-00a029bf,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80x200,Ground,0.08,1.43,0.0,8.8,BSV_VL_BeTong_M350(B25),GCT1,583522.0
+10496670,f20c6282-c773-482c-b2e5-cb19837d2870-00a02a9e,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80x300,Ground,0.039,0.65,0.0,4.3,BSV_VL_BeTong_M350(B25),GCT3,276254.0
+10498080,f20c6282-c773-482c-b2e5-cb19837d2870-00a03020,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,180x300,Ground,0.06,0.59,0.0,6.6,BSV_VL_BeTong_M350(B25),GCT4,333246.0
+10501696,2aa86bd7-c643-46ab-9501-943b4202f27e-00a03e40,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,2.6,Bê tông cốt thép C30,,44852.0
+10502732,2aa86bd7-c643-46ab-9501-943b4202f27e-00a0424c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.5,Bê tông cốt thép C30,,44170.0
+10503921,7f302179-d8cd-4495-9cb8-802c76861d76-00a046f1,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.8,Bê tông cốt thép C30,,30800.0
+10504662,7f302179-d8cd-4495-9cb8-802c76861d76-00a049d6,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,28945.0
+10505367,ba4db8bf-f975-4e0a-ba8c-763d135a7dd4-00a04c97,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,70000.0
+10505965,8b5e4f96-271c-494c-84ec-5f879815784c-00a04eed,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.6,Bê tông cốt thép C30,,62825.0
+10506275,141871a3-f758-43f1-a4c8-c7d984453341-00a05023,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,3.8,Bê tông cốt thép C30,,67200.0
+10506663,141871a3-f758-43f1-a4c8-c7d984453341-00a051a7,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.4,Bê tông cốt thép C30,,59728.0
+10507889,ec489f73-8240-4b1c-b25d-445f4de91405-00a05671,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+0.000,0.034,0.53,0.0,3.7,BSV_VL_BeTong_M350(B25),BT1,231350.0
+10507907,ec489f73-8240-4b1c-b25d-445f4de91405-00a05683,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+0.000,0.034,0.53,0.0,3.7,BSV_VL_BeTong_M350(B25),BT1,231350.0
+10507952,ec489f73-8240-4b1c-b25d-445f4de91405-00a056b0,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+0.000,0.034,0.53,0.0,3.7,BSV_VL_BeTong_M350(B25),BT1,231350.0
+10508087,ec489f73-8240-4b1c-b25d-445f4de91405-00a05737,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+0.000,0.034,0.53,0.0,3.7,BSV_VL_BeTong_M350(B25),BT1,231350.0
+10508258,ec489f73-8240-4b1c-b25d-445f4de91405-00a057e2,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+0.000,0.034,0.53,0.0,3.7,BSV_VL_BeTong_M350(B25),BT1,231350.0
+10508359,ec489f73-8240-4b1c-b25d-445f4de91405-00a05847,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+0.000,0.034,0.53,0.0,3.7,BSV_VL_BeTong_M350(B25),BT1,231350.0
+10508411,ec489f73-8240-4b1c-b25d-445f4de91405-00a0587b,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+0.000,0.034,0.53,0.0,3.7,BSV_VL_BeTong_M350(B25),BT1,231350.0
+10508639,892d855c-b3bc-4313-99d8-9cc49f729998-00a0595f,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+0.000,0.034,0.53,0.0,3.7,BSV_VL_BeTong_M350(B25),BT1,231350.0
+10510787,1f184c66-2af8-4313-b550-c069ffcaa7cd-00a061c3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.5,Bê tông cốt thép C30,,44590.0
+10511158,1f184c66-2af8-4313-b550-c069ffcaa7cd-00a06336,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.5,Bê tông cốt thép C30,,9100.0
+10514467,1db3de20-4bf2-4363-9dbb-83c429315b7f-00a07023,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200x200,+0.000,0.118,1.22,0.0,13.0,BSV_VL_BeTong_M350(B25),BT3,666650.0
+10514725,1db3de20-4bf2-4363-9dbb-83c429315b7f-00a07125,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200x200,+0.000,0.118,1.22,0.0,13.0,BSV_VL_BeTong_M350(B25),BT3,666650.0
+10515613,bd373d89-6ec2-49d7-b4b7-bcf3dd7ec0f9-00a0749d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D12,Ground,0.0,0.0,0.0,2.2,Bê tông cốt thép C30,,38115.0
+10517157,9606eb6c-fc3e-4291-a3ec-1cf7f4f78d71-00a07aa5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D12,Ground,0.0,0.0,0.0,3.0,Bê tông cốt thép C30,,52885.0
+10521208,a7e39371-d341-4a73-acd8-49caf5ffbe96-00a08a78,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.059,0.55,0.0,6.5,BSV_VL_BeTong_M350(B25),3B7-3,319450.0
+10556549,3c7ac2af-4987-4d8a-ac7a-06dc68c6984c-00a11485,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80x350,Ground,0.088,1.37,0.0,9.6,BSV_VL_BeTong_M350(B25),2B6-1,597908.0
+10556900,3c7ac2af-4987-4d8a-ac7a-06dc68c6984c-00a115e4,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,130x150,Ground,0.037,0.55,0.0,4.1,BSV_VL_BeTong_M350(B25),2B1-1,245252.0
+10557791,3c7ac2af-4987-4d8a-ac7a-06dc68c6984c-00a1195f,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200x200,+3.750,0.112,1.16,0.0,12.3,BSV_VL_BeTong_M350(B25),BT3,633200.0
+10558436,3c7ac2af-4987-4d8a-ac7a-06dc68c6984c-00a11be4,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200x200,+3.750,0.108,1.16,0.0,11.8,BSV_VL_BeTong_M350(B25),BT3,618688.0
+10561331,d8009bea-290a-4e13-977f-5aaeaea7f28e-00a12733,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80x150,Ground,0.016,0.33,0.0,1.8,BSV_VL_BeTong_M350(B25),2B6-3,126622.0
+10561487,d8009bea-290a-4e13-977f-5aaeaea7f28e-00a127cf,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,130x150,Ground,0.097,1.42,0.0,10.7,BSV_VL_BeTong_M350(B25),2B5,640062.0
+10561561,d8009bea-290a-4e13-977f-5aaeaea7f28e-00a12819,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80x150,Ground,0.015,0.3,0.0,1.7,BSV_VL_BeTong_M350(B25),2B8-3,118202.0
+10566840,b1032544-e7de-4404-a2fb-e418428b6444-00a13cb8,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+3.750,0.052,0.86,0.0,5.8,BSV_VL_BeTong_M350(B25),BT2,366124.0
+10566894,b1032544-e7de-4404-a2fb-e418428b6444-00a13cee,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+3.750,0.054,0.89,0.0,6.0,BSV_VL_BeTong_M350(B25),BT2,379136.0
+10570624,bf376cf8-1cb4-484e-a47c-ef57b16ef908-00a14b80,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224508.0
+10570628,bf376cf8-1cb4-484e-a47c-ef57b16ef908-00a14b84,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,6.0,Bê tông cốt thép C30,,104282.0
+10571561,bf376cf8-1cb4-484e-a47c-ef57b16ef908-00a14f29,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,236075.0
+10571771,bf376cf8-1cb4-484e-a47c-ef57b16ef908-00a14ffb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,4.1,Bê tông cốt thép C30,,71872.0
+10576422,3e5673e7-7d07-4100-ba5e-7c3a62981024-00a16226,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,2.4,Bê tông cốt thép C30,,41265.0
+10576424,3e5673e7-7d07-4100-ba5e-7c3a62981024-00a16228,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.4,Bê tông cốt thép C30,,60025.0
+10588519,b3f23c70-a869-4dbd-9393-2d85fe4b7340-00a19167,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224105.0
+10588521,b3f23c70-a869-4dbd-9393-2d85fe4b7340-00a19169,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,3.2,Bê tông cốt thép C30,,56542.0
+10588524,b3f23c70-a869-4dbd-9393-2d85fe4b7340-00a1916c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+10590198,b3f23c70-a869-4dbd-9393-2d85fe4b7340-00a197f6,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,69492.0
+10591651,b3f23c70-a869-4dbd-9393-2d85fe4b7340-00a19da3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+10592342,b3f23c70-a869-4dbd-9393-2d85fe4b7340-00a1a056,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,20860.0
+10595490,1d0ab017-0e08-447c-ba7c-890b12d09f7b-00a1aca2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29208.0
+10595878,1d0ab017-0e08-447c-ba7c-890b12d09f7b-00a1ae26,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,8.9,Bê tông cốt thép C30,,155418.0
+10613328,cbf96c46-7a6e-46e6-87af-41f9948f2439-00a1f250,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224508.0
+10613329,cbf96c46-7a6e-46e6-87af-41f9948f2439-00a1f251,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,235952.0
+10613330,cbf96c46-7a6e-46e6-87af-41f9948f2439-00a1f252,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+10613331,cbf96c46-7a6e-46e6-87af-41f9948f2439-00a1f253,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+10613332,cbf96c46-7a6e-46e6-87af-41f9948f2439-00a1f254,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+10613708,cbf96c46-7a6e-46e6-87af-41f9948f2439-00a1f3cc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,8.9,Bê tông cốt thép C30,,155400.0
+10614763,cbf96c46-7a6e-46e6-87af-41f9948f2439-00a1f7eb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+10614921,cbf96c46-7a6e-46e6-87af-41f9948f2439-00a1f889,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+10615442,cbf96c46-7a6e-46e6-87af-41f9948f2439-00a1fa92,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,25025.0
+10621187,282bfbaf-ae55-4893-9e9a-6a6d8ff3e1f7-00a21103,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224472.0
+10621188,282bfbaf-ae55-4893-9e9a-6a6d8ff3e1f7-00a21104,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,235865.0
+10621189,282bfbaf-ae55-4893-9e9a-6a6d8ff3e1f7-00a21105,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+10621190,282bfbaf-ae55-4893-9e9a-6a6d8ff3e1f7-00a21106,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.6,Bê tông cốt thép C30,,45885.0
+10621191,282bfbaf-ae55-4893-9e9a-6a6d8ff3e1f7-00a21107,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+10621343,282bfbaf-ae55-4893-9e9a-6a6d8ff3e1f7-00a2119f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,8.9,Bê tông cốt thép C30,,155400.0
+10629818,c3085afe-a46f-4a51-8961-258ba0910a8b-00a232ba,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224508.0
+10629819,c3085afe-a46f-4a51-8961-258ba0910a8b-00a232bb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,235865.0
+10629820,c3085afe-a46f-4a51-8961-258ba0910a8b-00a232bc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+10629821,c3085afe-a46f-4a51-8961-258ba0910a8b-00a232bd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.6,Bê tông cốt thép C30,,45885.0
+10629822,c3085afe-a46f-4a51-8961-258ba0910a8b-00a232be,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+10630189,c3085afe-a46f-4a51-8961-258ba0910a8b-00a2342d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,8.9,Bê tông cốt thép C30,,155400.0
+10631494,c3085afe-a46f-4a51-8961-258ba0910a8b-00a23946,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,5.9,Bê tông cốt thép C30,,103162.0
+10631495,c3085afe-a46f-4a51-8961-258ba0910a8b-00a23947,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.8,Bê tông cốt thép C30,,118580.0
+10637761,04185c1b-3a4d-48d1-b9ab-8f934c5686b1-00a251c1,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.8,Bê tông cốt thép C30,,83475.0
+10637764,04185c1b-3a4d-48d1-b9ab-8f934c5686b1-00a251c4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D25,Ground,0.0,0.0,0.0,44.3,Bê tông cốt thép C30,,775512.0
+10637765,04185c1b-3a4d-48d1-b9ab-8f934c5686b1-00a251c5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.8,Bê tông cốt thép C30,,84210.0
+10637768,04185c1b-3a4d-48d1-b9ab-8f934c5686b1-00a251c8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,33372.0
+10637769,04185c1b-3a4d-48d1-b9ab-8f934c5686b1-00a251c9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29208.0
+10637771,04185c1b-3a4d-48d1-b9ab-8f934c5686b1-00a251cb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.9,Bê tông cốt thép C30,,16100.0
+10637772,04185c1b-3a4d-48d1-b9ab-8f934c5686b1-00a251cc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12530.0
+10637774,04185c1b-3a4d-48d1-b9ab-8f934c5686b1-00a251ce,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,12.7,Bê tông cốt thép C30,,222390.0
+10637775,04185c1b-3a4d-48d1-b9ab-8f934c5686b1-00a251cf,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,18.0,Bê tông cốt thép C30,,315052.0
+10637776,04185c1b-3a4d-48d1-b9ab-8f934c5686b1-00a251d0,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.2,Bê tông cốt thép C30,,74130.0
+10637779,04185c1b-3a4d-48d1-b9ab-8f934c5686b1-00a251d3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,69808.0
+10641277,298a00e2-d0eb-4be3-bbf6-c7e283eb9ecc-00a25f7d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,33372.0
+10641850,298a00e2-d0eb-4be3-bbf6-c7e283eb9ecc-00a261ba,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.9,Bê tông cốt thép C30,,16100.0
+10642637,298a00e2-d0eb-4be3-bbf6-c7e283eb9ecc-00a264cd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,8.0,Bê tông cốt thép C30,,139615.0
+10643090,c2cac626-71b6-41d1-b26b-7183411934c1-00a26692,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16940.0
+10643091,c2cac626-71b6-41d1-b26b-7183411934c1-00a26693,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,21490.0
+10651076,b52a8d99-501b-4c70-bd44-a46a4650ffe4-00a285c4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,9.1,Bê tông cốt thép C30,,158918.0
+10652018,b52a8d99-501b-4c70-bd44-a46a4650ffe4-00a28972,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48388.0
+10653333,a084e06c-146a-4bae-ab9f-317a24a6668f-00a28e95,00.Rebar,Cốt thép (Rebar),Rebar Bar,D25,Ground,0.0,0.0,0.0,26.8,Bê tông cốt thép C30,,468510.0
+10655373,a084e06c-146a-4bae-ab9f-317a24a6668f-00a2968d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D12,Ground,0.0,0.0,0.0,8.2,Bê tông cốt thép C30,,143745.0
+10656042,a084e06c-146a-4bae-ab9f-317a24a6668f-00a2992a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.0,Bê tông cốt thép C30,,34738.0
+10659238,a084e06c-146a-4bae-ab9f-317a24a6668f-00a2a5a6,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,6.6,Bê tông cốt thép C30,,115290.0
+10661391,a084e06c-146a-4bae-ab9f-317a24a6668f-00a2ae0f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,7.1,Bê tông cốt thép C30,,123882.0
+10661393,a084e06c-146a-4bae-ab9f-317a24a6668f-00a2ae11,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,8.4,Bê tông cốt thép C30,,146248.0
+10663061,a084e06c-146a-4bae-ab9f-317a24a6668f-00a2b495,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.3,Bê tông cốt thép C30,,39778.0
+10697132,a40e18e9-6aad-42d9-b761-1ef17e315249-00a339ac,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,9.5,Bê tông cốt thép C30,,165638.0
+10697133,a40e18e9-6aad-42d9-b761-1ef17e315249-00a339ad,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,10.1,Bê tông cốt thép C30,,176995.0
+10697134,a40e18e9-6aad-42d9-b761-1ef17e315249-00a339ae,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37538.0
+10697135,a40e18e9-6aad-42d9-b761-1ef17e315249-00a339af,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29208.0
+10697136,a40e18e9-6aad-42d9-b761-1ef17e315249-00a339b0,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37538.0
+10702191,f2b8bd4f-5774-42e5-9653-216700c63174-00a34d6f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,17.8,Bê tông cốt thép C30,,311920.0
+10702193,f2b8bd4f-5774-42e5-9653-216700c63174-00a34d71,00.Rebar,Cốt thép (Rebar),Rebar Bar,D25,Ground,0.0,0.0,0.0,44.3,Bê tông cốt thép C30,,775635.0
+10702196,f2b8bd4f-5774-42e5-9653-216700c63174-00a34d74,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,30258.0
+10702197,f2b8bd4f-5774-42e5-9653-216700c63174-00a34d75,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.5,Bê tông cốt thép C30,,26478.0
+10702198,f2b8bd4f-5774-42e5-9653-216700c63174-00a34d76,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,30258.0
+10702199,f2b8bd4f-5774-42e5-9653-216700c63174-00a34d77,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37538.0
+10702200,f2b8bd4f-5774-42e5-9653-216700c63174-00a34d78,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29208.0
+10702201,f2b8bd4f-5774-42e5-9653-216700c63174-00a34d79,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37538.0
+10702202,f2b8bd4f-5774-42e5-9653-216700c63174-00a34d7a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,12.7,Bê tông cốt thép C30,,222390.0
+10702203,f2b8bd4f-5774-42e5-9653-216700c63174-00a34d7b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,19.1,Bê tông cốt thép C30,,333585.0
+10702205,f2b8bd4f-5774-42e5-9653-216700c63174-00a34d7d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,8.0,Bê tông cốt thép C30,,139615.0
+10703989,c4c9b8e9-91f2-4780-8033-5179cfaab7c3-00a35475,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,69808.0
+10704360,c4c9b8e9-91f2-4780-8033-5179cfaab7c3-00a355e8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.2,Bê tông cốt thép C30,,74130.0
+10705044,e5a72adf-0449-49e6-9b4d-1327dd31f644-00a35894,00.Rebar,Cốt thép (Rebar),Rebar Bar,D25,Ground,0.0,0.0,0.0,26.8,Bê tông cốt thép C30,,468562.0
+10705885,e5a72adf-0449-49e6-9b4d-1327dd31f644-00a35bdd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D12,Ground,0.0,0.0,0.0,8.2,Bê tông cốt thép C30,,143728.0
+10707520,e5a72adf-0449-49e6-9b4d-1327dd31f644-00a36240,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,5.5,Bê tông cốt thép C30,,96740.0
+10708290,e5a72adf-0449-49e6-9b4d-1327dd31f644-00a36542,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.3,Bê tông cốt thép C30,,39778.0
+10708782,89a05259-bf73-4195-8ff3-061f8e7694c9-00a3672e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,21490.0
+10709228,89a05259-bf73-4195-8ff3-061f8e7694c9-00a368ec,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,3.5,Bê tông cốt thép C30,,60848.0
+10709229,89a05259-bf73-4195-8ff3-061f8e7694c9-00a368ed,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.3,Bê tông cốt thép C30,,39428.0
+10711733,82c73888-0df5-4e83-8780-8bd5d17beab6-00a372b5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,16.7,Bê tông cốt thép C30,,292635.0
+10711734,82c73888-0df5-4e83-8780-8bd5d17beab6-00a372b6,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,14.2,Bê tông cốt thép C30,,247818.0
+10723485,f01652c1-3942-4b88-9423-5931f6b30bcd-00a3a09d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16940.0
+10742153,bc04e284-6133-4573-8fd4-95af91f36ca7-00a3ca7b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,34.4,Bê tông cốt thép C30,,601212.0
+10742161,9ff6c905-fd12-43d6-b450-2525e5174492-00a3d0a0,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,25.2,Bê tông cốt thép C30,,440878.0
+10742163,9ff6c905-fd12-43d6-b450-2525e5174492-00a3d42f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.3,Bê tông cốt thép C30,,57592.0
+10744004,73c0bcb4-032d-4f90-a0c6-9ad34a89b1a2-00a3f0c4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,11.1,Bê tông cốt thép C30,,194180.0
+10759023,f0b024b4-af2c-4a55-bbe7-47d0b9c71fd2-00a426f2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,21.6,Bê tông cốt thép C30,,378752.0
+10764657,ee24356f-a037-49b8-b913-11c305736315-00a43e23,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,33.8,Bê tông cốt thép C30,,592357.0
+10766087,b946abbf-0301-44be-ac69-b9580de47e92-00a44707,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,17.9,Bê tông cốt thép C30,,313600.0
+10767406,b946abbf-0301-44be-ac69-b9580de47e92-00a44c2e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,30135.0
+10767993,b946abbf-0301-44be-ac69-b9580de47e92-00a44e79,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,20.2,Bê tông cốt thép C30,,353290.0
+10776076,19378dec-ad40-42a6-996a-23a10fafdfb3-00a46e0c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.3,Bê tông cốt thép C30,,23222.0
+10780415,4145312d-ebae-48db-9a34-6689c74b1f2b-00a47eff,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.1,Bê tông cốt thép C30,,54740.0
+10782146,41713db9-4c63-4b65-bc6c-8f2a8bf515cc-00a485c2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,15.2,Bê tông cốt thép C30,,265912.0
+10783299,746503c4-44bf-4f49-857a-845e2c5f3d25-00a48a43,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,11.4,Bê tông cốt thép C30,,199448.0
+10783571,746503c4-44bf-4f49-857a-845e2c5f3d25-00a48b53,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.6,Bê tông cốt thép C30,,10955.0
+10784282,746503c4-44bf-4f49-857a-845e2c5f3d25-00a48e1a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,22.9,Bê tông cốt thép C30,,401082.0
+10784845,befa6669-73dc-438f-a158-ad47bcc4cae7-00a472cd,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+0.000,0.062,0.95,0.0,6.8,BSV_VL_BeTong_M350(B25),BT2,418250.0
+10784846,befa6669-73dc-438f-a158-ad47bcc4cae7-00a4745a,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+0.000,0.062,0.95,0.0,6.8,BSV_VL_BeTong_M350(B25),BT2,418250.0
+10784853,befa6669-73dc-438f-a158-ad47bcc4cae7-00a4768c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.8,Bê tông cốt thép C30,,13212.0
+10784864,befa6669-73dc-438f-a158-ad47bcc4cae7-00a478ec,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.1,Bê tông cốt thép C30,,18392.0
+10785718,a669ca95-0ca8-4893-80b4-0157df8cf28e-00a49073,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,13.3,Bê tông cốt thép C30,,232680.0
+10785719,a669ca95-0ca8-4893-80b4-0157df8cf28e-00a490ec,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.5,Bê tông cốt thép C30,,43802.0
+10786449,a669ca95-0ca8-4893-80b4-0157df8cf28e-00a49691,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,11480.0
+10787898,f94e46b3-1b6c-48d0-a6e5-025745467b78-00a49c3a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,10.4,Bê tông cốt thép C30,,181265.0
+10791657,f94e46b3-1b6c-48d0-a6e5-025745467b78-00a4aae9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.7,Bê tông cốt thép C30,,116532.0
+10792813,f94e46b3-1b6c-48d0-a6e5-025745467b78-00a4af6d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,10.4,Bê tông cốt thép C30,,181265.0
+10793907,f94e46b3-1b6c-48d0-a6e5-025745467b78-00a4b3b3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,5.3,Bê tông cốt thép C30,,93135.0
+10796621,f94e46b3-1b6c-48d0-a6e5-025745467b78-00a4be4d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,16.8,Bê tông cốt thép C30,,294682.0
+10796782,f94e46b3-1b6c-48d0-a6e5-025745467b78-00a4beee,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,10.0,Bê tông cốt thép C30,,175332.0
+10799007,f94e46b3-1b6c-48d0-a6e5-025745467b78-00a4c79f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,71.5,Bê tông cốt thép C30,,1250568.0
+10801593,559ade47-3b08-40bd-a389-547b5a93d9c2-00a4d1b9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.0,Bê tông cốt thép C30,,35000.0
+10805442,6d2d4b99-0dec-48ad-9fea-f1b134446632-00a4e0c2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,9.6,Bê tông cốt thép C30,,168315.0
+10805497,6d2d4b99-0dec-48ad-9fea-f1b134446632-00a4e0f9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37100.0
+10806098,6d2d4b99-0dec-48ad-9fea-f1b134446632-00a4e352,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37100.0
+10807572,6d2d4b99-0dec-48ad-9fea-f1b134446632-00a4e914,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.7,Bê tông cốt thép C30,,47600.0
+10808411,6d2d4b99-0dec-48ad-9fea-f1b134446632-00a4ec5b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.8,Bê tông cốt thép C30,,31728.0
+10808832,3a487dfa-97ba-4d7f-8cdd-ac86a0a93926-00a4ee00,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.8,Bê tông cốt thép C30,,31728.0
+10809006,3a487dfa-97ba-4d7f-8cdd-ac86a0a93926-00a4eeae,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,16.1,Bê tông cốt thép C30,,282538.0
+10809068,3a487dfa-97ba-4d7f-8cdd-ac86a0a93926-00a4eeec,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.4,Bê tông cốt thép C30,,41702.0
+10809634,3a487dfa-97ba-4d7f-8cdd-ac86a0a93926-00a4f122,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,7.7,Bê tông cốt thép C30,,135275.0
+10810299,3a487dfa-97ba-4d7f-8cdd-ac86a0a93926-00a4f3bb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.1,Bê tông cốt thép C30,,19810.0
+10811307,3a487dfa-97ba-4d7f-8cdd-ac86a0a93926-00a4f7ab,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.3,Bê tông cốt thép C30,,39620.0
+10811573,3a487dfa-97ba-4d7f-8cdd-ac86a0a93926-00a4f8b5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.4,Bê tông cốt thép C30,,41702.0
+10825120,ae16cfb5-7aea-44aa-be52-e52f3f148aa5-00a52da0,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,9.2,Bê tông cốt thép C30,,161332.0
+10827814,0f85dd51-b5d3-47be-b942-6fd30b40790f-00a53826,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.1,Bê tông cốt thép C30,,72328.0
+10835218,ac60c39c-2abb-43ec-8904-71062a83a971-00a55512,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,9.0,Bê tông cốt thép C30,,157780.0
+10835673,ac60c39c-2abb-43ec-8904-71062a83a971-00a556d9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,8.9,Bê tông cốt thép C30,,155382.0
+10836617,ac60c39c-2abb-43ec-8904-71062a83a971-00a55a89,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48738.0
+10836693,ac60c39c-2abb-43ec-8904-71062a83a971-00a55ad5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48738.0
+10838140,cdbd4223-8cf6-4178-b459-9f97b1987f75-00a5607c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,8.5,Bê tông cốt thép C30,,149485.0
+10838141,cdbd4223-8cf6-4178-b459-9f97b1987f75-00a5607d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,8.4,Bê tông cốt thép C30,,147088.0
+10839077,cdbd4223-8cf6-4178-b459-9f97b1987f75-00a56425,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48738.0
+10839108,cdbd4223-8cf6-4178-b459-9f97b1987f75-00a56444,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48738.0
+10840395,003d1828-63ca-4035-9fc9-78facae66759-00a5694b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.7,Bê tông cốt thép C30,,46620.0
+10840463,003d1828-63ca-4035-9fc9-78facae66759-00a5698f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.7,Bê tông cốt thép C30,,46620.0
+10841625,003d1828-63ca-4035-9fc9-78facae66759-00a56e19,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.7,Bê tông cốt thép C30,,46620.0
+10841686,003d1828-63ca-4035-9fc9-78facae66759-00a56e56,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.7,Bê tông cốt thép C30,,46620.0
+10841920,003d1828-63ca-4035-9fc9-78facae66759-00a56f40,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48738.0
+10841921,003d1828-63ca-4035-9fc9-78facae66759-00a56f41,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48738.0
+10842136,003d1828-63ca-4035-9fc9-78facae66759-00a57018,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,3.8,Bê tông cốt thép C30,,66465.0
+10842248,003d1828-63ca-4035-9fc9-78facae66759-00a57088,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,3.8,Bê tông cốt thép C30,,66448.0
+10846271,0de15add-10c4-405a-8a8d-3c8ca54adec2-00a5803f,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80x350,Ground,0.029,0.48,0.0,3.2,BSV_VL_BeTong_M350(B25),GỜ BÊ TÔNG G01,204480.0
+10849181,3eaccf6e-4b6b-4caa-9c58-a3643a51810a-00a58b9d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+10872842,c1e34915-f689-4a93-a8eb-bb6329ea35de-00a5e80a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.4,Bê tông cốt thép C30,,7385.0
+10873254,3113e3cd-5b28-457f-b94c-7763958ceef7-00a5e9a6,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.5,Bê tông cốt thép C30,,8470.0
+10873419,3113e3cd-5b28-457f-b94c-7763958ceef7-00a5ea4b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.0,Bê tông cốt thép C30,,35000.0
+10874845,3113e3cd-5b28-457f-b94c-7763958ceef7-00a5efdd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,23958.0
+10875373,ce0ba3f0-a95a-4db5-ac31-e9125d7d87a5-00a5f1ed,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,2.4,Bê tông cốt thép C30,,42822.0
+10881120,61b92e7a-19dd-46e8-b23a-eea43047f0be-00a60860,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,180x350,Ground,0.096,0.87,0.0,10.5,BSV_VL_BeTong_M350(B25),GỜ BÊ TÔNG G02,514417.0
+10881583,61b92e7a-19dd-46e8-b23a-eea43047f0be-00a60a2f,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,180x300,Ground,0.036,0.38,0.0,4.0,BSV_VL_BeTong_M350(B25),GỜ BÊ TÔNG G02,204807.0
+10882124,61b92e7a-19dd-46e8-b23a-eea43047f0be-00a60c4c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.3,Bê tông cốt thép C30,,23572.0
+10882125,61b92e7a-19dd-46e8-b23a-eea43047f0be-00a60c4d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,21542.0
+10882960,61b92e7a-19dd-46e8-b23a-eea43047f0be-00a60f90,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,180x300,Ground,0.012,0.16,0.0,1.3,BSV_VL_BeTong_M350(B25),GỜ BÊ TÔNG G02,75274.0
+10883867,559b0018-9895-41ef-9372-5980683d6588-00a6131b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,3.9,Bê tông cốt thép C30,,67428.0
+10892002,b029d65d-9fa3-49b5-9ff0-d7a3cf1fb452-00a632e2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,20405.0
+10906513,dafa2648-7cee-434f-8dcf-f6d5e41cbb4b-00a66b91,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,130x150,Ground,0.037,0.55,0.0,4.1,BSV_VL_BeTong_M350(B25),,245252.0
+10906762,dafa2648-7cee-434f-8dcf-f6d5e41cbb4b-00a66c8a,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80x300,Ground,0.019,0.33,0.0,2.1,BSV_VL_BeTong_M350(B25),,136960.0
+10906923,dafa2648-7cee-434f-8dcf-f6d5e41cbb4b-00a66d2b,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80x350,Ground,0.059,0.93,0.0,6.5,BSV_VL_BeTong_M350(B25),,403908.0
+10907313,f3a35c32-e965-4bcc-adaf-3465204533b6-00a66eb1,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80x350,Ground,0.027,0.45,0.0,3.0,BSV_VL_BeTong_M350(B25),,189722.0
+10907548,f3a35c32-e965-4bcc-adaf-3465204533b6-00a66f9c,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,180x300,Ground,0.123,1.14,0.0,13.5,BSV_VL_BeTong_M350(B25),,665367.0
+10908149,f3a35c32-e965-4bcc-adaf-3465204533b6-00a671f5,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,180x300,Ground,0.009,0.13,0.0,0.9,BSV_VL_BeTong_M350(B25),,57801.0
+10908719,f3a35c32-e965-4bcc-adaf-3465204533b6-00a6742f,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80x350,Ground,0.06,0.95,0.0,6.6,BSV_VL_BeTong_M350(B25),,412725.0
+10908850,f3a35c32-e965-4bcc-adaf-3465204533b6-00a674b2,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,180x300,Ground,0.098,0.93,0.0,10.8,BSV_VL_BeTong_M350(B25),,535834.0
+10909137,f3a35c32-e965-4bcc-adaf-3465204533b6-00a675d1,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80x150,Ground,0.017,0.33,0.0,1.8,BSV_VL_BeTong_M350(B25),,129241.0
+10909293,f3a35c32-e965-4bcc-adaf-3465204533b6-00a6766d,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,130x150,Ground,0.067,0.98,0.0,7.3,BSV_VL_BeTong_M350(B25),,439451.0
+10909397,f3a35c32-e965-4bcc-adaf-3465204533b6-00a676d5,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,130x150,Ground,0.025,0.38,0.0,2.7,BSV_VL_BeTong_M350(B25),,166222.0
+10910727,8d21fb73-67e9-485d-8f4f-dba8042e673f-00a67c07,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,180x300,Ground,0.018,0.21,0.0,2.0,BSV_VL_BeTong_M350(B25),,106803.0
+10913179,63872d54-ad52-4f35-afc6-7475f34924fb-00a6859b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,6.4,Bê tông cốt thép C30,,111195.0
+10913180,63872d54-ad52-4f35-afc6-7475f34924fb-00a6859c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,7.8,Bê tông cốt thép C30,,136010.0
+10913183,63872d54-ad52-4f35-afc6-7475f34924fb-00a6859f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,3.3,Bê tông cốt thép C30,,57085.0
+10913186,63872d54-ad52-4f35-afc6-7475f34924fb-00a685a2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,6.0,Bê tông cốt thép C30,,104282.0
+10915965,2a073781-09db-430f-a45c-4ea64b83167e-00a6907d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,2.4,Bê tông cốt thép C30,,41300.0
+10915966,2a073781-09db-430f-a45c-4ea64b83167e-00a6907e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.4,Bê tông cốt thép C30,,60078.0
+10920804,42934742-38bd-4f21-bdd5-322ca00aa405-00a6a364,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,6.3,Bê tông cốt thép C30,,110180.0
+10920806,42934742-38bd-4f21-bdd5-322ca00aa405-00a6a366,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,6.9,Bê tông cốt thép C30,,121608.0
+10920807,42934742-38bd-4f21-bdd5-322ca00aa405-00a6a367,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,4.5,Bê tông cốt thép C30,,79258.0
+10921829,b6a043a3-8b16-4ca2-9a1b-297b54e19bd0-00a6a765,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,4.1,Bê tông cốt thép C30,,72048.0
+10928229,81c6ff0e-6dcf-403c-8e9b-647ebe1837ea-00a6c065,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224508.0
+10928231,81c6ff0e-6dcf-403c-8e9b-647ebe1837ea-00a6c067,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,3.0,Bê tông cốt thép C30,,52955.0
+10928234,81c6ff0e-6dcf-403c-8e9b-647ebe1837ea-00a6c06a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,20860.0
+10928235,81c6ff0e-6dcf-403c-8e9b-647ebe1837ea-00a6c06b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+10928236,81c6ff0e-6dcf-403c-8e9b-647ebe1837ea-00a6c06c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+10928661,81c6ff0e-6dcf-403c-8e9b-647ebe1837ea-00a6c215,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+10929723,81c6ff0e-6dcf-403c-8e9b-647ebe1837ea-00a6c63b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,11.6,Bê tông cốt thép C30,,202982.0
+10930653,0097e1a6-51c6-46a0-8997-f7b6bec4b83b-00a6c9dd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,236162.0
+10931156,a67d42a8-c06e-4f4d-af0f-f9bce3dfd277-00a6cbd4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,69492.0
+10937267,9efd4de8-9853-4225-bed2-e7e94d711a6a-00a6e3b3,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x650,Ground,0.0,0.0,0.0,0.0,BSV_VL_BeTong_M350(B25),2B8,0.0
+10937270,9efd4de8-9853-4225-bed2-e7e94d711a6a-00a6e3b6,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,180x300,Ground,0.103,0.97,0.0,11.3,BSV_VL_BeTong_M350(B25),,558795.0
+10937278,9efd4de8-9853-4225-bed2-e7e94d711a6a-00a6e3be,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,3.4,Bê tông cốt thép C30,,58922.0
+10937279,9efd4de8-9853-4225-bed2-e7e94d711a6a-00a6e3bf,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.1,Bê tông cốt thép C30,,54408.0
+10937474,9efd4de8-9853-4225-bed2-e7e94d711a6a-00a6e482,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,180x300,Ground,0.018,0.21,0.0,2.0,BSV_VL_BeTong_M350(B25),,106803.0
+10938073,5f4ae018-2edd-4589-8250-91d192e74858-00a6e6d9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.3,Bê tông cốt thép C30,,22225.0
+10938433,5f4ae018-2edd-4589-8250-91d192e74858-00a6e841,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.1,Bê tông cốt thép C30,,19635.0
+10939312,1f97f7cc-55e1-49ff-bc83-100dde29f570-00a6e5c8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,17.0,Bê tông cốt thép C30,,298322.0
+10939313,1f97f7cc-55e1-49ff-bc83-100dde29f570-00a6e5c9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,235865.0
+10939315,1f97f7cc-55e1-49ff-bc83-100dde29f570-00a6e5cb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+10939316,1f97f7cc-55e1-49ff-bc83-100dde29f570-00a6e5cc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+10939317,1f97f7cc-55e1-49ff-bc83-100dde29f570-00a6e5cd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+10939320,1f97f7cc-55e1-49ff-bc83-100dde29f570-00a6e6f1,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+10939321,1f97f7cc-55e1-49ff-bc83-100dde29f570-00a6e775,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+10939325,1f97f7cc-55e1-49ff-bc83-100dde29f570-00a6e8e0,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,25025.0
+10939466,1f97f7cc-55e1-49ff-bc83-100dde29f570-00a6ec4a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,69492.0
+10941446,1f97f7cc-55e1-49ff-bc83-100dde29f570-00a6f406,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,11.6,Bê tông cốt thép C30,,202948.0
+10947332,95dcaa8e-8699-496e-bb5d-1b7fdd3a125f-00a70b04,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,69492.0
+10947980,45c4bbac-0d78-43fe-b4d0-52dae4e8cedb-00a70d8c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224508.0
+10947982,45c4bbac-0d78-43fe-b4d0-52dae4e8cedb-00a70d8e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,235865.0
+10947983,45c4bbac-0d78-43fe-b4d0-52dae4e8cedb-00a70d8f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.6,Bê tông cốt thép C30,,45885.0
+10947984,45c4bbac-0d78-43fe-b4d0-52dae4e8cedb-00a70d90,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.6,Bê tông cốt thép C30,,45885.0
+10947985,45c4bbac-0d78-43fe-b4d0-52dae4e8cedb-00a70d91,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+10948229,45c4bbac-0d78-43fe-b4d0-52dae4e8cedb-00a70e85,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+10948408,45c4bbac-0d78-43fe-b4d0-52dae4e8cedb-00a70f38,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+10949261,45c4bbac-0d78-43fe-b4d0-52dae4e8cedb-00a7128d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,69492.0
+10950012,45c4bbac-0d78-43fe-b4d0-52dae4e8cedb-00a7157c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,69492.0
+10950076,45c4bbac-0d78-43fe-b4d0-52dae4e8cedb-00a715bc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,8.9,Bê tông cốt thép C30,,155400.0
+10951420,f0510f1b-896f-4586-9aec-1e2e04a2c727-00a71afc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,3.7,Bê tông cốt thép C30,,65468.0
+10951577,f0510f1b-896f-4586-9aec-1e2e04a2c727-00a71b99,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.4,Bê tông cốt thép C30,,59272.0
+10952907,f0510f1b-896f-4586-9aec-1e2e04a2c727-00a720cb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.1,Bê tông cốt thép C30,,19635.0
+10952908,f0510f1b-896f-4586-9aec-1e2e04a2c727-00a720cc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.5,Bê tông cốt thép C30,,27090.0
+10961499,0c53b553-bbe1-4869-8e82-df5516a71420-00a7425b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,9.2,Bê tông cốt thép C30,,161228.0
+10961501,0c53b553-bbe1-4869-8e82-df5516a71420-00a7425d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,9.9,Bê tông cốt thép C30,,172655.0
+10961502,0c53b553-bbe1-4869-8e82-df5516a71420-00a7425e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.5,Bê tông cốt thép C30,,27038.0
+10961503,0c53b553-bbe1-4869-8e82-df5516a71420-00a7425f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,21035.0
+10961504,0c53b553-bbe1-4869-8e82-df5516a71420-00a74260,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.5,Bê tông cốt thép C30,,27038.0
+10963371,d51a8fa1-1f85-4309-902f-62f1b615f6c6-00a749ab,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.6,Bê tông cốt thép C30,,63228.0
+10963372,d51a8fa1-1f85-4309-902f-62f1b615f6c6-00a749ac,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,3.1,Bê tông cốt thép C30,,54162.0
+10967666,d01b3d6a-e50e-4db7-a329-7eb739a76068-00a75a72,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.7,Bê tông cốt thép C30,,65222.0
+10970731,a0901d4c-0010-4e03-9c06-9354ccf00153-00a7666b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,25025.0
+10970733,a0901d4c-0010-4e03-9c06-9354ccf00153-00a7666d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+10970734,a0901d4c-0010-4e03-9c06-9354ccf00153-00a7666e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.9,Bê tông cốt thép C30,,15138.0
+10970735,a0901d4c-0010-4e03-9c06-9354ccf00153-00a7666f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.9,Bê tông cốt thép C30,,15138.0
+10970736,a0901d4c-0010-4e03-9c06-9354ccf00153-00a76670,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,30258.0
+10970737,a0901d4c-0010-4e03-9c06-9354ccf00153-00a76671,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37538.0
+10970738,a0901d4c-0010-4e03-9c06-9354ccf00153-00a76672,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29208.0
+10970739,a0901d4c-0010-4e03-9c06-9354ccf00153-00a76673,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37538.0
+10970741,a0901d4c-0010-4e03-9c06-9354ccf00153-00a76675,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,33372.0
+10970745,a0901d4c-0010-4e03-9c06-9354ccf00153-00a76679,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.5,Bê tông cốt thép C30,,26478.0
+10970746,a0901d4c-0010-4e03-9c06-9354ccf00153-00a7667a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,30258.0
+10970747,a0901d4c-0010-4e03-9c06-9354ccf00153-00a7667b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,24885.0
+10979567,781ad76a-a27a-495b-a1bb-9cbb236f5a58-00a654b2,07.Dam,Dầm kết cấu (Beam),BeTongVach,BeTongVach,Ground,0.072,0.36,0.0,8.0,Bê tông cốt thép C30,,323586.0
+10979571,781ad76a-a27a-495b-a1bb-9cbb236f5a58-00a65953,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.5,Bê tông cốt thép C30,,9520.0
+10979573,781ad76a-a27a-495b-a1bb-9cbb236f5a58-00a65aa9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.9,Bê tông cốt thép C30,,15470.0
+10979575,781ad76a-a27a-495b-a1bb-9cbb236f5a58-00a66100,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,1B10,21140.0
+10979982,cf2408ab-1e57-42d9-aa0b-d24bfd5dadba-00a66391,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,18042.0
+10979983,cf2408ab-1e57-42d9-aa0b-d24bfd5dadba-00a6639c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.9,Bê tông cốt thép C30,,14892.0
+10979993,cf2408ab-1e57-42d9-aa0b-d24bfd5dadba-00a66a41,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,3.4,Bê tông cốt thép C30,,60340.0
+10979996,cf2408ab-1e57-42d9-aa0b-d24bfd5dadba-00a66e90,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,8.3,Bê tông cốt thép C30,,145688.0
+10979997,cf2408ab-1e57-42d9-aa0b-d24bfd5dadba-00a66e91,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,5.4,Bê tông cốt thép C30,,93642.0
+10980007,cf2408ab-1e57-42d9-aa0b-d24bfd5dadba-00a67180,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,21420.0
+10980010,cf2408ab-1e57-42d9-aa0b-d24bfd5dadba-00a671fc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,11778.0
+10983936,37a1e44f-ca4f-478f-b4ca-9a56ef9e1def-00a78e16,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.2,Bê tông cốt thép C30,,230195.0
+10983945,37a1e44f-ca4f-478f-b4ca-9a56ef9e1def-00a79400,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.2,Bê tông cốt thép C30,,231262.0
+10983947,8c700f1e-6838-416c-b4aa-e5add60c4313-00a79990,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,2.4,Bê tông cốt thép C30,,41825.0
+10983948,8c700f1e-6838-416c-b4aa-e5add60c4313-00a79991,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.3,Bê tông cốt thép C30,,39410.0
+10985305,8c700f1e-6838-416c-b4aa-e5add60c4313-00a79f59,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,17290.0
+10985740,8c700f1e-6838-416c-b4aa-e5add60c4313-00a7a10c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,2.4,Bê tông cốt thép C30,,41825.0
+10985741,8c700f1e-6838-416c-b4aa-e5add60c4313-00a7a10d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.8,Bê tông cốt thép C30,,31762.0
+10990574,89311d96-d13d-4c9e-aab6-70d956b8433c-00a7b3ee,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,7.1,Bê tông cốt thép C30,,123848.0
+10990576,89311d96-d13d-4c9e-aab6-70d956b8433c-00a7b3f0,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,8.5,Bê tông cốt thép C30,,149468.0
+10996320,6c663f2a-ac3a-48f6-bdd8-22f8bfb6f808-00a7ca60,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.6,Bê tông cốt thép C30,,80938.0
+10996321,6c663f2a-ac3a-48f6-bdd8-22f8bfb6f808-00a7ca61,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,7.3,Bê tông cốt thép C30,,128485.0
+10996322,6c663f2a-ac3a-48f6-bdd8-22f8bfb6f808-00a7ca62,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,35910.0
+11000711,5e9c8ec1-9ab4-42f3-9e25-e75b2b3757d1-00a7db87,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,9.5,Bê tông cốt thép C30,,166932.0
+11000712,5e9c8ec1-9ab4-42f3-9e25-e75b2b3757d1-00a7db88,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,10.2,Bê tông cốt thép C30,,178325.0
+11000713,5e9c8ec1-9ab4-42f3-9e25-e75b2b3757d1-00a7db89,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29102.0
+11000714,5e9c8ec1-9ab4-42f3-9e25-e75b2b3757d1-00a7db8a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,20790.0
+11000715,5e9c8ec1-9ab4-42f3-9e25-e75b2b3757d1-00a7db8b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37432.0
+11001383,5e9c8ec1-9ab4-42f3-9e25-e75b2b3757d1-00a7de27,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16642.0
+11001563,5e9c8ec1-9ab4-42f3-9e25-e75b2b3757d1-00a7dedb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16642.0
+11003195,5e9c8ec1-9ab4-42f3-9e25-e75b2b3757d1-00a7e53b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,13090.0
+11004056,9a4af6fe-db7d-45e4-a6c3-adfa2b0c620b-00a7e898,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.3,Bê tông cốt thép C30,,23520.0
+11008055,098a4dbb-44fc-4b9a-8aa8-4431d609fdcc-00a7f837,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,9.5,Bê tông cốt thép C30,,165655.0
+11008056,098a4dbb-44fc-4b9a-8aa8-4431d609fdcc-00a7f838,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,10.1,Bê tông cốt thép C30,,177082.0
+11008057,098a4dbb-44fc-4b9a-8aa8-4431d609fdcc-00a7f839,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37432.0
+11008058,098a4dbb-44fc-4b9a-8aa8-4431d609fdcc-00a7f83a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29102.0
+11008059,098a4dbb-44fc-4b9a-8aa8-4431d609fdcc-00a7f83b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37432.0
+11010778,9a17c157-219a-4c50-8dbb-7d34c7f7c031-00a802da,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.8,Bê tông cốt thép C30,,83458.0
+11010783,9a17c157-219a-4c50-8dbb-7d34c7f7c031-00a802df,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.8,Bê tông cốt thép C30,,84210.0
+11010786,9a17c157-219a-4c50-8dbb-7d34c7f7c031-00a802e2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,33268.0
+11010787,9a17c157-219a-4c50-8dbb-7d34c7f7c031-00a802e3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29102.0
+11010788,9a17c157-219a-4c50-8dbb-7d34c7f7c031-00a802e4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,33268.0
+11010789,9a17c157-219a-4c50-8dbb-7d34c7f7c031-00a802e5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.9,Bê tông cốt thép C30,,16100.0
+11010790,9a17c157-219a-4c50-8dbb-7d34c7f7c031-00a802e6,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12530.0
+11010791,9a17c157-219a-4c50-8dbb-7d34c7f7c031-00a802e7,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.9,Bê tông cốt thép C30,,16100.0
+11010792,9a17c157-219a-4c50-8dbb-7d34c7f7c031-00a802e8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,33268.0
+11010793,9a17c157-219a-4c50-8dbb-7d34c7f7c031-00a802e9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29102.0
+11010794,9a17c157-219a-4c50-8dbb-7d34c7f7c031-00a802ea,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,33268.0
+11010795,9a17c157-219a-4c50-8dbb-7d34c7f7c031-00a802eb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,35910.0
+11014732,3452ddac-6a9b-490c-989d-ec1136c8851a-00a8124c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.2,Bê tông cốt thép C30,,230930.0
+11014759,3452ddac-6a9b-490c-989d-ec1136c8851a-00a81267,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.2,Bê tông cốt thép C30,,230195.0
+11015405,3452ddac-6a9b-490c-989d-ec1136c8851a-00a814ed,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.5,Bê tông cốt thép C30,,77910.0
+11015406,3452ddac-6a9b-490c-989d-ec1136c8851a-00a814ee,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.9,Bê tông cốt thép C30,,85575.0
+11016553,3452ddac-6a9b-490c-989d-ec1136c8851a-00a81969,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,7.4,Bê tông cốt thép C30,,130358.0
+11017660,3452ddac-6a9b-490c-989d-ec1136c8851a-00a81dbc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.7,Bê tông cốt thép C30,,81988.0
+11019229,3452ddac-6a9b-490c-989d-ec1136c8851a-00a823dd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.3,Bê tông cốt thép C30,,40968.0
+11019769,3452ddac-6a9b-490c-989d-ec1136c8851a-00a825f9,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,100x400,Ground,0.128,1.64,0.0,14.1,BSV_VL_BeTong_M350(B25),3B11-2,792800.0
+11020213,f17f0d11-5631-4dba-af17-8e6b7b7b7528-00a827b5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16940.0
+11020640,f17f0d11-5631-4dba-af17-8e6b7b7b7528-00a82960,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,21490.0
+11033268,5bee7429-747c-443f-8310-0c30740be4af-00a85ab4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,13.9,Bê tông cốt thép C30,,243915.0
+11033269,5bee7429-747c-443f-8310-0c30740be4af-00a85ab5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,12.6,Bê tông cốt thép C30,,220605.0
+11033272,5bee7429-747c-443f-8310-0c30740be4af-00a85ab8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,20388.0
+11035393,9b7686bf-b6b1-4807-a1ab-b96ca2dcf1f5-00a86301,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,27.9,Bê tông cốt thép C30,,488320.0
+11035700,9b7686bf-b6b1-4807-a1ab-b96ca2dcf1f5-00a86434,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.8,Bê tông cốt thép C30,,32358.0
+11036135,fd07e6d6-aab8-4ed0-9ed1-ea3d0d3738c7-00a865e7,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,21.6,Bê tông cốt thép C30,,378717.0
+11036581,b4f70570-29f1-48bf-9232-3c53448e73e3-00a867a5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,23.7,Bê tông cốt thép C30,,414890.0
+11038888,dfd66e4d-ec21-4374-bada-81605002f797-00a83861,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200x200,+3.750,0.104,1.08,0.0,11.4,BSV_VL_BeTong_M350(B25),BT3,588600.0
+11038890,dfd66e4d-ec21-4374-bada-81605002f797-00a83b03,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+3.750,0.052,0.8,0.0,5.7,BSV_VL_BeTong_M350(B25),BT2,351500.0
+11038892,dfd66e4d-ec21-4374-bada-81605002f797-00a83b82,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200x200,+7.050,0.118,1.32,0.0,13.0,BSV_VL_BeTong_M350(B25),BT3,689662.0
+11038893,dfd66e4d-ec21-4374-bada-81605002f797-00a83b83,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+7.050,0.06,0.93,0.0,6.6,BSV_VL_BeTong_M350(B25),BT2,407878.0
+11039023,dfd66e4d-ec21-4374-bada-81605002f797-00a83df0,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+10.650,0.013,0.21,0.0,1.4,BSV_VL_BeTong_M350(B25),BT5,91175.0
+11039025,dfd66e4d-ec21-4374-bada-81605002f797-00a83e2a,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+10.650,0.011,0.18,0.0,1.2,BSV_VL_BeTong_M350(B25),BT4,76490.0
+11039026,dfd66e4d-ec21-4374-bada-81605002f797-00a83e33,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+10.650,0.011,0.18,0.0,1.2,BSV_VL_BeTong_M350(B25),BT4,76490.0
+11039027,dfd66e4d-ec21-4374-bada-81605002f797-00a83e87,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+10.650,0.013,0.21,0.0,1.4,BSV_VL_BeTong_M350(B25),BT5,91175.0
+11039028,dfd66e4d-ec21-4374-bada-81605002f797-00a83eab,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+10.650,0.013,0.21,0.0,1.4,BSV_VL_BeTong_M350(B25),BT5,91175.0
+11039030,dfd66e4d-ec21-4374-bada-81605002f797-00a83ed1,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+10.650,0.013,0.21,0.0,1.4,BSV_VL_BeTong_M350(B25),BT5,91175.0
+11039031,dfd66e4d-ec21-4374-bada-81605002f797-00a83eeb,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+10.650,0.04,0.62,0.0,4.4,BSV_VL_BeTong_M350(B25),BT2,271400.0
+11039033,dfd66e4d-ec21-4374-bada-81605002f797-00a83f27,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+10.650,0.04,0.62,0.0,4.4,BSV_VL_BeTong_M350(B25),BT2,271400.0
+11039034,dfd66e4d-ec21-4374-bada-81605002f797-00a83f64,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+10.650,0.04,0.62,0.0,4.4,BSV_VL_BeTong_M350(B25),BT2,271400.0
+11039035,dfd66e4d-ec21-4374-bada-81605002f797-00a83f65,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+10.650,0.04,0.62,0.0,4.4,BSV_VL_BeTong_M350(B25),BT2,271400.0
+11040101,3cde9485-0740-42c0-abc0-e78b82d43076-00a873e2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,23.3,Bê tông cốt thép C30,,407120.0
+11040191,3cde9485-0740-42c0-abc0-e78b82d43076-00a875bf,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.3,Bê tông cốt thép C30,,22942.0
+11045858,24805205-ba89-40a0-b05b-4ad1e9652820-00a88be2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48790.0
+11046757,24805205-ba89-40a0-b05b-4ad1e9652820-00a88f65,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,32.2,Bê tông cốt thép C30,,563920.0
+11049302,0672ce0d-04f7-4065-89cd-7490c85e8468-00a89956,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,36.9,Bê tông cốt thép C30,,645312.0
+11050003,b2bf51e0-61e7-4f5e-9d0b-afeccaa65c78-00a89bfc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,9.5,Bê tông cốt thép C30,,166915.0
+11051903,b2bf51e0-61e7-4f5e-9d0b-afeccaa65c78-00a8a37f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,8.8,Bê tông cốt thép C30,,154070.0
+11052744,b2bf51e0-61e7-4f5e-9d0b-afeccaa65c78-00a8a6c8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,9.6,Bê tông cốt thép C30,,168315.0
+11053787,b2bf51e0-61e7-4f5e-9d0b-afeccaa65c78-00a8aadb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,49.8,Bê tông cốt thép C30,,871605.0
+11054013,b2bf51e0-61e7-4f5e-9d0b-afeccaa65c78-00a8abbd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,5.2,Bê tông cốt thép C30,,90632.0
+11054721,b2bf51e0-61e7-4f5e-9d0b-afeccaa65c78-00a8ae81,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,16.4,Bê tông cốt thép C30,,287122.0
+11055402,a203b006-c5ea-476f-9722-defc9a6cf277-00a8b12a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,9.6,Bê tông cốt thép C30,,168350.0
+11057476,a203b006-c5ea-476f-9722-defc9a6cf277-00a8b944,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.3,Bê tông cốt thép C30,,110775.0
+11059012,0720292e-5fe7-4ab1-9bd8-78d3dca59b7b-00a8bf44,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,8.6,Bê tông cốt thép C30,,150360.0
+11059942,0720292e-5fe7-4ab1-9bd8-78d3dca59b7b-00a8c2e6,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.5,Bê tông cốt thép C30,,42962.0
+11060469,37abda78-a4c9-477f-b3b3-dd3846e56754-00a8c4f5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,17272.0
+11061018,37abda78-a4c9-477f-b3b3-dd3846e56754-00a8c71a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.5,Bê tông cốt thép C30,,9608.0
+11062775,37abda78-a4c9-477f-b3b3-dd3846e56754-00a8cdf7,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,10.4,Bê tông cốt thép C30,,181230.0
+11065158,37abda78-a4c9-477f-b3b3-dd3846e56754-00a8d746,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.3,Bê tông cốt thép C30,,5758.0
+11066401,37abda78-a4c9-477f-b3b3-dd3846e56754-00a8dc21,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,23.3,Bê tông cốt thép C30,,407522.0
+11068009,b4a5b91e-b8fc-4ca8-ac5d-a3199b5a494f-00a8e153,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,8.1,Bê tông cốt thép C30,,141960.0
+11068017,80d19866-76fd-4eb1-b0a9-a6219c46fe31-00a8e271,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.6,Bê tông cốt thép C30,,11322.0
+11069698,80d19866-76fd-4eb1-b0a9-a6219c46fe31-00a8e902,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,22.9,Bê tông cốt thép C30,,401065.0
+11070372,80d19866-76fd-4eb1-b0a9-a6219c46fe31-00a8eba4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,17.1,Bê tông cốt thép C30,,299162.0
+11072569,80d19866-76fd-4eb1-b0a9-a6219c46fe31-00a8f439,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.7,Bê tông cốt thép C30,,83108.0
+11073045,80d19866-76fd-4eb1-b0a9-a6219c46fe31-00a8f615,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,7.6,Bê tông cốt thép C30,,132965.0
+11073381,80d19866-76fd-4eb1-b0a9-a6219c46fe31-00a8f765,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.1,Bê tông cốt thép C30,,54740.0
+11073674,b81a3872-f137-477d-9f66-55a3069243c5-00a8ea0e,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200x200,+7.050,0.112,1.16,0.0,12.3,BSV_VL_BeTong_M350(B25),BT3,633200.0
+11073675,b81a3872-f137-477d-9f66-55a3069243c5-00a8ea0f,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,200x200,+7.050,0.112,1.16,0.0,12.3,BSV_VL_BeTong_M350(B25),BT3,633200.0
+11073684,b81a3872-f137-477d-9f66-55a3069243c5-00a8eb32,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+7.050,0.051,0.83,0.0,5.6,BSV_VL_BeTong_M350(B25),BT2,353375.0
+11073685,b81a3872-f137-477d-9f66-55a3069243c5-00a8eb33,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+7.050,0.049,0.8,0.0,5.4,BSV_VL_BeTong_M350(B25),BT2,340098.0
+11074013,49e60bcd-93db-4847-98a3-bcb6396b1389-00a8f9dd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.1,Bê tông cốt thép C30,,18830.0
+11074815,49e60bcd-93db-4847-98a3-bcb6396b1389-00a8fcff,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.1,Bê tông cốt thép C30,,18830.0
+11075021,3b8c3902-9849-4ac7-804a-257d708a149e-00a8fdcd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,33600.0
+11075662,3b8c3902-9849-4ac7-804a-257d708a149e-00a9004e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,70000.0
+11076427,bef71c6e-4ec2-4625-9027-f208dc1d84fe-00a9034b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,24115.0
+11076935,bef71c6e-4ec2-4625-9027-f208dc1d84fe-00a90547,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.3,Bê tông cốt thép C30,,22242.0
+11077161,bef71c6e-4ec2-4625-9027-f208dc1d84fe-00a90629,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,32900.0
+11077489,af3bf096-3e1f-4d42-bf1c-fd6a3bc015e1-00a90771,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.7,Bê tông cốt thép C30,,47600.0
+11078581,af3bf096-3e1f-4d42-bf1c-fd6a3bc015e1-00a90bb5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,32428.0
+11078787,af3bf096-3e1f-4d42-bf1c-fd6a3bc015e1-00a90c83,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,32428.0
+11079974,a4ffb26f-b07b-403c-8e82-c9f71ead8530-00a90dca,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,7.7,Bê tông cốt thép C30,,133962.0
+11080667,a4ffb26f-b07b-403c-8e82-c9f71ead8530-00a913db,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,7.2,Bê tông cốt thép C30,,125668.0
+11081101,a4ffb26f-b07b-403c-8e82-c9f71ead8530-00a9158d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,3.8,Bê tông cốt thép C30,,66465.0
+11081601,a4ffb26f-b07b-403c-8e82-c9f71ead8530-00a91781,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,3.8,Bê tông cốt thép C30,,66465.0
+11082105,a4ffb26f-b07b-403c-8e82-c9f71ead8530-00a91979,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48738.0
+11082646,a4ffb26f-b07b-403c-8e82-c9f71ead8530-00a91b96,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48738.0
+11082905,75f9ba44-3aaa-4975-a335-8bc12eed6db3-00a91c99,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,8.5,Bê tông cốt thép C30,,149485.0
+11084839,75f9ba44-3aaa-4975-a335-8bc12eed6db3-00a92427,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,8.3,Bê tông cốt thép C30,,144918.0
+11085060,75f9ba44-3aaa-4975-a335-8bc12eed6db3-00a92504,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48738.0
+11085698,75f9ba44-3aaa-4975-a335-8bc12eed6db3-00a92782,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48738.0
+11092753,b5039b0c-9e21-4a9c-a274-42d9770d52ed-00a94311,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,75x200,+7.050,0.044,0.83,0.0,4.9,BSV_VL_BeTong_M350(B25),RC,331276.0
+11094967,b3e5c942-3a47-48a4-89c4-92182c8f489d-00a93b06,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+0.000,0.05,0.77,0.0,5.5,BSV_VL_BeTong_M350(B25),BT2,338150.0
+11136519,5f3c3541-6aef-4ff2-bf1f-c994efcad2f1-00a9ee07,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,75x200,+3.750,0.047,0.89,0.0,5.2,BSV_VL_BeTong_M350(B25),RC,355225.0
+11138599,daf1fdcc-9a65-4df3-b787-db6dfc62e53d-00a9ee8d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,236075.0
+11183800,790c7ac4-7516-4560-94aa-1ceb7868b136-00aaa6b8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,20808.0
+11184600,790c7ac4-7516-4560-94aa-1ceb7868b136-00aaa9d8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.2,Bê tông cốt thép C30,,3028.0
+11188270,c9f691fb-bba6-4bc7-9073-0f2271ff8e43-00aab82e,05.Cot,Cột kết cấu (Column),BSV_KC_Cot_BTCT,100x200,+10.650,0.011,0.18,0.0,1.2,BSV_VL_BeTong_M350(B25),BT4,76490.0
+11189684,3992952d-01c0-4a5b-9aba-580ed01f090a-00aabdb4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,1.5,Bê tông cốt thép C30,,25952.0
+11189923,3992952d-01c0-4a5b-9aba-580ed01f090a-00aabea3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,36015.0
+11193003,bf568251-3ebe-4daf-8149-1cdb501f23ac-00aacaab,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.6,Bê tông cốt thép C30,,28858.0
+11193004,bf568251-3ebe-4daf-8149-1cdb501f23ac-00aacaac,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.5,Bê tông cốt thép C30,,43610.0
+11198682,9f7b06ca-3a19-4fbb-a354-58b7445b7fde-00aae0da,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.4,Bê tông cốt thép C30,,77788.0
+11199804,9f7b06ca-3a19-4fbb-a354-58b7445b7fde-00aae53c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.2,Bê tông cốt thép C30,,38885.0
+11200157,b722f0f0-58e8-42fb-83be-f765831fc8bd-00aae69d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.6,Bê tông cốt thép C30,,62230.0
+11200158,b722f0f0-58e8-42fb-83be-f765831fc8bd-00aae69e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48615.0
+11202745,63c3f4df-3fc7-4747-bb11-635e6c0d44ba-00aaf0b9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.4,Bê tông cốt thép C30,,77700.0
+11202746,63c3f4df-3fc7-4747-bb11-635e6c0d44ba-00aaf0ba,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.2,Bê tông cốt thép C30,,38832.0
+11202747,63c3f4df-3fc7-4747-bb11-635e6c0d44ba-00aaf0bb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.6,Bê tông cốt thép C30,,62160.0
+11202748,63c3f4df-3fc7-4747-bb11-635e6c0d44ba-00aaf0bc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48528.0
+11217796,6281b1fb-e1ec-41ca-a994-2d47de0d015e-00ab29df,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.8,Bê tông cốt thép C30,,65642.0
+11217798,6281b1fb-e1ec-41ca-a994-2d47de0d015e-00ab29e2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.3,Bê tông cốt thép C30,,23520.0
+11217802,6281b1fb-e1ec-41ca-a994-2d47de0d015e-00ab2a1a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,23625.0
+11218633,17aa2365-f108-4ba4-97ed-6da345da7662-00ab2ec9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.8,Bê tông cốt thép C30,,13598.0
+11252479,35e85966-0d79-4e60-bca5-83190ce9fdcf-00abb2ff,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,7.7,Bê tông cốt thép C30,,134750.0
+11252481,35e85966-0d79-4e60-bca5-83190ce9fdcf-00abb301,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,6.0,Bê tông cốt thép C30,,104282.0
+11252487,35e85966-0d79-4e60-bca5-83190ce9fdcf-00abb307,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,8.2,Bê tông cốt thép C30,,143202.0
+11257687,02267d21-6364-4b53-b17a-8adf63207c45-00abc757,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224088.0
+11257689,02267d21-6364-4b53-b17a-8adf63207c45-00abc759,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+11257690,02267d21-6364-4b53-b17a-8adf63207c45-00abc75a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+11257691,02267d21-6364-4b53-b17a-8adf63207c45-00abc75b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+11257692,02267d21-6364-4b53-b17a-8adf63207c45-00abc75c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+11257693,02267d21-6364-4b53-b17a-8adf63207c45-00abc75d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,8.9,Bê tông cốt thép C30,,155400.0
+11257694,02267d21-6364-4b53-b17a-8adf63207c45-00abc75e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,235952.0
+11258091,02267d21-6364-4b53-b17a-8adf63207c45-00abc8eb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+11258607,02267d21-6364-4b53-b17a-8adf63207c45-00abcaef,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12512.0
+11261901,c5c31d88-910b-43dd-b421-53f2c1d0855d-00abd7cd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224088.0
+11261902,c5c31d88-910b-43dd-b421-53f2c1d0855d-00abd7ce,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+11261903,c5c31d88-910b-43dd-b421-53f2c1d0855d-00abd7cf,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+11261904,c5c31d88-910b-43dd-b421-53f2c1d0855d-00abd7d0,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+11261905,c5c31d88-910b-43dd-b421-53f2c1d0855d-00abd7d1,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+11261906,c5c31d88-910b-43dd-b421-53f2c1d0855d-00abd7d2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,8.9,Bê tông cốt thép C30,,155400.0
+11261907,c5c31d88-910b-43dd-b421-53f2c1d0855d-00abd7d3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,235952.0
+11261908,c5c31d88-910b-43dd-b421-53f2c1d0855d-00abd7d4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+11261909,c5c31d88-910b-43dd-b421-53f2c1d0855d-00abd7d5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12512.0
+11264510,e8bbf81d-f9d7-4080-989b-55ed35d70cd4-00abe1fe,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224088.0
+11264512,e8bbf81d-f9d7-4080-989b-55ed35d70cd4-00abe200,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.6,Bê tông cốt thép C30,,45885.0
+11264513,e8bbf81d-f9d7-4080-989b-55ed35d70cd4-00abe201,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+11264516,e8bbf81d-f9d7-4080-989b-55ed35d70cd4-00abe204,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,235952.0
+11264517,e8bbf81d-f9d7-4080-989b-55ed35d70cd4-00abe205,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+11267185,8c317f89-ce5f-4cee-b5f9-b7184395ca86-00abec71,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224088.0
+11267186,8c317f89-ce5f-4cee-b5f9-b7184395ca86-00abec72,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+11267188,8c317f89-ce5f-4cee-b5f9-b7184395ca86-00abec74,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+11267189,8c317f89-ce5f-4cee-b5f9-b7184395ca86-00abec75,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+11267190,8c317f89-ce5f-4cee-b5f9-b7184395ca86-00abec76,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,8.9,Bê tông cốt thép C30,,155400.0
+11267191,8c317f89-ce5f-4cee-b5f9-b7184395ca86-00abec77,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,235952.0
+11267192,8c317f89-ce5f-4cee-b5f9-b7184395ca86-00abec78,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,50050.0
+11267193,8c317f89-ce5f-4cee-b5f9-b7184395ca86-00abec79,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,25025.0
+11267831,c8c0991a-f8ad-4554-b787-f29b64e0cd70-00abeef7,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.2,Bê tông cốt thép C30,,4165.0
+11271022,fdd98e24-2561-4e75-be31-b99c4f8c5bb5-00abfb6e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224088.0
+11271023,fdd98e24-2561-4e75-be31-b99c4f8c5bb5-00abfb6f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12512.0
+11271024,fdd98e24-2561-4e75-be31-b99c4f8c5bb5-00abfb70,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,3.6,Bê tông cốt thép C30,,62580.0
+11271025,fdd98e24-2561-4e75-be31-b99c4f8c5bb5-00abfb71,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+11271027,fdd98e24-2561-4e75-be31-b99c4f8c5bb5-00abfb73,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,235952.0
+11271028,fdd98e24-2561-4e75-be31-b99c4f8c5bb5-00abfb74,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,4.1,Bê tông cốt thép C30,,70910.0
+11271161,fdd98e24-2561-4e75-be31-b99c4f8c5bb5-00abfbf9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16678.0
+11274759,48a666fd-d64e-4d53-a740-738d5954358e-00ac0a07,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,224088.0
+11274761,48a666fd-d64e-4d53-a740-738d5954358e-00ac0a09,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,12.3,Bê tông cốt thép C30,,216002.0
+11274762,48a666fd-d64e-4d53-a740-738d5954358e-00ac0a0a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,235638.0
+11274764,48a666fd-d64e-4d53-a740-738d5954358e-00ac0a0c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,8.9,Bê tông cốt thép C30,,155400.0
+11274765,48a666fd-d64e-4d53-a740-738d5954358e-00ac0a0d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,235952.0
+11275598,7835ca10-6f6d-4550-a3a2-c11c278b81cf-00ac0d4e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D12,Ground,0.0,0.0,0.0,8.7,Bê tông cốt thép C30,,151812.0
+11278646,7835ca10-6f6d-4550-a3a2-c11c278b81cf-00ac1936,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,235638.0
+11281077,840d54f7-f5ba-40cb-b6df-ae7d154d0809-00ac22b5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,21332.0
+11283337,cd0af6ec-8c5e-4c68-8eee-68df58aafaa0-00ac2b89,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,3.8,Bê tông cốt thép C30,,66990.0
+11283338,cd0af6ec-8c5e-4c68-8eee-68df58aafaa0-00ac2b8a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.5,Bê tông cốt thép C30,,78838.0
+11283339,cd0af6ec-8c5e-4c68-8eee-68df58aafaa0-00ac2b8b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37432.0
+11285695,4ef1dcca-cb5a-4d78-b8c9-e940c979ad53-00ac34bf,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,3.1,Bê tông cốt thép C30,,55125.0
+11285696,4ef1dcca-cb5a-4d78-b8c9-e940c979ad53-00ac34c0,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,3.8,Bê tông cốt thép C30,,66990.0
+11287959,e982fb33-2085-4e6f-b120-010b1ee7a715-00ac3d97,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x400,Ground,0.162,1.5,0.0,17.8,BSV_VL_BeTong_M350(B25),2B9,875832.0
+11292913,79d8c421-50fe-4afe-aa1a-5f5765c04686-00ac50f1,08.San,Sàn kết cấu (Slab),Floor,50,+3.750,0.06,1.2,0.0,6.6,BSV_VL_BeTong_M350(B25),S_50,466654.0
+11294287,ff3d38d9-03e2-48fb-b953-cb1ad6190cbd-00ac564f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,27.9,Bê tông cốt thép C30,,488425.0
+11296630,9c534054-1a7d-4f04-98f2-f049c49adc4e-00ac5f76,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,3.7,Bê tông cốt thép C30,,64732.0
+11300370,7ea7d3b2-d9f8-4faf-bd59-15383a8e60af-00ac6e12,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,8.8,Bê tông cốt thép C30,,153562.0
+11303512,a2a56ed3-52f4-49c3-815f-58804c693c52-00ac7a58,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,7.4,Bê tông cốt thép C30,,129692.0
+11305932,1f8aeee1-1103-4f74-a64b-e6c543c094a5-00ac83cc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,34072.0
+11306164,1f8aeee1-1103-4f74-a64b-e6c543c094a5-00ac84b4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,34072.0
+11309296,bbd5e935-b972-4d96-846d-667cee436da0-00ac90f0,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.6,Bê tông cốt thép C30,,116340.0
+11309821,bbd5e935-b972-4d96-846d-667cee436da0-00ac92fd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.6,Bê tông cốt thép C30,,116340.0
+11329170,ee29b0f9-78c2-44c1-8db4-3ae8c502db2a-00ac912e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,13.5,Bê tông cốt thép C30,,235760.0
+11338359,9d660852-0306-4023-ac03-ef9fb66aa122-00ace1a5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,8.3,Bê tông cốt thép C30,,145512.0
+11338360,9d660852-0306-4023-ac03-ef9fb66aa122-00ace1a6,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,7.1,Bê tông cốt thép C30,,123848.0
+11338668,381d0bbf-f9a3-4016-9281-6dc196aa3505-00ad03ac,08.San,Sàn kết cấu (Slab),Floor,50,+7.050,0.055,1.1,0.0,6.1,BSV_VL_BeTong_M350(B25),,428556.0
+11340433,381d0bbf-f9a3-4016-9281-6dc196aa3505-00ad0a91,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,12.9,Bê tông cốt thép C30,,226415.0
+11344356,381d0bbf-f9a3-4016-9281-6dc196aa3505-00ad19e4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,9.5,Bê tông cốt thép C30,,166215.0
+11344970,6dc8abbe-2549-4617-b9f6-a0ae19fcd5fb-00ad1c4a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,3.4,Bê tông cốt thép C30,,59360.0
+11350078,229ba548-9379-4bf4-8f13-d2c2b8522d98-00ad303e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.8,Bê tông cốt thép C30,,119718.0
+11359469,b1837a7f-73d6-4bbe-8034-1ed1e7920311-00ad54ed,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.4,Bê tông cốt thép C30,,7175.0
+11359891,b1837a7f-73d6-4bbe-8034-1ed1e7920311-00ad5693,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,5.1,Bê tông cốt thép C30,,88428.0
+11366534,736cb04e-d7c9-4128-98dd-fc7efef289ba-00ad7086,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,9.4,Bê tông cốt thép C30,,165235.0
+11366535,736cb04e-d7c9-4128-98dd-fc7efef289ba-00ad7087,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,10.1,Bê tông cốt thép C30,,177082.0
+11367171,736cb04e-d7c9-4128-98dd-fc7efef289ba-00ad7303,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37432.0
+11367299,736cb04e-d7c9-4128-98dd-fc7efef289ba-00ad7383,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29102.0
+11369991,f2299e5f-9bf0-466e-b76e-7d266c771b6c-00ad7e07,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200x230,Ground,0.23,2.19,0.0,25.2,BSV_VL_BeTong_M350(B25),RB7,1256736.0
+11370733,f2299e5f-9bf0-466e-b76e-7d266c771b6c-00ad80ed,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80X230,Ground,0.013,0.23,0.0,1.4,BSV_VL_BeTong_M350(B25),RB11,92612.0
+11370888,f2299e5f-9bf0-466e-b76e-7d266c771b6c-00ad8188,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80X230,Ground,0.013,0.23,0.0,1.4,BSV_VL_BeTong_M350(B25),,92612.0
+11371307,f2299e5f-9bf0-466e-b76e-7d266c771b6c-00ad832b,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200X550,Ground,0.319,2.29,0.0,35.1,BSV_VL_BeTong_M350(B25),RB1,1579325.0
+11371515,f2299e5f-9bf0-466e-b76e-7d266c771b6c-00ad83fb,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200X550,Ground,0.119,0.92,0.0,13.1,BSV_VL_BeTong_M350(B25),RB9,603350.0
+11372052,f2299e5f-9bf0-466e-b76e-7d266c771b6c-00ad8614,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200X550,Ground,0.141,1.07,0.0,15.5,BSV_VL_BeTong_M350(B25),RB8-1,710600.0
+11372284,f2299e5f-9bf0-466e-b76e-7d266c771b6c-00ad86fc,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80X230,Ground,0.016,0.29,0.0,1.8,BSV_VL_BeTong_M350(B25),RB11,118717.0
+11372840,f2299e5f-9bf0-466e-b76e-7d266c771b6c-00ad8928,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,80X550,Ground,0.026,0.42,0.0,2.9,BSV_VL_BeTong_M350(B25),RB8-1,181940.0
+11373309,91360a22-7d62-43c7-8d10-dbc1b4b583c7-00ad8a30,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,8.2,Bê tông cốt thép C30,,142905.0
+11373310,91360a22-7d62-43c7-8d10-dbc1b4b583c7-00ad8a31,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.9,Bê tông cốt thép C30,,120960.0
+11375197,d05373be-3d70-40c3-be84-acca5d31d7d5-00ad925d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,8.1,Bê tông cốt thép C30,,141978.0
+11375198,d05373be-3d70-40c3-be84-acca5d31d7d5-00ad925e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,5.1,Bê tông cốt thép C30,,89635.0
+11376512,d05373be-3d70-40c3-be84-acca5d31d7d5-00ad9780,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.5,Bê tông cốt thép C30,,61355.0
+11377778,667b60a6-70fa-4572-9aa2-65634f90b35c-00ad9c72,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,26.2,Bê tông cốt thép C30,,458255.0
+11377779,667b60a6-70fa-4572-9aa2-65634f90b35c-00ad9c73,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,26.3,Bê tông cốt thép C30,,460810.0
+11377781,667b60a6-70fa-4572-9aa2-65634f90b35c-00ad9c75,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29102.0
+11380214,667b60a6-70fa-4572-9aa2-65634f90b35c-00ada5f6,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16642.0
+11380529,667b60a6-70fa-4572-9aa2-65634f90b35c-00ada731,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,20790.0
+11380616,667b60a6-70fa-4572-9aa2-65634f90b35c-00ada788,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16642.0
+11380673,667b60a6-70fa-4572-9aa2-65634f90b35c-00ada7c1,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,20790.0
+11380705,667b60a6-70fa-4572-9aa2-65634f90b35c-00ada7e1,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,24955.0
+11380989,667b60a6-70fa-4572-9aa2-65634f90b35c-00ada8fd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37432.0
+11381305,667b60a6-70fa-4572-9aa2-65634f90b35c-00adaa39,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37432.0
+11381400,667b60a6-70fa-4572-9aa2-65634f90b35c-00adaa98,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37432.0
+11381703,667b60a6-70fa-4572-9aa2-65634f90b35c-00adabc7,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,33268.0
+11381883,667b60a6-70fa-4572-9aa2-65634f90b35c-00adac7b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12478.0
+11382044,667b60a6-70fa-4572-9aa2-65634f90b35c-00adad1c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,24955.0
+11382348,667b60a6-70fa-4572-9aa2-65634f90b35c-00adae4c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16642.0
+11382349,667b60a6-70fa-4572-9aa2-65634f90b35c-00adae4d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16642.0
+11386667,278e3d86-9ba3-4cde-b245-bab4d08d43e5-00adbf2b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.6,Bê tông cốt thép C30,,44922.0
+11387203,278e3d86-9ba3-4cde-b245-bab4d08d43e5-00adc143,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.1,Bê tông cốt thép C30,,19600.0
+11388957,278e3d86-9ba3-4cde-b245-bab4d08d43e5-00adc81d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.5,Bê tông cốt thép C30,,44188.0
+11392907,0be4dc34-b0e9-4ce3-9e03-48ae83442503-00add78b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.3,Bê tông cốt thép C30,,23310.0
+11392908,0be4dc34-b0e9-4ce3-9e03-48ae83442503-00add78c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.2,Bê tông cốt thép C30,,4200.0
+11394351,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addcad,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,26.2,Bê tông cốt thép C30,,458098.0
+11394352,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addcae,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,26.3,Bê tông cốt thép C30,,460810.0
+11394353,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addcaf,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,29102.0
+11394354,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addcb0,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16642.0
+11394355,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addcb1,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,20790.0
+11394356,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addcb2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16642.0
+11394357,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addcb3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,20790.0
+11394358,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addcb4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,24955.0
+11394359,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addcb5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37432.0
+11394360,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addcb6,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37432.0
+11394361,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addcb7,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37432.0
+11394362,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addcb8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,,33268.0
+11394363,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addcb9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12478.0
+11394364,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addcba,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,24955.0
+11394365,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addcbb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16642.0
+11394366,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addcbc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,16642.0
+11394758,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addec6,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.6,Bê tông cốt thép C30,,44922.0
+11394761,a421b117-bef0-4dba-9678-d75bc2fdb78a-00addec9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.5,Bê tông cốt thép C30,,44188.0
+11395691,a421b117-bef0-4dba-9678-d75bc2fdb78a-00ade26b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.1,Bê tông cốt thép C30,,19600.0
+11401373,0095cc57-b796-4ee0-a237-d91bc8f3b415-00adf89d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,8.9,Bê tông cốt thép C30,,156328.0
+11402678,26e2e9e9-10d7-47df-ba48-82c238cb00d2-00adfdb6,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,11.2,Bê tông cốt thép C30,,196018.0
+11402990,26e2e9e9-10d7-47df-ba48-82c238cb00d2-00adfeee,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,24.2,Bê tông cốt thép C30,,424358.0
+11403439,26e2e9e9-10d7-47df-ba48-82c238cb00d2-00ae00af,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,23.1,Bê tông cốt thép C30,,403760.0
+11403808,26e2e9e9-10d7-47df-ba48-82c238cb00d2-00ae0220,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,20.5,Bê tông cốt thép C30,,359345.0
+11404102,26e2e9e9-10d7-47df-ba48-82c238cb00d2-00ae0346,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,22.0,Bê tông cốt thép C30,,384440.0
+11404936,26e2e9e9-10d7-47df-ba48-82c238cb00d2-00ae0688,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,19.9,Bê tông cốt thép C30,,348460.0
+11405599,26e2e9e9-10d7-47df-ba48-82c238cb00d2-00ae091f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,9.9,Bê tông cốt thép C30,,173565.0
+11405975,26e2e9e9-10d7-47df-ba48-82c238cb00d2-00ae0a97,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,11.2,Bê tông cốt thép C30,,196385.0
+11406836,a541b491-5371-495b-a40a-12ed15265614-00ae0df4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,25.5,Bê tông cốt thép C30,,446688.0
+11407405,a541b491-5371-495b-a40a-12ed15265614-00ae102d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,9.6,Bê tông cốt thép C30,,168315.0
+11407774,a541b491-5371-495b-a40a-12ed15265614-00ae119e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,9.6,Bê tông cốt thép C30,,168315.0
+11408082,a541b491-5371-495b-a40a-12ed15265614-00ae12d2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,20.4,Bê tông cốt thép C30,,357368.0
+11409169,b61befcc-94e3-4c41-991b-a86725590f19-00ae1711,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,37.4,Bê tông cốt thép C30,,653625.0
+11409957,b61befcc-94e3-4c41-991b-a86725590f19-00ae1a25,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.7,Bê tông cốt thép C30,,47058.0
+11410396,b61befcc-94e3-4c41-991b-a86725590f19-00ae1bdc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,30328.0
+11410652,b61befcc-94e3-4c41-991b-a86725590f19-00ae1cdc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,70315.0
+11410933,b61befcc-94e3-4c41-991b-a86725590f19-00ae1df5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.7,Bê tông cốt thép C30,,47058.0
+11411169,b61befcc-94e3-4c41-991b-a86725590f19-00ae1ee1,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,,30328.0
+11411803,6b8e4385-9f5e-44be-97c8-01bd273ffef5-00ae215b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,70315.0
+11412165,6b8e4385-9f5e-44be-97c8-01bd273ffef5-00ae22c5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,7.3,Bê tông cốt thép C30,,128485.0
+11427439,0333a610-db8a-4804-8b3b-81cbfe94d766-00ae5e6f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,3.5,Bê tông cốt thép C30,,60672.0
+11452519,e2aca66a-2045-47f8-9f83-63583e2e3bd7-00aec067,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.6,Bê tông cốt thép C30,,28420.0
+11452520,e2aca66a-2045-47f8-9f83-63583e2e3bd7-00aec068,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,4.4,Bê tông cốt thép C30,,77438.0
+11452522,e2aca66a-2045-47f8-9f83-63583e2e3bd7-00aec06a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,49245.0
+11452523,e2aca66a-2045-47f8-9f83-63583e2e3bd7-00aec06b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,49245.0
+11452524,e2aca66a-2045-47f8-9f83-63583e2e3bd7-00aec06c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D16,Ground,0.0,0.0,0.0,4.4,Bê tông cốt thép C30,,77438.0
+11462154,48f8983b-30b5-431c-85e0-c88b4f7cea90-00aee60a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,24972.0
+11468565,fca32680-e280-49dd-8b06-e8a6d7ab6190-00aeff15,07.Dam,Dầm kết cấu (Beam),08.01.CauThang,08.01.CauThang,Ground,4.216,10.07,0.0,463.7,BSV_VL_BeTong_M350(B25),,16445096.0
+11478481,83bd4186-e0cc-4c64-87a3-ba4d5bf4203d-00af230d,07.Dam,Dầm kết cấu (Beam),Structural Framing 1,Structural Framing 1,Ground,0.035,0.25,0.0,3.9,BSV_VL_BeTong_M350(B25),,173499.0
+11481007,2cc1c6d7-342f-4cb6-9129-b66e4cedb80d-00af2faf,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,23782.0
+11481072,2cc1c6d7-342f-4cb6-9129-b66e4cedb80d-00af2ff0,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.8,Bê tông cốt thép C30,,83528.0
+11483389,6e81d9f0-8d31-4e64-b716-cc343d3b0035-00af38fd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,70105.0
+11483392,6e81d9f0-8d31-4e64-b716-cc343d3b0035-00af3900,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.9,Bê tông cốt thép C30,,85068.0
+11484157,c88a53b0-20ab-4671-a5ac-e230c2c22337-00af3bfd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,35910.0
+11484344,c88a53b0-20ab-4671-a5ac-e230c2c22337-00af3cb8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.6,Bê tông cốt thép C30,,27475.0
+11484494,c88a53b0-20ab-4671-a5ac-e230c2c22337-00af3d4e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.6,Bê tông cốt thép C30,,27300.0
+11485462,c88a53b0-20ab-4671-a5ac-e230c2c22337-00af4116,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.6,Bê tông cốt thép C30,,11235.0
+11490257,0fe64f5f-96bc-41d8-8958-897af49eacc3-00af53d1,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,10.5,Bê tông cốt thép C30,,183925.0
+11491334,0fe64f5f-96bc-41d8-8958-897af49eacc3-00af5806,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,35945.0
+11491417,0fe64f5f-96bc-41d8-8958-897af49eacc3-00af5859,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,4.4,Bê tông cốt thép C30,,76825.0
+11492261,0fe64f5f-96bc-41d8-8958-897af49eacc3-00af5ba5,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,12.5,Bê tông cốt thép C30,,218872.0
+11493148,0fe64f5f-96bc-41d8-8958-897af49eacc3-00af5f1c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.9,Bê tông cốt thép C30,,15208.0
+11505355,dec72954-4f1c-4080-b8c8-2d228ba2ab61-00af8ecb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.6,Bê tông cốt thép C30,,9765.0
+11512380,5323f299-e4d7-49c2-b9a1-a4b8d857fc9c-00afaa3c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,69492.0
+11514765,89c475a2-e6dc-47ff-b452-40f173eff3f8-00afb38d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,42.0,Bê tông cốt thép C30,,735000.0
+11515340,89c475a2-e6dc-47ff-b452-40f173eff3f8-00afb5cc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,21402.0
+11516120,89c475a2-e6dc-47ff-b452-40f173eff3f8-00afb8d8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,51.6,Bê tông cốt thép C30,,902772.0
+11516202,89c475a2-e6dc-47ff-b452-40f173eff3f8-00afb92a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,21402.0
+11517296,89c475a2-e6dc-47ff-b452-40f173eff3f8-00afbd70,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,11620.0
+11522937,852609fc-aff0-4d23-a78d-8eadc69ad873-00afd379,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,69492.0
+11538690,756410bb-d840-4604-8f68-ffdcd996bc1e-00b01102,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.4,Bê tông cốt thép C30,,77788.0
+11538691,756410bb-d840-4604-8f68-ffdcd996bc1e-00b01103,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.2,Bê tông cốt thép C30,,38885.0
+11538692,756410bb-d840-4604-8f68-ffdcd996bc1e-00b01104,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.6,Bê tông cốt thép C30,,62230.0
+11538693,756410bb-d840-4604-8f68-ffdcd996bc1e-00b01105,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,48615.0
+11559021,3b9c7de1-7dab-4b75-b61d-032b96c856b8-00b0606d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,13.0,Bê tông cốt thép C30,,228078.0
+11560345,3b9c7de1-7dab-4b75-b61d-032b96c856b8-00b06599,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,15.1,Bê tông cốt thép C30,,264408.0
+11563644,42831334-af4e-4372-95a6-bce7bd61dabe-00b0727c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.8,Bê tông cốt thép C30,,31605.0
+11564385,3817f511-fded-4878-96d6-f4c49c8c2de7-00b07561,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,11.8,Bê tông cốt thép C30,,206745.0
+11564850,3817f511-fded-4878-96d6-f4c49c8c2de7-00b07732,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,3.5,Bê tông cốt thép C30,,60410.0
+11566434,3817f511-fded-4878-96d6-f4c49c8c2de7-00b07d62,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,5.5,Bê tông cốt thép C30,,96478.0
+11569073,0120b89c-1e03-437b-9d72-749f412a814f-00b087b1,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,3.9,Bê tông cốt thép C30,,68075.0
+11570164,0120b89c-1e03-437b-9d72-749f412a814f-00b08bf4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,13.8,Bê tông cốt thép C30,,242113.0
+11570926,0120b89c-1e03-437b-9d72-749f412a814f-00b08eee,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,24.0,Bê tông cốt thép C30,,419370.0
+11572353,0120b89c-1e03-437b-9d72-749f412a814f-00b09481,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.8,Bê tông cốt thép C30,,32252.0
+11572884,09e94cf4-7552-4082-9947-cd8e5b023379-00b09694,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,9.7,Bê tông cốt thép C30,,170538.0
+11573380,09e94cf4-7552-4082-9947-cd8e5b023379-00b09884,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,3.7,Bê tông cốt thép C30,,64750.0
+11577243,0478c5db-bc8d-492a-85e9-e697edbbcf8b-00b0a5b0,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.8,Bê tông cốt thép C30,,83178.0
+11577397,0478c5db-bc8d-492a-85e9-e697edbbcf8b-00b0a835,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.5,Bê tông cốt thép C30,,43172.0
+11577864,0478c5db-bc8d-492a-85e9-e697edbbcf8b-00b0aa08,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,5.9,Bê tông cốt thép C30,,103460.0
+11578831,d73169e0-0a25-419a-a16b-8d4c898a2966-00b0adcf,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.4,Bê tông cốt thép C30,,59430.0
+11579843,d73169e0-0a25-419a-a16b-8d4c898a2966-00b0b1c3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,4.3,Bê tông cốt thép C30,,74462.0
+11580052,d73169e0-0a25-419a-a16b-8d4c898a2966-00b0b294,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,70735.0
+11584317,013abc3c-9281-4dc2-894f-6ad51963020e-00b0c33d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,12.8,Bê tông cốt thép C30,,223965.0
+11587069,3b3cd0f7-f5f2-48e0-bcb0-d3a3e7b0a349-00b0cdfd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,3.5,Bê tông cốt thép C30,,61792.0
+11589822,0f012e39-2dff-4b67-b365-68f23363fb87-00b0d8be,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.5,Bê tông cốt thép C30,,8085.0
+11589823,0f012e39-2dff-4b67-b365-68f23363fb87-00b0d8bf,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.6,Bê tông cốt thép C30,,28228.0
+11591278,8ef300d4-09db-4cab-9b6e-729f02da9134-00b0de6e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,10.4,Bê tông cốt thép C30,,181248.0
+11595238,bb1d2b78-fa4f-4a27-8323-bcaf22a5fd5a-00b0ec71,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,7.9,Bê tông cốt thép C30,,138355.0
+11596672,dee67c64-bc48-4918-bc50-bb9b77a85a92-00b0f380,00.Rebar,Cốt thép (Rebar),Rebar Bar,D12,Ground,0.0,0.0,0.0,2.2,Bê tông cốt thép C30,,38500.0
+11597812,dee67c64-bc48-4918-bc50-bb9b77a85a92-00b0f7f4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,9.5,Bê tông cốt thép C30,,167038.0
+11599603,dee67c64-bc48-4918-bc50-bb9b77a85a92-00b0fef3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,11.8,Bê tông cốt thép C30,,206850.0
+11600049,dee67c64-bc48-4918-bc50-bb9b77a85a92-00b100b1,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,10.8,Bê tông cốt thép C30,,189315.0
+11600271,dee67c64-bc48-4918-bc50-bb9b77a85a92-00b1018f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D12,Ground,0.0,0.0,0.0,4.3,Bê tông cốt thép C30,,75040.0
+11601100,dee67c64-bc48-4918-bc50-bb9b77a85a92-00b104cc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,15.3,Bê tông cốt thép C30,,266980.0
+11602164,dee67c64-bc48-4918-bc50-bb9b77a85a92-00b108f4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,11.5,Bê tông cốt thép C30,,201478.0
+11602335,dee67c64-bc48-4918-bc50-bb9b77a85a92-00b1099f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D12,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,51170.0
+11602549,dee67c64-bc48-4918-bc50-bb9b77a85a92-00b10a75,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,11.1,Bê tông cốt thép C30,,194495.0
+11603095,dee67c64-bc48-4918-bc50-bb9b77a85a92-00b10c97,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,14.9,Bê tông cốt thép C30,,260978.0
+11606894,c1f7984e-b54a-47b2-a8bc-19c3856b35a8-00b11b6e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,3.5,Bê tông cốt thép C30,,61792.0
+11606968,c1f7984e-b54a-47b2-a8bc-19c3856b35a8-00b11bb8,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,5.3,Bê tông cốt thép C30,,92680.0
+11607198,ba1d43f4-10c7-4140-9b18-1b0867b957d3-00b11c9e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,5.7,Bê tông cốt thép C30,,100398.0
+11612959,214f2887-71bd-488f-b0f4-c9a66e7c9b55-00b13142,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,16.4,Bê tông cốt thép C30,,287612.0
+11613441,214f2887-71bd-488f-b0f4-c9a66e7c9b55-00b13501,00.Rebar,Cốt thép (Rebar),Rebar Bar,D20,Ground,0.0,0.0,0.0,17.8,Bê tông cốt thép C30,,310660.0
+11616445,214f2887-71bd-488f-b0f4-c9a66e7c9b55-00b140bd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D12,Ground,0.0,0.0,0.0,5.6,Bê tông cốt thép C30,,97982.0
+11638158,70438083-9245-40b1-8ddf-4d860b8f388a-00b1958e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,11.8,Bê tông cốt thép C30,,206745.0
+11638159,70438083-9245-40b1-8ddf-4d860b8f388a-00b1958f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.2,Bê tông cốt thép C30,,107695.0
+11638160,70438083-9245-40b1-8ddf-4d860b8f388a-00b19590,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,9.9,Bê tông cốt thép C30,,173442.0
+11638161,70438083-9245-40b1-8ddf-4d860b8f388a-00b19591,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.6,Bê tông cốt thép C30,,114992.0
+11638162,70438083-9245-40b1-8ddf-4d860b8f388a-00b19592,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.8,Bê tông cốt thép C30,,84682.0
+11638163,70438083-9245-40b1-8ddf-4d860b8f388a-00b19593,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.5,Bê tông cốt thép C30,,43978.0
+11638164,70438083-9245-40b1-8ddf-4d860b8f388a-00b19594,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.0,Bê tông cốt thép C30,,104265.0
+11638165,70438083-9245-40b1-8ddf-4d860b8f388a-00b19595,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.4,Bê tông cốt thép C30,,59762.0
+11638166,70438083-9245-40b1-8ddf-4d860b8f388a-00b19596,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,4.3,Bê tông cốt thép C30,,74462.0
+11638167,70438083-9245-40b1-8ddf-4d860b8f388a-00b19597,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,4.0,Bê tông cốt thép C30,,70735.0
+11638168,70438083-9245-40b1-8ddf-4d860b8f388a-00b19598,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12845.0
+11638169,70438083-9245-40b1-8ddf-4d860b8f388a-00b19599,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12845.0
+11638170,70438083-9245-40b1-8ddf-4d860b8f388a-00b1959a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12198.0
+11638171,70438083-9245-40b1-8ddf-4d860b8f388a-00b1959b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12198.0
+11640191,67500c80-c31e-4b6e-b5e2-e3104bac869d-00b19d7f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,10.6,Bê tông cốt thép C30,,186322.0
+11640192,67500c80-c31e-4b6e-b5e2-e3104bac869d-00b19d80,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,11.7,Bê tông cốt thép C30,,204802.0
+11641671,67500c80-c31e-4b6e-b5e2-e3104bac869d-00b1a347,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,4.5,Bê tông cốt thép C30,,78365.0
+11641788,67500c80-c31e-4b6e-b5e2-e3104bac869d-00b1a3bc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,4.6,Bê tông cốt thép C30,,80028.0
+11641955,67500c80-c31e-4b6e-b5e2-e3104bac869d-00b1a463,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,8.9,Bê tông cốt thép C30,,154910.0
+11641956,67500c80-c31e-4b6e-b5e2-e3104bac869d-00b1a464,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.9,Bê tông cốt thép C30,,120855.0
+11648522,83f49551-86ad-4d94-a60a-718adced8817-00b1be0a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,9.2,Bê tông cốt thép C30,,161735.0
+11649668,4dcb2954-3b4e-4a80-9b2a-9d76a36c8fee-00b1c284,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,8.9,Bê tông cốt thép C30,,155208.0
+11651170,4dcb2954-3b4e-4a80-9b2a-9d76a36c8fee-00b1c862,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.6,Bê tông cốt thép C30,,115920.0
+11653227,4dcb2954-3b4e-4a80-9b2a-9d76a36c8fee-00b1d06b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,6.6,Bê tông cốt thép C30,,115938.0
+11654442,09f45cb0-cd07-4e4a-9698-d5fbe40631bf-00b1d52a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.6,Bê tông cốt thép C30,,62492.0
+11654641,09f45cb0-cd07-4e4a-9698-d5fbe40631bf-00b1d5f1,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.6,Bê tông cốt thép C30,,62475.0
+11657427,09f45cb0-cd07-4e4a-9698-d5fbe40631bf-00b1e0d3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,4.5,Bê tông cốt thép C30,,78592.0
+11658146,e4df26b4-0ed6-4ffe-acb1-7ea60e04cbb0-00b1e3a2,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,4.7,Bê tông cốt thép C30,,82740.0
+11662579,a27b1a7e-8722-4f8e-b202-3334f9391842-00b1f4f3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12198.0
+11663220,a27b1a7e-8722-4f8e-b202-3334f9391842-00b1f774,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12198.0
+11663357,a27b1a7e-8722-4f8e-b202-3334f9391842-00b1f7fd,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12845.0
+11663358,a27b1a7e-8722-4f8e-b202-3334f9391842-00b1f7fe,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,12845.0
+11668290,2926dff6-2e92-4fcb-9aaf-f8ecb4fe24ad-00b169dc,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,5.2,Bê tông cốt thép C30,,90282.0
+11668295,2926dff6-2e92-4fcb-9aaf-f8ecb4fe24ad-00b16b09,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,2.8,Bê tông cốt thép C30,,49000.0
+11668339,2926dff6-2e92-4fcb-9aaf-f8ecb4fe24ad-00b16e53,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,10.3,Bê tông cốt thép C30,,181072.0
+11668353,2926dff6-2e92-4fcb-9aaf-f8ecb4fe24ad-00b16fa7,00.Rebar,Cốt thép (Rebar),Rebar Bar,D14,Ground,0.0,0.0,0.0,15.2,Bê tông cốt thép C30,,265178.0
+11669487,c5b684d6-c54c-42f8-b864-a50db097fb48-00b20fef,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.9,Bê tông cốt thép C30,,16555.0
+11669932,e4c0e5b8-4cfb-444c-abc7-61e810796c85-00b211ac,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.9,Bê tông cốt thép C30,,15715.0
+11674862,9e3f7eff-339b-4c35-a907-0b7df517f8f4-00b224ee,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.2,Bê tông cốt thép C30,,3745.0
+11675323,9e3f7eff-339b-4c35-a907-0b7df517f8f4-00b226bb,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.3,Bê tông cốt thép C30,,5022.0
+11675326,9e3f7eff-339b-4c35-a907-0b7df517f8f4-00b226be,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.4,Bê tông cốt thép C30,,6282.0
+11675329,9e3f7eff-339b-4c35-a907-0b7df517f8f4-00b226c1,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.4,Bê tông cốt thép C30,,7560.0
+11675332,9e3f7eff-339b-4c35-a907-0b7df517f8f4-00b226c4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.5,Bê tông cốt thép C30,,8820.0
+11675335,9e3f7eff-339b-4c35-a907-0b7df517f8f4-00b226c7,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.6,Bê tông cốt thép C30,,10098.0
+11676166,9e3f7eff-339b-4c35-a907-0b7df517f8f4-00b22a06,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.1,Bê tông cốt thép C30,,1522.0
+11676896,9e3f7eff-339b-4c35-a907-0b7df517f8f4-00b22ce0,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.1,Bê tông cốt thép C30,,2380.0
+11676899,9e3f7eff-339b-4c35-a907-0b7df517f8f4-00b22ce3,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.2,Bê tông cốt thép C30,,3553.0
+11676902,9e3f7eff-339b-4c35-a907-0b7df517f8f4-00b22ce6,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.3,Bê tông cốt thép C30,,4690.0
+11676905,9e3f7eff-339b-4c35-a907-0b7df517f8f4-00b22ce9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.3,Bê tông cốt thép C30,,5880.0
+11676908,9e3f7eff-339b-4c35-a907-0b7df517f8f4-00b22cec,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.4,Bê tông cốt thép C30,,7052.0
+11730077,40636ef6-fd84-4431-8681-adc7cd04b70d-00b2fc9d,08.San,Sàn kết cấu (Slab),Floor,80,+10.650,0.026,0.32,0.0,2.8,BSV_VL_BeTong_M350(B25),S_80,158692.0
+11732347,8bbd7368-d245-4fe1-86d8-015fc8ac75fc-00b3057b,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.9,Bê tông cốt thép C30,Seno,33005.0
+11733222,8bbd7368-d245-4fe1-86d8-015fc8ac75fc-00b308e6,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.7,Bê tông cốt thép C30,Seno,29400.0
+11739258,cdfe4d1e-027c-48b4-b705-a5d6b4a754a9-00b3207a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,51048.0
+11739604,cdfe4d1e-027c-48b4-b705-a5d6b4a754a9-00b321d4,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,35892.0
+11740494,cdfe4d1e-027c-48b4-b705-a5d6b4a754a9-00b3254e,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,2.9,Bê tông cốt thép C30,,51048.0
+11740495,cdfe4d1e-027c-48b4-b705-a5d6b4a754a9-00b3254f,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,3.1,Bê tông cốt thép C30,,54460.0
+11740732,cdfe4d1e-027c-48b4-b705-a5d6b4a754a9-00b3263c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,5.8,Bê tông cốt thép C30,,102095.0
+11740733,cdfe4d1e-027c-48b4-b705-a5d6b4a754a9-00b3263d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,4.4,Bê tông cốt thép C30,,77052.0
+11746083,96fa5784-c2b6-4f4e-ab68-745ede037daf-00b33b23,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,20510.0
+11747463,97b82fa3-7ca7-41b4-a903-32d8ef0b4267-00b34087,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.9,Bê tông cốt thép C30,,15102.0
+11748842,24b22cd1-38d7-4c60-adfb-6e49e66d0d84-00b345ea,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,2.7,Bê tông cốt thép C30,,47740.0
+11749257,24b22cd1-38d7-4c60-adfb-6e49e66d0d84-00b34789,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.5,Bê tông cốt thép C30,,26460.0
+11749476,24b22cd1-38d7-4c60-adfb-6e49e66d0d84-00b34864,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.1,Bê tông cốt thép C30,,19845.0
+11757962,2828a50e-b1a8-4c64-8855-e068ddf37fe0-00b3698a,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,0.8,Bê tông cốt thép C30,,13230.0
+11758390,2828a50e-b1a8-4c64-8855-e068ddf37fe0-00b36b36,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.6,Bê tông cốt thép C30,,27230.0
+11762749,2828a50e-b1a8-4c64-8855-e068ddf37fe0-00b37c3d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,1.2,Bê tông cốt thép C30,,20230.0
+11767232,d967e965-b4f9-49f6-8933-d636bd9b64bd-00b38dc0,08.San,Sàn kết cấu (Slab),Floor,100,+10.350,0.693,6.93,0.0,76.2,BSV_VL_BeTong_M350(B25),,3862830.0
+11768620,8277f947-1680-4dfa-82bc-7f5b569c51eb-00b3932c,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,18358.0
+11768621,8277f947-1680-4dfa-82bc-7f5b569c51eb-00b3932d,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,11392.0
+11770416,5377c4ef-7615-4243-b50b-1a384e1f043a-00b39a30,00.Rebar,Cốt thép (Rebar),Rebar Bar,D10,Ground,0.0,0.0,0.0,1.0,Bê tông cốt thép C30,,18358.0
+11770417,5377c4ef-7615-4243-b50b-1a384e1f043a-00b39a31,00.Rebar,Cốt thép (Rebar),Rebar Bar,D8,Ground,0.0,0.0,0.0,0.7,Bê tông cốt thép C30,,11392.0
+11771029,fbe9d2b3-4c55-4561-972d-80790ba81c70-00b39c95,07.Dam,Dầm kết cấu (Beam),BSV_KC_Dam_BTCT,200X550,Ground,0.208,1.53,0.0,22.9,BSV_VL_BeTong_M350(B25),RB2,1037712.0
+11772981,19538f54-4fb5-4910-956c-892e3bbb23cc-00b3a435,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,2.1,Bê tông cốt thép C30,,37432.0
+11773177,19538f54-4fb5-4910-956c-892e3bbb23cc-00b3a4f9,00.Rebar,Cốt thép (Rebar),Rebar Bar,D6,Ground,0.0,0.0,0.0,1.4,Bê tông cốt thép C30,,24955.0

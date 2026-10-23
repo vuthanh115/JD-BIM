@@ -1,0 +1,28 @@
+﻿WBS_ID,WBS_Code,WBS_Name,Discipline,Parent_WBS_Code,Sequence
+26091,PRJ-KAKA-BIM,Project Name (Project Root),Tổng Thể,ROOT,1
+26092,WBS-KC,Phân Hệ Kết Cấu Kaka (Structural Works),Kết Cấu (Structural),PRJ-KAKA-BIM,2
+26093,WBS-KT,Phân Hệ Kiến Trúc Kaka (Architectural Works),Kiến Trúc (Architectural),PRJ-KAKA-BIM,3
+26094,WBS-KC.01.Coc,01.Coc - Công tác Cọc (Piles & Pile Caps),Kết Cấu (Structural),WBS-KC,11
+26095,WBS-KC.02.Mong,02.Mong - Công tác Móng (Foundations),Kết Cấu (Structural),WBS-KC,12
+26096,WBS-KC.03.DaKieng,03.DaKieng - Công tác Đà kiềng (Tie Beams),Kết Cấu (Structural),WBS-KC,13
+26097,WBS-KC.04.Nen,04.Nen - Công tác Nền & Lớp lót (Slab on Grade),Kết Cấu (Structural),WBS-KC,14
+26098,WBS-KC.05.Cot,05.Cot - Công tác Cột kết cấu (Columns),Kết Cấu (Structural),WBS-KC,15
+26099,WBS-KC.06.Vach,06.Vach - Công tác Vách thang máy (Shear Walls),Kết Cấu (Structural),WBS-KC,16
+26100,WBS-KC.07.Dam,07.Dam - Công tác Dầm kết cấu (Framing Beams),Kết Cấu (Structural),WBS-KC,17
+26101,WBS-KC.08.San,08.San - Công tác Sàn kết cấu (Structural Slabs),Kết Cấu (Structural),WBS-KC,18
+26102,WBS-KC.09.CauThang,09.CauThang - Công tác Cầu thang (Stairs),Kết Cấu (Structural),WBS-KC,19
+26103,WBS-KC.10.TamCap,10.TamCap - Công tác Tam cấp (Entrance Steps),Kết Cấu (Structural),WBS-KC,20
+26104,WBS-KC.11.Ramp,11.Ramp - Công tác Ramp dốc (Loading Ramps),Kết Cấu (Structural),WBS-KC,21
+26105,WBS-KC.12.Pit,12.Pit - Công tác Hố Pit (Elevator Pits),Kết Cấu (Structural),WBS-KC,22
+26106,WBS-KC.13.Dock,13.Dock - Công tác Sàn Dock (Loading Docks),Kết Cấu (Structural),WBS-KC,23
+26107,WBS-KC.14.CauKienPhu,14.CauKienPhu - Công tác Cấu kiện phụ (Secondary Works),Kết Cấu (Structural),WBS-KC,24
+26108,WBS-KT.01.TuongXay,KT.01.TuongXay - Công tác Tường xây (Brick Walls & Partitions),Kiến Trúc (Architectural),WBS-KT,25
+26109,WBS-KT.02.TratBa,KT.02.TratBa - Công tác Trát bả tường & trần (Plastering),Kiến Trúc (Architectural),WBS-KT,26
+26110,WBS-KT.03.OpLat,KT.03.OpLat - Công tác Ốp lát gạch & đá (Tiling & Flooring),Kiến Trúc (Architectural),WBS-KT,27
+26111,WBS-KT.04.CuaDi,KT.04.CuaDi - Công tác Cửa đi & Phụ kiện (Doors & Hardware),Kiến Trúc (Architectural),WBS-KT,28
+26112,WBS-KT.05.CuaSo,KT.05.CuaSo - Công tác Cửa sổ & Vách kính (Windows & Glazing),Kiến Trúc (Architectural),WBS-KT,29
+26113,WBS-KT.06.Tran,KT.06.Tran - Công tác Trần thạch cao (Gypsum Ceilings),Kiến Trúc (Architectural),WBS-KT,30
+26114,WBS-KT.07.SonBa,KT.07.SonBa - Công tác Sơn bả & Hoàn thiện (Painting & Finishes),Kiến Trúc (Architectural),WBS-KT,31
+26115,WBS-KT.08.ChongTham,KT.08.ChongTham - Công tác Chống thấm (Waterproofing),Kiến Trúc (Architectural),WBS-KT,32
+26116,WBS-KT.09.LanCan,KT.09.LanCan - Công tác Lan can & Tay vịn (Railings),Kiến Trúc (Architectural),WBS-KT,33
+26117,WBS-KT.10.Mai,KT.10.Mai - Công tác Mái & Thoát nước (Roofing & Drainage),Kiến Trúc (Architectural),WBS-KT,34
