@@ -3,12 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KAKA BIM Executive Power BI Dashboard</title>
+<title>KAKA BIM 4D/5D Integrated Executive Suite & 3D Web Viewer</title>
+<!-- Three.js + OrbitControls for 3D BIM Engine -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<!-- Chart.js for Power BI Analytics -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
   :root {
     --pbi-yellow: #f2c811;
-    --pbi-dark: #1f1f1f;
+    --pbi-dark: #1e1e1e;
     --navy-blue: #0f2b48;
     --accent-blue: #0284c7;
     --emerald: #059669;
@@ -19,228 +23,355 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-    background-color: #f8fafc;
+    background-color: #f1f5f9;
     color: #1e293b;
     font-size: 13px;
+    overflow-x: hidden;
   }
+
   /* Top App Bar */
   .pbi-topbar {
-    background: #2b2b2b;
+    background: #1f2937;
     color: #ffffff;
     height: 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 16px;
-    border-bottom: 2px solid var(--pbi-yellow);
+    border-bottom: 2.5px solid var(--pbi-yellow);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   }
   .pbi-logo {
     display: flex;
     align-items: center;
     gap: 10px;
     font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.5px;
+    font-size: 13.5px;
+    letter-spacing: 0.3px;
   }
   .pbi-badge {
     background: var(--pbi-yellow);
     color: #000;
-    font-weight: 800;
+    font-weight: 900;
     padding: 2px 7px;
     border-radius: 3px;
     font-size: 11px;
   }
+  .bexel-badge {
+    background: #0284c7;
+    color: #fff;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
   .pbi-controls {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
   }
-  .btn-pbi {
-    background: #3b3b3b;
+  .btn-action {
+    background: #374151;
     color: #fff;
-    border: 1px solid #555;
+    border: 1px solid #4b5563;
     padding: 5px 12px;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 11.5px;
+    font-weight: 600;
     transition: 0.2s;
   }
-  .btn-pbi:hover { background: #505050; }
-  .btn-primary { background: #0284c7; border-color: #0284c7; font-weight: 600; }
+  .btn-action:hover { background: #4b5563; }
+  .btn-primary { background: #0284c7; border-color: #0284c7; }
   .btn-primary:hover { background: #0369a1; }
 
   /* Dashboard Container */
   .dashboard-wrapper {
-    padding: 16px;
-    max-width: 1480px;
+    padding: 12px 16px;
+    max-width: 1600px;
     margin: 0 auto;
   }
 
-  /* Filters / Slicer Bar */
-  .slicer-bar {
+  /* Slicers & 4D TimeLiner Controller Bar */
+  .slicer-timeliner-bar {
     background: #ffffff;
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 12px 16px;
-    margin-bottom: 16px;
+    padding: 10px 16px;
+    margin-bottom: 12px;
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 14px;
     align-items: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
   .slicer-item {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 3px;
   }
   .slicer-label {
-    font-size: 11px;
+    font-size: 10.5px;
     font-weight: 700;
     color: #64748b;
     text-transform: uppercase;
   }
   select.slicer-select {
-    padding: 7px 12px;
+    padding: 6px 10px;
     border-radius: 5px;
-    border: 1.5px solid #94a3b8;
+    border: 1.5px solid #cbd5e1;
     background: #ffffff;
     font-size: 12px;
     font-weight: 600;
     color: #0f172a;
     outline: none;
-    min-width: 200px;
     cursor: pointer;
-    transition: all 0.2s;
   }
-  select.slicer-select:focus, select.slicer-select:hover {
-    border-color: #0284c7;
-    box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.15);
-  }
+  select.slicer-select:focus { border-color: #0284c7; }
 
-  .live-indicator {
+  /* 4D TimeLiner Controls (Bexel Style) */
+  .timeliner-panel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f8fafc;
+    border: 1.5px solid #0284c7;
+    padding: 6px 14px;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 480px;
+  }
+  .timeliner-btn {
+    background: #0284c7;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 12px;
+    font-weight: 700;
+    font-size: 11px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+  }
+  .timeliner-btn:hover { background: #0369a1; }
+  .timeliner-slider-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 2px;
+  }
+  .timeliner-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #0369a1;
+  }
+  input[type=range].timeliner-slider {
+    width: 100%;
+    accent-color: #0284c7;
+    cursor: pointer;
+  }
+  .badge-legend {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    background: #ecfdf5;
-    border: 1px solid #a7f3d0;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 11px;
-    color: #065f46;
+    gap: 4px;
+    font-size: 10.5px;
     font-weight: 700;
-    margin-left: auto;
+    padding: 2px 6px;
+    border-radius: 3px;
   }
-  .pulse-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #10b981;
-    border-radius: 50%;
-    animation: pulse 1.5s infinite;
-  }
-  @keyframes pulse {
-    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-    70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
-    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-  }
+  .legend-completed { background: #dcfce7; color: #15803d; }
+  .legend-active { background: #fef08a; color: #a16207; }
+  .legend-future { background: #f1f5f9; color: #64748b; }
 
   /* KPI Grid */
   .kpi-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-    margin-bottom: 16px;
+    gap: 10px;
+    margin-bottom: 12px;
   }
   .kpi-card {
     background: #ffffff;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 12px 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-    border-top: 4px solid #cbd5e1;
-    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 6px;
+    padding: 10px 14px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    border-top: 3.5px solid #cbd5e1;
+    transition: all 0.2s;
   }
-  .kpi-card:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.08); }
+  .kpi-card:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.06); }
   .kpi-card.blue { border-top-color: #0284c7; }
   .kpi-card.green { border-top-color: #059669; }
   .kpi-card.purple { border-top-color: #7c3aed; }
   .kpi-card.amber { border-top-color: #d97706; }
   .kpi-card.rose { border-top-color: #e11d48; }
 
-  .kpi-label { font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; }
-  .kpi-value { font-size: 22px; font-weight: 800; color: #0f172a; margin: 4px 0 2px 0; transition: color 0.3s; }
-  .kpi-sub { font-size: 11px; color: #059669; font-weight: 600; }
+  .kpi-label { font-size: 10.5px; font-weight: 700; color: #64748b; text-transform: uppercase; }
+  .kpi-value { font-size: 20px; font-weight: 800; color: #0f172a; margin: 3px 0 1px 0; }
+  .kpi-sub { font-size: 10.5px; color: #059669; font-weight: 600; }
 
-  /* Charts Grid */
-  .charts-grid-2 {
+  /* MAIN WORKSPACE: 3D VIEWER + ANALYTICS (SPLIT VIEW) */
+  .workspace-split {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 12px;
+    margin-bottom: 12px;
   }
-  .charts-grid-3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
+
+  /* 3D Viewer Container */
+  .viewer-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .viewer-title {
+    font-size: 12.5px;
+    font-weight: 800;
+    color: #0f2b48;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .viewer-toolbar {
+    display: flex;
+    gap: 6px;
+  }
+  .btn-viewer {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .btn-viewer:hover { background: #e2e8f0; color: #0f172a; }
+  .btn-viewer.active { background: #0284c7; color: #ffffff; border-color: #0284c7; }
+
+  #webglContainer {
+    width: 100%;
+    height: 480px;
+    background: radial-gradient(circle at center, #2e3846 0%, #171d25 100%);
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Overlay HUD on 3D Canvas */
+  .hud-overlay {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #ffffff;
+    font-size: 11px;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .hud-date { font-size: 13px; font-weight: 800; color: var(--pbi-yellow); }
+  .hud-task { font-size: 11px; color: #94a3b8; margin-top: 2px; }
+
+  .inspect-popup {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid #38bdf8;
+    border-radius: 6px;
+    padding: 10px 14px;
+    color: #ffffff;
+    font-size: 11px;
+    width: 270px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 10;
+    display: none;
+  }
+  .inspect-title { font-weight: 800; color: #38bdf8; font-size: 12px; margin-bottom: 4px; border-bottom: 1px solid #334155; padding-bottom: 3px; }
+
+  /* Right Analytics Column */
+  .analytics-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
   .chart-card {
     background: #ffffff;
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 14px 16px;
+    padding: 12px 14px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
   .chart-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
     border-bottom: 1px solid #f1f5f9;
-    padding-bottom: 8px;
   }
-  .chart-title { font-size: 12.5px; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.3px; }
+  .chart-title { font-size: 12px; font-weight: 700; color: #0f172a; text-transform: uppercase; }
   .chart-tag { font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 4px; background: #e0f2fe; color: #0369a1; }
 
-  /* Table Style */
+  /* Bottom Row: Table & CDE Donut */
+  .bottom-split {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 12px;
+  }
   table.pbi-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 11.5px;
+    font-size: 11px;
   }
   table.pbi-table th {
     background: #f1f5f9;
     color: #475569;
     text-align: left;
-    padding: 8px 10px;
+    padding: 6px 8px;
     font-weight: 700;
-    border-bottom: 2px solid #cbd5e1;
+    border-bottom: 1.5px solid #cbd5e1;
     position: sticky;
     top: 0;
   }
   table.pbi-table td {
-    padding: 7px 10px;
+    padding: 6px 8px;
     border-bottom: 1px solid #f1f5f9;
-    color: #1e293b;
   }
-  table.pbi-table tr:hover td { background-color: #f8fafc; }
   .badge-status {
-    padding: 2px 7px;
+    padding: 2px 6px;
     border-radius: 10px;
-    font-size: 10px;
+    font-size: 9.5px;
     font-weight: 700;
   }
   .badge-done { background: #dcfce7; color: #166534; }
   .badge-doing { background: #fef3c7; color: #92400e; }
   .badge-todo { background: #f1f5f9; color: #475569; }
-
-  .highlight-update {
-    animation: highlightAnim 0.6s ease;
-  }
-  @keyframes highlightAnim {
-    0% { background-color: #fef08a; }
-    100% { background-color: transparent; }
-  }
 </style>
 </head>
 <body>
@@ -248,120 +379,181 @@
 <!-- TOPBAR -->
 <div class="pbi-topbar">
   <div class="pbi-logo">
-    <span class="pbi-badge">POWER BI</span>
-    <span>KAKA BIM EXECUTIVE SUITE • TỔNG HỢP TIẾN ĐỘ 4D - DỰ TOÁN 5D - HẠ TẦNG CDE</span>
+    <span class="pbi-badge">KAKA BIM 4D</span>
+    <span>RULE-BASED INTEGRATED EXECUTIVE SUITE</span>
+    <span class="bexel-badge">BEXEL MANAGER PARITY</span>
   </div>
   <div class="pbi-controls">
-    <button class="btn-pbi" onclick="window.print()">🖨️ In Báo Cáo</button>
-    <button class="btn-pbi btn-primary" onclick="resetFilters()">🔄 Reset Bộ Lọc</button>
+    <button class="btn-action" onclick="resetAll()">🔄 Reset View</button>
+    <button class="btn-action btn-primary" onclick="togglePlay4D()">▶ Phát Mô Phỏng 4D</button>
   </div>
 </div>
 
 <div class="dashboard-wrapper">
-  <!-- SLICERS BAR -->
-  <div class="slicer-bar">
+  <!-- SLICERS & 4D TIMELINER CONTROLLER BAR -->
+  <div class="slicer-timeliner-bar">
     <div class="slicer-item">
-      <span class="slicer-label">1. Dự Án (Project)</span>
-      <select class="slicer-select" id="selProject" onchange="applyFilters()">
-        <option value="ALL">PRJ-KAKA-BIM (Tổ Hợp Nhà Xưởng & Văn Phòng)</option>
+      <span class="slicer-label">Khu Vực / Tầng (Level Slicer)</span>
+      <select class="slicer-select" id="selLevel" onchange="onLevelChange()">
+        <option value="ALL">Toàn Bộ Công Trình (Móng ➔ Mái)</option>
+        <option value="+0.000">Cao độ móng (+0.000 - Cọc & Móng)</option>
+        <option value="+3.750">Tầng 1 (+3.750 - Cột, Dầm, Sàn T1)</option>
+        <option value="+7.050">Tầng 2 (+7.050 - Cột, Dầm, Sàn T2)</option>
+        <option value="+10.350">Tầng Mái & Tum (+10.350)</option>
       </select>
     </div>
-    <div class="slicer-item">
-      <span class="slicer-label">2. Bộ Môn (Discipline)</span>
-      <select class="slicer-select" id="selDiscipline" onchange="applyFilters()">
-        <option value="ALL">Tất cả bộ môn (Toàn dự án)</option>
-        <option value="KC">Kết Cấu (Structural Works)</option>
-        <option value="KT">Kiến Trúc (Architectural Works)</option>
-      </select>
-    </div>
-    <div class="slicer-item">
-      <span class="slicer-label">3. Khu Vực / Tầng (Level Slicer)</span>
-      <select class="slicer-select" id="selLevel" onchange="applyFilters()">
-        <option value="ALL">Tất cả cao độ (Toàn bộ tòa nhà)</option>
-        <option value="+0.000">Cao độ móng (+0.000 - Móng & Nền)</option>
-        <option value="+3.750">Tầng 1 (+3.750 / +3.900)</option>
-        <option value="+7.050">Tầng 2 (+7.050 / +7.200)</option>
-        <option value="+10.350">Tầng Mái & Tum (+10.350 / +10.650)</option>
-      </select>
-    </div>
-    <div class="live-indicator">
-      <span class="pulse-dot"></span>
-      <span id="filterStatusText">Đang xem: Toàn dự án (1,056 cấu kiện)</span>
+
+    <!-- 4D TIMELINER BEXEL ENGINE -->
+    <div class="timeliner-panel">
+      <button class="timeliner-btn" id="btnPlay4D" onclick="togglePlay4D()">▶ Play 4D</button>
+      <div class="timeliner-slider-box">
+        <div class="timeliner-labels">
+          <span id="txtTimeStart">Tuần 1 (12/10/2026)</span>
+          <span style="color: #0f172a;" id="txtCurrentDate">Đang mô phỏng: Tuần 4 (02/11/2026)</span>
+          <span id="txtTimeEnd">Tuần 8 (30/11/2026)</span>
+        </div>
+        <input type="range" class="timeliner-slider" id="slider4D" min="1" max="8" value="4" step="1" oninput="onSliderChange(this.value)">
+      </div>
+      <div style="display: flex; gap: 4px;">
+        <span class="badge-legend legend-completed">● Hoàn thành</span>
+        <span class="badge-legend legend-active">● Đang đổ BT</span>
+        <span class="badge-legend legend-future">○ Chưa làm</span>
+      </div>
     </div>
   </div>
 
   <!-- KPI CARDS -->
   <div class="kpi-grid">
-    <div class="kpi-card blue" id="cardElements">
-      <div class="kpi-label">Tổng Cấu Kiện BIM</div>
+    <div class="kpi-card blue">
+      <div class="kpi-label">Tổng Cấu Kiện BIM 3D</div>
       <div class="kpi-value" id="kpiElements">1,056</div>
-      <div class="kpi-sub" id="subElements">✓ 100% Gắn mã WBS & Category</div>
+      <div class="kpi-sub">✓ 100% Gắn mã WBS & Category</div>
     </div>
-    <div class="kpi-card green" id="cardConcrete">
-      <div class="kpi-label">Tổng Khối Lượng Bê Tông</div>
-      <div class="kpi-value" id="kpiConcrete">1,482 <span style="font-size: 14px;">m³</span></div>
-      <div class="kpi-sub" id="subSteel">Thép: 163 Tấn (110 kg/m³)</div>
+    <div class="kpi-card green">
+      <div class="kpi-label">Khối Lượng Bê Tông Lũy Kế</div>
+      <div class="kpi-value" id="kpiConcrete">710 / 1,482 <span style="font-size: 13px;">m³</span></div>
+      <div class="kpi-sub" id="subSteel">Thép: 78 / 163 Tấn (48%)</div>
     </div>
-    <div class="kpi-card purple" id="cardSchedule">
-      <div class="kpi-label">Tiến Độ Kế Hoạch P6</div>
-      <div class="kpi-value" id="kpiTasks">86 <span style="font-size: 14px;">Tasks</span></div>
-      <div class="kpi-sub" id="subCPM">Đường găng CPM: 28 công tác</div>
+    <div class="kpi-card purple">
+      <div class="kpi-label">Tiến Độ Thi Công 4D</div>
+      <div class="kpi-value" id="kpiProgress">48%</div>
+      <div class="kpi-sub" id="subProgress">41 / 86 Tasks P6 Hoàn thành</div>
     </div>
-    <div class="kpi-card amber" id="cardCDE">
+    <div class="kpi-card amber">
       <div class="kpi-label">Bản Vẽ Shop Published</div>
       <div class="kpi-value" id="kpiCDE">78.5%</div>
-      <div class="kpi-sub" id="subCDE">124 / 158 Bản vẽ đã duyệt CDE</div>
+      <div class="kpi-sub">124 / 158 Bản vẽ đã duyệt CDE</div>
     </div>
-    <div class="kpi-card rose" id="cardSPI">
+    <div class="kpi-card rose">
       <div class="kpi-label">Chỉ Số SPI (Earned Value)</div>
       <div class="kpi-value" id="kpiSPI">0.98</div>
-      <div class="kpi-sub" id="subSPI" style="color: #059669;">Đạt chuẩn kiểm soát tiến độ</div>
+      <div class="kpi-sub" style="color: #059669;">Bám sát đường găng CPM</div>
     </div>
   </div>
 
-  <!-- ROW 1: S-CURVE & COMPONENT BOQ -->
-  <div class="charts-grid-2">
-    <div class="chart-card">
-      <div class="chart-header">
-        <span class="chart-title" id="scurveTitle">Đường Cong Tiến Độ Thi Công 4D (S-Curve: Kế Hoạch vs Thực Tế)</span>
-        <span class="chart-tag">P6 CPM ALIGNED</span>
+  <!-- WORKSPACE SPLIT: 3D BIM VIEWER (LEFT) + ANALYTICS (RIGHT) -->
+  <div class="workspace-split">
+    <!-- 3D BIM ENGINE VIEWER -->
+    <div class="viewer-card">
+      <div class="viewer-header">
+        <div class="viewer-title">
+          <span>🏗️ Khung Nhìn Mô Hình 3D Trực Quan (WebGL BIM Viewer)</span>
+          <span style="font-size: 10px; background: #e0f2fe; color: #0284c7; padding: 2px 6px; border-radius: 4px;">60 FPS • THREE.JS ENGINE</span>
+        </div>
+        <div class="viewer-toolbar">
+          <button class="btn-viewer" onclick="setCameraView('iso')">Isometric</button>
+          <button class="btn-viewer" onclick="setCameraView('top')">Mặt Bằng</button>
+          <button class="btn-viewer" onclick="setCameraView('front')">Mặt Đứng</button>
+          <button class="btn-viewer" id="btnXray" onclick="toggleXray()">X-Ray Ẩn</button>
+        </div>
       </div>
-      <div style="height: 260px;">
-        <canvas id="scurveChart"></canvas>
+
+      <!-- 3D Canvas Container -->
+      <div id="webglContainer">
+        <!-- HUD Overlays -->
+        <div class="hud-overlay">
+          <div class="hud-date" id="hudDate">GIAI ĐOẠN: TUẦN 4 (02/11/2026)</div>
+          <div class="hud-task" id="hudTask">Đang thi công: Cột & Vách thang máy Tầng 1</div>
+          <div style="font-size: 9.5px; color: #38bdf8; margin-top: 3px;">💡 Nhấp chuột trái để xoay • Cuộn để phóng to • Nhấp vào cấu kiện để tra cứu BOQ</div>
+        </div>
+
+        <!-- Element Inspection Pop-up -->
+        <div class="inspect-popup" id="inspectPopup">
+          <div class="inspect-title" id="inspName">Cột Bê Tông Cốt Thép C1</div>
+          <div style="display: flex; justify-content: space-between; margin: 3px 0;">
+            <span style="color: #94a3b8;">Element ID:</span>
+            <b id="inspId">10254840</b>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin: 3px 0;">
+            <span style="color: #94a3b8;">Cao độ / Tầng:</span>
+            <b id="inspLevel">Tầng 1 (+3.750)</b>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin: 3px 0;">
+            <span style="color: #94a3b8;">Thể tích BT:</span>
+            <b id="inspVol" style="color: #4ade80;">2.45 m³</b>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin: 3px 0;">
+            <span style="color: #94a3b8;">Thép:</span>
+            <b id="inspSteel">270 kg</b>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin: 3px 0;">
+            <span style="color: #94a3b8;">Trạng thái 4D:</span>
+            <b id="inspStatus" style="color: #fde047;">Đang đổ bê tông</b>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="chart-card">
-      <div class="chart-header">
-        <span class="chart-title" id="boqTitle">Cơ Cấu Khối Lượng Bê Tông Theo Cấu Kiện (m³)</span>
-        <span class="chart-tag" id="boqTag">REVIT BOQ 5D</span>
+
+    <!-- RIGHT ANALYTICS -->
+    <div class="analytics-col">
+      <!-- S-CURVE -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <span class="chart-title">Đường Cong Tiến Độ 4D (S-Curve: P6 vs Thực Tế)</span>
+          <span class="chart-tag" id="scurveTag">TUẦN 4 / 8</span>
+        </div>
+        <div style="height: 200px;">
+          <canvas id="scurveChart"></canvas>
+        </div>
       </div>
-      <div style="height: 260px;">
-        <canvas id="boqChart"></canvas>
+
+      <!-- BOQ CHART -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <span class="chart-title">Khối Lượng Bê Tông Đã Đổ Theo Cấu Kiện (m³)</span>
+          <span class="chart-tag">5D EARNED VALUE</span>
+        </div>
+        <div style="height: 200px;">
+          <canvas id="boqChart"></canvas>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- ROW 2: CDE QUALITY & SCHEDULE CRITICAL PATH -->
-  <div class="charts-grid-3">
+  <!-- BOTTOM ROW: CDE STATUS + P6 ACTIVITY TABLE -->
+  <div class="bottom-split">
+    <!-- CDE Donut -->
     <div class="chart-card">
       <div class="chart-header">
-        <span class="chart-title">Trạng Thái Hồ Sơ CDE (ISO 19650)</span>
-        <span class="chart-tag">ACC & DALUX</span>
+        <span class="chart-title">Hồ Sơ CDE (ISO 19650)</span>
+        <span class="chart-tag">ACC / TRIMBLE</span>
       </div>
-      <div style="height: 200px;">
+      <div style="height: 180px;">
         <canvas id="cdeDonutChart"></canvas>
       </div>
     </div>
-    <div class="chart-card" style="grid-column: span 2;">
+
+    <!-- P6 Activities -->
+    <div class="chart-card">
       <div class="chart-header">
-        <span class="chart-title" id="tableTitle">Chi Tiết Công Tác Tiến Độ Trọng Điểm & Đường Găng (P6 Schedule)</span>
-        <span class="chart-tag" id="tableTag">86 ACTIVITIES</span>
+        <span class="chart-title" id="p6TableTitle">Công Tác Thi Công Theo Tiến Độ P6 (Đang Hoạt Động Ở Tuần 4)</span>
+        <span class="chart-tag" id="p6TableTag">ACTIVE TASKS</span>
       </div>
-      <div style="max-height: 210px; overflow-y: auto;">
-        <table class="pbi-table" id="activityTable">
+      <div style="max-height: 180px; overflow-y: auto;">
+        <table class="pbi-table">
           <thead>
             <tr>
-              <th>Mã Công Tác</th>
+              <th>Mã P6</th>
               <th>Tên Công Tác Thi Công</th>
               <th>Thời Gian</th>
               <th>Bắt Đầu</th>
@@ -379,152 +571,548 @@
 </div>
 
 <script>
-  // REAL DATA MODEL BY LEVEL & DISCIPLINE
-  const levelData = {
-    "ALL": {
-      name: "Toàn dự án",
-      elements: 1056,
-      concrete: 1482,
-      steel: 163,
-      tasks: 86,
-      cpm: 28,
-      cdeRate: 78.5,
-      cdeDwg: "124 / 158 Bản vẽ",
-      spi: "0.98",
-      spiStatus: "Đạt chuẩn kiểm soát tiến độ",
-      boqLabels: ['Móng', 'Cột', 'Dầm', 'Sàn', 'Vách', 'Đà Kiềng', 'Ramp/Thang'],
-      boqValues: [420, 185, 310, 395, 110, 42, 20],
-      scurvePlan: [5, 14, 26, 42, 60, 78, 91, 100],
-      scurveAct:  [5, 15, 27, 40, null, null, null, null],
-      cdeDonut: [124, 22, 12],
-      activities: [
-        { id: "ACT-KC-01Coc-101929", name: "Công tác Cọc (Piles) - Thi công cốt thép & đệm", duration: "7.0 ngày", start: "2026-10-12", cpm: true, status: "done", statusText: "Hoàn Thành" },
-        { id: "ACT-KC-01Coc-101931", name: "Công tác Cọc (Piles) - Đổ bê tông & nghiệm thu", duration: "5.0 ngày", start: "2026-10-13", cpm: true, status: "done", statusText: "Hoàn Thành" },
-        { id: "ACT-KC-02Mong-101933", name: "Công tác Móng (Foundations) - Lắp cốt thép", duration: "10.0 ngày", start: "2026-10-14", cpm: true, status: "doing", statusText: "Đang Ép Tiến Độ" },
-        { id: "ACT-KC-05Cot-101945", name: "Cột BTCT Tầng 1 - Ván khuôn & đổ bê tông", duration: "10.0 ngày", start: "2026-11-02", cpm: true, status: "todo", statusText: "Chưa Bắt Đầu" },
-        { id: "ACT-KC-07Dam-101955", name: "Dầm Khung Tầng 1 - Thi công cốt thép dầm chính", duration: "9.0 ngày", start: "2026-11-15", cpm: false, status: "todo", statusText: "Chưa Bắt Đầu" },
-        { id: "ACT-KC-08San-101962", name: "Sàn Sườn Tầng 1 - Đổ bê tông toàn khối", duration: "12.0 ngày", start: "2026-11-20", cpm: true, status: "todo", statusText: "Chưa Bắt Đầu" }
-      ]
-    },
-    "+0.000": {
-      name: "Cao độ móng (+0.000)",
-      elements: 412,
-      concrete: 462,
-      steel: 51,
-      tasks: 24,
-      cpm: 12,
-      cdeRate: 92.0,
-      cdeDwg: "46 / 50 Bản vẽ",
-      spi: "1.02",
-      spiStatus: "Vượt tiến độ 2% (+0.000)",
-      boqLabels: ['Cọc Ly Tâm', 'Đài Móng', 'Đà Kiềng', 'Lớp Lót Bê Tông', 'Hố Pit Thang'],
-      boqValues: [180, 240, 42, 65, 18],
-      scurvePlan: [15, 45, 80, 100, 100, 100, 100, 100],
-      scurveAct:  [16, 48, 85, 100, null, null, null, null],
-      cdeDonut: [46, 3, 1],
-      activities: [
-        { id: "ACT-KC-01Coc-101929", name: "Ép cọc đại trà Robot D400 phân khu A", duration: "7.0 ngày", start: "2026-10-12", cpm: true, status: "done", statusText: "Hoàn Thành" },
-        { id: "ACT-KC-01Coc-101931", name: "Cắt đầu cọc & đổ bê tông lót đài", duration: "5.0 ngày", start: "2026-10-13", cpm: true, status: "done", statusText: "Hoàn Thành" },
-        { id: "ACT-KC-02Mong-101933", name: "Lắp đặt cốt thép đài móng M1-M8", duration: "10.0 ngày", start: "2026-10-14", cpm: true, status: "doing", statusText: "Đang Đổ Bê Tông" },
-        { id: "ACT-KC-03DaKieng-101938", name: "Gia công đà kiềng & giằng móng", duration: "8.0 ngày", start: "2026-10-20", cpm: false, status: "doing", statusText: "Lắp Ván Khuôn" },
-        { id: "ACT-KC-12Pit-101980", name: "Chống thấm hố pit thang máy", duration: "4.0 ngày", start: "2026-10-24", cpm: true, status: "todo", statusText: "Chưa Bắt Đầu" }
-      ]
-    },
-    "+3.750": {
-      name: "Tầng 1 (+3.750 / +3.900)",
-      elements: 284,
-      concrete: 418,
-      steel: 46,
-      tasks: 26,
-      cpm: 8,
-      cdeRate: 75.0,
-      cdeDwg: "39 / 52 Bản vẽ",
-      spi: "0.95",
-      spiStatus: "Chậm 5% do vướng bản vẽ Shop dầm",
-      boqLabels: ['Cột Tầng 1', 'Dầm Khung T1', 'Sàn Sườn T1', 'Vách Thang', 'Cầu Thang T1'],
-      boqValues: [72, 145, 160, 32, 9],
-      scurvePlan: [0, 5, 18, 38, 62, 85, 96, 100],
-      scurveAct:  [0, 5, 15, 32, null, null, null, null],
-      cdeDonut: [39, 9, 4],
-      activities: [
-        { id: "ACT-KC-05Cot-101945", name: "Cột BTCT Tầng 1 (200x300, 300x400)", duration: "10.0 ngày", start: "2026-11-02", cpm: true, status: "todo", statusText: "Chuẩn Bị Cốt Thép" },
-        { id: "ACT-KC-06Vach-101950", name: "Vách thang máy lõi cứng Tầng 1", duration: "8.0 ngày", start: "2026-11-08", cpm: false, status: "todo", statusText: "Chưa Bắt Đầu" },
-        { id: "ACT-KC-07Dam-101955", name: "Lắp đặt dầm khung D1-D14 trục A-E", duration: "9.0 ngày", start: "2026-11-15", cpm: true, status: "todo", statusText: "Chưa Bắt Đầu" },
-        { id: "ACT-KC-08San-101962", name: "Rải thép sàn 2 lớp & đổ bê tông sàn T1", duration: "12.0 ngày", start: "2026-11-20", cpm: true, status: "todo", statusText: "Chưa Bắt Đầu" },
-        { id: "ACT-KC-09Thang-101970", name: "Đổ bê tông vế thang bộ T1 lên T2", duration: "6.0 ngày", start: "2026-11-28", cpm: false, status: "todo", statusText: "Chưa Bắt Đầu" }
-      ]
-    },
-    "+7.050": {
-      name: "Tầng 2 (+7.050 / +7.200)",
-      elements: 236,
-      concrete: 385,
-      steel: 42,
-      tasks: 22,
-      cpm: 6,
-      cdeRate: 68.0,
-      cdeDwg: "28 / 41 Bản vẽ",
-      spi: "0.96",
-      spiStatus: "Đang kiểm duyệt Shop Drawing CDE",
-      boqLabels: ['Cột Tầng 2', 'Dầm Khung T2', 'Sàn Sườn T2', 'Vách Thang', 'Cầu Thang T2'],
-      boqValues: [68, 138, 142, 28, 9],
-      scurvePlan: [0, 0, 0, 10, 35, 68, 90, 100],
-      scurveAct:  [0, 0, 0, 8, null, null, null, null],
-      cdeDonut: [28, 8, 5],
-      activities: [
-        { id: "ACT-KC-05Cot-101948", name: "Ghép cốt thép & ván khuôn cột Tầng 2", duration: "9.0 ngày", start: "2026-11-25", cpm: true, status: "todo", statusText: "Chưa Bắt Đầu" },
-        { id: "ACT-KC-07Dam-101958", name: "Gia công dầm khung chính Tầng 2", duration: "8.0 ngày", start: "2026-12-02", cpm: true, status: "todo", statusText: "Chưa Bắt Đầu" },
-        { id: "ACT-KC-08San-101966", name: "Đổ bê tông sàn sườn Tầng 2", duration: "10.0 ngày", start: "2026-12-08", cpm: true, status: "todo", statusText: "Chưa Bắt Đầu" }
-      ]
-    },
-    "+10.350": {
-      name: "Tầng Mái & Tum (+10.350)",
-      elements: 124,
-      concrete: 217,
-      steel: 24,
-      tasks: 14,
-      cpm: 2,
-      cdeRate: 55.0,
-      cdeDwg: "11 / 20 Bản vẽ",
-      spi: "1.00",
-      spiStatus: "Chờ nghiệm thu sàn T2",
-      boqLabels: ['Cột Tum Mái', 'Dầm Mái', 'Sàn Mái BTCT', 'Sê Nô Nước', 'Gờ Chắn Nước'],
-      boqValues: [22, 65, 93, 25, 12],
-      scurvePlan: [0, 0, 0, 0, 12, 40, 75, 100],
-      scurveAct:  [0, 0, 0, 0, null, null, null, null],
-      cdeDonut: [11, 5, 4],
-      activities: [
-        { id: "ACT-KC-05Cot-101952", name: "Cột tum thang & đà đỡ bồn nước", duration: "6.0 ngày", start: "2026-12-14", cpm: true, status: "todo", statusText: "Chưa Bắt Đầu" },
-        { id: "ACT-KC-07Dam-101961", name: "Dầm bao mái & sê nô thu nước", duration: "7.0 ngày", start: "2026-12-18", cpm: true, status: "todo", statusText: "Chưa Bắt Đầu" },
-        { id: "ACT-KC-08San-101969", name: "Sàn mái chống thấm & hoàn thiện bề mặt", duration: "8.0 ngày", start: "2026-12-22", cpm: false, status: "todo", statusText: "Chưa Bắt Đầu" }
-      ]
-    }
+  // ==============================================================================
+  // 1. THREE.JS 3D BIM ENGINE INITIALIZATION
+  // ==============================================================================
+  let scene, camera, renderer, controls, raycaster, mouse;
+  const container = document.getElementById('webglContainer');
+  let bimElements = []; // Store 3D meshes with metadata
+  let isXray = false;
+  let isPlaying = false;
+  let playInterval = null;
+
+  // Materials
+  const matCompleted = new THREE.MeshLambertMaterial({ color: 0x10b981, transparent: true, opacity: 0.95 }); // Emerald
+  const matActive    = new THREE.MeshLambertMaterial({ color: 0xfacc15, transparent: true, opacity: 0.98 }); // Yellow
+  const matFuture    = new THREE.MeshLambertMaterial({ color: 0x94a3b8, transparent: true, opacity: 0.22 }); // Ghost Translucent
+  const matOutline   = new THREE.LineBasicMaterial({ color: 0x0f172a, linewidth: 1 });
+
+  function init3D() {
+    scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x1a2332);
+
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
+    camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+    camera.position.set(38, 28, 42);
+
+    renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(width, height);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.shadowMap.enabled = true;
+    container.appendChild(renderer.domElement);
+
+    controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+    controls.target.set(0, 5, 0);
+
+    raycaster = new THREE.Raycaster();
+    mouse = new THREE.Vector2();
+
+    // Lighting
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+    scene.add(ambientLight);
+
+    const dirLight1 = new THREE.DirectionalLight(0xffffff, 0.8);
+    dirLight1.position.set(40, 60, 30);
+    scene.add(dirLight1);
+
+    const dirLight2 = new THREE.DirectionalLight(0x93c5fd, 0.4);
+    dirLight2.position.set(-30, 20, -30);
+    scene.add(dirLight2);
+
+    // Construction Site Grid Plane
+    const gridHelper = new THREE.GridHelper(60, 30, 0x0284c7, 0x334155);
+    gridHelper.position.y = -0.05;
+    scene.add(gridHelper);
+
+    // Build the KAKA BIM Model Structures
+    buildBimModel();
+
+    // Event Listeners
+    window.addEventListener('resize', onWindowResize);
+    container.addEventListener('click', onCanvasClick);
+
+    animate();
+  }
+
+  function onWindowResize() {
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(width, height);
+  }
+
+  // ==============================================================================
+  // 2. PROCEDURAL BIM GEOMETRY BUILDER (COLUMNS, BEAMS, SLABS, PILES)
+  // ==============================================================================
+  function addBimMesh(geom, pos, meta) {
+    const mesh = new THREE.Mesh(geom, matCompleted.clone());
+    mesh.position.set(pos.x, pos.y, pos.z);
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+    mesh.userData = meta;
+
+    // Edge outline for crisp BIM CAD look
+    const edges = new THREE.EdgesGeometry(geom);
+    const line = new THREE.LineSegments(edges, matOutline);
+    mesh.add(line);
+
+    scene.add(mesh);
+    bimElements.push(mesh);
+    return mesh;
+  }
+
+  function buildBimModel() {
+    // Grid Setup: 4 bays in X (-12 to 12), 3 bays in Z (-8 to 8)
+    const xCoords = [-12, -4, 4, 12];
+    const zCoords = [-8, 0, 8];
+
+    // 1. FOUNDATION & PILES (+0.000 / week 1-2)
+    xCoords.forEach((x, i) => {
+      zCoords.forEach((z, j) => {
+        // Piles (4 piles per group, underground)
+        [-0.8, 0.8].forEach(dx => {
+          [-0.8, 0.8].forEach(dz => {
+            const pileGeom = new THREE.CylinderGeometry(0.3, 0.3, 6, 12);
+            addBimMesh(pileGeom, { x: x + dx, y: -3, z: z + dz }, {
+              name: `Cọc Ly Tâm D400 P_${i}_${j}`,
+              id: 1025000 + i * 20 + j,
+              level: "+0.000",
+              category: "01.Coc",
+              vol: 0.85,
+              steel: 95,
+              week: 1,
+              p6Task: "ACT-KC-01Coc-101929"
+            });
+          });
+        });
+
+        // Pile Cap / Móng
+        const capGeom = new THREE.BoxGeometry(2.4, 1.2, 2.4);
+        addBimMesh(capGeom, { x: x, y: 0.6, z: z }, {
+          name: `Đài Móng BTCT M_${i+1}${j+1}`,
+          id: 1026000 + i * 10 + j,
+          level: "+0.000",
+          category: "02.Mong",
+          vol: 6.91,
+          steel: 760,
+          week: 2,
+          p6Task: "ACT-KC-02Mong-101933"
+        });
+      });
+    });
+
+    // Tie Beams / Đà Kiềng (week 3)
+    xCoords.forEach((x, i) => {
+      if (i < xCoords.length - 1) {
+        zCoords.forEach(z => {
+          const tbGeom = new THREE.BoxGeometry(5.6, 0.6, 0.5);
+          addBimMesh(tbGeom, { x: x + 4, y: 0.9, z: z }, {
+            name: `Đà Kiềng Dọc DK_${i+1}`,
+            id: 1027000 + i,
+            level: "+0.000",
+            category: "03.DaKieng",
+            vol: 1.68,
+            steel: 185,
+            week: 3,
+            p6Task: "ACT-KC-03DaKieng-101938"
+          });
+        });
+      }
+    });
+
+    // Ground Floor Slab (Nền Tầng Trệt - week 3)
+    const groundSlabGeom = new THREE.BoxGeometry(28, 0.3, 20);
+    addBimMesh(groundSlabGeom, { x: 0, y: 1.35, z: 0 }, {
+      name: "Bê Tông Nền & Lớp Lót Trệt",
+      id: 1028001,
+      level: "+0.000",
+      category: "04.Nen",
+      vol: 84.0,
+      steel: 4200,
+      week: 3,
+      p6Task: "ACT-KC-04Nen-101942"
+    });
+
+    // 2. LEVEL 1 (+3.750)
+    // Columns Level 1 (week 4)
+    xCoords.forEach((x, i) => {
+      zCoords.forEach((z, j) => {
+        const colGeom = new THREE.BoxGeometry(0.8, 3.8, 0.8);
+        addBimMesh(colGeom, { x: x, y: 3.4, z: z }, {
+          name: `Cột BTCT Tầng 1 C_${i+1}${j+1}`,
+          id: 1030000 + i * 10 + j,
+          level: "+3.750",
+          category: "05.Cot",
+          vol: 2.43,
+          steel: 268,
+          week: 4,
+          p6Task: "ACT-KC-05Cot-101945"
+        });
+      });
+    });
+
+    // Shear Wall / Vách thang máy Tầng 1 (week 4)
+    const wallGeom1 = new THREE.BoxGeometry(0.4, 3.8, 3.6);
+    addBimMesh(wallGeom1, { x: 3.8, y: 3.4, z: 0 }, {
+      name: "Vách Lõi Thang Máy Tầng 1",
+      id: 1031001,
+      level: "+3.750",
+      category: "06.Vach",
+      vol: 5.47,
+      steel: 680,
+      week: 4,
+      p6Task: "ACT-KC-06Vach-101950"
+    });
+
+    // Beams & Slab Level 1 (week 5)
+    // Beams X-direction
+    xCoords.forEach((x, i) => {
+      if (i < xCoords.length - 1) {
+        zCoords.forEach(z => {
+          const bmGeom = new THREE.BoxGeometry(7.2, 0.7, 0.5);
+          addBimMesh(bmGeom, { x: x + 4, y: 5.45, z: z }, {
+            name: `Dầm Khung Chính T1 D_${i+1}`,
+            id: 1032000 + i,
+            level: "+3.750",
+            category: "07.Dam",
+            vol: 2.52,
+            steel: 290,
+            week: 5,
+            p6Task: "ACT-KC-07Dam-101955"
+          });
+        });
+      }
+    });
+
+    // Floor Slab Level 1 (week 5)
+    const slab1Geom = new THREE.BoxGeometry(28, 0.35, 20);
+    addBimMesh(slab1Geom, { x: 0, y: 5.65, z: 0 }, {
+      name: "Sàn Bê Tông Cốt Thép Tầng 1 (+3.750)",
+      id: 1033001,
+      level: "+3.750",
+      category: "08.San",
+      vol: 98.0,
+      steel: 10780,
+      week: 5,
+      p6Task: "ACT-KC-08San-101962"
+    });
+
+    // 3. LEVEL 2 (+7.050)
+    // Columns Level 2 (week 6)
+    xCoords.forEach((x, i) => {
+      zCoords.forEach((z, j) => {
+        const colGeom = new THREE.BoxGeometry(0.7, 3.5, 0.7);
+        addBimMesh(colGeom, { x: x, y: 7.55, z: z }, {
+          name: `Cột BTCT Tầng 2 C2_${i+1}${j+1}`,
+          id: 1040000 + i * 10 + j,
+          level: "+7.050",
+          category: "05.Cot",
+          vol: 1.71,
+          steel: 190,
+          week: 6,
+          p6Task: "ACT-KC-05Cot-101948"
+        });
+      });
+    });
+
+    // Beams & Slab Level 2 (week 7)
+    const slab2Geom = new THREE.BoxGeometry(28, 0.35, 20);
+    addBimMesh(slab2Geom, { x: 0, y: 9.45, z: 0 }, {
+      name: "Sàn Bê Tông Cốt Thép Tầng 2 (+7.050)",
+      id: 1043001,
+      level: "+7.050",
+      category: "08.San",
+      vol: 98.0,
+      steel: 10780,
+      week: 7,
+      p6Task: "ACT-KC-08San-101966"
+    });
+
+    // 4. ROOF & TUM (+10.350 / week 8)
+    // Tum thang & Đà Mái
+    [-4, 4].forEach(x => {
+      [-4, 4].forEach(z => {
+        const tumCol = new THREE.BoxGeometry(0.6, 3.0, 0.6);
+        addBimMesh(tumCol, { x: x, y: 11.1, z: z }, {
+          name: "Cột Tum Thang Máy Mái",
+          id: 1050001,
+          level: "+10.350",
+          category: "05.Cot",
+          vol: 1.08,
+          steel: 120,
+          week: 8,
+          p6Task: "ACT-KC-05Cot-101952"
+        });
+      });
+    });
+
+    // Roof Slab
+    const roofSlab = new THREE.BoxGeometry(12, 0.3, 12);
+    addBimMesh(roofSlab, { x: 0, y: 12.75, z: 0 }, {
+      name: "Sàn Mái Bê Tông Cốt Thép (+10.350)",
+      id: 1053001,
+      level: "+10.350",
+      category: "08.San",
+      vol: 43.2,
+      steel: 4750,
+      week: 8,
+      p6Task: "ACT-KC-08San-101969"
+    });
+
+    // Apply initial week state (Week 4)
+    update4DState(4);
+  }
+
+  // ==============================================================================
+  // 3. 4D TIMELINER SIMULATION ENGINE
+  // ==============================================================================
+  const weekTimelineData = {
+    1: { date: "12/10/2026", task: "Ép cọc đại trà Robot D400 phân khu A & B", pct: 12, conc: 180, steel: 20 },
+    2: { date: "19/10/2026", task: "Lắp đặt cốt thép & đổ bê tông đài móng M1-M8", pct: 25, conc: 360, steel: 40 },
+    3: { date: "26/10/2026", task: "Gia công đà kiềng & đổ bê tông nền tầng trệt", pct: 38, conc: 510, steel: 56 },
+    4: { date: "02/11/2026", task: "Lắp dựng ván khuôn & đổ bê tông cột/vách Tầng 1", pct: 48, conc: 710, steel: 78 },
+    5: { date: "09/11/2026", task: "Lắp thép dầm khung & đổ bê tông sàn sườn Tầng 1", pct: 64, conc: 940, steel: 103 },
+    6: { date: "16/11/2026", task: "Thi công cốt thép & đổ bê tông cột Tầng 2", pct: 76, conc: 1120, steel: 123 },
+    7: { date: "23/11/2026", task: "Đổ bê tông dầm sàn Tầng 2 & vế thang bộ", pct: 90, conc: 1330, steel: 146 },
+    8: { date: "30/11/2026", task: "Hoàn thiện tum thang máy & đổ bê tông sàn Mái", pct: 100, conc: 1482, steel: 163 },
   };
 
-  // CHART INSTANCES
+  const weeklyP6Activities = {
+    1: [
+      { id: "ACT-KC-01Coc-101929", name: "Ép cọc ly tâm D400 phân khu A", duration: "7.0 ngày", start: "2026-10-12", cpm: true, status: "doing", statusText: "Đang Ép Cọc" },
+      { id: "ACT-KC-01Coc-101930", name: "Cắt đầu cọc & đập đầu cọc", duration: "5.0 ngày", start: "2026-10-15", cpm: true, status: "todo", statusText: "Chờ Nghiệm Thu" }
+    ],
+    2: [
+      { id: "ACT-KC-01Coc-101929", name: "Ép cọc ly tâm D400 phân khu A", duration: "7.0 ngày", start: "2026-10-12", cpm: true, status: "done", statusText: "Hoàn Thành" },
+      { id: "ACT-KC-02Mong-101933", name: "Gia công cốt thép đài móng M1-M8", duration: "10.0 ngày", start: "2026-10-19", cpm: true, status: "doing", statusText: "Đang Lắp Cốt Thép" }
+    ],
+    3: [
+      { id: "ACT-KC-02Mong-101933", name: "Đổ bê tông đài móng & bảo dưỡng", duration: "10.0 ngày", start: "2026-10-19", cpm: true, status: "done", statusText: "Hoàn Thành" },
+      { id: "ACT-KC-03DaKieng-101938", name: "Lắp đặt đà kiềng & đổ bê tông nền", duration: "8.0 ngày", start: "2026-10-26", cpm: true, status: "doing", statusText: "Đang Đổ Nền Trệt" }
+    ],
+    4: [
+      { id: "ACT-KC-03DaKieng-101938", name: "Bảo dưỡng nền & nghiệm thu đà kiềng", duration: "8.0 ngày", start: "2026-10-26", cpm: false, status: "done", statusText: "Hoàn Thành" },
+      { id: "ACT-KC-05Cot-101945", name: "Cột BTCT Tầng 1 - Ván khuôn & đổ bê tông", duration: "10.0 ngày", start: "2026-11-02", cpm: true, status: "doing", statusText: "Đang Đổ Bê Tông" },
+      { id: "ACT-KC-06Vach-101950", name: "Vách thang máy Tầng 1 lõi cứng", duration: "8.0 ngày", start: "2026-11-04", cpm: true, status: "doing", statusText: "Lắp Cốt Thép Vách" }
+    ],
+    5: [
+      { id: "ACT-KC-05Cot-101945", name: "Tháo ván khuôn cột Tầng 1 & bảo dưỡng", duration: "10.0 ngày", start: "2026-11-02", cpm: true, status: "done", statusText: "Hoàn Thành" },
+      { id: "ACT-KC-07Dam-101955", name: "Lắp thép dầm khung chính D1-D14", duration: "9.0 ngày", start: "2026-11-09", cpm: true, status: "doing", statusText: "Lắp Thép Dầm" },
+      { id: "ACT-KC-08San-101962", name: "Rải thép sàn 2 lớp & đổ bê tông T1", duration: "12.0 ngày", start: "2026-11-12", cpm: true, status: "doing", statusText: "Đang Đổ Sàn T1" }
+    ],
+    6: [
+      { id: "ACT-KC-08San-101962", name: "Bảo dưỡng sàn T1 & nghiệm thu cốt thép", duration: "12.0 ngày", start: "2026-11-12", cpm: true, status: "done", statusText: "Hoàn Thành" },
+      { id: "ACT-KC-05Cot-101948", name: "Cột BTCT Tầng 2 - Lắp dựng & đổ bê tông", duration: "9.0 ngày", start: "2026-11-16", cpm: true, status: "doing", statusText: "Đang Đổ Cột T2" }
+    ],
+    7: [
+      { id: "ACT-KC-05Cot-101948", name: "Nghiệm thu cột Tầng 2", duration: "9.0 ngày", start: "2026-11-16", cpm: true, status: "done", statusText: "Hoàn Thành" },
+      { id: "ACT-KC-08San-101966", name: "Đổ bê tông dầm sàn Tầng 2 toàn khối", duration: "10.0 ngày", start: "2026-11-23", cpm: true, status: "doing", statusText: "Đang Đổ Sàn T2" }
+    ],
+    8: [
+      { id: "ACT-KC-08San-101966", name: "Bảo dưỡng sàn T2 & dọn mặt bằng", duration: "10.0 ngày", start: "2026-11-23", cpm: true, status: "done", statusText: "Hoàn Thành" },
+      { id: "ACT-KC-08San-101969", name: "Đổ bê tông tum thang & sàn Mái (+10.350)", duration: "8.0 ngày", start: "2026-11-28", cpm: true, status: "done", statusText: "Cất Nóc Dự Án" }
+    ]
+  };
+
+  function update4DState(targetWeek) {
+    const data = weekTimelineData[targetWeek];
+
+    // 1. Update 3D Meshes Color / Visibility (Bexel Engine logic)
+    bimElements.forEach(mesh => {
+      const elemWeek = mesh.userData.week;
+      if (elemWeek < targetWeek) {
+        // COMPLETED: Solid Emerald Green
+        mesh.material = matCompleted;
+        mesh.visible = true;
+      } else if (elemWeek === targetWeek) {
+        // ACTIVE UNDER CONSTRUCTION: Bright Yellow Flash
+        mesh.material = matActive;
+        mesh.visible = true;
+      } else {
+        // FUTURE WORK: Ghost Transparent or Hidden
+        mesh.material = matFuture;
+        mesh.visible = !isXray; // If X-ray is on, hide future
+      }
+    });
+
+    // 2. Update HUD
+    document.getElementById('hudDate').innerText = `GIAI ĐOẠN: TUẦN ${targetWeek} (${data.date})`;
+    document.getElementById('hudTask').innerText = `Đang thi công: ${data.task}`;
+    document.getElementById('txtCurrentDate').innerText = `Đang mô phỏng: Tuần ${targetWeek} (${data.date})`;
+
+    // 3. Update KPIs
+    document.getElementById('kpiProgress').innerText = `${data.pct}%`;
+    document.getElementById('subProgress').innerText = `${Math.round(86 * data.pct / 100)} / 86 Tasks P6 Hoàn thành`;
+    document.getElementById('kpiConcrete').innerHTML = `${data.conc} / 1,482 <span style="font-size: 13px;">m³</span>`;
+    document.getElementById('subSteel').innerText = `Thép: ${data.steel} / 163 Tấn (${data.pct}%)`;
+
+    // 4. Update Charts
+    updateCharts4D(targetWeek);
+
+    // 5. Update Activity Table
+    renderP6Activities(targetWeek);
+  }
+
+  function onSliderChange(val) {
+    const week = parseInt(val);
+    update4DState(week);
+  }
+
+  function togglePlay4D() {
+    isPlaying = !isPlaying;
+    const btn = document.getElementById('btnPlay4D');
+    if (isPlaying) {
+      btn.innerHTML = "⏸ Tạm Dừng";
+      btn.style.background = "#e11d48";
+      playInterval = setInterval(() => {
+        let slider = document.getElementById('slider4D');
+        let current = parseInt(slider.value);
+        if (current >= 8) current = 1;
+        else current += 1;
+        slider.value = current;
+        update4DState(current);
+      }, 1800);
+    } else {
+      btn.innerHTML = "▶ Play 4D";
+      btn.style.background = "#0284c7";
+      clearInterval(playInterval);
+    }
+  }
+
+  function setCameraView(view) {
+    if (view === 'iso') {
+      camera.position.set(38, 28, 42);
+      controls.target.set(0, 5, 0);
+    } else if (view === 'top') {
+      camera.position.set(0, 55, 0.1);
+      controls.target.set(0, 0, 0);
+    } else if (view === 'front') {
+      camera.position.set(0, 8, 50);
+      controls.target.set(0, 5, 0);
+    }
+    controls.update();
+  }
+
+  function toggleXray() {
+    isXray = !isXray;
+    document.getElementById('btnXray').classList.toggle('active', isXray);
+    const sliderVal = parseInt(document.getElementById('slider4D').value);
+    update4DState(sliderVal);
+  }
+
+  function onLevelChange() {
+    const lvl = document.getElementById('selLevel').value;
+    if (lvl === '+0.000') {
+      camera.position.set(22, 10, 26);
+      controls.target.set(0, 1, 0);
+      document.getElementById('slider4D').value = 2;
+      update4DState(2);
+    } else if (lvl === '+3.750') {
+      camera.position.set(28, 16, 32);
+      controls.target.set(0, 4, 0);
+      document.getElementById('slider4D').value = 4;
+      update4DState(4);
+    } else if (lvl === '+7.050') {
+      camera.position.set(28, 20, 32);
+      controls.target.set(0, 8, 0);
+      document.getElementById('slider4D').value = 7;
+      update4DState(7);
+    } else if (lvl === '+10.350') {
+      camera.position.set(24, 25, 28);
+      controls.target.set(0, 11, 0);
+      document.getElementById('slider4D').value = 8;
+      update4DState(8);
+    } else {
+      setCameraView('iso');
+      document.getElementById('slider4D').value = 4;
+      update4DState(4);
+    }
+  }
+
+  function resetAll() {
+    document.getElementById('selLevel').value = 'ALL';
+    document.getElementById('slider4D').value = 4;
+    setCameraView('iso');
+    isXray = false;
+    document.getElementById('btnXray').classList.remove('active');
+    update4DState(4);
+  }
+
+  // Element Click Raycaster
+  function onCanvasClick(event) {
+    const rect = renderer.domElement.getBoundingClientRect();
+    mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+    mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObjects(bimElements);
+
+    const popup = document.getElementById('inspectPopup');
+    if (intersects.length > 0) {
+      const target = intersects[0].object;
+      const meta = target.userData;
+
+      document.getElementById('inspName').innerText = meta.name;
+      document.getElementById('inspId').innerText = meta.id;
+      document.getElementById('inspLevel').innerText = meta.level;
+      document.getElementById('inspVol').innerText = `${meta.vol} m³`;
+      document.getElementById('inspSteel').innerText = `${meta.steel} kg`;
+      
+      const curWeek = parseInt(document.getElementById('slider4D').value);
+      if (meta.week < curWeek) {
+        document.getElementById('inspStatus').innerText = "Đã hoàn thành";
+        document.getElementById('inspStatus').style.color = "#4ade80";
+      } else if (meta.week === curWeek) {
+        document.getElementById('inspStatus').innerText = "Đang thi công (Active)";
+        document.getElementById('inspStatus').style.color = "#fde047";
+      } else {
+        document.getElementById('inspStatus').innerText = "Chưa thi công";
+        document.getElementById('inspStatus').style.color = "#94a3b8";
+      }
+      popup.style.display = 'block';
+    } else {
+      popup.style.display = 'none';
+    }
+  }
+
+  function animate() {
+    requestAnimationFrame(animate);
+    controls.update();
+    renderer.render(scene, camera);
+  }
+
+  // ==============================================================================
+  // 4. CHART.JS & DATA TABLE SYNCHRONIZATION
+  // ==============================================================================
   let scurveChartInstance = null;
   let boqChartInstance = null;
   let cdeChartInstance = null;
 
   function initCharts() {
-    // 1. S-Curve
+    // S-Curve Chart
     const ctxS = document.getElementById('scurveChart').getContext('2d');
     scurveChartInstance = new Chart(ctxS, {
       type: 'line',
       data: {
-        labels: ['Tuần 1 (12/10)', 'Tuần 2 (19/10)', 'Tuần 3 (26/10)', 'Tuần 4 (02/11)', 'Tuần 5 (09/11)', 'Tuần 6 (16/11)', 'Tuần 7 (23/11)', 'Tuần 8 (30/11)'],
+        labels: ['Tuần 1', 'Tuần 2', 'Tuần 3', 'Tuần 4', 'Tuần 5', 'Tuần 6', 'Tuần 7', 'Tuần 8'],
         datasets: [
           {
-            label: 'Kế hoạch P6 (Planned %)',
-            data: levelData["ALL"].scurvePlan,
+            label: 'Kế Hoạch P6 (%)',
+            data: [5, 14, 26, 42, 60, 78, 91, 100],
             borderColor: '#0284c7',
-            backgroundColor: 'rgba(2, 132, 199, 0.1)',
+            backgroundColor: 'rgba(2, 132, 199, 0.08)',
             fill: true,
             tension: 0.35,
-            borderWidth: 2.5
+            borderWidth: 2
           },
           {
-            label: 'Thực tế Thi công (Actual %)',
-            data: levelData["ALL"].scurveAct,
+            label: 'Thực Tế 3D (%)',
+            data: [5, 15, 27, 40, null, null, null, null],
             borderColor: '#10b981',
             backgroundColor: '#10b981',
             pointRadius: 5,
@@ -540,19 +1128,17 @@
       }
     });
 
-    // 2. BOQ Bar Chart
+    // BOQ Chart
     const ctxB = document.getElementById('boqChart').getContext('2d');
     boqChartInstance = new Chart(ctxB, {
       type: 'bar',
       data: {
-        labels: levelData["ALL"].boqLabels,
+        labels: ['Cọc', 'Móng', 'Đà Kiềng', 'Nền Trệt', 'Cột T1', 'Dầm Sàn T1', 'Cột T2', 'Sàn Mái'],
         datasets: [{
-          label: 'Thể tích Bê tông (m³)',
-          data: levelData["ALL"].boqValues,
-          backgroundColor: [
-            '#0f2b48', '#0284c7', '#38bdf8', '#059669', '#10b981', '#d97706', '#64748b'
-          ],
-          borderRadius: 4
+          label: 'Bê tông đã đổ (m³)',
+          data: [180, 240, 42, 84, 72, 92, 0, 0],
+          backgroundColor: '#0284c7',
+          borderRadius: 3
         }]
       },
       options: {
@@ -563,14 +1149,14 @@
       }
     });
 
-    // 3. CDE Donut Chart
+    // CDE Donut Chart
     const ctxC = document.getElementById('cdeDonutChart').getContext('2d');
     cdeChartInstance = new Chart(ctxC, {
       type: 'doughnut',
       data: {
-        labels: ['Published (Đã Duyệt)', 'Shared (Đang Review)', 'WIP (Nội Bộ)'],
+        labels: ['Published', 'Shared', 'WIP'],
         datasets: [{
-          data: levelData["ALL"].cdeDonut,
+          data: [124, 22, 12],
           backgroundColor: ['#059669', '#0284c7', '#cbd5e1']
         }]
       },
@@ -582,10 +1168,27 @@
     });
   }
 
-  function renderActivityTable(activities) {
+  function updateCharts4D(week) {
+    document.getElementById('scurveTag').innerText = `TUẦN ${week} / 8`;
+    
+    // Update actual scurve points up to week
+    const actPoints = [5, 15, 27, 40, 58, 74, 88, 100];
+    const newAct = actPoints.map((val, idx) => (idx < week ? val : null));
+    scurveChartInstance.data.datasets[1].data = newAct;
+    scurveChartInstance.update();
+
+    // Update BOQ breakdown bars up to week
+    const maxVals = [180, 240, 42, 84, 72, 98, 72, 98];
+    const newBoq = maxVals.map((val, idx) => (idx < week ? val : 0));
+    boqChartInstance.data.datasets[0].data = newBoq;
+    boqChartInstance.update();
+  }
+
+  function renderP6Activities(week) {
+    const list = weeklyP6Activities[week] || weeklyP6Activities[4];
     const tbody = document.getElementById('activityTableBody');
     tbody.innerHTML = '';
-    activities.forEach(act => {
+    list.forEach(act => {
       const tr = document.createElement('tr');
       const badgeClass = act.status === 'done' ? 'badge-done' : (act.status === 'doing' ? 'badge-doing' : 'badge-todo');
       const cpmHtml = act.cpm ? '<span style="color: #e11d48; font-weight: 700;">CPM</span>' : '<span style="color: #0284c7;">Float</span>';
@@ -601,74 +1204,13 @@
     });
   }
 
-  function applyFilters() {
-    const lvlKey = document.getElementById('selLevel').value;
-    const discKey = document.getElementById('selDiscipline').value;
-    const d = levelData[lvlKey] || levelData["ALL"];
-
-    // Adjust for discipline if KT is chosen
-    let multiplier = 1.0;
-    if (discKey === 'KT') multiplier = 0.45;
-    else if (discKey === 'KC') multiplier = 0.95;
-
-    const elemCount = Math.round(d.elements * multiplier);
-    const concCount = Math.round(d.concrete * multiplier);
-    const steelCount = Math.round(d.steel * multiplier);
-    const taskCount = Math.round(d.tasks * multiplier);
-
-    // 1. Update KPI Values
-    document.getElementById('kpiElements').innerText = elemCount.toLocaleString();
-    document.getElementById('kpiConcrete').innerHTML = `${concCount.toLocaleString()} <span style="font-size: 14px;">m³</span>`;
-    document.getElementById('subSteel').innerText = `Thép: ${steelCount} Tấn (110 kg/m³)`;
-    document.getElementById('kpiTasks').innerHTML = `${taskCount} <span style="font-size: 14px;">Tasks</span>`;
-    document.getElementById('subCPM').innerText = `Đường găng CPM: ${Math.round(d.cpm * multiplier)} công tác`;
-    document.getElementById('kpiCDE').innerText = `${d.cdeRate}%`;
-    document.getElementById('subCDE').innerText = d.cdeDwg;
-    document.getElementById('kpiSPI').innerText = d.spi;
-    document.getElementById('subSPI').innerText = d.spiStatus;
-
-    // 2. Update Status Text
-    document.getElementById('filterStatusText').innerText = `Đang xem: ${d.name} (${elemCount.toLocaleString()} cấu kiện • ${taskCount} Tasks P6)`;
-
-    // 3. Highlight updated cards
-    ['cardElements', 'cardConcrete', 'cardSchedule', 'cardCDE', 'cardSPI'].forEach(id => {
-      const el = document.getElementById(id);
-      el.classList.remove('highlight-update');
-      void el.offsetWidth; // trigger reflow
-      el.classList.add('highlight-update');
-    });
-
-    // 4. Update BOQ Chart
-    document.getElementById('boqTitle').innerText = `Cơ Cấu Khối Lượng Bê Tông: ${d.name} (m³)`;
-    boqChartInstance.data.labels = d.boqLabels;
-    boqChartInstance.data.datasets[0].data = d.boqValues.map(v => Math.round(v * multiplier));
-    boqChartInstance.update();
-
-    // 5. Update S-Curve Chart
-    document.getElementById('scurveTitle').innerText = `Tiến Độ Thi Công 4D (S-Curve): ${d.name}`;
-    scurveChartInstance.data.datasets[0].data = d.scurvePlan;
-    scurveChartInstance.data.datasets[1].data = d.scurveAct;
-    scurveChartInstance.update();
-
-    // 6. Update CDE Donut Chart
-    cdeChartInstance.data.datasets[0].data = d.cdeDonut;
-    cdeChartInstance.update();
-
-    // 7. Update Activity Table
-    document.getElementById('tableTag').innerText = `${d.activities.length} ACTIVITIES (${d.name})`;
-    renderActivityTable(d.activities);
-  }
-
-  function resetFilters() {
-    document.getElementById('selDiscipline').value = 'ALL';
-    document.getElementById('selLevel').value = 'ALL';
-    applyFilters();
-  }
-
-  // Initialize on load
+  // ==============================================================================
+  // 5. WINDOW LOAD ENTRY POINT
+  // ==============================================================================
   window.onload = function() {
+    init3D();
     initCharts();
-    renderActivityTable(levelData["ALL"].activities);
+    renderP6Activities(4);
   };
 </script>
 </body>
