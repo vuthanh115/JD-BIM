@@ -54,6 +54,12 @@ public sealed partial class ExportP6ScheduleViewModel : ObservableObject
   private bool _exportToCsv = false;
 
   [ObservableProperty]
+  private bool _exportNavisworks4D = true;
+
+  [ObservableProperty]
+  private string _navisworksSetsPath = string.Empty;
+
+  [ObservableProperty]
   private bool _includeLinkedModels = true;
 
   [ObservableProperty]
@@ -99,6 +105,7 @@ public sealed partial class ExportP6ScheduleViewModel : ObservableObject
     var baseName = Path.GetFileNameWithoutExtension(ModelTitle);
     XerFilePath = Path.Combine(defaultDir, $"{baseName}_P6_Schedule.xer");
     CsvFilePath = Path.Combine(defaultDir, $"{baseName}_P6_Schedule.csv");
+    NavisworksSetsPath = Path.Combine(defaultDir, $"{baseName}_Navisworks_SearchSets.xml");
 
     var defaultP6Db = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "PPMDBSQLite.db");
     P6DatabasePath = defaultP6Db;
@@ -230,6 +237,22 @@ public sealed partial class ExportP6ScheduleViewModel : ObservableObject
   }
 
   [RelayCommand]
+  private void BrowseNavisworksSets()
+  {
+    var dlg = new SaveFileDialog
+    {
+      Title = "Chọn vị trí lưu Navisworks Search Sets XML",
+      Filter = "Navisworks Search Sets (*.xml)|*.xml|All files (*.*)|*.*",
+      FileName = NavisworksSetsPath
+    };
+
+    if (dlg.ShowDialog() == true)
+    {
+      NavisworksSetsPath = dlg.FileName;
+    }
+  }
+
+  [RelayCommand]
   private void Export()
   {
     if (!SyncToP6Database && !ExportToXer && !ExportToCsv)
@@ -278,17 +301,30 @@ public sealed partial class ExportP6ScheduleViewModel : ObservableObject
         exportedFolder = dir;
       }
 
-      StatusMessage = "Đồng bộ & Xuất dữ liệu Primavera P6 hoàn tất thành công!";
+      if (ExportNavisworks4D && !string.IsNullOrWhiteSpace(NavisworksSetsPath))
+      {
+        var dir = Path.GetDirectoryName(NavisworksSetsPath);
+        if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir))
+          Directory.CreateDirectory(dir);
+
+        Navisworks4DExportService.ExportNavisworksSearchSetsXml(NavisworksSetsPath, _summaries);
+        var timelinerCsv = Path.ChangeExtension(NavisworksSetsPath, ".timeliner.csv");
+        Navisworks4DExportService.ExportNavisworksTimelinerCsv(timelinerCsv, ProjectName, _summaries);
+        exportedFolder = dir;
+      }
+
+      StatusMessage = "Đồng bộ & Xuất dữ liệu Primavera P6 & Navisworks 4D hoàn tất thành công!";
 
       MessageBox.Show(
-        $"Đồng bộ & Xuất dữ liệu Primavera P6 thành công!\n\n" +
+        $"Đồng bộ & Xuất dữ liệu BIM 4D thành công!\n\n" +
         $"• Dự án: {ProjectName} (Mã: PRJ-KAKA-BIM)\n" +
         $"• WBS Nodes: {TotalWbsNodes}\n" +
         $"• Activities: {TotalActivities}\n\n" +
         (SyncToP6Database && dbSuccess ? $"• CSDL P6: Đã nạp thành công 100% tiếng Việt có dấu vào PPMDBSQLite.db\n" : "") +
         (ExportToXer ? $"• File XER: {Path.GetFileName(XerFilePath)}\n" : "") +
-        (ExportToCsv ? $"• File CSV: {Path.GetFileName(CsvFilePath)}\n" : ""),
-        "Primavera P6 Integration",
+        (ExportToCsv ? $"• File CSV: {Path.GetFileName(CsvFilePath)}\n" : "") +
+        (ExportNavisworks4D ? $"• Navisworks 4D Search Sets: {Path.GetFileName(NavisworksSetsPath)}\n  (Kèm file Timeliner Auto-Attach CSV)\n" : ""),
+        "Primavera P6 & Navisworks 4D Integration",
         MessageBoxButton.OK,
         MessageBoxImage.Information);
 

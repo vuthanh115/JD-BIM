@@ -389,6 +389,36 @@
                   Cursor="Hand" />
         </Grid>
 
+        <!-- Navisworks 4D Rule-Based Option (Bexel workflow) -->
+        <Grid Margin="0,0,0,8">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+
+          <CheckBox Grid.Column="0"
+                    Content="Navisworks 4D Search Sets (.xml)"
+                    FontWeight="SemiBold"
+                    Foreground="#059669"
+                    ToolTip="Tạo bộ Search Sets XML &amp; Timeliner Rules tự động map 3D sang P6 như quy trình Bexel Manager"
+                    IsChecked="{Binding ExportNavisworks4D}" />
+
+          <TextBox Grid.Column="1"
+                   Text="{Binding NavisworksSetsPath, UpdateSourceTrigger=PropertyChanged}"
+                   Margin="8,0"
+                   IsEnabled="{Binding ExportNavisworks4D}" />
+
+          <Button Grid.Column="2"
+                  Content="Chọn..."
+                  Command="{Binding BrowseNavisworksSetsCommand}"
+                  IsEnabled="{Binding ExportNavisworks4D}"
+                  Padding="14,4"
+                  Background="#F1F5F9"
+                  BorderBrush="#CBD5E1"
+                  Cursor="Hand" />
+        </Grid>
+
         <!-- Open folder checkbox -->
         <CheckBox Content="Mở thư mục đích sau khi xuất thành công"
                   IsChecked="{Binding OpenFolderAfterExport}"
