@@ -207,6 +207,29 @@
           "icon16": "kaka.Structure.Structural.App.Resources.Icons.Database.p616.png",
           "icon32": "kaka.Structure.Structural.App.Resources.Icons.Database.p6.png",
           "tooltip": "Xuất tiến độ WBS và công tác (Activities) sang Primavera P6 (.xer / .csv) theo chuẩn Encore Group"
+        },
+        {
+          "id": "ExportWeb3dDashboard",
+          "text": "Export Web 3D & Dashboard",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Web3D.ExportWeb3dDashboardCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Database.sql16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Database.sql.png",
+          "tooltip": "KAKA ➔ Xuất mô hình 3D thực tế và bộ số liệu BOQ/4D từ Revit sang Web Dashboard tương tác thời gian thực chuẩn Bexel Manager"
+        }
+      ]
+    },
+    {
+      "id": "Web3D_Bexel",
+      "text": "Web 3D & 4D",
+      "defaultItemId": "ExportWeb3dDashboardMain",
+      "items": [
+        {
+          "id": "ExportWeb3dDashboardMain",
+          "text": "Export Web 3D & Dashboard",
+          "commandClass": "kaka.Structure.Structural.App.Commands.Web3D.ExportWeb3dDashboardCommand",
+          "icon16": "kaka.Structure.Structural.App.Resources.Icons.Database.sql16.png",
+          "icon32": "kaka.Structure.Structural.App.Resources.Icons.Database.sql.png",
+          "tooltip": "KAKA ➔ Xuất mô hình 3D thực tế và bộ số liệu BOQ/4D từ Revit sang Web Dashboard tương tác thời gian thực chuẩn Bexel Manager"
         }
       ]
     }
